@@ -25,6 +25,7 @@ import {
   FetcherFunction,
   constructBuildCrosschainOrderBridge,
   BuildCrosschainOrderBridgeParams,
+  BridgePrice,
 } from '../src';
 import BigNumber from 'bignumber.js';
 
@@ -144,7 +145,10 @@ describe('Delta:methods', () => {
         deltaSDK.buildCrosschainOrderBridge({
           deltaPrice: {
             bridgeFee,
-            destToken: RANDOM_TOKEN_ON_ETHEREUM,
+            bridge: {
+              destinationChainId: 1,
+              outputToken: RANDOM_TOKEN_ON_ETHEREUM,
+            },
           },
           destToken: RANDOM_TOKEN_ON_OPTIMISM,
           destChainId: 1,
@@ -152,7 +156,7 @@ describe('Delta:methods', () => {
         });
 
       expect(getBridge()).rejects.toThrowErrorMatchingInlineSnapshot(
-        `"Assertion Error: \`destChainId\` must be different from \`chainId\` for crosschain Order.bridge"`
+        `"Assertion Error: \`deltaPrice.bridge.destinationChainId\` must be different from \`chainId\` for crosschain Order.bridge"`
       );
     });
 
@@ -161,6 +165,10 @@ describe('Delta:methods', () => {
         deltaPrice: {
           bridgeFee,
           destToken: RANDOM_TOKEN_ON_ETHEREUM,
+          bridge: {
+            destinationChainId: destChainId,
+            outputToken: RANDOM_TOKEN_ON_OPTIMISM,
+          },
         },
         destToken: RANDOM_TOKEN_ON_OPTIMISM,
         destChainId,
@@ -174,7 +182,7 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
     });
 
     test('Price + Bridge for random token, receiver=EOA', async () => {
@@ -202,9 +210,11 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
       // no changes needed to destPrice.destToken anymore
-      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.destToken).toEqual(
+        expectedResult.orderChanges.destToken
+      );
       expect(deltaPrice.bridge.destinationChainId).toEqual(
         result.bridge.destinationChainId
       );
@@ -216,6 +226,10 @@ describe('Delta:methods', () => {
         deltaPrice: {
           bridgeFee,
           destToken: RANDOM_TOKEN_ON_ETHEREUM,
+          bridge: {
+            destinationChainId: destChainId,
+            outputToken: RANDOM_TOKEN_ON_OPTIMISM,
+          },
         },
         destToken: RANDOM_TOKEN_ON_OPTIMISM,
         destChainId,
@@ -229,7 +243,7 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
     });
 
     test('Price + Bridge for random token, receiver=contract', async () => {
@@ -257,9 +271,13 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge.outputToken).toEqual(
+        expectedResult.bridge.outputToken
+      );
       // no changes needed to destPrice.destToken anymore
-      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.destToken).toEqual(
+        expectedResult.orderChanges.destToken
+      );
       expect(deltaPrice.bridge.outputToken).toEqual(result.bridge.outputToken);
       expect(deltaPrice.bridge.destinationChainId).toEqual(
         result.bridge.destinationChainId
@@ -271,6 +289,16 @@ describe('Delta:methods', () => {
         deltaPrice: {
           bridgeFee,
           destToken: RANDOM_TOKEN_ON_ETHEREUM,
+          bridge: {
+            destinationChainId: destChainId,
+            /*
+            if beneficiary is an EOA and destToken on destChain = ETH
+            order.destToken=ETH
+            order.bridge.outputToken=WETH_DEST_CHAIN
+            order.bridge.mutliCallHandler=NULL_ADDRESS
+            */
+            outputToken: WETH_ON_OPTIMISM,
+          },
         },
         destToken: ETH,
         destChainId,
@@ -284,7 +312,7 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
     });
 
     test('Price + Bridge for ETH on destChain, receiver=EOA', async () => {
@@ -312,9 +340,11 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
       // no changes needed to destPrice.destToken anymore
-      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.destToken).toEqual(
+        expectedResult.orderChanges.destToken
+      );
       expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
       // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
       // wrap/unwrap logic is determined by bridge.multiCallHandler presence
@@ -326,6 +356,16 @@ describe('Delta:methods', () => {
         deltaPrice: {
           bridgeFee,
           destToken: ETH,
+          bridge: {
+            destinationChainId: destChainId,
+            /*
+            if beneficiary is an EOA and destToken on destChain = ETH
+            order.destToken=ETH
+            order.bridge.outputToken=WETH_DEST_CHAIN
+            order.bridge.mutliCallHandler=NULL_ADDRESS
+            */
+            outputToken: WETH_ON_OPTIMISM,
+          },
         },
         destToken: ETH,
         destChainId,
@@ -339,7 +379,7 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
     });
 
     test('Price + Bridge for ETH on destChain, receiver=contract', async () => {
@@ -367,9 +407,11 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
       // no changes needed to destPrice.destToken anymore
-      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.destToken).toEqual(
+        expectedResult.orderChanges.destToken
+      );
       expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
       // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
       // wrap/unwrap logic is determined by bridge.multiCallHandler presence
@@ -381,6 +423,10 @@ describe('Delta:methods', () => {
         deltaPrice: {
           bridgeFee,
           destToken: RANDOM_TOKEN_ON_ETHEREUM,
+          bridge: {
+            destinationChainId: destChainId,
+            outputToken: WETH_ON_OPTIMISM,
+          },
         },
         destToken: WETH_ON_OPTIMISM,
         destChainId,
@@ -394,7 +440,7 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
     });
 
     test('Price + Bridge for WETH on destChain, receiver=EOA', async () => {
@@ -422,9 +468,11 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
       // no changes needed to destPrice.destToken anymore
-      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.destToken).toEqual(
+        expectedResult.orderChanges.destToken
+      );
       expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
       // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
       // wrap/unwrap logic is determined by bridge.multiCallHandler presence
@@ -436,6 +484,10 @@ describe('Delta:methods', () => {
         deltaPrice: {
           bridgeFee,
           destToken: RANDOM_TOKEN_ON_ETHEREUM,
+          bridge: {
+            destinationChainId: destChainId,
+            outputToken: WETH_ON_OPTIMISM,
+          },
         },
         destToken: WETH_ON_OPTIMISM,
         destChainId,
@@ -449,7 +501,7 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
     });
 
     test('Price + Bridge for WETH on destChain, receiver=vontract', async () => {
@@ -477,9 +529,11 @@ describe('Delta:methods', () => {
         srcChainId: chainId,
       });
 
-      expect(result).toEqual(expectedResult);
+      expect(result.bridge).toEqual(expectedResult.bridge);
       // no changes needed to destPrice.destToken anymore
-      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.destToken).toEqual(
+        expectedResult.orderChanges.destToken
+      );
       expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
       // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
       // wrap/unwrap logic is determined by bridge.multiCallHandler presence
@@ -1016,7 +1070,15 @@ function constructBridgeAndOrderChanges({
   srcChainId,
   beneficiaryType,
   deltaPrice,
-}: BuildCrosschainOrderBridgeParams & { srcChainId: number }) {
+}: BuildCrosschainOrderBridgeParams & {
+  srcChainId: number;
+  /** @description The address of the destination token on the destination chain */
+  destToken: string; // lowercase
+  /** @description Destination Chain ID for Crosschain Orders */
+  destChainId: number;
+  /** @description price response received from /delta/prices (getDeltaPrice method) */
+  deltaPrice: Pick<BridgePrice, 'bridgeFee' | 'bridge' | 'destToken'>;
+}) {
   const { outputToken, multiCallHandler, destinationChainId, deltaDestToken } =
     constructBridge({
       bridgeDestToken: destToken,
