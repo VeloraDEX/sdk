@@ -116,6 +116,7 @@ describe('Delta:methods', () => {
       chainId: 1,
       fetcher: fetchFetcher,
       contractCaller: ethersV5ContractCaller,
+      apiURL: process.env.API_URL,
     },
     constructGetDeltaContract,
     constructGetDeltaOrders,
@@ -126,7 +127,7 @@ describe('Delta:methods', () => {
     constructGetPartnerFee
   );
 
-  describe('Build Crosschain Order Bridge', () => {
+  describe.only('Build Crosschain Order Bridge', () => {
     const destChainId = 10;
     const ETH = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
     const WETH_ON_OPTIMISM = '0x4200000000000000000000000000000000000006';
@@ -135,6 +136,8 @@ describe('Delta:methods', () => {
     const RANDOM_TOKEN_ON_OPTIMISM =
       '0x1234567890123456789012345678901234567890';
     const bridgeFee = '2418696650185';
+
+    const DAI_TOKEN_ON_OPTIMISM = '0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1';
 
     test('breaks for same chain', async () => {
       const getBridge = () =>
@@ -174,6 +177,40 @@ describe('Delta:methods', () => {
       expect(result).toEqual(expectedResult);
     });
 
+    test('Price + Bridge for random token, receiver=EOA', async () => {
+      const deltaPrice = await deltaSDK.getDeltaPrice({
+        srcToken: WETH,
+        destToken: DAI_TOKEN_ON_OPTIMISM,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+        destChainId,
+      });
+
+      const input = {
+        deltaPrice,
+        destToken: DAI_TOKEN_ON_OPTIMISM,
+        destChainId,
+        beneficiaryType: 'EOA' as const,
+      };
+
+      const result = await deltaSDK.buildCrosschainOrderBridge(input);
+
+      const expectedResult = constructBridgeAndOrderChanges({
+        ...input,
+        srcChainId: chainId,
+      });
+
+      expect(result).toEqual(expectedResult);
+      // no changes needed to destPrice.destToken anymore
+      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.bridge.destinationChainId).toEqual(
+        result.bridge.destinationChainId
+      );
+      expect(deltaPrice.bridge.outputToken).toEqual(result.bridge.outputToken);
+    });
+
     test('Bridge for random token, receiver=contract', async () => {
       const input = {
         deltaPrice: {
@@ -193,6 +230,40 @@ describe('Delta:methods', () => {
       });
 
       expect(result).toEqual(expectedResult);
+    });
+
+    test('Price + Bridge for random token, receiver=contract', async () => {
+      const deltaPrice = await deltaSDK.getDeltaPrice({
+        srcToken: WETH,
+        destToken: DAI_TOKEN_ON_OPTIMISM,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+        destChainId,
+      });
+
+      const input = {
+        deltaPrice,
+        destToken: DAI_TOKEN_ON_OPTIMISM,
+        destChainId,
+        beneficiaryType: 'SmartContract' as const,
+      };
+
+      const result = await deltaSDK.buildCrosschainOrderBridge(input);
+
+      const expectedResult = constructBridgeAndOrderChanges({
+        ...input,
+        srcChainId: chainId,
+      });
+
+      expect(result).toEqual(expectedResult);
+      // no changes needed to destPrice.destToken anymore
+      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.bridge.outputToken).toEqual(result.bridge.outputToken);
+      expect(deltaPrice.bridge.destinationChainId).toEqual(
+        result.bridge.destinationChainId
+      );
     });
 
     test('Bridge for ETH on destChain, receiver=EOA', async () => {
@@ -216,6 +287,40 @@ describe('Delta:methods', () => {
       expect(result).toEqual(expectedResult);
     });
 
+    test('Price + Bridge for ETH on destChain, receiver=EOA', async () => {
+      const deltaPrice = await deltaSDK.getDeltaPrice({
+        srcToken: WETH,
+        destToken: ETH,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+        destChainId,
+      });
+
+      const input = {
+        deltaPrice,
+        destToken: ETH,
+        destChainId,
+        beneficiaryType: 'EOA' as const,
+      };
+
+      const result = await deltaSDK.buildCrosschainOrderBridge(input);
+
+      const expectedResult = constructBridgeAndOrderChanges({
+        ...input,
+        srcChainId: chainId,
+      });
+
+      expect(result).toEqual(expectedResult);
+      // no changes needed to destPrice.destToken anymore
+      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
+      // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
+      // wrap/unwrap logic is determined by bridge.multiCallHandler presence
+      expect(result.bridge.outputToken).toEqual(WETH_ON_OPTIMISM.toLowerCase());
+    });
+
     test('Bridge for ETH on destChain, receiver=contract', async () => {
       const input = {
         deltaPrice: {
@@ -235,6 +340,40 @@ describe('Delta:methods', () => {
       });
 
       expect(result).toEqual(expectedResult);
+    });
+
+    test('Price + Bridge for ETH on destChain, receiver=contract', async () => {
+      const deltaPrice = await deltaSDK.getDeltaPrice({
+        srcToken: WETH,
+        destToken: ETH,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+        destChainId,
+      });
+
+      const input = {
+        deltaPrice,
+        destToken: ETH,
+        destChainId,
+        beneficiaryType: 'SmartContract' as const,
+      };
+
+      const result = await deltaSDK.buildCrosschainOrderBridge(input);
+
+      const expectedResult = constructBridgeAndOrderChanges({
+        ...input,
+        srcChainId: chainId,
+      });
+
+      expect(result).toEqual(expectedResult);
+      // no changes needed to destPrice.destToken anymore
+      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
+      // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
+      // wrap/unwrap logic is determined by bridge.multiCallHandler presence
+      expect(result.bridge.outputToken).toEqual(WETH_ON_OPTIMISM.toLowerCase());
     });
 
     test('Bridge for WETH on destChain, receiver=EOA', async () => {
@@ -258,6 +397,40 @@ describe('Delta:methods', () => {
       expect(result).toEqual(expectedResult);
     });
 
+    test('Price + Bridge for WETH on destChain, receiver=EOA', async () => {
+      const deltaPrice = await deltaSDK.getDeltaPrice({
+        srcToken: WETH,
+        destToken: WETH_ON_OPTIMISM,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+        destChainId,
+      });
+
+      const input = {
+        deltaPrice,
+        destToken: WETH_ON_OPTIMISM,
+        destChainId,
+        beneficiaryType: 'EOA' as const,
+      };
+
+      const result = await deltaSDK.buildCrosschainOrderBridge(input);
+
+      const expectedResult = constructBridgeAndOrderChanges({
+        ...input,
+        srcChainId: chainId,
+      });
+
+      expect(result).toEqual(expectedResult);
+      // no changes needed to destPrice.destToken anymore
+      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
+      // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
+      // wrap/unwrap logic is determined by bridge.multiCallHandler presence
+      expect(result.bridge.outputToken).toEqual(WETH_ON_OPTIMISM.toLowerCase());
+    });
+
     test('Bridge for WETH on destChain, receiver=contract', async () => {
       const input = {
         deltaPrice: {
@@ -277,6 +450,40 @@ describe('Delta:methods', () => {
       });
 
       expect(result).toEqual(expectedResult);
+    });
+
+    test('Price + Bridge for WETH on destChain, receiver=vontract', async () => {
+      const deltaPrice = await deltaSDK.getDeltaPrice({
+        srcToken: WETH,
+        destToken: WETH_ON_OPTIMISM,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+        destChainId,
+      });
+
+      const input = {
+        deltaPrice,
+        destToken: WETH_ON_OPTIMISM,
+        destChainId,
+        beneficiaryType: 'SmartContract' as const,
+      };
+
+      const result = await deltaSDK.buildCrosschainOrderBridge(input);
+
+      const expectedResult = constructBridgeAndOrderChanges({
+        ...input,
+        srcChainId: chainId,
+      });
+
+      expect(result).toEqual(expectedResult);
+      // no changes needed to destPrice.destToken anymore
+      expect(deltaPrice.destToken).toEqual(result.orderChanges.destToken);
+      expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
+      // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
+      // wrap/unwrap logic is determined by bridge.multiCallHandler presence
+      expect(result.bridge.outputToken).toEqual(WETH_ON_OPTIMISM.toLowerCase());
     });
   });
 
@@ -305,6 +512,126 @@ describe('Delta:methods', () => {
     };
 
     expect(staticDeltaPrice).toMatchSnapshot();
+  });
+
+  describe('Get Delta Price Crosschain', () => {
+    const destChainId = 10;
+    const ETH = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
+    const WETH = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2';
+    const WETH_ON_OPTIMISM = '0x4200000000000000000000000000000000000006';
+    const DAI_TOKEN_ON_ETHEREUM = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
+    const DAI_TOKEN_ON_OPTIMISM = '0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1';
+
+    test('Get Delta Price Crosschain/destToken=random', async () => {
+      const deltaPrice = await deltaSDK.getDeltaPrice({
+        srcToken: WETH,
+        destToken: DAI_TOKEN_ON_OPTIMISM,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+        destChainId,
+      });
+
+      const staticDeltaPrice: typeof deltaPrice = {
+        ...deltaPrice,
+        destAmount: 'dynamic_number',
+        destAmountBeforeFee: 'dynamic_number',
+        srcUSD: 'dynamic_number',
+        destUSD: 'dynamic_number',
+        destUSDBeforeFee: 'dynamic_number',
+        gasCost: 'dynamic_number',
+        gasCostBeforeFee: 'dynamic_number',
+        gasCostUSD: 'dynamic_number',
+        gasCostUSDBeforeFee: 'dynamic_number',
+        hmac: 'dynamic_string',
+        destAmountAfterBridge: 'dynamic_number',
+        destUSDAfterBridge: 'dynamic_number',
+        bridgeFee: 'dynamic_number',
+        bridgeFeeUSD: 'dynamic_number',
+      };
+
+      expect(deltaPrice.destToken).toEqual(DAI_TOKEN_ON_ETHEREUM.toLowerCase());
+      expect(staticDeltaPrice).toMatchSnapshot();
+      expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
+      expect(deltaPrice.bridge.outputToken).toEqual(
+        DAI_TOKEN_ON_OPTIMISM.toLowerCase()
+      );
+    });
+
+    test('Get Delta Price Crosschain/destToken=WETH', async () => {
+      const deltaPrice = await deltaSDK.getDeltaPrice({
+        srcToken: WETH,
+        destToken: WETH_ON_OPTIMISM,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+        destChainId,
+      });
+
+      const staticDeltaPrice: typeof deltaPrice = {
+        ...deltaPrice,
+        destAmount: 'dynamic_number',
+        destAmountBeforeFee: 'dynamic_number',
+        srcUSD: 'dynamic_number',
+        destUSD: 'dynamic_number',
+        destUSDBeforeFee: 'dynamic_number',
+        gasCost: 'dynamic_number',
+        gasCostBeforeFee: 'dynamic_number',
+        gasCostUSD: 'dynamic_number',
+        gasCostUSDBeforeFee: 'dynamic_number',
+        hmac: 'dynamic_string',
+        destAmountAfterBridge: 'dynamic_number',
+        destUSDAfterBridge: 'dynamic_number',
+        bridgeFee: 'dynamic_number',
+        bridgeFeeUSD: 'dynamic_number',
+      };
+
+      expect(staticDeltaPrice).toMatchSnapshot();
+      expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
+      expect(deltaPrice.bridge.outputToken).toEqual(
+        WETH_ON_OPTIMISM.toLowerCase()
+      );
+    });
+
+    test('Get Delta Price Crosschain/destToken=ETH', async () => {
+      const deltaPrice = await deltaSDK.getDeltaPrice({
+        srcToken: WETH,
+        destToken: ETH,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+        destChainId,
+      });
+
+      const staticDeltaPrice: typeof deltaPrice = {
+        ...deltaPrice,
+        destAmount: 'dynamic_number',
+        destAmountBeforeFee: 'dynamic_number',
+        srcUSD: 'dynamic_number',
+        destUSD: 'dynamic_number',
+        destUSDBeforeFee: 'dynamic_number',
+        gasCost: 'dynamic_number',
+        gasCostBeforeFee: 'dynamic_number',
+        gasCostUSD: 'dynamic_number',
+        gasCostUSDBeforeFee: 'dynamic_number',
+        hmac: 'dynamic_string',
+        destAmountAfterBridge: 'dynamic_number',
+        destUSDAfterBridge: 'dynamic_number',
+        bridgeFee: 'dynamic_number',
+        bridgeFeeUSD: 'dynamic_number',
+      };
+
+      expect(staticDeltaPrice).toMatchSnapshot();
+      expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
+      // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
+      // wrap/unwrap logic is determined by bridge.multiCallHandler presence
+      expect(deltaPrice.bridge.outputToken).toEqual(
+        WETH_ON_OPTIMISM.toLowerCase()
+      );
+    });
   });
 
   test('Get Delta Contract', async () => {
@@ -437,7 +764,12 @@ describe('Delta:methods', () => {
     ['viem', viemContractCaller],
   ])('sign Delta Order with %s', async (libName, contractCaller) => {
     const sdk = constructPartialSDK(
-      { chainId: 1, fetcher: fetchFetcher, contractCaller },
+      {
+        chainId: 1,
+        fetcher: fetchFetcher,
+        contractCaller,
+        apiURL: process.env.API_URL,
+      },
       constructSignDeltaOrder
     );
 
@@ -557,6 +889,7 @@ describe('Delta:methods', () => {
       chainId: 1,
       fetcher: mockFetch as FetcherFunction,
       contractCaller: ethersV5ContractCaller,
+      apiURL: process.env.API_URL,
     },
     constructPostDeltaOrder,
     constructSubmitDeltaOrder
