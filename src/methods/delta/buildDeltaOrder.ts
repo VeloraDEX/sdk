@@ -9,7 +9,7 @@ import {
   type BuildDeltaOrderDataInput,
   type SignableDeltaOrderData,
 } from './helpers/buildDeltaOrderData';
-import { Bridge, DeltaAuctionOrder } from './helpers/types';
+import { Bridge } from './helpers/types';
 import { constructBuildCrosschainOrderBridge } from './buildCrosschainOrderBridge';
 import { BeneficiaryType } from '../common/orders/types';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';

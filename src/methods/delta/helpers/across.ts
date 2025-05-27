@@ -1,7 +1,7 @@
 import { assert } from 'ts-essentials';
 import { ZERO_ADDRESS } from '../../common/orders/buildOrderData';
 import { BeneficiaryType } from '../../common/orders/types';
-import { Bridge, DeltaAuctionOrder } from './types';
+import { Bridge } from './types';
 
 export const ACROSS_WETH_ADDRESSES_MAP: Record<number, string> = {
   // Mainnet
