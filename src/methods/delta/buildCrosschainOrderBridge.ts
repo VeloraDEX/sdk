@@ -3,7 +3,7 @@ import type { ConstructFetchInput, RequestParameters } from '../../types';
 import { BridgePrice } from './getDeltaPrice';
 import { constructGetMulticallHandlers } from './getMulticallHandlers';
 import {
-  getDeltaBridgeAndDestToken,
+  getDeltaBridge,
   GetDeltaBridgeAndDestTokenOutput,
 } from './helpers/across';
 import { BeneficiaryType } from '../common/orders/types';
@@ -18,7 +18,7 @@ export type BuildCrosschainOrderBridgeParams = {
   beneficiaryType: BeneficiaryType;
 
   /** @description price response received from /delta/prices (getDeltaPrice method) */
-  deltaPrice: Pick<BridgePrice, 'bridgeFee' | 'destToken'>;
+  deltaPrice: Pick<BridgePrice, 'bridgeFee' | 'bridge'>;
 };
 
 type BuildCrosschainOrderBridge = (
@@ -46,8 +46,13 @@ export const constructBuildCrosschainOrderBridge = (
     requestParams
   ) => {
     assert(
-      chainId !== destChainId,
-      '`destChainId` must be different from `chainId` for crosschain Order.bridge'
+      chainId !== deltaPrice.bridge.destinationChainId,
+      '`deltaPrice.bridge.destinationChainId` must be different from `chainId` for crosschain Order.bridge'
+    );
+
+    assert(
+      destChainId === deltaPrice.bridge.destinationChainId,
+      '`destChainId` must match `deltaPrice.bridge.destinationChainId` for crosschain Order.bridge'
     );
 
     const getMulticallHandler = async (chainId: number) => {
@@ -62,19 +67,17 @@ export const constructBuildCrosschainOrderBridge = (
       return multicallHandler;
     };
 
-    const { bridge, orderChanges } = await getDeltaBridgeAndDestToken({
+    const { bridge } = await getDeltaBridge({
       destTokenDestChain: destToken,
-      destChainId: destChainId,
-      destTokenSrcChain: deltaPrice.destToken,
-      srcChainId: chainId,
+      destChainId,
       bridgeFee: deltaPrice.bridgeFee,
+      bridgeOutputToken: deltaPrice.bridge.outputToken,
       beneficiaryType,
       getMulticallHandler,
     });
 
     return {
       bridge,
-      orderChanges,
     };
   };
 
