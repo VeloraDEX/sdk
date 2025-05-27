@@ -202,7 +202,7 @@ exports[`Delta:methods Get Delta Orders for user 1`] = `
     "status": "EXECUTED",
     "transactions": [
       {
-        "agent": "paraswap",
+        "agent": "laita",
         "bidId": null,
         "blobGasPrice": 0,
         "blobGasUsed": 0,
@@ -263,7 +263,7 @@ exports[`Delta:methods Get Delta Orders for user 1`] = `
     "status": "EXECUTED",
     "transactions": [
       {
-        "agent": "paraswap",
+        "agent": "laita",
         "bidId": null,
         "blobGasPrice": 0,
         "blobGasUsed": 0,
