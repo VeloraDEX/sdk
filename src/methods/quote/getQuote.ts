@@ -1,6 +1,6 @@
 import { API_URL, SwapSide } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
-import type { DeltaPrice } from '../delta/getDeltaPrice';
+import type { BridgePrice, DeltaPrice } from '../delta/getDeltaPrice';
 import type {
   ConstructFetchInput,
   EnumerateLiteral,
@@ -48,6 +48,17 @@ export type QuoteWithMarketPrice = {
 
 export type QuoteWithDeltaPrice = {
   delta: DeltaPrice;
+  deltaAddress: string;
+};
+
+export type QuoteWithBridgePrice = {
+  delta: BridgePrice;
+  deltaAddress: string;
+};
+
+export type QuoteWithDeltaPriceAndBridgePrice = {
+  delta: DeltaPrice | BridgePrice;
+  deltaAddress: string;
 };
 
 export type QuoteWithMarketPriceAsFallback = QuoteWithMarketPrice & {
@@ -57,19 +68,40 @@ export type QuoteWithMarketPriceAsFallback = QuoteWithMarketPrice & {
 export type QuoteResponse =
   | QuoteWithDeltaPrice
   | QuoteWithMarketPrice
+  | QuoteWithBridgePrice
   | QuoteWithMarketPriceAsFallback;
 
 interface GetQuoteFunc {
   (
-    options: QuoteParams<'delta'>,
+    options: QuoteParams<'delta'> & { destChainId?: undefined },
     requestParams?: RequestParameters
   ): Promise<QuoteWithDeltaPrice>;
+  (
+    options: QuoteParams<'delta'> & { destChainId: number },
+    requestParams?: RequestParameters
+  ): Promise<QuoteWithBridgePrice>;
+  (
+    options: QuoteParams<'delta'>,
+    requestParams?: RequestParameters
+  ): Promise<QuoteWithDeltaPriceAndBridgePrice>;
   (
     options: QuoteParams<'market'>,
     requestParams?: RequestParameters
   ): Promise<QuoteWithMarketPrice>;
-  (options: QuoteParams<'all'>, requestParams?: RequestParameters): Promise<
+  (
+    options: QuoteParams<'all'> & { destChainId?: undefined },
+    requestParams?: RequestParameters
+  ): Promise<
     QuoteWithDeltaPrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
+  >;
+  (
+    options: QuoteParams<'all'> & { destChainId: number },
+    requestParams?: RequestParameters
+  ): Promise<
+    QuoteWithBridgePrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
+  >;
+  (options: QuoteParams<'all'>, requestParams?: RequestParameters): Promise<
+    QuoteWithDeltaPriceAndBridgePrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
   >;
   (
     options: QuoteParams,
@@ -89,17 +121,39 @@ export const constructGetQuote = ({
   const pricesUrl = `${apiURL}/quote` as const;
 
   function getQuote(
-    options: QuoteParams<'delta'>,
+    options: QuoteParams<'delta'> & { destChainId?: undefined },
     requestParams?: RequestParameters
   ): Promise<QuoteWithDeltaPrice>;
+  function getQuote(
+    options: QuoteParams<'delta'> & { destChainId: number },
+    requestParams?: RequestParameters
+  ): Promise<QuoteWithBridgePrice>;
+  function getQuote(
+    options: QuoteParams<'delta'>,
+    requestParams?: RequestParameters
+  ): Promise<QuoteWithDeltaPriceAndBridgePrice>;
   function getQuote(
     options: QuoteParams<'market'>,
     requestParams?: RequestParameters
   ): Promise<QuoteWithMarketPrice>;
   function getQuote(
+    options: QuoteParams<'all'> & { destChainId?: undefined },
+    requestParams?: RequestParameters
+  ): Promise<
+    QuoteWithDeltaPrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
+  >;
+  function getQuote(
+    options: QuoteParams<'all'> & { destChainId: number },
+    requestParams?: RequestParameters
+  ): Promise<
+    QuoteWithBridgePrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
+  >;
+  function getQuote(
     options: QuoteParams<'all'>,
     requestParams?: RequestParameters
-  ): Promise<QuoteWithDeltaPrice | QuoteWithMarketPriceAsFallback>;
+  ): Promise<
+    QuoteWithDeltaPriceAndBridgePrice | QuoteWithMarketPriceAsFallback
+  >;
   function getQuote(
     options: QuoteParams,
     requestParams?: RequestParameters
