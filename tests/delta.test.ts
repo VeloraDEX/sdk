@@ -128,7 +128,7 @@ describe('Delta:methods', () => {
     constructGetPartnerFee
   );
 
-  describe.only('Build Crosschain Order Bridge', () => {
+  describe('Build Crosschain Order Bridge', () => {
     const destChainId = 10;
     const ETH = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
     const WETH_ON_OPTIMISM = '0x4200000000000000000000000000000000000006';
@@ -155,7 +155,7 @@ describe('Delta:methods', () => {
           beneficiaryType: 'EOA',
         });
 
-      expect(getBridge()).rejects.toThrowErrorMatchingInlineSnapshot(
+      await expect(getBridge()).rejects.toThrowErrorMatchingInlineSnapshot(
         `"Assertion Error: \`deltaPrice.bridge.destinationChainId\` must be different from \`chainId\` for crosschain Order.bridge"`
       );
     });
@@ -566,6 +566,22 @@ describe('Delta:methods', () => {
     };
 
     expect(staticDeltaPrice).toMatchSnapshot();
+  });
+
+  test('breaks for srcToken=ETH', async () => {
+    const getDeltaPrice = () =>
+      deltaSDK.getDeltaPrice({
+        srcToken: ETH_ADDRESS,
+        destToken: destToken,
+        amount: srcAmount,
+        userAddress: senderAddress,
+        srcDecimals: 18,
+        destDecimals: 18,
+      });
+
+    await expect(getDeltaPrice()).rejects.toThrowErrorMatchingInlineSnapshot(
+      `"SourceEth: ETH as source token is not supported"`
+    );
   });
 
   describe('Get Delta Price Crosschain', () => {
