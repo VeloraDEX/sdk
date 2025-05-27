@@ -697,11 +697,11 @@ function constructBridgeAndOrderChanges({
     bridge: {
       maxRelayerFee: deltaPrice.bridgeFee,
       destinationChainId,
-      outputToken,
+      outputToken: outputToken.toLowerCase(), // for uniformity
       multiCallHandler,
     },
     orderChanges: {
-      destToken: deltaDestToken,
+      destToken: deltaDestToken.toLowerCase(), // for uniformity
     },
   };
 }

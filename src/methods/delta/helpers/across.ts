@@ -136,14 +136,14 @@ export async function getDeltaBridgeAndDestToken({
     const bridge: Bridge = {
       maxRelayerFee: bridgeFee,
       destinationChainId: destChainId,
-      outputToken: destTokenDestChain,
+      outputToken: destTokenDestChain.toLowerCase(), // for uniformity
       multiCallHandler: ZERO_ADDRESS,
     };
 
     return {
       bridge,
       orderChanges: {
-        destToken: destTokenSrcChain,
+        destToken: destTokenSrcChain.toLowerCase(), // for uniformity
       },
     };
   }
@@ -159,14 +159,14 @@ export async function getDeltaBridgeAndDestToken({
     const bridge: Bridge = {
       maxRelayerFee: bridgeFee,
       destinationChainId: destChainId,
-      outputToken: WETH_DEST_CHAIN,
+      outputToken: WETH_DEST_CHAIN.toLowerCase(), // for uniformity
       multiCallHandler: ZERO_ADDRESS,
     };
 
     return {
       bridge,
       orderChanges: {
-        destToken: ETH_ADDRESS,
+        destToken: ETH_ADDRESS.toLowerCase(), // for uniformity
       },
     };
   }
@@ -183,13 +183,13 @@ export async function getDeltaBridgeAndDestToken({
     const bridge: Bridge = {
       maxRelayerFee: bridgeFee,
       destinationChainId: destChainId,
-      outputToken: WETH_DEST_CHAIN,
+      outputToken: WETH_DEST_CHAIN.toLowerCase(), // for uniformity
       multiCallHandler: await getMulticallHandler(destChainId),
     };
     return {
       bridge,
       orderChanges: {
-        destToken: WETH_SRC_CHAIN,
+        destToken: WETH_SRC_CHAIN.toLowerCase(), // for uniformity
       },
     };
   }
@@ -204,13 +204,13 @@ export async function getDeltaBridgeAndDestToken({
     const bridge: Bridge = {
       maxRelayerFee: bridgeFee,
       destinationChainId: destChainId,
-      outputToken: WETH_DEST_CHAIN,
+      outputToken: WETH_DEST_CHAIN.toLowerCase(), // for uniformity
       multiCallHandler: await getMulticallHandler(destChainId),
     };
     return {
       bridge,
       orderChanges: {
-        destToken: ETH_ADDRESS,
+        destToken: ETH_ADDRESS.toLowerCase(), // for uniformity
       },
     };
   }
@@ -228,13 +228,13 @@ export async function getDeltaBridgeAndDestToken({
     const bridge: Bridge = {
       maxRelayerFee: bridgeFee,
       destinationChainId: destChainId,
-      outputToken: WETH_DEST_CHAIN,
+      outputToken: WETH_DEST_CHAIN.toLowerCase(), // for uniformity
       multiCallHandler: ZERO_ADDRESS,
     };
     return {
       bridge,
       orderChanges: {
-        destToken: WETH_SRC_CHAIN,
+        destToken: WETH_SRC_CHAIN.toLowerCase(), // for uniformity
       },
     };
   }
@@ -242,14 +242,14 @@ export async function getDeltaBridgeAndDestToken({
   const bridge: Bridge = {
     maxRelayerFee: bridgeFee,
     destinationChainId: destChainId,
-    outputToken: destTokenDestChain,
+    outputToken: destTokenDestChain.toLowerCase(), // for uniformity
     multiCallHandler: ZERO_ADDRESS,
   };
 
   return {
     bridge,
     orderChanges: {
-      destToken: destTokenSrcChain,
+      destToken: destTokenSrcChain.toLowerCase(), // for uniformity
     },
   };
 }
