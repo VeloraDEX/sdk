@@ -35,5 +35,5 @@ function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrderFn) {
 
 export function startStatusCheck(getDeltaOrder: GetDeltaOrderFn) {
   const intervalId = fetchOrderPeriodically(getDeltaOrder);
-  setTimeout(() => clearInterval(intervalId), 60000); // Stop after 60 seconds
+  setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
 }

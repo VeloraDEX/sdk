@@ -259,7 +259,7 @@ if ('delta' in quote) {
 
   async function startStatusCheck(auctionId: string) {
     const intervalId = await fetchOrderPeriodically(auctionId);
-    setTimeout(() => clearInterval(intervalId), 60000); // Stop after 60 seconds
+    setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
   }
 
   startStatusCheck(deltaAuction.id);
@@ -461,7 +461,7 @@ async function fetchOrderPeriodically(auctionId: string) {
 
 async function startStatusCheck(auctionId: string) {
   const intervalId = await fetchOrderPeriodically(auctionId);
-  setTimeout(() => clearInterval(intervalId), 60000); // Stop after 60 seconds
+  setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
 }
 
 startStatusCheck(deltaAuction.id);
