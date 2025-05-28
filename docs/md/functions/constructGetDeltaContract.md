@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaContract.ts:16](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/getDeltaContract.ts#L16)
+[src/methods/delta/getDeltaContract.ts:16](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaContract.ts#L16)

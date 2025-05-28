@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/swap/approve.ts:18](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/approve.ts#L18)
+[src/methods/swap/approve.ts:18](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/approve.ts#L18)

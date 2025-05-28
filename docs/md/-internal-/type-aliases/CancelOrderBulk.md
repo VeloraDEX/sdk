@@ -26,4 +26,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/cancelOrder.ts:15](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/limitOrders/cancelOrder.ts#L15)
+[src/methods/limitOrders/cancelOrder.ts:15](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/cancelOrder.ts#L15)

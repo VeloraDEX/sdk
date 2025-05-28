@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/transaction.ts:177](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/nftOrders/transaction.ts#L177)
+[src/methods/nftOrders/transaction.ts:177](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/transaction.ts#L177)

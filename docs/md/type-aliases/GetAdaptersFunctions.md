@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/swap/adapters.ts:11](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/adapters.ts#L11)
+[src/methods/swap/adapters.ts:11](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/adapters.ts#L11)

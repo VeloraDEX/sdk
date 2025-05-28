@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/index.ts:98](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/nftOrders/index.ts#L98)
+[src/methods/nftOrders/index.ts:98](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/index.ts#L98)

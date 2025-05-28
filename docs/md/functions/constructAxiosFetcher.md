@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/helpers/fetchers/axios.ts:8](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/helpers/fetchers/axios.ts#L8)
+[src/helpers/fetchers/axios.ts:8](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/fetchers/axios.ts#L8)

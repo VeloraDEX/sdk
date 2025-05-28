@@ -6,7 +6,7 @@
 
 # Type Alias: BlockNumberOrTag
 
-> **BlockNumberOrTag**: [`Numbers`](Numbers.md) \| [`BlockTag`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/BlockTag.md)
+> **BlockNumberOrTag**: [`Numbers`](Numbers.md) \| [`BlockTag`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/BlockTag.md)
 
 ## Defined in
 

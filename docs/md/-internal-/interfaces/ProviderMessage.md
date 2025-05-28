@@ -8,7 +8,7 @@
 
 ## Extended by
 
-- [`EthSubscription`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EthSubscription.md)
+- [`EthSubscription`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EthSubscription.md)
 
 ## Properties
 

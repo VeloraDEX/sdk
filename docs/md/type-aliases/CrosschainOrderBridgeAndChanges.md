@@ -28,4 +28,4 @@ The changes to be made to the Order
 
 ## Defined in
 
-[src/methods/delta/helpers/across.ts:110](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/helpers/across.ts#L110)
+[src/methods/delta/helpers/across.ts:110](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/across.ts#L110)

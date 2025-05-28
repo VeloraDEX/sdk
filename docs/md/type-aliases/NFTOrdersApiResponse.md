@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/helpers/types.ts:43](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/nftOrders/helpers/types.ts#L43)
+[src/methods/nftOrders/helpers/types.ts:43](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L43)

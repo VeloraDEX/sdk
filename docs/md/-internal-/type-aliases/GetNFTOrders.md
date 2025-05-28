@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/getOrders.ts:26](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/nftOrders/getOrders.ts#L26)
+[src/methods/nftOrders/getOrders.ts:26](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/getOrders.ts#L26)

@@ -44,4 +44,4 @@ The address of the destination token on the destination chain
 
 ## Defined in
 
-[src/methods/delta/buildCrosschainOrderBridge.ts:12](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/buildCrosschainOrderBridge.ts#L12)
+[src/methods/delta/buildCrosschainOrderBridge.ts:12](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildCrosschainOrderBridge.ts#L12)

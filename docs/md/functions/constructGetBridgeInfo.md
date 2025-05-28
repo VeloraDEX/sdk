@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/getBridgeInfo.ts:19](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/getBridgeInfo.ts#L19)
+[src/methods/delta/getBridgeInfo.ts:19](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L19)

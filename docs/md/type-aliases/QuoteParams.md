@@ -88,4 +88,4 @@ User's Wallet Address
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:15](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/quote/getQuote.ts#L15)
+[src/methods/quote/getQuote.ts:15](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L15)

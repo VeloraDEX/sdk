@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/isTokenSupportedInDelta.ts:24](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/isTokenSupportedInDelta.ts#L24)
+[src/methods/delta/isTokenSupportedInDelta.ts:24](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/isTokenSupportedInDelta.ts#L24)

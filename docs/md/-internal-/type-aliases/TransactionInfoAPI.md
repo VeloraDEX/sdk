@@ -6,7 +6,7 @@
 
 # Type Alias: TransactionInfoAPI
 
-> **TransactionInfoAPI**: [`TransactionSignedAPI`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionSignedAPI.md) & `object`
+> **TransactionInfoAPI**: [`TransactionSignedAPI`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionSignedAPI.md) & `object`
 
 ## Type declaration
 

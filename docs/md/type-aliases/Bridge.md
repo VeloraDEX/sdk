@@ -36,4 +36,4 @@ The address of the output token. Same as Order.destToken but on destination chai
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:28](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/helpers/types.ts#L28)
+[src/methods/delta/helpers/types.ts:28](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L28)

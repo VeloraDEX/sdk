@@ -20,4 +20,4 @@ Build Orders to be posted to Delta API for execution
 
 ## Defined in
 
-[src/methods/delta/buildCrosschainOrderBridge.ts:31](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/buildCrosschainOrderBridge.ts#L31)
+[src/methods/delta/buildCrosschainOrderBridge.ts:31](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildCrosschainOrderBridge.ts#L31)

@@ -26,4 +26,4 @@ construct SDK with every Swap-related method, fetching from API and token approv
 
 ## Defined in
 
-[src/methods/swap/index.ts:21](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/index.ts#L21)
+[src/methods/swap/index.ts:21](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/index.ts#L21)

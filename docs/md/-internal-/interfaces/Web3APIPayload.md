@@ -8,13 +8,13 @@
 
 ## Extends
 
-- [`Web3APIRequest`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)\<`API`, `Method`\>
+- [`Web3APIRequest`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)\<`API`, `Method`\>
 
 ## Type Parameters
 
 • **API** *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md)
 
-• **Method** *extends* [`Web3APIMethod`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
+• **Method** *extends* [`Web3APIMethod`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
 
 ## Properties
 
@@ -30,7 +30,7 @@ node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:29
 
 ### jsonrpc?
 
-> `readonly` `optional` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
+> `readonly` `optional` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
 
 #### Defined in
 
@@ -44,7 +44,7 @@ node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:28
 
 #### Inherited from
 
-[`Web3APIRequest`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`method`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#method)
+[`Web3APIRequest`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`method`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#method)
 
 #### Defined in
 
@@ -54,11 +54,11 @@ node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:24
 
 ### params?
 
-> `optional` **params**: `object` \| readonly `unknown`[] \| [`Web3APIParams`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIParams.md)\<`API`, `Method`\>
+> `optional` **params**: `object` \| readonly `unknown`[] \| [`Web3APIParams`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIParams.md)\<`API`, `Method`\>
 
 #### Inherited from
 
-[`Web3APIRequest`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`params`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#params)
+[`Web3APIRequest`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`params`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#params)
 
 #### Defined in
 

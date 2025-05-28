@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:11](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/quote/getQuote.ts#L11)
+[src/methods/quote/getQuote.ts:11](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L11)

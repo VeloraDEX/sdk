@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/swap/swapTx.ts:225](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/swapTx.ts#L225)
+[src/methods/swap/swapTx.ts:225](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/swapTx.ts#L225)

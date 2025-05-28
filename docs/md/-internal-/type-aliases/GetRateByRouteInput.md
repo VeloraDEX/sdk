@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/swap/rates.ts:191](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/rates.ts#L191)
+[src/methods/swap/rates.ts:191](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/rates.ts#L191)

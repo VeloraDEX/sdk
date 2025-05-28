@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/swap/spender.ts:33](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/spender.ts#L33)
+[src/methods/swap/spender.ts:33](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/spender.ts#L33)
