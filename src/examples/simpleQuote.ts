@@ -2,6 +2,7 @@
 import axios from 'axios';
 import { ethers } from 'ethersV5';
 import { constructSimpleSDK } from '..';
+import { startStatusCheck } from './helpers/delta';
 
 const DAI_TOKEN = '0x6b175474e89094c44da98b954eedeac495271d0f';
 const USDC_TOKEN = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48';
@@ -31,7 +32,7 @@ async function allQuote() {
     amount,
     userAddress: account,
     srcDecimals: 18,
-    destDecimals: 18,
+    destDecimals: 6,
     mode: 'all', // Delta quote if possible, with fallback to Market price
     side: 'SELL',
     // partner: "..." // if available
@@ -68,10 +69,7 @@ async function allQuote() {
     });
 
     // poll if necessary
-    const auction = await simpleSDK.delta.getDeltaOrderById(deltaAuction.id);
-    if (auction?.status === 'EXECUTED') {
-      console.log('Auction was executed');
-    }
+    startStatusCheck(() => simpleSDK.delta.getDeltaOrderById(deltaAuction.id));
   } else {
     console.log(
       `Delta Quote failed: ${quote.fallbackReason.errorType} - ${quote.fallbackReason.details}`

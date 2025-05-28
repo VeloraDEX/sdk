@@ -12,6 +12,7 @@ import {
   DeltaPrice,
   isFetcherError,
 } from '..';
+import { startStatusCheck } from './helpers/delta';
 
 const fetcher = constructAxiosFetcher(axios);
 
@@ -50,7 +51,7 @@ async function deltaQuote() {
     amount,
     userAddress: account,
     srcDecimals: 18,
-    destDecimals: 18,
+    destDecimals: 6,
     mode: 'delta',
     side: 'SELL',
     // partner: "..." // if available
@@ -79,7 +80,7 @@ async function marketQuote() {
     amount,
     userAddress: account,
     srcDecimals: 18,
-    destDecimals: 18,
+    destDecimals: 6,
     mode: 'market',
     side: 'SELL',
     // partner: "..." // if available
@@ -115,7 +116,7 @@ async function allQuote() {
     amount,
     userAddress: account,
     srcDecimals: 18,
-    destDecimals: 18,
+    destDecimals: 6,
     mode: 'all',
     side: 'SELL',
     // partner: "..." // if available
@@ -170,12 +171,9 @@ async function handleDeltaQuote({
   });
 
   // poll if necessary
-  const auction = await quoteSDK.getDeltaOrderById(deltaAuction.id);
-  if (auction?.status === 'EXECUTED') {
-    console.log('Auction was executed');
-  }
+  startStatusCheck(() => quoteSDK.getDeltaOrderById(deltaAuction.id));
 
-  return auction;
+  return deltaAuction;
 }
 
 async function handleMarketQuote({
