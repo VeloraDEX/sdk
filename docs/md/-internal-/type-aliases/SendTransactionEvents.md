@@ -6,7 +6,7 @@
 
 # Type Alias: SendTransactionEvents\<ReturnFormat\>
 
-> **SendTransactionEvents**\<`ReturnFormat`\>: [`SendTransactionEventsBase`](SendTransactionEventsBase.md)\<`ReturnFormat`, [`Transaction`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)\>
+> **SendTransactionEvents**\<`ReturnFormat`\>: [`SendTransactionEventsBase`](SendTransactionEventsBase.md)\<`ReturnFormat`, [`Transaction`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)\>
 
 ## Type Parameters
 

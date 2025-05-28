@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/common/orders/types.ts:13](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/common/orders/types.ts#L13)
+[src/methods/common/orders/types.ts:13](https://github.com/VeloraDEX/sdk/blob/master/src/methods/common/orders/types.ts#L13)

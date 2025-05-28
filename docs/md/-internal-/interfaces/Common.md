@@ -20,7 +20,7 @@ node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:324
 
 ### customChain
 
-> **customChain**: [`CustomChain`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/CustomChain.md)
+> **customChain**: [`CustomChain`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/CustomChain.md)
 
 #### Defined in
 

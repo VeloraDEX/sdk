@@ -12,7 +12,7 @@
 
 • **API** *extends* [`Web3APISpec`](Web3APISpec.md)
 
-• **Method** *extends* [`Web3APIMethod`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
+• **Method** *extends* [`Web3APIMethod`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
 
 ## Defined in
 

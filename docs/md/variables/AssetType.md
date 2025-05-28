@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/helpers/misc.ts:21](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/nftOrders/helpers/misc.ts#L21)
+[src/methods/nftOrders/helpers/misc.ts:21](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/helpers/misc.ts#L21)

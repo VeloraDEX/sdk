@@ -32,4 +32,4 @@
 
 ## Defined in
 
-[src/sdk/simple.ts:179](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/sdk/simple.ts#L179)
+[src/sdk/simple.ts:179](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/simple.ts#L179)

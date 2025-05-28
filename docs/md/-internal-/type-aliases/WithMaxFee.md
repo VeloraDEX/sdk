@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/gas.ts:4](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/gas.ts#L4)
+[src/gas.ts:4](https://github.com/VeloraDEX/sdk/blob/master/src/gas.ts#L4)

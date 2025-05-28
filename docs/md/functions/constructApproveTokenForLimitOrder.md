@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/approveForOrder.ts:17](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/limitOrders/approveForOrder.ts#L17)
+[src/methods/limitOrders/approveForOrder.ts:17](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/approveForOrder.ts#L17)

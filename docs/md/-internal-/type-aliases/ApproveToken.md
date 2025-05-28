@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[src/helpers/approve.ts:32](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/helpers/approve.ts#L32)
+[src/helpers/approve.ts:32](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/approve.ts#L32)

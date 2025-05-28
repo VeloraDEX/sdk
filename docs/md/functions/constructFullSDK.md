@@ -26,4 +26,4 @@ construct SDK with every method, for swap and limitOrders
 
 ## Defined in
 
-[src/sdk/full.ts:31](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/sdk/full.ts#L31)
+[src/sdk/full.ts:31](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/full.ts#L31)

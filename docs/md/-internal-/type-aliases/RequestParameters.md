@@ -24,4 +24,4 @@ Any params that can be passed to fetcher. E.g. Axios fetcher can accept signal a
 
 ## Defined in
 
-[src/types.ts:43](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/types.ts#L43)
+[src/types.ts:43](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L43)

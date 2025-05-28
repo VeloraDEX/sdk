@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/helpers/providers/ethers.ts:33](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/helpers/providers/ethers.ts#L33)
+[src/helpers/providers/ethers.ts:33](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/providers/ethers.ts#L33)

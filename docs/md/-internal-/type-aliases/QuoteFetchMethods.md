@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/sdk/simple.ts:187](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/sdk/simple.ts#L187)
+[src/sdk/simple.ts:187](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/simple.ts#L187)

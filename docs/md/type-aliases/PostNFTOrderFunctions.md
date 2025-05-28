@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/postOrder.ts:16](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/nftOrders/postOrder.ts#L16)
+[src/methods/nftOrders/postOrder.ts:16](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/postOrder.ts#L16)

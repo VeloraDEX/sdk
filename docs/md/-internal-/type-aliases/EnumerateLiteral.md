@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[src/types.ts:26](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/types.ts#L26)
+[src/types.ts:26](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L26)

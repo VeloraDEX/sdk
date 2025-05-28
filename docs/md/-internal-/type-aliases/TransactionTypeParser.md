@@ -10,7 +10,7 @@
 
 ## Parameters
 
-• **transaction**: [`Transaction`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+• **transaction**: [`Transaction`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
 
 ## Returns
 

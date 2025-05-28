@@ -6,7 +6,7 @@
 
 # Type Alias: BlockAPI
 
-> **BlockAPI**: [`BlockBase`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockBase.md)\<[`HexString32Bytes`](HexString32Bytes.md), [`HexString`](HexString.md), [`Uint`](Uint.md), [`HexStringBytes`](HexStringBytes.md), [`TransactionHash`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionHash.md)[] \| [`TransactionInfoAPI`](TransactionInfoAPI.md)[], [`HexString256Bytes`](HexString256Bytes.md)\>
+> **BlockAPI**: [`BlockBase`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockBase.md)\<[`HexString32Bytes`](HexString32Bytes.md), [`HexString`](HexString.md), [`Uint`](Uint.md), [`HexStringBytes`](HexStringBytes.md), [`TransactionHash`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionHash.md)[] \| [`TransactionInfoAPI`](TransactionInfoAPI.md)[], [`HexString256Bytes`](HexString256Bytes.md)\>
 
 ## Defined in
 

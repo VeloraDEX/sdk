@@ -8,7 +8,7 @@
 
 > **TxValuesArray**: `Uint8Array`[]
 
-Uint8Array values array for a legacy [Transaction](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+Uint8Array values array for a legacy [Transaction](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
 
 ## Defined in
 

@@ -44,4 +44,4 @@ Allows the API to return the contract parameters only.
 
 ## Defined in
 
-[src/methods/swap/transaction.ts:162](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/transaction.ts#L162)
+[src/methods/swap/transaction.ts:162](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/transaction.ts#L162)

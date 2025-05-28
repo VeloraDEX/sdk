@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/delta/getPartnerFee.ts:5](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/getPartnerFee.ts#L5)
+[src/methods/delta/getPartnerFee.ts:5](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getPartnerFee.ts#L5)

@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/index.ts:48](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/limitOrders/index.ts#L48)
+[src/methods/limitOrders/index.ts:48](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/index.ts#L48)

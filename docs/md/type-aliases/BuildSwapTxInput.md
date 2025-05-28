@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/swap/transaction.ts:93](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/transaction.ts#L93)
+[src/methods/swap/transaction.ts:93](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/transaction.ts#L93)

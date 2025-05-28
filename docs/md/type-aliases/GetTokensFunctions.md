@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/swap/token.ts:12](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/token.ts#L12)
+[src/methods/swap/token.ts:12](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/token.ts#L12)

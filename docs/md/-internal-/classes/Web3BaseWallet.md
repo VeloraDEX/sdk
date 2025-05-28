@@ -433,7 +433,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:72
 
 #### Parameters
 
-• **encryptedWallet**: [`KeyStore`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]
+• **encryptedWallet**: [`KeyStore`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]
 
 • **password**: `string`
 
@@ -451,7 +451,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:78
 
 ### encrypt()
 
-> `abstract` **encrypt**(`password`, `options`?): `Promise`\<[`KeyStore`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
+> `abstract` **encrypt**(`password`, `options`?): `Promise`\<[`KeyStore`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
 
 #### Parameters
 
@@ -461,7 +461,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:78
 
 #### Returns
 
-`Promise`\<[`KeyStore`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
+`Promise`\<[`KeyStore`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
 
 #### Defined in
 

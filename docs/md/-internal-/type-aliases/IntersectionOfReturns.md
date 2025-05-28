@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[src/sdk/partial.ts:27](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/sdk/partial.ts#L27)
+[src/sdk/partial.ts:27](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/partial.ts#L27)

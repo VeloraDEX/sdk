@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/buildOrder.ts:10](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/nftOrders/buildOrder.ts#L10)
+[src/methods/nftOrders/buildOrder.ts:10](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/buildOrder.ts#L10)

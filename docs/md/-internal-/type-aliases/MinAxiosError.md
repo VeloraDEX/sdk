@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[src/helpers/misc.ts:28](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/helpers/misc.ts#L28)
+[src/helpers/misc.ts:28](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/misc.ts#L28)

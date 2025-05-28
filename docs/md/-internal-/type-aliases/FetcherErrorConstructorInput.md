@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/helpers/misc.ts:43](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/helpers/misc.ts#L43)
+[src/helpers/misc.ts:43](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/misc.ts#L43)

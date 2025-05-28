@@ -142,7 +142,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:45
 
 ### utils
 
-> **utils**: [`"/Users/alexeyshchur/Desktop/Repos/paraswap-sdk/node_modules/web3-utils/lib/commonjs/index"`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/README.md)
+> **utils**: [`"/Users/andriishymkiv/paraswap/paraswap-sdk/node_modules/web3-utils/lib/commonjs/index"`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/README.md)
 
 #### Defined in
 
@@ -250,7 +250,7 @@ node\_modules/web3/lib/commonjs/web3.d.ts:15
 
 ### utils
 
-> `static` **utils**: [`"/Users/alexeyshchur/Desktop/Repos/paraswap-sdk/node_modules/web3-utils/lib/commonjs/index"`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/README.md)
+> `static` **utils**: [`"/Users/andriishymkiv/paraswap/paraswap-sdk/node_modules/web3-utils/lib/commonjs/index"`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/README.md)
 
 #### Defined in
 
@@ -1757,11 +1757,11 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:73
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Returns
 
-[`EventEmitter`](../namespaces/Users_alexeyshchur_Desktop_Repos_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Inherited from
 

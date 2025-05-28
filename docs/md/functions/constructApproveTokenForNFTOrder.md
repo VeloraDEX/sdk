@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/approveForOrder.ts:50](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/nftOrders/approveForOrder.ts#L50)
+[src/methods/nftOrders/approveForOrder.ts:50](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/approveForOrder.ts#L50)

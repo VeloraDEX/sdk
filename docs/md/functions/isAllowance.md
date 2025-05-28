@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/swap/balance.ts:41](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/swap/balance.ts#L41)
+[src/methods/swap/balance.ts:41](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/balance.ts#L41)

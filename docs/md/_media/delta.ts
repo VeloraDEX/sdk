@@ -7,6 +7,7 @@ import {
   constructAxiosFetcher,
   constructAllDeltaOrdersHandlers,
 } from '..';
+import { startStatusCheck } from './helpers/delta';
 
 const fetcher = constructAxiosFetcher(axios);
 
@@ -40,7 +41,7 @@ async function simpleDeltaFlow() {
     amount,
     userAddress: account,
     srcDecimals: 18,
-    destDecimals: 18,
+    destDecimals: 6,
     // partner: "..." // if available
   });
 
@@ -70,10 +71,7 @@ async function simpleDeltaFlow() {
   });
 
   // poll if necessary
-  const auction = await deltaSDK.getDeltaOrderById(deltaAuction.id);
-  if (auction?.status === 'EXECUTED') {
-    console.log('Auction was executed');
-  }
+  startStatusCheck(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
 }
 async function manualDeltaFlow() {
   const amount = '1000000000000'; // wei
@@ -84,7 +82,7 @@ async function manualDeltaFlow() {
     amount,
     userAddress: account,
     srcDecimals: 18,
-    destDecimals: 18,
+    destDecimals: 6,
     // partner: "..." // if available
   });
 
@@ -120,8 +118,5 @@ async function manualDeltaFlow() {
   });
 
   // poll if necessary
-  const auction = await deltaSDK.getDeltaOrderById(deltaAuction.id);
-  if (auction?.status === 'EXECUTED') {
-    console.log('Auction was executed');
-  }
+  startStatusCheck(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
 }

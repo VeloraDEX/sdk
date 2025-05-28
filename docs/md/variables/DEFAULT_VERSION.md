@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/constants.ts:16](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/constants.ts#L16)
+[src/constants.ts:16](https://github.com/VeloraDEX/sdk/blob/master/src/constants.ts#L16)

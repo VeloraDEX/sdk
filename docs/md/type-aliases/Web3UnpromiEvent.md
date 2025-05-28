@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/helpers/providers/web3.ts:16](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/helpers/providers/web3.ts#L16)
+[src/helpers/providers/web3.ts:16](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/providers/web3.ts#L16)

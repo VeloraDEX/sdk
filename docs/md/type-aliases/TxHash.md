@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/helpers/token.ts:18](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/helpers/token.ts#L18)
+[src/helpers/token.ts:18](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/token.ts#L18)

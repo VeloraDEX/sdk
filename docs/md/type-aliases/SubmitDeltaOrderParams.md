@@ -20,4 +20,4 @@ designates the Order as being able to be partially filled, as opposed to fill-or
 
 ## Defined in
 
-[src/methods/delta/index.ts:53](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/index.ts#L53)
+[src/methods/delta/index.ts:53](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/index.ts#L53)

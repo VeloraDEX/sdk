@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/signDeltaOrder.ts:11](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/delta/signDeltaOrder.ts#L11)
+[src/methods/delta/signDeltaOrder.ts:11](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/signDeltaOrder.ts#L11)

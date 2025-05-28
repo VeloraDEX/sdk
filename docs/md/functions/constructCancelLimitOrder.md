@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/cancelOrder.ts:60](https://github.com/VeloraDEX/paraswap-sdk/blob/feat/velora/src/methods/limitOrders/cancelOrder.ts#L60)
+[src/methods/limitOrders/cancelOrder.ts:60](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/cancelOrder.ts#L60)
