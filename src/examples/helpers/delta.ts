@@ -14,11 +14,11 @@ function isExecutedDeltaAuction(
   return true;
 }
 
-type GetDeltaOrder = () => ReturnType<
+type GetDeltaOrderFn = () => ReturnType<
   GetDeltaOrdersFunctions['getDeltaOrderById']
 >;
 
-async function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrder) {
+function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrderFn) {
   const intervalId = setInterval(async () => {
     const auction = await getDeltaOrder();
     console.log('checks: ', auction); // Handle or log the fetched auction as needed
@@ -33,7 +33,7 @@ async function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrder) {
   return intervalId;
 }
 
-export async function startStatusCheck(getDeltaOrder: GetDeltaOrder) {
-  const intervalId = await fetchOrderPeriodically(getDeltaOrder);
+export function startStatusCheck(getDeltaOrder: GetDeltaOrderFn) {
+  const intervalId = fetchOrderPeriodically(getDeltaOrder);
   setTimeout(() => clearInterval(intervalId), 60000); // Stop after 60 seconds
 }
