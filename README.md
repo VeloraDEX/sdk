@@ -242,7 +242,7 @@ if ('delta' in quote) {
       return true;
     }
 
-  async function fetchOrderPeriodically(auctionId: string) {
+  function fetchOrderPeriodically(auctionId: string) {
     const intervalId = setInterval(async () => {
       const auction = await simpleSDK.delta.getDeltaOrderById(auctionId);
       console.log('checks: ', auction); // Handle or log the fetched auction as needed
@@ -257,8 +257,8 @@ if ('delta' in quote) {
     return intervalId;
   }
 
-  async function startStatusCheck(auctionId: string) {
-    const intervalId = await fetchOrderPeriodically(auctionId);
+  function startStatusCheck(auctionId: string) {
+    const intervalId = fetchOrderPeriodically(auctionId);
     setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
   }
 
@@ -444,7 +444,7 @@ function isExecutedDeltaAuction(
   return true;
 }
 
-async function fetchOrderPeriodically(auctionId: string) {
+function fetchOrderPeriodically(auctionId: string) {
   const intervalId = setInterval(async () => {
     const auction = await simpleSDK.delta.getDeltaOrderById(auctionId);
     console.log('checks: ', auction); // Handle or log the fetched auction as needed
@@ -459,8 +459,8 @@ async function fetchOrderPeriodically(auctionId: string) {
   return intervalId;
 }
 
-async function startStatusCheck(auctionId: string) {
-  const intervalId = await fetchOrderPeriodically(auctionId);
+function startStatusCheck(auctionId: string) {
+  const intervalId = fetchOrderPeriodically(auctionId);
   setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
 }
 
