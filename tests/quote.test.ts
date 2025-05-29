@@ -93,7 +93,7 @@ describe('Quote:methods', () => {
     });
 
     await expect(quotePromise).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"Bad Request"`
+      `"PricingError"`
     );
 
     const error = await quotePromise.catch((e) => e);
@@ -103,8 +103,8 @@ describe('Quote:methods', () => {
 
     expect({ details, errorType }).toMatchInlineSnapshot(`
       {
-        "details": "Gas cost exceeds trade amount",
-        "errorType": "GasCostExceedsTradeAmount",
+        "details": "Error getting price data",
+        "errorType": "PricingError",
       }
     `);
   });
@@ -121,7 +121,7 @@ describe('Quote:methods', () => {
     });
 
     await expect(quotePromise).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"Bad Request"`
+      `"SourceEth"`
     );
 
     const error = await quotePromise.catch((e) => e);
@@ -149,7 +149,7 @@ describe('Quote:methods', () => {
     });
 
     await expect(quotePromise).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"Bad Request"`
+      `"UnsupportedSide"`
     );
 
     const error = await quotePromise.catch((e) => e);
