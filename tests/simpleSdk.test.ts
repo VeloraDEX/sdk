@@ -58,7 +58,7 @@ describe.each([
   beforeAll(async () => {
     await setupFork({ accounts: [{ address: senderAddress, balance: 8e18 }] });
 
-    sdk = constructSimpleSDK({ chainId, ...fetcherOptions, version: '5' });
+    sdk = constructSimpleSDK({ chainId, ...fetcherOptions, version: '6.2' });
   });
   test('getBalance', async () => {
     try {
@@ -308,7 +308,6 @@ describe.each([
       amount: destAmount,
       userAddress: senderAddress,
       side: SwapSide.BUY,
-      options: { includeDEXS: ['Uniswap', 'UniswapV2', 'Balancer', 'Oasis'] },
     });
     const _srcAmount = new BigNumber(priceRoute.srcAmount)
       .times(1.1)
