@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/signOrder.ts:5](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/signOrder.ts#L5)
+[src/methods/nftOrders/signOrder.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/signOrder.ts#L5)

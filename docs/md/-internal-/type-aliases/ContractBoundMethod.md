@@ -10,9 +10,9 @@
 
 ## Type Parameters
 
-• **Abi** *extends* [`AbiFunctionFragment`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
+• **Abi** *extends* [`AbiFunctionFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
 
-• **Method** *extends* [`ContractMethod`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\> = [`ContractMethod`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\>
+• **Method** *extends* [`ContractMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\> = [`ContractMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\>
 
 ## Parameters
 

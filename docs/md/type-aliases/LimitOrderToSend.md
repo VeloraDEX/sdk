@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/helpers/types.ts:7](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/helpers/types.ts#L7)
+[src/methods/limitOrders/helpers/types.ts:7](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/helpers/types.ts#L7)

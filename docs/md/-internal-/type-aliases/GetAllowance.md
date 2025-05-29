@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[src/methods/swap/balance.ts:35](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/balance.ts#L35)
+[src/methods/swap/balance.ts:35](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L35)

@@ -6,7 +6,7 @@
 
 # Type Alias: ContractMethodOutputParametersRecursiveArray\<Params\>
 
-> **ContractMethodOutputParametersRecursiveArray**\<`Params`\>: `Params` *extends* readonly [] ? [] : `Params` *extends* readonly [infer H, `...(infer R)`] ? `H` *extends* [`AbiParameter`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md) ? [[`MatchPrimitiveType`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/MatchPrimitiveType.md)\<`H`\[`"type"`\], `H`\[`"components"`\]\>, `...ContractMethodOutputParametersRecursiveArray<R>`] : [] : []
+> **ContractMethodOutputParametersRecursiveArray**\<`Params`\>: `Params` *extends* readonly [] ? [] : `Params` *extends* readonly [infer H, `...(infer R)`] ? `H` *extends* [`AbiParameter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md) ? [[`MatchPrimitiveType`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/MatchPrimitiveType.md)\<`H`\[`"type"`\], `H`\[`"components"`\]\>, `...ContractMethodOutputParametersRecursiveArray<R>`] : [] : []
 
 ## Type Parameters
 

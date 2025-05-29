@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[src/methods/delta/approveForDelta.ts:15](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/approveForDelta.ts#L15)
+[src/methods/delta/approveForDelta.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/approveForDelta.ts#L15)

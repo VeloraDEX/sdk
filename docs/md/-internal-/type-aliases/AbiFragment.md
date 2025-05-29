@@ -6,7 +6,7 @@
 
 # Type Alias: AbiFragment
 
-> **AbiFragment**: [`AbiConstructorFragment`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiConstructorFragment.md) \| [`AbiFunctionFragment`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md) \| [`AbiEventFragment`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiEventFragment.md) \| [`AbiErrorFragment`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiErrorFragment.md) \| [`AbiFallbackFragment`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFallbackFragment.md)
+> **AbiFragment**: [`AbiConstructorFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiConstructorFragment.md) \| [`AbiFunctionFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md) \| [`AbiEventFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiEventFragment.md) \| [`AbiErrorFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiErrorFragment.md) \| [`AbiFallbackFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFallbackFragment.md)
 
 ## Defined in
 

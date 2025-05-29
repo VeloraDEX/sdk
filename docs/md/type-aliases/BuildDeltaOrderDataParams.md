@@ -44,7 +44,7 @@ The deadline for the order
 
 ### deltaPrice
 
-> **deltaPrice**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaPrice`](DeltaPrice.md), `"destAmount"` \| `"partner"` \| `"partnerFee"` \| `"destToken"`\> & [`Partial`](../-internal-/type-aliases/Partial.md)\<[`Pick`](../-internal-/type-aliases/Pick.md)\<[`BridgePrice`](BridgePrice.md), `"bridgeFee"`\>\>
+> **deltaPrice**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaPrice`](DeltaPrice.md), `"destAmount"` \| `"partner"` \| `"partnerFee"` \| `"destToken"`\> & [`Partial`](../-internal-/type-aliases/Partial.md)\<[`Pick`](../-internal-/type-aliases/Pick.md)\<[`BridgePrice`](BridgePrice.md), `"bridgeFee"` \| `"bridge"`\>\>
 
 #### Description
 
@@ -148,4 +148,4 @@ The address of the src token
 
 ## Defined in
 
-[src/methods/delta/buildDeltaOrder.ts:17](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L17)
+[src/methods/delta/buildDeltaOrder.ts:17](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L17)

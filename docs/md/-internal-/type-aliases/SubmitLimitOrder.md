@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/index.ts:36](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/index.ts#L36)
+[src/methods/limitOrders/index.ts:36](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/index.ts#L36)

@@ -6,7 +6,7 @@
 
 # Interface: TxOptions
 
-The options for initializing a [Transaction](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md).
+The options for initializing a [Transaction](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md).
 
 ## Properties
 

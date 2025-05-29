@@ -108,4 +108,4 @@ The address of the src token
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:1](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L1)
+[src/methods/delta/helpers/types.ts:1](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L1)

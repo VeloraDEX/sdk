@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:17](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L17)
+[src/methods/delta/getDeltaOrders.ts:17](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L17)

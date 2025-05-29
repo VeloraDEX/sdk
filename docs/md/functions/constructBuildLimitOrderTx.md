@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/transaction.ts:60](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/transaction.ts#L60)
+[src/methods/limitOrders/transaction.ts:60](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/transaction.ts#L60)

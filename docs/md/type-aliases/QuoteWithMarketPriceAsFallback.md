@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:53](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L53)
+[src/methods/quote/getQuote.ts:64](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L64)

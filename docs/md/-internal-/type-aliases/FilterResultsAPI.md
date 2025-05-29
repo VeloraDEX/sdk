@@ -6,7 +6,7 @@
 
 # Type Alias: FilterResultsAPI
 
-> **FilterResultsAPI**: [`HexString32Bytes`](HexString32Bytes.md)[] \| [`LogAPI`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/LogAPI.md)[]
+> **FilterResultsAPI**: [`HexString32Bytes`](HexString32Bytes.md)[] \| [`LogAPI`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/LogAPI.md)[]
 
 ## Defined in
 

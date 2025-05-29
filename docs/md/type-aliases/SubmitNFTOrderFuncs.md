@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/index.ts:37](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/index.ts#L37)
+[src/methods/nftOrders/index.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/index.ts#L37)

@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/getOrders.ts:70](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/getOrders.ts#L70)
+[src/methods/limitOrders/getOrders.ts:70](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/getOrders.ts#L70)

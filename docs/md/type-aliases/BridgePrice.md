@@ -10,6 +10,10 @@
 
 ## Type declaration
 
+### bridge
+
+> **bridge**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`Bridge`](Bridge.md), `"destinationChainId"` \| `"outputToken"`\>
+
 ### bridgeFee
 
 > **bridgeFee**: `string`
@@ -32,4 +36,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:48](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L48)
+[src/methods/delta/getDeltaPrice.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L49)

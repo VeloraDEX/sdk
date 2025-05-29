@@ -28,7 +28,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:44
 
 ### encrypt()
 
-> `readonly` **encrypt**: (`password`, `options`?) => `Promise`\<[`KeyStore`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
+> `readonly` **encrypt**: (`password`, `options`?) => `Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
 
 #### Parameters
 
@@ -38,7 +38,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:44
 
 #### Returns
 
-`Promise`\<[`KeyStore`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
+`Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
 
 #### Defined in
 
@@ -104,7 +104,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:54
 
 #### Parameters
 
-• **tx**: [`Transaction`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+• **tx**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
 
 #### Returns
 

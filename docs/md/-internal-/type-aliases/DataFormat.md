@@ -16,11 +16,11 @@ strings.
 
 ### bytes
 
-> `readonly` **bytes**: [`FMT_BYTES`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_BYTES.md)
+> `readonly` **bytes**: [`FMT_BYTES`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_BYTES.md)
 
 ### number
 
-> `readonly` **number**: [`FMT_NUMBER`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_NUMBER.md)
+> `readonly` **number**: [`FMT_NUMBER`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_NUMBER.md)
 
 ## Defined in
 

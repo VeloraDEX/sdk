@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/index.ts:58](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/index.ts#L58)
+[src/methods/delta/index.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L58)

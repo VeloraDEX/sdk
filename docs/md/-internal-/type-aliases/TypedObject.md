@@ -16,7 +16,7 @@
 
 ### value
 
-> **value**: [`EncodingTypes`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/EncodingTypes.md)
+> **value**: [`EncodingTypes`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/EncodingTypes.md)
 
 ## Defined in
 

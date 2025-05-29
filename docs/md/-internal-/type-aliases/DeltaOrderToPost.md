@@ -52,4 +52,4 @@ Signature of the order from order.owner address. EOA signatures must be submitte
 
 ## Defined in
 
-[src/methods/delta/postDeltaOrder.ts:5](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L5)
+[src/methods/delta/postDeltaOrder.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L5)

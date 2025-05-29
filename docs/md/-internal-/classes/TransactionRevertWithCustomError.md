@@ -16,7 +16,7 @@ is able to be parsed from the revert reason
 
 ## Type Parameters
 
-• **ReceiptType** = [`TransactionReceipt`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+• **ReceiptType** = [`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
 
 ## Constructors
 

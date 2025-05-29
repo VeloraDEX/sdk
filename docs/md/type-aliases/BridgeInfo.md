@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/delta/getBridgeInfo.ts:10](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L10)
+[src/methods/delta/getBridgeInfo.ts:10](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L10)

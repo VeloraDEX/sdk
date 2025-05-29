@@ -8,7 +8,7 @@
 
 ## Type Parameters
 
-• **ResolveType** = [`TransactionReceipt`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+• **ResolveType** = [`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
 
 ## Properties
 
@@ -58,7 +58,7 @@ node\_modules/web3-eth/lib/commonjs/types.d.ts:20
 
 #### Parameters
 
-• **receipt**: [`TransactionReceipt`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+• **receipt**: [`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
 
 #### Returns
 

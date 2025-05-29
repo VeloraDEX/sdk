@@ -10,8 +10,8 @@
 
 ### Namespaces
 
-- ["/Users/andriishymkiv/paraswap/paraswap-sdk/node\_modules/web3-types/lib/commonjs/index"](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/README.md)
-- ["/Users/andriishymkiv/paraswap/paraswap-sdk/node\_modules/web3-utils/lib/commonjs/index"](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/README.md)
+- ["/home/velenir-gnx570/Projects/Paraswap/paraswap-sdk/node\_modules/web3-types/lib/commonjs/index"](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/README.md)
+- ["/home/velenir-gnx570/Projects/Paraswap/paraswap-sdk/node\_modules/web3-utils/lib/commonjs/index"](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/README.md)
 - ["node:stream/consumers"](namespaces/node:stream_consumers/README.md)
 - ["node:stream/promises"](namespaces/node:stream_promises/README.md)
 - [EventEmitter](namespaces/EventEmitter/README.md)
@@ -892,6 +892,8 @@
 - [PublicRpcSchema](type-aliases/PublicRpcSchema.md)
 - [Quantity](type-aliases/Quantity.md)
 - [QuoteFetchMethods](type-aliases/QuoteFetchMethods.md)
+- [QuoteWithBridgePrice](type-aliases/QuoteWithBridgePrice.md)
+- [QuoteWithDeltaPriceAndBridgePrice](type-aliases/QuoteWithDeltaPriceAndBridgePrice.md)
 - [Range](type-aliases/Range.md)
 - [RateOptions](type-aliases/RateOptions.md)
 - [RawAxiosRequestHeaders](type-aliases/RawAxiosRequestHeaders.md)
@@ -1202,157 +1204,157 @@
 
 ### AbiFunctionFragment
 
-Re-exports [AbiFunctionFragment](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
+Re-exports [AbiFunctionFragment](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
 
 ***
 
 ### AbiInput
 
-Re-exports [AbiInput](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md)
+Re-exports [AbiInput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md)
 
 ***
 
 ### AbiParameter
 
-Re-exports [AbiParameter](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)
+Re-exports [AbiParameter](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)
 
 ***
 
 ### BlockHeaderOutput
 
-Re-exports [BlockHeaderOutput](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockHeaderOutput.md)
+Re-exports [BlockHeaderOutput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockHeaderOutput.md)
 
 ***
 
 ### BlockOutput
 
-Re-exports [BlockOutput](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
+Re-exports [BlockOutput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
 
 ***
 
 ### BlockTag
 
-Re-exports [BlockTag](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/BlockTag.md)
+Re-exports [BlockTag](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/BlockTag.md)
 
 ***
 
 ### CipherOptions
 
-Re-exports [CipherOptions](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/CipherOptions.md)
+Re-exports [CipherOptions](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/CipherOptions.md)
 
 ***
 
 ### ContractEvents
 
-Re-exports [ContractEvents](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractEvents.md)
+Re-exports [ContractEvents](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractEvents.md)
 
 ***
 
 ### CustomChain
 
-Re-exports [CustomChain](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/CustomChain.md)
+Re-exports [CustomChain](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/CustomChain.md)
 
 ***
 
 ### DecodedParams
 
-Re-exports [DecodedParams](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/DecodedParams.md)
+Re-exports [DecodedParams](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/DecodedParams.md)
 
 ***
 
 ### EIP1193Provider
 
-Re-exports [EIP1193Provider](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md)
+Re-exports [EIP1193Provider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md)
 
 ***
 
 ### Eip712TypedData
 
-Re-exports [Eip712TypedData](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Eip712TypedData.md)
+Re-exports [Eip712TypedData](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Eip712TypedData.md)
 
 ***
 
 ### EthPersonalAPI
 
-Re-exports [EthPersonalAPI](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/EthPersonalAPI.md)
+Re-exports [EthPersonalAPI](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/EthPersonalAPI.md)
 
 ***
 
 ### EventEmitter
 
-Re-exports [EventEmitter](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+Re-exports [EventEmitter](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 ***
 
 ### FMT\_BYTES
 
-Re-exports [FMT_BYTES](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_BYTES.md)
+Re-exports [FMT_BYTES](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_BYTES.md)
 
 ***
 
 ### FMT\_NUMBER
 
-Re-exports [FMT_NUMBER](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_NUMBER.md)
+Re-exports [FMT_NUMBER](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_NUMBER.md)
 
 ***
 
 ### JsonRpcSubscriptionResultOld
 
-Re-exports [JsonRpcSubscriptionResultOld](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)
+Re-exports [JsonRpcSubscriptionResultOld](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)
 
 ***
 
 ### KeyStore
 
-Re-exports [KeyStore](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)
+Re-exports [KeyStore](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)
 
 ***
 
 ### LegacyRequestProvider
 
-Re-exports [LegacyRequestProvider](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacyRequestProvider.md)
+Re-exports [LegacyRequestProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacyRequestProvider.md)
 
 ***
 
 ### LegacySendAsyncProvider
 
-Re-exports [LegacySendAsyncProvider](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md)
+Re-exports [LegacySendAsyncProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md)
 
 ***
 
 ### LegacySendProvider
 
-Re-exports [LegacySendProvider](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md)
+Re-exports [LegacySendProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md)
 
 ***
 
 ### Log
 
-Re-exports [Log](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)
+Re-exports [Log](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)
 
 ***
 
 ### LogsOutput
 
-Re-exports [LogsOutput](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LogsOutput.md)
+Re-exports [LogsOutput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LogsOutput.md)
 
 ***
 
 ### MatchPrimitiveType
 
-Re-exports [MatchPrimitiveType](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/MatchPrimitiveType.md)
+Re-exports [MatchPrimitiveType](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/MatchPrimitiveType.md)
 
 ***
 
 ### MetaMaskProvider
 
-Re-exports [MetaMaskProvider](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/MetaMaskProvider.md)
+Re-exports [MetaMaskProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/MetaMaskProvider.md)
 
 ***
 
 ### PayableCallOptions
 
-Re-exports [PayableCallOptions](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md)
+Re-exports [PayableCallOptions](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md)
 
 ***
 
@@ -1364,73 +1366,73 @@ Re-exports [ReadableOptions](namespaces/internal/interfaces/ReadableOptions.md)
 
 ### SimpleProvider
 
-Re-exports [SimpleProvider](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/SimpleProvider.md)
+Re-exports [SimpleProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/SimpleProvider.md)
 
 ***
 
 ### SyncOutput
 
-Re-exports [SyncOutput](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/SyncOutput.md)
+Re-exports [SyncOutput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/SyncOutput.md)
 
 ***
 
 ### Topic
 
-Re-exports [Topic](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Topic.md)
+Re-exports [Topic](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Topic.md)
 
 ***
 
 ### Transaction
 
-Re-exports [Transaction](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+Re-exports [Transaction](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
 
 ***
 
 ### TransactionCall
 
-Re-exports [TransactionCall](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
+Re-exports [TransactionCall](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
 
 ***
 
 ### TransactionForAccessList
 
-Re-exports [TransactionForAccessList](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionForAccessList.md)
+Re-exports [TransactionForAccessList](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionForAccessList.md)
 
 ***
 
 ### TransactionReceipt
 
-Re-exports [TransactionReceipt](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+Re-exports [TransactionReceipt](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
 
 ***
 
 ### TransactionWithFromAndToLocalWalletIndex
 
-Re-exports [TransactionWithFromAndToLocalWalletIndex](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromAndToLocalWalletIndex.md)
+Re-exports [TransactionWithFromAndToLocalWalletIndex](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromAndToLocalWalletIndex.md)
 
 ***
 
 ### TransactionWithFromLocalWalletIndex
 
-Re-exports [TransactionWithFromLocalWalletIndex](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromLocalWalletIndex.md)
+Re-exports [TransactionWithFromLocalWalletIndex](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromLocalWalletIndex.md)
 
 ***
 
 ### TransactionWithToLocalWalletIndex
 
-Re-exports [TransactionWithToLocalWalletIndex](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithToLocalWalletIndex.md)
+Re-exports [TransactionWithToLocalWalletIndex](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithToLocalWalletIndex.md)
 
 ***
 
 ### Web3APIRequest
 
-Re-exports [Web3APIRequest](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)
+Re-exports [Web3APIRequest](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)
 
 ***
 
 ### Web3NetAPI
 
-Re-exports [Web3NetAPI](namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3NetAPI.md)
+Re-exports [Web3NetAPI](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3NetAPI.md)
 
 ***
 

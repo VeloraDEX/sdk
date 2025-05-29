@@ -36,4 +36,4 @@
 
 ## Defined in
 
-[src/sdk/full.ts:22](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/full.ts#L22)
+[src/sdk/full.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/full.ts#L22)

@@ -10,7 +10,7 @@
 
 ## Parameters
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\>
+• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\> & `object`
 
 • **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
 
@@ -20,7 +20,39 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:63](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L63)
+[src/methods/quote/getQuote.ts:75](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L75)
+
+> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
+
+## Parameters
+
+• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\> & `object`
+
+• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+
+## Returns
+
+`Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
+
+## Defined in
+
+[src/methods/quote/getQuote.ts:79](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L79)
+
+> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md)\>
+
+## Parameters
+
+• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\>
+
+• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+
+## Returns
+
+`Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md)\>
+
+## Defined in
+
+[src/methods/quote/getQuote.ts:83](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L83)
 
 > **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithMarketPrice`](../../type-aliases/QuoteWithMarketPrice.md)\>
 
@@ -36,13 +68,13 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:67](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L67)
+[src/methods/quote/getQuote.ts:87](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L87)
 
 > **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPrice`](../../type-aliases/QuoteWithDeltaPrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
 
 ## Parameters
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\>
+• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\> & `object`
 
 • **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
 
@@ -52,7 +84,39 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:71](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L71)
+[src/methods/quote/getQuote.ts:91](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L91)
+
+> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
+
+## Parameters
+
+• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\> & `object`
+
+• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+
+## Returns
+
+`Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
+
+## Defined in
+
+[src/methods/quote/getQuote.ts:97](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L97)
+
+> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
+
+## Parameters
+
+• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\>
+
+• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+
+## Returns
+
+`Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
+
+## Defined in
+
+[src/methods/quote/getQuote.ts:103](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L103)
 
 > **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteResponse`](../../type-aliases/QuoteResponse.md)\>
 
@@ -68,4 +132,4 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:74](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L74)
+[src/methods/quote/getQuote.ts:106](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L106)

@@ -72,4 +72,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:30](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L30)
+[src/methods/delta/getDeltaPrice.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L31)

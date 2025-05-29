@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/delta/postDeltaOrder.ts:22](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L22)
+[src/methods/delta/postDeltaOrder.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L22)

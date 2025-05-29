@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/delta/getMulticallHandlers.ts:16](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getMulticallHandlers.ts#L16)
+[src/methods/delta/getMulticallHandlers.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getMulticallHandlers.ts#L16)

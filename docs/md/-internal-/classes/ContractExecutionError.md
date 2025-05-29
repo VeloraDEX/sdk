@@ -21,7 +21,7 @@ The data is expected to be encoded according to EIP-848.
 
 #### Parameters
 
-• **rpcError**: [`JsonRpcError`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcError.md)\<[`JsonRpcResult`](../type-aliases/JsonRpcResult.md)\>
+• **rpcError**: [`JsonRpcError`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcError.md)\<[`JsonRpcResult`](../type-aliases/JsonRpcResult.md)\>
 
 #### Returns
 
@@ -95,7 +95,7 @@ node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
 
 ### receipt?
 
-> `optional` **receipt**: [`TransactionReceipt`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+> `optional` **receipt**: [`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
 
 #### Inherited from
 

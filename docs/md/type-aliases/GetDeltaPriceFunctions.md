@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:75](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L75)
+[src/methods/delta/getDeltaPrice.ts:77](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L77)

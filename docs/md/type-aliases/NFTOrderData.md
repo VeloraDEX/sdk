@@ -52,4 +52,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/helpers/buildOrderData.ts:56](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/helpers/buildOrderData.ts#L56)
+[src/methods/nftOrders/helpers/buildOrderData.ts:56](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/buildOrderData.ts#L56)

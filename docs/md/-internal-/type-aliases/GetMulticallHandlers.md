@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/getMulticallHandlers.ts:12](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getMulticallHandlers.ts#L12)
+[src/methods/delta/getMulticallHandlers.ts:12](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getMulticallHandlers.ts#L12)

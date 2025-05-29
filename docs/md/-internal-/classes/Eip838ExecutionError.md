@@ -21,7 +21,7 @@ The properties would be typically decoded from the `data` if it was encoded acco
 
 #### Parameters
 
-• **error**: [`Eip838ExecutionError`](Eip838ExecutionError.md) \| [`JsonRpcError`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcError.md)\<[`ProviderErrorData`](../type-aliases/ProviderErrorData.md)\>
+• **error**: [`Eip838ExecutionError`](Eip838ExecutionError.md) \| [`JsonRpcError`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcError.md)\<[`ProviderErrorData`](../type-aliases/ProviderErrorData.md)\>
 
 #### Returns
 
@@ -135,7 +135,7 @@ node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:83
 
 ### receipt?
 
-> `optional` **receipt**: [`TransactionReceipt`](../namespaces/Users_andriishymkiv_paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+> `optional` **receipt**: [`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
 
 #### Inherited from
 

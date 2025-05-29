@@ -36,4 +36,4 @@
 
 ## Defined in
 
-[src/methods/swap/rates.ts:172](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/rates.ts#L172)
+[src/methods/swap/rates.ts:172](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L172)

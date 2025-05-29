@@ -44,4 +44,4 @@ List of DEXs to include. **Supported DEXs:** Uniswap, Kyber, Bancor, AugustusRFQ
 
 ## Defined in
 
-[src/methods/swap/swapTx.ts:180](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/swapTx.ts#L180)
+[src/methods/swap/swapTx.ts:180](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L180)

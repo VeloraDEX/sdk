@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/signOrder.ts:11](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/signOrder.ts#L11)
+[src/methods/limitOrders/signOrder.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/signOrder.ts#L11)

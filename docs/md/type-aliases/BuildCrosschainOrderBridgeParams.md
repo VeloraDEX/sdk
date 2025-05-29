@@ -20,7 +20,7 @@ Whether the beneficiary is a contract. Needed to automatically fill in crosschai
 
 ### deltaPrice
 
-> **deltaPrice**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`BridgePrice`](BridgePrice.md), `"bridgeFee"` \| `"destToken"`\>
+> **deltaPrice**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`BridgePrice`](BridgePrice.md), `"bridgeFee"` \| `"bridge"`\>
 
 #### Description
 
@@ -44,4 +44,4 @@ The address of the destination token on the destination chain
 
 ## Defined in
 
-[src/methods/delta/buildCrosschainOrderBridge.ts:12](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildCrosschainOrderBridge.ts#L12)
+[src/methods/delta/buildCrosschainOrderBridge.ts:12](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildCrosschainOrderBridge.ts#L12)

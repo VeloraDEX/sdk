@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/helpers/buildOrderData.ts:10](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/helpers/buildOrderData.ts#L10)
+[src/methods/limitOrders/helpers/buildOrderData.ts:10](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/helpers/buildOrderData.ts#L10)
