@@ -90,6 +90,9 @@ export class FetcherError extends Error implements FetcherErrorInterface {
     const { data, status } = response;
     this.status = status;
     this.message = isDataWithError(data) ? data.error : message;
+    this.message = isDataWithError2(data)
+      ? `${data.errorType}${data.description ? `: ${data.description}` : ''}`
+      : this.message;
   }
 }
 // to turn `object -> Record` for indexed variable access
@@ -99,6 +102,11 @@ function isObject(obj: unknown): obj is Record<string | symbol, any> {
 
 export function isDataWithError(data: unknown): data is { error: string } {
   return isObject(data) && typeof data['error'] === 'string';
+}
+export function isDataWithError2(
+  data: unknown
+): data is { errorType: string; description?: string } {
+  return isObject(data) && typeof data['errorType'] === 'string';
 }
 
 export type ExtractAbiMethodNames<T extends readonly { name: string }[]> =

@@ -1,7 +1,7 @@
 import { assert } from 'ts-essentials';
 import { ZERO_ADDRESS } from '../../common/orders/buildOrderData';
 import { BeneficiaryType } from '../../common/orders/types';
-import { Bridge, DeltaAuctionOrder } from './types';
+import { Bridge } from './types';
 
 export const ACROSS_WETH_ADDRESSES_MAP: Record<number, string> = {
   // Mainnet
@@ -32,6 +32,8 @@ export const ACROSS_WETH_ADDRESSES_MAP: Record<number, string> = {
   81457: '0x4300000000000000000000000000000000000004',
   // Blast Sepolia
   168587773: '0x4200000000000000000000000000000000000023',
+  // BSC
+  56: '0x2170Ed0880ac9A755fd29B2688956BD959F933F8',
   // Ink
   57073: '0x4200000000000000000000000000000000000006',
   // Ink Sepolia
@@ -98,11 +100,10 @@ export function isETHaddress(tokenAddress: string): boolean {
 // https://developers.velora.xyz/api/velora-api/velora-delta-api/build-a-delta-order-to-sign
 
 export type GetDeltaBridgeAndDestTokenInput = {
-  destTokenDestChain: string;
+  destTokenDestChain: string; // the token user wants to ultimately receive
   destChainId: number;
-  destTokenSrcChain: string;
-  srcChainId: number;
   bridgeFee: string;
+  bridgeOutputToken: string; // the token on the destination chain, in case of WETH -> ETH, will be different from destTokenDestChain and unwrapped
   beneficiaryType: BeneficiaryType;
   getMulticallHandler: (chainId: number) => Promise<string>;
 };
@@ -110,16 +111,13 @@ export type GetDeltaBridgeAndDestTokenInput = {
 export type GetDeltaBridgeAndDestTokenOutput = {
   /** @description The bridge object to be used for Order.bridge */
   bridge: Bridge;
-  /** @description The changes to be made to the Order */
-  orderChanges: Pick<DeltaAuctionOrder, 'destToken'>;
 };
 
-export async function getDeltaBridgeAndDestToken({
+export async function getDeltaBridge({
   destTokenDestChain,
   destChainId,
-  destTokenSrcChain,
-  srcChainId,
   bridgeFee,
+  bridgeOutputToken,
   beneficiaryType,
   getMulticallHandler,
 }: GetDeltaBridgeAndDestTokenInput): Promise<GetDeltaBridgeAndDestTokenOutput> {
@@ -127,48 +125,20 @@ export async function getDeltaBridgeAndDestToken({
     beneficiaryType === 'EOA' || beneficiaryType === 'SmartContract',
     'beneficiaryType must be EOA or SmartContract'
   );
-  const WETH_SRC_CHAIN = ACROSS_WETH_ADDRESSES_MAP[srcChainId];
 
-  const WETH_DEST_CHAIN = ACROSS_WETH_ADDRESSES_MAP[destChainId];
+  const outputToken = bridgeOutputToken.toLowerCase(); // for uniformity
 
-  if (!WETH_SRC_CHAIN || !WETH_DEST_CHAIN) {
-    // this should never happen as we only expect crosschain Delta Orders for supported chains
-    const bridge: Bridge = {
-      maxRelayerFee: bridgeFee,
-      destinationChainId: destChainId,
-      outputToken: destTokenDestChain,
-      multiCallHandler: ZERO_ADDRESS,
-    };
-
-    return {
-      bridge,
-      orderChanges: {
-        destToken: destTokenSrcChain,
-      },
-    };
-  }
+  let multiCallHandler: string = ZERO_ADDRESS;
 
   if (beneficiaryType === 'EOA' && isETHaddress(destTokenDestChain)) {
     /*
     if beneficiary is an EOA and destToken on destChain = ETH
-    order.destToken=ETH
-    order.bridge.outputToken=WETH_DEST_CHAIN
+    order.destToken=ETH (deltaPrice already contains correct destToken)
+    order.bridge.outputToken=WETH_DEST_CHAIN (deltaPrice already contains correct bridge.outputToken)
     order.bridge.multiCallHandler=NULL_ADDRESS
     */
 
-    const bridge: Bridge = {
-      maxRelayerFee: bridgeFee,
-      destinationChainId: destChainId,
-      outputToken: WETH_DEST_CHAIN,
-      multiCallHandler: ZERO_ADDRESS,
-    };
-
-    return {
-      bridge,
-      orderChanges: {
-        destToken: ETH_ADDRESS,
-      },
-    };
+    multiCallHandler = ZERO_ADDRESS;
   }
   if (
     beneficiaryType === 'EOA' &&
@@ -176,43 +146,21 @@ export async function getDeltaBridgeAndDestToken({
   ) {
     /*
     if beneficiary is an EOA and destToken on destChain = WETH
-    order.destToken=WETH
-    order.bridge.outputToken=WETH_DEST_CHAIN
+    order.destToken=WETH (deltaPrice already contains correct destToken)
+    order.bridge.outputToken=WETH_DEST_CHAIN (deltaPrice already contains correct bridge.outputToken)
     order.bridge.multiCallHandler=MULTI_CALL_HANDLER
     */
-    const bridge: Bridge = {
-      maxRelayerFee: bridgeFee,
-      destinationChainId: destChainId,
-      outputToken: WETH_DEST_CHAIN,
-      multiCallHandler: await getMulticallHandler(destChainId),
-    };
-    return {
-      bridge,
-      orderChanges: {
-        destToken: WETH_SRC_CHAIN,
-      },
-    };
+    multiCallHandler = await getMulticallHandler(destChainId);
   }
 
   if (beneficiaryType === 'SmartContract' && isETHaddress(destTokenDestChain)) {
     /* 
       if beneficiary is a contract and destToken on destChain = ETH
-      order.destToken=ETH
-      order.bridge.outputToken=WETH_DEST_CHAIN
+      order.destToken=ETH (deltaPrice already contains correct destToken)
+      order.bridge.outputToken=WETH_DEST_CHAIN (deltaPrice already contains correct bridge.outputToken)
       order.bridge.multiCallHandler=MULTI_CALL_HANDLER
       */
-    const bridge: Bridge = {
-      maxRelayerFee: bridgeFee,
-      destinationChainId: destChainId,
-      outputToken: WETH_DEST_CHAIN,
-      multiCallHandler: await getMulticallHandler(destChainId),
-    };
-    return {
-      bridge,
-      orderChanges: {
-        destToken: ETH_ADDRESS,
-      },
-    };
+    multiCallHandler = await getMulticallHandler(destChainId);
   }
 
   if (
@@ -221,35 +169,21 @@ export async function getDeltaBridgeAndDestToken({
   ) {
     /*
       if beneficiary is a contract and destToken on destChain = WETH
-      order.destToken=WETH
-      order.bridge.outputToken=WETH_DEST_CHAIN
+      order.destToken=WETH (deltaPrice already contains correct destToken)
+      order.bridge.outputToken=WETH_DEST_CHAIN (deltaPrice already contains correct bridge.outputToken)
       order.bridge.multiCallHandler=NULL_ADDRESS
     */
-    const bridge: Bridge = {
-      maxRelayerFee: bridgeFee,
-      destinationChainId: destChainId,
-      outputToken: WETH_DEST_CHAIN,
-      multiCallHandler: ZERO_ADDRESS,
-    };
-    return {
-      bridge,
-      orderChanges: {
-        destToken: WETH_SRC_CHAIN,
-      },
-    };
+    multiCallHandler = ZERO_ADDRESS;
   }
 
   const bridge: Bridge = {
     maxRelayerFee: bridgeFee,
     destinationChainId: destChainId,
-    outputToken: destTokenDestChain,
-    multiCallHandler: ZERO_ADDRESS,
+    outputToken,
+    multiCallHandler,
   };
 
   return {
     bridge,
-    orderChanges: {
-      destToken: destTokenSrcChain,
-    },
   };
 }

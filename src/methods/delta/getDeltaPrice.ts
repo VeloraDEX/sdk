@@ -1,3 +1,4 @@
+import { Bridge } from '../..';
 import { API_URL, SwapSide } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
@@ -51,6 +52,7 @@ export type BridgePrice = DeltaPrice & {
   bridgeFee: string;
   bridgeFeeUSD: string;
   poolAddress: string;
+  bridge: Pick<Bridge, 'destinationChainId' | 'outputToken'>;
 };
 
 type DeltaPriceResponse = {

@@ -11,6 +11,7 @@ const config: HardhatUserConfig = {
   solidity: '0.8.24',
   networks: {
     hardhat: {
+      // loggingEnabled: true,
       forking: {
         url: process.env.PROVIDER_URL!, // Replace with your actual Alchemy/Infura URL
         // Optional forking configurations (e.g., block number):

@@ -32,8 +32,9 @@ const srcAmount = (1 * 1e18).toString(); //The source amount multiplied by its d
 
 const referrer = 'sdk-test';
 const TEST_MNEMONIC =
-  'radar blur cabbage chef fix engine embark joy scheme fiction master release';
-//0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9
+  // fresh throw-away mnemonic, acc from previous public mnemonic was overused and generated errors on BUY
+  'venue olympic vendor sign era tongue sleep peace daughter enjoy dry august';
+//0xbB12cA3d135e40517CDDAc23E9fBE0E66f53e829
 const wallet = ethers.Wallet.fromMnemonic(TEST_MNEMONIC);
 const walletV6 = ethersV6.HDNodeWallet.fromPhrase(TEST_MNEMONIC);
 
@@ -57,7 +58,7 @@ describe.each([
   beforeAll(async () => {
     await setupFork({ accounts: [{ address: senderAddress, balance: 8e18 }] });
 
-    sdk = constructSimpleSDK({ chainId, ...fetcherOptions, version: '5' });
+    sdk = constructSimpleSDK({ chainId, ...fetcherOptions, version: '6.2' });
   });
   test('getBalance', async () => {
     try {
@@ -307,7 +308,6 @@ describe.each([
       amount: destAmount,
       userAddress: senderAddress,
       side: SwapSide.BUY,
-      options: { includeDEXS: ['Uniswap', 'UniswapV2', 'Balancer', 'Oasis'] },
     });
     const _srcAmount = new BigNumber(priceRoute.srcAmount)
       .times(1.1)
