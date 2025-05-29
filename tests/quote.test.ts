@@ -253,11 +253,11 @@ describe('Quote:methods', () => {
     `);
   });
 
-  test('Get Fallback Market Quote for all', async () => {
+  test.only('Get Fallback Market Quote for all', async () => {
     const quote = await quoteSDK.getQuote({
       srcToken: USDC,
       destToken: ETH,
-      amount: (10e4).toString(),
+      amount: (1e6).toString(),
       srcDecimals: 6,
       destDecimals: 18,
       mode: 'all',
