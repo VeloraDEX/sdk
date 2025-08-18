@@ -26,6 +26,10 @@ type OrdersFilter = {
   page?: number;
   /** @description Pagination option, limit. Default 100 */
   limit?: number;
+  /** @description Filter by chainId, without this filter, orders from all chains are returned */
+  chainId?: number; // @TODO currently not working
+  /** @description Filter by type. MARKET, LIMIT, or ALL. Default is ALL */
+  type?: 'MARKET' | 'LIMIT' | 'ALL';
 };
 type OrderFiltersQuery = OrdersFilter;
 
@@ -81,6 +85,8 @@ export const constructGetDeltaOrders = ({
       userAddress: options.userAddress,
       page: options.page,
       limit: options.limit,
+      chainId: options.chainId,
+      type: options.type,
     });
 
     const fetchURL = `${baseUrl}${search}` as const;
