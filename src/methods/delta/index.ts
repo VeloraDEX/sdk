@@ -49,6 +49,10 @@ import {
   BuildCrosschainOrderBridgeFunctions,
   constructBuildCrosschainOrderBridge,
 } from './buildCrosschainOrderBridge';
+import {
+  CancelDeltaOrderFunctions,
+  constructCancelDeltaOrder,
+} from './cancelDeltaOrder';
 
 export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
   /** @description designates the Order as being able to be partially filled, as opposed to fill-or-kill */
@@ -102,13 +106,14 @@ export type DeltaOrderHandlers<T> = SubmitDeltaOrderFuncs &
   GetBridgeInfoFunctions &
   IsTokenSupportedInDeltaFunctions &
   PostDeltaOrderFunctions &
-  SignDeltaOrderFunctions;
+  SignDeltaOrderFunctions &
+  CancelDeltaOrderFunctions;
 
 /** @description construct SDK with every Delta Order-related method, fetching from API and Order signing */
 export const constructAllDeltaOrdersHandlers = <TxResponse>(
   options: ConstructProviderFetchInput<
     TxResponse,
-    'signTypedDataCall' | 'transactCall'
+    'signTypedDataCall' | 'signMessageCall' | 'transactCall'
   >
 ): DeltaOrderHandlers<TxResponse> => {
   const deltaOrdersGetters = constructGetDeltaOrders(options);
@@ -131,6 +136,8 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
   const deltaOrdersSign = constructSignDeltaOrder(options);
   const deltaOrdersPost = constructPostDeltaOrder(options);
 
+  const deltaOrdersCancel = constructCancelDeltaOrder(options);
+
   return {
     ...deltaOrdersGetters,
     ...deltaOrdersContractGetter,
@@ -144,6 +151,7 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
     ...deltaOrdersBuild,
     ...deltaOrdersSign,
     ...deltaOrdersPost,
+    ...deltaOrdersCancel,
     ...buildCrosschainOrderBridge,
   };
 };
