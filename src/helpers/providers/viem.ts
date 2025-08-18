@@ -2,6 +2,7 @@ import type {
   Address,
   ContractCallerFunctions,
   ContractCallStaticInput,
+  SignMessageContractCallerFn,
   SignTypedDataContractCallerFn,
   StaticContractCallerFn,
   TransactionContractCallerFn,
@@ -23,7 +24,10 @@ import { TransactionParams } from '../../methods/swap/transaction';
 
 export type MinViemClient = Partial<
   Pick<PublicActions<Transport, Chain>, 'readContract'> &
-    Pick<WalletActions<Chain>, 'writeContract' | 'signTypedData'>
+    Pick<
+      WalletActions<Chain>,
+      'writeContract' | 'signTypedData' | 'signMessage'
+    >
 > & { account?: Account };
 
 export const constructContractCaller = (
@@ -144,7 +148,21 @@ export const constructContractCaller = (
     return signature;
   };
 
-  return { staticCall, transactCall, signTypedDataCall };
+  const signMessageCall: SignMessageContractCallerFn = async (message) => {
+    assert(account, 'account must be specified to sign data');
+    assert(
+      viemClient.signMessage,
+      'Viem client must have signMessage Wallet Action'
+    );
+
+    const signature = await viemClient.signMessage({
+      account: viemClient.account || (account as Hex),
+      message: typeof message === 'string' ? message : { raw: message },
+    });
+    return signature;
+  };
+
+  return { staticCall, transactCall, signTypedDataCall, signMessageCall };
 };
 
 type ViemTxParams = {
