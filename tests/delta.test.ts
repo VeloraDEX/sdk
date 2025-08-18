@@ -957,7 +957,7 @@ describe('Delta:methods', () => {
 
   const sampleOrderId = '7ec0dc82-98ad-4501-9f46-03e31e51098f';
 
-  test.only.each([
+  test.each([
     ['ethersV5', ethersV5ContractCaller],
     ['ethersV6', ethersV6ContractCaller],
     ['web3', web3ContractCaller],
