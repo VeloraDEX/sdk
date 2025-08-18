@@ -113,11 +113,15 @@ export type TransactionContractCallerFn<T> = <M extends string = string>(
 export type SignTypedDataContractCallerFn = (
   typedData: SignableTypedData
 ) => Promise<string>;
+export type SignMessageContractCallerFn = (
+  message: string | Uint8Array
+) => Promise<string>;
 
 export interface ContractCallerFunctions<T> {
   staticCall: StaticContractCallerFn;
   transactCall: TransactionContractCallerFn<T>;
   signTypedDataCall: SignTypedDataContractCallerFn;
+  signMessageCall: SignMessageContractCallerFn;
 }
 
 export interface ConstructProviderFetchInput<
