@@ -26,6 +26,7 @@ import {
   constructBuildCrosschainOrderBridge,
   BuildCrosschainOrderBridgeParams,
   BridgePrice,
+  constructCancelDeltaOrder,
 } from '../src';
 import BigNumber from 'bignumber.js';
 
@@ -34,7 +35,16 @@ import erc20abi from './abi/ERC20.json';
 import { assert } from 'ts-essentials';
 import { HardhatProvider } from './helpers/hardhat';
 import { privateKeyToAccount } from 'viem/accounts';
-import { createWalletClient, custom, Hex } from 'viem';
+import {
+  Address,
+  createWalletClient,
+  custom,
+  Hex,
+  hexToBytes,
+  keccak256,
+  stringToBytes,
+  verifyMessage,
+} from 'viem';
 import { hardhat } from 'viem/chains';
 import { ZERO_ADDRESS } from '../src/methods/common/orders/buildOrderData';
 import {
@@ -832,7 +842,7 @@ describe('Delta:methods', () => {
     ['ethersV6', ethersV6ContractCaller],
     ['web3', web3ContractCaller],
     ['viem', viemContractCaller],
-  ])('sign Delta Order with %s', async (libName, contractCaller) => {
+  ])('sign Delta Order with %s', async (_libName, contractCaller) => {
     const sdk = constructPartialSDK(
       {
         chainId: 1,
@@ -942,6 +952,46 @@ describe('Delta:methods', () => {
     // signatures match between libraries
     expect(deltaOrderSignature).toEqual(signature);
   });
+
+  let cancelSignature = '';
+
+  const sampleOrderId = '7ec0dc82-98ad-4501-9f46-03e31e51098f';
+
+  test.only.each([
+    ['ethersV5', ethersV5ContractCaller],
+    ['ethersV6', ethersV6ContractCaller],
+    ['web3', web3ContractCaller],
+    ['viem', viemContractCaller],
+  ])(
+    'sign Cancel Delta Order Request with %s',
+    async (_libName, contractCaller) => {
+      const sdk = constructPartialSDK(
+        {
+          chainId: 1,
+          fetcher: fetchFetcher,
+          contractCaller,
+          apiURL: process.env.API_URL,
+        },
+        constructCancelDeltaOrder
+      );
+
+      const deltaCancelSignature = await sdk.signCancelDeltaOrderRequest({
+        id: sampleOrderId,
+      });
+
+      const valid = await verifySignedCancelRequest({
+        orderId: sampleOrderId,
+        signature: deltaCancelSignature,
+        address: senderAddress,
+      });
+
+      expect(valid).toBe(true);
+
+      if (!cancelSignature) cancelSignature = deltaCancelSignature;
+      // signatures match between libraries
+      expect(deltaCancelSignature).toEqual(cancelSignature);
+    }
+  );
 
   const dummyFetcher: FetcherFunction = (params) => {
     // intercept POST requests
@@ -1217,4 +1267,29 @@ function constructBridge({
     destinationChainId: destChainId,
     deltaDestToken,
   };
+}
+
+type VerifySignedCancelRequestInput = {
+  orderId: string;
+  signature: string;
+  address: string;
+};
+
+async function verifySignedCancelRequest({
+  orderId,
+  signature,
+  address,
+}: VerifySignedCancelRequestInput): Promise<boolean> {
+  const payload = `CancelOrder:${orderId}`;
+
+  const digestHex = keccak256(stringToBytes(payload)); // 0x… (32 bytes)
+  const messageBytes = hexToBytes(digestHex); // Uint8Array(32)
+
+  const valid = await verifyMessage({
+    address: address as Address,
+    message: { raw: messageBytes },
+    signature: signature as Hex,
+  });
+
+  return valid;
 }
