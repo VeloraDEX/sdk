@@ -23,7 +23,7 @@ export type DeltaOrderToPost = {
 
 export type PostDeltaOrderParams = Omit<DeltaOrderToPost, 'chainId'>;
 
-type DeltaOrderApiResponse = Omit<DeltaAuction, 'transactions'> & {
+export type DeltaOrderApiResponse = Omit<DeltaAuction, 'transactions'> & {
   orderVersion: string; // "2.0.0"
   deltaGasOverhead: number; // @TODO may be removed
   type: 'MARKET' | 'LIMIT';
