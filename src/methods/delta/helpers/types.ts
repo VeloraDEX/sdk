@@ -36,12 +36,17 @@ export type Bridge = {
 
 type DeltaAuctionStatus =
   | 'NOT_STARTED'
-  | 'POSTED'
+  | 'POSTED' // @TODO check if this is still returned
   | 'RUNNING'
   | 'EXECUTING'
   | 'EXECUTED'
   | 'FAILED'
-  | 'EXPIRED';
+  | 'EXPIRED'
+  | 'CANCELLED'; // @TODO check if added
+// these are not exposed, but are coerced into FAILED
+// | 'INSUFFICIENT_BALANCE'
+// | 'INSUFFICIENT_ALLOWANCE'
+// | 'INVALIDATED';
 
 type DeltaAuctionTransaction = {
   id: string;
@@ -91,6 +96,12 @@ export type DeltaAuction = {
 
   bridgeMetadata: BridgeMetadata | null;
   bridgeStatus: BridgeStatus | null;
+
+  // @TODO only returned after POST Order so far
+  // orderVersion: string; // "2.0.0"
+  // deltaGasOverhead: number;
+
+  // type: 'MARKET' | 'LIMIT'; // @TODO when available in API
 };
 
 export type BridgeMetadata = {
