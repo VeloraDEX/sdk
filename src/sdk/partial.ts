@@ -16,7 +16,7 @@ import { API_URL, DEFAULT_VERSION } from '../constants';
 
 export type SDKConfig<TxResponse = any> = ConstructProviderFetchInput<
   TxResponse,
-  'staticCall' | 'transactCall' | 'signTypedDataCall'
+  'staticCall' | 'transactCall' | 'signTypedDataCall' | 'signMessageCall'
 > &
   ConstructFetchInput;
 
