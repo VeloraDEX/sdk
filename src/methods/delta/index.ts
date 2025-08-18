@@ -1,5 +1,4 @@
 import type { ConstructProviderFetchInput } from '../../types';
-import type { DeltaAuction } from './helpers/types';
 import {
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
@@ -7,6 +6,7 @@ import {
 } from './buildDeltaOrder';
 import {
   constructPostDeltaOrder,
+  DeltaOrderApiResponse,
   PostDeltaOrderFunctions,
 } from './postDeltaOrder';
 import {
@@ -53,11 +53,13 @@ import {
 export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
   /** @description designates the Order as being able to be partially filled, as opposed to fill-or-kill */
   partiallyFillable?: boolean;
+  /** @description Referrer address */
+  referrerAddress?: string;
 };
 
 type SubmitDeltaOrder = (
   orderParams: SubmitDeltaOrderParams
-) => Promise<DeltaAuction>;
+) => Promise<DeltaOrderApiResponse>;
 
 export type SubmitDeltaOrderFuncs = {
   submitDeltaOrder: SubmitDeltaOrder;
@@ -79,6 +81,7 @@ export const constructSubmitDeltaOrder = (
       partner: orderParams.partner,
       order: orderData.data,
       partiallyFillable: orderParams.partiallyFillable,
+      referrerAddress: orderParams.referrerAddress,
     });
 
     return response;
