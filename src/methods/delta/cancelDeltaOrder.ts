@@ -71,7 +71,7 @@ export const constructCancelDeltaOrder = (
 };
 
 function constructCancelDeltaOrderMessage(orderId: string): Uint8Array {
-  const payload = `CancelOrder:${String(orderId)}`;
+  const payload = `CancelOrder:${orderId}`;
 
   const digestHex = keccak256(stringToBytes(payload)); // 0x… (32 bytes)
   const messageBytes = hexToBytes(digestHex);
