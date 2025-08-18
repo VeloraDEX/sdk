@@ -526,7 +526,7 @@ function constructProviderOnlyContractCaller(
   account?: string
 ): Pick<
   ContractCallerFunctions<string>,
-  'staticCall' | 'transactCall' | 'signTypedDataCall'
+  'staticCall' | 'transactCall' | 'signTypedDataCall' | 'signMessageCall'
 > {
   // staticCall isn't currently necessary, because provider is only used in approveToken currently for tx making
   const staticCall: StaticContractCallerFn = async ({
@@ -612,5 +612,9 @@ function constructProviderOnlyContractCaller(
     throw new Error('not implemented');
   };
 
-  return { transactCall, signTypedDataCall, staticCall };
+  const signMessageCall = () => {
+    throw new Error('not implemented');
+  };
+
+  return { transactCall, signTypedDataCall, staticCall, signMessageCall };
 }
