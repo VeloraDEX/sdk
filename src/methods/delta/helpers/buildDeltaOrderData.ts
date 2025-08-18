@@ -114,7 +114,7 @@ export function buildDeltaSignableOrderData({
     expectedDestAmount,
     deadline,
     nonce,
-    permit: composeDeltaOrderPermit({ permit, nonce }),
+    permit,
     partnerAndFee: producePartnerAndFee({
       partnerFeeBps,
       partnerAddress,
