@@ -18,12 +18,12 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 
   "UniswapV2",
   "DefiSwap",
   "LinkSwap",
-  "PancakeSwapV2",
   "SushiSwap",
   "ShibaSwap",
   "Verse",
   "UniswapV3",
   "SushiSwapV3",
+  "PancakeSwapV2",
   "PancakeswapV3",
   "AaveV2",
   "AaveV3",
@@ -49,6 +49,7 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 
   "Swell",
   "Spark",
   "sUSDS",
+  "RingV2",
   "AugustusRFQ",
 ]
 `;
@@ -160,12 +161,12 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 
   "UniswapV2",
   "DefiSwap",
   "LinkSwap",
-  "PancakeSwapV2",
   "SushiSwap",
   "ShibaSwap",
   "Verse",
   "UniswapV3",
   "SushiSwapV3",
+  "PancakeSwapV2",
   "PancakeswapV3",
   "AaveV2",
   "AaveV3",
@@ -191,6 +192,7 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 
   "Swell",
   "Spark",
   "sUSDS",
+  "RingV2",
   "AugustusRFQ",
 ]
 `;

@@ -35,6 +35,7 @@ exports[`Quote:methods Get Fallback Market Quote for all 2`] = `
   "gasCost": "dynamic_number",
   "gasCostUSD": "dynamic_number",
   "hmac": "dynamic_string",
+  "maxImpact": 100,
   "maxImpactReached": false,
   "network": 1,
   "partner": "anon",
