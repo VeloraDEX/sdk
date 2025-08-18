@@ -206,6 +206,10 @@ import {
   QuoteWithMarketPrice,
   QuoteWithMarketPriceAsFallback,
 } from './methods/quote/getQuote';
+import {
+  CancelDeltaOrderFunctions,
+  constructCancelDeltaOrder,
+} from './methods/delta/cancelDeltaOrder';
 
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
 
@@ -289,6 +293,7 @@ export {
   constructGetDeltaContract,
   constructGetDeltaPrice,
   constructGetDeltaOrders,
+  constructCancelDeltaOrder,
   constructApproveTokenForDelta,
   // Quote methods
   constructGetQuote,
@@ -378,6 +383,7 @@ export type {
   GetDeltaPriceFunctions,
   GetDeltaOrdersFunctions,
   ApproveTokenForDeltaFunctions,
+  CancelDeltaOrderFunctions,
   // types for Quote methods
   GetQuoteFunctions,
   QuoteParams,
