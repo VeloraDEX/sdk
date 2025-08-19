@@ -1,3 +1,15 @@
+import { SwapSide } from '../../../constants';
+
+enum OrderKind {
+  Sell = 0,
+  Buy = 1,
+}
+
+export const SwapSideToOrderKind = {
+  [SwapSide.SELL]: OrderKind.Sell,
+  [SwapSide.BUY]: OrderKind.Buy,
+} as const;
+
 export type DeltaAuctionOrder = {
   /** @description The address of the order owner */
   owner: string;
@@ -11,8 +23,12 @@ export type DeltaAuctionOrder = {
   srcAmount: string; // wei
   /** @description The minimum amount of dest token to receive */
   destAmount: string; // wei
-  /** @description The expected amount of dest token to receive */
-  expectedDestAmount: string; // wei
+  /** @description The expected amount of token to receive */
+  expectedAmount: string; // wei
+  /** @description The kind of the order */
+  kind: OrderKind;
+  /** @description Metadata for the order, hex string */
+  metadata: string;
   /** @description The deadline for the order */
   deadline: number; // seconds
   /** @description The nonce of the order */
@@ -36,7 +52,6 @@ export type Bridge = {
 
 type DeltaAuctionStatus =
   | 'NOT_STARTED'
-  | 'POSTED' // @TODO check if this is still returned
   | 'RUNNING'
   | 'EXECUTING'
   | 'EXECUTED'
