@@ -1,7 +1,13 @@
 import { Bridge } from '../..';
 import { API_URL, SwapSide } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
-import type { ConstructFetchInput, RequestParameters } from '../../types';
+import type {
+  ConstructFetchInput,
+  EnumerateLiteral,
+  RequestParameters,
+} from '../../types';
+
+type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
 export type DeltaPriceParams = {
   /** @description Source Token Address. Not Native Token */
@@ -14,33 +20,39 @@ export type DeltaPriceParams = {
   srcDecimals: number;
   /** @description Destination Token Decimals */
   destDecimals: number;
-  // side?: SwapSide; // no BUY side for now
   /** @description User's Wallet Address */
   userAddress?: string;
   /** @description Partner string. */
   partner?: string;
   /** @description Destination Chain ID for Crosschain Orders */
   destChainId?: number;
+  /** @description SELL or BUY, default is SELL */
+  side?: SwapSideUnion;
 };
 
 type DeltaPriceQueryOptions = DeltaPriceParams & {
   chainId: number; // will return error from API on unsupported chains
-  side: SwapSide.SELL;
 };
 
 export type DeltaPrice = {
   srcToken: string;
   destToken: string;
   srcAmount: string;
+  /** @description Available for BUY side */
+  srcAmountBeforeFee?: string;
   destAmount: string;
-  destAmountBeforeFee: string;
+  /** @description Available for SELL side */
+  destAmountBeforeFee?: string;
   gasCost: string;
   gasCostBeforeFee: string;
   gasCostUSD: string;
   gasCostUSDBeforeFee: string;
   srcUSD: string;
+  /** @description Available for BUY side */
+  srcUSDBeforeFee?: string;
   destUSD: string;
-  destUSDBeforeFee: string;
+  /** @description Available for SELL side */
+  destUSDBeforeFee?: string;
   partner: string;
   partnerFee: number; // in %
   hmac: string;
@@ -104,7 +116,7 @@ export const constructGetDeltaPrice = ({
     const search = constructSearchString<DeltaPriceQueryOptions>({
       ...options,
       chainId,
-      side: SwapSide.SELL, // so far SELL side only
+      side: options.side ?? SwapSide.SELL,
     });
 
     const fetchURL = `${pricesUrl}/${search}` as const;
