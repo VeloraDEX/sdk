@@ -85,7 +85,7 @@ const DEFAULT_BRIDGE: Bridge = {
   protocolSelector: '0x',
   destinationChainId: 0,
   outputToken: ZERO_ADDRESS,
-  scalingFactor: 1,
+  scalingFactor: 0,
   protocolData: '0x',
 };
 
