@@ -11,11 +11,13 @@ const SWAP_ORDER_EIP_712_TYPES = {
     { name: 'destToken', type: 'address' },
     { name: 'srcAmount', type: 'uint256' },
     { name: 'destAmount', type: 'uint256' },
-    { name: 'expectedDestAmount', type: 'uint256' },
+    { name: 'expectedAmount', type: 'uint256' },
     { name: 'deadline', type: 'uint256' },
+    { name: 'kind', type: 'uint8' },
     { name: 'nonce', type: 'uint256' },
     { name: 'partnerAndFee', type: 'uint256' },
     { name: 'permit', type: 'bytes' },
+    { name: 'metadata', type: 'bytes' },
     { name: 'bridge', type: 'Bridge' },
   ],
   Bridge: [
@@ -68,7 +70,10 @@ export type DeltaOrderDataInput = MarkOptional<
   'beneficiary' | 'deadline' | 'nonce' | 'permit'
 >;
 
-export type BuildDeltaOrderDataInput = DeltaOrderDataInput & {
+export type BuildDeltaOrderDataInput = MarkOptional<
+  DeltaOrderDataInput,
+  'metadata'
+> & {
   partnerAddress: string;
   paraswapDeltaAddress: string;
   partnerFeeBps: number;
@@ -88,12 +93,15 @@ export function buildDeltaSignableOrderData({
   destToken,
   srcAmount,
   destAmount,
-  expectedDestAmount,
+  expectedAmount,
 
   deadline = Math.floor(Date.now() / 1000 + DELTA_DEFAULT_EXPIRY),
   nonce = Date.now().toString(10), // random enough to not cause collisions
 
   permit = '0x',
+
+  kind,
+  metadata = '0x',
 
   partnerAddress,
   partnerFeeBps,
@@ -110,7 +118,7 @@ export function buildDeltaSignableOrderData({
     destToken,
     srcAmount,
     destAmount,
-    expectedDestAmount,
+    expectedAmount,
     deadline,
     nonce,
     permit,
@@ -120,6 +128,8 @@ export function buildDeltaSignableOrderData({
       partnerTakesSurplus,
     }),
     bridge,
+    kind,
+    metadata,
   };
 
   return produceDeltaOrderTypedData({
