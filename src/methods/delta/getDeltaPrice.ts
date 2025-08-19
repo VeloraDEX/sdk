@@ -64,6 +64,7 @@ export type BridgePrice = DeltaPrice & {
   bridgeFee: string;
   bridgeFeeUSD: string;
   poolAddress: string;
+  // @TODO DeltaPrice.bridge will have to include all Bridge fields
   bridge: Pick<Bridge, 'destinationChainId' | 'outputToken'>;
 };
 
