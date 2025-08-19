@@ -16,7 +16,7 @@ import {
 import { Bridge, SwapSideToOrderKind } from './helpers/types';
 import { constructBuildCrosschainOrderBridge } from './buildCrosschainOrderBridge';
 import { BeneficiaryType } from '../common/orders/types';
-import { SwapSide } from '../..';
+import { SwapSide } from '../../constants';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 
 type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
