@@ -6,9 +6,10 @@ exports[`Delta:methods Build Delta Order 1`] = `
     "beneficiary": "0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9",
     "bridge": {
       "destinationChainId": 0,
-      "maxRelayerFee": "0",
-      "multiCallHandler": "0x0000000000000000000000000000000000000000",
       "outputToken": "0x0000000000000000000000000000000000000000",
+      "protocolData": "0x",
+      "protocolSelector": "0x00000000",
+      "scalingFactor": 0,
     },
     "deadline": NaN,
     "destAmount": "3147447403157656698880",
@@ -32,8 +33,8 @@ exports[`Delta:methods Build Delta Order 1`] = `
   "types": {
     "Bridge": [
       {
-        "name": "maxRelayerFee",
-        "type": "uint256",
+        "name": "protocolSelector",
+        "type": "bytes4",
       },
       {
         "name": "destinationChainId",
@@ -44,8 +45,12 @@ exports[`Delta:methods Build Delta Order 1`] = `
         "type": "address",
       },
       {
-        "name": "multiCallHandler",
-        "type": "address",
+        "name": "scalingFactor",
+        "type": "int8",
+      },
+      {
+        "name": "protocolData",
+        "type": "bytes",
       },
     ],
     "Order": [
@@ -415,9 +420,10 @@ exports[`Delta:methods Submit(=build+sign+post) Delta Order 1`] = `
   "beneficiary": "0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9",
   "bridge": {
     "destinationChainId": 0,
-    "maxRelayerFee": "0",
-    "multiCallHandler": "0x0000000000000000000000000000000000000000",
     "outputToken": "0x0000000000000000000000000000000000000000",
+    "protocolData": "0x",
+    "protocolSelector": "0x00000000",
+    "scalingFactor": 0,
   },
   "deadline": NaN,
   "destAmount": "3147447403157656698880",

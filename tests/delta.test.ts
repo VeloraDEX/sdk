@@ -869,10 +869,11 @@ describe('Delta:methods', () => {
         kind: 0,
         metadata: '0x',
         bridge: {
-          maxRelayerFee: '0',
+          protocolSelector: '0x00000000',
           destinationChainId: 0,
           outputToken: ZERO_ADDRESS,
-          multiCallHandler: ZERO_ADDRESS,
+          scalingFactor: 0,
+          protocolData: '0x',
         },
       },
       domain: {
@@ -942,8 +943,8 @@ describe('Delta:methods', () => {
         ],
         Bridge: [
           {
-            name: 'maxRelayerFee',
-            type: 'uint256',
+            name: 'protocolSelector',
+            type: 'bytes4',
           },
           {
             name: 'destinationChainId',
@@ -952,6 +953,14 @@ describe('Delta:methods', () => {
           {
             name: 'outputToken',
             type: 'address',
+          },
+          {
+            name: 'scalingFactor',
+            type: 'int8',
+          },
+          {
+            name: 'protocolData',
+            type: 'bytes',
           },
         ],
       },
@@ -1041,10 +1050,11 @@ describe('Delta:methods', () => {
       kind: 0,
       metadata: '0x',
       bridge: {
-        maxRelayerFee: '0',
+        protocolSelector: '0x00000000',
         destinationChainId: 0,
         outputToken: ZERO_ADDRESS,
-        multiCallHandler: ZERO_ADDRESS,
+        scalingFactor: 0,
+        protocolData: '0x',
       },
     };
 
@@ -1157,21 +1167,22 @@ function constructBridgeAndOrderChanges({
   /** @description price response received from /delta/prices (getDeltaPrice method) */
   deltaPrice: Pick<BridgePrice, 'bridgeFee' | 'bridge' | 'destToken'>;
 }) {
-  const { outputToken, multiCallHandler, destinationChainId, deltaDestToken } =
-    constructBridge({
-      bridgeDestToken: destToken,
-      srcChainId,
-      destChainId,
-      deltaDestToken: deltaPrice.destToken,
-      beneficiaryType,
-    });
+  const { outputToken, destinationChainId, deltaDestToken } = constructBridge({
+    bridgeDestToken: destToken,
+    srcChainId,
+    destChainId,
+    deltaDestToken: deltaPrice.destToken,
+    beneficiaryType,
+  });
 
   return {
+    // @TODO fix up with real values when BridgePrice.bridge = whole Bridge object
     bridge: {
-      maxRelayerFee: deltaPrice.bridgeFee,
+      protocolSelector: '0x00000000',
       destinationChainId,
       outputToken: outputToken.toLowerCase(), // for uniformity
-      multiCallHandler,
+      scalingFactor: 0,
+      protocolData: '0x',
     },
     orderChanges: {
       destToken: deltaDestToken.toLowerCase(), // for uniformity
