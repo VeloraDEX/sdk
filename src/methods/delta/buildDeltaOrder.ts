@@ -82,7 +82,7 @@ export type BuildDeltaOrderFunctions = {
 
 // for same-chain Orders, all 0 params
 const DEFAULT_BRIDGE: Bridge = {
-  protocolSelector: '0x',
+  protocolSelector: '0x00000000', // 4 bytes
   destinationChainId: 0,
   outputToken: ZERO_ADDRESS,
   scalingFactor: 0,

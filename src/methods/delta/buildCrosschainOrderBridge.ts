@@ -78,7 +78,7 @@ export const constructBuildCrosschainOrderBridge = (
 
     // @TODO remove the whole buildCrosschainOrderBridge() when API provides BridgePrice.bridge = whole Bridge object
     const bridge = {
-      protocolSelector: '0x',
+      protocolSelector: '0x00000000',
       scalingFactor: 0,
       protocolData: '0x',
       destinationChainId: deltaPrice.bridge.destinationChainId,
