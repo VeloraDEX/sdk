@@ -21,10 +21,26 @@ const SWAP_ORDER_EIP_712_TYPES = {
     { name: 'bridge', type: 'Bridge' },
   ],
   Bridge: [
-    { name: 'maxRelayerFee', type: 'uint256' },
-    { name: 'destinationChainId', type: 'uint256' },
-    { name: 'outputToken', type: 'address' },
-    { name: 'multiCallHandler', type: 'address' },
+    {
+      name: 'protocolSelector',
+      type: 'bytes4',
+    },
+    {
+      name: 'destinationChainId',
+      type: 'uint256',
+    },
+    {
+      name: 'outputToken',
+      type: 'address',
+    },
+    {
+      name: 'scalingFactor',
+      type: 'int8',
+    },
+    {
+      name: 'protocolData',
+      type: 'bytes',
+    },
   ],
 };
 
@@ -82,7 +98,7 @@ export type BuildDeltaOrderDataInput = MarkOptional<
   bridge: Bridge;
 };
 
-// default deadline = 1 hour from now (may be changed later)
+// default deadline = 1 hour for now (may be changed later)
 export const DELTA_DEFAULT_EXPIRY = 60 * 60; // seconds
 
 export function buildDeltaSignableOrderData({
