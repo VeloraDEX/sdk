@@ -38,13 +38,13 @@ type GetDeltaOrders = (
   requestParams?: RequestParameters
 ) => Promise<OrderFromAPI[]>;
 
-export type GetRequiredAllowanceParams = {
+type GetRequiredBalanceParams = {
   userAddress: Address;
   tokenAddress?: Address;
 };
 
 type GetRequiredBalance = (
-  userParams: GetRequiredAllowanceParams,
+  userParams: GetRequiredBalanceParams,
   requestParams?: RequestParameters
 ) => Promise<Record<string, string>>; // token -> balance in Limit Orders
 
@@ -52,7 +52,7 @@ export type GetDeltaOrdersFunctions = {
   getDeltaOrderById: GetDeltaOrderById;
   getDeltaOrderByHash: GetDeltaOrderByHash;
   getDeltaOrders: GetDeltaOrders;
-  getRequiredBalance: GetRequiredBalance;
+  getRequiredBalanceForDeltaLimitOrders: GetRequiredBalance;
 };
 
 export const constructGetDeltaOrders = ({
@@ -112,7 +112,7 @@ export const constructGetDeltaOrders = ({
     return orders;
   };
 
-  const getRequiredBalance: GetRequiredBalance = async (
+  const getRequiredBalanceForDeltaLimitOrders: GetRequiredBalance = async (
     userParams,
     requestParams
   ) => {
@@ -135,6 +135,6 @@ export const constructGetDeltaOrders = ({
     getDeltaOrderById,
     getDeltaOrderByHash,
     getDeltaOrders,
-    getRequiredBalance,
+    getRequiredBalanceForDeltaLimitOrders,
   };
 };
