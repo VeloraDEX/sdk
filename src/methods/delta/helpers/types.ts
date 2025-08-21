@@ -152,6 +152,7 @@ type BridgeQuoteFee = {
 export type BridgePriceInfo = {
   protocolName: ProtocolName;
   destAmountAfterBridge: string;
+  destUSDAfterBridge: string;
   fees: BridgeQuoteFee[];
   estimatedTimeMs: number;
 };

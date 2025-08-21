@@ -80,7 +80,7 @@ export type DeltaPrice = {
 
 export type BridgePrice = Omit<DeltaPrice, 'bridge'> & {
   // destAmountAfterBridge: string; // became bridgeInfo.destAmountAfterBridge
-  // destUSDAfterBridge: string; // @TODO add to beidgeInfo maybe?
+  // destUSDAfterBridge: string; // became bridgeInfo.destUSDAfterBridge
   // bridgeFee: string; // became bridgeInfo.fees[0].amount
   // bridgeFeeUSD: string; // became bridgeInfo.fees[0].amountInUSD
   // poolAddress: string;
