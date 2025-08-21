@@ -75,7 +75,7 @@ export type DeltaPrice = {
   partner: string;
   partnerFee: number; // in %
   hmac: string;
-  bridge: typeof DEFAULT_BRIDGE;
+  bridge: Bridge; // for single-chain DeltaPrice, it's DEFAULT_BRIDGE
 };
 
 export type BridgePrice = Omit<DeltaPrice, 'bridge'> & {
