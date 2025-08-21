@@ -7,6 +7,7 @@ import {
 import {
   constructPostDeltaOrder,
   DeltaOrderApiResponse,
+  DeltaOrderToPost,
   PostDeltaOrderFunctions,
 } from './postDeltaOrder';
 import {
@@ -59,7 +60,7 @@ export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
   partiallyFillable?: boolean;
   /** @description Referrer address */
   referrerAddress?: string;
-};
+} & Pick<DeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
 
 type SubmitDeltaOrder = (
   orderParams: SubmitDeltaOrderParams
@@ -86,6 +87,9 @@ export const constructSubmitDeltaOrder = (
       order: orderData.data,
       partiallyFillable: orderParams.partiallyFillable,
       referrerAddress: orderParams.referrerAddress,
+      type: orderParams.type,
+      includeAgents: orderParams.includeAgents,
+      excludeAgents: orderParams.excludeAgents,
     });
 
     return response;
