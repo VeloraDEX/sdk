@@ -1002,8 +1002,8 @@ describe('Delta:methods', () => {
         constructCancelDeltaOrder
       );
 
-      const deltaCancelSignature = await sdk.signCancelDeltaOrderRequest({
-        id: sampleOrderId,
+      const deltaCancelSignature = await sdk.signCancelLimitDeltaOrderRequest({
+        orderIds: [sampleOrderId],
       });
 
       const valid = await verifySignedCancelRequest({
