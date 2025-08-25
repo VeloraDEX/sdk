@@ -70,7 +70,7 @@ export const constructCancelDeltaOrder = (
     params,
     requestParams
   ) => {
-    const cancelUrl = `${options.apiURL}/delta/orders/cancel` as const;
+    const cancelUrl = `${options.apiURL}/delta/orders` as const;
 
     const res = await options.fetcher<SuccessResponse>({
       url: cancelUrl,
