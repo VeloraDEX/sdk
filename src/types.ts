@@ -56,9 +56,14 @@ export interface FetcherPostInput<URL extends string = string>
   method: 'POST';
   data: Record<string, any>;
 }
+export interface FetcherDeleteInput<URL extends string = string>
+  extends FetcherInputBase<URL> {
+  method: 'DELETE';
+  data: Record<string, any>;
+}
 
 export type FetcherFunction = <T, URL extends string = string>(
-  params: FetcherGetInput<URL> | FetcherPostInput<URL>
+  params: FetcherGetInput<URL> | FetcherPostInput<URL> | FetcherDeleteInput<URL>
 ) => Promise<T>;
 
 // authentication or some other params required in `fetcher`
