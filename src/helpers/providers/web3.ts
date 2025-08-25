@@ -1,7 +1,6 @@
 import type {
   Address,
   ContractCallerFunctions,
-  SignMessageContractCallerFn,
   SignTypedDataContractCallerFn,
   StaticContractCallerFn,
   TransactionContractCallerFn,
@@ -125,21 +124,7 @@ export const constructContractCaller = (
     return signature;
   };
 
-  const signMessageCall: SignMessageContractCallerFn = async (message) => {
-    assert(web3.currentProvider, 'web3.currentProvider is not set');
-
-    assert(account, 'account must be specified to sign data');
-
-    const signedMessage = await web3.eth.sign(message, account);
-
-    if (typeof signedMessage === 'string') {
-      return signedMessage;
-    }
-
-    return signedMessage.signature;
-  };
-
-  return { staticCall, transactCall, signTypedDataCall, signMessageCall };
+  return { staticCall, transactCall, signTypedDataCall };
 };
 
 /// web3@4

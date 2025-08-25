@@ -117,7 +117,7 @@ export type DeltaOrderHandlers<T> = SubmitDeltaOrderFuncs &
 export const constructAllDeltaOrdersHandlers = <TxResponse>(
   options: ConstructProviderFetchInput<
     TxResponse,
-    'signTypedDataCall' | 'signMessageCall' | 'transactCall'
+    'signTypedDataCall' | 'transactCall'
   >
 ): DeltaOrderHandlers<TxResponse> => {
   const deltaOrdersGetters = constructGetDeltaOrders(options);

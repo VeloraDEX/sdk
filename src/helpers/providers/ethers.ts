@@ -2,7 +2,6 @@ import type {
   Address,
   ContractCallerFunctions,
   NoExtraKeysCheck,
-  SignMessageContractCallerFn,
   SignTypedDataContractCallerFn,
   StaticContractCallerFn,
   TransactionContractCallerFn,
@@ -133,22 +132,7 @@ export const constructEthersV5ContractCaller = (
     return signer._signTypedData(domain, types, data);
   };
 
-  const signMessageCall: SignMessageContractCallerFn = async (message) => {
-    assert(account, 'account must be specified to create a signer');
-    assert(
-      isEthersProviderWithSigner(providerOrSigner) ||
-        isEthersSigner(providerOrSigner),
-      'ethers must be an instance of Signer or JsonRpcProvider to create a signer'
-    );
-
-    const signer =
-      'getSigner' in providerOrSigner
-        ? providerOrSigner.getSigner(account)
-        : providerOrSigner;
-
-    return signer.signMessage(message);
-  };
-  return { staticCall, transactCall, signTypedDataCall, signMessageCall };
+  return { staticCall, transactCall, signTypedDataCall };
 };
 
 function isEthersProvider(
