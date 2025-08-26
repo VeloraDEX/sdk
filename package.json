@@ -68,6 +68,7 @@
     "typedoc-plugin-missing-exports": "^3.0.0",
     "typedoc-plugin-replace-text": "^4.0.0",
     "typescript": "^5.6.3",
+    "viem": "^2.21.39",
     "wagmi": "^2.12.25",
     "web3": "^4.14.0"
   },
@@ -93,8 +94,7 @@
   },
   "dependencies": {
     "@paraswap/core": "2.4.0",
-    "ts-essentials": "^10.0.3",
-    "viem": "^2.21.39"
+    "ts-essentials": "^10.0.3"
   },
   "author": "Velora",
   "description": "Velora SDK",
