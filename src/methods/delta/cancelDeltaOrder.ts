@@ -2,7 +2,6 @@ import type {
   ConstructProviderFetchInput,
   RequestParameters,
 } from '../../types';
-import { DeltaAuction } from './helpers/types';
 import {
   buildCancelDeltaOrderSignableData,
   CancelDeltaOrderData,
@@ -27,7 +26,7 @@ export type PostCancelDeltaOrderRequest = (
 ) => Promise<SuccessResponse>;
 
 export type CancelDeltaOrder = (
-  params: Pick<DeltaAuction, 'id'>[],
+  params: CancelDeltaOrderData,
   requestParams?: RequestParameters
 ) => Promise<SuccessResponse>;
 
@@ -83,10 +82,9 @@ export const constructCancelDeltaOrder = (
   };
 
   const cancelLimitDeltaOrders: CancelDeltaOrder = async (
-    params,
+    { orderIds },
     requestParams
   ) => {
-    const orderIds = params.map(({ id }) => id);
     const signature = await signCancelLimitDeltaOrderRequest(
       { orderIds },
       requestParams
