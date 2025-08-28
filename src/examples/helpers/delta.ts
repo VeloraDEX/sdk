@@ -14,7 +14,7 @@ function isExecutedDeltaAuction(
   return true;
 }
 
-type GetDeltaOrderFn = () => DeltaOrderFromAPI;
+type GetDeltaOrderFn = () => Promise<DeltaOrderFromAPI>;
 
 function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrderFn) {
   const intervalId = setInterval(async () => {
