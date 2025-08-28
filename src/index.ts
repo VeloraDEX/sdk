@@ -11,12 +11,17 @@ import {
 import {
   constructGetSpender,
   GetSpenderFunctions,
+  AdaptersContractsResult,
 } from './methods/swap/spender';
 import {
   constructGetAdapters,
   GetAdaptersFunctions,
 } from './methods/swap/adapters';
-import { constructGetRate, GetRateFunctions } from './methods/swap/rates';
+import {
+  constructGetRate,
+  GetRateFunctions,
+  GetRateInput,
+} from './methods/swap/rates';
 import { constructSwapTx, GetSwapTxFunctions } from './methods/swap/swapTx';
 import { constructGetTokens, GetTokensFunctions } from './methods/swap/token';
 import { BuildTxFunctions, constructBuildTx } from './methods/swap/transaction';
@@ -134,6 +139,7 @@ import type {
 import type {
   DeltaAuctionOrder,
   DeltaAuction,
+  DeltaAuctionStatus,
   BridgeMetadata,
   BridgeStatus,
   Bridge,
@@ -143,6 +149,7 @@ import {
   BuildDeltaOrderFunctions,
   constructBuildDeltaOrder,
   SignableDeltaOrderData,
+  SwapSideUnion,
 } from './methods/delta/buildDeltaOrder';
 import {
   constructBuildCrosschainOrderBridge,
@@ -152,6 +159,7 @@ import {
 } from './methods/delta/buildCrosschainOrderBridge';
 import {
   constructPostDeltaOrder,
+  DeltaOrderApiResponse,
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
 } from './methods/delta/postDeltaOrder';
@@ -173,6 +181,7 @@ import {
 import {
   constructGetDeltaOrders,
   GetDeltaOrdersFunctions,
+  DeltaOrderFromAPI,
 } from './methods/delta/getDeltaOrders';
 import {
   ApproveTokenForDeltaFunctions,
@@ -329,9 +338,11 @@ export type {
   ApproveTokenFunctions,
   GetBalancesFunctions,
   GetSpenderFunctions,
+  AdaptersContractsResult,
   GetTokensFunctions,
   GetAdaptersFunctions,
   GetRateFunctions,
+  GetRateInput,
   BuildTxFunctions,
   GetSwapTxFunctions,
   // types for limitOrders methods:
@@ -365,6 +376,9 @@ export type {
   DeltaPriceParams,
   DeltaAuctionOrder,
   DeltaAuction,
+  DeltaAuctionStatus,
+  DeltaOrderApiResponse,
+  DeltaOrderFromAPI,
   // bridge part of DeltaOrder
   BridgeMetadata,
   BridgeStatus,
@@ -411,6 +425,7 @@ export type {
   OptionalRate,
   FetcherErrorInterface,
   APIVersion,
+  SwapSideUnion,
 };
 
 export { SDKConfig, constructPartialSDK } from './sdk/partial';
