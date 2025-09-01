@@ -14,6 +14,14 @@
 
 > **chainId**: `number`
 
+### excludeAgents?
+
+> `optional` **excludeAgents**: `string`[]
+
+### includeAgents?
+
+> `optional` **includeAgents**: `string`[]
+
 ### order
 
 > **order**: [`DeltaAuctionOrder`](../../type-aliases/DeltaAuctionOrder.md)
@@ -49,6 +57,14 @@ Referrer address
 #### Description
 
 Signature of the order from order.owner address. EOA signatures must be submitted in ERC-2098 Compact Representation.
+
+### type?
+
+> `optional` **type**: `"MARKET"` \| `"LIMIT"`
+
+#### Description
+
+Type of the order. MARKET or LIMIT. Default is MARKET
 
 ## Defined in
 

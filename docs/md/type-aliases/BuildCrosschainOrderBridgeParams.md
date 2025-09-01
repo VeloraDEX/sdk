@@ -20,7 +20,7 @@ Whether the beneficiary is a contract. Needed to automatically fill in crosschai
 
 ### deltaPrice
 
-> **deltaPrice**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`BridgePrice`](BridgePrice.md), `"bridgeFee"` \| `"bridge"`\>
+> **deltaPrice**: [`BridgePrice`](BridgePrice.md)
 
 #### Description
 

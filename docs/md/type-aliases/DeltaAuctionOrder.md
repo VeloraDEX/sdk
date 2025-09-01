@@ -50,13 +50,29 @@ The minimum amount of dest token to receive
 
 The address of the dest token
 
-### expectedDestAmount
+### expectedAmount
 
-> **expectedDestAmount**: `string`
+> **expectedAmount**: `string`
 
 #### Description
 
-The expected amount of dest token to receive
+The expected amount of token to receive
+
+### kind
+
+> **kind**: [`OrderKind`](../-internal-/enumerations/OrderKind.md)
+
+#### Description
+
+The kind of the order
+
+### metadata
+
+> **metadata**: `string`
+
+#### Description
+
+Metadata for the order, hex string
 
 ### nonce
 
@@ -108,4 +124,4 @@ The address of the src token
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:1](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L1)
+[src/methods/delta/helpers/types.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L13)

@@ -18,6 +18,14 @@
 
 srcToken amount in wei
 
+### beneficiary?
+
+> `optional` **beneficiary**: `string`
+
+#### Description
+
+Beneficiary Address
+
 ### destChainId?
 
 > `optional` **destChainId**: `number`
@@ -42,6 +50,14 @@ Destination Token Decimals
 
 Destination Token Address
 
+### excludeAgents?
+
+> `optional` **excludeAgents**: `string`[]
+
+### includeAgents?
+
+> `optional` **includeAgents**: `string`[]
+
 ### partner?
 
 > `optional` **partner**: `string`
@@ -49,6 +65,14 @@ Destination Token Address
 #### Description
 
 Partner string.
+
+### side?
+
+> `optional` **side**: [`SwapSideUnion`](../-internal-/type-aliases/SwapSideUnion.md)
+
+#### Description
+
+SELL or BUY, default is SELL
 
 ### srcDecimals
 
@@ -76,4 +100,4 @@ User's Wallet Address
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:6](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L6)
+[src/methods/delta/getDeltaPrice.ts:14](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L14)

@@ -72,11 +72,15 @@
 
 ### status
 
-> **status**: [`DeltaAuctionStatus`](../-internal-/type-aliases/DeltaAuctionStatus.md)
+> **status**: [`DeltaAuctionStatus`](DeltaAuctionStatus.md)
 
 ### transactions
 
 > **transactions**: [`DeltaAuctionTransaction`](../-internal-/type-aliases/DeltaAuctionTransaction.md)[]
+
+### type
+
+> **type**: `"MARKET"` \| `"LIMIT"`
 
 ### updatedAt
 
@@ -88,4 +92,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:72](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L72)
+[src/methods/delta/helpers/types.ts:91](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L91)

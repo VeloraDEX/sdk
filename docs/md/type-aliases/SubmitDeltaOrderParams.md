@@ -6,7 +6,7 @@
 
 # Type Alias: SubmitDeltaOrderParams
 
-> **SubmitDeltaOrderParams**: [`BuildDeltaOrderDataParams`](BuildDeltaOrderDataParams.md) & `object`
+> **SubmitDeltaOrderParams**: [`BuildDeltaOrderDataParams`](BuildDeltaOrderDataParams.md) & `object` & [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaOrderToPost`](../-internal-/type-aliases/DeltaOrderToPost.md), `"type"` \| `"includeAgents"` \| `"excludeAgents"`\>
 
 ## Type declaration
 
@@ -18,6 +18,14 @@
 
 designates the Order as being able to be partially filled, as opposed to fill-or-kill
 
+### referrerAddress?
+
+> `optional` **referrerAddress**: `string`
+
+#### Description
+
+Referrer address
+
 ## Defined in
 
-[src/methods/delta/index.ts:53](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L53)
+[src/methods/delta/index.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L58)

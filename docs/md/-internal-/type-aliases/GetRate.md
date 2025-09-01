@@ -10,7 +10,7 @@
 
 ## Parameters
 
-• **options**: [`GetRateInput`](GetRateInput.md)
+• **options**: [`GetRateInput`](../../type-aliases/GetRateInput.md)
 
 • **requestParams?**: [`RequestParameters`](RequestParameters.md)
 

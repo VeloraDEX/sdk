@@ -10,7 +10,7 @@
 
 ## Parameters
 
-• **options**: [`Omit`](Omit.md)\<[`GetRateInput`](GetRateInput.md), `"amount"` \| `"side"`\> & `object`
+• **options**: [`Omit`](Omit.md)\<[`GetRateInput`](../../type-aliases/GetRateInput.md), `"amount"` \| `"side"`\> & `object`
 
 • **orders**: [`CheckableOrderData`](CheckableOrderData.md)[]
 

@@ -22,6 +22,10 @@
 
 > **getDeltaOrders**: [`GetDeltaOrders`](../-internal-/type-aliases/GetDeltaOrders.md)
 
+### getRequiredBalanceForDeltaLimitOrders
+
+> **getRequiredBalanceForDeltaLimitOrders**: [`GetRequiredBalance`](../-internal-/type-aliases/GetRequiredBalance.md)
+
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L37)
+[src/methods/delta/getDeltaOrders.ts:51](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L51)

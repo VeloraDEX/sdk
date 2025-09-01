@@ -20,7 +20,7 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:75](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L75)
+[src/methods/quote/getQuote.ts:76](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L76)
 
 > **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
 
@@ -36,7 +36,7 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:79](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L79)
+[src/methods/quote/getQuote.ts:80](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L80)
 
 > **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md)\>
 
@@ -52,7 +52,7 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:83](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L83)
+[src/methods/quote/getQuote.ts:84](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L84)
 
 > **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithMarketPrice`](../../type-aliases/QuoteWithMarketPrice.md)\>
 
@@ -68,7 +68,7 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:87](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L87)
+[src/methods/quote/getQuote.ts:88](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L88)
 
 > **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPrice`](../../type-aliases/QuoteWithDeltaPrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
 
@@ -84,9 +84,9 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:91](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L91)
+[src/methods/quote/getQuote.ts:92](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L92)
 
-> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
+> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
 
 ## Parameters
 
@@ -96,11 +96,11 @@
 
 ## Returns
 
-`Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
+`Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:97](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L97)
+[src/methods/quote/getQuote.ts:98](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L98)
 
 > **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
 
@@ -116,7 +116,7 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:103](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L103)
+[src/methods/quote/getQuote.ts:102](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L102)
 
 > **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteResponse`](../../type-aliases/QuoteResponse.md)\>
 
@@ -132,4 +132,4 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:106](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L106)
+[src/methods/quote/getQuote.ts:105](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L105)

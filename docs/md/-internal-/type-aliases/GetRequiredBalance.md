@@ -10,7 +10,7 @@
 
 ## Parameters
 
-• **userParams**: [`GetRequiredAllowanceParams`](GetRequiredAllowanceParams.md)
+• **userParams**: [`GetRequiredBalanceParams`](GetRequiredBalanceParams.md)
 
 • **requestParams?**: [`RequestParameters`](RequestParameters.md)
 
@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/getOrders.ts:50](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/getOrders.ts#L50)
+[src/methods/delta/getDeltaOrders.ts:46](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L46)

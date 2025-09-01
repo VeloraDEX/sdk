@@ -10,13 +10,21 @@
 
 ## Type declaration
 
+### bridge
+
+> **bridge**: [`Bridge`](Bridge.md)
+
 ### destAmount
 
 > **destAmount**: `string`
 
-### destAmountBeforeFee
+### destAmountBeforeFee?
 
-> **destAmountBeforeFee**: `string`
+> `optional` **destAmountBeforeFee**: `string`
+
+#### Description
+
+Available for SELL side
 
 ### destToken
 
@@ -26,9 +34,13 @@
 
 > **destUSD**: `string`
 
-### destUSDBeforeFee
+### destUSDBeforeFee?
 
-> **destUSDBeforeFee**: `string`
+> `optional` **destUSDBeforeFee**: `string`
+
+#### Description
+
+Available for SELL side
 
 ### gasCost
 
@@ -62,6 +74,14 @@
 
 > **srcAmount**: `string`
 
+### srcAmountBeforeFee?
+
+> `optional` **srcAmountBeforeFee**: `string`
+
+#### Description
+
+Available for BUY side
+
 ### srcToken
 
 > **srcToken**: `string`
@@ -70,6 +90,14 @@
 
 > **srcUSD**: `string`
 
+### srcUSDBeforeFee?
+
+> `optional` **srcUSDBeforeFee**: `string`
+
+#### Description
+
+Available for BUY side
+
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L31)
+[src/methods/delta/getDeltaPrice.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L58)

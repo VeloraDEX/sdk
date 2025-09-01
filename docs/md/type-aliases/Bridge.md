@@ -14,18 +14,6 @@
 
 > **destinationChainId**: `number`
 
-### maxRelayerFee
-
-> **maxRelayerFee**: `string`
-
-### multiCallHandler
-
-> **multiCallHandler**: `string`
-
-#### Description
-
-The address of the multiCallHandler on destination chain, used to unwrap WETH and send to Smart Contract receiver. Must be non-zero when receiver address is a SmartContract wallet and need to send Native ETH
-
 ### outputToken
 
 > **outputToken**: `string`
@@ -34,6 +22,22 @@ The address of the multiCallHandler on destination chain, used to unwrap WETH an
 
 The address of the output token. Same as Order.destToken but on destination chain, so can still be a different address
 
+### protocolData
+
+> **protocolData**: `string`
+
+#### Description
+
+Data specific to the protocol
+
+### protocolSelector
+
+> **protocolSelector**: `string`
+
+### scalingFactor
+
+> **scalingFactor**: `number`
+
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:28](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L28)
+[src/methods/delta/helpers/types.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L44)

@@ -26,14 +26,6 @@ The address of the order beneficiary
 
 Whether the beneficiary is a contract. Needed to automatically fill in crosschain Bridge
 
-### bridge?
-
-> `optional` **bridge**: [`Bridge`](Bridge.md)
-
-#### Description
-
-The bridge input
-
 ### deadline?
 
 > `optional` **deadline**: `number`
@@ -44,7 +36,7 @@ The deadline for the order
 
 ### deltaPrice
 
-> **deltaPrice**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaPrice`](DeltaPrice.md), `"destAmount"` \| `"partner"` \| `"partnerFee"` \| `"destToken"`\> & [`Partial`](../-internal-/type-aliases/Partial.md)\<[`Pick`](../-internal-/type-aliases/Pick.md)\<[`BridgePrice`](BridgePrice.md), `"bridgeFee"` \| `"bridge"`\>\>
+> **deltaPrice**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`BridgePrice`](BridgePrice.md), `"destAmount"` \| `"partner"` \| `"partnerFee"` \| `"destToken"` \| `"srcAmount"` \| `"bridge"`\>
 
 #### Description
 
@@ -73,6 +65,14 @@ Destination Chain ID for Crosschain Orders
 #### Description
 
 The address of the dest token. For Crosschain Order - destination token on the destination chain
+
+### metadata?
+
+> `optional` **metadata**: `string`
+
+#### Description
+
+Metadata for the order, hex string
 
 ### nonce?
 
@@ -130,6 +130,14 @@ take surplus
 
 Optional permit signature for the src token https://developers.velora.xyz/api/velora-api/velora-delta-api/build-a-delta-order-to-sign#supported-permits-order#supported-permits
 
+### side?
+
+> `optional` **side**: [`SwapSideUnion`](SwapSideUnion.md)
+
+#### Description
+
+The side of the order. Default is SELL
+
 ### srcAmount
 
 > **srcAmount**: `string`
@@ -148,4 +156,4 @@ The address of the src token
 
 ## Defined in
 
-[src/methods/delta/buildDeltaOrder.ts:17](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L17)
+[src/methods/delta/buildDeltaOrder.ts:21](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L21)

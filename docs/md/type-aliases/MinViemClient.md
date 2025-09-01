@@ -6,7 +6,7 @@
 
 # Type Alias: MinViemClient
 
-> **MinViemClient**: [`Partial`](../-internal-/type-aliases/Partial.md)\<[`Pick`](../-internal-/type-aliases/Pick.md)\<[`PublicActions`](../-internal-/type-aliases/PublicActions.md)\<[`Transport`](../-internal-/type-aliases/Transport.md), [`Chain`](../-internal-/type-aliases/Chain.md)\>, `"readContract"`\> & [`Pick`](../-internal-/type-aliases/Pick.md)\<[`WalletActions`](../-internal-/type-aliases/WalletActions.md)\<[`Chain`](../-internal-/type-aliases/Chain.md)\>, `"writeContract"` \| `"signTypedData"`\>\> & `object`
+> **MinViemClient**: [`Partial`](../-internal-/type-aliases/Partial.md)\<[`Pick`](../-internal-/type-aliases/Pick.md)\<[`PublicActions`](../-internal-/type-aliases/PublicActions.md)\<[`Transport`](../-internal-/type-aliases/Transport.md), [`Chain`](../-internal-/type-aliases/Chain.md)\>, `"readContract"`\> & [`Pick`](../-internal-/type-aliases/Pick.md)\<[`WalletActions`](../-internal-/type-aliases/WalletActions.md)\<[`Chain`](../-internal-/type-aliases/Chain.md)\>, `"writeContract"` \| `"signTypedData"` \| `"signMessage"`\>\> & `object`
 
 ## Type declaration
 

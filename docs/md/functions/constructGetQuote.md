@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:116](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L116)
+[src/methods/quote/getQuote.ts:115](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L115)

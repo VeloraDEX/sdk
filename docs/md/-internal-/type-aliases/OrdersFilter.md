@@ -10,6 +10,14 @@
 
 ## Type declaration
 
+### chainId?
+
+> `optional` **chainId**: `number`
+
+#### Description
+
+Filter by chainId, without this filter, orders from all chains are returned
+
 ### limit?
 
 > `optional` **limit**: `number`
@@ -25,6 +33,14 @@ Pagination option, limit. Default 100
 #### Description
 
 Pagination option, page. Default 1
+
+### type?
+
+> `optional` **type**: `"MARKET"` \| `"LIMIT"` \| `"ALL"`
+
+#### Description
+
+Filter by type. MARKET, LIMIT, or ALL. Default is ALL
 
 ### userAddress
 

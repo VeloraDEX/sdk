@@ -6,7 +6,7 @@
 
 # Type Alias: GetDeltaOrderByHash()
 
-> **GetDeltaOrderByHash**: (`orderHash`, `requestParams`?) => `Promise`\<[`OrderFromAPI`](OrderFromAPI.md)\>
+> **GetDeltaOrderByHash**: (`orderHash`, `requestParams`?) => `Promise`\<[`DeltaOrderFromAPI`](../../type-aliases/DeltaOrderFromAPI.md)\>
 
 ## Parameters
 
@@ -16,7 +16,7 @@
 
 ## Returns
 
-`Promise`\<[`OrderFromAPI`](OrderFromAPI.md)\>
+`Promise`\<[`DeltaOrderFromAPI`](../../type-aliases/DeltaOrderFromAPI.md)\>
 
 ## Defined in
 

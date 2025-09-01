@@ -6,7 +6,7 @@
 
 # Type Alias: PostDeltaOrder()
 
-> **PostDeltaOrder**: (`postData`, `requestParams`?) => `Promise`\<[`DeltaOrderApiResponse`](DeltaOrderApiResponse.md)\>
+> **PostDeltaOrder**: (`postData`, `requestParams`?) => `Promise`\<[`DeltaOrderApiResponse`](../../type-aliases/DeltaOrderApiResponse.md)\>
 
 ## Parameters
 
@@ -16,8 +16,8 @@
 
 ## Returns
 
-`Promise`\<[`DeltaOrderApiResponse`](DeltaOrderApiResponse.md)\>
+`Promise`\<[`DeltaOrderApiResponse`](../../type-aliases/DeltaOrderApiResponse.md)\>
 
 ## Defined in
 
-[src/methods/delta/postDeltaOrder.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L22)
+[src/methods/delta/postDeltaOrder.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L32)

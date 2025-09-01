@@ -6,34 +6,18 @@
 
 # Type Alias: BridgePrice
 
-> **BridgePrice**: [`DeltaPrice`](DeltaPrice.md) & `object`
+> **BridgePrice**: [`Omit`](../-internal-/type-aliases/Omit.md)\<[`DeltaPrice`](DeltaPrice.md), `"bridge"`\> & `object`
 
 ## Type declaration
 
 ### bridge
 
-> **bridge**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`Bridge`](Bridge.md), `"destinationChainId"` \| `"outputToken"`\>
+> **bridge**: [`Bridge`](Bridge.md)
 
-### bridgeFee
+### bridgeInfo
 
-> **bridgeFee**: `string`
-
-### bridgeFeeUSD
-
-> **bridgeFeeUSD**: `string`
-
-### destAmountAfterBridge
-
-> **destAmountAfterBridge**: `string`
-
-### destUSDAfterBridge
-
-> **destUSDAfterBridge**: `string`
-
-### poolAddress
-
-> **poolAddress**: `string`
+> **bridgeInfo**: [`BridgePriceInfo`](../-internal-/type-aliases/BridgePriceInfo.md)
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L49)
+[src/methods/delta/getDeltaPrice.ts:83](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L83)

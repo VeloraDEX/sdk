@@ -6,7 +6,7 @@
 
 # Type Alias: GetDeltaOrders()
 
-> **GetDeltaOrders**: (`options`, `requestParams`?) => `Promise`\<[`OrderFromAPI`](OrderFromAPI.md)[]\>
+> **GetDeltaOrders**: (`options`, `requestParams`?) => `Promise`\<[`DeltaOrderFromAPI`](../../type-aliases/DeltaOrderFromAPI.md)[]\>
 
 ## Parameters
 
@@ -16,8 +16,8 @@
 
 ## Returns
 
-`Promise`\<[`OrderFromAPI`](OrderFromAPI.md)[]\>
+`Promise`\<[`DeltaOrderFromAPI`](../../type-aliases/DeltaOrderFromAPI.md)[]\>
 
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L32)
+[src/methods/delta/getDeltaOrders.ts:36](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L36)

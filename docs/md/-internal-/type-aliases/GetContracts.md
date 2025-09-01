@@ -6,7 +6,7 @@
 
 # Type Alias: GetContracts()
 
-> **GetContracts**: (`requestParams`?) => `Promise`\<[`AdaptersContractsResult`](../interfaces/AdaptersContractsResult.md)\>
+> **GetContracts**: (`requestParams`?) => `Promise`\<[`AdaptersContractsResult`](../../interfaces/AdaptersContractsResult.md)\>
 
 ## Parameters
 
@@ -14,7 +14,7 @@
 
 ## Returns
 
-`Promise`\<[`AdaptersContractsResult`](../interfaces/AdaptersContractsResult.md)\>
+`Promise`\<[`AdaptersContractsResult`](../../interfaces/AdaptersContractsResult.md)\>
 
 ## Defined in
 

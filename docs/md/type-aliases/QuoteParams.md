@@ -54,13 +54,13 @@ Preferred mode for the trade. In case of "all", Delta pricing is returned, with 
 
 Partner string
 
-### side
+### side?
 
-> **side**: [`SwapSideUnion`](../-internal-/type-aliases/SwapSideUnion.md)
+> `optional` **side**: [`SwapSideUnion`](../-internal-/type-aliases/SwapSideUnion.md)
 
 #### Description
 
-SELL or BUY
+SELL or BUY, default is SELL
 
 ### srcDecimals
 

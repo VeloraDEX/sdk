@@ -1,8 +1,8 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md) • **Docs**
 
 ***
 
-[@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AdaptersContractsResult
+[@velora-dex/sdk](../globals.md) / AdaptersContractsResult
 
 # Interface: AdaptersContractsResult
 
