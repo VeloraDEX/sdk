@@ -2,11 +2,11 @@ import type {
   ConstructProviderFetchInput,
   RequestParameters,
 } from '../../types';
+import { constructGetDeltaContract } from './getDeltaContract';
 import {
   buildCancelDeltaOrderSignableData,
   CancelDeltaOrderData,
 } from './helpers/buildCancelDeltaOrderData';
-import { constructGetDeltaContract } from '../..';
 
 type SuccessResponse = { success: true };
 
