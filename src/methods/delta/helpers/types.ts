@@ -136,3 +136,23 @@ export type BridgeMetadata = {
 
 //                                                             refunded is basically failed
 export type BridgeStatus = 'pending' | 'filled' | 'expired' | 'refunded';
+
+//// available on BridgePrice ////
+
+// so far
+type ProtocolName = 'Across' | 'StargateBus' | 'StargateTaxi';
+
+type BridgeQuoteFee = {
+  feeToken: string;
+  amount: string;
+  amountInSrcToken: string;
+  amountInUSD: string;
+};
+
+export type BridgePriceInfo = {
+  protocolName: ProtocolName;
+  destAmountAfterBridge: string;
+  destUSDAfterBridge: string;
+  fees: BridgeQuoteFee[];
+  estimatedTimeMs: number;
+};

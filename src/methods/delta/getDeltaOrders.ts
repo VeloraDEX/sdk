@@ -38,15 +38,27 @@ type GetDeltaOrders = (
   requestParams?: RequestParameters
 ) => Promise<OrderFromAPI[]>;
 
+type GetRequiredBalanceParams = {
+  userAddress: Address;
+  tokenAddress?: Address;
+};
+
+type GetRequiredBalance = (
+  userParams: GetRequiredBalanceParams,
+  requestParams?: RequestParameters
+) => Promise<Record<string, string>>; // token -> balance in Limit Orders
+
 export type GetDeltaOrdersFunctions = {
   getDeltaOrderById: GetDeltaOrderById;
   getDeltaOrderByHash: GetDeltaOrderByHash;
   getDeltaOrders: GetDeltaOrders;
+  getRequiredBalanceForDeltaLimitOrders: GetRequiredBalance;
 };
 
 export const constructGetDeltaOrders = ({
   apiURL = API_URL,
   fetcher,
+  chainId,
 }: ConstructFetchInput): GetDeltaOrdersFunctions => {
   const baseUrl = `${apiURL}/delta/orders` as const;
 
@@ -100,9 +112,29 @@ export const constructGetDeltaOrders = ({
     return orders;
   };
 
+  const getRequiredBalanceForDeltaLimitOrders: GetRequiredBalance = async (
+    userParams,
+    requestParams
+  ) => {
+    const userURL =
+      `${baseUrl}/fillablebalance/${chainId}/${userParams.userAddress}` as const;
+    const fetchURL = userParams.tokenAddress
+      ? (`${userURL}/${userParams.tokenAddress}` as const)
+      : userURL;
+
+    const response = await fetcher<Record<string, string>>({
+      url: fetchURL,
+      method: 'GET',
+      requestParams,
+    });
+
+    return response;
+  };
+
   return {
     getDeltaOrderById,
     getDeltaOrderByHash,
     getDeltaOrders,
+    getRequiredBalanceForDeltaLimitOrders,
   };
 };

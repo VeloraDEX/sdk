@@ -6,6 +6,8 @@ import type {
   EnumerateLiteral,
   RequestParameters,
 } from '../../types';
+import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
+import { BridgePriceInfo } from './helpers/types';
 
 type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
@@ -28,11 +30,28 @@ export type DeltaPriceParams = {
   destChainId?: number;
   /** @description SELL or BUY, default is SELL */
   side?: SwapSideUnion;
+
+  includeAgents?: string[];
+  excludeAgents?: string[];
 };
 
-type DeltaPriceQueryOptions = DeltaPriceParams & {
+type DeltaPriceQueryOptions = Omit<
+  DeltaPriceParams,
+  'includeAgents' | 'excludeAgents'
+> & {
   chainId: number; // will return error from API on unsupported chains
+  includeAgents?: string;
+  excludeAgents?: string;
 };
+
+// for same-chain Orders, all 0 params
+export const DEFAULT_BRIDGE = {
+  protocolSelector: '0x00000000', // 4 bytes
+  destinationChainId: 0,
+  outputToken: ZERO_ADDRESS,
+  scalingFactor: 0,
+  protocolData: '0x',
+} as const satisfies Bridge;
 
 export type DeltaPrice = {
   srcToken: string;
@@ -56,16 +75,17 @@ export type DeltaPrice = {
   partner: string;
   partnerFee: number; // in %
   hmac: string;
+  bridge: Bridge; // for single-chain DeltaPrice, it's DEFAULT_BRIDGE
 };
 
-export type BridgePrice = DeltaPrice & {
-  destAmountAfterBridge: string;
-  destUSDAfterBridge: string;
-  bridgeFee: string;
-  bridgeFeeUSD: string;
-  poolAddress: string;
-  // @TODO DeltaPrice.bridge will have to include all Bridge fields
-  bridge: Pick<Bridge, 'destinationChainId' | 'outputToken'>;
+export type BridgePrice = Omit<DeltaPrice, 'bridge'> & {
+  // destAmountAfterBridge: string; // became bridgeInfo.destAmountAfterBridge
+  // destUSDAfterBridge: string; // became bridgeInfo.destUSDAfterBridge
+  // bridgeFee: string; // became bridgeInfo.fees[0].amount
+  // bridgeFeeUSD: string; // became bridgeInfo.fees[0].amountInUSD
+  // poolAddress: string;
+  bridge: Bridge;
+  bridgeInfo: BridgePriceInfo;
 };
 
 type DeltaPriceResponse = {
@@ -114,10 +134,20 @@ export const constructGetDeltaPrice = ({
     options: DeltaPriceParams,
     requestParams?: RequestParameters
   ): Promise<DeltaPrice | BridgePrice> {
+    const { includeAgents, excludeAgents, ...rest } = options;
+    const includeAgentsString = includeAgents
+      ? includeAgents.join(',')
+      : undefined;
+    const excludeAgentsString = excludeAgents
+      ? excludeAgents.join(',')
+      : undefined;
+
     const search = constructSearchString<DeltaPriceQueryOptions>({
-      ...options,
+      ...rest,
       chainId,
       side: options.side ?? SwapSide.SELL,
+      includeAgents: includeAgentsString,
+      excludeAgents: excludeAgentsString,
     });
 
     const fetchURL = `${pricesUrl}/${search}` as const;

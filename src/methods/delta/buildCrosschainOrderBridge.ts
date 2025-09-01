@@ -18,7 +18,7 @@ export type BuildCrosschainOrderBridgeParams = {
   beneficiaryType: BeneficiaryType;
 
   /** @description price response received from /delta/prices (getDeltaPrice method) */
-  deltaPrice: Pick<BridgePrice, 'bridgeFee' | 'bridge'>;
+  deltaPrice: BridgePrice;
 };
 
 type BuildCrosschainOrderBridge = (

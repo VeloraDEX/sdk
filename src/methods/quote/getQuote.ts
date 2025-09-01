@@ -69,7 +69,8 @@ export type QuoteResponse =
   | QuoteWithDeltaPrice
   | QuoteWithMarketPrice
   | QuoteWithBridgePrice
-  | QuoteWithMarketPriceAsFallback;
+  | QuoteWithMarketPriceAsFallback
+  | QuoteWithDeltaPriceAndBridgePrice;
 
 interface GetQuoteFunc {
   (
@@ -97,9 +98,7 @@ interface GetQuoteFunc {
   (
     options: QuoteParams<'all'> & { destChainId: number },
     requestParams?: RequestParameters
-  ): Promise<
-    QuoteWithBridgePrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
-  >;
+  ): Promise<QuoteWithBridgePrice>;
   (options: QuoteParams<'all'>, requestParams?: RequestParameters): Promise<
     QuoteWithDeltaPriceAndBridgePrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
   >;
@@ -145,9 +144,7 @@ export const constructGetQuote = ({
   function getQuote(
     options: QuoteParams<'all'> & { destChainId: number },
     requestParams?: RequestParameters
-  ): Promise<
-    QuoteWithBridgePrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
-  >;
+  ): Promise<QuoteWithBridgePrice>;
   function getQuote(
     options: QuoteParams<'all'>,
     requestParams?: RequestParameters

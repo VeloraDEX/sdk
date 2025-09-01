@@ -1,20 +1,17 @@
-import { assert } from 'ts-essentials';
 import type {
   ConstructFetchInput,
   EnumerateLiteral,
   RequestParameters,
 } from '../../types';
-import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
 import { constructGetDeltaContract } from './getDeltaContract';
-import { BridgePrice, DeltaPrice } from './getDeltaPrice';
+import { BridgePrice } from './getDeltaPrice';
 import { constructGetPartnerFee } from './getPartnerFee';
 import {
   buildDeltaSignableOrderData,
   type BuildDeltaOrderDataInput,
   type SignableDeltaOrderData,
 } from './helpers/buildDeltaOrderData';
-import { Bridge, SwapSideToOrderKind } from './helpers/types';
-import { constructBuildCrosschainOrderBridge } from './buildCrosschainOrderBridge';
+import { SwapSideToOrderKind } from './helpers/types';
 import { BeneficiaryType } from '../common/orders/types';
 import { SwapSide } from '../../constants';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
@@ -43,8 +40,6 @@ export type BuildDeltaOrderDataParams = {
   /** @description Partner string. */
   partner?: string;
 
-  /** @description The bridge input */
-  bridge?: Bridge;
   /** @description Destination Chain ID for Crosschain Orders */
   destChainId?: number;
   /** @description Whether the beneficiary is a contract. Needed to automatically fill in crosschain Bridge */
@@ -52,10 +47,14 @@ export type BuildDeltaOrderDataParams = {
 
   /** @description price response received from /delta/prices (getDeltaPrice method) */
   deltaPrice: Pick<
-    DeltaPrice,
-    'destAmount' | 'partner' | 'partnerFee' | 'destToken' | 'srcAmount'
-  > &
-    Partial<Pick<BridgePrice, 'bridgeFee' | 'bridge'>>;
+    BridgePrice,
+    | 'destAmount'
+    | 'partner'
+    | 'partnerFee'
+    | 'destToken'
+    | 'srcAmount'
+    | 'bridge'
+  >;
 
   /** @description partner fee in basis points (bps), 50bps=0.5% */
   partnerFeeBps?: number;
@@ -80,15 +79,6 @@ export type BuildDeltaOrderFunctions = {
   buildDeltaOrder: BuildDeltaOrder;
 };
 
-// for same-chain Orders, all 0 params
-const DEFAULT_BRIDGE: Bridge = {
-  protocolSelector: '0x00000000', // 4 bytes
-  destinationChainId: 0,
-  outputToken: ZERO_ADDRESS,
-  scalingFactor: 0,
-  protocolData: '0x',
-};
-
 export const constructBuildDeltaOrder = (
   options: ConstructFetchInput
 ): BuildDeltaOrderFunctions => {
@@ -98,9 +88,6 @@ export const constructBuildDeltaOrder = (
   const { getDeltaContract } = constructGetDeltaContract(options);
   // cached internally for `partner`
   const { getPartnerFee } = constructGetPartnerFee(options);
-
-  const { buildCrosschainOrderBridge } =
-    constructBuildCrosschainOrderBridge(options);
 
   const buildDeltaOrder: BuildDeltaOrder = async (options, requestParams) => {
     const ParaswapDelta = await getDeltaContract(requestParams);
@@ -134,54 +121,6 @@ export const constructBuildDeltaOrder = (
         partnerTakesSurplus ?? partnerFeeResponse.takeSurplus;
     }
 
-    ////// Bridge logic //////
-
-    // Bridge is necessary for Crosschain Delta Orders
-    let bridge = options.bridge;
-
-    // give preference to user-provided bridge
-    if (!bridge) {
-      // no bridge passed in input
-
-      const TEMP_NO_CROSSCHAIN_ORDER_CONDITION = false;
-
-      if (
-        // @TODO temp opting out of crosschain Orders until API returns BridgePrice.bridge = whole Bridge object
-        TEMP_NO_CROSSCHAIN_ORDER_CONDITION &&
-        options.destChainId &&
-        chainId !== options.destChainId
-      ) {
-        // crosschain Delta Order
-        const deltaPrice = options.deltaPrice;
-        assert(
-          deltaPrice.bridgeFee,
-          '`bridgeFee` is required in `deltaPrice` for crosschain Delta Orders'
-        );
-        assert(
-          deltaPrice.bridge,
-          '`bridge` is required in `deltaPrice` for crosschain Delta Orders'
-        );
-
-        const { bridge: constructedBridge } = await buildCrosschainOrderBridge(
-          {
-            destToken: options.destToken,
-            destChainId: options.destChainId,
-            beneficiaryType: options.beneficiaryType ?? 'EOA',
-            deltaPrice: {
-              bridgeFee: deltaPrice.bridgeFee,
-              bridge: deltaPrice.bridge, // already contains destChainId and outputToken
-            },
-          },
-          requestParams
-        );
-
-        bridge = constructedBridge;
-      } else {
-        // 0-values bridge for same-chain Orders
-        bridge = DEFAULT_BRIDGE;
-      }
-    }
-
     const swapSide = options.side ?? SwapSide.SELL;
 
     const expectedAmount =
@@ -211,7 +150,7 @@ export const constructBuildDeltaOrder = (
       partnerTakesSurplus,
       partnerFeeBps,
 
-      bridge,
+      bridge: options.deltaPrice.bridge, // ZERO_BRIDGE for same-chain Orders
     };
 
     return buildDeltaSignableOrderData(input);
