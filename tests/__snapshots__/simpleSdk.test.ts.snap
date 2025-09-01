@@ -32,11 +32,9 @@ exports[`Simple SDK: fetcher made with: axios Get_Adapters: Get_Adapters 1`] = `
   "AaveV2",
   "AaveV3",
   "AaveV3Lido",
-  "IdleDao",
   "KyberDmm",
   "Weth",
   "PolygonMigrator",
-  "MakerPsm",
   "Synapse",
   "ParaSwapLimitOrders",
   "SolidlyV2",
@@ -122,6 +120,9 @@ exports[`Simple SDK: fetcher made with: axios Get_SwapTxData: Get_SwapTxData::pr
               "poolAddresses": [
                 "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
               ],
+              "poolIdentifiers": [
+                "uniswapv2_0x6b175474e89094c44da98b954eedeac495271d0f_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+              ],
               "srcAmount": "1000000000000000000",
             },
           ],
@@ -196,11 +197,9 @@ exports[`Simple SDK: fetcher made with: fetch Get_Adapters: Get_Adapters 1`] = `
   "AaveV2",
   "AaveV3",
   "AaveV3Lido",
-  "IdleDao",
   "KyberDmm",
   "Weth",
   "PolygonMigrator",
-  "MakerPsm",
   "Synapse",
   "ParaSwapLimitOrders",
   "SolidlyV2",
@@ -285,6 +284,9 @@ exports[`Simple SDK: fetcher made with: fetch Get_SwapTxData: Get_SwapTxData::pr
               "percent": 100,
               "poolAddresses": [
                 "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
+              ],
+              "poolIdentifiers": [
+                "uniswapv2_0x6b175474e89094c44da98b954eedeac495271d0f_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
               ],
               "srcAmount": "1000000000000000000",
             },
