@@ -59,11 +59,8 @@ export type DeltaAuctionStatus =
   | 'EXECUTED'
   | 'FAILED'
   | 'EXPIRED'
-  | 'CANCELLED'; // @TODO check if added
-// these are not exposed, but are coerced into FAILED
-// | 'INSUFFICIENT_BALANCE'
-// | 'INSUFFICIENT_ALLOWANCE'
-// | 'INVALIDATED';
+  | 'CANCELLED'
+  | 'SUSPENDED';
 
 type DeltaAuctionTransaction = {
   id: string;
