@@ -42,12 +42,14 @@ export type DeltaAuctionOrder = {
 };
 
 export type Bridge = {
-  maxRelayerFee: string;
+  protocolSelector: string; // Hex string
   destinationChainId: number;
   /** @description The address of the output token. Same as Order.destToken but on destination chain, so can still be a different address */
   outputToken: string;
-  /** @description The address of the multiCallHandler on destination chain, used to unwrap WETH and send to Smart Contract receiver. Must be non-zero when receiver address is a SmartContract wallet and need to send Native ETH */
-  multiCallHandler: string;
+  scalingFactor: number;
+
+  /** @description Data specific to the protocol */
+  protocolData: string; // Hex string
 };
 
 type DeltaAuctionStatus =
@@ -116,7 +118,7 @@ export type DeltaAuction = {
   // orderVersion: string; // "2.0.0"
   // deltaGasOverhead: number;
 
-  // type: 'MARKET' | 'LIMIT'; // @TODO when available in API
+  type: 'MARKET' | 'LIMIT'; // @TODO when available in API for individual /order/:hash|:id
 };
 
 export type BridgeMetadata = {

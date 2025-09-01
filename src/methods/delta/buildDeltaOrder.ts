@@ -82,10 +82,11 @@ export type BuildDeltaOrderFunctions = {
 
 // for same-chain Orders, all 0 params
 const DEFAULT_BRIDGE: Bridge = {
-  maxRelayerFee: '0',
+  protocolSelector: '0x00000000', // 4 bytes
   destinationChainId: 0,
   outputToken: ZERO_ADDRESS,
-  multiCallHandler: ZERO_ADDRESS,
+  scalingFactor: 0,
+  protocolData: '0x',
 };
 
 export const constructBuildDeltaOrder = (
@@ -142,7 +143,14 @@ export const constructBuildDeltaOrder = (
     if (!bridge) {
       // no bridge passed in input
 
-      if (options.destChainId && chainId !== options.destChainId) {
+      const TEMP_NO_CROSSCHAIN_ORDER_CONDITION = false;
+
+      if (
+        // @TODO temp opting out of crosschain Orders until API returns BridgePrice.bridge = whole Bridge object
+        TEMP_NO_CROSSCHAIN_ORDER_CONDITION &&
+        options.destChainId &&
+        chainId !== options.destChainId
+      ) {
         // crosschain Delta Order
         const deltaPrice = options.deltaPrice;
         assert(
