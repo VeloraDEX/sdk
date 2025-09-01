@@ -23,7 +23,10 @@ import { TransactionParams } from '../../methods/swap/transaction';
 
 export type MinViemClient = Partial<
   Pick<PublicActions<Transport, Chain>, 'readContract'> &
-    Pick<WalletActions<Chain>, 'writeContract' | 'signTypedData'>
+    Pick<
+      WalletActions<Chain>,
+      'writeContract' | 'signTypedData' | 'signMessage'
+    >
 > & { account?: Account };
 
 export const constructContractCaller = (

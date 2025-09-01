@@ -1,5 +1,4 @@
 import type { ConstructProviderFetchInput } from '../../types';
-import type { DeltaAuction } from './helpers/types';
 import {
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
@@ -7,6 +6,8 @@ import {
 } from './buildDeltaOrder';
 import {
   constructPostDeltaOrder,
+  DeltaOrderApiResponse,
+  DeltaOrderToPost,
   PostDeltaOrderFunctions,
 } from './postDeltaOrder';
 import {
@@ -49,15 +50,21 @@ import {
   BuildCrosschainOrderBridgeFunctions,
   constructBuildCrosschainOrderBridge,
 } from './buildCrosschainOrderBridge';
+import {
+  CancelDeltaOrderFunctions,
+  constructCancelDeltaOrder,
+} from './cancelDeltaOrder';
 
 export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
   /** @description designates the Order as being able to be partially filled, as opposed to fill-or-kill */
   partiallyFillable?: boolean;
-};
+  /** @description Referrer address */
+  referrerAddress?: string;
+} & Pick<DeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
 
 type SubmitDeltaOrder = (
   orderParams: SubmitDeltaOrderParams
-) => Promise<DeltaAuction>;
+) => Promise<DeltaOrderApiResponse>;
 
 export type SubmitDeltaOrderFuncs = {
   submitDeltaOrder: SubmitDeltaOrder;
@@ -79,6 +86,10 @@ export const constructSubmitDeltaOrder = (
       partner: orderParams.partner,
       order: orderData.data,
       partiallyFillable: orderParams.partiallyFillable,
+      referrerAddress: orderParams.referrerAddress,
+      type: orderParams.type,
+      includeAgents: orderParams.includeAgents,
+      excludeAgents: orderParams.excludeAgents,
     });
 
     return response;
@@ -99,7 +110,8 @@ export type DeltaOrderHandlers<T> = SubmitDeltaOrderFuncs &
   GetBridgeInfoFunctions &
   IsTokenSupportedInDeltaFunctions &
   PostDeltaOrderFunctions &
-  SignDeltaOrderFunctions;
+  SignDeltaOrderFunctions &
+  CancelDeltaOrderFunctions;
 
 /** @description construct SDK with every Delta Order-related method, fetching from API and Order signing */
 export const constructAllDeltaOrdersHandlers = <TxResponse>(
@@ -128,6 +140,8 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
   const deltaOrdersSign = constructSignDeltaOrder(options);
   const deltaOrdersPost = constructPostDeltaOrder(options);
 
+  const deltaOrdersCancel = constructCancelDeltaOrder(options);
+
   return {
     ...deltaOrdersGetters,
     ...deltaOrdersContractGetter,
@@ -141,6 +155,7 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
     ...deltaOrdersBuild,
     ...deltaOrdersSign,
     ...deltaOrdersPost,
+    ...deltaOrdersCancel,
     ...buildCrosschainOrderBridge,
   };
 };

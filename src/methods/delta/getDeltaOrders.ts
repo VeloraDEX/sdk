@@ -7,17 +7,17 @@ import type {
 } from '../../types';
 import type { DeltaAuction } from './helpers/types';
 
-type OrderFromAPI = Omit<DeltaAuction, 'signature'>;
+export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature'>;
 
 type GetDeltaOrderById = (
   orderId: string,
   requestParams?: RequestParameters
-) => Promise<OrderFromAPI>;
+) => Promise<DeltaOrderFromAPI>;
 
 type GetDeltaOrderByHash = (
   orderHash: string,
   requestParams?: RequestParameters
-) => Promise<OrderFromAPI>;
+) => Promise<DeltaOrderFromAPI>;
 
 type OrdersFilter = {
   /** @description Order.owner to fetch Delta Order for */
@@ -26,23 +26,39 @@ type OrdersFilter = {
   page?: number;
   /** @description Pagination option, limit. Default 100 */
   limit?: number;
+  /** @description Filter by chainId, without this filter, orders from all chains are returned */
+  chainId?: number; // @TODO currently not working
+  /** @description Filter by type. MARKET, LIMIT, or ALL. Default is ALL */
+  type?: 'MARKET' | 'LIMIT' | 'ALL';
 };
 type OrderFiltersQuery = OrdersFilter;
 
 type GetDeltaOrders = (
   options: OrdersFilter,
   requestParams?: RequestParameters
-) => Promise<OrderFromAPI[]>;
+) => Promise<DeltaOrderFromAPI[]>;
+
+type GetRequiredBalanceParams = {
+  userAddress: Address;
+  tokenAddress?: Address;
+};
+
+type GetRequiredBalance = (
+  userParams: GetRequiredBalanceParams,
+  requestParams?: RequestParameters
+) => Promise<Record<string, string>>; // token -> balance in Limit Orders
 
 export type GetDeltaOrdersFunctions = {
   getDeltaOrderById: GetDeltaOrderById;
   getDeltaOrderByHash: GetDeltaOrderByHash;
   getDeltaOrders: GetDeltaOrders;
+  getRequiredBalanceForDeltaLimitOrders: GetRequiredBalance;
 };
 
 export const constructGetDeltaOrders = ({
   apiURL = API_URL,
   fetcher,
+  chainId,
 }: ConstructFetchInput): GetDeltaOrdersFunctions => {
   const baseUrl = `${apiURL}/delta/orders` as const;
 
@@ -52,7 +68,7 @@ export const constructGetDeltaOrders = ({
   ) => {
     const fetchURL = `${baseUrl}/${orderId}` as const;
 
-    const order = await fetcher<OrderFromAPI>({
+    const order = await fetcher<DeltaOrderFromAPI>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -67,7 +83,7 @@ export const constructGetDeltaOrders = ({
   ) => {
     const fetchURL = `${baseUrl}/hash/${orderHash}` as const;
 
-    const order = await fetcher<OrderFromAPI>({
+    const order = await fetcher<DeltaOrderFromAPI>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -81,11 +97,13 @@ export const constructGetDeltaOrders = ({
       userAddress: options.userAddress,
       page: options.page,
       limit: options.limit,
+      chainId: options.chainId,
+      type: options.type,
     });
 
     const fetchURL = `${baseUrl}${search}` as const;
 
-    const orders = await fetcher<OrderFromAPI[]>({
+    const orders = await fetcher<DeltaOrderFromAPI[]>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -94,9 +112,29 @@ export const constructGetDeltaOrders = ({
     return orders;
   };
 
+  const getRequiredBalanceForDeltaLimitOrders: GetRequiredBalance = async (
+    userParams,
+    requestParams
+  ) => {
+    const userURL =
+      `${baseUrl}/fillablebalance/${chainId}/${userParams.userAddress}` as const;
+    const fetchURL = userParams.tokenAddress
+      ? (`${userURL}/${userParams.tokenAddress}` as const)
+      : userURL;
+
+    const response = await fetcher<Record<string, string>>({
+      url: fetchURL,
+      method: 'GET',
+      requestParams,
+    });
+
+    return response;
+  };
+
   return {
     getDeltaOrderById,
     getDeltaOrderByHash,
     getDeltaOrders,
+    getRequiredBalanceForDeltaLimitOrders,
   };
 };

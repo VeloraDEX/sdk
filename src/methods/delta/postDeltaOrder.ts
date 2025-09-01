@@ -13,11 +13,21 @@ export type DeltaOrderToPost = {
   chainId: number;
   /** @description designates the Order as being able to partially filled, as opposed to fill-or-kill */
   partiallyFillable?: boolean;
+
+  /** @description Type of the order. MARKET or LIMIT. Default is MARKET */
+  type?: 'MARKET' | 'LIMIT';
+
+  includeAgents?: string[];
+  excludeAgents?: string[];
 };
 
 export type PostDeltaOrderParams = Omit<DeltaOrderToPost, 'chainId'>;
 
-type DeltaOrderApiResponse = DeltaAuction;
+export type DeltaOrderApiResponse = Omit<DeltaAuction, 'transactions'> & {
+  orderVersion: string; // "2.0.0"
+  deltaGasOverhead: number; // @TODO may be removed
+  type: 'MARKET' | 'LIMIT';
+};
 
 type PostDeltaOrder = (
   postData: PostDeltaOrderParams,

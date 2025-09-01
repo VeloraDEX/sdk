@@ -7,12 +7,14 @@ export function sanitizeDeltaOrderData({
   destToken,
   srcAmount,
   destAmount,
-  expectedDestAmount,
+  expectedAmount,
   deadline,
   nonce,
   permit,
   partnerAndFee,
   bridge,
+  kind,
+  metadata,
 }: SignableDeltaOrderData['data'] &
   Record<string, any>): SignableDeltaOrderData['data'] {
   return {
@@ -22,11 +24,13 @@ export function sanitizeDeltaOrderData({
     destToken,
     srcAmount,
     destAmount,
-    expectedDestAmount,
+    expectedAmount,
     deadline,
     nonce,
     permit,
     partnerAndFee,
     bridge,
+    kind,
+    metadata,
   };
 }

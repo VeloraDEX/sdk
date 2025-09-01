@@ -181,7 +181,7 @@ export async function getDeltaBridge({
     destinationChainId: destChainId,
     outputToken,
     multiCallHandler,
-  };
+  } as any; // @TODO remove the whole getDeltaBridge() when API provides BridgePrice.bridge = whole Bridge object
 
   return {
     bridge,

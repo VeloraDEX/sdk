@@ -23,8 +23,8 @@ export type QuoteParams<M extends TradeMode = TradeMode> = {
   srcDecimals: number;
   /** @description Destination Token Decimals */
   destDecimals: number;
-  /** @description SELL or BUY */
-  side: SwapSideUnion;
+  /** @description SELL or BUY, default is SELL */
+  side?: SwapSideUnion;
   /** @description User's Wallet Address */
   userAddress?: string;
   /** @description Partner string */
@@ -69,7 +69,8 @@ export type QuoteResponse =
   | QuoteWithDeltaPrice
   | QuoteWithMarketPrice
   | QuoteWithBridgePrice
-  | QuoteWithMarketPriceAsFallback;
+  | QuoteWithMarketPriceAsFallback
+  | QuoteWithDeltaPriceAndBridgePrice;
 
 interface GetQuoteFunc {
   (
@@ -97,9 +98,7 @@ interface GetQuoteFunc {
   (
     options: QuoteParams<'all'> & { destChainId: number },
     requestParams?: RequestParameters
-  ): Promise<
-    QuoteWithBridgePrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
-  >;
+  ): Promise<QuoteWithBridgePrice>;
   (options: QuoteParams<'all'>, requestParams?: RequestParameters): Promise<
     QuoteWithDeltaPriceAndBridgePrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
   >;
@@ -145,9 +144,7 @@ export const constructGetQuote = ({
   function getQuote(
     options: QuoteParams<'all'> & { destChainId: number },
     requestParams?: RequestParameters
-  ): Promise<
-    QuoteWithBridgePrice | QuoteWithMarketPriceAsFallback // "all" mode tries for deltaPrice and falls back to market priceRoute
-  >;
+  ): Promise<QuoteWithBridgePrice>;
   function getQuote(
     options: QuoteParams<'all'>,
     requestParams?: RequestParameters
@@ -165,7 +162,7 @@ export const constructGetQuote = ({
     const search = constructSearchString<QuoteQueryOptions>({
       ...options,
       chainId,
-      // side: SwapSide.SELL, // so far SELL side only for Delta
+      side: options.side ?? SwapSide.SELL,
     });
 
     const fetchURL = `${pricesUrl}/${search}` as const;

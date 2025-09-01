@@ -1,4 +1,4 @@
-import { DeltaAuction, GetDeltaOrdersFunctions } from '../..';
+import { DeltaAuction, DeltaOrderFromAPI } from '../..';
 
 function isExecutedDeltaAuction(
   auction: Omit<DeltaAuction, 'signature'>,
@@ -14,9 +14,7 @@ function isExecutedDeltaAuction(
   return true;
 }
 
-type GetDeltaOrderFn = () => ReturnType<
-  GetDeltaOrdersFunctions['getDeltaOrderById']
->;
+type GetDeltaOrderFn = () => Promise<DeltaOrderFromAPI>;
 
 function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrderFn) {
   const intervalId = setInterval(async () => {

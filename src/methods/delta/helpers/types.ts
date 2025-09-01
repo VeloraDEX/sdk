@@ -1,3 +1,15 @@
+import { SwapSide } from '../../../constants';
+
+enum OrderKind {
+  Sell = 0,
+  Buy = 1,
+}
+
+export const SwapSideToOrderKind = {
+  [SwapSide.SELL]: OrderKind.Sell,
+  [SwapSide.BUY]: OrderKind.Buy,
+} as const;
+
 export type DeltaAuctionOrder = {
   /** @description The address of the order owner */
   owner: string;
@@ -11,8 +23,12 @@ export type DeltaAuctionOrder = {
   srcAmount: string; // wei
   /** @description The minimum amount of dest token to receive */
   destAmount: string; // wei
-  /** @description The expected amount of dest token to receive */
-  expectedDestAmount: string; // wei
+  /** @description The expected amount of token to receive */
+  expectedAmount: string; // wei
+  /** @description The kind of the order */
+  kind: OrderKind;
+  /** @description Metadata for the order, hex string */
+  metadata: string;
   /** @description The deadline for the order */
   deadline: number; // seconds
   /** @description The nonce of the order */
@@ -26,22 +42,25 @@ export type DeltaAuctionOrder = {
 };
 
 export type Bridge = {
-  maxRelayerFee: string;
+  protocolSelector: string; // Hex string
   destinationChainId: number;
   /** @description The address of the output token. Same as Order.destToken but on destination chain, so can still be a different address */
   outputToken: string;
-  /** @description The address of the multiCallHandler on destination chain, used to unwrap WETH and send to Smart Contract receiver. Must be non-zero when receiver address is a SmartContract wallet and need to send Native ETH */
-  multiCallHandler: string;
+  scalingFactor: number;
+
+  /** @description Data specific to the protocol */
+  protocolData: string; // Hex string
 };
 
-type DeltaAuctionStatus =
+export type DeltaAuctionStatus =
   | 'NOT_STARTED'
-  | 'POSTED'
   | 'RUNNING'
   | 'EXECUTING'
   | 'EXECUTED'
   | 'FAILED'
-  | 'EXPIRED';
+  | 'EXPIRED'
+  | 'CANCELLED'
+  | 'SUSPENDED';
 
 type DeltaAuctionTransaction = {
   id: string;
@@ -91,6 +110,12 @@ export type DeltaAuction = {
 
   bridgeMetadata: BridgeMetadata | null;
   bridgeStatus: BridgeStatus | null;
+
+  // @TODO only returned after POST Order so far
+  // orderVersion: string; // "2.0.0"
+  // deltaGasOverhead: number;
+
+  type: 'MARKET' | 'LIMIT'; // @TODO when available in API for individual /order/:hash|:id
 };
 
 export type BridgeMetadata = {
@@ -108,3 +133,23 @@ export type BridgeMetadata = {
 
 //                                                             refunded is basically failed
 export type BridgeStatus = 'pending' | 'filled' | 'expired' | 'refunded';
+
+//// available on BridgePrice ////
+
+// so far
+type ProtocolName = 'Across' | 'StargateBus' | 'StargateTaxi';
+
+type BridgeQuoteFee = {
+  feeToken: string;
+  amount: string;
+  amountInSrcToken: string;
+  amountInUSD: string;
+};
+
+export type BridgePriceInfo = {
+  protocolName: ProtocolName;
+  destAmountAfterBridge: string;
+  destUSDAfterBridge: string;
+  fees: BridgeQuoteFee[];
+  estimatedTimeMs: number;
+};

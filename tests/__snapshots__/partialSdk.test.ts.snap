@@ -18,12 +18,12 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 
   "UniswapV2",
   "DefiSwap",
   "LinkSwap",
-  "PancakeSwapV2",
   "SushiSwap",
   "ShibaSwap",
   "Verse",
   "UniswapV3",
   "SushiSwapV3",
+  "PancakeSwapV2",
   "PancakeswapV3",
   "AaveV2",
   "AaveV3",
@@ -31,7 +31,6 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 
   "KyberDmm",
   "Weth",
   "PolygonMigrator",
-  "MakerPsm",
   "Synapse",
   "ParaSwapLimitOrders",
   "SolidlyV2",
@@ -49,6 +48,7 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 
   "Swell",
   "Spark",
   "sUSDS",
+  "RingV2",
   "AugustusRFQ",
 ]
 `;
@@ -99,6 +99,9 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_SwapTxData: Get_SwapTxD
               "percent": 100,
               "poolAddresses": [
                 "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
+              ],
+              "poolIdentifiers": [
+                "uniswapv2_0x6b175474e89094c44da98b954eedeac495271d0f_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
               ],
               "srcAmount": "1000000000000000000",
             },
@@ -160,12 +163,12 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 
   "UniswapV2",
   "DefiSwap",
   "LinkSwap",
-  "PancakeSwapV2",
   "SushiSwap",
   "ShibaSwap",
   "Verse",
   "UniswapV3",
   "SushiSwapV3",
+  "PancakeSwapV2",
   "PancakeswapV3",
   "AaveV2",
   "AaveV3",
@@ -173,7 +176,6 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 
   "KyberDmm",
   "Weth",
   "PolygonMigrator",
-  "MakerPsm",
   "Synapse",
   "ParaSwapLimitOrders",
   "SolidlyV2",
@@ -191,6 +193,7 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 
   "Swell",
   "Spark",
   "sUSDS",
+  "RingV2",
   "AugustusRFQ",
 ]
 `;
@@ -241,6 +244,9 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_SwapTxData: Get_SwapTxD
               "percent": 100,
               "poolAddresses": [
                 "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
+              ],
+              "poolIdentifiers": [
+                "uniswapv2_0x6b175474e89094c44da98b954eedeac495271d0f_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
               ],
               "srcAmount": "1000000000000000000",
             },

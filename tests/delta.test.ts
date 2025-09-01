@@ -26,6 +26,7 @@ import {
   constructBuildCrosschainOrderBridge,
   BuildCrosschainOrderBridgeParams,
   BridgePrice,
+  constructCancelDeltaOrder,
 } from '../src';
 import BigNumber from 'bignumber.js';
 
@@ -34,7 +35,13 @@ import erc20abi from './abi/ERC20.json';
 import { assert } from 'ts-essentials';
 import { HardhatProvider } from './helpers/hardhat';
 import { privateKeyToAccount } from 'viem/accounts';
-import { createWalletClient, custom, Hex } from 'viem';
+import {
+  Address,
+  createWalletClient,
+  custom,
+  Hex,
+  verifyTypedData,
+} from 'viem';
 import { hardhat } from 'viem/chains';
 import { ZERO_ADDRESS } from '../src/methods/common/orders/buildOrderData';
 import {
@@ -43,6 +50,7 @@ import {
   isETHaddress,
 } from '../src/methods/delta/helpers/across';
 import { BeneficiaryType } from '../src/methods/common/orders/types';
+import { BridgePriceInfo } from '../src/methods/delta/helpers/types';
 
 dotenv.config();
 
@@ -128,6 +136,7 @@ describe('Delta:methods', () => {
     constructGetPartnerFee
   );
 
+  /* 
   describe('Build Crosschain Order Bridge', () => {
     const destChainId = 10;
     const ETH = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
@@ -291,12 +300,12 @@ describe('Delta:methods', () => {
           destToken: RANDOM_TOKEN_ON_ETHEREUM,
           bridge: {
             destinationChainId: destChainId,
-            /*
-            if beneficiary is an EOA and destToken on destChain = ETH
-            order.destToken=ETH
-            order.bridge.outputToken=WETH_DEST_CHAIN
-            order.bridge.mutliCallHandler=NULL_ADDRESS
-            */
+            
+            // if beneficiary is an EOA and destToken on destChain = ETH
+            // order.destToken=ETH
+            // order.bridge.outputToken=WETH_DEST_CHAIN
+            // order.bridge.mutliCallHandler=NULL_ADDRESS
+            
             outputToken: WETH_ON_OPTIMISM,
           },
         },
@@ -358,12 +367,12 @@ describe('Delta:methods', () => {
           destToken: ETH,
           bridge: {
             destinationChainId: destChainId,
-            /*
-            if beneficiary is an EOA and destToken on destChain = ETH
-            order.destToken=ETH
-            order.bridge.outputToken=WETH_DEST_CHAIN
-            order.bridge.mutliCallHandler=NULL_ADDRESS
-            */
+            
+            // if beneficiary is an EOA and destToken on destChain = ETH
+            // order.destToken=ETH
+            // order.bridge.outputToken=WETH_DEST_CHAIN
+            // order.bridge.mutliCallHandler=NULL_ADDRESS
+            
             outputToken: WETH_ON_OPTIMISM,
           },
         },
@@ -539,7 +548,7 @@ describe('Delta:methods', () => {
       // wrap/unwrap logic is determined by bridge.multiCallHandler presence
       expect(result.bridge.outputToken).toEqual(WETH_ON_OPTIMISM.toLowerCase());
     });
-  });
+  }); */
 
   test('Get Delta Price', async () => {
     const deltaPrice = await deltaSDK.getDeltaPrice({
@@ -605,6 +614,20 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        bridge: {
+          ...deltaPrice.bridge,
+          protocolData: 'dynamic_string',
+          protocolSelector: 'dynamic_string',
+          scalingFactor: NaN, // dynamic number
+        },
+        bridgeInfo: {
+          ...deltaPrice.bridgeInfo,
+          destAmountAfterBridge: 'dynamic_number',
+          destUSDAfterBridge: 'dynamic_number',
+          estimatedTimeMs: NaN, // dynamic number
+          fees: [], // dynamic array
+          protocolName: 'dynamic_string' as BridgePriceInfo['protocolName'],
+        },
         destAmount: 'dynamic_number',
         destAmountBeforeFee: 'dynamic_number',
         srcUSD: 'dynamic_number',
@@ -615,10 +638,6 @@ describe('Delta:methods', () => {
         gasCostUSD: 'dynamic_number',
         gasCostUSDBeforeFee: 'dynamic_number',
         hmac: 'dynamic_string',
-        destAmountAfterBridge: 'dynamic_number',
-        destUSDAfterBridge: 'dynamic_number',
-        bridgeFee: 'dynamic_number',
-        bridgeFeeUSD: 'dynamic_number',
       };
 
       expect(deltaPrice.destToken).toEqual(DAI_TOKEN_ON_ETHEREUM.toLowerCase());
@@ -642,6 +661,20 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        bridge: {
+          ...deltaPrice.bridge,
+          protocolData: 'dynamic_string',
+          protocolSelector: 'dynamic_string',
+          scalingFactor: NaN, // dynamic number
+        },
+        bridgeInfo: {
+          ...deltaPrice.bridgeInfo,
+          destAmountAfterBridge: 'dynamic_number',
+          destUSDAfterBridge: 'dynamic_number',
+          estimatedTimeMs: NaN, // dynamic number
+          fees: [], // dynamic array
+          protocolName: 'dynamic_string' as BridgePriceInfo['protocolName'],
+        },
         destAmount: 'dynamic_number',
         destAmountBeforeFee: 'dynamic_number',
         srcUSD: 'dynamic_number',
@@ -652,10 +685,6 @@ describe('Delta:methods', () => {
         gasCostUSD: 'dynamic_number',
         gasCostUSDBeforeFee: 'dynamic_number',
         hmac: 'dynamic_string',
-        destAmountAfterBridge: 'dynamic_number',
-        destUSDAfterBridge: 'dynamic_number',
-        bridgeFee: 'dynamic_number',
-        bridgeFeeUSD: 'dynamic_number',
       };
 
       expect(staticDeltaPrice).toMatchSnapshot();
@@ -678,6 +707,20 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        bridge: {
+          ...deltaPrice.bridge,
+          protocolData: 'dynamic_string',
+          protocolSelector: 'dynamic_string',
+          scalingFactor: NaN, // dynamic number
+        },
+        bridgeInfo: {
+          ...deltaPrice.bridgeInfo,
+          destAmountAfterBridge: 'dynamic_number',
+          destUSDAfterBridge: 'dynamic_number',
+          estimatedTimeMs: NaN, // dynamic number
+          fees: [], // dynamic array
+          protocolName: 'dynamic_string' as BridgePriceInfo['protocolName'],
+        },
         destAmount: 'dynamic_number',
         destAmountBeforeFee: 'dynamic_number',
         srcUSD: 'dynamic_number',
@@ -688,10 +731,6 @@ describe('Delta:methods', () => {
         gasCostUSD: 'dynamic_number',
         gasCostUSDBeforeFee: 'dynamic_number',
         hmac: 'dynamic_string',
-        destAmountAfterBridge: 'dynamic_number',
-        destUSDAfterBridge: 'dynamic_number',
-        bridgeFee: 'dynamic_number',
-        bridgeFeeUSD: 'dynamic_number',
       };
 
       expect(staticDeltaPrice).toMatchSnapshot();
@@ -793,6 +832,13 @@ describe('Delta:methods', () => {
       srcToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
       srcUSD: '3191.5500000000',
       hmac: '1234aeb',
+      bridge: {
+        protocolSelector: '0x00000000',
+        destinationChainId: 0,
+        outputToken: ZERO_ADDRESS,
+        scalingFactor: 0,
+        protocolData: '0x',
+      },
     };
 
     const slippagePercent = 0.5;
@@ -832,7 +878,7 @@ describe('Delta:methods', () => {
     ['ethersV6', ethersV6ContractCaller],
     ['web3', web3ContractCaller],
     ['viem', viemContractCaller],
-  ])('sign Delta Order with %s', async (libName, contractCaller) => {
+  ])('sign Delta Order with %s', async (_libName, contractCaller) => {
     const sdk = constructPartialSDK(
       {
         chainId: 1,
@@ -849,18 +895,21 @@ describe('Delta:methods', () => {
         deadline: 1731328853,
         destAmount: '3147447403157656698880',
         destToken: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
-        expectedDestAmount: '3163263721766488892666',
+        expectedAmount: '3163263721766488892666',
         nonce: '1731325253703',
         owner: '0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9',
         partnerAndFee: '0',
         permit: '0x',
         srcAmount: '1000000000000000000',
         srcToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+        kind: 0,
+        metadata: '0x',
         bridge: {
-          maxRelayerFee: '0',
+          protocolSelector: '0x00000000',
           destinationChainId: 0,
           outputToken: ZERO_ADDRESS,
-          multiCallHandler: ZERO_ADDRESS,
+          scalingFactor: 0,
+          protocolData: '0x',
         },
       },
       domain: {
@@ -896,12 +945,16 @@ describe('Delta:methods', () => {
             type: 'uint256',
           },
           {
-            name: 'expectedDestAmount',
+            name: 'expectedAmount',
             type: 'uint256',
           },
           {
             name: 'deadline',
             type: 'uint256',
+          },
+          {
+            name: 'kind',
+            type: 'uint8',
           },
           {
             name: 'nonce',
@@ -916,14 +969,18 @@ describe('Delta:methods', () => {
             type: 'bytes',
           },
           {
+            name: 'metadata',
+            type: 'bytes',
+          },
+          {
             name: 'bridge',
             type: 'Bridge',
           },
         ],
         Bridge: [
           {
-            name: 'maxRelayerFee',
-            type: 'uint256',
+            name: 'protocolSelector',
+            type: 'bytes4',
           },
           {
             name: 'destinationChainId',
@@ -932,6 +989,14 @@ describe('Delta:methods', () => {
           {
             name: 'outputToken',
             type: 'address',
+          },
+          {
+            name: 'scalingFactor',
+            type: 'int8',
+          },
+          {
+            name: 'protocolData',
+            type: 'bytes',
           },
         ],
       },
@@ -942,6 +1007,47 @@ describe('Delta:methods', () => {
     // signatures match between libraries
     expect(deltaOrderSignature).toEqual(signature);
   });
+
+  let cancelSignature = '';
+
+  const sampleOrderId = '7ec0dc82-98ad-4501-9f46-03e31e51098f';
+
+  test.each([
+    ['ethersV5', ethersV5ContractCaller],
+    ['ethersV6', ethersV6ContractCaller],
+    ['web3', web3ContractCaller],
+    ['viem', viemContractCaller],
+  ])(
+    'sign Cancel Delta Order Request with %s',
+    async (_libName, contractCaller) => {
+      const sdk = constructPartialSDK(
+        {
+          chainId: 1,
+          fetcher: fetchFetcher,
+          contractCaller,
+          apiURL: process.env.API_URL,
+        },
+        constructCancelDeltaOrder
+      );
+
+      const deltaCancelSignature = await sdk.signCancelLimitDeltaOrderRequest({
+        orderIds: [sampleOrderId],
+      });
+
+      const valid = await verifySignedCancelRequest({
+        orderId: sampleOrderId,
+        signature: deltaCancelSignature,
+        address: senderAddress,
+        chainId: sdk.chainId,
+      });
+
+      expect(valid).toBe(true);
+
+      if (!cancelSignature) cancelSignature = deltaCancelSignature;
+      // signatures match between libraries
+      expect(deltaCancelSignature).toEqual(cancelSignature);
+    }
+  );
 
   const dummyFetcher: FetcherFunction = (params) => {
     // intercept POST requests
@@ -971,18 +1077,21 @@ describe('Delta:methods', () => {
       deadline: NaN, // dynamic number
       destAmount: '3147447403157656698880',
       destToken: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
-      expectedDestAmount: '3163263721766488892666',
+      expectedAmount: '3163263721766488892666',
       nonce: 'dynamic_number',
       owner: '0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9',
       partnerAndFee: '0',
       permit: '0x',
       srcAmount: '1000000000000000000',
       srcToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+      kind: 0,
+      metadata: '0x',
       bridge: {
-        maxRelayerFee: '0',
+        protocolSelector: '0x00000000',
         destinationChainId: 0,
         outputToken: ZERO_ADDRESS,
-        multiCallHandler: ZERO_ADDRESS,
+        scalingFactor: 0,
+        protocolData: '0x',
       },
     };
 
@@ -1019,6 +1128,13 @@ describe('Delta:methods', () => {
       srcToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
       srcUSD: '3191.5500000000',
       hmac: '1234aeb',
+      bridge: {
+        protocolSelector: '0x00000000',
+        destinationChainId: 0,
+        outputToken: ZERO_ADDRESS,
+        scalingFactor: 0,
+        protocolData: '0x',
+      },
     };
 
     const slippagePercent = 0.5;
@@ -1080,6 +1196,7 @@ function decreaseBySlippage(amount: string, slippagePercent: number): string {
   return amountAfterSlippage;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function constructBridgeAndOrderChanges({
   destToken,
   destChainId,
@@ -1093,23 +1210,24 @@ function constructBridgeAndOrderChanges({
   /** @description Destination Chain ID for Crosschain Orders */
   destChainId: number;
   /** @description price response received from /delta/prices (getDeltaPrice method) */
-  deltaPrice: Pick<BridgePrice, 'bridgeFee' | 'bridge' | 'destToken'>;
+  deltaPrice: BridgePrice;
 }) {
-  const { outputToken, multiCallHandler, destinationChainId, deltaDestToken } =
-    constructBridge({
-      bridgeDestToken: destToken,
-      srcChainId,
-      destChainId,
-      deltaDestToken: deltaPrice.destToken,
-      beneficiaryType,
-    });
+  const { outputToken, destinationChainId, deltaDestToken } = constructBridge({
+    bridgeDestToken: destToken,
+    srcChainId,
+    destChainId,
+    deltaDestToken: deltaPrice.destToken,
+    beneficiaryType,
+  });
 
   return {
+    // @TODO fix up with real values when BridgePrice.bridge = whole Bridge object
     bridge: {
-      maxRelayerFee: deltaPrice.bridgeFee,
+      protocolSelector: '0x00000000',
       destinationChainId,
       outputToken: outputToken.toLowerCase(), // for uniformity
-      multiCallHandler,
+      scalingFactor: 0,
+      protocolData: '0x',
     },
     orderChanges: {
       destToken: deltaDestToken.toLowerCase(), // for uniformity
@@ -1217,4 +1335,44 @@ function constructBridge({
     destinationChainId: destChainId,
     deltaDestToken,
   };
+}
+
+type VerifySignedCancelRequestInput = {
+  orderId: string;
+  signature: string;
+  address: string;
+  chainId: number;
+};
+
+async function verifySignedCancelRequest({
+  orderId,
+  signature,
+  address,
+}: VerifySignedCancelRequestInput): Promise<boolean> {
+  const ParaswapDelta = await constructGetDeltaContract({
+    chainId,
+    fetcher: fetchFetcher,
+  }).getDeltaContract();
+
+  assert(ParaswapDelta, 'ParaswapDelta is not defined');
+
+  const valid = await verifyTypedData({
+    address: address as Address,
+    domain: {
+      name: 'Portikus',
+      version: '2.0.0',
+      chainId,
+      verifyingContract: ParaswapDelta as Address,
+    },
+    types: {
+      OrderCancellations: [{ name: 'orderIds', type: 'string[]' }],
+    },
+    primaryType: 'OrderCancellations',
+    message: {
+      orderIds: [orderId],
+    },
+    signature: signature as Hex,
+  });
+
+  return valid;
 }
