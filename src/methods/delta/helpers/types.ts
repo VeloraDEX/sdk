@@ -52,7 +52,7 @@ export type Bridge = {
   protocolData: string; // Hex string
 };
 
-type DeltaAuctionStatus =
+export type DeltaAuctionStatus =
   | 'NOT_STARTED'
   | 'RUNNING'
   | 'EXECUTING'

@@ -20,7 +20,7 @@ export type GetSpenderFunctions = {
   getContracts: GetContracts;
 };
 
-interface AdaptersContractsResult {
+export interface AdaptersContractsResult {
   AugustusSwapper: string;
   TokenTransferProxy: string;
   AugustusRFQ: string;

@@ -7,17 +7,17 @@ import type {
 } from '../../types';
 import type { DeltaAuction } from './helpers/types';
 
-type OrderFromAPI = Omit<DeltaAuction, 'signature'>;
+export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature'>;
 
 type GetDeltaOrderById = (
   orderId: string,
   requestParams?: RequestParameters
-) => Promise<OrderFromAPI>;
+) => Promise<DeltaOrderFromAPI>;
 
 type GetDeltaOrderByHash = (
   orderHash: string,
   requestParams?: RequestParameters
-) => Promise<OrderFromAPI>;
+) => Promise<DeltaOrderFromAPI>;
 
 type OrdersFilter = {
   /** @description Order.owner to fetch Delta Order for */
@@ -36,7 +36,7 @@ type OrderFiltersQuery = OrdersFilter;
 type GetDeltaOrders = (
   options: OrdersFilter,
   requestParams?: RequestParameters
-) => Promise<OrderFromAPI[]>;
+) => Promise<DeltaOrderFromAPI[]>;
 
 type GetRequiredBalanceParams = {
   userAddress: Address;
@@ -68,7 +68,7 @@ export const constructGetDeltaOrders = ({
   ) => {
     const fetchURL = `${baseUrl}/${orderId}` as const;
 
-    const order = await fetcher<OrderFromAPI>({
+    const order = await fetcher<DeltaOrderFromAPI>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -83,7 +83,7 @@ export const constructGetDeltaOrders = ({
   ) => {
     const fetchURL = `${baseUrl}/hash/${orderHash}` as const;
 
-    const order = await fetcher<OrderFromAPI>({
+    const order = await fetcher<DeltaOrderFromAPI>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -103,7 +103,7 @@ export const constructGetDeltaOrders = ({
 
     const fetchURL = `${baseUrl}${search}` as const;
 
-    const orders = await fetcher<OrderFromAPI[]>({
+    const orders = await fetcher<DeltaOrderFromAPI[]>({
       url: fetchURL,
       method: 'GET',
       requestParams,

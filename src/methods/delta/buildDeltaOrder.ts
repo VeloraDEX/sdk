@@ -16,7 +16,7 @@ import { BeneficiaryType } from '../common/orders/types';
 import { SwapSide } from '../../constants';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 
-type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
+export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
 export type BuildDeltaOrderDataParams = {
   /** @description The address of the order owner */
