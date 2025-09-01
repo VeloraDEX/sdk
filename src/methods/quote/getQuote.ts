@@ -23,8 +23,8 @@ export type QuoteParams<M extends TradeMode = TradeMode> = {
   srcDecimals: number;
   /** @description Destination Token Decimals */
   destDecimals: number;
-  /** @description SELL or BUY */
-  side: SwapSideUnion;
+  /** @description SELL or BUY, default is SELL */
+  side?: SwapSideUnion;
   /** @description User's Wallet Address */
   userAddress?: string;
   /** @description Partner string */
@@ -165,7 +165,7 @@ export const constructGetQuote = ({
     const search = constructSearchString<QuoteQueryOptions>({
       ...options,
       chainId,
-      // side: SwapSide.SELL, // so far SELL side only for Delta
+      side: options.side ?? SwapSide.SELL,
     });
 
     const fetchURL = `${pricesUrl}/${search}` as const;

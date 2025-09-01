@@ -13,7 +13,9 @@ exports[`Delta:methods Build Delta Order 1`] = `
     "deadline": NaN,
     "destAmount": "3147447403157656698880",
     "destToken": "0x6b175474e89094c44da98b954eedeac495271d0f",
-    "expectedDestAmount": "3163263721766488892666",
+    "expectedAmount": "3163263721766488892666",
+    "kind": 0,
+    "metadata": "0x",
     "nonce": "dynamic_number",
     "owner": "0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9",
     "partnerAndFee": "0",
@@ -72,12 +74,16 @@ exports[`Delta:methods Build Delta Order 1`] = `
         "type": "uint256",
       },
       {
-        "name": "expectedDestAmount",
+        "name": "expectedAmount",
         "type": "uint256",
       },
       {
         "name": "deadline",
         "type": "uint256",
+      },
+      {
+        "name": "kind",
+        "type": "uint8",
       },
       {
         "name": "nonce",
@@ -89,6 +95,10 @@ exports[`Delta:methods Build Delta Order 1`] = `
       },
       {
         "name": "permit",
+        "type": "bytes",
+      },
+      {
+        "name": "metadata",
         "type": "bytes",
       },
       {
@@ -412,7 +422,9 @@ exports[`Delta:methods Submit(=build+sign+post) Delta Order 1`] = `
   "deadline": NaN,
   "destAmount": "3147447403157656698880",
   "destToken": "0x6b175474e89094c44da98b954eedeac495271d0f",
-  "expectedDestAmount": "3163263721766488892666",
+  "expectedAmount": "3163263721766488892666",
+  "kind": 0,
+  "metadata": "0x",
   "nonce": "dynamic_number",
   "owner": "0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9",
   "partnerAndFee": "0",

@@ -1,5 +1,9 @@
 import { assert } from 'ts-essentials';
-import type { ConstructFetchInput, RequestParameters } from '../../types';
+import type {
+  ConstructFetchInput,
+  EnumerateLiteral,
+  RequestParameters,
+} from '../../types';
 import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
 import { constructGetDeltaContract } from './getDeltaContract';
 import { BridgePrice, DeltaPrice } from './getDeltaPrice';
@@ -9,10 +13,13 @@ import {
   type BuildDeltaOrderDataInput,
   type SignableDeltaOrderData,
 } from './helpers/buildDeltaOrderData';
-import { Bridge } from './helpers/types';
+import { Bridge, SwapSideToOrderKind } from './helpers/types';
 import { constructBuildCrosschainOrderBridge } from './buildCrosschainOrderBridge';
 import { BeneficiaryType } from '../common/orders/types';
+import { SwapSide } from '../../constants';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
+
+type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
 export type BuildDeltaOrderDataParams = {
   /** @description The address of the order owner */
@@ -46,7 +53,7 @@ export type BuildDeltaOrderDataParams = {
   /** @description price response received from /delta/prices (getDeltaPrice method) */
   deltaPrice: Pick<
     DeltaPrice,
-    'destAmount' | 'partner' | 'partnerFee' | 'destToken'
+    'destAmount' | 'partner' | 'partnerFee' | 'destToken' | 'srcAmount'
   > &
     Partial<Pick<BridgePrice, 'bridgeFee' | 'bridge'>>;
 
@@ -56,6 +63,11 @@ export type BuildDeltaOrderDataParams = {
   partnerAddress?: string;
   /** @description take surplus */
   partnerTakesSurplus?: boolean;
+
+  /** @description The side of the order. Default is SELL */
+  side?: SwapSideUnion;
+  /** @description Metadata for the order, hex string */
+  metadata?: string;
 };
 
 type BuildDeltaOrder = (
@@ -162,6 +174,13 @@ export const constructBuildDeltaOrder = (
       }
     }
 
+    const swapSide = options.side ?? SwapSide.SELL;
+
+    const expectedAmount =
+      swapSide === SwapSide.SELL
+        ? options.deltaPrice.destAmount
+        : options.deltaPrice.srcAmount;
+
     const input: BuildDeltaOrderDataInput = {
       owner: options.owner,
       beneficiary: options.beneficiary,
@@ -171,10 +190,12 @@ export const constructBuildDeltaOrder = (
       destToken: options.deltaPrice.destToken,
       srcAmount: options.srcAmount,
       destAmount: options.destAmount,
-      expectedDestAmount: options.deltaPrice.destAmount,
+      expectedAmount,
       deadline: options.deadline,
       nonce: options.nonce?.toString(10),
       permit: options.permit,
+      kind: SwapSideToOrderKind[swapSide],
+      metadata: options.metadata,
 
       chainId,
       paraswapDeltaAddress: ParaswapDelta,

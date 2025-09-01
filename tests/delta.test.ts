@@ -859,13 +859,15 @@ describe('Delta:methods', () => {
         deadline: 1731328853,
         destAmount: '3147447403157656698880',
         destToken: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
-        expectedDestAmount: '3163263721766488892666',
+        expectedAmount: '3163263721766488892666',
         nonce: '1731325253703',
         owner: '0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9',
         partnerAndFee: '0',
         permit: '0x',
         srcAmount: '1000000000000000000',
         srcToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+        kind: 0,
+        metadata: '0x',
         bridge: {
           maxRelayerFee: '0',
           destinationChainId: 0,
@@ -906,12 +908,16 @@ describe('Delta:methods', () => {
             type: 'uint256',
           },
           {
-            name: 'expectedDestAmount',
+            name: 'expectedAmount',
             type: 'uint256',
           },
           {
             name: 'deadline',
             type: 'uint256',
+          },
+          {
+            name: 'kind',
+            type: 'uint8',
           },
           {
             name: 'nonce',
@@ -923,6 +929,10 @@ describe('Delta:methods', () => {
           },
           {
             name: 'permit',
+            type: 'bytes',
+          },
+          {
+            name: 'metadata',
             type: 'bytes',
           },
           {
@@ -1021,13 +1031,15 @@ describe('Delta:methods', () => {
       deadline: NaN, // dynamic number
       destAmount: '3147447403157656698880',
       destToken: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
-      expectedDestAmount: '3163263721766488892666',
+      expectedAmount: '3163263721766488892666',
       nonce: 'dynamic_number',
       owner: '0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9',
       partnerAndFee: '0',
       permit: '0x',
       srcAmount: '1000000000000000000',
       srcToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+      kind: 0,
+      metadata: '0x',
       bridge: {
         maxRelayerFee: '0',
         destinationChainId: 0,
