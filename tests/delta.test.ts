@@ -27,6 +27,7 @@ import {
   BuildCrosschainOrderBridgeParams,
   BridgePrice,
   constructCancelDeltaOrder,
+  BridgeInfo,
 } from '../src';
 import BigNumber from 'bignumber.js';
 
@@ -50,6 +51,7 @@ import {
   isETHaddress,
 } from '../src/methods/delta/helpers/across';
 import { BeneficiaryType } from '../src/methods/common/orders/types';
+import { BridgePriceInfo } from '../src/methods/delta/helpers/types';
 
 dotenv.config();
 
@@ -613,6 +615,20 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        bridge: {
+          ...deltaPrice.bridge,
+          protocolData: 'dynamic_string',
+          protocolSelector: 'dynamic_string',
+          scalingFactor: NaN, // dynamic number
+        },
+        bridgeInfo: {
+          ...deltaPrice.bridgeInfo,
+          destAmountAfterBridge: 'dynamic_number',
+          destUSDAfterBridge: 'dynamic_number',
+          estimatedTimeMs: NaN, // dynamic number
+          fees: [], // dynamic array
+          protocolName: 'dynamic_string' as BridgePriceInfo['protocolName'],
+        },
         destAmount: 'dynamic_number',
         destAmountBeforeFee: 'dynamic_number',
         srcUSD: 'dynamic_number',
@@ -623,10 +639,6 @@ describe('Delta:methods', () => {
         gasCostUSD: 'dynamic_number',
         gasCostUSDBeforeFee: 'dynamic_number',
         hmac: 'dynamic_string',
-        // destAmountAfterBridge: 'dynamic_number',
-        // destUSDAfterBridge: 'dynamic_number',
-        // bridgeFee: 'dynamic_number',
-        // bridgeFeeUSD: 'dynamic_number',
       };
 
       expect(deltaPrice.destToken).toEqual(DAI_TOKEN_ON_ETHEREUM.toLowerCase());
@@ -650,6 +662,20 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        bridge: {
+          ...deltaPrice.bridge,
+          protocolData: 'dynamic_string',
+          protocolSelector: 'dynamic_string',
+          scalingFactor: NaN, // dynamic number
+        },
+        bridgeInfo: {
+          ...deltaPrice.bridgeInfo,
+          destAmountAfterBridge: 'dynamic_number',
+          destUSDAfterBridge: 'dynamic_number',
+          estimatedTimeMs: NaN, // dynamic number
+          fees: [], // dynamic array
+          protocolName: 'dynamic_string' as BridgePriceInfo['protocolName'],
+        },
         destAmount: 'dynamic_number',
         destAmountBeforeFee: 'dynamic_number',
         srcUSD: 'dynamic_number',
@@ -660,10 +686,6 @@ describe('Delta:methods', () => {
         gasCostUSD: 'dynamic_number',
         gasCostUSDBeforeFee: 'dynamic_number',
         hmac: 'dynamic_string',
-        // destAmountAfterBridge: 'dynamic_number',
-        // destUSDAfterBridge: 'dynamic_number',
-        // bridgeFee: 'dynamic_number',
-        // bridgeFeeUSD: 'dynamic_number',
       };
 
       expect(staticDeltaPrice).toMatchSnapshot();
@@ -686,6 +708,20 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        bridge: {
+          ...deltaPrice.bridge,
+          protocolData: 'dynamic_string',
+          protocolSelector: 'dynamic_string',
+          scalingFactor: NaN, // dynamic number
+        },
+        bridgeInfo: {
+          ...deltaPrice.bridgeInfo,
+          destAmountAfterBridge: 'dynamic_number',
+          destUSDAfterBridge: 'dynamic_number',
+          estimatedTimeMs: NaN, // dynamic number
+          fees: [], // dynamic array
+          protocolName: 'dynamic_string' as BridgePriceInfo['protocolName'],
+        },
         destAmount: 'dynamic_number',
         destAmountBeforeFee: 'dynamic_number',
         srcUSD: 'dynamic_number',
@@ -696,10 +732,6 @@ describe('Delta:methods', () => {
         gasCostUSD: 'dynamic_number',
         gasCostUSDBeforeFee: 'dynamic_number',
         hmac: 'dynamic_string',
-        // destAmountAfterBridge: 'dynamic_number',
-        // destUSDAfterBridge: 'dynamic_number',
-        // bridgeFee: 'dynamic_number',
-        // bridgeFeeUSD: 'dynamic_number',
       };
 
       expect(staticDeltaPrice).toMatchSnapshot();
