@@ -356,7 +356,6 @@ function constructSimpleContractCaller(
       staticCall,
       transactCall: _transactCall,
       signTypedDataCall,
-      signMessageCall,
     } = constructEthersV5ContractCaller(
       providerOptions,
       providerOptions.account
@@ -372,7 +371,7 @@ function constructSimpleContractCaller(
       return contractTx.hash as TxHash;
     };
 
-    return { staticCall, transactCall, signTypedDataCall, signMessageCall };
+    return { staticCall, transactCall, signTypedDataCall };
   }
 
   if ('ethersV6ProviderOrSigner' in providerOptions) {
@@ -380,7 +379,6 @@ function constructSimpleContractCaller(
       staticCall,
       transactCall: _transactCall,
       signTypedDataCall,
-      signMessageCall,
     } = constructEthersV6ContractCaller(
       providerOptions,
       providerOptions.account
@@ -396,7 +394,7 @@ function constructSimpleContractCaller(
       return contractTx.hash as TxHash;
     };
 
-    return { staticCall, transactCall, signTypedDataCall, signMessageCall };
+    return { staticCall, transactCall, signTypedDataCall };
   }
 
   if ('viemClient' in providerOptions) {
@@ -411,7 +409,6 @@ function constructSimpleContractCaller(
     staticCall,
     transactCall: _transactCall,
     signTypedDataCall,
-    signMessageCall,
   } = constructWeb3ContractCaller(
     providerOptions.web3,
     providerOptions.account
@@ -428,5 +425,5 @@ function constructSimpleContractCaller(
     });
   };
 
-  return { staticCall, transactCall, signTypedDataCall, signMessageCall };
+  return { staticCall, transactCall, signTypedDataCall };
 }

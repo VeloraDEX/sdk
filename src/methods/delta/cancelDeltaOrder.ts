@@ -1,49 +1,73 @@
-import { hexToBytes, stringToBytes, keccak256 } from 'viem/utils';
-import type { ConstructProviderFetchInput } from '../../types';
-import { DeltaAuction } from './helpers/types';
+import type {
+  ConstructProviderFetchInput,
+  RequestParameters,
+} from '../../types';
+import {
+  buildCancelDeltaOrderSignableData,
+  CancelDeltaOrderData,
+} from './helpers/buildCancelDeltaOrderData';
+import { constructGetDeltaContract } from '../..';
 
 type SuccessResponse = { success: true };
 
 type CancelDeltaOrderRequestParams = {
-  orderId: string;
+  orderIds: string[];
   signature: string;
 };
 
 export type SignCancelDeltaOrderRequest = (
-  params: Pick<DeltaAuction, 'id'>
+  params: CancelDeltaOrderData,
+  requestParams?: RequestParameters
 ) => Promise<string>;
 
 export type PostCancelDeltaOrderRequest = (
-  params: CancelDeltaOrderRequestParams
+  params: CancelDeltaOrderRequestParams,
+  requestParams?: RequestParameters
 ) => Promise<SuccessResponse>;
 
 export type CancelDeltaOrder = (
-  params: Pick<DeltaAuction, 'id'>
+  params: CancelDeltaOrderData,
+  requestParams?: RequestParameters
 ) => Promise<SuccessResponse>;
 
 export type CancelDeltaOrderFunctions = {
-  signCancelDeltaOrderRequest: SignCancelDeltaOrderRequest;
-  postCancelDeltaOrderRequest: PostCancelDeltaOrderRequest;
-  cancelDeltaOrder: CancelDeltaOrder;
+  signCancelLimitDeltaOrderRequest: SignCancelDeltaOrderRequest;
+  postCancelLimitDeltaOrderRequest: PostCancelDeltaOrderRequest;
+  /** @description Cancel a Limit Delta order */
+  cancelLimitDeltaOrders: CancelDeltaOrder;
 };
 
 export const constructCancelDeltaOrder = (
   options: Pick<
-    ConstructProviderFetchInput<any, 'signMessageCall'>,
-    'contractCaller' | 'fetcher' | 'apiURL'
+    ConstructProviderFetchInput<any, 'signTypedDataCall'>,
+    'contractCaller' | 'fetcher' | 'apiURL' | 'chainId'
   >
 ): CancelDeltaOrderFunctions => {
-  const signCancelDeltaOrderRequest: SignCancelDeltaOrderRequest = async ({
-    id,
-  }) => {
-    const message = constructCancelDeltaOrderMessage(id);
-    const signature = await options.contractCaller.signMessageCall(message);
+  // cached internally
+  const { getDeltaContract } = constructGetDeltaContract(options);
+
+  const signCancelLimitDeltaOrderRequest: SignCancelDeltaOrderRequest = async (
+    params,
+    requestParams
+  ) => {
+    const ParaswapDelta = await getDeltaContract(requestParams);
+    if (!ParaswapDelta) {
+      throw new Error(`Delta is not available on chain ${options.chainId}`);
+    }
+
+    const typedData = buildCancelDeltaOrderSignableData({
+      orderInput: params,
+      paraswapDeltaAddress: ParaswapDelta,
+      chainId: options.chainId,
+    });
+    const signature = await options.contractCaller.signTypedDataCall(typedData);
 
     return signature;
   };
 
-  const postCancelDeltaOrderRequest: PostCancelDeltaOrderRequest = async (
-    params
+  const postCancelLimitDeltaOrderRequest: PostCancelDeltaOrderRequest = async (
+    params,
+    requestParams
   ) => {
     const cancelUrl = `${options.apiURL}/delta/orders/cancel` as const;
 
@@ -51,30 +75,35 @@ export const constructCancelDeltaOrder = (
       url: cancelUrl,
       method: 'POST',
       data: params,
+      requestParams,
     });
 
     return res;
   };
 
-  const cancelDeltaOrder: CancelDeltaOrder = async ({ id }) => {
-    const signature = await signCancelDeltaOrderRequest({ id });
-    const res = await postCancelDeltaOrderRequest({ orderId: id, signature });
+  const cancelLimitDeltaOrders: CancelDeltaOrder = async (
+    { orderIds },
+    requestParams
+  ) => {
+    const signature = await signCancelLimitDeltaOrderRequest(
+      { orderIds },
+      requestParams
+    );
+
+    const res = await postCancelLimitDeltaOrderRequest(
+      {
+        orderIds,
+        signature,
+      },
+      requestParams
+    );
 
     return res;
   };
 
   return {
-    signCancelDeltaOrderRequest,
-    postCancelDeltaOrderRequest,
-    cancelDeltaOrder,
+    signCancelLimitDeltaOrderRequest,
+    postCancelLimitDeltaOrderRequest,
+    cancelLimitDeltaOrders,
   };
 };
-
-function constructCancelDeltaOrderMessage(orderId: string): Uint8Array {
-  const payload = `CancelOrder:${orderId}`;
-
-  const digestHex = keccak256(stringToBytes(payload)); // 0x… (32 bytes)
-  const messageBytes = hexToBytes(digestHex);
-
-  return messageBytes;
-}

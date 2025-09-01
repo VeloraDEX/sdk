@@ -40,10 +40,7 @@ import {
   createWalletClient,
   custom,
   Hex,
-  hexToBytes,
-  keccak256,
-  stringToBytes,
-  verifyMessage,
+  verifyTypedData,
 } from 'viem';
 import { hardhat } from 'viem/chains';
 import { ZERO_ADDRESS } from '../src/methods/common/orders/buildOrderData';
@@ -1002,14 +999,15 @@ describe('Delta:methods', () => {
         constructCancelDeltaOrder
       );
 
-      const deltaCancelSignature = await sdk.signCancelDeltaOrderRequest({
-        id: sampleOrderId,
+      const deltaCancelSignature = await sdk.signCancelLimitDeltaOrderRequest({
+        orderIds: [sampleOrderId],
       });
 
       const valid = await verifySignedCancelRequest({
         orderId: sampleOrderId,
         signature: deltaCancelSignature,
         address: senderAddress,
+        chainId: sdk.chainId,
       });
 
       expect(valid).toBe(true);
@@ -1312,6 +1310,7 @@ type VerifySignedCancelRequestInput = {
   orderId: string;
   signature: string;
   address: string;
+  chainId: number;
 };
 
 async function verifySignedCancelRequest({
@@ -1319,14 +1318,28 @@ async function verifySignedCancelRequest({
   signature,
   address,
 }: VerifySignedCancelRequestInput): Promise<boolean> {
-  const payload = `CancelOrder:${orderId}`;
+  const ParaswapDelta = await constructGetDeltaContract({
+    chainId,
+    fetcher: fetchFetcher,
+  }).getDeltaContract();
 
-  const digestHex = keccak256(stringToBytes(payload)); // 0x… (32 bytes)
-  const messageBytes = hexToBytes(digestHex); // Uint8Array(32)
+  assert(ParaswapDelta, 'ParaswapDelta is not defined');
 
-  const valid = await verifyMessage({
+  const valid = await verifyTypedData({
     address: address as Address,
-    message: { raw: messageBytes },
+    domain: {
+      name: 'Portikus',
+      version: '2.0.0',
+      chainId,
+      verifyingContract: ParaswapDelta as Address,
+    },
+    types: {
+      OrderCancellations: [{ name: 'orderIds', type: 'string[]' }],
+    },
+    primaryType: 'OrderCancellations',
+    message: {
+      orderIds: [orderId],
+    },
     signature: signature as Hex,
   });
 

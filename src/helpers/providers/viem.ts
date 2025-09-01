@@ -2,7 +2,6 @@ import type {
   Address,
   ContractCallerFunctions,
   ContractCallStaticInput,
-  SignMessageContractCallerFn,
   SignTypedDataContractCallerFn,
   StaticContractCallerFn,
   TransactionContractCallerFn,
@@ -148,21 +147,7 @@ export const constructContractCaller = (
     return signature;
   };
 
-  const signMessageCall: SignMessageContractCallerFn = async (message) => {
-    assert(account, 'account must be specified to sign data');
-    assert(
-      viemClient.signMessage,
-      'Viem client must have signMessage Wallet Action'
-    );
-
-    const signature = await viemClient.signMessage({
-      account: viemClient.account || (account as Hex),
-      message: typeof message === 'string' ? message : { raw: message },
-    });
-    return signature;
-  };
-
-  return { staticCall, transactCall, signTypedDataCall, signMessageCall };
+  return { staticCall, transactCall, signTypedDataCall };
 };
 
 type ViemTxParams = {
