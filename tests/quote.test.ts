@@ -62,6 +62,13 @@ describe('Quote:methods', () => {
 
     expect(staticDeltaPrice).toMatchInlineSnapshot(`
       {
+        "bridge": {
+          "destinationChainId": 0,
+          "outputToken": "0x0000000000000000000000000000000000000000",
+          "protocolData": "0x",
+          "protocolSelector": "0x00000000",
+          "scalingFactor": 0,
+        },
         "destAmount": "dynamic_number",
         "destAmountBeforeFee": "dynamic_number",
         "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -138,7 +145,7 @@ describe('Quote:methods', () => {
   });
 
   test('Fail to Get Quote for delta for BUY', async () => {
-    const quotePromise = quoteSDK.getQuote({
+    const quote = await quoteSDK.getQuote({
       srcToken: USDC,
       destToken: ETH,
       amount,
@@ -148,19 +155,52 @@ describe('Quote:methods', () => {
       side: 'BUY',
     });
 
-    await expect(quotePromise).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"UnsupportedSide"`
-    );
+    expect('delta' in quote).toBeTruthy();
+    assert('delta' in quote, 'Delta price not found in Quote');
 
-    const error = await quotePromise.catch((e) => e);
+    const staticDeltaPrice: typeof quote.delta = {
+      ...quote.delta,
+      hmac: 'dynamic_string',
+      destAmount: 'dynamic_number',
+      destAmountBeforeFee: 'dynamic_number',
+      srcUSD: 'dynamic_number',
+      destUSD: 'dynamic_number',
+      destUSDBeforeFee: 'dynamic_number',
+      gasCost: 'dynamic_number',
+      gasCostBeforeFee: 'dynamic_number',
+      gasCostUSD: 'dynamic_number',
+      gasCostUSDBeforeFee: 'dynamic_number',
+      srcAmount: 'dynamic_number',
+      srcAmountBeforeFee: 'dynamic_number',
+      srcUSDBeforeFee: 'dynamic_number',
+    };
 
-    assert(isFetcherError(error), 'Error should be a FetchError');
-    const { details, errorType } = error.response?.data;
-
-    expect({ details, errorType }).toMatchInlineSnapshot(`
+    expect(staticDeltaPrice).toMatchInlineSnapshot(`
       {
-        "details": "BUY is not supported",
-        "errorType": "UnsupportedSide",
+        "bridge": {
+          "destinationChainId": 0,
+          "outputToken": "0x0000000000000000000000000000000000000000",
+          "protocolData": "0x",
+          "protocolSelector": "0x00000000",
+          "scalingFactor": 0,
+        },
+        "destAmount": "dynamic_number",
+        "destAmountBeforeFee": "dynamic_number",
+        "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "destUSD": "dynamic_number",
+        "destUSDBeforeFee": "dynamic_number",
+        "gasCost": "dynamic_number",
+        "gasCostBeforeFee": "dynamic_number",
+        "gasCostUSD": "dynamic_number",
+        "gasCostUSDBeforeFee": "dynamic_number",
+        "hmac": "dynamic_string",
+        "partner": "anon",
+        "partnerFee": 0,
+        "srcAmount": "dynamic_number",
+        "srcAmountBeforeFee": "dynamic_number",
+        "srcToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+        "srcUSD": "dynamic_number",
+        "srcUSDBeforeFee": "dynamic_number",
       }
     `);
   });
@@ -234,6 +274,13 @@ describe('Quote:methods', () => {
 
     expect(staticDeltaPrice).toMatchInlineSnapshot(`
       {
+        "bridge": {
+          "destinationChainId": 0,
+          "outputToken": "0x0000000000000000000000000000000000000000",
+          "protocolData": "0x",
+          "protocolSelector": "0x00000000",
+          "scalingFactor": 0,
+        },
         "destAmount": "dynamic_number",
         "destAmountBeforeFee": "dynamic_number",
         "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -285,6 +332,7 @@ describe('Quote:methods', () => {
           destAmount: 'dynamic_number',
           data: 'largerly dynamic object',
           poolAddresses: 'dynamic_array',
+          srcAmount: 'dynamic_number',
         })),
       })),
     }));
