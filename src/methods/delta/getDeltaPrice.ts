@@ -24,6 +24,8 @@ export type DeltaPriceParams = {
   destDecimals: number;
   /** @description User's Wallet Address */
   userAddress?: string;
+  /** @description Beneficiary Address */
+  beneficiary?: string; // beneficiary==owner if no transferTo
   /** @description Partner string. */
   partner?: string;
   /** @description Destination Chain ID for Crosschain Orders */
