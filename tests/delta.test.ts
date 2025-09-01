@@ -27,7 +27,6 @@ import {
   BuildCrosschainOrderBridgeParams,
   BridgePrice,
   constructCancelDeltaOrder,
-  BridgeInfo,
 } from '../src';
 import BigNumber from 'bignumber.js';
 
