@@ -214,6 +214,7 @@ describe('Delta:methods', () => {
         gasCostUSD: 'dynamic_number',
         gasCostUSDBeforeFee: 'dynamic_number',
         hmac: 'dynamic_string',
+        availableBridges: [], // dynamic array of bridge variants
       };
 
       expect(deltaPrice.destToken).toEqual(DAI_TOKEN_ON_ETHEREUM.toLowerCase());
@@ -261,6 +262,7 @@ describe('Delta:methods', () => {
         gasCostUSD: 'dynamic_number',
         gasCostUSDBeforeFee: 'dynamic_number',
         hmac: 'dynamic_string',
+        availableBridges: [], // dynamic array of bridge variants
       };
 
       expect(staticDeltaPrice).toMatchSnapshot();
@@ -285,6 +287,7 @@ describe('Delta:methods', () => {
         ...deltaPrice,
         bridge: {
           ...deltaPrice.bridge,
+          outputToken: 'dynamic_hash', // WETH or ETH depending on bridge used
           protocolData: 'dynamic_string',
           protocolSelector: 'dynamic_string',
           scalingFactor: NaN, // dynamic number
@@ -307,14 +310,15 @@ describe('Delta:methods', () => {
         gasCostUSD: 'dynamic_number',
         gasCostUSDBeforeFee: 'dynamic_number',
         hmac: 'dynamic_string',
+        availableBridges: [], // dynamic array of bridge variants
       };
 
       expect(staticDeltaPrice).toMatchSnapshot();
       expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
-      // bridge.outputToken = WETH for destToken=ETH|WETH on destChain;
+      // bridge.outputToken = WETH|ETH for destToken=ETH|WETH on destChain depending on bridge used;
       // wrap/unwrap logic is determined by bridge.multiCallHandler presence
-      expect(deltaPrice.bridge.outputToken).toEqual(
-        WETH_ON_OPTIMISM.toLowerCase()
+      expect([WETH_ON_OPTIMISM.toLowerCase(), ETH.toLowerCase()]).toContain(
+        deltaPrice.bridge.outputToken
       );
     });
   });

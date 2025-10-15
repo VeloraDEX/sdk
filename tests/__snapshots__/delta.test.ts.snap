@@ -342,9 +342,10 @@ exports[`Delta:methods Get Delta Price 1`] = `
 
 exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/destToken=ETH 1`] = `
 {
+  "availableBridges": [],
   "bridge": {
     "destinationChainId": 10,
-    "outputToken": "0x4200000000000000000000000000000000000006",
+    "outputToken": "dynamic_hash",
     "protocolData": "dynamic_string",
     "protocolSelector": "dynamic_string",
     "scalingFactor": NaN,
@@ -376,6 +377,7 @@ exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/des
 
 exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/destToken=WETH 1`] = `
 {
+  "availableBridges": [],
   "bridge": {
     "destinationChainId": 10,
     "outputToken": "0x4200000000000000000000000000000000000006",
@@ -410,6 +412,7 @@ exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/des
 
 exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/destToken=random 1`] = `
 {
+  "availableBridges": [],
   "bridge": {
     "destinationChainId": 10,
     "outputToken": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
