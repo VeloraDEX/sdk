@@ -100,7 +100,7 @@ describe('Quote:methods', () => {
     });
 
     await expect(quotePromise).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"PricingError"`
+      `"GasCostExceedsTradeAmount"`
     );
 
     const error = await quotePromise.catch((e) => e);
@@ -110,8 +110,8 @@ describe('Quote:methods', () => {
 
     expect({ details, errorType }).toMatchInlineSnapshot(`
       {
-        "details": "Error getting price data",
-        "errorType": "PricingError",
+        "details": "Gas cost exceeds trade amount",
+        "errorType": "GasCostExceedsTradeAmount",
       }
     `);
   });
@@ -144,7 +144,7 @@ describe('Quote:methods', () => {
     `);
   });
 
-  test('Fail to Get Quote for delta for BUY', async () => {
+  test('Get Quote for delta for BUY', async () => {
     const quote = await quoteSDK.getQuote({
       srcToken: USDC,
       destToken: ETH,
@@ -304,7 +304,7 @@ describe('Quote:methods', () => {
     const quote = await quoteSDK.getQuote({
       srcToken: USDC,
       destToken: ETH,
-      amount: (1e6).toString(),
+      amount: (1e5).toString(),
       srcDecimals: 6,
       destDecimals: 18,
       mode: 'all',
