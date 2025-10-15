@@ -309,7 +309,7 @@ describe('Quote:methods', () => {
     const quote = await quoteSDK.getQuote({
       srcToken: USDC,
       destToken: ETH,
-      amount: (1e5).toString(),
+      amount: (5e5).toString(),
       srcDecimals: 6,
       destDecimals: 18,
       mode: 'all',
