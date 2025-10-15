@@ -4,7 +4,7 @@ import type {
   RequestParameters,
 } from '../../types';
 import { constructGetDeltaContract } from './getDeltaContract';
-import { BridgePrice } from './getDeltaPrice';
+import type { BridgePrice } from './getDeltaPrice';
 import { constructGetPartnerFee } from './getPartnerFee';
 import {
   buildDeltaSignableOrderData,
@@ -13,6 +13,8 @@ import {
 } from './helpers/buildDeltaOrderData';
 import { SwapSideToOrderKind } from './helpers/types';
 import { SwapSide } from '../../constants';
+import type { MarkOptional } from 'ts-essentials';
+import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 
 export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
@@ -43,14 +45,17 @@ export type BuildDeltaOrderDataParams = {
   destChainId?: number;
 
   /** @description price response received from /delta/prices (getDeltaPrice method) */
-  deltaPrice: Pick<
-    BridgePrice,
-    | 'destAmount'
-    | 'partner'
-    | 'partnerFee'
-    | 'destToken'
-    | 'srcAmount'
-    | 'bridge'
+  deltaPrice: MarkOptional<
+    Pick<
+      BridgePrice,
+      | 'destAmount'
+      | 'partner'
+      | 'partnerFee'
+      | 'destToken'
+      | 'srcAmount'
+      | 'bridge'
+    >,
+    'partner' | 'partnerFee'
   >;
 
   /** @description partner fee in basis points (bps), 50bps=0.5% */
@@ -97,7 +102,10 @@ export const constructBuildDeltaOrder = (
     // externally supplied partner fee data takes precedence
     let partnerAddress = options.partnerAddress;
     let partnerFeeBps =
-      options.partnerFeeBps ?? options.deltaPrice.partnerFee * 100;
+      options.partnerFeeBps ??
+      (options.deltaPrice.partnerFee
+        ? options.deltaPrice.partnerFee * 100
+        : undefined);
     let partnerTakesSurplus = options.partnerTakesSurplus;
 
     // if fee given, takeSurplus is ignored
@@ -106,17 +114,26 @@ export const constructBuildDeltaOrder = (
 
     if (partnerAddress === undefined || feeOrTakeSurplusSupplied) {
       const partner = options.partner || options.deltaPrice.partner;
-      const partnerFeeResponse = await getPartnerFee(
-        { partner },
-        requestParams
-      );
+      if (!partner) {
+        // if no partner given in options or deltaPrice, default partnerAddress to zero,
+        // unless supplied explicitly
+        partnerAddress = partnerAddress ?? ZERO_ADDRESS;
+      } else {
+        const partnerFeeResponse = await getPartnerFee(
+          { partner },
+          requestParams
+        );
 
-      partnerAddress = partnerAddress ?? partnerFeeResponse.partnerAddress;
-      // deltaPrice.partnerFee and partnerFeeResponse.partnerFee should be the same, but give priority to externally provided
-      partnerFeeBps = partnerFeeBps ?? partnerFeeResponse.partnerFee;
-      partnerTakesSurplus =
-        partnerTakesSurplus ?? partnerFeeResponse.takeSurplus;
+        partnerAddress = partnerAddress ?? partnerFeeResponse.partnerAddress;
+        // deltaPrice.partnerFee and partnerFeeResponse.partnerFee should be the same, but give priority to externally provided
+        partnerFeeBps = partnerFeeBps ?? partnerFeeResponse.partnerFee;
+        partnerTakesSurplus =
+          partnerTakesSurplus ?? partnerFeeResponse.takeSurplus;
+      }
     }
+
+    partnerFeeBps = partnerFeeBps ?? 0;
+    partnerTakesSurplus = partnerTakesSurplus ?? false;
 
     const swapSide = options.side ?? SwapSide.SELL;
 
