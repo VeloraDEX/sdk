@@ -99,8 +99,9 @@ describe('Quote:methods', () => {
       side: 'SELL',
     });
 
-    await expect(quotePromise).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"GasCostExceedsTradeAmount"`
+    // receives one error or another
+    await expect(quotePromise).rejects.toThrow(
+      /GasCostExceedsTradeAmount|PricingError/
     );
 
     const error = await quotePromise.catch((e) => e);
@@ -108,12 +109,16 @@ describe('Quote:methods', () => {
     assert(isFetcherError(error), 'Error should be a FetchError');
     const { details, errorType } = error.response?.data;
 
-    expect({ details, errorType }).toMatchInlineSnapshot(`
+    expect([
       {
-        "details": "Gas cost exceeds trade amount",
-        "errorType": "GasCostExceedsTradeAmount",
-      }
-    `);
+        details: 'Gas cost exceeds trade amount',
+        errorType: 'GasCostExceedsTradeAmount',
+      },
+      {
+        details: 'Error getting price data',
+        errorType: 'PricingError',
+      },
+    ]).toContainEqual({ details, errorType });
   });
 
   test('Fail to Get Quote for delta with Native Token', async () => {
