@@ -1,3 +1,4 @@
+import { OrderTransaction } from '../../common/orders/types';
 import type { OrderData } from './buildOrderData';
 
 export type LimitOrderType = 'LIMIT' | 'P2P';
@@ -36,10 +37,7 @@ export type LimitOrderState =
 
 export type LimitOrderEvent = '';
 
-export type LimitOrderTransaction = {
-  hash: string;
-  event_type: 'OrderFilled' | 'OrderCancelled';
-};
+export type LimitOrderTransaction = OrderTransaction;
 
 export type LimitOrderFromApi = {
   chainId: number;
