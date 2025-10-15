@@ -12,7 +12,6 @@ import {
   type SignableDeltaOrderData,
 } from './helpers/buildDeltaOrderData';
 import { SwapSideToOrderKind } from './helpers/types';
-import { BeneficiaryType } from '../common/orders/types';
 import { SwapSide } from '../../constants';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 
@@ -42,8 +41,6 @@ export type BuildDeltaOrderDataParams = {
 
   /** @description Destination Chain ID for Crosschain Orders */
   destChainId?: number;
-  /** @description Whether the beneficiary is a contract. Needed to automatically fill in crosschain Bridge */
-  beneficiaryType?: BeneficiaryType;
 
   /** @description price response received from /delta/prices (getDeltaPrice method) */
   deltaPrice: Pick<
