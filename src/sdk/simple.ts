@@ -133,17 +133,9 @@ import {
   GetBridgeInfoFunctions,
 } from '../methods/delta/getBridgeInfo';
 import {
-  constructGetMulticallHandlers,
-  GetMulticallHandlersFunctions,
-} from '../methods/delta/getMulticallHandlers';
-import {
   constructIsTokenSupportedInDelta,
   IsTokenSupportedInDeltaFunctions,
 } from '../methods/delta/isTokenSupportedInDelta';
-import {
-  BuildCrosschainOrderBridgeFunctions,
-  constructBuildCrosschainOrderBridge,
-} from '../methods/delta/buildCrosschainOrderBridge';
 
 export type SwapFetchMethods = GetBalancesFunctions &
   GetTokensFunctions &
@@ -166,12 +158,10 @@ export type NFTOrdersFetchMethods = GetNFTOrdersContractFunctions &
   BuildNFTOrdersTxFunctions;
 
 export type DeltaFetchMethods = BuildDeltaOrderFunctions &
-  BuildCrosschainOrderBridgeFunctions &
   GetDeltaOrdersFunctions &
   GetDeltaPriceFunctions &
   GetDeltaContractFunctions &
   GetPartnerFeeFunctions &
-  GetMulticallHandlersFunctions &
   GetBridgeInfoFunctions &
   IsTokenSupportedInDeltaFunctions &
   PostDeltaOrderFunctions;
@@ -288,13 +278,11 @@ export function constructSimpleSDK(
     const delta = constructPartialSDK(
       config,
       constructBuildDeltaOrder,
-      constructBuildCrosschainOrderBridge,
       constructPostDeltaOrder,
       constructGetDeltaOrders,
       constructGetDeltaPrice,
       constructGetDeltaContract,
       constructGetPartnerFee,
-      constructGetMulticallHandlers,
       constructGetBridgeInfo,
       constructIsTokenSupportedInDelta
     );
