@@ -46,8 +46,8 @@ type OrdersFilter = {
    * - **INACTIVE** —  All orders with EXECUTED, FAILED, EXPIRED, CANCELLED or INVALIDATED statuses.
    */
   status?: DeltaOrderFilterByStatus[];
-  /** @description Filter by type. MARKET, LIMIT, or ALL. Default is ALL */
-  type?: 'MARKET' | 'LIMIT' | 'ALL';
+  /** @description Filter by type. MARKET, LIMIT. Orders with both types are returned if not specified */
+  type?: 'MARKET' | 'LIMIT';
 };
 type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
   chainId?: string;
