@@ -14,9 +14,17 @@
 
 > **destAmountAfterBridge**: `string`
 
+### destAmountAfterBridgeBeforeFee
+
+> **destAmountAfterBridgeBeforeFee**: `string`
+
 ### destUSDAfterBridge
 
 > **destUSDAfterBridge**: `string`
+
+### destUSDAfterBridgeBeforeFee
+
+> **destUSDAfterBridgeBeforeFee**: `string`
 
 ### estimatedTimeMs
 
@@ -32,4 +40,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:149](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L149)
+[src/methods/delta/helpers/types.ts:160](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/delta/helpers/types.ts#L160)

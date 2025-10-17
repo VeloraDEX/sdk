@@ -6,7 +6,7 @@
 
 # Type Alias: FullValidationSchema
 
-> **FullValidationSchema**: `ReadonlyArray`\<[`AbiParameter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)\>
+> **FullValidationSchema**: `ReadonlyArray`\<[`AbiParameter`](../namespaces/Users_andriishymkiv_work_velora_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)\>
 
 ## Defined in
 

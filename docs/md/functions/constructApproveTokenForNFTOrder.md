@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/approveForOrder.ts:50](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/approveForOrder.ts#L50)
+[src/methods/nftOrders/approveForOrder.ts:50](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/nftOrders/approveForOrder.ts#L50)

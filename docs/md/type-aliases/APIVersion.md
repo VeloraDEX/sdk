@@ -14,4 +14,4 @@ Passed to version API endpoints as ?version: to /prices and /adapters
 
 ## Defined in
 
-[src/types.ts:34](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L34)
+[src/types.ts:34](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/types.ts#L34)

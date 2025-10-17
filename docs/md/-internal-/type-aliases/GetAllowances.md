@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[src/methods/swap/balance.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L30)
+[src/methods/swap/balance.ts:30](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/swap/balance.ts#L30)

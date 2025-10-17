@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[src/methods/swap/balance.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L27)
+[src/methods/swap/balance.ts:27](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/swap/balance.ts#L27)
 
 ***
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/methods/swap/balance.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L26)
+[src/methods/swap/balance.ts:26](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/swap/balance.ts#L26)

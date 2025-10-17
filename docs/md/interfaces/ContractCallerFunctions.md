@@ -18,7 +18,7 @@
 
 #### Defined in
 
-[src/types.ts:120](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L120)
+[src/types.ts:120](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/types.ts#L120)
 
 ***
 
@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/types.ts:118](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L118)
+[src/types.ts:118](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/types.ts#L118)
 
 ***
 
@@ -38,4 +38,4 @@
 
 #### Defined in
 
-[src/types.ts:119](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L119)
+[src/types.ts:119](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/types.ts#L119)

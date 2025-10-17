@@ -26,4 +26,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/approveForOrder.ts:12](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/approveForOrder.ts#L12)
+[src/methods/nftOrders/approveForOrder.ts:12](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/nftOrders/approveForOrder.ts#L12)

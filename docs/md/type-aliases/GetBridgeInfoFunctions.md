@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/delta/getBridgeInfo.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L15)
+[src/methods/delta/getBridgeInfo.ts:15](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/delta/getBridgeInfo.ts#L15)

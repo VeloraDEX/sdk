@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/getPartnerFee.ts:24](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getPartnerFee.ts#L24)
+[src/methods/delta/getPartnerFee.ts:24](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/delta/getPartnerFee.ts#L24)

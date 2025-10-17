@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/index.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/index.ts#L31)
+[src/methods/nftOrders/index.ts:31](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/nftOrders/index.ts#L31)

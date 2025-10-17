@@ -16,7 +16,7 @@
 
 ### v
 
-> **v**: [`EncodingTypes`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/EncodingTypes.md)
+> **v**: [`EncodingTypes`](../namespaces/Users_andriishymkiv_work_velora_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/EncodingTypes.md)
 
 ## Defined in
 

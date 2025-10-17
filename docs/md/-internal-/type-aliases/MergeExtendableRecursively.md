@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/sdk/partial.ts:71](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L71)
+[src/sdk/partial.ts:71](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/sdk/partial.ts#L71)
