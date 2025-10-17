@@ -5,9 +5,17 @@ import type {
   ConstructFetchInput,
   RequestParameters,
 } from '../../types';
-import type { DeltaAuction } from './helpers/types';
+import type { DeltaAuction, DeltaAuctionStatus } from './helpers/types';
 
 export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature'>;
+
+type DeltaOrderFilterByStatus =
+  | DeltaAuctionStatus
+  | 'INSUFFICIENT_BALANCE'
+  | 'INSUFFICIENT_ALLOWANCE'
+  | 'INVALIDATED'
+  | 'ACTIVE'
+  | 'INACTIVE';
 
 type GetDeltaOrderById = (
   orderId: string,
@@ -27,11 +35,24 @@ type OrdersFilter = {
   /** @description Pagination option, limit. Default 100 */
   limit?: number;
   /** @description Filter by chainId, without this filter, orders from all chains are returned */
-  chainId?: number; // @TODO currently not working
+  chainId?: number[];
+  /**
+   * @description
+   * Filter by any known DeltaAuctionStatus and some custom statuses:
+   * - **INSUFFICIENT_BALANCE** —  returned as SUSPENDED from API
+   * - **INSUFFICIENT_ALLOWANCE** —  returned as SUSPENDED from API
+   * - **INVALIDATED** —  returned as FAILED from API
+   * - **ACTIVE** —  All orders with NOT_STARTED, RUNNING, EXECUTING or SUSPENDED statuses.
+   * - **INACTIVE** —  All orders with EXECUTED, FAILED, EXPIRED, CANCELLED or INVALIDATED statuses.
+   */
+  status?: DeltaOrderFilterByStatus[];
   /** @description Filter by type. MARKET, LIMIT, or ALL. Default is ALL */
   type?: 'MARKET' | 'LIMIT' | 'ALL';
 };
-type OrderFiltersQuery = OrdersFilter;
+type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
+  chainId?: string;
+  status?: string;
+};
 
 type GetDeltaOrders = (
   options: OrdersFilter,
@@ -93,12 +114,18 @@ export const constructGetDeltaOrders = ({
   };
 
   const getDeltaOrders: GetDeltaOrders = async (options, requestParams) => {
+    const chainIdString = options.chainId
+      ? options.chainId.join(',')
+      : undefined;
+    const statusString = options.status ? options.status.join(',') : undefined;
+
     const search = constructSearchString<OrderFiltersQuery>({
       userAddress: options.userAddress,
       page: options.page,
       limit: options.limit,
-      chainId: options.chainId,
       type: options.type,
+      chainId: chainIdString,
+      status: statusString,
     });
 
     const fetchURL = `${baseUrl}${search}` as const;
