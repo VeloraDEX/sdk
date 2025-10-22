@@ -64,6 +64,13 @@ export type DeltaPrice = {
   destAmount: string;
   /** @description Available for SELL side */
   destAmountBeforeFee?: string;
+  /** @description amount of the final outcome token */
+  receivedDestAmount: string;
+  receivedDestUSD: string;
+  /** @description Available for SELL side */
+  receivedDestAmountBeforeFee?: string;
+  /** @description Available for SELL side */
+  receivedDestUSDBeforeFee?: string;
   gasCost: string;
   gasCostBeforeFee: string;
   gasCostUSD: string;
