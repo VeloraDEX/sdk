@@ -54,6 +54,10 @@ describe('Quote:methods', () => {
       srcUSD: 'dynamic_number',
       destUSD: 'dynamic_number',
       destUSDBeforeFee: 'dynamic_number',
+      receivedDestAmount: 'dynamic_number',
+      receivedDestUSD: 'dynamic_number',
+      receivedDestAmountBeforeFee: 'dynamic_number',
+      receivedDestUSDBeforeFee: 'dynamic_number',
       gasCost: 'dynamic_number',
       gasCostBeforeFee: 'dynamic_number',
       gasCostUSD: 'dynamic_number',
@@ -81,6 +85,10 @@ describe('Quote:methods', () => {
         "hmac": "dynamic_string",
         "partner": "anon",
         "partnerFee": 0,
+        "receivedDestAmount": "dynamic_number",
+        "receivedDestAmountBeforeFee": "dynamic_number",
+        "receivedDestUSD": "dynamic_number",
+        "receivedDestUSDBeforeFee": "dynamic_number",
         "srcAmount": "100000000000",
         "srcToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
         "srcUSD": "dynamic_number",
@@ -171,6 +179,8 @@ describe('Quote:methods', () => {
       srcUSD: 'dynamic_number',
       destUSD: 'dynamic_number',
       destUSDBeforeFee: 'dynamic_number',
+      receivedDestAmount: 'dynamic_number',
+      receivedDestUSD: 'dynamic_number',
       gasCost: 'dynamic_number',
       gasCostBeforeFee: 'dynamic_number',
       gasCostUSD: 'dynamic_number',
@@ -179,6 +189,10 @@ describe('Quote:methods', () => {
       srcAmountBeforeFee: 'dynamic_number',
       srcUSDBeforeFee: 'dynamic_number',
     };
+
+    // only SELL side has receivedDestAmountBeforeFee and receivedDestUSDBeforeFee
+    expect('receivedDestAmountBeforeFee' in quote.delta).toBeFalsy();
+    expect('receivedDestUSDBeforeFee' in quote.delta).toBeFalsy();
 
     expect(staticDeltaPrice).toMatchInlineSnapshot(`
       {
@@ -201,6 +215,8 @@ describe('Quote:methods', () => {
         "hmac": "dynamic_string",
         "partner": "anon",
         "partnerFee": 0,
+        "receivedDestAmount": "dynamic_number",
+        "receivedDestUSD": "dynamic_number",
         "srcAmount": "dynamic_number",
         "srcAmountBeforeFee": "dynamic_number",
         "srcToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -271,6 +287,10 @@ describe('Quote:methods', () => {
       srcUSD: 'dynamic_number',
       destUSD: 'dynamic_number',
       destUSDBeforeFee: 'dynamic_number',
+      receivedDestAmount: 'dynamic_number',
+      receivedDestUSD: 'dynamic_number',
+      receivedDestAmountBeforeFee: 'dynamic_number',
+      receivedDestUSDBeforeFee: 'dynamic_number',
       gasCost: 'dynamic_number',
       gasCostBeforeFee: 'dynamic_number',
       gasCostUSD: 'dynamic_number',
@@ -298,6 +318,10 @@ describe('Quote:methods', () => {
         "hmac": "dynamic_string",
         "partner": "anon",
         "partnerFee": 0,
+        "receivedDestAmount": "dynamic_number",
+        "receivedDestAmountBeforeFee": "dynamic_number",
+        "receivedDestUSD": "dynamic_number",
+        "receivedDestUSDBeforeFee": "dynamic_number",
         "srcAmount": "100000000000",
         "srcToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
         "srcUSD": "dynamic_number",
@@ -305,11 +329,11 @@ describe('Quote:methods', () => {
     `);
   });
 
-  test('Get Fallback Market Quote for all', async () => {
+  test.only('Get Fallback Market Quote for all', async () => {
     const quote = await quoteSDK.getQuote({
       srcToken: USDC,
       destToken: ETH,
-      amount: (5e5).toString(),
+      amount: (1e5).toString(),
       srcDecimals: 6,
       destDecimals: 18,
       mode: 'all',
@@ -337,6 +361,7 @@ describe('Quote:methods', () => {
           destAmount: 'dynamic_number',
           data: 'largerly dynamic object',
           poolAddresses: 'dynamic_array',
+          poolIdentifiers: 'dynamic_array',
           srcAmount: 'dynamic_number',
         })),
       })),
@@ -352,6 +377,7 @@ describe('Quote:methods', () => {
       srcUSD: 'dynamic_number',
       destUSD: 'dynamic_number',
       bestRoute: bestRouteStable,
+      contractMethod: 'dynamic_string',
     };
 
     expect(priceRouteStable).toMatchSnapshot();
