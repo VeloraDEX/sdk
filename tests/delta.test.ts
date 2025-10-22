@@ -143,6 +143,10 @@ describe('Delta:methods', () => {
       srcUSD: 'dynamic_number',
       destUSD: 'dynamic_number',
       destUSDBeforeFee: 'dynamic_number',
+      receivedDestAmount: 'dynamic_number',
+      receivedDestUSD: 'dynamic_number',
+      receivedDestAmountBeforeFee: 'dynamic_number',
+      receivedDestUSDBeforeFee: 'dynamic_number',
       gasCost: 'dynamic_number',
       gasCostBeforeFee: 'dynamic_number',
       gasCostUSD: 'dynamic_number',
@@ -209,6 +213,10 @@ describe('Delta:methods', () => {
         srcUSD: 'dynamic_number',
         destUSD: 'dynamic_number',
         destUSDBeforeFee: 'dynamic_number',
+        receivedDestAmount: 'dynamic_number',
+        receivedDestUSD: 'dynamic_number',
+        receivedDestAmountBeforeFee: 'dynamic_number',
+        receivedDestUSDBeforeFee: 'dynamic_number',
         gasCost: 'dynamic_number',
         gasCostBeforeFee: 'dynamic_number',
         gasCostUSD: 'dynamic_number',
@@ -257,6 +265,10 @@ describe('Delta:methods', () => {
         srcUSD: 'dynamic_number',
         destUSD: 'dynamic_number',
         destUSDBeforeFee: 'dynamic_number',
+        receivedDestAmount: 'dynamic_number',
+        receivedDestUSD: 'dynamic_number',
+        receivedDestAmountBeforeFee: 'dynamic_number',
+        receivedDestUSDBeforeFee: 'dynamic_number',
         gasCost: 'dynamic_number',
         gasCostBeforeFee: 'dynamic_number',
         gasCostUSD: 'dynamic_number',
@@ -305,6 +317,10 @@ describe('Delta:methods', () => {
         srcUSD: 'dynamic_number',
         destUSD: 'dynamic_number',
         destUSDBeforeFee: 'dynamic_number',
+        receivedDestAmount: 'dynamic_number',
+        receivedDestUSD: 'dynamic_number',
+        receivedDestAmountBeforeFee: 'dynamic_number',
+        receivedDestUSDBeforeFee: 'dynamic_number',
         gasCost: 'dynamic_number',
         gasCostBeforeFee: 'dynamic_number',
         gasCostUSD: 'dynamic_number',
@@ -326,7 +342,7 @@ describe('Delta:methods', () => {
   test('Get Delta Contract', async () => {
     const deltaContract = await deltaSDK.getDeltaContract();
     expect(deltaContract).toMatchInlineSnapshot(
-      `"0x0000000000bbf5c5fd284e657f01bd000933c96d"`
+      `"0x76e0ebb8d4c6dccb3fdedab7a3e1c87036719a42"`
     );
   });
 
@@ -399,8 +415,10 @@ describe('Delta:methods', () => {
     const sampleDeltaPrice: DeltaPrice = {
       destAmount: '3163263721766488892666',
       destAmountBeforeFee: '3194635547945152526200',
+      receivedDestAmount: '3163263721766488892666',
       destToken: '0x6b175474e89094c44da98b954eedeac495271d0f',
       destUSD: '3166.4269854931',
+      receivedDestUSD: '3166.4269854931',
       destUSDBeforeFee: '3197.8301834931',
       gasCost: '347788',
       gasCostBeforeFee: '124240',
@@ -695,8 +713,10 @@ describe('Delta:methods', () => {
     const sampleDeltaPrice: DeltaPrice = {
       destAmount: '3163263721766488892666',
       destAmountBeforeFee: '3194635547945152526200',
+      receivedDestAmount: '3163263721766488892666',
       destToken: '0x6b175474e89094c44da98b954eedeac495271d0f',
       destUSD: '3166.4269854931',
+      receivedDestUSD: '3166.4269854931',
       destUSDBeforeFee: '3197.8301834931',
       gasCost: '347788',
       gasCostBeforeFee: '124240',
