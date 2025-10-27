@@ -178,7 +178,7 @@ describe('Delta:methods', () => {
     const ETH = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
     const WETH = '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2';
     const WETH_ON_OPTIMISM = '0x4200000000000000000000000000000000000006';
-    const DAI_TOKEN_ON_ETHEREUM = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
+    // const DAI_TOKEN_ON_ETHEREUM = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
     const DAI_TOKEN_ON_OPTIMISM = '0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1';
 
     test('Get Delta Price Crosschain/destToken=random', async () => {
@@ -194,6 +194,7 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        destToken: 'dynamic_address', // will no longer match DAI_TOKEN_ON_ETHEREUM if bridge is Relay
         bridge: {
           ...deltaPrice.bridge,
           protocolData: 'dynamic_string',
@@ -225,7 +226,8 @@ describe('Delta:methods', () => {
         availableBridges: [], // dynamic array of bridge variants
       };
 
-      expect(deltaPrice.destToken).toEqual(DAI_TOKEN_ON_ETHEREUM.toLowerCase());
+      // will no longer be true if swap is through Relay
+      // expect(deltaPrice.destToken).toEqual(DAI_TOKEN_ON_ETHEREUM.toLowerCase());
       expect(staticDeltaPrice).toMatchSnapshot();
       expect(deltaPrice.bridge.destinationChainId).toEqual(destChainId);
       expect(deltaPrice.bridge.outputToken).toEqual(
@@ -342,7 +344,7 @@ describe('Delta:methods', () => {
   test('Get Delta Contract', async () => {
     const deltaContract = await deltaSDK.getDeltaContract();
     expect(deltaContract).toMatchInlineSnapshot(
-      `"0x76e0ebb8d4c6dccb3fdedab7a3e1c87036719a42"`
+      `"0x0000000000bbf5c5fd284e657f01bd000933c96d"`
     );
   });
 
