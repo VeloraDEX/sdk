@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/helpers/types.ts:10](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L10)
+[src/methods/nftOrders/helpers/types.ts:8](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/nftOrders/helpers/types.ts#L8)

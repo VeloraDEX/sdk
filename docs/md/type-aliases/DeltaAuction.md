@@ -92,4 +92,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:91](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L91)
+[src/methods/delta/helpers/types.ts:91](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/delta/helpers/types.ts#L91)

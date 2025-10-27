@@ -14,7 +14,7 @@
 
 ### error
 
-> `readonly` **error**: [`JsonRpcError`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcError.md)\<`Error`\>
+> `readonly` **error**: [`JsonRpcError`](../namespaces/Users_andriishymkiv_work_velora_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcError.md)\<`Error`\>
 
 #### Defined in
 
@@ -34,7 +34,7 @@ node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:10
 
 ### jsonrpc
 
-> `readonly` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
+> `readonly` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/Users_andriishymkiv_work_velora_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
 
 #### Defined in
 

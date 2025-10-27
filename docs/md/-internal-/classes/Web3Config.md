@@ -1184,11 +1184,11 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/Users_andriishymkiv_work_velora_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Returns
 
-[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/Users_andriishymkiv_work_velora_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Inherited from
 

@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:116](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L116)
+[src/methods/delta/getDeltaPrice.ts:137](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/delta/getDeltaPrice.ts#L137)

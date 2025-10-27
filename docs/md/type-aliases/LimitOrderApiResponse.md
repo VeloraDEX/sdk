@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/helpers/types.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/helpers/types.ts#L19)
+[src/methods/limitOrders/helpers/types.ts:20](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/limitOrders/helpers/types.ts#L20)

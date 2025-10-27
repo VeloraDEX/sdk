@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/delta/isTokenSupportedInDelta.ts:20](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/isTokenSupportedInDelta.ts#L20)
+[src/methods/delta/isTokenSupportedInDelta.ts:20](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/delta/isTokenSupportedInDelta.ts#L20)

@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[src/methods/delta/helpers/types.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L5)
+[src/methods/delta/helpers/types.ts:5](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/delta/helpers/types.ts#L5)
 
 ***
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/methods/delta/helpers/types.ts:4](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L4)
+[src/methods/delta/helpers/types.ts:4](https://github.com/VeloraDEX/sdk/blob/feat/extend_delta_orders_filtering/src/methods/delta/helpers/types.ts#L4)
