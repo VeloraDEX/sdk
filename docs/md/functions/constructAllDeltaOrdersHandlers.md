@@ -26,4 +26,4 @@ construct SDK with every Delta Order-related method, fetching from API and Order
 
 ## Defined in
 
-[src/methods/delta/index.ts:117](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L117)
+[src/methods/delta/index.ts:107](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L107)

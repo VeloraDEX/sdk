@@ -6,18 +6,8 @@
 
 # Type Alias: LimitOrderTransaction
 
-> **LimitOrderTransaction**: `object`
-
-## Type declaration
-
-### event\_type
-
-> **event\_type**: `"OrderFilled"` \| `"OrderCancelled"`
-
-### hash
-
-> **hash**: `string`
+> **LimitOrderTransaction**: [`OrderTransaction`](../-internal-/type-aliases/OrderTransaction.md)
 
 ## Defined in
 
-[src/methods/limitOrders/helpers/types.ts:39](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/helpers/types.ts#L39)
+[src/methods/limitOrders/helpers/types.ts:40](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/helpers/types.ts#L40)

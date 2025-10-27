@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:142](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L142)
+[src/methods/delta/helpers/types.ts:153](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L153)

@@ -6,18 +6,8 @@
 
 # Type Alias: NFTOrderTransaction
 
-> **NFTOrderTransaction**: `object`
-
-## Type declaration
-
-### event\_type
-
-> **event\_type**: `"OrderFilled"` \| `"OrderCancelled"`
-
-### hash
-
-> **hash**: `string`
+> **NFTOrderTransaction**: [`OrderTransaction`](../-internal-/type-aliases/OrderTransaction.md)
 
 ## Defined in
 
-[src/methods/nftOrders/helpers/types.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L5)
+[src/methods/nftOrders/helpers/types.ts:6](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L6)

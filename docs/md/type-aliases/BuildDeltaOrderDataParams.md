@@ -18,14 +18,6 @@
 
 The address of the order beneficiary
 
-### beneficiaryType?
-
-> `optional` **beneficiaryType**: [`BeneficiaryType`](../-internal-/type-aliases/BeneficiaryType.md)
-
-#### Description
-
-Whether the beneficiary is a contract. Needed to automatically fill in crosschain Bridge
-
 ### deadline?
 
 > `optional` **deadline**: `number`
@@ -36,7 +28,7 @@ The deadline for the order
 
 ### deltaPrice
 
-> **deltaPrice**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`BridgePrice`](BridgePrice.md), `"destAmount"` \| `"partner"` \| `"partnerFee"` \| `"destToken"` \| `"srcAmount"` \| `"bridge"`\>
+> **deltaPrice**: [`MarkOptional`](../-internal-/type-aliases/MarkOptional.md)\<[`Pick`](../-internal-/type-aliases/Pick.md)\<[`BridgePrice`](BridgePrice.md), `"destAmount"` \| `"partner"` \| `"partnerFee"` \| `"destToken"` \| `"srcAmount"` \| `"bridge"`\>, `"partner"` \| `"partnerFee"`\>
 
 #### Description
 
@@ -156,4 +148,4 @@ The address of the src token
 
 ## Defined in
 
-[src/methods/delta/buildDeltaOrder.ts:21](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L21)
+[src/methods/delta/buildDeltaOrder.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L22)

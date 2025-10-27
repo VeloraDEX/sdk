@@ -70,6 +70,34 @@ Available for SELL side
 
 > **partnerFee**: `number`
 
+### receivedDestAmount
+
+> **receivedDestAmount**: `string`
+
+#### Description
+
+amount of the final outcome token
+
+### receivedDestAmountBeforeFee?
+
+> `optional` **receivedDestAmountBeforeFee**: `string`
+
+#### Description
+
+Available for SELL side
+
+### receivedDestUSD
+
+> **receivedDestUSD**: `string`
+
+### receivedDestUSDBeforeFee?
+
+> `optional` **receivedDestUSDBeforeFee**: `string`
+
+#### Description
+
+Available for SELL side
+
 ### srcAmount
 
 > **srcAmount**: `string`

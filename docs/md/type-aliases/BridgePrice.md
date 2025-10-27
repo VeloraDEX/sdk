@@ -10,6 +10,10 @@
 
 ## Type declaration
 
+### availableBridges
+
+> **availableBridges**: [`AvailableBridge`](../-internal-/type-aliases/AvailableBridge.md)[]
+
 ### bridge
 
 > **bridge**: [`Bridge`](Bridge.md)
@@ -20,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:83](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L83)
+[src/methods/delta/getDeltaPrice.ts:110](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L110)

@@ -104,4 +104,4 @@ transaction with the last event pertaining to the order: OrderFilled or OrderCan
 
 ## Defined in
 
-[src/methods/limitOrders/helpers/types.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/helpers/types.ts#L44)
+[src/methods/limitOrders/helpers/types.ts:42](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/helpers/types.ts#L42)

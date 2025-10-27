@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/helpers/types.ts:46](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L46)
+[src/methods/nftOrders/helpers/types.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L44)

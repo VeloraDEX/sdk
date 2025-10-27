@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/delta/buildDeltaOrder.ts:72](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L72)
+[src/methods/delta/buildDeltaOrder.ts:74](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L74)
