@@ -9,7 +9,7 @@ import type { DeltaAuction, DeltaAuctionStatus } from './helpers/types';
 
 export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature'>;
 
-type DeltaOrderFilterByStatus =
+export type DeltaOrderFilterByStatus =
   | DeltaAuctionStatus
   | 'INSUFFICIENT_BALANCE'
   | 'INSUFFICIENT_ALLOWANCE'

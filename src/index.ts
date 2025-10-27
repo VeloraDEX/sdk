@@ -175,6 +175,7 @@ import {
 import {
   constructGetDeltaOrders,
   GetDeltaOrdersFunctions,
+  DeltaOrderFilterByStatus,
   DeltaOrderFromAPI,
 } from './methods/delta/getDeltaOrders';
 import {
@@ -364,6 +365,7 @@ export type {
   DeltaAuctionOrder,
   DeltaAuction,
   DeltaAuctionStatus,
+  DeltaOrderFilterByStatus,
   DeltaOrderApiResponse,
   DeltaOrderFromAPI,
   // bridge part of DeltaOrder
