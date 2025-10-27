@@ -1,11 +1,9 @@
 import type { Address } from '../../../types';
+import { OrderTransaction } from '../../common/orders/types';
 import type { NFTOrderData } from './buildOrderData';
 import type { AssetType } from './misc';
 
-export type NFTOrderTransaction = {
-  hash: string;
-  event_type: 'OrderFilled' | 'OrderCancelled';
-};
+export type NFTOrderTransaction = OrderTransaction;
 
 export type NFTOrderType = 'LIMIT' | 'P2P';
 

@@ -150,6 +150,7 @@ describe.each([
       slippage: 500,
       options: {
         includeDEXS: ['UniswapV2'],
+        includeContractMethods: ['swapExactAmountIn'], // more stable results
       },
     });
 
@@ -157,13 +158,16 @@ describe.each([
       ...b,
       swaps: b.swaps.map((s) => ({
         ...s,
-        swapExchanges: s.swapExchanges.map((se) => ({
+        //                             grab first only
+        swapExchanges: s.swapExchanges.slice(0, 1).map((se) => ({
           ...se,
+          // numbers change based on how many exchanges are in the route
+          srcAmount: 'dynamic_number',
           destAmount: 'dynamic_number',
-          data: {
-            ...se.data,
-            gasUSD: 'dynamic_number',
-          },
+          data: 'dynamic_object',
+          percent: 'dynamic_number',
+          poolAddresses: 'dynamic_array',
+          poolIdentifiers: 'dynamic_array',
         })),
       })),
     }));

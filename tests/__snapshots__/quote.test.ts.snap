@@ -7,8 +7,8 @@ exports[`Quote:methods Get Fallback Market Quote for all 2`] = `
       "percent": 100,
       "swaps": [
         {
-          "destDecimals": 6,
-          "destToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
+          "destDecimals": 18,
+          "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
           "srcDecimals": 6,
           "srcToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
           "swapExchanges": [
@@ -18,28 +18,7 @@ exports[`Quote:methods Get Fallback Market Quote for all 2`] = `
               "exchange": "dynamic_string",
               "percent": 100,
               "poolAddresses": "dynamic_array",
-              "poolIdentifiers": [
-                "fluiddexlite_0x6dd161107ef07bb8",
-              ],
-              "srcAmount": "dynamic_number",
-            },
-          ],
-        },
-        {
-          "destDecimals": 18,
-          "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-          "srcDecimals": 6,
-          "srcToken": "0xdac17f958d2ee523a2206206994597c13d831ec7",
-          "swapExchanges": [
-            {
-              "data": "largerly dynamic object",
-              "destAmount": "dynamic_number",
-              "exchange": "dynamic_string",
-              "percent": 100,
-              "poolAddresses": "dynamic_array",
-              "poolIdentifiers": [
-                "0x0000000000000000000000000000000000000000/0xdac17f958d2ee523a2206206994597c13d831ec7_3689348814741910_4990_0x0000000000000000000000000000000000000000",
-              ],
+              "poolIdentifiers": "dynamic_array",
               "srcAmount": "dynamic_number",
             },
           ],
@@ -49,7 +28,7 @@ exports[`Quote:methods Get Fallback Market Quote for all 2`] = `
   ],
   "blockNumber": "dynamic_number",
   "contractAddress": "0x6a000f20005980200259b80c5102003040001068",
-  "contractMethod": "swapExactAmountIn",
+  "contractMethod": "dynamic_string",
   "destAmount": "dynamic_number",
   "destDecimals": 18,
   "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
@@ -62,7 +41,7 @@ exports[`Quote:methods Get Fallback Market Quote for all 2`] = `
   "partner": "anon",
   "partnerFee": 0,
   "side": "SELL",
-  "srcAmount": "1000000",
+  "srcAmount": "100000",
   "srcDecimals": 6,
   "srcToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
   "srcUSD": "dynamic_number",

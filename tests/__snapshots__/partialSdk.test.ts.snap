@@ -32,7 +32,6 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 
   "Weth",
   "PolygonMigrator",
   "Synapse",
-  "ParaSwapLimitOrders",
   "SolidlyV2",
   "Synthetix",
   "CurveV1Factory",
@@ -44,7 +43,6 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 
   "AngleStakedStableUSD",
   "AngleStakedStableEUR",
   "SolidlyV3",
-  "Wombat",
   "Swell",
   "Spark",
   "sUSDS",
@@ -76,34 +74,13 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_SwapTxData: Get_SwapTxD
           "srcToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
           "swapExchanges": [
             {
-              "data": {
-                "factory": "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
-                "feeFactor": 10000,
-                "gasUSD": "dynamic_number",
-                "initCode": "0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f",
-                "path": [
-                  "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-                  "0x6b175474e89094c44da98b954eedeac495271d0f",
-                ],
-                "pools": [
-                  {
-                    "address": "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
-                    "direction": false,
-                    "fee": 30,
-                  },
-                ],
-                "router": "0xF9234CB08edb93c0d4a4d4c70cC3FfD070e78e07",
-              },
+              "data": "dynamic_object",
               "destAmount": "dynamic_number",
               "exchange": "UniswapV2",
-              "percent": 100,
-              "poolAddresses": [
-                "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
-              ],
-              "poolIdentifiers": [
-                "uniswapv2_0x6b175474e89094c44da98b954eedeac495271d0f_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-              ],
-              "srcAmount": "1000000000000000000",
+              "percent": "dynamic_number",
+              "poolAddresses": "dynamic_array",
+              "poolIdentifiers": "dynamic_array",
+              "srcAmount": "dynamic_number",
             },
           ],
         },
@@ -177,7 +154,6 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 
   "Weth",
   "PolygonMigrator",
   "Synapse",
-  "ParaSwapLimitOrders",
   "SolidlyV2",
   "Synthetix",
   "CurveV1Factory",
@@ -189,7 +165,6 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 
   "AngleStakedStableUSD",
   "AngleStakedStableEUR",
   "SolidlyV3",
-  "Wombat",
   "Swell",
   "Spark",
   "sUSDS",
@@ -221,34 +196,13 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_SwapTxData: Get_SwapTxD
           "srcToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
           "swapExchanges": [
             {
-              "data": {
-                "factory": "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
-                "feeFactor": 10000,
-                "gasUSD": "dynamic_number",
-                "initCode": "0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f",
-                "path": [
-                  "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-                  "0x6b175474e89094c44da98b954eedeac495271d0f",
-                ],
-                "pools": [
-                  {
-                    "address": "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
-                    "direction": false,
-                    "fee": 30,
-                  },
-                ],
-                "router": "0xF9234CB08edb93c0d4a4d4c70cC3FfD070e78e07",
-              },
+              "data": "dynamic_object",
               "destAmount": "dynamic_number",
               "exchange": "UniswapV2",
-              "percent": 100,
-              "poolAddresses": [
-                "0xA478c2975Ab1Ea89e8196811F51A7B7Ade33eB11",
-              ],
-              "poolIdentifiers": [
-                "uniswapv2_0x6b175474e89094c44da98b954eedeac495271d0f_0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
-              ],
-              "srcAmount": "1000000000000000000",
+              "percent": "dynamic_number",
+              "poolAddresses": "dynamic_array",
+              "poolIdentifiers": "dynamic_array",
+              "srcAmount": "dynamic_number",
             },
           ],
         },

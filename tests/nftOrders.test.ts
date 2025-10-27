@@ -824,12 +824,12 @@ describe('NFT Orders', () => {
         "expiry": 1766188800,
         "maker": "0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9",
         "makerAmount": "1",
-        "makerAsset": "3543270653153923194217614598232156133780554242461",
+        "makerAsset": "3619753999533144330718273179089670910543115756213",
         "makerAssetId": "0",
         "makerAssetType": 2,
         "nonce": 999,
         "nonceAndMeta": "1461271868364326844682297910593670628577722568144820",
-        "signature": "0x7bf03baa35db2f4b08356f99da02d13c5ab17c371f57d1f80fbace77c40dbdf852d316fe787c3bf1d38a34cd6540cb555a53a3aa3ad75ffc27ff48bb569c9ce01c",
+        "signature": "0xef64a66db7989602dd711ea1a09dd9cb7c277e353ec0b274d3e75a967054b7cf759444927184b9a8621fb04d19af89c1545501223c8f8197361569eb485104801c",
         "taker": "0xDEF171Fe48CF0115B1d80b88dc8eAB59176FEe57",
         "takerAmount": "6000000000000000000",
         "takerAsset": "1096451400262405796991039590211805051831004063880",
@@ -923,7 +923,8 @@ describe('NFT Orders', () => {
     ]).toContain(AugustusAmountAfter);
   });
 
-  test(`fill NFTOrder+Swap through Augustus`, async () => {
+  // old Augustus contract
+  test.skip(`fill NFTOrder+Swap through Augustus`, async () => {
     // swap AAVE -> MAKER, then fill MAKER (takerAsset) for NFT (makerAsset) Order
 
     // 1 NFT

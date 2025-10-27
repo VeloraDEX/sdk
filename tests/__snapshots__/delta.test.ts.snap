@@ -334,6 +334,10 @@ exports[`Delta:methods Get Delta Price 1`] = `
   "hmac": "dynamic_string",
   "partner": "anon",
   "partnerFee": 0,
+  "receivedDestAmount": "dynamic_number",
+  "receivedDestAmountBeforeFee": "dynamic_number",
+  "receivedDestUSD": "dynamic_number",
+  "receivedDestUSDBeforeFee": "dynamic_number",
   "srcAmount": "1000000000000000000",
   "srcToken": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
   "srcUSD": "dynamic_number",
@@ -342,9 +346,10 @@ exports[`Delta:methods Get Delta Price 1`] = `
 
 exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/destToken=ETH 1`] = `
 {
+  "availableBridges": [],
   "bridge": {
     "destinationChainId": 10,
-    "outputToken": "0x4200000000000000000000000000000000000006",
+    "outputToken": "dynamic_hash",
     "protocolData": "dynamic_string",
     "protocolSelector": "dynamic_string",
     "scalingFactor": NaN,
@@ -368,6 +373,10 @@ exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/des
   "hmac": "dynamic_string",
   "partner": "anon",
   "partnerFee": 0,
+  "receivedDestAmount": "dynamic_number",
+  "receivedDestAmountBeforeFee": "dynamic_number",
+  "receivedDestUSD": "dynamic_number",
+  "receivedDestUSDBeforeFee": "dynamic_number",
   "srcAmount": "1000000000000000000",
   "srcToken": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
   "srcUSD": "dynamic_number",
@@ -376,6 +385,7 @@ exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/des
 
 exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/destToken=WETH 1`] = `
 {
+  "availableBridges": [],
   "bridge": {
     "destinationChainId": 10,
     "outputToken": "0x4200000000000000000000000000000000000006",
@@ -402,6 +412,10 @@ exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/des
   "hmac": "dynamic_string",
   "partner": "anon",
   "partnerFee": 0,
+  "receivedDestAmount": "dynamic_number",
+  "receivedDestAmountBeforeFee": "dynamic_number",
+  "receivedDestUSD": "dynamic_number",
+  "receivedDestUSDBeforeFee": "dynamic_number",
   "srcAmount": "1000000000000000000",
   "srcToken": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
   "srcUSD": "dynamic_number",
@@ -410,6 +424,7 @@ exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/des
 
 exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/destToken=random 1`] = `
 {
+  "availableBridges": [],
   "bridge": {
     "destinationChainId": 10,
     "outputToken": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
@@ -426,7 +441,7 @@ exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/des
   },
   "destAmount": "dynamic_number",
   "destAmountBeforeFee": "dynamic_number",
-  "destToken": "0x6b175474e89094c44da98b954eedeac495271d0f",
+  "destToken": "dynamic_address",
   "destUSD": "dynamic_number",
   "destUSDBeforeFee": "dynamic_number",
   "gasCost": "dynamic_number",
@@ -436,6 +451,10 @@ exports[`Delta:methods Get Delta Price Crosschain Get Delta Price Crosschain/des
   "hmac": "dynamic_string",
   "partner": "anon",
   "partnerFee": 0,
+  "receivedDestAmount": "dynamic_number",
+  "receivedDestAmountBeforeFee": "dynamic_number",
+  "receivedDestUSD": "dynamic_number",
+  "receivedDestUSDBeforeFee": "dynamic_number",
   "srcAmount": "1000000000000000000",
   "srcToken": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
   "srcUSD": "dynamic_number",

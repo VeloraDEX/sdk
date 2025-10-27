@@ -39,17 +39,9 @@ import {
   GetBridgeInfoFunctions,
 } from './getBridgeInfo';
 import {
-  constructGetMulticallHandlers,
-  GetMulticallHandlersFunctions,
-} from './getMulticallHandlers';
-import {
   constructIsTokenSupportedInDelta,
   IsTokenSupportedInDeltaFunctions,
 } from './isTokenSupportedInDelta';
-import {
-  BuildCrosschainOrderBridgeFunctions,
-  constructBuildCrosschainOrderBridge,
-} from './buildCrosschainOrderBridge';
 import {
   CancelDeltaOrderFunctions,
   constructCancelDeltaOrder,
@@ -101,12 +93,10 @@ export const constructSubmitDeltaOrder = (
 export type DeltaOrderHandlers<T> = SubmitDeltaOrderFuncs &
   ApproveTokenForDeltaFunctions<T> &
   BuildDeltaOrderFunctions &
-  BuildCrosschainOrderBridgeFunctions &
   GetDeltaOrdersFunctions &
   GetDeltaPriceFunctions &
   GetDeltaContractFunctions &
   GetPartnerFeeFunctions &
-  GetMulticallHandlersFunctions &
   GetBridgeInfoFunctions &
   IsTokenSupportedInDeltaFunctions &
   PostDeltaOrderFunctions &
@@ -127,14 +117,10 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
   const partnerFee = constructGetPartnerFee(options);
   const bridgeInfo = constructGetBridgeInfo(options);
   const isTokenSupportedInDelta = constructIsTokenSupportedInDelta(options);
-  const multicallHandlers = constructGetMulticallHandlers(options);
 
   const approveTokenForDelta = constructApproveTokenForDelta(options);
 
   const deltaOrdersSubmit = constructSubmitDeltaOrder(options);
-
-  const buildCrosschainOrderBridge =
-    constructBuildCrosschainOrderBridge(options);
 
   const deltaOrdersBuild = constructBuildDeltaOrder(options);
   const deltaOrdersSign = constructSignDeltaOrder(options);
@@ -149,13 +135,11 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
     ...partnerFee,
     ...bridgeInfo,
     ...isTokenSupportedInDelta,
-    ...multicallHandlers,
     ...approveTokenForDelta,
     ...deltaOrdersSubmit,
     ...deltaOrdersBuild,
     ...deltaOrdersSign,
     ...deltaOrdersPost,
     ...deltaOrdersCancel,
-    ...buildCrosschainOrderBridge,
   };
 };

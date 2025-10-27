@@ -64,6 +64,13 @@ export type DeltaPrice = {
   destAmount: string;
   /** @description Available for SELL side */
   destAmountBeforeFee?: string;
+  /** @description amount of the final outcome token */
+  receivedDestAmount: string;
+  receivedDestUSD: string;
+  /** @description Available for SELL side */
+  receivedDestAmountBeforeFee?: string;
+  /** @description Available for SELL side */
+  receivedDestUSDBeforeFee?: string;
   gasCost: string;
   gasCostBeforeFee: string;
   gasCostUSD: string;
@@ -80,6 +87,26 @@ export type DeltaPrice = {
   bridge: Bridge; // for single-chain DeltaPrice, it's DEFAULT_BRIDGE
 };
 
+type AvailableBridgePrice = Pick<
+  DeltaPrice,
+  | 'destToken'
+  | 'destAmount'
+  | 'destAmountBeforeFee'
+  | 'destUSD'
+  | 'destUSDBeforeFee'
+  | 'gasCostUSD'
+  | 'gasCost'
+  | 'gasCostUSDBeforeFee'
+  | 'gasCostBeforeFee'
+>;
+
+type AvailableBridge = AvailableBridgePrice & {
+  bridgeParams: {
+    bridge: Bridge;
+    bridgeInfo: BridgePriceInfo;
+  }[];
+};
+
 export type BridgePrice = Omit<DeltaPrice, 'bridge'> & {
   // destAmountAfterBridge: string; // became bridgeInfo.destAmountAfterBridge
   // destUSDAfterBridge: string; // became bridgeInfo.destUSDAfterBridge
@@ -88,6 +115,7 @@ export type BridgePrice = Omit<DeltaPrice, 'bridge'> & {
   // poolAddress: string;
   bridge: Bridge;
   bridgeInfo: BridgePriceInfo;
+  availableBridges: AvailableBridge[];
 };
 
 type DeltaPriceResponse = {

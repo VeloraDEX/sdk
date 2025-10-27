@@ -152,12 +152,6 @@ import {
   SwapSideUnion,
 } from './methods/delta/buildDeltaOrder';
 import {
-  constructBuildCrosschainOrderBridge,
-  BuildCrosschainOrderBridgeFunctions,
-  BuildCrosschainOrderBridgeParams,
-  CrosschainOrderBridgeAndChanges,
-} from './methods/delta/buildCrosschainOrderBridge';
-import {
   constructPostDeltaOrder,
   DeltaOrderApiResponse,
   PostDeltaOrderFunctions,
@@ -181,6 +175,7 @@ import {
 import {
   constructGetDeltaOrders,
   GetDeltaOrdersFunctions,
+  DeltaOrderFilterByStatus,
   DeltaOrderFromAPI,
 } from './methods/delta/getDeltaOrders';
 import {
@@ -196,11 +191,6 @@ import {
   GetBridgeInfoFunctions,
   BridgeInfo,
 } from './methods/delta/getBridgeInfo';
-import {
-  constructGetMulticallHandlers,
-  GetMulticallHandlersFunctions,
-  MulticallHandlersResponse,
-} from './methods/delta/getMulticallHandlers';
 import {
   constructIsTokenSupportedInDelta,
   IsTokenSupportedInDeltaFunctions,
@@ -296,7 +286,6 @@ export {
   constructBuildNFTOrderTx,
   // Delta methods
   constructBuildDeltaOrder,
-  constructBuildCrosschainOrderBridge,
   constructPostDeltaOrder,
   constructSignDeltaOrder,
   constructGetDeltaContract,
@@ -310,7 +299,6 @@ export {
   constructGetPartnerFee,
   constructGetBridgeInfo,
   constructIsTokenSupportedInDelta,
-  constructGetMulticallHandlers,
   constructEthersContractCaller, // same as constructEthersV5ContractCaller for backwards compatibility
   constructEthersV5ContractCaller,
   constructEthersV6ContractCaller,
@@ -377,6 +365,7 @@ export type {
   DeltaAuctionOrder,
   DeltaAuction,
   DeltaAuctionStatus,
+  DeltaOrderFilterByStatus,
   DeltaOrderApiResponse,
   DeltaOrderFromAPI,
   // bridge part of DeltaOrder
@@ -387,9 +376,6 @@ export type {
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
   SignableDeltaOrderData,
-  BuildCrosschainOrderBridgeFunctions,
-  BuildCrosschainOrderBridgeParams,
-  CrosschainOrderBridgeAndChanges,
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
   SignDeltaOrderFunctions,
@@ -413,8 +399,6 @@ export type {
   GetPartnerFeeFunctions,
   GetBridgeInfoFunctions,
   IsTokenSupportedInDeltaFunctions,
-  GetMulticallHandlersFunctions,
-  MulticallHandlersResponse,
   Token,
   Address,
   AddressOrSymbol,
