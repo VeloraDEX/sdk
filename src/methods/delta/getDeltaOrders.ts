@@ -114,10 +114,8 @@ export const constructGetDeltaOrders = ({
   };
 
   const getDeltaOrders: GetDeltaOrders = async (options, requestParams) => {
-    const chainIdString = options.chainId
-      ? options.chainId.join(',')
-      : undefined;
-    const statusString = options.status ? options.status.join(',') : undefined;
+    const chainIdString = options.chainId?.join(',');
+    const statusString = options.status?.join(',');
 
     const search = constructSearchString<OrderFiltersQuery>({
       userAddress: options.userAddress,
