@@ -94,7 +94,8 @@
   },
   "dependencies": {
     "@paraswap/core": "2.4.0",
-    "ts-essentials": "^10.0.3"
+    "ts-essentials": "^10.0.3",
+    "viem": "^2.21.0"
   },
   "author": "Velora",
   "description": "Velora SDK",
