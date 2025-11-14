@@ -2,12 +2,6 @@ import type { ConstructProviderFetchInput } from '../../types';
 import { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 import { sanitizeDeltaOrderData } from './helpers/misc';
 
-export type SignLimitOrderFunctions = {
-  signLimitOrder: (
-    signableOrderData: SignableDeltaOrderData
-  ) => Promise<string>;
-};
-
 type SignDeltaOrder = (
   signableOrderData: SignableDeltaOrderData
 ) => Promise<string>;
