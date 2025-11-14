@@ -5,10 +5,10 @@ import { TypedDataField } from '../../methods/common/orders/buildOrderData';
 // may be overly strict, but reliable
 const baseTypeRegex = /^([^\x5b]*)(\x5b|$)/;
 
-export function findPrimaryType(
-  types: Record<string, TypedDataField[]>
-): string {
-  const candidates = Object.keys(types);
+export function findPrimaryType<P extends string>(
+  types: Record<P, TypedDataField[]>
+): P {
+  const candidates = Object.keys(types) as P[];
   const candidatesSet = new Set(candidates);
 
   candidates.forEach((candidate) => {
@@ -21,7 +21,7 @@ export function findPrimaryType(
       if (!baseType) return;
 
       // if type was referred to as a child of another type, it can't be the primaryType
-      candidatesSet.delete(baseType);
+      candidatesSet.delete(baseType as P);
     });
   });
 
