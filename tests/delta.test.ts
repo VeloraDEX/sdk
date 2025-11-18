@@ -825,14 +825,14 @@ describe('Delta:methods', () => {
       );
     });
     test('PreSign Delta Order', async () => {
-      const sampledOrderHash =
+      const sampleOrderHash =
         '0x4e68492d838e64c329ecdba51d32cb088088445ca62b1d5c4edf5a2ab80b586d';
-      const txHash = await sdk.setDeltaOrderPreSignature(sampledOrderHash);
+      const txHash = await sdk.setDeltaOrderPreSignature(sampleOrderHash);
 
       await viemWalletClient.waitForTransactionReceipt({ hash: txHash });
 
       const isPreSigned = await checkIfOrderHashPreSigned({
-        orderHash: sampledOrderHash,
+        orderHash: sampleOrderHash,
         owner: senderAddress,
         sdk,
       });
