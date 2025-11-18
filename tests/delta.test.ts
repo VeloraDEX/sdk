@@ -783,7 +783,7 @@ describe('Delta:methods', () => {
     expect(staticSignedOrderData).toMatchSnapshot();
   });
 
-  describe.only('PreSign Delta Order', () => {
+  describe('PreSign Delta Order', () => {
     const sdk = constructPartialSDK(
       {
         chainId: 1,
