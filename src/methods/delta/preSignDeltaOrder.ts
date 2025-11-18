@@ -108,7 +108,7 @@ export const constructPreSignDeltaOrder = <T>(
     }
 
     const res = await options.contractCaller.transactCall<AvailableMethods>({
-      address: '0x76e0ebb8d4c6dccb3fdedab7a3e1c87036719a42',
+      address: ParaswapDelta,
       abi: PreSignatureModuleAbi,
       contractMethod: 'setPreSignature',
       args: [orderHash, true],
