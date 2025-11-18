@@ -38,7 +38,6 @@ import {
   Address,
   createWalletClient,
   custom,
-  erc20Abi,
   Hash,
   Hex,
   publicActions,
@@ -784,7 +783,7 @@ describe('Delta:methods', () => {
     expect(staticSignedOrderData).toMatchSnapshot();
   });
 
-  describe('PreSign Delta Order', () => {
+  describe.only('PreSign Delta Order', () => {
     const sdk = constructPartialSDK(
       {
         chainId: 1,
@@ -819,24 +818,22 @@ describe('Delta:methods', () => {
       },
     };
 
-    test.only('hash Delta Order', async () => {
+    test('hash Delta Order', async () => {
       const orderHash = await sdk.hashDeltaOrder(sampleOrder);
       expect(orderHash).toMatchInlineSnapshot(
         `"0x4e68492d838e64c329ecdba51d32cb088088445ca62b1d5c4edf5a2ab80b586d"`
       );
     });
-
     test('PreSign Delta Order', async () => {
       const sampledOrderHash =
         '0x4e68492d838e64c329ecdba51d32cb088088445ca62b1d5c4edf5a2ab80b586d';
-
       const txHash = await sdk.setDeltaOrderPreSignature(sampledOrderHash);
 
       await viemWalletClient.waitForTransactionReceipt({ hash: txHash });
 
       const isPreSigned = await checkIfOrderHashPreSigned({
         orderHash: sampledOrderHash,
-        owner: '0x0DDC793680FF4f5793849c8c6992be1695CbE72A',
+        owner: senderAddress,
         sdk,
       });
       expect(isPreSigned).toBe(true);
@@ -934,6 +931,24 @@ const PreSignatureModuleAbi = [
     stateMutability: 'view',
     type: 'function',
   },
+  {
+    inputs: [
+      {
+        internalType: 'bytes32',
+        name: 'orderHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bool',
+        name: 'preSigned',
+        type: 'bool',
+      },
+    ],
+    name: 'setPreSignature',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
 ] as const;
 
 type CheckIfOrderHashPreSignedInput = {
@@ -952,7 +967,7 @@ async function checkIfOrderHashPreSigned({
   assert(ParaswapDelta, 'ParaswapDelta is not available');
 
   const isPreSigned = await viemWalletClient.readContract({
-    address: '0x76e0ebb8d4c6dccb3fdedab7a3e1c87036719a42',
+    address: ParaswapDelta as Address,
     abi: PreSignatureModuleAbi,
     functionName: 'isPreSigned',
     args: [owner as Address, orderHash as Hash],
