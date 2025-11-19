@@ -54,6 +54,7 @@ export type Bridge = {
 
 export type DeltaAuctionStatus =
   | 'NOT_STARTED'
+  | 'AWAITING_PRE_SIGNATURE'
   | 'RUNNING'
   | 'EXECUTING'
   | 'EXECUTED'
