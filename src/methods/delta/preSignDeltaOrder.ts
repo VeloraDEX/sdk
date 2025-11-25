@@ -9,9 +9,10 @@ import {
   SignableDeltaOrderData,
 } from './helpers/buildDeltaOrderData';
 import { sanitizeDeltaOrderData } from './helpers/misc';
-import { constructGetDeltaContract, DeltaAuctionOrder } from '../..';
-import { ExtractAbiMethodNames } from '../../helpers/misc';
+import type { ExtractAbiMethodNames } from '../../helpers/misc';
 import { findPrimaryType } from '../../helpers/providers/helpers';
+import { constructGetDeltaContract } from './getDeltaContract';
+import type { DeltaAuctionOrder } from './helpers/types';
 
 type HashDeltaOrderTypedData = (
   signableOrderData: SignableDeltaOrderData
