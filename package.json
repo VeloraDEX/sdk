@@ -1,6 +1,6 @@
 {
   "name": "@velora-dex/sdk",
-  "version": "9.1.0",
+  "version": "9.2.0-dev.0",
   "main": "dist/index.js",
   "module": "dist/sdk.esm.js",
   "typings": "dist/index.d.ts",
