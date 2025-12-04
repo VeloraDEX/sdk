@@ -12,7 +12,7 @@
 
 ### account?
 
-> `optional` **account**: `accountOverride`
+> `optional` **account**: `accountOverride` \| `null`
 
 ### chain?
 
@@ -36,7 +36,7 @@ Data to append to the end of the calldata. Useful for adding a ["domain" tag](ht
 
 • **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-• **accountOverride** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined` = `undefined`
+• **accountOverride** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `null` \| `undefined` = `undefined`
 
 • **derivedChain** *extends* [`Chain`](Chain.md) \| `undefined` = [`DeriveChain`](DeriveChain.md)\<`chain`, `chainOverride`\>
 

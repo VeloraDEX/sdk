@@ -12,7 +12,7 @@
 
 ### domain
 
-> **domain**: [`RequiredBy`](RequiredBy.md)\<[`TypedDataDomain`](TypedDataDomain.md), `"chainId"` \| `"name"` \| `"verifyingContract"` \| `"version"`\>
+> **domain**: [`RequiredBy`](RequiredBy.md)\<[`TypedDataDomain`](TypedDataDomain.md), `"chainId"` \| `"name"` \| `"verifyingContract"` \| `"salt"` \| `"version"`\>
 
 ### extensions
 

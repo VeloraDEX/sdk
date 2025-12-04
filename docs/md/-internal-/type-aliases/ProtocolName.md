@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:140](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L140)
+[src/methods/delta/helpers/types.ts:142](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L142)

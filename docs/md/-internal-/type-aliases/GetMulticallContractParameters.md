@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/multicall.d.ts:43
+node\_modules/viem/\_types/types/multicall.d.ts:45

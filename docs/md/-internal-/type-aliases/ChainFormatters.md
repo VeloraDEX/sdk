@@ -36,4 +36,4 @@ Modifies how the TransactionRequest structure is formatted & typed.
 
 ## Defined in
 
-node\_modules/viem/\_types/types/chain.d.ts:102
+node\_modules/viem/\_types/types/chain.d.ts:108

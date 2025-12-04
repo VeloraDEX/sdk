@@ -4,9 +4,9 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / UserOperationRequest
 
-# Type Alias: UserOperationRequest\<entryPointVersion, uint256\>
+# Type Alias: UserOperationRequest\<entryPointVersion, uint256, uint32\>
 
-> **UserOperationRequest**\<`entryPointVersion`, `uint256`\>: [`OneOf`](OneOf.md)\<`entryPointVersion` *extends* `"0.7"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.7"`, `uint256`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.7"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never` \| `entryPointVersion` *extends* `"0.6"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.6"`, `uint256`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.6"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never`\>
+> **UserOperationRequest**\<`entryPointVersion`, `uint256`, `uint32`\>: [`OneOf`](OneOf.md)\<`entryPointVersion` *extends* `"0.8"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.8"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.8"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never` \| `entryPointVersion` *extends* `"0.7"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.7"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.7"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never` \| `entryPointVersion` *extends* `"0.6"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.6"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.6"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never`\>
 
 ## Type Parameters
 
@@ -14,6 +14,8 @@
 
 • **uint256** = `bigint`
 
+• **uint32** = `number`
+
 ## Defined in
 
-node\_modules/viem/\_types/account-abstraction/types/userOperation.d.ts:106
+node\_modules/viem/\_types/account-abstraction/types/userOperation.d.ts:148

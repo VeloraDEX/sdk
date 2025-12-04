@@ -46,4 +46,4 @@ Token type.
 
 ## Defined in
 
-node\_modules/viem/\_types/types/eip1193.d.ts:149
+node\_modules/viem/\_types/types/eip1193.d.ts:175

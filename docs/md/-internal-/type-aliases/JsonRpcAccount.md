@@ -24,4 +24,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/accounts/types.d.ts:30
+node\_modules/viem/\_types/accounts/types.d.ts:29

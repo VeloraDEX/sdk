@@ -26,4 +26,4 @@ Array of TypeScript primitive types
 
 ## Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:86
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:86

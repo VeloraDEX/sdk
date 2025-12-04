@@ -42,4 +42,4 @@ Fake key-value mapping to override individual slots in the account storage befor
 
 ## Defined in
 
-node\_modules/viem/\_types/types/rpc.d.ts:67
+node\_modules/viem/\_types/types/rpc.d.ts:81

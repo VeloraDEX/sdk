@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/utils/formatters/transaction.d.ts:9
+node\_modules/viem/\_types/utils/formatters/transaction.d.ts:8

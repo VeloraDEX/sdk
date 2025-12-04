@@ -39,4 +39,4 @@ type Result = Range<1, 3>
 
 ## Defined in
 
-node\_modules/abitype/dist/types/types.d.ts:122
+node\_modules/viem/node\_modules/abitype/dist/types/types.d.ts:122

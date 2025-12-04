@@ -18,4 +18,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/chain.d.ts:125
+node\_modules/viem/\_types/types/chain.d.ts:131

@@ -6,8 +6,8 @@
 
 # Type Alias: Address
 
-> **Address**: [`HexString`](HexString.md)
+> **Address**: [`ResolvedRegister`](ResolvedRegister.md)\[`"addressType"`\]
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:11
+node\_modules/viem/node\_modules/ox/node\_modules/abitype/dist/types/abi.d.ts:3

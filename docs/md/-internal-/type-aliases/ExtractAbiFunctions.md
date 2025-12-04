@@ -26,4 +26,4 @@ All [AbiFunction](AbiFunction.md) types from [Abi](Abi.md)
 
 ## Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:103
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:103

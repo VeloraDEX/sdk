@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/accounts/utils/sign.d.ts:4
+node\_modules/viem/\_types/accounts/utils/sign.d.ts:6

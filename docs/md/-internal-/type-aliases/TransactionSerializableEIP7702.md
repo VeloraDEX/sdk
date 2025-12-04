@@ -38,4 +38,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/transaction.d.ts:215
+node\_modules/viem/\_types/types/transaction.d.ts:218

@@ -44,4 +44,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/eip1193.d.ts:100
+node\_modules/viem/\_types/types/eip1193.d.ts:97

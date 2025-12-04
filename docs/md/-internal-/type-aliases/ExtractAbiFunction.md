@@ -30,4 +30,4 @@ Matching [AbiFunction](AbiFunction.md)
 
 ## Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:123
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:123

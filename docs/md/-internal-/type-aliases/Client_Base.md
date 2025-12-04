@@ -50,6 +50,12 @@ Time (in ms) that cached data will remain in memory.
 
 Chain for the client.
 
+### experimental\_blockTag?
+
+> `optional` **experimental\_blockTag**: [`BlockTag`](BlockTag.md)
+
+Default block tag to use for RPC requests.
+
 ### key
 
 > **key**: `string`
@@ -94,4 +100,4 @@ A unique ID for the client.
 
 ## Defined in
 
-node\_modules/viem/\_types/clients/createClient.d.ts:61
+node\_modules/viem/\_types/clients/createClient.d.ts:71

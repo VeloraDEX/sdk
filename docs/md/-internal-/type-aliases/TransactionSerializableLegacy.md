@@ -26,4 +26,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/transaction.d.ts:185
+node\_modules/viem/\_types/types/transaction.d.ts:188

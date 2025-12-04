@@ -24,4 +24,4 @@ Modifies how Transactions are serialized.
 
 ## Defined in
 
-node\_modules/viem/\_types/types/chain.d.ts:116
+node\_modules/viem/\_types/types/chain.d.ts:122

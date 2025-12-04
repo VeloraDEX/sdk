@@ -4,9 +4,15 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Signature
 
-# Type Alias: Signature
+# Type Alias: Signature\<numberType, bigintType\>
 
-> **Signature**: [`OneOf`](OneOf.md)\<[`SignatureLegacy`](SignatureLegacy.md) \| `object` \| `object`\>
+> **Signature**\<`numberType`, `bigintType`\>: [`OneOf`](OneOf.md)\<[`SignatureLegacy`](SignatureLegacy.md) \| `object` \| `object`\>
+
+## Type Parameters
+
+• **numberType** = `number`
+
+• **bigintType** = `bigint`
 
 ## Defined in
 

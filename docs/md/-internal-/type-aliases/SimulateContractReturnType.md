@@ -22,17 +22,17 @@
 
 • **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-• **accountOverride** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined` = [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined`
+• **accountOverride** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `null` \| `undefined` = [`Account`](Account.md) \| [`Address`](Address.md) \| `null` \| `undefined`
 
 • **minimizedAbi** *extends* [`Abi`](Abi.md) = readonly [[`ExtractAbiFunctionForArgs`](ExtractAbiFunctionForArgs.md)\<`abi` *extends* [`Abi`](Abi.md) ? `abi` : [`Abi`](Abi.md), `"nonpayable"` \| `"payable"`, `functionName`, `args`\>]
 
-• **resolvedAccount** *extends* [`Account`](Account.md) \| `undefined` = `accountOverride` *extends* [`Account`](Account.md) \| [`Address`](Address.md) ? [`ParseAccount`](ParseAccount.md)\<`accountOverride`\> : `account`
+• **resolvedAccount** *extends* [`Account`](Account.md) \| `null` \| `undefined` = `accountOverride` *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `null` ? [`ParseAccount`](ParseAccount.md)\<`accountOverride`\> : `account`
 
 ## Type declaration
 
 ### request
 
-> **request**: [`Prettify`](Prettify.md)\<[`UnionEvaluate`](UnionEvaluate.md)\<[`UnionOmit`](UnionOmit.md)\<[`WriteContractParameters`](WriteContractParameters.md)\<`minimizedAbi`, `functionName`, `args`, `chain`, `undefined`, `chainOverride`\>, `"account"` \| `"abi"` \| `"args"` \| `"chain"` \| `"functionName"`\>\> & [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`minimizedAbi`, `"nonpayable"` \| `"payable"`, `functionName`, `args`\> & `object` & `resolvedAccount` *extends* [`Account`](Account.md) ? `object` : `object`\>
+> **request**: [`Prettify`](Prettify.md)\<[`UnionEvaluate`](UnionEvaluate.md)\<[`UnionOmit`](UnionOmit.md)\<[`WriteContractParameters`](WriteContractParameters.md)\<`minimizedAbi`, `functionName`, `args`, `chain`, `undefined`, `chainOverride`\>, `"account"` \| `"abi"` \| `"args"` \| `"chain"` \| `"functionName"`\>\> & [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`minimizedAbi`, `"nonpayable"` \| `"payable"`, `functionName`, `args`\> & `object` & `resolvedAccount` *extends* [`Account`](Account.md) \| `null` ? `object` : `object`\>
 
 ### result
 

@@ -28,4 +28,4 @@ Union of TypeScript primitive types
 
 ## Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:198
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:198

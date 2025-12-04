@@ -18,4 +18,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/multicall.d.ts:25
+node\_modules/viem/\_types/actions/public/multicall.d.ts:33

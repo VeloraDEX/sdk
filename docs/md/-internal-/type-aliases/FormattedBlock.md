@@ -32,4 +32,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/utils/formatters/block.d.ts:11
+node\_modules/viem/\_types/utils/formatters/block.d.ts:10

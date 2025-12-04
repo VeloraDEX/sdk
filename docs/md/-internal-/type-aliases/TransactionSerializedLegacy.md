@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/transaction.d.ts:181
+node\_modules/viem/\_types/types/transaction.d.ts:184

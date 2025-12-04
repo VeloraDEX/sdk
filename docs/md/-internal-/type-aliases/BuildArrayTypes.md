@@ -19,4 +19,4 @@ or use a more broad type when maximum depth is switched "off"
 
 ## Defined in
 
-node\_modules/abitype/dist/types/abi.d.ts:21
+node\_modules/viem/node\_modules/abitype/dist/types/abi.d.ts:21

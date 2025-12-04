@@ -54,6 +54,42 @@ const data = await client.call({
 })
 ```
 
+### createAccessList()
+
+> **createAccessList**: (`parameters`) => `Promise`\<[`CreateAccessListReturnType`](CreateAccessListReturnType.md)\>
+
+Creates an EIP-2930 access list that you can include in a transaction.
+
+- Docs: https://viem.sh/docs/actions/public/createAccessList
+- JSON-RPC Methods: `eth_createAccessList`
+
+#### Parameters
+
+• **parameters**: [`CreateAccessListParameters`](CreateAccessListParameters.md)\<`chain`\>
+
+#### Returns
+
+`Promise`\<[`CreateAccessListReturnType`](CreateAccessListReturnType.md)\>
+
+The call data. [CreateAccessListReturnType](CreateAccessListReturnType.md)
+
+#### Example
+
+```ts
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({
+  chain: mainnet,
+  transport: http(),
+})
+
+const data = await client.createAccessList({
+  data: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+  to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+})
+```
+
 ### createBlockFilter()
 
 > **createBlockFilter**: () => `Promise`\<[`CreateBlockFilterReturnType`](CreateBlockFilterReturnType.md)\>
@@ -465,7 +501,7 @@ const blobBaseFee = await client.getBlobBaseFee()
 Returns information about a block at a block number, hash, or tag.
 
 - Docs: https://viem.sh/docs/actions/public/getBlock
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/blocks/fetching-blocks
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/blocks_fetching-blocks
 - JSON-RPC Methods:
   - Calls [`eth_getBlockByNumber`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getblockbynumber) for `blockNumber` & `blockTag`.
   - Calls [`eth_getBlockByHash`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getblockbyhash) for `blockHash`.
@@ -508,7 +544,7 @@ const block = await client.getBlock()
 Returns the number of the most recent block seen.
 
 - Docs: https://viem.sh/docs/actions/public/getBlockNumber
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/blocks/fetching-blocks
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/blocks_fetching-blocks
 - JSON-RPC Methods: [`eth_blockNumber`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_blocknumber)
 
 #### Parameters
@@ -1200,7 +1236,7 @@ const gasPrice = await client.getGasPrice()
 Returns a list of event logs matching the provided parameters.
 
 - Docs: https://viem.sh/docs/actions/public/getLogs
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/filters-and-logs/event-logs
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/logs_event-logs
 - JSON-RPC Methods: [`eth_getLogs`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getlogs)
 
 #### Type Parameters
@@ -1321,7 +1357,7 @@ const code = await client.getStorageAt({
 Returns information about a [Transaction](https://viem.sh/docs/glossary/terms#transaction) given a hash or block identifier.
 
 - Docs: https://viem.sh/docs/actions/public/getTransaction
-- Example: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions/fetching-transactions
+- Example: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions_fetching-transactions
 - JSON-RPC Methods: [`eth_getTransactionByHash`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getTransactionByHash)
 
 #### Type Parameters
@@ -1362,7 +1398,7 @@ const transaction = await client.getTransaction({
 Returns the number of blocks passed (confirmations) since the transaction was processed on a block.
 
 - Docs: https://viem.sh/docs/actions/public/getTransactionConfirmations
-- Example: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions/fetching-transactions
+- Example: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions_fetching-transactions
 - JSON-RPC Methods: [`eth_getTransactionConfirmations`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getTransactionConfirmations)
 
 #### Parameters
@@ -1435,7 +1471,7 @@ const transactionCount = await client.getTransactionCount({
 Returns the [Transaction Receipt](https://viem.sh/docs/glossary/terms#transaction-receipt) given a [Transaction](https://viem.sh/docs/glossary/terms#transaction) hash.
 
 - Docs: https://viem.sh/docs/actions/public/getTransactionReceipt
-- Example: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions/fetching-transactions
+- Example: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions_fetching-transactions
 - JSON-RPC Methods: [`eth_getTransactionReceipt`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getTransactionReceipt)
 
 #### Parameters
@@ -1592,7 +1628,7 @@ const request = await client.prepareTransactionRequest({
 Calls a read-only function on a contract, and returns the response.
 
 - Docs: https://viem.sh/docs/contract/readContract
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/contracts/reading-contracts
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/contracts_reading-contracts
 
 #### Type Parameters
 
@@ -1676,6 +1712,164 @@ const hash = await client.sendRawTransaction({
 })
 ```
 
+### sendRawTransactionSync()
+
+> **sendRawTransactionSync**: (`args`) => `Promise`\<[`SendRawTransactionSyncReturnType`](SendRawTransactionSyncReturnType.md)\<`chain`\>\>
+
+Sends a **signed** transaction to the network
+
+- Docs: https://viem.sh/docs/actions/wallet/sendRawTransactionSync
+- JSON-RPC Method: [`eth_sendRawTransactionSync`](https://eips.ethereum.org/EIPS/eip-7966)
+
+#### Parameters
+
+• **args**: [`SendRawTransactionSyncParameters`](SendRawTransactionSyncParameters.md)
+
+#### Returns
+
+`Promise`\<[`SendRawTransactionSyncReturnType`](SendRawTransactionSyncReturnType.md)\<`chain`\>\>
+
+The transaction receipt. [SendRawTransactionSyncReturnType](SendRawTransactionSyncReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+import { sendRawTransactionSync } from 'viem/wallet'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+
+const receipt = await client.sendRawTransactionSync({
+  serializedTransaction: '0x02f850018203118080825208808080c080a04012522854168b27e5dc3d5839bab5e6b39e1a0ffd343901ce1622e3d64b48f1a04e00902ae0502c4728cbf12156290df99c3ed7de85b1dbfe20b5c36931733a33'
+})
+```
+
+### ~~simulate()~~
+
+> **simulate**: \<`calls`\>(`args`) => `Promise`\<[`SimulateBlocksReturnType`](SimulateBlocksReturnType.md)\<`calls`\>\>
+
+#### Type Parameters
+
+• **calls** *extends* readonly `unknown`[]
+
+#### Parameters
+
+• **args**: [`SimulateBlocksParameters`](SimulateBlocksParameters.md)\<`calls`\>
+
+#### Returns
+
+`Promise`\<[`SimulateBlocksReturnType`](SimulateBlocksReturnType.md)\<`calls`\>\>
+
+#### Deprecated
+
+Use `simulateBlocks` instead.
+
+### simulateBlocks()
+
+> **simulateBlocks**: \<`calls`\>(`args`) => `Promise`\<[`SimulateBlocksReturnType`](SimulateBlocksReturnType.md)\<`calls`\>\>
+
+Simulates a set of calls on block(s) with optional block and state overrides.
+
+#### Type Parameters
+
+• **calls** *extends* readonly `unknown`[]
+
+#### Parameters
+
+• **args**: [`SimulateBlocksParameters`](SimulateBlocksParameters.md)\<`calls`\>
+
+#### Returns
+
+`Promise`\<[`SimulateBlocksReturnType`](SimulateBlocksReturnType.md)\<`calls`\>\>
+
+Simulated blocks. SimulateReturnType
+
+#### Example
+
+```ts
+import { createPublicClient, http, parseEther } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({
+  chain: mainnet,
+  transport: http(),
+})
+
+const result = await client.simulateBlocks({
+  blocks: [{
+    blockOverrides: {
+      number: 69420n,
+    },
+    calls: [{
+      {
+        account: '0x5a0b54d5dc17e482fe8b0bdca5320161b95fb929',
+        data: '0xdeadbeef',
+        to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+      },
+      {
+        account: '0x5a0b54d5dc17e482fe8b0bdca5320161b95fb929',
+        to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+        value: parseEther('1'),
+      },
+    }],
+    stateOverrides: [{
+      address: '0x5a0b54d5dc17e482fe8b0bdca5320161b95fb929',
+      balance: parseEther('10'),
+    }],
+  }]
+})
+```
+
+### simulateCalls()
+
+> **simulateCalls**: \<`calls`\>(`args`) => `Promise`\<[`SimulateCallsReturnType`](SimulateCallsReturnType.md)\<`calls`\>\>
+
+Simulates a set of calls.
+
+#### Type Parameters
+
+• **calls** *extends* readonly `unknown`[]
+
+#### Parameters
+
+• **args**: [`SimulateCallsParameters`](SimulateCallsParameters.md)\<`calls`\>
+
+#### Returns
+
+`Promise`\<[`SimulateCallsReturnType`](SimulateCallsReturnType.md)\<`calls`\>\>
+
+Results. [SimulateCallsReturnType](SimulateCallsReturnType.md)
+
+#### Example
+
+```ts
+import { createPublicClient, http, parseEther } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({
+  chain: mainnet,
+  transport: http(),
+})
+
+const result = await client.simulateCalls({
+  account: '0x5a0b54d5dc17e482fe8b0bdca5320161b95fb929',
+  calls: [{
+    {
+      data: '0xdeadbeef',
+      to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+    },
+    {
+      to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+      value: parseEther('1'),
+    },
+  ]
+})
+```
+
 ### simulateContract()
 
 > **simulateContract**: \<`abi`, `functionName`, `args`, `chainOverride`, `accountOverride`\>(`args`) => `Promise`\<[`SimulateContractReturnType`](SimulateContractReturnType.md)\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`, `accountOverride`\>\>
@@ -1683,7 +1877,7 @@ const hash = await client.sendRawTransaction({
 Simulates/validates a contract interaction. This is useful for retrieving **return data** and **revert reasons** of contract write functions.
 
 - Docs: https://viem.sh/docs/contract/simulateContract
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/contracts/writing-to-contracts
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/contracts_writing-to-contracts
 
 #### Type Parameters
 
@@ -1771,6 +1965,24 @@ const uninstalled = await client.uninstallFilter({ filter })
 // true
 ```
 
+### verifyHash()
+
+> **verifyHash**: (`args`) => `Promise`\<[`VerifyHashReturnType`](VerifyHashReturnType.md)\>
+
+Verify that a hash was signed by the provided address.
+
+- Docs [https://viem.sh/docs/actions/public/verifyHash](https://viem.sh/docs/actions/public/verifyHash)
+
+#### Parameters
+
+• **args**: [`VerifyHashParameters`](VerifyHashParameters.md)
+
+#### Returns
+
+`Promise`\<[`VerifyHashReturnType`](VerifyHashReturnType.md)\>
+
+Whether or not the signature is valid. [VerifyHashReturnType](VerifyHashReturnType.md)
+
 ### verifyMessage()
 
 > **verifyMessage**: (`args`) => `Promise`\<[`VerifyMessageReturnType`](VerifyMessageReturnType.md)\>
@@ -1836,7 +2048,7 @@ Whether or not the signature is valid. [VerifyTypedDataReturnType](VerifyTypedDa
 Waits for the [Transaction](https://viem.sh/docs/glossary/terms#transaction) to be included on a [Block](https://viem.sh/docs/glossary/terms#block) (one confirmation), and then returns the [Transaction Receipt](https://viem.sh/docs/glossary/terms#transaction-receipt). If the Transaction reverts, then the action will throw an error.
 
 - Docs: https://viem.sh/docs/actions/public/waitForTransactionReceipt
-- Example: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions/sending-transactions
+- Example: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions_sending-transactions
 - JSON-RPC Methods:
   - Polls [`eth_getTransactionReceipt`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getTransactionReceipt) on each block until it has been processed.
   - If a Transaction has been replaced:
@@ -1890,7 +2102,7 @@ const transactionReceipt = await client.waitForTransactionReceipt({
 Watches and returns incoming block numbers.
 
 - Docs: https://viem.sh/docs/actions/public/watchBlockNumber
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/blocks/watching-blocks
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/blocks_watching-blocks
 - JSON-RPC Methods:
   - When `poll: true`, calls [`eth_blockNumber`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_blocknumber) on a polling interval.
   - When `poll: false` & WebSocket Transport, uses a WebSocket subscription via [`eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe-polygon) and the `"newHeads"` event.
@@ -1929,7 +2141,7 @@ const unwatch = await client.watchBlockNumber({
 Watches and returns information for incoming blocks.
 
 - Docs: https://viem.sh/docs/actions/public/watchBlocks
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/blocks/watching-blocks
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/blocks_watching-blocks
 - JSON-RPC Methods:
   - When `poll: true`, calls [`eth_getBlockByNumber`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_getBlockByNumber) on a polling interval.
   - When `poll: false` & WebSocket Transport, uses a WebSocket subscription via [`eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe-polygon) and the `"newHeads"` event.
@@ -2121,4 +2333,4 @@ const unwatch = await client.watchPendingTransactions({
 
 ## Defined in
 
-node\_modules/viem/\_types/clients/decorators/public.d.ts:59
+node\_modules/viem/\_types/clients/decorators/public.d.ts:64

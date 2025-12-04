@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/clients/createClient.d.ts:87
+node\_modules/viem/\_types/clients/createClient.d.ts:99

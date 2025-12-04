@@ -29,4 +29,4 @@ type Result = Error<'Custom error message'>
 
 ## Defined in
 
-node\_modules/abitype/dist/types/types.d.ts:11
+node\_modules/viem/node\_modules/abitype/dist/types/types.d.ts:11

@@ -12,4 +12,4 @@ Contract [ABI Specification](https://docs.soliditylang.org/en/latest/abi-spec.ht
 
 ## Defined in
 
-node\_modules/abitype/dist/types/abi.d.ts:120
+node\_modules/viem/node\_modules/abitype/dist/types/abi.d.ts:120

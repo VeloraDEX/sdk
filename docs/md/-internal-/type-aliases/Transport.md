@@ -50,4 +50,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/clients/transports/createTransport.d.ts:21
+node\_modules/viem/\_types/clients/transports/createTransport.d.ts:28

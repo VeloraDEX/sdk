@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/getTransaction.d.ts:43
+node\_modules/viem/\_types/actions/public/getTransaction.d.ts:37

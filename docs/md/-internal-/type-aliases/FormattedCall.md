@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/call.d.ts:49
+node\_modules/viem/\_types/actions/public/call.d.ts:52

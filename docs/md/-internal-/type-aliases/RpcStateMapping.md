@@ -16,4 +16,4 @@ A key-value mapping of slot and storage values (supposedly 32 bytes each)
 
 ## Defined in
 
-node\_modules/viem/\_types/types/rpc.d.ts:64
+node\_modules/viem/\_types/types/rpc.d.ts:78

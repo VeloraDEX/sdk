@@ -30,4 +30,4 @@ type Result = Narrow<['foo', 'bar', 1]>
 
 ## Defined in
 
-node\_modules/abitype/dist/types/narrow.d.ts:10
+node\_modules/viem/node\_modules/abitype/dist/types/narrow.d.ts:10

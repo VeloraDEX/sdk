@@ -32,4 +32,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/wallet/deployContract.d.ts:12
+node\_modules/viem/\_types/actions/wallet/deployContract.d.ts:11

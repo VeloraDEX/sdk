@@ -22,4 +22,4 @@ All [AbiEvent](AbiEvent.md) types from [Abi](Abi.md)
 
 ## Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:132
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:132

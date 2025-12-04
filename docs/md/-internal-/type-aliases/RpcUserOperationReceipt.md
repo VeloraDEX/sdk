@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/account-abstraction/types/rpc.d.ts:7
+node\_modules/viem/\_types/account-abstraction/types/rpc.d.ts:10

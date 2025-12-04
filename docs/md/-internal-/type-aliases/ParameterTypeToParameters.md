@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/wallet/prepareTransactionRequest.d.ts:23
+node\_modules/viem/\_types/actions/wallet/prepareTransactionRequest.d.ts:24

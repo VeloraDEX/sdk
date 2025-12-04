@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/utils/formatters/block.d.ts:10
+node\_modules/viem/\_types/utils/formatters/block.d.ts:9

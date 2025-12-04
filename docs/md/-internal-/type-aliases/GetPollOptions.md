@@ -6,7 +6,7 @@
 
 # Type Alias: GetPollOptions\<transport\>
 
-> **GetPollOptions**\<`transport`\>: [`HasTransportType`](HasTransportType.md)\<`transport`, `"webSocket"`\> *extends* `true` ? `object` : `never` \| `object`
+> **GetPollOptions**\<`transport`\>: [`HasTransportType`](HasTransportType.md)\<`transport`, `"webSocket"` \| `"ipc"`\> *extends* `true` ? `object` : `never` \| `object`
 
 ## Type Parameters
 

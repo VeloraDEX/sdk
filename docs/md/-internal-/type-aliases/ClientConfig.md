@@ -47,7 +47,7 @@ Time (in ms) that cached data will remain in memory.
 #### Default
 
 ```ts
-4_000
+chain.blockTime / 3
 ```
 
 ### ccipRead?
@@ -62,6 +62,21 @@ If `false`, the client will not support offchain CCIP lookups.
 > `optional` **chain**: [`Chain`](Chain.md) \| `chain`
 
 Chain for the client.
+
+### experimental\_blockTag?
+
+> `optional` **experimental\_blockTag**: [`BlockTag`](BlockTag.md)
+
+Default block tag to use for RPC requests.
+
+If the chain supports a pre-confirmation mechanism
+(set via `chain.experimental_preconfirmationTime`), defaults to `'pending'`.
+
+#### Default
+
+```ts
+'latest'
+```
 
 ### key?
 
@@ -84,7 +99,7 @@ Frequency (in ms) for polling enabled actions & events.
 #### Default
 
 ```ts
-4_000
+chain.blockTime / 3
 ```
 
 ### rpcSchema?
@@ -107,4 +122,4 @@ The type of client.
 
 ## Defined in
 
-node\_modules/viem/\_types/clients/createClient.d.ts:13
+node\_modules/viem/\_types/clients/createClient.d.ts:14

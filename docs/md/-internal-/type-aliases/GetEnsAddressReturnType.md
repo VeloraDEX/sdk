@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/ens/getEnsAddress.d.ts:27
+node\_modules/viem/\_types/actions/ens/getEnsAddress.d.ts:47

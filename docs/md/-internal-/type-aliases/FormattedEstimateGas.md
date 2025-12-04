@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/estimateGas.d.ts:31
+node\_modules/viem/\_types/actions/public/estimateGas.d.ts:33

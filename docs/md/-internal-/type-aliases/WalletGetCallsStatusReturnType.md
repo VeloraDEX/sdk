@@ -4,26 +4,50 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / WalletGetCallsStatusReturnType
 
-# Type Alias: WalletGetCallsStatusReturnType\<quantity, status\>
+# Type Alias: WalletGetCallsStatusReturnType\<capabilities, numberType, bigintType, receiptStatus\>
 
-> **WalletGetCallsStatusReturnType**\<`quantity`, `status`\>: `object`
+> **WalletGetCallsStatusReturnType**\<`capabilities`, `numberType`, `bigintType`, `receiptStatus`\>: `object`
 
 ## Type Parameters
 
-• **quantity** = [`Hex`](Hex.md)
+• **capabilities** *extends* [`Capabilities`](Capabilities.md) = [`Capabilities`](Capabilities.md)
 
-• **status** = [`Hex`](Hex.md)
+• **numberType** = [`Hex`](Hex.md)
+
+• **bigintType** = [`Hex`](Hex.md)
+
+• **receiptStatus** = [`Hex`](Hex.md)
 
 ## Type declaration
 
+### atomic
+
+> **atomic**: `boolean`
+
+### capabilities?
+
+> `optional` **capabilities**: `capabilities` \| [`Capabilities`](Capabilities.md)
+
+### chainId
+
+> **chainId**: `numberType`
+
+### id
+
+> **id**: `string`
+
 ### receipts?
 
-> `optional` **receipts**: [`WalletCallReceipt`](WalletCallReceipt.md)\<`quantity`, `status`\>[]
+> `optional` **receipts**: [`WalletCallReceipt`](WalletCallReceipt.md)\<`bigintType`, `receiptStatus`\>[]
 
 ### status
 
-> **status**: `"PENDING"` \| `"CONFIRMED"`
+> **status**: `number`
+
+### version
+
+> **version**: `string`
 
 ## Defined in
 
-node\_modules/viem/\_types/types/eip1193.d.ts:119
+node\_modules/viem/\_types/types/eip1193.d.ts:135

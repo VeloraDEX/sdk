@@ -144,4 +144,4 @@ Use `strictAbiType` instead
 
 ## Defined in
 
-node\_modules/abitype/dist/types/register.d.ts:107
+node\_modules/viem/node\_modules/ox/node\_modules/abitype/dist/types/register.d.ts:107

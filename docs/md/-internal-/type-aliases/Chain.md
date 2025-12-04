@@ -24,11 +24,29 @@ Collection of block explorers
 
 > **default**: [`ChainBlockExplorer`](ChainBlockExplorer.md)
 
+### blockTime?
+
+> `optional` **blockTime**: `number`
+
+Block time in milliseconds.
+
 ### contracts?
 
 > `optional` **contracts**: [`Prettify`](Prettify.md)\<`object` & `object`\>
 
 Collection of contracts
+
+### ensTlds?
+
+> `optional` **ensTlds**: readonly `string`[]
+
+Collection of ENS TLDs for the chain.
+
+### experimental\_preconfirmationTime?
+
+> `optional` **experimental\_preconfirmationTime**: `number`
+
+Preconfirmation time in milliseconds.
 
 ### id
 

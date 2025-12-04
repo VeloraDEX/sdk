@@ -52,4 +52,4 @@ The amount that user should expect to get
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:121](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L121)
+[src/methods/delta/helpers/types.ts:123](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L123)

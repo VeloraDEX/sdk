@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/utils/formatters/transactionRequest.d.ts:7
+node\_modules/viem/\_types/utils/formatters/transactionRequest.d.ts:8

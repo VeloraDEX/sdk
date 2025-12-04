@@ -4,9 +4,9 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TransactionSerializableEIP4844
 
-# Type Alias: TransactionSerializableEIP4844\<quantity, index\>
+# Type Alias: TransactionSerializableEIP4844\<quantity, index, nullableSidecars\>
 
-> **TransactionSerializableEIP4844**\<`quantity`, `index`\>: [`TransactionSerializableBase`](TransactionSerializableBase.md)\<`quantity`, `index`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesEIP4844`](FeeValuesEIP4844.md)\<`quantity`\>\> & `object` & [`OneOf`](OneOf.md)\<`object` \| `object`\>
+> **TransactionSerializableEIP4844**\<`quantity`, `index`, `nullableSidecars`\>: [`RequiredBy`](RequiredBy.md)\<[`TransactionSerializableBase`](TransactionSerializableBase.md)\<`quantity`, `index`\>, `"to"`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesEIP4844`](FeeValuesEIP4844.md)\<`quantity`\>\> & `object` & [`OneOf`](OneOf.md)\<`object` \| `object`\>
 
 ## Type declaration
 
@@ -20,7 +20,7 @@
 
 ### sidecars?
 
-> `optional` **sidecars**: readonly [`BlobSidecar`](BlobSidecar.md)\<[`Hex`](Hex.md)\>[] \| `false`
+> `optional` **sidecars**: readonly [`BlobSidecar`](BlobSidecar.md)\<[`Hex`](Hex.md)\>[] \| `nullableSidecars` *extends* `true` ? `false` : `never`
 
 ### type?
 
@@ -36,6 +36,8 @@
 
 • **index** = `number`
 
+• **nullableSidecars** *extends* `boolean` = `boolean`
+
 ## Defined in
 
-node\_modules/viem/\_types/types/transaction.d.ts:201
+node\_modules/viem/\_types/types/transaction.d.ts:204

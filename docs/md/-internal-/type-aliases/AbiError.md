@@ -26,4 +26,4 @@ ABI ["error"](https://docs.soliditylang.org/en/latest/abi-spec.html#errors) type
 
 ## Defined in
 
-node\_modules/abitype/dist/types/abi.d.ts:110
+node\_modules/viem/node\_modules/abitype/dist/types/abi.d.ts:110

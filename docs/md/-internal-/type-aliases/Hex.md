@@ -8,6 +8,8 @@
 
 > **Hex**: \`0x$\{string\}\`
 
+Root type for a Hex string.
+
 ## Defined in
 
-node\_modules/viem/\_types/types/misc.d.ts:3
+node\_modules/viem/node\_modules/ox/\_types/core/Hex.d.ts:6

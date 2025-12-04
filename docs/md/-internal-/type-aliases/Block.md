@@ -78,7 +78,7 @@ Logs bloom filter or `null` if pending
 
 > **miner**: [`Address`](Address.md)
 
-Address that received this block’s mining rewards
+Address that received this block’s mining rewards, COINBASE address
 
 ### mixHash
 

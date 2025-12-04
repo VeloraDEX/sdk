@@ -22,6 +22,12 @@
 
 The key of the transport.
 
+### methods?
+
+> `optional` **methods**: [`OneOf`](OneOf.md)\<`object` \| `object`\>
+
+Methods to include or exclude from executing RPC requests.
+
 ### name
 
 > **name**: `string`
@@ -60,4 +66,4 @@ The type of the transport.
 
 ## Defined in
 
-node\_modules/viem/\_types/clients/transports/createTransport.d.ts:5
+node\_modules/viem/\_types/clients/transports/createTransport.d.ts:6

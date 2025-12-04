@@ -14,6 +14,18 @@
 
 ## Type declaration
 
+### checkReplacement?
+
+> `optional` **checkReplacement**: `boolean`
+
+Whether to check for transaction replacements.
+
+#### Default
+
+```ts
+true
+```
+
 ### confirmations?
 
 > `optional` **confirmations**: `number`
@@ -94,4 +106,4 @@ Optional timeout (in milliseconds) to wait before stopping polling.
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/waitForTransactionReceipt.d.ts:21
+node\_modules/viem/\_types/actions/public/waitForTransactionReceipt.d.ts:22

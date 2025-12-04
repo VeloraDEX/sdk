@@ -42,4 +42,4 @@ Modifies how data is serialized (e.g. transactions).
 
 ## Defined in
 
-node\_modules/viem/\_types/types/chain.d.ts:45
+node\_modules/viem/\_types/types/chain.d.ts:51

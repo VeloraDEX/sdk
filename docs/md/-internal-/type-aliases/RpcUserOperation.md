@@ -6,7 +6,13 @@
 
 # Type Alias: RpcUserOperation\<entryPointVersion\>
 
-> **RpcUserOperation**\<`entryPointVersion`\>: [`UserOperation`](UserOperation.md)\<`entryPointVersion`, [`Hex`](Hex.md)\>
+> **RpcUserOperation**\<`entryPointVersion`\>: [`UserOperation`](UserOperation.md)\<`entryPointVersion`, [`Hex`](Hex.md), [`Hex`](Hex.md)\> & `object`
+
+## Type declaration
+
+### eip7702Auth?
+
+> `optional` **eip7702Auth**: [`RpcAuthorization`](RpcAuthorization.md)
 
 ## Type Parameters
 
@@ -14,4 +20,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/account-abstraction/types/rpc.d.ts:6
+node\_modules/viem/\_types/account-abstraction/types/rpc.d.ts:7

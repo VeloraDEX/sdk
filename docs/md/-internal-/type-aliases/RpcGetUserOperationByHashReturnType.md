@@ -6,7 +6,7 @@
 
 # Type Alias: RpcGetUserOperationByHashReturnType\<entryPointVersion\>
 
-> **RpcGetUserOperationByHashReturnType**\<`entryPointVersion`\>: [`GetUserOperationByHashReturnType`](GetUserOperationByHashReturnType.md)\<`entryPointVersion`, [`Hex`](Hex.md)\>
+> **RpcGetUserOperationByHashReturnType**\<`entryPointVersion`\>: [`GetUserOperationByHashReturnType`](GetUserOperationByHashReturnType.md)\<`entryPointVersion`, [`Hex`](Hex.md), [`Hex`](Hex.md)\>
 
 ## Type Parameters
 
@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/account-abstraction/types/rpc.d.ts:5
+node\_modules/viem/\_types/account-abstraction/types/rpc.d.ts:6

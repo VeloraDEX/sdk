@@ -18,7 +18,7 @@
 
 #### Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:15
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:15
 
 ***
 
@@ -28,7 +28,7 @@ node\_modules/abitype/dist/types/utils.d.ts:15
 
 #### Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:16
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:16
 
 ***
 
@@ -764,7 +764,7 @@ TypeScript type to use for `bytes` output values
 
 #### Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:17
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:17
 
 ***
 
@@ -1104,7 +1104,7 @@ node\_modules/abitype/dist/types/utils.d.ts:17
 
 #### Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:18
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:18
 
 ***
 
@@ -1114,7 +1114,7 @@ node\_modules/abitype/dist/types/utils.d.ts:18
 
 #### Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:19
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:19
 
 ***
 

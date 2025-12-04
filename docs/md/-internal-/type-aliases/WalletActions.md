@@ -54,7 +54,7 @@ await client.addChain({ chain: optimism })
 Deploys a contract to the network, given bytecode and constructor arguments.
 
 - Docs: https://viem.sh/docs/contract/deployContract
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/contracts/deploying-contracts
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/contracts_deploying-contracts
 
 #### Type Parameters
 
@@ -121,6 +121,78 @@ const client = createWalletClient({
 const accounts = await client.getAddresses()
 ```
 
+### getCallsStatus()
+
+> **getCallsStatus**: (`parameters`) => `Promise`\<[`GetCallsStatusReturnType`](GetCallsStatusReturnType.md)\>
+
+Returns the status of a call batch that was sent via `sendCalls`.
+
+- Docs: https://viem.sh/docs/actions/wallet/getCallsStatus
+- JSON-RPC Methods: [`wallet_getCallsStatus`](https://eips.ethereum.org/EIPS/eip-5792)
+
+#### Parameters
+
+• **parameters**: [`GetCallsStatusParameters`](GetCallsStatusParameters.md)
+
+#### Returns
+
+`Promise`\<[`GetCallsStatusReturnType`](GetCallsStatusReturnType.md)\>
+
+Status of the calls. [GetCallsStatusReturnType](GetCallsStatusReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+
+const { receipts, status } = await client.getCallsStatus({ id: '0xdeadbeef' })
+```
+
+### getCapabilities()
+
+> **getCapabilities**: \<`chainId`\>(`parameters`?) => `Promise`\<[`GetCapabilitiesReturnType`](GetCapabilitiesReturnType.md)\<`chainId`\>\>
+
+Extract capabilities that a connected wallet supports (e.g. paymasters, session keys, etc).
+
+- Docs: https://viem.sh/docs/actions/wallet/getCapabilities
+- JSON-RPC Methods: [`wallet_getCapabilities`](https://eips.ethereum.org/EIPS/eip-5792)
+
+#### Type Parameters
+
+• **chainId** *extends* `number` \| `undefined`
+
+#### Parameters
+
+• **parameters?**: [`GetCapabilitiesParameters`](GetCapabilitiesParameters.md)\<`chainId`\>
+
+#### Returns
+
+`Promise`\<[`GetCapabilitiesReturnType`](GetCapabilitiesReturnType.md)\<`chainId`\>\>
+
+The wallet's capabilities. [GetCapabilitiesReturnType](GetCapabilitiesReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+
+const capabilities = await client.getCapabilities({
+  account: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+})
+```
+
 ### getChainId()
 
 > **getChainId**: () => `Promise`\<[`GetChainIdReturnType`](GetChainIdReturnType.md)\>
@@ -176,6 +248,62 @@ const client = createWalletClient({
   transport: custom(window.ethereum),
 })
 const permissions = await client.getPermissions()
+```
+
+### prepareAuthorization()
+
+> **prepareAuthorization**: (`parameters`) => `Promise`\<[`PrepareAuthorizationReturnType`](PrepareAuthorizationReturnType.md)\>
+
+Prepares an [EIP-7702 Authorization](https://eips.ethereum.org/EIPS/eip-7702) object for signing.
+This Action will fill the required fields of the Authorization object if they are not provided (e.g. `nonce` and `chainId`).
+
+With the prepared Authorization object, you can use [`signAuthorization`](https://viem.sh/docs/eip7702/signAuthorization) to sign over the Authorization object.
+
+#### Parameters
+
+• **parameters**: [`PrepareAuthorizationParameters`](PrepareAuthorizationParameters.md)\<`account`\>
+
+[PrepareAuthorizationParameters](PrepareAuthorizationParameters.md)
+
+#### Returns
+
+`Promise`\<[`PrepareAuthorizationReturnType`](PrepareAuthorizationReturnType.md)\>
+
+The prepared Authorization object. [PrepareAuthorizationReturnType](PrepareAuthorizationReturnType.md)
+
+#### Examples
+
+```ts
+import { createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: http(),
+})
+
+const authorization = await client.prepareAuthorization({
+  account: privateKeyToAccount('0x..'),
+  contractAddress: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+})
+```
+
+```ts
+// Account Hoisting
+import { createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  account: privateKeyToAccount('0x…'),
+  chain: mainnet,
+  transport: http(),
+})
+
+const authorization = await client.prepareAuthorization({
+  contractAddress: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+})
 ```
 
 ### prepareTransactionRequest()
@@ -308,6 +436,108 @@ const permissions = await client.requestPermissions({
 })
 ```
 
+### sendCalls()
+
+> **sendCalls**: \<`calls`, `chainOverride`\>(`parameters`) => `Promise`\<[`SendCallsReturnType`](SendCallsReturnType.md)\>
+
+Requests the connected wallet to send a batch of calls.
+
+- Docs: https://viem.sh/docs/actions/wallet/sendCalls
+- JSON-RPC Methods: [`wallet_sendCalls`](https://eips.ethereum.org/EIPS/eip-5792)
+
+#### Type Parameters
+
+• **calls** *extends* readonly `unknown`[]
+
+• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+
+#### Parameters
+
+• **parameters**: [`SendCallsParameters`](SendCallsParameters.md)\<`chain`, `account`, `chainOverride`, `calls`\>
+
+#### Returns
+
+`Promise`\<[`SendCallsReturnType`](SendCallsReturnType.md)\>
+
+Transaction identifier. [SendCallsReturnType](SendCallsReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+
+const id = await client.sendCalls({
+  account: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  calls: [
+    {
+      data: '0xdeadbeef',
+      to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+    },
+    {
+      to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+      value: 69420n,
+    },
+  ],
+})
+```
+
+### sendCallsSync()
+
+> **sendCallsSync**: \<`calls`, `chainOverride`\>(`parameters`) => `Promise`\<[`SendCallsSyncReturnType`](SendCallsSyncReturnType.md)\>
+
+Requests the connected wallet to send a batch of calls, and waits for the calls to be included in a block.
+
+- Docs: https://viem.sh/docs/actions/wallet/sendCallsSync
+- JSON-RPC Methods: [`wallet_sendCalls`](https://eips.ethereum.org/EIPS/eip-5792)
+
+#### Type Parameters
+
+• **calls** *extends* readonly `unknown`[]
+
+• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+
+#### Parameters
+
+• **parameters**: [`SendCallsSyncParameters`](SendCallsSyncParameters.md)\<`chain`, `account`, `chainOverride`, `calls`\>
+
+#### Returns
+
+`Promise`\<[`SendCallsSyncReturnType`](SendCallsSyncReturnType.md)\>
+
+Calls status. [SendCallsSyncReturnType](SendCallsSyncReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+
+const status = await client.sendCallsSync({
+  account: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  calls: [
+    {
+      data: '0xdeadbeef',
+      to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+    },
+    {
+      to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+      value: 69420n,
+    },
+  ],
+})
+```
+
 ### sendRawTransaction()
 
 > **sendRawTransaction**: (`args`) => `Promise`\<[`SendRawTransactionReturnType`](SendRawTransactionReturnType.md)\>
@@ -344,6 +574,43 @@ const hash = await client.sendRawTransaction({
 })
 ```
 
+### sendRawTransactionSync()
+
+> **sendRawTransactionSync**: (`args`) => `Promise`\<[`SendRawTransactionSyncReturnType`](SendRawTransactionSyncReturnType.md)\<`chain`\>\>
+
+Sends a **signed** transaction to the network synchronously,
+and waits for the transaction to be included in a block.
+
+- Docs: https://viem.sh/docs/actions/wallet/sendRawTransactionSync
+- JSON-RPC Method: [`eth_sendRawTransactionSync`](https://eips.ethereum.org/EIPS/eip-7966)
+
+#### Parameters
+
+• **args**: [`SendRawTransactionSyncParameters`](SendRawTransactionSyncParameters.md)
+
+#### Returns
+
+`Promise`\<[`SendRawTransactionSyncReturnType`](SendRawTransactionSyncReturnType.md)\<`chain`\>\>
+
+The transaction receipt. [SendRawTransactionSyncReturnType](SendRawTransactionSyncReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+import { sendRawTransactionSync } from 'viem/wallet'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+
+const receipt = await client.sendRawTransactionSync({
+  serializedTransaction: '0x02f850018203118080825208808080c080a04012522854168b27e5dc3d5839bab5e6b39e1a0ffd343901ce1622e3d64b48f1a04e00902ae0502c4728cbf12156290df99c3ed7de85b1dbfe20b5c36931733a33'
+})
+```
+
 ### sendTransaction()
 
 > **sendTransaction**: \<`request`, `chainOverride`\>(`args`) => `Promise`\<[`SendTransactionReturnType`](SendTransactionReturnType.md)\>
@@ -351,7 +618,7 @@ const hash = await client.sendRawTransaction({
 Creates, signs, and sends a new transaction to the network.
 
 - Docs: https://viem.sh/docs/actions/wallet/sendTransaction
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions/sending-transactions
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions_sending-transactions
 - JSON-RPC Methods:
   - JSON-RPC Accounts: [`eth_sendTransaction`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_sendtransaction)
   - Local Accounts: [`eth_sendRawTransaction`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_sendrawtransaction)
@@ -405,6 +672,162 @@ const client = createWalletClient({
 const hash = await client.sendTransaction({
   to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
   value: 1000000000000000000n,
+})
+```
+
+### sendTransactionSync()
+
+> **sendTransactionSync**: \<`request`, `chainOverride`\>(`args`) => `Promise`\<[`SendTransactionSyncReturnType`](SendTransactionSyncReturnType.md)\>
+
+Creates, signs, and sends a new transaction to the network synchronously.
+Returns the transaction receipt.
+
+- Docs: https://viem.sh/docs/actions/wallet/sendTransactionSync
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/transactions_sending-transactions
+- JSON-RPC Methods:
+  - JSON-RPC Accounts: [`eth_sendTransaction`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_sendtransaction)
+  - Local Accounts: [`eth_sendRawTransaction`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_sendrawtransaction)
+
+#### Type Parameters
+
+• **request** *extends* [`SendTransactionSyncRequest`](SendTransactionSyncRequest.md)\<`chain`, `chainOverride`\>
+
+• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+
+#### Parameters
+
+• **args**: [`SendTransactionSyncParameters`](SendTransactionSyncParameters.md)\<`chain`, `account`, `chainOverride`, `request`\>
+
+[SendTransactionParameters](SendTransactionParameters.md)
+
+#### Returns
+
+`Promise`\<[`SendTransactionSyncReturnType`](SendTransactionSyncReturnType.md)\>
+
+The transaction receipt. [SendTransactionReturnType](SendTransactionReturnType.md)
+
+#### Examples
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+const receipt = await client.sendTransactionSync({
+  account: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+  value: 1000000000000000000n,
+})
+```
+
+```ts
+// Account Hoisting
+import { createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  account: privateKeyToAccount('0x…'),
+  chain: mainnet,
+  transport: http(),
+})
+const receipt = await client.sendTransactionSync({
+  to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+  value: 1000000000000000000n,
+})
+```
+
+### showCallsStatus()
+
+> **showCallsStatus**: (`parameters`) => `Promise`\<[`ShowCallsStatusReturnType`](ShowCallsStatusReturnType.md)\>
+
+Requests for the wallet to show information about a call batch
+that was sent via `sendCalls`.
+
+- Docs: https://viem.sh/docs/actions/wallet/showCallsStatus
+- JSON-RPC Methods: [`wallet_showCallsStatus`](https://eips.ethereum.org/EIPS/eip-5792)
+
+#### Parameters
+
+• **parameters**: [`ShowCallsStatusParameters`](ShowCallsStatusParameters.md)
+
+#### Returns
+
+`Promise`\<[`ShowCallsStatusReturnType`](ShowCallsStatusReturnType.md)\>
+
+Displays status of the calls in wallet. [ShowCallsStatusReturnType](ShowCallsStatusReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+
+await client.showCallsStatus({ id: '0xdeadbeef' })
+```
+
+### signAuthorization()
+
+> **signAuthorization**: (`parameters`) => `Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType.md)\>
+
+Signs an [EIP-7702 Authorization](https://eips.ethereum.org/EIPS/eip-7702) object.
+
+With the calculated signature, you can:
+- use [`verifyAuthorization`](https://viem.sh/docs/eip7702/verifyAuthorization) to verify the signed Authorization object,
+- use [`recoverAuthorizationAddress`](https://viem.sh/docs/eip7702/recoverAuthorizationAddress) to recover the signing address from the signed Authorization object.
+
+#### Parameters
+
+• **parameters**: [`SignAuthorizationParameters`](SignAuthorizationParameters.md)\<`account`\>
+
+[SignAuthorizationParameters](SignAuthorizationParameters.md)
+
+#### Returns
+
+`Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType.md)\>
+
+The signed Authorization object. [SignAuthorizationReturnType](SignAuthorizationReturnType.md)
+
+#### Examples
+
+```ts
+import { createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: http(),
+})
+
+const signature = await client.signAuthorization({
+  account: privateKeyToAccount('0x..'),
+  contractAddress: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+})
+```
+
+```ts
+// Account Hoisting
+import { createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  account: privateKeyToAccount('0x…'),
+  chain: mainnet,
+  transport: http(),
+})
+
+const signature = await client.signAuthorization({
+  contractAddress: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
 })
 ```
 
@@ -681,6 +1104,41 @@ const client = createWalletClient({
 await client.switchChain({ id: optimism.id })
 ```
 
+### waitForCallsStatus()
+
+> **waitForCallsStatus**: (`parameters`) => `Promise`\<[`WaitForCallsStatusReturnType`](WaitForCallsStatusReturnType.md)\>
+
+Waits for the status & receipts of a call bundle that was sent via `sendCalls`.
+
+- Docs: https://viem.sh/docs/actions/wallet/waitForCallsStatus
+- JSON-RPC Methods: [`wallet_getCallsStatus`](https://eips.ethereum.org/EIPS/eip-5792)
+
+#### Parameters
+
+• **parameters**: [`WaitForCallsStatusParameters`](WaitForCallsStatusParameters.md)
+
+[WaitForCallsStatusParameters](WaitForCallsStatusParameters.md)
+
+#### Returns
+
+`Promise`\<[`WaitForCallsStatusReturnType`](WaitForCallsStatusReturnType.md)\>
+
+Status & receipts of the call bundle. [WaitForCallsStatusReturnType](WaitForCallsStatusReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+
+const { receipts, status } = await waitForCallsStatus(client, { id: '0xdeadbeef' })
+```
+
 ### watchAsset()
 
 > **watchAsset**: (`args`) => `Promise`\<[`WatchAssetReturnType`](WatchAssetReturnType.md)\>
@@ -729,7 +1187,7 @@ const success = await client.watchAsset({
 Executes a write function on a contract.
 
 - Docs: https://viem.sh/docs/contract/writeContract
-- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/contracts/writing-to-contracts
+- Examples: https://stackblitz.com/github/wevm/viem/tree/main/examples/contracts_writing-to-contracts
 
 A "write" function on a Solidity contract modifies the state of the blockchain. These types of functions require gas to be executed, and hence a [Transaction](https://viem.sh/docs/glossary/terms) is needed to be broadcast in order to change the state.
 
@@ -795,6 +1253,61 @@ const { request } = await client.simulateContract({
 const hash = await client.writeContract(request)
 ```
 
+### writeContractSync()
+
+> **writeContractSync**: \<`abi`, `functionName`, `args`, `chainOverride`\>(`args`) => `Promise`\<[`WriteContractSyncReturnType`](WriteContractSyncReturnType.md)\>
+
+Executes a write function on a contract synchronously.
+Returns the transaction receipt.
+
+- Docs: https://viem.sh/docs/contract/writeContract
+
+A "write" function on a Solidity contract modifies the state of the blockchain. These types of functions require gas to be executed, and hence a [Transaction](https://viem.sh/docs/glossary/terms) is needed to be broadcast in order to change the state.
+
+Internally, uses a [Wallet Client](https://viem.sh/docs/clients/wallet) to call the [`sendTransaction` action](https://viem.sh/docs/actions/wallet/sendTransaction) with [ABI-encoded `data`](https://viem.sh/docs/contract/encodeFunctionData).
+
+__Warning: The `write` internally sends a transaction – it does not validate if the contract write will succeed (the contract may throw an error). It is highly recommended to [simulate the contract write with `contract.simulate`](https://viem.sh/docs/contract/writeContract#usage) before you execute it.__
+
+#### Type Parameters
+
+• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+
+• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"payable"` \| `"nonpayable"`\>
+
+• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"payable"` \| `"nonpayable"`, `functionName`\>
+
+• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+
+#### Parameters
+
+• **args**: [`WriteContractSyncParameters`](WriteContractSyncParameters.md)\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`\>
+
+[WriteContractSyncParameters](WriteContractSyncParameters.md)
+
+#### Returns
+
+`Promise`\<[`WriteContractSyncReturnType`](WriteContractSyncReturnType.md)\>
+
+A [Transaction Receipt](https://viem.sh/docs/glossary/terms#receipt). [WriteContractSyncReturnType](WriteContractSyncReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom, parseAbi } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+const receipt = await client.writeContractSync({
+  address: '0xFBA3912Ca04dd458c843e2EE08967fC04f3579c2',
+  abi: parseAbi(['function mint(uint32 tokenId) nonpayable']),
+  functionName: 'mint',
+  args: [69420],
+})
+```
+
 ## Defined in
 
-node\_modules/viem/\_types/clients/decorators/wallet.d.ts:23
+node\_modules/viem/\_types/clients/decorators/wallet.d.ts:34

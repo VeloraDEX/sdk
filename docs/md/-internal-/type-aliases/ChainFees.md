@@ -54,4 +54,4 @@ Overrides the return value in the [`estimateMaxPriorityFeePerGas` Action](/docs/
 
 ## Defined in
 
-node\_modules/viem/\_types/types/chain.d.ts:78
+node\_modules/viem/\_types/types/chain.d.ts:84

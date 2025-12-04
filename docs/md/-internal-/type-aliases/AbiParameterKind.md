@@ -12,4 +12,4 @@ Kind of [AbiParameter](AbiParameter.md)
 
 ## Defined in
 
-node\_modules/abitype/dist/types/abi.d.ts:52
+node\_modules/viem/node\_modules/abitype/dist/types/abi.d.ts:52

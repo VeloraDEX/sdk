@@ -12,7 +12,7 @@
 
 ### chainId?
 
-> `optional` **chainId**: `number`
+> `optional` **chainId**: `number` \| `bigint`
 
 ### name?
 
@@ -32,4 +32,4 @@
 
 ## Defined in
 
-node\_modules/abitype/dist/types/abi.d.ts:121
+node\_modules/viem/node\_modules/abitype/dist/types/abi.d.ts:121

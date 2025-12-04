@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/accounts/utils/sign.d.ts:10
+node\_modules/viem/\_types/accounts/utils/sign.d.ts:12

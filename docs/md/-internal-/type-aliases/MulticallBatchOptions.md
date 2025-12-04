@@ -22,6 +22,12 @@ The maximum size (in bytes) for each calldata chunk.
 1_024
 ```
 
+### deployless?
+
+> `optional` **deployless**: `boolean`
+
+Enable deployless multicall.
+
 ### wait?
 
 > `optional` **wait**: `number`
@@ -36,4 +42,4 @@ The maximum number of milliseconds to wait before sending a batch.
 
 ## Defined in
 
-node\_modules/viem/\_types/clients/createClient.d.ts:92
+node\_modules/viem/\_types/clients/createClient.d.ts:104

@@ -14,18 +14,6 @@
 
 > **address**: [`Address`](Address.md)
 
-### experimental\_signAuthorization()?
-
-> `optional` **experimental\_signAuthorization**: (`parameters`) => `Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType.md)\>
-
-#### Parameters
-
-• **parameters**: [`Authorization`](Authorization.md)
-
-#### Returns
-
-`Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType.md)\>
-
 ### nonceManager?
 
 > `optional` **nonceManager**: [`NonceManager`](NonceManager.md)
@@ -44,6 +32,18 @@
 
 `Promise`\<[`Hex`](Hex.md)\>
 
+### signAuthorization()?
+
+> `optional` **signAuthorization**: (`parameters`) => `Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType.md)\>
+
+#### Parameters
+
+• **parameters**: [`AuthorizationRequest`](AuthorizationRequest.md)
+
+#### Returns
+
+`Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType.md)\>
+
 ### signMessage()
 
 > **signMessage**: (`{ message }`) => `Promise`\<[`Hex`](Hex.md)\>
@@ -60,7 +60,7 @@
 
 ### signTransaction()
 
-> **signTransaction**: \<`serializer`, `transaction`\>(`transaction`, `options`?) => `Promise`\<[`IsNarrowable`](IsNarrowable.md)\<[`TransactionSerialized`](TransactionSerialized.md)\<[`GetTransactionType`](GetTransactionType.md)\<`transaction`\>\>, [`Hex`](Hex.md)\> *extends* `true` ? [`TransactionSerialized`](TransactionSerialized.md)\<[`GetTransactionType`](GetTransactionType.md)\<`transaction`\>\> : [`Hex`](Hex.md)\>
+> **signTransaction**: \<`serializer`, `transaction`\>(`transaction`, `options`?) => `Promise`\<[`Hex`](Hex.md)\>
 
 #### Type Parameters
 
@@ -78,7 +78,7 @@
 
 #### Returns
 
-`Promise`\<[`IsNarrowable`](IsNarrowable.md)\<[`TransactionSerialized`](TransactionSerialized.md)\<[`GetTransactionType`](GetTransactionType.md)\<`transaction`\>\>, [`Hex`](Hex.md)\> *extends* `true` ? [`TransactionSerialized`](TransactionSerialized.md)\<[`GetTransactionType`](GetTransactionType.md)\<`transaction`\>\> : [`Hex`](Hex.md)\>
+`Promise`\<[`Hex`](Hex.md)\>
 
 ### signTypedData()
 
@@ -100,4 +100,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/accounts/types.d.ts:15
+node\_modules/viem/\_types/accounts/types.d.ts:14

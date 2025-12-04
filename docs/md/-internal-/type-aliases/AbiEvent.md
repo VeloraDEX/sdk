@@ -30,4 +30,4 @@ ABI ["event"](https://docs.soliditylang.org/en/latest/abi-spec.html#events) type
 
 ## Defined in
 
-node\_modules/abitype/dist/types/abi.d.ts:103
+node\_modules/viem/node\_modules/abitype/dist/types/abi.d.ts:103

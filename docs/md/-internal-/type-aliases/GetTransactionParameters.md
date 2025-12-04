@@ -6,7 +6,7 @@
 
 # Type Alias: GetTransactionParameters\<blockTag\>
 
-> **GetTransactionParameters**\<`blockTag`\>: `object` \| `object` \| `object` \| `object`
+> **GetTransactionParameters**\<`blockTag`\>: [`OneOf`](OneOf.md)\<`object` \| `object` \| `object` \| `object` \| `object`\>
 
 ## Type Parameters
 
@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/getTransaction.d.ts:11
+node\_modules/viem/\_types/actions/public/getTransaction.d.ts:13

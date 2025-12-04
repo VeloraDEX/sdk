@@ -26,4 +26,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/chain.d.ts:148
+node\_modules/viem/\_types/types/chain.d.ts:154

@@ -38,6 +38,10 @@
 
 > **blockNumber**: `number`
 
+### blockTimestamp
+
+> **blockTimestamp**: `string` \| `null`
+
 ### filledPercent
 
 > **filledPercent**: `number`
@@ -104,4 +108,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:65](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L65)
+[src/methods/delta/helpers/types.ts:66](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L66)

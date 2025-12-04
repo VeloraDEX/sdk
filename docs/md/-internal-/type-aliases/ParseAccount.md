@@ -10,7 +10,7 @@
 
 ## Type Parameters
 
-• **accountOrAddress** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined` = [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined`
+• **accountOrAddress** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `null` \| `undefined` = [`Account`](Account.md) \| [`Address`](Address.md) \| `null` \| `undefined`
 
 ## Defined in
 

@@ -14,6 +14,10 @@
 
 > `optional` **account**: [`Account`](Account.md) \| [`Address`](Address.md)
 
+### prepare?
+
+> `optional` **prepare**: `boolean` \| readonly [`PrepareTransactionRequestParameterType`](PrepareTransactionRequestParameterType.md)[]
+
 ### stateOverride?
 
 > `optional` **stateOverride**: [`StateOverride`](StateOverride.md)
@@ -24,4 +28,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/estimateGas.d.ts:16
+node\_modules/viem/\_types/actions/public/estimateGas.d.ts:17

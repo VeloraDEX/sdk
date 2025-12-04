@@ -20,4 +20,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/block.d.ts:72
+node\_modules/viem/\_types/types/block.d.ts:91

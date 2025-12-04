@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/estimateGas.d.ts:32
+node\_modules/viem/\_types/actions/public/estimateGas.d.ts:34

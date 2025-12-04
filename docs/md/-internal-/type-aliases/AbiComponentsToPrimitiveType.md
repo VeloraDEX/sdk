@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:56
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:56

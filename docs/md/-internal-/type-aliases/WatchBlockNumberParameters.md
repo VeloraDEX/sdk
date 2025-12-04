@@ -6,7 +6,7 @@
 
 # Type Alias: WatchBlockNumberParameters\<transport\>
 
-> **WatchBlockNumberParameters**\<`transport`\>: `object` & [`HasTransportType`](HasTransportType.md)\<`transport`, `"webSocket"`\> *extends* `true` ? `object` : `never` \| `object`
+> **WatchBlockNumberParameters**\<`transport`\>: `object` & [`HasTransportType`](HasTransportType.md)\<`transport`, `"webSocket"` \| `"ipc"`\> *extends* `true` ? `object` : `never` \| `object`
 
 ## Type declaration
 

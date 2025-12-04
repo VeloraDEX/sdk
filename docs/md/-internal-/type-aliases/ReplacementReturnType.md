@@ -32,4 +32,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/waitForTransactionReceipt.d.ts:14
+node\_modules/viem/\_types/actions/public/waitForTransactionReceipt.d.ts:15

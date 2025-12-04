@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/experimental/eip7702/types/authorization.d.ts:14
+node\_modules/viem/\_types/types/authorization.d.ts:29

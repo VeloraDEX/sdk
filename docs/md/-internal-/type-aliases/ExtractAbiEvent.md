@@ -26,4 +26,4 @@ Matching [AbiEvent](AbiEvent.md)
 
 ## Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:149
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:149

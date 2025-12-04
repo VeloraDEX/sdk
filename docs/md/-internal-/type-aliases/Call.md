@@ -24,4 +24,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/account-abstraction/accounts/types.d.ts:10
+node\_modules/viem/\_types/account-abstraction/accounts/types.d.ts:13

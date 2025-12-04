@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/estimateMaxPriorityFeePerGas.d.ts:14
+node\_modules/viem/\_types/actions/public/estimateMaxPriorityFeePerGas.d.ts:13

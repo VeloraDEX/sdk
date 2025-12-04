@@ -33,4 +33,4 @@ type Result = Merge<{ foo: string }, { foo: number; bar: string }>
 
 ## Defined in
 
-node\_modules/abitype/dist/types/types.d.ts:86
+node\_modules/viem/node\_modules/abitype/dist/types/types.d.ts:86

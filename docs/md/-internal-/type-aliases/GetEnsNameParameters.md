@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/ens/getEnsName.d.ts:11
+node\_modules/viem/\_types/actions/ens/getEnsName.d.ts:10

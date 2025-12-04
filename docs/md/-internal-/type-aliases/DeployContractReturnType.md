@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/wallet/deployContract.d.ts:20
+node\_modules/viem/\_types/actions/wallet/deployContract.d.ts:19

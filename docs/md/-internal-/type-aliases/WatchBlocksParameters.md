@@ -6,7 +6,7 @@
 
 # Type Alias: WatchBlocksParameters\<transport, chain, includeTransactions, blockTag\>
 
-> **WatchBlocksParameters**\<`transport`, `chain`, `includeTransactions`, `blockTag`\>: `object` & [`HasTransportType`](HasTransportType.md)\<`transport`, `"webSocket"`\> *extends* `true` ? `object` : `never` \| `object`
+> **WatchBlocksParameters**\<`transport`, `chain`, `includeTransactions`, `blockTag`\>: `object` & [`HasTransportType`](HasTransportType.md)\<`transport`, `"webSocket"` \| `"ipc"`\> *extends* `true` ? `object` : `never` \| `object`
 
 ## Type declaration
 

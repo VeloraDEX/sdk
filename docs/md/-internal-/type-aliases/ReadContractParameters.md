@@ -6,7 +6,7 @@
 
 # Type Alias: ReadContractParameters\<abi, functionName, args\>
 
-> **ReadContractParameters**\<`abi`, `functionName`, `args`\>: [`UnionEvaluate`](UnionEvaluate.md)\<[`Pick`](Pick.md)\<[`CallParameters`](CallParameters.md), `"account"` \| `"blockNumber"` \| `"blockTag"` \| `"factory"` \| `"factoryData"` \| `"stateOverride"`\>\> & [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `"pure"` \| `"view"`, `functionName`, `args`, `boolean`\>
+> **ReadContractParameters**\<`abi`, `functionName`, `args`\>: [`UnionEvaluate`](UnionEvaluate.md)\<[`Pick`](Pick.md)\<[`CallParameters`](CallParameters.md), `"account"` \| `"authorizationList"` \| `"blockNumber"` \| `"blockOverrides"` \| `"blockTag"` \| `"factory"` \| `"factoryData"` \| `"stateOverride"`\>\> & [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `"pure"` \| `"view"`, `functionName`, `args`, `boolean`\>
 
 ## Type Parameters
 

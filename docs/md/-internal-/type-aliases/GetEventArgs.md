@@ -4,9 +4,9 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / GetEventArgs
 
-# Type Alias: GetEventArgs\<abi, eventName, config, abiEvent, args, FailedToParseArgs\>
+# Type Alias: GetEventArgs\<abi, eventName, config, abiEvent, args\>
 
-> **GetEventArgs**\<`abi`, `eventName`, `config`, `abiEvent`, `args`, `FailedToParseArgs`\>: `true` *extends* `FailedToParseArgs` ? readonly `unknown`[] \| [`Record`](Record.md)\<`string`, `unknown`\> : `args`
+> **GetEventArgs**\<`abi`, `eventName`, `config`, `abiEvent`, `args`\>: `args` *extends* [`Record`](Record.md)\<[`PropertyKey`](PropertyKey.md), `never`\> ? readonly `unknown`[] \| [`Record`](Record.md)\<`string`, `unknown`\> : `args`
 
 ## Type Parameters
 
@@ -19,8 +19,6 @@
 • **abiEvent** *extends* [`AbiEvent`](AbiEvent.md) & `object` = `abi` *extends* [`Abi`](Abi.md) ? [`ExtractAbiEvent`](ExtractAbiEvent.md)\<`abi`, `eventName`\> : [`AbiEvent`](AbiEvent.md) & `object`
 
 • **args** = [`AbiEventParametersToPrimitiveTypes`](AbiEventParametersToPrimitiveTypes.md)\<`abiEvent`\[`"inputs"`\], `config`\>
-
-• **FailedToParseArgs** = [`args`] *extends* [`never`] ? `true` : `false` \| readonly `unknown`[] *extends* `args` ? `true` : `false`
 
 ## Defined in
 

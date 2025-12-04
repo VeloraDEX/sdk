@@ -22,4 +22,4 @@ ABI ["receive"](https://docs.soliditylang.org/en/latest/contracts.html#receive-e
 
 ## Defined in
 
-node\_modules/abitype/dist/types/abi.d.ts:98
+node\_modules/viem/node\_modules/abitype/dist/types/abi.d.ts:98

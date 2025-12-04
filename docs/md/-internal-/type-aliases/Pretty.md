@@ -27,4 +27,4 @@ type Result = Pretty<{ a: string } | { b: string } | { c: number, d: bigint }>
 
 ## Defined in
 
-node\_modules/abitype/dist/types/types.d.ts:108
+node\_modules/viem/node\_modules/abitype/dist/types/types.d.ts:108

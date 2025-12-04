@@ -16,11 +16,13 @@
 
 ### format()
 
-> **format**: (`args`) => `any`
+> **format**: (`args`, `action`?) => `any`
 
 #### Parameters
 
 • **args**: `any`
+
+• **action?**: `string`
 
 #### Returns
 
@@ -32,4 +34,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/chain.d.ts:112
+node\_modules/viem/\_types/types/chain.d.ts:118

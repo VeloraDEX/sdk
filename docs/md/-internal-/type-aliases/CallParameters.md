@@ -22,6 +22,12 @@ Account attached to the call (msg.sender).
 
 Whether or not to enable multicall batching on this call.
 
+### blockOverrides?
+
+> `optional` **blockOverrides**: [`BlockOverrides`](BlockOverrides.md)
+
+Block overrides for the call.
+
 ### code?
 
 > `optional` **code**: [`Hex`](Hex.md)
@@ -52,4 +58,4 @@ State overrides for the call.
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/call.d.ts:24
+node\_modules/viem/\_types/actions/public/call.d.ts:25

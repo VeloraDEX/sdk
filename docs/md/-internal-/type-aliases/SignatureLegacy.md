@@ -4,9 +4,13 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / SignatureLegacy
 
-# Type Alias: SignatureLegacy
+# Type Alias: SignatureLegacy\<bigintType\>
 
-> **SignatureLegacy**: `object`
+> **SignatureLegacy**\<`bigintType`\>: `object`
+
+## Type Parameters
+
+• **bigintType** = `bigint`
 
 ## Type declaration
 
@@ -20,7 +24,7 @@
 
 ### v
 
-> **v**: `bigint`
+> **v**: `bigintType`
 
 ## Defined in
 

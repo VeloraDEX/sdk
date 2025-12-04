@@ -6,7 +6,7 @@
 
 # Type Alias: DeltaAuctionStatus
 
-> **DeltaAuctionStatus**: `"NOT_STARTED"` \| `"RUNNING"` \| `"EXECUTING"` \| `"EXECUTED"` \| `"FAILED"` \| `"EXPIRED"` \| `"CANCELLED"` \| `"SUSPENDED"`
+> **DeltaAuctionStatus**: `"NOT_STARTED"` \| `"AWAITING_PRE_SIGNATURE"` \| `"RUNNING"` \| `"EXECUTING"` \| `"EXECUTED"` \| `"FAILED"` \| `"EXPIRED"` \| `"CANCELLED"` \| `"SUSPENDED"`
 
 ## Defined in
 

@@ -36,4 +36,4 @@ The type of fees to return.
 
 ## Defined in
 
-node\_modules/viem/\_types/types/chain.d.ts:70
+node\_modules/viem/\_types/types/chain.d.ts:76

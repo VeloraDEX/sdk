@@ -6,27 +6,27 @@
 
 # Type Alias: Authorization\<uint32, signed\>
 
-> **Authorization**\<`uint32`, `signed`\>: `object` & `signed` *extends* `true` ? [`Signature`](Signature.md) : [`ExactPartial`](ExactPartial.md)\<[`Signature`](Signature.md)\>
+> **Authorization**\<`uint32`, `signed`\>: `object` & `signed` *extends* `true` ? [`Signature`](Signature.md)\<`uint32`\> : [`ExactPartial`](ExactPartial.md)\<[`Signature`](Signature.md)\<`uint32`\>\>
 
 ## Type declaration
+
+### address
+
+> **address**: [`Address`](Address.md)
+
+Address of the contract to delegate to.
 
 ### chainId
 
 > **chainId**: `uint32`
 
-Chain ID to authorize.
-
-### contractAddress
-
-> **contractAddress**: [`Address`](Address.md)
-
-Address of the contract to set as code for the Authority.
+Chain ID.
 
 ### nonce
 
 > **nonce**: `uint32`
 
-Nonce of the Authority to authorize.
+Nonce of the EOA to delegate to.
 
 ## Type Parameters
 
@@ -36,4 +36,4 @@ Nonce of the Authority to authorize.
 
 ## Defined in
 
-node\_modules/viem/\_types/experimental/eip7702/types/authorization.d.ts:4
+node\_modules/viem/\_types/types/authorization.d.ts:4

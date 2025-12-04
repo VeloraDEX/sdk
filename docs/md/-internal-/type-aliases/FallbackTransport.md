@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/clients/transports/fallback.d.ts:61
+node\_modules/viem/\_types/clients/transports/fallback.d.ts:69

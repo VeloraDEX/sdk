@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/rpc.d.ts:26
+node\_modules/viem/\_types/types/rpc.d.ts:40

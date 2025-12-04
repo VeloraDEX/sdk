@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/signDeltaOrder.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/signDeltaOrder.ts#L11)
+[src/methods/delta/signDeltaOrder.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/signDeltaOrder.ts#L5)

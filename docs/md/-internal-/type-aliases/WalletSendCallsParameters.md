@@ -10,7 +10,7 @@
 
 ## Type Parameters
 
-• **capabilities** *extends* [`WalletCapabilities`](WalletCapabilities.md) = [`WalletCapabilities`](WalletCapabilities.md)
+• **capabilities** *extends* [`Capabilities`](Capabilities.md) = [`Capabilities`](Capabilities.md)
 
 • **chainId** *extends* [`Hex`](Hex.md) \| `number` = [`Hex`](Hex.md)
 
@@ -18,4 +18,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/types/eip1193.d.ts:134
+node\_modules/viem/\_types/types/eip1193.d.ts:155

@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/abitype/dist/types/utils.d.ts:21
+node\_modules/viem/node\_modules/abitype/dist/types/utils.d.ts:21

@@ -4,23 +4,15 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / SmartAccountImplementation
 
-# Type Alias: SmartAccountImplementation\<entryPointAbi, entryPointVersion, extend\>
+# Type Alias: SmartAccountImplementation\<entryPointAbi, entryPointVersion, extend, eip7702\>
 
-> **SmartAccountImplementation**\<`entryPointAbi`, `entryPointVersion`, `extend`\>: `object`
-
-## Type Parameters
-
-• **entryPointAbi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
-
-• **entryPointVersion** *extends* [`EntryPointVersion`](EntryPointVersion.md) = [`EntryPointVersion`](EntryPointVersion.md)
-
-• **extend** *extends* `object` = `object`
+> **SmartAccountImplementation**\<`entryPointAbi`, `entryPointVersion`, `extend`, `eip7702`\>: `object` & `eip7702` *extends* `true` ? `object` : `object`
 
 ## Type declaration
 
 ### client
 
-> **client**: [`Client`](Client.md)
+> **client**: [`Client`](Client.md)\<[`Transport`](Transport.md), [`Chain`](Chain.md) \| `undefined`, [`JsonRpcAccount`](JsonRpcAccount.md) \| [`LocalAccount`](LocalAccount.md) \| `undefined`\>
 
 Client used to retrieve Smart Account data, and perform signing (if owner is a JSON-RPC Account).
 
@@ -319,6 +311,16 @@ Prepares gas properties for the User Operation request.
 
 `Promise`\<[`ExactPartial`](ExactPartial.md)\<[`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\> \| `undefined`\>
 
+## Type Parameters
+
+• **entryPointAbi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+
+• **entryPointVersion** *extends* [`EntryPointVersion`](EntryPointVersion.md) = [`EntryPointVersion`](EntryPointVersion.md)
+
+• **extend** *extends* `object` = `object`
+
+• **eip7702** *extends* `boolean` = `boolean`
+
 ## Defined in
 
-node\_modules/viem/\_types/account-abstraction/accounts/types.d.ts:15
+node\_modules/viem/\_types/account-abstraction/accounts/types.d.ts:18

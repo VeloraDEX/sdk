@@ -28,4 +28,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/wallet/writeContract.d.ts:18
+node\_modules/viem/\_types/actions/wallet/writeContract.d.ts:19

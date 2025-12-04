@@ -54,4 +54,4 @@ Native currency for the chain.
 
 ## Defined in
 
-node\_modules/viem/\_types/types/eip1193.d.ts:43
+node\_modules/viem/\_types/types/eip1193.d.ts:46

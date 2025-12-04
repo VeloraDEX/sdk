@@ -18,4 +18,4 @@
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/wallet/sendTransaction.d.ts:24
+node\_modules/viem/\_types/actions/wallet/sendTransaction.d.ts:23
