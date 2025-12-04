@@ -24,6 +24,8 @@ import {
   PostDeltaOrderParams,
   FetcherFunction,
   constructCancelDeltaOrder,
+  constructPreSignDeltaOrder,
+  GetDeltaContractFunctions,
 } from '../src';
 import BigNumber from 'bignumber.js';
 
@@ -36,12 +38,17 @@ import {
   Address,
   createWalletClient,
   custom,
+  Hash,
   Hex,
+  publicActions,
   verifyTypedData,
 } from 'viem';
 import { hardhat } from 'viem/chains';
 import { ZERO_ADDRESS } from '../src/methods/common/orders/buildOrderData';
-import { BridgePriceInfo } from '../src/methods/delta/helpers/types';
+import {
+  BridgePriceInfo,
+  DeltaAuctionOrder,
+} from '../src/methods/delta/helpers/types';
 
 dotenv.config();
 
@@ -82,7 +89,7 @@ const viemWalletClient = createWalletClient({
   account: privateKeyToAccount(wallet.privateKey as Hex),
   chain: { ...hardhat, id: chainId },
   transport: custom(HardhatProvider),
-});
+}).extend(publicActions);
 
 const ethersV5ContractCaller = constructEthersV5ContractCaller(
   {
@@ -775,6 +782,63 @@ describe('Delta:methods', () => {
 
     expect(staticSignedOrderData).toMatchSnapshot();
   });
+
+  describe('PreSign Delta Order', () => {
+    const sdk = constructPartialSDK(
+      {
+        chainId: 1,
+        fetcher: fetchFetcher,
+        contractCaller: viemContractCaller,
+        apiURL: process.env.API_URL,
+      },
+      constructPreSignDeltaOrder,
+      constructGetDeltaContract
+    );
+
+    const sampleOrder: DeltaAuctionOrder = {
+      owner: '0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9',
+      beneficiary: '0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9',
+      srcToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+      destToken: '0x6B175474E89094C44Da98b954EedeAC495271d0F',
+      srcAmount: '1000000000000000000',
+      destAmount: '3147447403157656698880',
+      expectedAmount: '3163263721766488892666',
+      kind: 0,
+      metadata: '0x',
+      deadline: 1731328853,
+      nonce: '1731325253703',
+      permit: '0x',
+      partnerAndFee: '0',
+      bridge: {
+        protocolSelector: '0x00000000',
+        destinationChainId: 0,
+        outputToken: ZERO_ADDRESS,
+        scalingFactor: 0,
+        protocolData: '0x',
+      },
+    };
+
+    test('hash Delta Order', async () => {
+      const orderHash = await sdk.hashDeltaOrder(sampleOrder);
+      expect(orderHash).toMatchInlineSnapshot(
+        `"0x4e68492d838e64c329ecdba51d32cb088088445ca62b1d5c4edf5a2ab80b586d"`
+      );
+    });
+    test('PreSign Delta Order', async () => {
+      const sampleOrderHash =
+        '0x4e68492d838e64c329ecdba51d32cb088088445ca62b1d5c4edf5a2ab80b586d';
+      const txHash = await sdk.setDeltaOrderPreSignature(sampleOrderHash);
+
+      await viemWalletClient.waitForTransactionReceipt({ hash: txHash });
+
+      const isPreSigned = await checkIfOrderHashPreSigned({
+        orderHash: sampleOrderHash,
+        owner: senderAddress,
+        sdk,
+      });
+      expect(isPreSigned).toBe(true);
+    });
+  });
 });
 
 function getTokenAllowance({
@@ -840,4 +904,73 @@ async function verifySignedCancelRequest({
   });
 
   return valid;
+}
+
+const PreSignatureModuleAbi = [
+  {
+    inputs: [
+      {
+        internalType: 'address',
+        name: 'owner',
+        type: 'address',
+      },
+      {
+        internalType: 'bytes32',
+        name: 'orderHash',
+        type: 'bytes32',
+      },
+    ],
+    name: 'isPreSigned',
+    outputs: [
+      {
+        internalType: 'bool',
+        name: '',
+        type: 'bool',
+      },
+    ],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [
+      {
+        internalType: 'bytes32',
+        name: 'orderHash',
+        type: 'bytes32',
+      },
+      {
+        internalType: 'bool',
+        name: 'preSigned',
+        type: 'bool',
+      },
+    ],
+    name: 'setPreSignature',
+    outputs: [],
+    stateMutability: 'nonpayable',
+    type: 'function',
+  },
+] as const;
+
+type CheckIfOrderHashPreSignedInput = {
+  orderHash: string;
+  owner: string;
+  sdk: GetDeltaContractFunctions;
+};
+
+async function checkIfOrderHashPreSigned({
+  orderHash,
+  owner,
+  sdk,
+}: CheckIfOrderHashPreSignedInput): Promise<boolean> {
+  const ParaswapDelta = await sdk.getDeltaContract();
+
+  assert(ParaswapDelta, 'ParaswapDelta is not available');
+
+  const isPreSigned = await viemWalletClient.readContract({
+    address: ParaswapDelta as Address,
+    abi: PreSignatureModuleAbi,
+    functionName: 'isPreSigned',
+    args: [owner as Address, orderHash as Hash],
+  });
+  return isPreSigned;
 }

@@ -54,6 +54,7 @@ export type Bridge = {
 
 export type DeltaAuctionStatus =
   | 'NOT_STARTED'
+  | 'AWAITING_PRE_SIGNATURE'
   | 'RUNNING'
   | 'EXECUTING'
   | 'EXECUTED'
@@ -69,6 +70,7 @@ type DeltaAuctionTransaction = {
   bidId: string | null;
   blockNumber: number;
   blockHash: string;
+  blockTimestamp: string | null; // ISO string, null for older Orders
   gasUsed: bigint;
   gasPrice: bigint;
   blobGasUsed: bigint;

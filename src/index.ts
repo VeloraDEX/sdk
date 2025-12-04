@@ -162,6 +162,10 @@ import {
   SignDeltaOrderFunctions,
 } from './methods/delta/signDeltaOrder';
 import {
+  constructPreSignDeltaOrder,
+  PreSignDeltaOrderFunctions,
+} from './methods/delta/preSignDeltaOrder';
+import {
   GetDeltaContractFunctions,
   constructGetDeltaContract,
 } from './methods/delta/getDeltaContract';
@@ -288,6 +292,7 @@ export {
   constructBuildDeltaOrder,
   constructPostDeltaOrder,
   constructSignDeltaOrder,
+  constructPreSignDeltaOrder,
   constructGetDeltaContract,
   constructGetDeltaPrice,
   constructGetDeltaOrders,
@@ -379,6 +384,7 @@ export type {
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
   SignDeltaOrderFunctions,
+  PreSignDeltaOrderFunctions,
   GetDeltaContractFunctions,
   GetDeltaPriceFunctions,
   GetDeltaOrdersFunctions,

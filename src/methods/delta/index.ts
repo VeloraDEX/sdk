@@ -46,6 +46,10 @@ import {
   CancelDeltaOrderFunctions,
   constructCancelDeltaOrder,
 } from './cancelDeltaOrder';
+import {
+  constructPreSignDeltaOrder,
+  PreSignDeltaOrderFunctions,
+} from './preSignDeltaOrder';
 
 export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
   /** @description designates the Order as being able to be partially filled, as opposed to fill-or-kill */
@@ -66,6 +70,7 @@ export const constructSubmitDeltaOrder = (
   options: ConstructProviderFetchInput<any, 'signTypedDataCall'>
 ): SubmitDeltaOrderFuncs => {
   const { buildDeltaOrder } = constructBuildDeltaOrder(options);
+  // in the normal submitOrderFlow preSign tx is not involved
   const { signDeltaOrder } = constructSignDeltaOrder(options);
   const { postDeltaOrder } = constructPostDeltaOrder(options);
 
@@ -101,6 +106,7 @@ export type DeltaOrderHandlers<T> = SubmitDeltaOrderFuncs &
   IsTokenSupportedInDeltaFunctions &
   PostDeltaOrderFunctions &
   SignDeltaOrderFunctions &
+  PreSignDeltaOrderFunctions<T> &
   CancelDeltaOrderFunctions;
 
 /** @description construct SDK with every Delta Order-related method, fetching from API and Order signing */
@@ -124,6 +130,7 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
 
   const deltaOrdersBuild = constructBuildDeltaOrder(options);
   const deltaOrdersSign = constructSignDeltaOrder(options);
+  const deltaOrdersPreSign = constructPreSignDeltaOrder(options);
   const deltaOrdersPost = constructPostDeltaOrder(options);
 
   const deltaOrdersCancel = constructCancelDeltaOrder(options);
@@ -139,6 +146,7 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
     ...deltaOrdersSubmit,
     ...deltaOrdersBuild,
     ...deltaOrdersSign,
+    ...deltaOrdersPreSign,
     ...deltaOrdersPost,
     ...deltaOrdersCancel,
   };

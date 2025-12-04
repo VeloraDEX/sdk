@@ -59,7 +59,7 @@ type SignDeltaOrderInput = {
   chainId: number;
 };
 
-function produceDeltaOrderTypedData({
+export function produceDeltaOrderTypedData({
   orderInput,
   chainId,
   paraswapDeltaAddress,
