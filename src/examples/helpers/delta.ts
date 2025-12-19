@@ -1,7 +1,7 @@
 import { DeltaAuction, DeltaOrderFromAPI } from '../..';
 
 function isExecutedDeltaAuction(
-  auction: Omit<DeltaAuction, 'signature'>,
+  auction: Omit<DeltaAuction, 'signature' | 'cosignature'>,
   waitForCrosschain = true // only consider executed when destChain work is done
 ) {
   if (auction.status !== 'EXECUTED') return false;
