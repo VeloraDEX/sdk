@@ -35,15 +35,22 @@ export type DeltaPriceParams = {
 
   includeAgents?: string[];
   excludeAgents?: string[];
+  includeBridges?: string[];
+  excludeBridges?: string[];
+
+  /** @description Allow swap on destChain after bridge. Default is true. */
+  allowBridgeSwap?: boolean;
 };
 
 type DeltaPriceQueryOptions = Omit<
   DeltaPriceParams,
-  'includeAgents' | 'excludeAgents'
+  'includeAgents' | 'excludeAgents' | 'includeBridges' | 'excludeBridges'
 > & {
   chainId: number; // will return error from API on unsupported chains
   includeAgents?: string;
   excludeAgents?: string;
+  includeBridges?: string;
+  excludeBridges?: string;
 };
 
 // for same-chain Orders, all 0 params
@@ -164,12 +171,24 @@ export const constructGetDeltaPrice = ({
     options: DeltaPriceParams,
     requestParams?: RequestParameters
   ): Promise<DeltaPrice | BridgePrice> {
-    const { includeAgents, excludeAgents, ...rest } = options;
+    const {
+      includeAgents,
+      excludeAgents,
+      includeBridges,
+      excludeBridges,
+      ...rest
+    } = options;
     const includeAgentsString = includeAgents
       ? includeAgents.join(',')
       : undefined;
     const excludeAgentsString = excludeAgents
       ? excludeAgents.join(',')
+      : undefined;
+    const includeBridgesString = includeBridges
+      ? includeBridges.join(',')
+      : undefined;
+    const excludeBridgesString = excludeBridges
+      ? excludeBridges.join(',')
       : undefined;
 
     const search = constructSearchString<DeltaPriceQueryOptions>({
@@ -178,6 +197,8 @@ export const constructGetDeltaPrice = ({
       side: options.side ?? SwapSide.SELL,
       includeAgents: includeAgentsString,
       excludeAgents: excludeAgentsString,
+      includeBridges: includeBridgesString,
+      excludeBridges: excludeBridgesString,
     });
 
     const fetchURL = `${pricesUrl}/${search}` as const;
