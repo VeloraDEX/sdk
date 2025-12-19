@@ -27,6 +27,7 @@ export type DeltaOrderApiResponse = Omit<DeltaAuction, 'transactions'> & {
   orderVersion: string; // "2.0.0"
   deltaGasOverhead: number; // @TODO may be removed
   type: 'MARKET' | 'LIMIT';
+  cosignature: '0x';
 };
 
 type PostDeltaOrder = (
