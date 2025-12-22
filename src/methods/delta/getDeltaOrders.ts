@@ -7,7 +7,7 @@ import type {
 } from '../../types';
 import type { DeltaAuction, DeltaAuctionStatus } from './helpers/types';
 
-export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature' | 'cosignature'>;
+export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature'>;
 
 export type DeltaOrderFilterByStatus =
   | DeltaAuctionStatus

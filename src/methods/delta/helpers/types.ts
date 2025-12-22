@@ -95,7 +95,6 @@ export type DeltaAuction = {
   deltaVersion: string; // 1.0 or 2.0 currently
   user: string;
   signature: string;
-  cosignature: string; // added for Crosschain Orders after bridge
   status: DeltaAuctionStatus;
   order: DeltaAuctionOrder;
   orderHash: string | null; // not available on old Orders only
