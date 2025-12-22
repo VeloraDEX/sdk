@@ -39,7 +39,7 @@ export type DeltaPriceParams = {
   excludeBridges?: string[];
 
   /** @description Allow swap on destChain after bridge. Default is true. */
-  allowBridgeSwap?: boolean;
+  allowBridgeAndSwap?: boolean;
 };
 
 type DeltaPriceQueryOptions = Omit<
