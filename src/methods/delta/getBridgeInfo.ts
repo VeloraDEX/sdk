@@ -28,9 +28,22 @@ type GetBridgeInfo = (
   requestParams?: RequestParameters
 ) => Promise<BridgeInfo>;
 
+type BridgeProtocolResponse = {
+  protocol: string;
+  displayName: string;
+};
+
+type BridgeProtocolsResponse = {
+  bridgeProtocols: BridgeProtocolResponse[];
+};
+
+type GetBridgeProtocols = (
+  requestParams?: RequestParameters
+) => Promise<BridgeProtocolResponse[]>;
 
 export type GetBridgeInfoFunctions = {
   getBridgeInfo: GetBridgeInfo;
+  getBridgeProtocols: GetBridgeProtocols;
 };
 
 export const constructGetBridgeInfo = ({
@@ -60,7 +73,20 @@ export const constructGetBridgeInfo = ({
     return data.supportedTokens;
   };
 
+  const getBridgeProtocols: GetBridgeProtocols = async (requestParams) => {
+    const fetchURL = `${deltaBridgeUrl}/bridge-protocols` as const;
+
+    const data = await fetcher<BridgeProtocolsResponse>({
+      url: fetchURL,
+      method: 'GET',
+      requestParams,
+    });
+
+    return data.bridgeProtocols;
+  };
+
   return {
     getBridgeInfo,
+    getBridgeProtocols,
   };
 };
