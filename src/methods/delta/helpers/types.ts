@@ -138,20 +138,6 @@ export type BridgeStatus = 'pending' | 'filled' | 'expired' | 'refunded';
 
 //// available on BridgePrice ////
 
-// so far
-type ProtocolName =
-  | 'Across'
-  | 'StargateBus'
-  | 'StargateTaxi'
-  | 'StargateOftV2'
-  | 'Relay'
-  | 'CCTPFast'
-  | 'CCTPStandard'
-  | 'Celer'
-  | 'Canonical'
-  | 'Polygon'
-  | 'Arbitrum';
-
 type BridgeQuoteFee = {
   feeToken: string;
   amount: string;
@@ -160,7 +146,7 @@ type BridgeQuoteFee = {
 };
 
 export type BridgePriceInfo = {
-  protocolName: ProtocolName;
+  protocolName: string;
   destAmountAfterBridge: string;
   destUSDAfterBridge: string;
   fees: BridgeQuoteFee[];
