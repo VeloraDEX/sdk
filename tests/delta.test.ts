@@ -26,6 +26,7 @@ import {
   constructCancelDeltaOrder,
   constructPreSignDeltaOrder,
   GetDeltaContractFunctions,
+  constructGetBridgeInfo,
 } from '../src';
 import BigNumber from 'bignumber.js';
 
@@ -130,8 +131,49 @@ describe('Delta:methods', () => {
     constructGetDeltaPrice,
     constructBuildDeltaOrder,
     constructApproveTokenForDelta,
-    constructGetPartnerFee
+    constructGetPartnerFee,
+    constructGetBridgeInfo
   );
+
+  describe('Bridge methods', () => {
+    test('Get Bridge Info', async () => {
+      const bridgeInfo = await deltaSDK.getBridgeInfo();
+      expect(Object.keys(bridgeInfo)).toEqual(
+        // allow for more chains to be added in the future
+        expect.arrayContaining(['1', '10', '56', '130', '137', '8453', '42161'])
+      );
+    });
+
+    test('Get Bridge Protocols', async () => {
+      const bridgeProtocols = await deltaSDK.getBridgeProtocols();
+      const expectedToInclude = [
+        {
+          displayName: 'Across',
+          protocol: 'Across',
+        },
+        {
+          displayName: 'Stargate Bus',
+          protocol: 'StargateBus',
+        },
+        {
+          displayName: 'Stargate Taxi',
+          protocol: 'StargateTaxi',
+        },
+        {
+          displayName: 'Stargate OFT V2',
+          protocol: 'StargateOftV2',
+        },
+        {
+          displayName: 'Relay',
+          protocol: 'Relay',
+        },
+      ];
+      expect(bridgeProtocols).toEqual(
+        // allow for more bridges to be added in the future
+        expect.arrayContaining(expectedToInclude)
+      );
+    });
+  });
 
   test('Get Delta Price', async () => {
     const deltaPrice = await deltaSDK.getDeltaPrice({
