@@ -98,9 +98,9 @@ type AvailableBridgePrice = Pick<
   DeltaPrice,
   | 'destToken'
   | 'destAmount'
-  | 'destAmountBeforeFee'
+  | 'destAmountBeforeFee' // Available for SELL side
   | 'destUSD'
-  | 'destUSDBeforeFee'
+  | 'destUSDBeforeFee' // Available for SELL side
   | 'gasCostUSD'
   | 'gasCost'
   | 'gasCostUSDBeforeFee'
