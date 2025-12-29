@@ -19,7 +19,7 @@ type GetBridgeInfoParams = {
 };
 
 type BridgeInfoQuery = {
-  allowBridgeAndSwap?: string;
+  allowBridgeAndSwap?: boolean;
   bridges?: string;
 };
 
@@ -54,11 +54,10 @@ export const constructGetBridgeInfo = ({
 
   const getBridgeInfo: GetBridgeInfo = async (params = {}, requestParams) => {
     const { allowBridgeAndSwap, bridges } = params;
-    const allowBridgeAndSwapString = allowBridgeAndSwap ? 'true' : 'false';
     const bridgesString = bridges ? bridges.join(',') : undefined;
 
     const search = constructSearchString<BridgeInfoQuery>({
-      allowBridgeAndSwap: allowBridgeAndSwapString,
+      allowBridgeAndSwap: !!allowBridgeAndSwap,
       bridges: bridgesString,
     });
 
