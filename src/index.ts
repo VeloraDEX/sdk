@@ -194,6 +194,7 @@ import {
   constructGetBridgeInfo,
   GetBridgeInfoFunctions,
   BridgeInfo,
+  BridgeProtocolResponse,
 } from './methods/delta/getBridgeInfo';
 import {
   constructIsTokenSupportedInDelta,
@@ -378,6 +379,7 @@ export type {
   BridgeStatus,
   Bridge,
   BridgeInfo,
+  BridgeProtocolResponse,
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
   SignableDeltaOrderData,

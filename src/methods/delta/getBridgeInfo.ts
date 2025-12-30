@@ -28,7 +28,7 @@ type GetBridgeInfo = (
   requestParams?: RequestParameters
 ) => Promise<BridgeInfo>;
 
-type BridgeProtocolResponse = {
+export type BridgeProtocolResponse = {
   protocol: string;
   displayName: string;
 };
