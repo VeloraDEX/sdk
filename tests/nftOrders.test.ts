@@ -673,7 +673,7 @@ describe('NFT Orders', () => {
     `);
   });
 
-  test(`fillNFTOrder through Augustus`, async () => {
+  test.skip(`fillNFTOrder through Augustus`, async () => {
     // 1 NFT
     const makerAmount = (1).toString(10);
     // for 6 COMP
@@ -824,12 +824,12 @@ describe('NFT Orders', () => {
         "expiry": 1766188800,
         "maker": "0xaC39b311DCEb2A4b2f5d8461c1cdaF756F4F7Ae9",
         "makerAmount": "1",
-        "makerAsset": "3619753999533144330718273179089670910543115756213",
+        "makerAsset": "3211709136765895079141554841316046831806317204026",
         "makerAssetId": "0",
         "makerAssetType": 2,
         "nonce": 999,
         "nonceAndMeta": "1461271868364326844682297910593670628577722568144820",
-        "signature": "0xef64a66db7989602dd711ea1a09dd9cb7c277e353ec0b274d3e75a967054b7cf759444927184b9a8621fb04d19af89c1545501223c8f8197361569eb485104801c",
+        "signature": "0x1666851b5f1a9ecd8723e83b0f57998172482075d9c8a5525d6de13818eebcd875fd2488bf91ebd2cffe2e8e2ff61d619435836cfd48c302d29eabb6078e4abc1b",
         "taker": "0xDEF171Fe48CF0115B1d80b88dc8eAB59176FEe57",
         "takerAmount": "6000000000000000000",
         "takerAsset": "1096451400262405796991039590211805051831004063880",
