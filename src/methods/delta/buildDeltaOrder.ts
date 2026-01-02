@@ -65,7 +65,7 @@ export type BuildDeltaOrderDataParams = {
   /** @description take surplus */
   partnerTakesSurplus?: boolean;
 
-  /** @description A boolean indicating whether the surplus should be capped */
+  /** @description A boolean indicating whether the surplus should be capped. True by default */
   capSurplus?: boolean;
 
   /** @description The side of the order. Default is SELL */
