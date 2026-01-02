@@ -172,13 +172,15 @@ function producePartnerAndFee({
   partnerTakesSurplus,
   capSurplus,
 }: ProducePartnerAndFeeInput): string {
-  if (partnerAddress === ZERO_ADDRESS) return '0';
+  if (partnerAddress === ZERO_ADDRESS) {
+    return capSurplus ? (BigInt(capSurplus) << BigInt(9)).toString(10) : '0';
+  } else {
+    const partnerAndFee =
+      (BigInt(partnerAddress) << BigInt(96)) |
+      BigInt(partnerFeeBps.toFixed(0)) |
+      (BigInt(partnerTakesSurplus) << BigInt(8)) |
+      (BigInt(capSurplus) << BigInt(9));
 
-  const partnerAndFee =
-    (BigInt(partnerAddress) << BigInt(96)) |
-    BigInt(partnerFeeBps.toFixed(0)) |
-    (BigInt(partnerTakesSurplus) << BigInt(8)) |
-    (BigInt(capSurplus) << BigInt(9));
-
-  return partnerAndFee.toString(10);
+    return partnerAndFee.toString(10);
+  }
 }
