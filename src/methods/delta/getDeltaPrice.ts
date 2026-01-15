@@ -109,7 +109,7 @@ type AvailableBridgePrice = Pick<
   | 'receivedDestAmount'
   | 'receivedDestAmountBeforeFee'
   | 'receivedDestUSD'
-  // | 'receivedDestUSDBeforeFee'
+  | 'receivedDestUSDBeforeFee'
 >;
 
 type AvailableBridge = Prettify<
