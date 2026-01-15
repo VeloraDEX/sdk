@@ -151,4 +151,7 @@ export type BridgePriceInfo = {
   destUSDAfterBridge: string;
   fees: BridgeQuoteFee[];
   estimatedTimeMs: number;
+  fastest: boolean;
+  bestReturn: boolean;
+  recommended: boolean;
 };
