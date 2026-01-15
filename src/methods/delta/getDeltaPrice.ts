@@ -112,7 +112,7 @@ type AvailableBridgePrice = Pick<
   | 'receivedDestUSDBeforeFee'
 >;
 
-type AvailableBridge = Prettify<
+export type AvailableBridge = Prettify<
   AvailableBridgePrice & Pick<BridgePrice, 'bridge' | 'bridgeInfo'>
 >;
 
