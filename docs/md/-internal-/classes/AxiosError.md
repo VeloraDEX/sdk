@@ -36,7 +36,7 @@
 
 • **request?**: `any`
 
-• **response?**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`\>
+• **response?**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`, `object`\>
 
 #### Returns
 
@@ -48,17 +48,17 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:403
+node\_modules/axios/index.d.ts:417
 
 ## Properties
 
 ### cause?
 
-> `optional` **cause**: [`Error`](../interfaces/Error.md)
+> `optional` **cause**: `unknown`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:418
+node\_modules/axios/index.d.ts:432
 
 ***
 
@@ -68,7 +68,7 @@ node\_modules/axios/index.d.ts:418
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:412
+node\_modules/axios/index.d.ts:426
 
 ***
 
@@ -78,7 +78,17 @@ node\_modules/axios/index.d.ts:412
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:411
+node\_modules/axios/index.d.ts:425
+
+***
+
+### event?
+
+> `optional` **event**: `any`
+
+#### Defined in
+
+node\_modules/axios/index.d.ts:433
 
 ***
 
@@ -88,7 +98,7 @@ node\_modules/axios/index.d.ts:411
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:415
+node\_modules/axios/index.d.ts:429
 
 ***
 
@@ -126,17 +136,17 @@ node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:413
+node\_modules/axios/index.d.ts:427
 
 ***
 
 ### response?
 
-> `optional` **response**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`\>
+> `optional` **response**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`, `object`\>
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:414
+node\_modules/axios/index.d.ts:428
 
 ***
 
@@ -160,7 +170,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:416
+node\_modules/axios/index.d.ts:430
 
 ***
 
@@ -174,7 +184,7 @@ node\_modules/axios/index.d.ts:416
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:417
+node\_modules/axios/index.d.ts:431
 
 ***
 
@@ -184,7 +194,7 @@ node\_modules/axios/index.d.ts:417
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:437
+node\_modules/axios/index.d.ts:452
 
 ***
 
@@ -194,7 +204,7 @@ node\_modules/axios/index.d.ts:437
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:429
+node\_modules/axios/index.d.ts:444
 
 ***
 
@@ -204,7 +214,7 @@ node\_modules/axios/index.d.ts:429
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:428
+node\_modules/axios/index.d.ts:443
 
 ***
 
@@ -214,7 +224,7 @@ node\_modules/axios/index.d.ts:428
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:433
+node\_modules/axios/index.d.ts:448
 
 ***
 
@@ -224,7 +234,7 @@ node\_modules/axios/index.d.ts:433
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:432
+node\_modules/axios/index.d.ts:447
 
 ***
 
@@ -234,7 +244,7 @@ node\_modules/axios/index.d.ts:432
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:436
+node\_modules/axios/index.d.ts:451
 
 ***
 
@@ -244,7 +254,7 @@ node\_modules/axios/index.d.ts:436
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:431
+node\_modules/axios/index.d.ts:446
 
 ***
 
@@ -254,7 +264,7 @@ node\_modules/axios/index.d.ts:431
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:427
+node\_modules/axios/index.d.ts:442
 
 ***
 
@@ -264,7 +274,7 @@ node\_modules/axios/index.d.ts:427
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:435
+node\_modules/axios/index.d.ts:450
 
 ***
 
@@ -274,7 +284,7 @@ node\_modules/axios/index.d.ts:435
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:430
+node\_modules/axios/index.d.ts:445
 
 ***
 
@@ -284,7 +294,7 @@ node\_modules/axios/index.d.ts:430
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:434
+node\_modules/axios/index.d.ts:449
 
 ***
 
@@ -294,7 +304,7 @@ node\_modules/axios/index.d.ts:434
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:438
+node\_modules/axios/index.d.ts:453
 
 ***
 
@@ -388,7 +398,7 @@ node\_modules/@types/node/globals.d.ts:136
 
 • **request?**: `any`
 
-• **response?**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`\>
+• **response?**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`, `object`\>
 
 • **customProps?**: `object`
 
@@ -398,4 +408,4 @@ node\_modules/@types/node/globals.d.ts:136
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:419
+node\_modules/axios/index.d.ts:434

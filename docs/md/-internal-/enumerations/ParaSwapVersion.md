@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/types.d.ts:65
+node\_modules/@paraswap/core/build/types.d.ts:66
 
 ***
 
@@ -24,4 +24,4 @@ node\_modules/@paraswap/core/build/types.d.ts:65
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/types.d.ts:66
+node\_modules/@paraswap/core/build/types.d.ts:67

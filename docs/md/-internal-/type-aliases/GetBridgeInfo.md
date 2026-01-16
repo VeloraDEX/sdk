@@ -6,9 +6,11 @@
 
 # Type Alias: GetBridgeInfo()
 
-> **GetBridgeInfo**: (`requestParams`?) => `Promise`\<[`BridgeInfo`](../../type-aliases/BridgeInfo.md)\>
+> **GetBridgeInfo**: (`params`?, `requestParams`?) => `Promise`\<[`BridgeInfo`](../../type-aliases/BridgeInfo.md)\>
 
 ## Parameters
+
+• **params?**: [`GetBridgeInfoParams`](GetBridgeInfoParams.md)
 
 • **requestParams?**: [`RequestParameters`](RequestParameters.md)
 
@@ -18,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/delta/getBridgeInfo.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L13)
+[src/methods/delta/getBridgeInfo.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L26)

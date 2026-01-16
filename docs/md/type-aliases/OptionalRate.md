@@ -32,4 +32,4 @@
 
 ## Defined in
 
-node\_modules/@paraswap/core/build/types.d.ts:29
+node\_modules/@paraswap/core/build/types.d.ts:30

@@ -6,8 +6,8 @@
 
 # Type Alias: AxiosAdapterName
 
-> **AxiosAdapterName**: `"fetch"` \| `"xhr"` \| `"http"` \| `string`
+> **AxiosAdapterName**: `"fetch"` \| `"xhr"` \| `"http"` \| `string` & `object`
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:303
+node\_modules/axios/index.d.ts:305

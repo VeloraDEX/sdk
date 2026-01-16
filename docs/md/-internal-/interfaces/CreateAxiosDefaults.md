@@ -28,7 +28,21 @@ Construct a type with the properties of T except for those in type K.
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:329
+node\_modules/axios/index.d.ts:332
+
+***
+
+### allowAbsoluteUrls?
+
+> `optional` **allowAbsoluteUrls**: `boolean`
+
+#### Inherited from
+
+`Omit.allowAbsoluteUrls`
+
+#### Defined in
+
+node\_modules/axios/index.d.ts:322
 
 ***
 
@@ -42,7 +56,7 @@ node\_modules/axios/index.d.ts:329
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:330
+node\_modules/axios/index.d.ts:333
 
 ***
 
@@ -56,7 +70,7 @@ node\_modules/axios/index.d.ts:330
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:319
+node\_modules/axios/index.d.ts:321
 
 ***
 
@@ -84,7 +98,7 @@ node\_modules/axios/index.d.ts:319
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:342
+node\_modules/axios/index.d.ts:345
 
 ***
 
@@ -98,7 +112,7 @@ node\_modules/axios/index.d.ts:342
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:348
+node\_modules/axios/index.d.ts:351
 
 ***
 
@@ -112,7 +126,7 @@ node\_modules/axios/index.d.ts:348
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:325
+node\_modules/axios/index.d.ts:328
 
 ***
 
@@ -126,13 +140,27 @@ node\_modules/axios/index.d.ts:325
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:349
+node\_modules/axios/index.d.ts:352
 
 ***
 
 ### env?
 
 > `optional` **env**: `object`
+
+#### fetch()?
+
+> `optional` **fetch**: (`input`, `init`?) => `Promise`\<`Response`\>
+
+##### Parameters
+
+• **input**: `string` \| `URL` \| `Request`
+
+• **init?**: `RequestInit`
+
+##### Returns
+
+`Promise`\<`Response`\>
 
 #### FormData()?
 
@@ -146,13 +174,41 @@ node\_modules/axios/index.d.ts:349
 
 `object`
 
+#### Request()?
+
+> `optional` **Request**: (`input`, `init`?) => `Request`
+
+##### Parameters
+
+• **input**: `string` \| `URL` \| `Request`
+
+• **init?**: `RequestInit`
+
+##### Returns
+
+`Request`
+
+#### Response()?
+
+> `optional` **Response**: (`body`?, `init`?) => `Response`
+
+##### Parameters
+
+• **body?**: `null` \| `string` \| `URLSearchParams` \| `Blob` \| [`ArrayBufferView`](ArrayBufferView.md) \| `ArrayBuffer` \| `FormData`
+
+• **init?**: `ResponseInit`
+
+##### Returns
+
+`Response`
+
 #### Inherited from
 
 `Omit.env`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:353
+node\_modules/axios/index.d.ts:356
 
 ***
 
@@ -166,13 +222,13 @@ node\_modules/axios/index.d.ts:353
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:357
+node\_modules/axios/index.d.ts:366
 
 ***
 
 ### fetchOptions?
 
-> `optional` **fetchOptions**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+> `optional` **fetchOptions**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\> \| [`Omit`](../type-aliases/Omit.md)\<`RequestInit`, `"signal"` \| `"method"` \| `"headers"` \| `"body"`\>
 
 #### Inherited from
 
@@ -180,7 +236,7 @@ node\_modules/axios/index.d.ts:357
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:361
+node\_modules/axios/index.d.ts:371
 
 ***
 
@@ -194,7 +250,7 @@ node\_modules/axios/index.d.ts:361
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:356
+node\_modules/axios/index.d.ts:365
 
 ***
 
@@ -204,7 +260,27 @@ node\_modules/axios/index.d.ts:356
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:390
+node\_modules/axios/index.d.ts:404
+
+***
+
+### http2Options?
+
+> `optional` **http2Options**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\> & `object`
+
+#### Type declaration
+
+##### sessionTimeout?
+
+> `optional` **sessionTimeout**: `number`
+
+#### Inherited from
+
+`Omit.http2Options`
+
+#### Defined in
+
+node\_modules/axios/index.d.ts:373
 
 ***
 
@@ -218,7 +294,7 @@ node\_modules/axios/index.d.ts:390
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:345
+node\_modules/axios/index.d.ts:348
 
 ***
 
@@ -232,7 +308,21 @@ node\_modules/axios/index.d.ts:345
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:346
+node\_modules/axios/index.d.ts:349
+
+***
+
+### httpVersion?
+
+> `optional` **httpVersion**: `1` \| `2`
+
+#### Inherited from
+
+`Omit.httpVersion`
+
+#### Defined in
+
+node\_modules/axios/index.d.ts:372
 
 ***
 
@@ -246,7 +336,7 @@ node\_modules/axios/index.d.ts:346
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:352
+node\_modules/axios/index.d.ts:355
 
 ***
 
@@ -260,7 +350,7 @@ node\_modules/axios/index.d.ts:352
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:358
+node\_modules/axios/index.d.ts:367
 
 ***
 
@@ -274,7 +364,7 @@ node\_modules/axios/index.d.ts:358
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:339
+node\_modules/axios/index.d.ts:342
 
 ***
 
@@ -288,7 +378,7 @@ node\_modules/axios/index.d.ts:339
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:337
+node\_modules/axios/index.d.ts:340
 
 ***
 
@@ -302,7 +392,7 @@ node\_modules/axios/index.d.ts:337
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:341
+node\_modules/axios/index.d.ts:344
 
 ***
 
@@ -316,7 +406,7 @@ node\_modules/axios/index.d.ts:341
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:340
+node\_modules/axios/index.d.ts:343
 
 ***
 
@@ -330,7 +420,7 @@ node\_modules/axios/index.d.ts:340
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:318
+node\_modules/axios/index.d.ts:320
 
 ***
 
@@ -352,7 +442,7 @@ node\_modules/axios/index.d.ts:318
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:336
+node\_modules/axios/index.d.ts:339
 
 ***
 
@@ -374,7 +464,7 @@ node\_modules/axios/index.d.ts:336
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:335
+node\_modules/axios/index.d.ts:338
 
 ***
 
@@ -388,7 +478,7 @@ node\_modules/axios/index.d.ts:335
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:323
+node\_modules/axios/index.d.ts:326
 
 ***
 
@@ -402,7 +492,33 @@ node\_modules/axios/index.d.ts:323
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:324
+node\_modules/axios/index.d.ts:327
+
+***
+
+### parseReviver()?
+
+> `optional` **parseReviver**: (`this`, `key`, `value`) => `any`
+
+#### Parameters
+
+• **this**: `any`
+
+• **key**: `string`
+
+• **value**: `any`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Omit.parseReviver`
+
+#### Defined in
+
+node\_modules/axios/index.d.ts:370
 
 ***
 
@@ -416,7 +532,7 @@ node\_modules/axios/index.d.ts:324
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:347
+node\_modules/axios/index.d.ts:350
 
 ***
 
@@ -430,7 +546,7 @@ node\_modules/axios/index.d.ts:347
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:332
+node\_modules/axios/index.d.ts:335
 
 ***
 
@@ -444,7 +560,7 @@ node\_modules/axios/index.d.ts:332
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:331
+node\_modules/axios/index.d.ts:334
 
 ***
 
@@ -458,7 +574,7 @@ node\_modules/axios/index.d.ts:331
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:351
+node\_modules/axios/index.d.ts:354
 
 ***
 
@@ -472,7 +588,7 @@ node\_modules/axios/index.d.ts:351
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:343
+node\_modules/axios/index.d.ts:346
 
 ***
 
@@ -486,7 +602,7 @@ node\_modules/axios/index.d.ts:343
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:326
+node\_modules/axios/index.d.ts:329
 
 ***
 
@@ -500,7 +616,7 @@ node\_modules/axios/index.d.ts:326
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:327
+node\_modules/axios/index.d.ts:330
 
 ***
 
@@ -514,7 +630,7 @@ node\_modules/axios/index.d.ts:327
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:320
+node\_modules/axios/index.d.ts:323
 
 ***
 
@@ -528,7 +644,7 @@ node\_modules/axios/index.d.ts:320
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:321
+node\_modules/axios/index.d.ts:324
 
 ***
 
@@ -542,7 +658,7 @@ node\_modules/axios/index.d.ts:321
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:350
+node\_modules/axios/index.d.ts:353
 
 ***
 
@@ -556,7 +672,7 @@ node\_modules/axios/index.d.ts:350
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:344
+node\_modules/axios/index.d.ts:347
 
 ***
 
@@ -570,7 +686,7 @@ node\_modules/axios/index.d.ts:344
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:317
+node\_modules/axios/index.d.ts:319
 
 ***
 
@@ -584,7 +700,7 @@ node\_modules/axios/index.d.ts:317
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:338
+node\_modules/axios/index.d.ts:341
 
 ***
 
@@ -598,7 +714,7 @@ node\_modules/axios/index.d.ts:338
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:328
+node\_modules/axios/index.d.ts:331
 
 ***
 
@@ -612,7 +728,7 @@ node\_modules/axios/index.d.ts:328
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:360
+node\_modules/axios/index.d.ts:369
 
 ***
 
@@ -626,7 +742,7 @@ node\_modules/axios/index.d.ts:360
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:333
+node\_modules/axios/index.d.ts:336
 
 ***
 
@@ -640,4 +756,4 @@ node\_modules/axios/index.d.ts:333
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:334
+node\_modules/axios/index.d.ts:337

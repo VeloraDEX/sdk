@@ -34,6 +34,10 @@
 
 > `optional` **poolAddresses**: [`Address`](Address.md)[]
 
+### poolIdentifiers?
+
+> `optional` **poolIdentifiers**: `string`[]
+
 ### srcAmount
 
 > **srcAmount**: [`NumberAsString`](NumberAsString.md)

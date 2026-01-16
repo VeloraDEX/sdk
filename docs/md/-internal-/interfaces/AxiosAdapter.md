@@ -18,4 +18,4 @@
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:113
+node\_modules/axios/index.d.ts:115

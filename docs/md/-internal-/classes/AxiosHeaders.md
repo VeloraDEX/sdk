@@ -40,7 +40,7 @@ node\_modules/axios/index.d.ts:17
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:77
+node\_modules/axios/index.d.ts:79
 
 ***
 
@@ -317,6 +317,20 @@ node\_modules/axios/index.d.ts:48
 ##### Defined in
 
 node\_modules/axios/index.d.ts:49
+
+***
+
+### getSetCookie()
+
+> **getSetCookie**(): `string`[]
+
+#### Returns
+
+`string`[]
+
+#### Defined in
+
+node\_modules/axios/index.d.ts:77
 
 ***
 

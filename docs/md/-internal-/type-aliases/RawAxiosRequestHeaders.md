@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:84
+node\_modules/axios/index.d.ts:86

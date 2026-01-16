@@ -10,6 +10,16 @@
 
 • **V**
 
+## Properties
+
+### use
+
+> **use**: `V` *extends* [`AxiosResponse`](AxiosResponse.md)\<`any`, `any`, `object`\> ? [`AxiosResponseInterceptorUse`](../type-aliases/AxiosResponseInterceptorUse.md)\<`V`\<`V`\>\> : [`AxiosRequestInterceptorUse`](../type-aliases/AxiosRequestInterceptorUse.md)\<`V`\>
+
+#### Defined in
+
+node\_modules/axios/index.d.ts:500
+
 ## Methods
 
 ### clear()
@@ -22,7 +32,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:482
+node\_modules/axios/index.d.ts:502
 
 ***
 
@@ -40,26 +50,4 @@ node\_modules/axios/index.d.ts:482
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:481
-
-***
-
-### use()
-
-> **use**(`onFulfilled`?, `onRejected`?, `options`?): `number`
-
-#### Parameters
-
-• **onFulfilled?**: `null` \| (`value`) => `V` \| `Promise`\<`V`\>
-
-• **onRejected?**: `null` \| (`error`) => `any`
-
-• **options?**: [`AxiosInterceptorOptions`](AxiosInterceptorOptions.md)
-
-#### Returns
-
-`number`
-
-#### Defined in
-
-node\_modules/axios/index.d.ts:480
+node\_modules/axios/index.d.ts:501

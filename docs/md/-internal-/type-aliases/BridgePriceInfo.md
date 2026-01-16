@@ -28,8 +28,8 @@
 
 ### protocolName
 
-> **protocolName**: [`ProtocolName`](ProtocolName.md)
+> **protocolName**: `string`
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:162](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L162)
+[src/methods/delta/helpers/types.ts:148](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L148)

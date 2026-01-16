@@ -54,6 +54,7 @@ Renames and re-exports [constructEthersContractCaller](functions/constructEthers
 - [BridgeInfo](type-aliases/BridgeInfo.md)
 - [BridgeMetadata](type-aliases/BridgeMetadata.md)
 - [BridgePrice](type-aliases/BridgePrice.md)
+- [BridgeProtocolResponse](type-aliases/BridgeProtocolResponse.md)
 - [BridgeStatus](type-aliases/BridgeStatus.md)
 - [BuildDeltaOrderDataParams](type-aliases/BuildDeltaOrderDataParams.md)
 - [BuildDeltaOrderFunctions](type-aliases/BuildDeltaOrderFunctions.md)

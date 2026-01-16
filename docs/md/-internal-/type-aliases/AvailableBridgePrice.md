@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:90](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L90)
+[src/methods/delta/getDeltaPrice.ts:97](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L97)

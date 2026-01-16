@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:459
+node\_modules/axios/index.d.ts:475
 
 ## Methods
 
@@ -36,4 +36,4 @@ node\_modules/axios/index.d.ts:459
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:460
+node\_modules/axios/index.d.ts:476

@@ -14,6 +14,10 @@
 
 > **getBridgeInfo**: [`GetBridgeInfo`](../-internal-/type-aliases/GetBridgeInfo.md)
 
+### getBridgeProtocols
+
+> **getBridgeProtocols**: [`GetBridgeProtocols`](../-internal-/type-aliases/GetBridgeProtocols.md)
+
 ## Defined in
 
-[src/methods/delta/getBridgeInfo.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L15)
+[src/methods/delta/getBridgeInfo.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L44)
