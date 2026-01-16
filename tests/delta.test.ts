@@ -517,6 +517,8 @@ describe('Delta:methods', () => {
         nonce: 'dynamic_number',
       },
     };
+    //                                                            capSurplus (true) shifted (<< 9) = 512
+    expect(signableOrderData.data.partnerAndFee).toEqual((1 << 9).toString());
     expect(staticSignableOrderData).toMatchSnapshot();
   });
 
@@ -822,6 +824,8 @@ describe('Delta:methods', () => {
       nonce: 'dynamic_number',
     };
 
+    //                                                            capSurplus (true) shifted (<< 9) = 512
+    expect(order.partnerAndFee).toEqual((1 << 9).toString());
     expect(staticSignedOrderData).toMatchSnapshot();
   });
 
