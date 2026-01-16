@@ -26,6 +26,8 @@ import {
   constructCancelDeltaOrder,
   constructPreSignDeltaOrder,
   GetDeltaContractFunctions,
+  constructGetBridgeInfo,
+  BridgeInfo,
 } from '../src';
 import BigNumber from 'bignumber.js';
 
@@ -130,8 +132,70 @@ describe('Delta:methods', () => {
     constructGetDeltaPrice,
     constructBuildDeltaOrder,
     constructApproveTokenForDelta,
-    constructGetPartnerFee
+    constructGetPartnerFee,
+    constructGetBridgeInfo
   );
+
+  describe('Bridge methods', () => {
+    function flattenAllBridgeInfoTokens(bridgeInfo: BridgeInfo): string[] {
+      return Object.values(bridgeInfo).flatMap((chainMap) =>
+        Object.values(chainMap).flat()
+      );
+    }
+    test('Get Bridge Info', async () => {
+      const bridgeInfo = await deltaSDK.getBridgeInfo();
+      expect(Object.keys(bridgeInfo)).toEqual(
+        // allow for more chains to be added in the future
+        expect.arrayContaining(['1', '10', '56', '130', '137', '8453', '42161'])
+      );
+
+      const defaultNumOfTokens = flattenAllBridgeInfoTokens(bridgeInfo).length;
+
+      const bridgeInfoDIsallowedBridgeAndSwap = await deltaSDK.getBridgeInfo({
+        allowBridgeAndSwap: false,
+      });
+
+      expect(Object.keys(bridgeInfoDIsallowedBridgeAndSwap)).toEqual(
+        Object.keys(bridgeInfo)
+      );
+      const disallowedNumOfTokens = flattenAllBridgeInfoTokens(
+        bridgeInfoDIsallowedBridgeAndSwap
+      ).length;
+
+      // fewer tokens are available when bridge and swap (swap on destChain after bridge) is not allowed
+      expect(disallowedNumOfTokens).toBeLessThan(defaultNumOfTokens);
+    });
+
+    test('Get Bridge Protocols', async () => {
+      const bridgeProtocols = await deltaSDK.getBridgeProtocols();
+      const expectedToInclude = [
+        {
+          displayName: 'Across',
+          protocol: 'Across',
+        },
+        {
+          displayName: 'Stargate Bus',
+          protocol: 'StargateBus',
+        },
+        {
+          displayName: 'Stargate Taxi',
+          protocol: 'StargateTaxi',
+        },
+        {
+          displayName: 'Stargate OFT V2',
+          protocol: 'StargateOftV2',
+        },
+        {
+          displayName: 'Relay',
+          protocol: 'Relay',
+        },
+      ];
+      expect(bridgeProtocols).toEqual(
+        // allow for more bridges to be added in the future
+        expect.arrayContaining(expectedToInclude)
+      );
+    });
+  });
 
   test('Get Delta Price', async () => {
     const deltaPrice = await deltaSDK.getDeltaPrice({
@@ -475,6 +539,8 @@ describe('Delta:methods', () => {
         nonce: 'dynamic_number',
       },
     };
+    //                                                            capSurplus (true) shifted (<< 9) = 512
+    expect(signableOrderData.data.partnerAndFee).toEqual((1 << 9).toString());
     expect(staticSignableOrderData).toMatchSnapshot();
   });
 
@@ -780,6 +846,8 @@ describe('Delta:methods', () => {
       nonce: 'dynamic_number',
     };
 
+    //                                                            capSurplus (true) shifted (<< 9) = 512
+    expect(order.partnerAndFee).toEqual((1 << 9).toString());
     expect(staticSignedOrderData).toMatchSnapshot();
   });
 

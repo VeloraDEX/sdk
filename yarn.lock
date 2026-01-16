@@ -2293,10 +2293,10 @@
     "@nomicfoundation/solidity-analyzer-linux-x64-musl" "0.1.2"
     "@nomicfoundation/solidity-analyzer-win32-x64-msvc" "0.1.2"
 
-"@paraswap/core@2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@paraswap/core/-/core-2.4.0.tgz#82dac1f2eb5622b90eec352031f0711037bd8eff"
-  integrity sha512-msv0Etc5f7H2UDnDd23wKzNnx64fj1iwt8IlBORTFIpxJ1+fa+TqNO7lhtohfRiVmU3dnnAMcjEi4D+WHSWpvw==
+"@paraswap/core@2.4.1":
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/@paraswap/core/-/core-2.4.1.tgz#c118762ca0526075ab75a862c73f719fc2843f39"
+  integrity sha512-mb0GCuLqQcrGZBzILC8N4WetnIqWEG6DxA2KZuk4X5HJZ9zeW9FQTCXMzZhGAJSx2ZiBMdHbV6RevmXI7IlJbQ==
 
 "@parcel/watcher-android-arm64@2.4.1":
   version "2.4.1"

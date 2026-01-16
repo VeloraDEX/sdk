@@ -1,6 +1,6 @@
 {
   "name": "@velora-dex/sdk",
-  "version": "9.2.1",
+  "version": "9.3.0",
   "main": "dist/index.js",
   "module": "dist/sdk.esm.js",
   "typings": "dist/index.d.ts",
@@ -93,7 +93,7 @@
     }
   },
   "dependencies": {
-    "@paraswap/core": "2.4.0",
+    "@paraswap/core": "2.4.1",
     "ts-essentials": "^10.0.3",
     "viem": "^2.21.0"
   },

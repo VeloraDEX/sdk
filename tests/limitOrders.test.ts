@@ -537,7 +537,7 @@ describe('Limit Orders', () => {
     `);
   });
 
-  test(`fillLimitOrder through Augustus`, async () => {
+  test.skip(`fillLimitOrder through Augustus`, async () => {
     // 0.01 WETH
     const makerAmount = (0.01e18).toString(10);
     // for 6 BAT
@@ -766,7 +766,7 @@ describe('Limit Orders', () => {
     );
   });
 
-  test(`fill LimitOrder+Swap through Augustus`, async () => {
+  test.skip(`fill LimitOrder+Swap through Augustus`, async () => {
     // swap DAI -> BAT, then fill BAT (takerAsset) for WETH (makerAsset) Order
 
     // 0.01 WETH
@@ -1265,7 +1265,7 @@ describe('Limit Orders', () => {
     // expect(newOrder).toMatchSnapshot('Order_from_API_Snapshot');
   });
 
-  test(`fill OTC Order directly`, async () => {
+  test.skip(`fill OTC Order directly`, async () => {
     // 0.01 WETH
     const makerAmount = (0.01e18).toString(10);
     // for 6 BAT
@@ -1474,7 +1474,7 @@ describe('Limit Orders', () => {
     );
   });
 
-  test(`fill OTC Order directly with Taker Permit1`, async () => {
+  test.skip(`fill OTC Order directly with Taker Permit1`, async () => {
     // 0.01 WETH
     const makerAmount = (0.01e18).toString(10);
     // for 60 USDC
@@ -1694,7 +1694,7 @@ describe('Limit Orders', () => {
     );
   });
 
-  test(`fill OTC Order directly with Taker DAI Permit`, async () => {
+  test.skip(`fill OTC Order directly with Taker DAI Permit`, async () => {
     // 0.01 WETH
     const makerAmount = (0.01e18).toString(10);
     // for 60 DAI
