@@ -4,13 +4,15 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AxiosResponse
 
-# Interface: AxiosResponse\<T, D\>
+# Interface: AxiosResponse\<T, D, H\>
 
 ## Type Parameters
 
 • **T** = `any`
 
 • **D** = `any`
+
+• **H** = `object`
 
 ## Properties
 
@@ -20,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:398
+node\_modules/axios/index.d.ts:412
 
 ***
 
@@ -30,17 +32,17 @@ node\_modules/axios/index.d.ts:398
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:394
+node\_modules/axios/index.d.ts:408
 
 ***
 
 ### headers
 
-> **headers**: [`AxiosResponseHeaders`](../type-aliases/AxiosResponseHeaders.md) \| [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> **headers**: [`AxiosResponseHeaders`](../type-aliases/AxiosResponseHeaders.md) \| `H` & [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:397
+node\_modules/axios/index.d.ts:411
 
 ***
 
@@ -50,7 +52,7 @@ node\_modules/axios/index.d.ts:397
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:399
+node\_modules/axios/index.d.ts:413
 
 ***
 
@@ -60,7 +62,7 @@ node\_modules/axios/index.d.ts:399
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:395
+node\_modules/axios/index.d.ts:409
 
 ***
 
@@ -70,4 +72,4 @@ node\_modules/axios/index.d.ts:395
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:396
+node\_modules/axios/index.d.ts:410

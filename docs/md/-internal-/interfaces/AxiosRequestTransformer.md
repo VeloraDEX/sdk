@@ -22,4 +22,4 @@
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:105
+node\_modules/axios/index.d.ts:107

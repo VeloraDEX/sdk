@@ -20,7 +20,7 @@
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -34,7 +34,7 @@
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:507
+node\_modules/axios/index.d.ts:527
 
 > **AxiosInstance**\<`T`, `R`, `D`\>(`url`, `config`?): `Promise`\<`R`\>
 
@@ -42,7 +42,7 @@ node\_modules/axios/index.d.ts:507
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -58,7 +58,7 @@ node\_modules/axios/index.d.ts:507
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:508
+node\_modules/axios/index.d.ts:528
 
 ## Properties
 
@@ -78,7 +78,7 @@ node\_modules/axios/index.d.ts:508
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:510
+node\_modules/axios/index.d.ts:531
 
 ***
 
@@ -92,7 +92,7 @@ node\_modules/axios/index.d.ts:510
 
 #### response
 
-> **response**: [`AxiosInterceptorManager`](AxiosInterceptorManager.md)\<[`AxiosResponse`](AxiosResponse.md)\<`any`, `any`\>\>
+> **response**: [`AxiosInterceptorManager`](AxiosInterceptorManager.md)\<[`AxiosResponse`](AxiosResponse.md)\<`any`, `any`, `object`\>\>
 
 #### Inherited from
 
@@ -100,9 +100,27 @@ node\_modules/axios/index.d.ts:510
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:488
+node\_modules/axios/index.d.ts:508
 
 ## Methods
+
+### create()
+
+> **create**(`config`?): [`AxiosInstance`](AxiosInstance.md)
+
+#### Parameters
+
+• **config?**: [`CreateAxiosDefaults`](CreateAxiosDefaults.md)\<`any`\>
+
+#### Returns
+
+[`AxiosInstance`](AxiosInstance.md)
+
+#### Defined in
+
+node\_modules/axios/index.d.ts:530
+
+***
 
 ### delete()
 
@@ -112,7 +130,7 @@ node\_modules/axios/index.d.ts:488
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -132,7 +150,7 @@ node\_modules/axios/index.d.ts:488
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:495
+node\_modules/axios/index.d.ts:515
 
 ***
 
@@ -144,7 +162,7 @@ node\_modules/axios/index.d.ts:495
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -164,7 +182,7 @@ node\_modules/axios/index.d.ts:495
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:494
+node\_modules/axios/index.d.ts:514
 
 ***
 
@@ -186,7 +204,7 @@ node\_modules/axios/index.d.ts:494
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:492
+node\_modules/axios/index.d.ts:512
 
 ***
 
@@ -198,7 +216,7 @@ node\_modules/axios/index.d.ts:492
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -218,7 +236,7 @@ node\_modules/axios/index.d.ts:492
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:496
+node\_modules/axios/index.d.ts:516
 
 ***
 
@@ -230,7 +248,7 @@ node\_modules/axios/index.d.ts:496
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -250,7 +268,7 @@ node\_modules/axios/index.d.ts:496
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:497
+node\_modules/axios/index.d.ts:517
 
 ***
 
@@ -262,7 +280,7 @@ node\_modules/axios/index.d.ts:497
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -284,7 +302,7 @@ node\_modules/axios/index.d.ts:497
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:500
+node\_modules/axios/index.d.ts:520
 
 ***
 
@@ -296,7 +314,7 @@ node\_modules/axios/index.d.ts:500
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -318,7 +336,7 @@ node\_modules/axios/index.d.ts:500
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:503
+node\_modules/axios/index.d.ts:523
 
 ***
 
@@ -330,7 +348,7 @@ node\_modules/axios/index.d.ts:503
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -352,7 +370,7 @@ node\_modules/axios/index.d.ts:503
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:498
+node\_modules/axios/index.d.ts:518
 
 ***
 
@@ -364,7 +382,7 @@ node\_modules/axios/index.d.ts:498
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -386,7 +404,7 @@ node\_modules/axios/index.d.ts:498
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:501
+node\_modules/axios/index.d.ts:521
 
 ***
 
@@ -398,7 +416,7 @@ node\_modules/axios/index.d.ts:501
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -420,7 +438,7 @@ node\_modules/axios/index.d.ts:501
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:499
+node\_modules/axios/index.d.ts:519
 
 ***
 
@@ -432,7 +450,7 @@ node\_modules/axios/index.d.ts:499
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -454,7 +472,7 @@ node\_modules/axios/index.d.ts:499
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:502
+node\_modules/axios/index.d.ts:522
 
 ***
 
@@ -466,7 +484,7 @@ node\_modules/axios/index.d.ts:502
 
 • **T** = `any`
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`\>
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
 
 • **D** = `any`
 
@@ -484,4 +502,4 @@ node\_modules/axios/index.d.ts:502
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:493
+node\_modules/axios/index.d.ts:513

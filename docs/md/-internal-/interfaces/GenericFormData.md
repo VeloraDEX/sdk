@@ -26,4 +26,4 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:518
+node\_modules/axios/index.d.ts:539

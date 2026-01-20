@@ -18,6 +18,14 @@
 
 The address of the order beneficiary
 
+### capSurplus?
+
+> `optional` **capSurplus**: `boolean`
+
+#### Description
+
+A boolean indicating whether the surplus should be capped. True by default
+
 ### deadline?
 
 > `optional` **deadline**: `number`

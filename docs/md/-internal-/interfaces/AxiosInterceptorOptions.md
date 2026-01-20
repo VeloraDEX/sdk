@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:476
+node\_modules/axios/index.d.ts:492
 
 ***
 
@@ -32,4 +32,4 @@ node\_modules/axios/index.d.ts:476
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:475
+node\_modules/axios/index.d.ts:491

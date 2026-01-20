@@ -116,4 +116,4 @@
 
 ## Defined in
 
-node\_modules/@paraswap/core/build/types.d.ts:36
+node\_modules/@paraswap/core/build/types.d.ts:37

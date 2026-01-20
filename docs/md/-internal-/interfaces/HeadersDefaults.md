@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:372
+node\_modules/axios/index.d.ts:386
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/axios/index.d.ts:372
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:373
+node\_modules/axios/index.d.ts:387
 
 ***
 
@@ -34,7 +34,7 @@ node\_modules/axios/index.d.ts:373
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:374
+node\_modules/axios/index.d.ts:388
 
 ***
 
@@ -44,7 +44,7 @@ node\_modules/axios/index.d.ts:374
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:375
+node\_modules/axios/index.d.ts:389
 
 ***
 
@@ -54,7 +54,7 @@ node\_modules/axios/index.d.ts:375
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:381
+node\_modules/axios/index.d.ts:395
 
 ***
 
@@ -64,7 +64,7 @@ node\_modules/axios/index.d.ts:381
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:379
+node\_modules/axios/index.d.ts:393
 
 ***
 
@@ -74,7 +74,7 @@ node\_modules/axios/index.d.ts:379
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:378
+node\_modules/axios/index.d.ts:392
 
 ***
 
@@ -84,7 +84,7 @@ node\_modules/axios/index.d.ts:378
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:376
+node\_modules/axios/index.d.ts:390
 
 ***
 
@@ -94,7 +94,7 @@ node\_modules/axios/index.d.ts:376
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:380
+node\_modules/axios/index.d.ts:394
 
 ***
 
@@ -104,7 +104,7 @@ node\_modules/axios/index.d.ts:380
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:377
+node\_modules/axios/index.d.ts:391
 
 ***
 
@@ -114,4 +114,4 @@ node\_modules/axios/index.d.ts:377
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:382
+node\_modules/axios/index.d.ts:396

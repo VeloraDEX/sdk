@@ -94,6 +94,7 @@ export type BuildDeltaOrderDataInput = MarkOptional<
   paraswapDeltaAddress: string;
   partnerFeeBps: number;
   partnerTakesSurplus?: boolean;
+  capSurplus?: boolean;
   chainId: number;
   bridge: Bridge;
 };
@@ -122,6 +123,7 @@ export function buildDeltaSignableOrderData({
   partnerAddress,
   partnerFeeBps,
   partnerTakesSurplus = false,
+  capSurplus = true,
 
   chainId,
   paraswapDeltaAddress,
@@ -142,6 +144,7 @@ export function buildDeltaSignableOrderData({
       partnerFeeBps,
       partnerAddress,
       partnerTakesSurplus,
+      capSurplus,
     }),
     bridge,
     kind,
@@ -159,6 +162,7 @@ type ProducePartnerAndFeeInput = {
   partnerFeeBps: number;
   partnerAddress: string;
   partnerTakesSurplus: boolean;
+  capSurplus: boolean;
 };
 
 // fee and address are encoded together
@@ -166,13 +170,18 @@ function producePartnerAndFee({
   partnerFeeBps,
   partnerAddress,
   partnerTakesSurplus,
+  capSurplus,
 }: ProducePartnerAndFeeInput): string {
-  if (partnerAddress === ZERO_ADDRESS) return '0';
+  const capSurplusShifted = BigInt(capSurplus) << BigInt(9);
+  if (partnerAddress === ZERO_ADDRESS) {
+    return capSurplusShifted.toString(10);
+  } else {
+    const partnerAndFee =
+      (BigInt(partnerAddress) << BigInt(96)) |
+      BigInt(partnerFeeBps.toFixed(0)) |
+      (BigInt(partnerTakesSurplus) << BigInt(8)) |
+      capSurplusShifted;
 
-  const partnerAndFee =
-    (BigInt(partnerAddress) << BigInt(96)) |
-    BigInt(partnerFeeBps.toFixed(0)) |
-    (BigInt(partnerTakesSurplus) << BigInt(8));
-
-  return partnerAndFee.toString(10);
+    return partnerAndFee.toString(10);
+  }
 }

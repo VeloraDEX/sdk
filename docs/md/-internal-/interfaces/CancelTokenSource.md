@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:471
+node\_modules/axios/index.d.ts:487
 
 ***
 
@@ -24,4 +24,4 @@ node\_modules/axios/index.d.ts:471
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:470
+node\_modules/axios/index.d.ts:486

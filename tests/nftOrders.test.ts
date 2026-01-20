@@ -1232,6 +1232,7 @@ describe('NFT Orders', () => {
             },
             exchange: '---', // unstable, sometimes it's UniswapV2, other times UniswapV3
             poolAddresses: ['---'],
+            poolIdentifiers: ['---'],
             srcAmount: '---', //will change based on srcToken/destToken rate
           })),
         })),
@@ -1267,7 +1268,7 @@ describe('NFT Orders', () => {
                       "---",
                     ],
                     "poolIdentifiers": [
-                      "UniswapV3_0x4fabb145d64652a948d72533023f6e7a623c7c53_0x6b175474e89094c44da98b954eedeac495271d0f_500",
+                      "---",
                     ],
                     "srcAmount": "---",
                   },

@@ -65,6 +65,9 @@ export type BuildDeltaOrderDataParams = {
   /** @description take surplus */
   partnerTakesSurplus?: boolean;
 
+  /** @description A boolean indicating whether the surplus should be capped. True by default */
+  capSurplus?: boolean;
+
   /** @description The side of the order. Default is SELL */
   side?: SwapSideUnion;
   /** @description Metadata for the order, hex string */
@@ -163,6 +166,8 @@ export const constructBuildDeltaOrder = (
       partnerAddress,
       partnerTakesSurplus,
       partnerFeeBps,
+
+      capSurplus: options.capSurplus,
 
       bridge: options.deltaPrice.bridge, // ZERO_BRIDGE for same-chain Orders
     };

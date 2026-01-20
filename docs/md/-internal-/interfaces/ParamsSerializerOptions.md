@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:260
+node\_modules/axios/index.d.ts:262
 
 ***
 
@@ -32,7 +32,7 @@ node\_modules/axios/index.d.ts:260
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:278
+node\_modules/axios/index.d.ts:280
 
 ***
 
@@ -46,7 +46,7 @@ node\_modules/axios/index.d.ts:278
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:262
+node\_modules/axios/index.d.ts:264
 
 ***
 
@@ -60,7 +60,7 @@ node\_modules/axios/index.d.ts:262
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:261
+node\_modules/axios/index.d.ts:263
 
 ***
 
@@ -70,7 +70,7 @@ node\_modules/axios/index.d.ts:261
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:279
+node\_modules/axios/index.d.ts:281
 
 ***
 
@@ -84,4 +84,4 @@ node\_modules/axios/index.d.ts:279
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:259
+node\_modules/axios/index.d.ts:261

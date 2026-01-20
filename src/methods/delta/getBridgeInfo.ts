@@ -58,7 +58,7 @@ export const constructGetBridgeInfo = ({
     const bridgesString = bridges ? bridges.join(',') : undefined;
 
     const search = constructSearchString<BridgeInfoQuery>({
-      allowBridgeAndSwap: !!allowBridgeAndSwap,
+      allowBridgeAndSwap,
       bridges: bridgesString,
     });
 

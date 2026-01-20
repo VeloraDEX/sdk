@@ -10,6 +10,14 @@
 
 ## Type declaration
 
+### allowBridgeAndSwap?
+
+> `optional` **allowBridgeAndSwap**: `boolean`
+
+#### Description
+
+Allow swap on destChain after bridge. Default is true.
+
 ### amount
 
 > **amount**: `string`
@@ -54,9 +62,17 @@ Destination Token Address
 
 > `optional` **excludeAgents**: `string`[]
 
+### excludeBridges?
+
+> `optional` **excludeBridges**: `string`[]
+
 ### includeAgents?
 
 > `optional` **includeAgents**: `string`[]
+
+### includeBridges?
+
+> `optional` **includeBridges**: `string`[]
 
 ### partner?
 
