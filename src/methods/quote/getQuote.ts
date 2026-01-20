@@ -31,6 +31,8 @@ export type QuoteParams<M extends TradeMode = TradeMode> = {
   partner?: string;
   /** @description Maximum price impact (in percentage) acceptable for the trade */
   maxImpact?: number;
+  /** @description Maximum price impact (in USD) acceptable for the trade */
+  maxUSDImpact?: number;
   /** @description Preferred mode for the trade. In case of "all", Delta pricing is returned, with Market as a fallback */
   mode: M;
 };
