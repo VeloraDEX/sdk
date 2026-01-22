@@ -15,7 +15,7 @@ export type GetAdaptersFunctions = {
 };
 
 type SearchStringParams = {
-  network: number;
+  chainId: number;
   version?: APIVersion;
 };
 
@@ -30,7 +30,7 @@ export const constructGetAdapters = ({
   ): Promise<AdaptersAsStrings> => {
     // always pass explicit type to make sure UrlSearchParams are correct
     const query = constructSearchString<SearchStringParams>({
-      network: chainId,
+      chainId,
       version,
     });
 
