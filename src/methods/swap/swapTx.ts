@@ -41,7 +41,7 @@ type SwapQueryParams = {
   side: 'SELL' | 'BUY';
 
   /**
-   * @description Network ID. (Mainnet - 1, Optimism - 10, BSC - 56, Polygon - 137, Fantom - 250, zkEVM - 1101, Base - 8453, Arbitrum - 42161, Avalanche - 43114). Default: `1`.
+   * @description Chain ID. (Mainnet - 1, Optimism - 10, BSC - 56, Polygon - 137, Base - 8453, Arbitrum - 42161, Avalanche - 43114, Gnosis - 100, Unichain - 130, Sonic - 146). Default: `1`.
    */
   chainId?: number;
 
@@ -244,7 +244,7 @@ export const constructSwapTx = ({
       srcToken,
       destToken,
       route: _route,
-      network: chainId,
+      chainId,
       version,
       ...parsedOptions,
     });
