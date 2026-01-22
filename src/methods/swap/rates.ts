@@ -253,7 +253,7 @@ export const constructGetRate = ({
       Omit<RateQueryParams, 'srcToken' | 'destToken'>
     >({
       route: _route, // route can be used in place of srcToken+destToken
-      chainId: chainId,
+      chainId,
       version,
       ...parsedOptions,
     });
