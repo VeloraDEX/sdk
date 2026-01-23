@@ -274,11 +274,14 @@ describe('Delta:methods', () => {
         },
         bridgeInfo: {
           ...deltaPrice.bridgeInfo,
+          bestReturn: true,
           destAmountAfterBridge: 'dynamic_number',
           destUSDAfterBridge: 'dynamic_number',
           estimatedTimeMs: NaN, // dynamic number
+          fastest: true,
           fees: [], // dynamic array
           protocolName: 'dynamic_string' as BridgePriceInfo['protocolName'],
+          recommended: true,
         },
         destAmount: 'dynamic_number',
         destAmountBeforeFee: 'dynamic_number',
@@ -327,11 +330,14 @@ describe('Delta:methods', () => {
         },
         bridgeInfo: {
           ...deltaPrice.bridgeInfo,
+          bestReturn: true,
           destAmountAfterBridge: 'dynamic_number',
           destUSDAfterBridge: 'dynamic_number',
           estimatedTimeMs: NaN, // dynamic number
+          fastest: true,
           fees: [], // dynamic array
           protocolName: 'dynamic_string' as BridgePriceInfo['protocolName'],
+          recommended: true,
         },
         destAmount: 'dynamic_number',
         destAmountBeforeFee: 'dynamic_number',
@@ -379,11 +385,14 @@ describe('Delta:methods', () => {
         },
         bridgeInfo: {
           ...deltaPrice.bridgeInfo,
+          bestReturn: true,
           destAmountAfterBridge: 'dynamic_number',
           destUSDAfterBridge: 'dynamic_number',
           estimatedTimeMs: NaN, // dynamic number
+          fastest: true,
           fees: [], // dynamic array
           protocolName: 'dynamic_string' as BridgePriceInfo['protocolName'],
+          recommended: true,
         },
         destAmount: 'dynamic_number',
         destAmountBeforeFee: 'dynamic_number',

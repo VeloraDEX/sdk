@@ -1,3 +1,4 @@
+import { Prettify } from 'viem';
 import { Bridge } from '../..';
 import { API_URL, SwapSide } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
@@ -105,14 +106,15 @@ type AvailableBridgePrice = Pick<
   | 'gasCost'
   | 'gasCostUSDBeforeFee'
   | 'gasCostBeforeFee'
+  | 'receivedDestAmount'
+  | 'receivedDestAmountBeforeFee'
+  | 'receivedDestUSD'
+  | 'receivedDestUSDBeforeFee'
 >;
 
-type AvailableBridge = AvailableBridgePrice & {
-  bridgeParams: {
-    bridge: Bridge;
-    bridgeInfo: BridgePriceInfo;
-  }[];
-};
+export type AvailableBridge = Prettify<
+  AvailableBridgePrice & Pick<BridgePrice, 'bridge' | 'bridgeInfo'>
+>;
 
 export type BridgePrice = Omit<DeltaPrice, 'bridge'> & {
   // destAmountAfterBridge: string; // became bridgeInfo.destAmountAfterBridge

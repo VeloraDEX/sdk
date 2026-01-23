@@ -41,9 +41,9 @@ type SwapQueryParams = {
   side: 'SELL' | 'BUY';
 
   /**
-   * @description Network ID. (Mainnet - 1, Optimism - 10, BSC - 56, Polygon - 137, Fantom - 250, zkEVM - 1101, Base - 8453, Arbitrum - 42161, Avalanche - 43114). Default: `1`.
+   * @description Chain ID. (Mainnet - 1, Optimism - 10, BSC - 56, Polygon - 137, Base - 8453, Arbitrum - 42161, Avalanche - 43114, Gnosis - 100, Unichain - 130, Sonic - 146). Default: `1`.
    */
-  network?: number;
+  chainId?: number;
 
   /**
    * @description Comma Separated List of DEXs to include. **Supported DEXs:** Uniswap, Kyber, Bancor, AugustusRFQ, Oasis, Compound, Fulcrum, 0x, MakerDAO, Chai, Aave, Aave2, MultiPath, MegaPath, Curve, Curve3, Saddle, IronV2, BDai, idle, Weth, Beth, UniswapV2, Balancer, 0xRFQt, SushiSwap, LINKSWAP, Synthetix, DefiSwap, Swerve, CoFiX, Shell, DODOV1, DODOV2, OnChainPricing, PancakeSwap, PancakeSwapV2, ApeSwap, Wbnb, acryptos, streetswap, bakeryswap, julswap, vswap, vpegswap, beltfi, ellipsis, QuickSwap, COMETH, Wmatic, Nerve, Dfyn, UniswapV3, Smoothy, PantherSwap, OMM1, OneInchLP, CurveV2, mStable, WaultFinance, MDEX, ShibaSwap, CoinSwap, SakeSwap, JetSwap, Biswap, BProtocol eg: `UniswapV3,0x`.
@@ -179,7 +179,7 @@ type SwapTxInputListFields =
 
 type SwapRateOptions = Omit<
   SwapQueryParams,
-  SwapTxInputFields | SwapTxInputListFields | 'network' | 'version'
+  SwapTxInputFields | SwapTxInputListFields | 'chainId' | 'version'
 > & {
   /**
    * @description List of DEXs to include. **Supported DEXs:** Uniswap, Kyber, Bancor, AugustusRFQ, Oasis, Compound, Fulcrum, 0x, MakerDAO, Chai, Aave, Aave2, MultiPath, MegaPath, Curve, Curve3, Saddle, IronV2, BDai, idle, Weth, Beth, UniswapV2, Balancer, 0xRFQt, SushiSwap, LINKSWAP, Synthetix, DefiSwap, Swerve, CoFiX, Shell, DODOV1, DODOV2, OnChainPricing, PancakeSwap, PancakeSwapV2, ApeSwap, Wbnb, acryptos, streetswap, bakeryswap, julswap, vswap, vpegswap, beltfi, ellipsis, QuickSwap, COMETH, Wmatic, Nerve, Dfyn, UniswapV3, Smoothy, PantherSwap, OMM1, OneInchLP, CurveV2, mStable, WaultFinance, MDEX, ShibaSwap, CoinSwap, SakeSwap, JetSwap, Biswap, BProtocol eg: `UniswapV3,0x`.
@@ -244,7 +244,7 @@ export const constructSwapTx = ({
       srcToken,
       destToken,
       route: _route,
-      network: chainId,
+      chainId,
       version,
       ...parsedOptions,
     });

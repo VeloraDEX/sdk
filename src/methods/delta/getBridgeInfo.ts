@@ -31,6 +31,7 @@ type GetBridgeInfo = (
 export type BridgeProtocolResponse = {
   protocol: string;
   displayName: string;
+  icon: string;
 };
 
 type BridgeProtocolsResponse = {

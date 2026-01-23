@@ -174,6 +174,7 @@ import {
   GetDeltaPriceFunctions,
   DeltaPrice,
   BridgePrice,
+  AvailableBridge,
   DeltaPriceParams,
 } from './methods/delta/getDeltaPrice';
 import {
@@ -379,6 +380,7 @@ export type {
   BridgeStatus,
   Bridge,
   BridgeInfo,
+  AvailableBridge,
   BridgeProtocolResponse,
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,

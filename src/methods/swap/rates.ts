@@ -42,9 +42,9 @@ type RateQueryParams = {
   side?: 'SELL' | 'BUY';
 
   /**
-   * @description Network ID. (Mainnet - 1, Optimism - 10, BSC - 56, Polygon - 137, Fantom - 250, zkEVM - 1101, Base - 8453, Arbitrum - 42161, Avalanche - 43114). Default: `1`.
+   * @description Chain ID. (Mainnet - 1, Optimism - 10, BSC - 56, Polygon - 137, Base - 8453, Arbitrum - 42161, Avalanche - 43114, Gnosis - 100, Unichain - 130, Sonic - 146). Default: `1`.
    */
-  network?: number;
+  chainId?: number;
 
   /**
    * @description If provided, **others** object is filled in the response with price quotes from other exchanges _(if available for comparison)_. Default: `false`.
@@ -221,7 +221,7 @@ export const constructGetRate = ({
     const search = constructSearchString<Omit<RateQueryParams, 'route'>>({
       srcToken,
       destToken,
-      network: chainId,
+      chainId,
       version,
       ...parsedOptions,
     });
@@ -253,7 +253,7 @@ export const constructGetRate = ({
       Omit<RateQueryParams, 'srcToken' | 'destToken'>
     >({
       route: _route, // route can be used in place of srcToken+destToken
-      network: chainId,
+      chainId,
       version,
       ...parsedOptions,
     });

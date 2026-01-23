@@ -36,8 +36,8 @@ export const constructGetSpender = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): GetSpenderFunctions => {
-  const search = constructSearchString<{ network: number; version: string }>({
-    network: chainId,
+  const search = constructSearchString<{ chainId: number; version: string }>({
+    chainId,
     version,
   });
 
