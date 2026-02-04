@@ -25,8 +25,13 @@ export const constructFetcher =
 
       // all headers combined
       const headers =
-        POSTheaders || apiHeaders || params.headers || requestParams?.headers
+        POSTheaders ||
+        apiHeaders ||
+        params.headers ||
+        requestParams?.headers ||
+        extra?.headers
           ? {
+              ...extra?.headers,
               ...apiHeaders,
               ...POSTheaders,
               ...params.headers,
