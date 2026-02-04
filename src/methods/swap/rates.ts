@@ -122,7 +122,7 @@ type RateQueryParams = {
   destTokenDexTransferFee?: string;
 
   /**
-   * @description To specify the protocol version. **Values:** 5 or 6.2 **Default**: 5.
+   * @description To specify the protocol version. **Values:** 5 or 6.2 **Default**: 6.2.
    */
   version?: number | string;
 
