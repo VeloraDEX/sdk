@@ -214,11 +214,12 @@ const constructFetcher = (options: FetcherOptions): FetcherFunction => {
     // adding apiKey to headers if it's provided
     const headers = options?.apiKey
       ? {
+          ...options.headers,
           'X-API-KEY': options.apiKey,
           ...params.headers,
           ...params.requestParams?.headers,
         }
-      : params.headers;
+      : { ...options.headers, ...params.headers };
 
     return options.fetcher({ ...params, headers });
   };
