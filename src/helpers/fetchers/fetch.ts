@@ -5,7 +5,10 @@ import { FetcherError } from '../misc';
 type Fetch = typeof fetch;
 
 export const constructFetcher =
-  (fetch: Fetch, extra?: ExtraFetchParams): FetcherFunction =>
+  (
+    fetch: Fetch,
+    extra?: ExtraFetchParams & { keepalive?: boolean }
+  ): FetcherFunction =>
   async (params) => {
     try {
       const { url, method, requestParams } = params;
@@ -44,6 +47,7 @@ export const constructFetcher =
         body,
         ...requestParams,
         headers,
+        keepalive: extra?.keepalive,
       });
 
       const data = await response.json();
