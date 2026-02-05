@@ -45,9 +45,9 @@ export const constructFetcher =
       const response = await fetch(url, {
         method,
         body,
+        keepalive: extra?.keepalive,
         ...requestParams,
         headers,
-        keepalive: extra?.keepalive,
       });
 
       const data = await response.json();
