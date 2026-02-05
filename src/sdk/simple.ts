@@ -219,7 +219,11 @@ const constructFetcher = (options: FetcherOptions): FetcherFunction => {
           ...params.headers,
           ...params.requestParams?.headers,
         }
-      : { ...options.headers, ...params.headers };
+      : {
+          ...options.headers,
+          ...params.headers,
+          ...params.requestParams?.headers,
+        };
 
     return options.fetcher({ ...params, headers });
   };
