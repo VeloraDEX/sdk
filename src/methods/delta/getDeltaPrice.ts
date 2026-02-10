@@ -29,6 +29,8 @@ export type DeltaPriceParams = {
   beneficiary?: string; // beneficiary==owner if no transferTo
   /** @description Partner string. */
   partner?: string;
+  /** @description Used together with `partner` if provided. Represented in basis points, 50bps=0.5% */
+  partnerFeeBps?: number;
   /** @description Destination Chain ID for Crosschain Orders */
   destChainId?: number;
   /** @description SELL or BUY, default is SELL */
