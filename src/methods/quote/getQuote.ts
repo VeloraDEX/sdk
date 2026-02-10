@@ -29,6 +29,8 @@ export type QuoteParams<M extends TradeMode = TradeMode> = {
   userAddress?: string;
   /** @description Partner string */
   partner?: string;
+  /** @description Used together with `partner` if provided. Represented in basis points, 50bps=0.5% */
+  partnerFeeBps?: number;
   /** @description Maximum price impact (in percentage) acceptable for the trade */
   maxImpact?: number;
   /** @description Maximum price impact (in USD) acceptable for the trade */
