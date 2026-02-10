@@ -149,6 +149,8 @@ export type RateOptions = {
   excludeContractMethods?: ContractMethodByName[];
   includeContractMethods?: ContractMethodByName[];
   partner?: string;
+  /** @description Used together with `partner` if provided. Represented in basis points, 50bps=0.5% */
+  partnerFeeBps?: number;
   /** @description In %. It's a way to bypass the API price impact check (default = 15%) */
   maxImpact?: number;
   maxUSDImpact?: number;
