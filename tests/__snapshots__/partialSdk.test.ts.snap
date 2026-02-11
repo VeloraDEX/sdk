@@ -2,13 +2,10 @@
 
 exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 1`] = `
 [
-  "Bancor",
-  "Compound",
   "CurveV2",
   "Lido",
   "EtherFi",
   "CurveV1",
-  "Swerve",
   "BalancerV1",
   "BalancerV2",
   "UniswapV2",
@@ -20,7 +17,6 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 
   "SushiSwapV3",
   "PancakeSwapV2",
   "PancakeswapV3",
-  "AaveV2",
   "AaveV3",
   "AaveV3Lido",
   "Weth",
@@ -36,11 +32,9 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_Adapters: Get_Adapters 
   "AngleStakedStableUSD",
   "AngleStakedStableEUR",
   "SolidlyV3",
-  "Wombat",
   "Swell",
   "Spark",
   "sUSDS",
-  "RingV2",
   "AugustusRFQ",
 ]
 `;
@@ -118,13 +112,10 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_SwapTxData: Get_SwapTxD
 
 exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 1`] = `
 [
-  "Bancor",
-  "Compound",
   "CurveV2",
   "Lido",
   "EtherFi",
   "CurveV1",
-  "Swerve",
   "BalancerV1",
   "BalancerV2",
   "UniswapV2",
@@ -136,7 +127,6 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 
   "SushiSwapV3",
   "PancakeSwapV2",
   "PancakeswapV3",
-  "AaveV2",
   "AaveV3",
   "AaveV3Lido",
   "Weth",
@@ -152,11 +142,9 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_Adapters: Get_Adapters 
   "AngleStakedStableUSD",
   "AngleStakedStableEUR",
   "SolidlyV3",
-  "Wombat",
   "Swell",
   "Spark",
   "sUSDS",
-  "RingV2",
   "AugustusRFQ",
 ]
 `;

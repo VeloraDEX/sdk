@@ -1208,6 +1208,7 @@ describe('NFT Orders', () => {
 
     const stablePriceRouteMatch: typeof priceRoute = {
       ...priceRoute,
+      partnerFee: NaN, // dynamic number, can change slightly depending on API config
       blockNumber: NaN, // will change with time
       srcAmount: '---', //will change based on srcToken/destToken rate
       hmac: '---', // will change with any other change
@@ -1290,7 +1291,7 @@ describe('NFT Orders', () => {
         "maxImpactReached": false,
         "network": 1,
         "partner": "anon",
-        "partnerFee": 0,
+        "partnerFee": NaN,
         "side": "BUY",
         "srcAmount": "---",
         "srcDecimals": 18,
