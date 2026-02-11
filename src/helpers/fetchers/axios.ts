@@ -12,11 +12,12 @@ export const constructFetcher =
       // adding apiKey to headers if it's provided
       const headers = extra?.apiKey
         ? {
+            ...extra.headers,
             'X-API-KEY': extra.apiKey,
             ...rest.headers,
             ...requestParams?.headers,
           }
-        : { ...rest.headers, ...requestParams?.headers };
+        : { ...extra?.headers, ...rest.headers, ...requestParams?.headers };
 
       const allParams = { ...rest, ...requestParams, headers };
 

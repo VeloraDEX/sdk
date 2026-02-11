@@ -134,6 +134,7 @@ import type {
   OptimalRate,
   OptionalRate,
   APIVersion,
+  ExtraFetchParams,
 } from './types';
 
 import type {
@@ -420,6 +421,7 @@ export type {
   FetcherErrorInterface,
   APIVersion,
   SwapSideUnion,
+  ExtraFetchParams,
 };
 
 export { SDKConfig, constructPartialSDK } from './sdk/partial';

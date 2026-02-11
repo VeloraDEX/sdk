@@ -48,6 +48,7 @@ describe('Quote:methods', () => {
 
     const staticDeltaPrice: typeof quote.delta = {
       ...quote.delta,
+      partnerFee: NaN, // dynamic number, can change slightly depending on API config
       hmac: 'dynamic_string',
       destAmount: 'dynamic_number',
       destAmountBeforeFee: 'dynamic_number',
@@ -84,7 +85,7 @@ describe('Quote:methods', () => {
         "gasCostUSDBeforeFee": "dynamic_number",
         "hmac": "dynamic_string",
         "partner": "anon",
-        "partnerFee": 0,
+        "partnerFee": NaN,
         "receivedDestAmount": "dynamic_number",
         "receivedDestAmountBeforeFee": "dynamic_number",
         "receivedDestUSD": "dynamic_number",
@@ -251,6 +252,7 @@ describe('Quote:methods', () => {
 
     const priceRouteStable = {
       ...priceRoute,
+      partnerFee: NaN, // dynamic number, can change slightly depending on API config
       gasCost: 'dynamic_number',
       gasCostUSD: 'dynamic_number',
       hmac: 'dynamic_string',
@@ -281,6 +283,7 @@ describe('Quote:methods', () => {
 
     const staticDeltaPrice: typeof quote.delta = {
       ...quote.delta,
+      partnerFee: NaN, // dynamic number, can change slightly depending on API config
       hmac: 'dynamic_string',
       destAmount: 'dynamic_number',
       destAmountBeforeFee: 'dynamic_number',
@@ -317,7 +320,7 @@ describe('Quote:methods', () => {
         "gasCostUSDBeforeFee": "dynamic_number",
         "hmac": "dynamic_string",
         "partner": "anon",
-        "partnerFee": 0,
+        "partnerFee": NaN,
         "receivedDestAmount": "dynamic_number",
         "receivedDestAmountBeforeFee": "dynamic_number",
         "receivedDestUSD": "dynamic_number",

@@ -72,7 +72,7 @@ exports[`Quote:methods Get Quote for market 1`] = `
   "maxImpactReached": false,
   "network": 1,
   "partner": "anon",
-  "partnerFee": 0,
+  "partnerFee": NaN,
   "side": "SELL",
   "srcAmount": "100000000000",
   "srcDecimals": 6,

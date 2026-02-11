@@ -171,22 +171,27 @@ describe('Delta:methods', () => {
       const expectedToInclude = [
         {
           displayName: 'Across',
+          icon: expect.any(String),
           protocol: 'Across',
         },
         {
           displayName: 'Stargate Bus',
+          icon: expect.any(String),
           protocol: 'StargateBus',
         },
         {
           displayName: 'Stargate Taxi',
+          icon: expect.any(String),
           protocol: 'StargateTaxi',
         },
         {
           displayName: 'Stargate OFT V2',
+          icon: expect.any(String),
           protocol: 'StargateOftV2',
         },
         {
           displayName: 'Relay',
+          icon: expect.any(String),
           protocol: 'Relay',
         },
       ];
@@ -209,6 +214,7 @@ describe('Delta:methods', () => {
 
     const staticDeltaPrice: typeof deltaPrice = {
       ...deltaPrice,
+      partnerFee: NaN, // dynamic number
       destAmount: 'dynamic_number',
       destAmountBeforeFee: 'dynamic_number',
       srcUSD: 'dynamic_number',
@@ -265,6 +271,7 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        partnerFee: NaN, // dynamic number
         destToken: 'dynamic_address', // will no longer match DAI_TOKEN_ON_ETHEREUM if bridge is Relay
         bridge: {
           ...deltaPrice.bridge,
@@ -322,6 +329,7 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        partnerFee: NaN, // dynamic number
         bridge: {
           ...deltaPrice.bridge,
           protocolData: 'dynamic_string',
@@ -376,6 +384,7 @@ describe('Delta:methods', () => {
 
       const staticDeltaPrice: typeof deltaPrice = {
         ...deltaPrice,
+        partnerFee: NaN, // dynamic number
         bridge: {
           ...deltaPrice.bridge,
           outputToken: 'dynamic_hash', // WETH or ETH depending on bridge used
@@ -538,6 +547,7 @@ describe('Delta:methods', () => {
       destToken: DAI,
       srcAmount: amount,
       destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
+      partnerAddress: ZERO_ADDRESS,
     });
 
     const staticSignableOrderData: typeof signableOrderData = {
@@ -548,7 +558,7 @@ describe('Delta:methods', () => {
         nonce: 'dynamic_number',
       },
     };
-    //                                                            capSurplus (true) shifted (<< 9) = 512
+    //                             for ZERO partnerAddress capSurplus (true) shifted (<< 9) = 512
     expect(signableOrderData.data.partnerAndFee).toEqual((1 << 9).toString());
     expect(staticSignableOrderData).toMatchSnapshot();
   });
@@ -838,6 +848,7 @@ describe('Delta:methods', () => {
       destToken: DAI,
       srcAmount: amount,
       destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
+      partnerAddress: ZERO_ADDRESS,
     };
 
     await dummySDK.submitDeltaOrder(input);
@@ -855,7 +866,7 @@ describe('Delta:methods', () => {
       nonce: 'dynamic_number',
     };
 
-    //                                                            capSurplus (true) shifted (<< 9) = 512
+    //                             for ZERO partnerAddress capSurplus (true) shifted (<< 9) = 512
     expect(order.partnerAndFee).toEqual((1 << 9).toString());
     expect(staticSignedOrderData).toMatchSnapshot();
   });

@@ -5,7 +5,10 @@ import { FetcherError } from '../misc';
 type Fetch = typeof fetch;
 
 export const constructFetcher =
-  (fetch: Fetch, extra?: ExtraFetchParams): FetcherFunction =>
+  (
+    fetch: Fetch,
+    extra?: ExtraFetchParams & { keepalive?: boolean }
+  ): FetcherFunction =>
   async (params) => {
     try {
       const { url, method, requestParams } = params;
@@ -25,8 +28,13 @@ export const constructFetcher =
 
       // all headers combined
       const headers =
-        POSTheaders || apiHeaders || params.headers || requestParams?.headers
+        POSTheaders ||
+        apiHeaders ||
+        params.headers ||
+        requestParams?.headers ||
+        extra?.headers
           ? {
+              ...extra?.headers,
               ...apiHeaders,
               ...POSTheaders,
               ...params.headers,
@@ -37,6 +45,7 @@ export const constructFetcher =
       const response = await fetch(url, {
         method,
         body,
+        keepalive: extra?.keepalive,
         ...requestParams,
         headers,
       });
