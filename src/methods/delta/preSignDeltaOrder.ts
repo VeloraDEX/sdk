@@ -29,7 +29,7 @@ export type SetDeltaOrderPreSignature<T> = (
   requestParams?: RequestParameters
 ) => Promise<T>;
 
-export type SetDeltaOrderDepositAndPreSignature<T> = (
+export type DepositNativeAndPreSign<T> = (
   orderHash: string,
   overrides?: TxSendOverrides,
   requestParams?: RequestParameters
@@ -52,7 +52,7 @@ export type PreSignDeltaOrderFunctions<T> = {
   hashDeltaOrder: HashDeltaOrder;
   setDeltaOrderPreSignature: SetDeltaOrderPreSignature<T>;
   preSignDeltaOrder: PreSignDeltaOrder<T>;
-  setDeltaOrderDepositAndPreSignature: SetDeltaOrderDepositAndPreSignature<T>;
+  depositNativeAndPreSign: DepositNativeAndPreSign<T>;
   depositNativeAndPreSignDeltaOrder: DepositNativeAndPreSignDeltaOrder<T>;
 };
 
@@ -146,9 +146,11 @@ export const constructPreSignDeltaOrder = <T>(
     return res;
   };
 
-  const setDeltaOrderDepositAndPreSignature: SetDeltaOrderDepositAndPreSignature<
-    T
-  > = async (orderHash, overrides = {}, requestParams) => {
+  const depositNativeAndPreSign: DepositNativeAndPreSign<T> = async (
+    orderHash,
+    overrides = {},
+    requestParams
+  ) => {
     const ParaswapDelta = await getDeltaContract(requestParams);
     if (!ParaswapDelta) {
       throw new Error(`Delta is not available on chain ${options.chainId}`);
@@ -183,7 +185,7 @@ export const constructPreSignDeltaOrder = <T>(
     T
   > = async (signableOrderData, overrides = {}, requestParams) => {
     const orderHash = hashDeltaOrderTypedData(signableOrderData);
-    const res = await setDeltaOrderDepositAndPreSignature(
+    const res = await depositNativeAndPreSign(
       orderHash,
       overrides,
       requestParams
@@ -196,7 +198,7 @@ export const constructPreSignDeltaOrder = <T>(
     hashDeltaOrder,
     setDeltaOrderPreSignature,
     preSignDeltaOrder,
-    setDeltaOrderDepositAndPreSignature,
+    depositNativeAndPreSign,
     depositNativeAndPreSignDeltaOrder,
   };
 };
