@@ -85,7 +85,7 @@ const PreSignatureModuleAbi = [
     ],
     name: 'depositNativeAndPreSign',
     outputs: [],
-    stateMutability: 'nonpayable',
+    stateMutability: 'payable',
     type: 'function',
   },
 ] as const;
