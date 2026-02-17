@@ -53,6 +53,8 @@ export type DeltaTokenModuleFunctions<T> = {
 
 const DeltaTokenModuleAbi = [
   {
+    type: 'function',
+    name: 'cancelAndWithdraw',
     inputs: [
       {
         name: 'orderWithSig',
@@ -64,30 +66,70 @@ const DeltaTokenModuleAbi = [
             type: 'tuple',
             internalType: 'struct Order',
             components: [
-              { name: 'owner', type: 'address', internalType: 'address' },
+              {
+                name: 'owner',
+                type: 'address',
+                internalType: 'address',
+              },
               {
                 name: 'beneficiary',
                 type: 'address',
                 internalType: 'address',
               },
-              { name: 'srcToken', type: 'address', internalType: 'address' },
-              { name: 'destToken', type: 'address', internalType: 'address' },
-              { name: 'srcAmount', type: 'uint256', internalType: 'uint256' },
-              { name: 'destAmount', type: 'uint256', internalType: 'uint256' },
+              {
+                name: 'srcToken',
+                type: 'address',
+                internalType: 'address',
+              },
+              {
+                name: 'destToken',
+                type: 'address',
+                internalType: 'address',
+              },
+              {
+                name: 'srcAmount',
+                type: 'uint256',
+                internalType: 'uint256',
+              },
+              {
+                name: 'destAmount',
+                type: 'uint256',
+                internalType: 'uint256',
+              },
               {
                 name: 'expectedAmount',
                 type: 'uint256',
                 internalType: 'uint256',
               },
-              { name: 'kind', type: 'uint8', internalType: 'enum OrderKind' },
-              { name: 'metadata', type: 'bytes32', internalType: 'bytes32' },
-              { name: 'deadline', type: 'uint256', internalType: 'uint256' },
-              { name: 'nonce', type: 'uint256', internalType: 'uint256' },
-              { name: 'permit', type: 'bytes', internalType: 'bytes' },
+              {
+                name: 'deadline',
+                type: 'uint256',
+                internalType: 'uint256',
+              },
+              {
+                name: 'kind',
+                type: 'uint8',
+                internalType: 'enum OrderKind',
+              },
+              {
+                name: 'nonce',
+                type: 'uint256',
+                internalType: 'uint256',
+              },
               {
                 name: 'partnerAndFee',
                 type: 'uint256',
                 internalType: 'uint256',
+              },
+              {
+                name: 'permit',
+                type: 'bytes',
+                internalType: 'bytes',
+              },
+              {
+                name: 'metadata',
+                type: 'bytes',
+                internalType: 'bytes',
               },
               {
                 name: 'bridge',
@@ -101,8 +143,8 @@ const DeltaTokenModuleAbi = [
                   },
                   {
                     name: 'destinationChainId',
-                    type: 'uint64',
-                    internalType: 'uint64',
+                    type: 'uint256',
+                    internalType: 'uint256',
                   },
                   {
                     name: 'outputToken',
@@ -111,8 +153,8 @@ const DeltaTokenModuleAbi = [
                   },
                   {
                     name: 'scalingFactor',
-                    type: 'uint32',
-                    internalType: 'uint32',
+                    type: 'int8',
+                    internalType: 'int8',
                   },
                   {
                     name: 'protocolData',
@@ -123,7 +165,33 @@ const DeltaTokenModuleAbi = [
               },
             ],
           },
-          { name: 'signature', type: 'bytes', internalType: 'bytes' },
+          {
+            name: 'signature',
+            type: 'bytes',
+            internalType: 'bytes',
+          },
+          {
+            name: 'bridgeOverride',
+            type: 'tuple',
+            internalType: 'struct BridgeOverride',
+            components: [
+              {
+                name: 'protocolSelector',
+                type: 'bytes4',
+                internalType: 'bytes4',
+              },
+              {
+                name: 'protocolData',
+                type: 'bytes',
+                internalType: 'bytes',
+              },
+            ],
+          },
+          {
+            name: 'cosignature',
+            type: 'bytes',
+            internalType: 'bytes',
+          },
         ],
       },
       {
@@ -132,12 +200,12 @@ const DeltaTokenModuleAbi = [
         internalType: 'bool',
       },
     ],
-    name: 'cancelAndWithdraw',
     outputs: [],
     stateMutability: 'nonpayable',
-    type: 'function',
   },
   {
+    type: 'function',
+    name: 'withdrawNative',
     inputs: [
       {
         name: 'amount',
@@ -145,23 +213,21 @@ const DeltaTokenModuleAbi = [
         internalType: 'uint256',
       },
     ],
-    name: 'withdrawNative',
     outputs: [],
     stateMutability: 'nonpayable',
-    type: 'function',
   },
   {
+    type: 'function',
+    name: 'depositNativeAndPreSign',
     inputs: [
       {
-        internalType: 'bytes32',
         name: 'orderHash',
         type: 'bytes32',
+        internalType: 'bytes32',
       },
     ],
-    name: 'depositNativeAndPreSign',
     outputs: [],
     stateMutability: 'payable',
-    type: 'function',
   },
 ] as const;
 
