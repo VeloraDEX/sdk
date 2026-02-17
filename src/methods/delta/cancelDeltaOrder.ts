@@ -37,6 +37,8 @@ export type CancelDeltaOrderFunctions = {
   cancelLimitDeltaOrders: CancelDeltaOrder;
 };
 
+// returns whatever `contractCaller` returns
+// to allow for better versatility
 export const constructCancelDeltaOrder = (
   options: Pick<
     ConstructProviderFetchInput<any, 'signTypedDataCall'>,
