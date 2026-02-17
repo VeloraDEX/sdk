@@ -10,6 +10,8 @@ import { produceDeltaOrderHash } from './preSignDeltaOrder';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
 import type { DeltaAuctionOrder } from './helpers/types';
 
+import { DEFAULT_BRIDGE } from './getDeltaPrice';
+
 export type CancelAndWithdrawDeltaOrderParams = {
   order: DeltaAuctionOrder;
   signature: string;
@@ -257,6 +259,8 @@ export const constructDeltaTokenModule = <T>(
     const orderWithSig = {
       order,
       signature,
+      bridgeOverride: DEFAULT_BRIDGE,
+      cosignature: '0x',
     };
 
     const res = await options.contractCaller.transactCall<AvailableMethods>({
