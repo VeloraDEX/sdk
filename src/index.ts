@@ -216,6 +216,11 @@ import {
   CancelDeltaOrderFunctions,
   constructCancelDeltaOrder,
 } from './methods/delta/cancelDeltaOrder';
+import {
+  DeltaTokenModuleFunctions,
+  CancelAndWithdrawDeltaOrderParams,
+  constructDeltaTokenModule,
+} from './methods/delta/deltaTokenModule';
 
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
 
@@ -300,6 +305,7 @@ export {
   constructGetDeltaPrice,
   constructGetDeltaOrders,
   constructCancelDeltaOrder,
+  constructDeltaTokenModule,
   constructApproveTokenForDelta,
   // Quote methods
   constructGetQuote,
@@ -395,6 +401,8 @@ export type {
   GetDeltaOrdersFunctions,
   ApproveTokenForDeltaFunctions,
   CancelDeltaOrderFunctions,
+  DeltaTokenModuleFunctions,
+  CancelAndWithdrawDeltaOrderParams,
   // types for Quote methods
   GetQuoteFunctions,
   QuoteParams,
