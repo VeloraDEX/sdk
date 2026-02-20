@@ -61,6 +61,7 @@ export type DeltaAuctionStatus =
   | 'FAILED'
   | 'EXPIRED'
   | 'CANCELLED'
+  | 'CANCELLING'
   | 'SUSPENDED';
 
 type DeltaAuctionTransaction = {
