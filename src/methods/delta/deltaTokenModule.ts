@@ -8,13 +8,13 @@ import { sanitizeDeltaOrderData } from './helpers/misc';
 import { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 import { produceDeltaOrderHash } from './preSignDeltaOrder';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
-import type { DeltaAuctionOrder } from './helpers/types';
-
-import { DEFAULT_BRIDGE } from './getDeltaPrice';
+import type { Bridge, DeltaAuctionOrder } from './helpers/types';
 
 export type CancelAndWithdrawDeltaOrderParams = {
   order: DeltaAuctionOrder;
   signature: string;
+  bridgeOverride: Pick<Bridge, 'protocolSelector' | 'protocolData'>;
+  cosignature: string;
   isFillable: boolean;
 };
 
@@ -247,7 +247,7 @@ export const constructDeltaTokenModule = <T>(
   const { getDeltaContract } = constructGetDeltaContract(options);
 
   const cancelAndWithdrawDeltaOrder: CancelAndWithdrawDeltaOrder<T> = async (
-    { order, signature, isFillable },
+    { order, signature, bridgeOverride, cosignature, isFillable },
     overrides = {},
     requestParams
   ) => {
@@ -259,8 +259,8 @@ export const constructDeltaTokenModule = <T>(
     const orderWithSig = {
       order,
       signature,
-      bridgeOverride: DEFAULT_BRIDGE,
-      cosignature: '0x',
+      bridgeOverride,
+      cosignature,
     };
 
     const res = await options.contractCaller.transactCall<AvailableMethods>({
