@@ -235,8 +235,6 @@ const DeltaTokenModuleAbi = [
 
 type AvailableMethods = ExtractAbiMethodNames<typeof DeltaTokenModuleAbi>;
 
-// returns whatever `contractCaller` returns
-// to allow for better versatility
 export const constructDeltaTokenModule = <T>(
   options: Pick<
     ConstructProviderFetchInput<T, 'transactCall'>,
