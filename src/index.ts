@@ -220,6 +220,8 @@ import {
   DeltaTokenModuleFunctions,
   CancelAndWithdrawDeltaOrderParams,
   constructDeltaTokenModule,
+  DepositNativeAndPreSignParams,
+  DepositNativeAndPreSignDeltaOrderParams,
 } from './methods/delta/deltaTokenModule';
 
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
@@ -403,6 +405,8 @@ export type {
   CancelDeltaOrderFunctions,
   DeltaTokenModuleFunctions,
   CancelAndWithdrawDeltaOrderParams,
+  DepositNativeAndPreSignParams,
+  DepositNativeAndPreSignDeltaOrderParams,
   // types for Quote methods
   GetQuoteFunctions,
   QuoteParams,
