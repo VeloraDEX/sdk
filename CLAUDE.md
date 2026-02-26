@@ -27,22 +27,29 @@ Every feature module exports a `constructXxx(options) => XxxFunctions` factory:
 ## Key File Locations
 
 ### Delta Module (`src/methods/delta/`)
-| File | Purpose | Generic? |
-|------|---------|----------|
-| `index.ts` | `DeltaOrderHandlers<T>`, `constructAllDeltaOrdersHandlers` | Yes |
-| `deltaTokenModule.ts` | On-chain `cancelAndWithdraw`, `withdrawNative`, `depositNativeAndPreSign` | `<T>` |
-| `cancelDeltaOrder.ts` | API cancel (sign, post, cancel) | No |
-| `preSignDeltaOrder.ts` | On-chain `setPreSignature`, order hashing | `<T>` |
-| `buildDeltaOrder.ts` | Order construction | No |
-| `signDeltaOrder.ts` | EIP-712 signing | No |
-| `postDeltaOrder.ts` | POST order to API | No |
-| `getDeltaContract.ts` | Resolve ParaswapDelta contract address | No |
-| `approveForDelta.ts` | Token approval | `<T>` |
+| File | Constructor | Purpose | Generic? | Pattern |
+|------|-------------|---------|----------|---------|
+| `index.ts` | `constructSubmitDeltaOrder`, `constructAllDeltaOrdersHandlers` | Composite: orchestrates all modules, defines `DeltaOrderHandlers<T>` | `submitDelta`: No, `allHandlers`: `<T>` | Composite |
+| `buildDeltaOrder.ts` | `constructBuildDeltaOrder` | Build `SignableDeltaOrderData` from params (fetches contract + partner fee, then local computation) | No | API fetch + local |
+| `signDeltaOrder.ts` | `constructSignDeltaOrder` | EIP-712 sign order via `signTypedDataCall` → returns signature `string` | No (`any`) | `signTypedDataCall` |
+| `postDeltaOrder.ts` | `constructPostDeltaOrder` | POST signed order to API → `DeltaOrderApiResponse` | No | `fetcher` POST |
+| `getDeltaPrice.ts` | `constructGetDeltaPrice` | Fetch quote/price from API. Overloaded: returns `DeltaPrice` (same-chain) or `BridgePrice` (cross-chain when `destChainId` present) | No | `fetcher` GET |
+| `getDeltaOrders.ts` | `constructGetDeltaOrders` | Query orders from API: `getDeltaOrderById`, `getDeltaOrderByHash`, `getDeltaOrders` (list), `getRequiredBalanceForDeltaLimitOrders` | No | `fetcher` GET |
+| `getDeltaContract.ts` | `constructGetDeltaContract` | Resolve ParaswapDelta contract address from contracts endpoint | No | `fetcher` GET |
+| `approveForDelta.ts` | `constructApproveTokenForDelta` | ERC-20 `approve` with ParaswapDelta as spender (delegates to `approveTokenMethodFactory`) | `<T>` | `transactCall` |
+| `preSignDeltaOrder.ts` | `constructPreSignDeltaOrder` | On-chain `setPreSignature` + order hashing helpers (`hashDeltaOrderTypedData`, `hashDeltaOrder`, `preSignDeltaOrder`) | `<T>` | `transactCall` |
+| `cancelDeltaOrder.ts` | `constructCancelDeltaOrder` | API cancel: `signCancelLimitDeltaOrderRequest` → `postCancelLimitDeltaOrderRequest` → `cancelLimitDeltaOrders` (orchestrator) | No (`any`) | `signTypedDataCall` + `fetcher` POST |
+| `deltaTokenModule.ts` | `constructDeltaTokenModule` | On-chain `cancelAndWithdrawDeltaOrder`, `withdrawDeltaNative`, `depositNativeAndPreSign`, `depositNativeAndPreSignDeltaOrder` | `<T>` | `transactCall` |
+| `getPartnerFee.ts` | `constructGetPartnerFee` | Fetch partner fee info (internally cached per partner in a `Map`) | No | `fetcher` GET |
+| `getBridgeInfo.ts` | `constructGetBridgeInfo` | `getBridgeInfo` (supported routes) + `getBridgeProtocols` | No | `fetcher` GET |
+| `isTokenSupportedInDelta.ts` | `constructIsTokenSupportedInDelta` | Check if a token is supported → `boolean` | No | `fetcher` GET |
+| `constants.ts` | — | `DEFAULT_BRIDGE` constant (all-zero values for same-chain orders) | — | — |
 
 ### Delta Helpers (`src/methods/delta/helpers/`)
-- `types.ts` — `DeltaAuctionOrder`, `Bridge`, `DeltaAuction`, `DeltaAuctionStatus`
-- `buildDeltaOrderData.ts` — EIP-712 type defs, `SignableDeltaOrderData`
-- `buildCancelDeltaOrderData.ts` — Cancel order EIP-712 typed data
+- `types.ts` — `DeltaAuctionOrder`, `Bridge`, `DeltaAuction`, `DeltaAuctionStatus`, `BridgeMetadata`, `BridgeStatus`, `BridgePriceInfo`, `SwapSideToOrderKind`
+- `buildDeltaOrderData.ts` — `buildDeltaSignableOrderData`, `produceDeltaOrderTypedData`, `SignableDeltaOrderData`, `BuildDeltaOrderDataInput`, `DELTA_DEFAULT_EXPIRY`
+- `buildCancelDeltaOrderData.ts` — `buildCancelDeltaOrderSignableData`, `SignableCancelDeltaOrderData`, `CancelDeltaOrderData`
+- `misc.ts` — `sanitizeDeltaOrderData` (strips extra fields from order data before signing/hashing)
 
 ### Core Types (`src/`)
 - `types.ts` — `ConstructProviderFetchInput`, `ContractCallerFunctions`, `TxSendOverrides`
