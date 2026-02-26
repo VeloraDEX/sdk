@@ -9,13 +9,14 @@ import { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 import { produceDeltaOrderHash } from './preSignDeltaOrder';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
 import type { Bridge, DeltaAuctionOrder } from './helpers/types';
+import { DEFAULT_BRIDGE } from './constants';
 
 export type CancelAndWithdrawDeltaOrderParams = {
   order: DeltaAuctionOrder;
   signature: string;
-  bridgeOverride: Pick<Bridge, 'protocolSelector' | 'protocolData'>;
-  cosignature: string;
-  isFillable: boolean;
+  bridgeOverride?: Pick<Bridge, 'protocolSelector' | 'protocolData'>;
+  cosignature?: string;
+  isFillable?: boolean;
 };
 
 export type CancelAndWithdrawDeltaOrder<T> = (
@@ -30,15 +31,27 @@ export type WithdrawDeltaNative<T> = (
   requestParams?: RequestParameters
 ) => Promise<T>;
 
+export type DepositNativeAndPreSignParams = {
+  orderHash: string;
+  depositAmount: string;
+};
+
 export type DepositNativeAndPreSign<T> = (
-  orderHash: string,
-  overrides?: TxSendOverrides,
+  params: DepositNativeAndPreSignParams,
+  overrides?: Omit<TxSendOverrides, 'value'>, // value is set internally based on depositAmount
   requestParams?: RequestParameters
 ) => Promise<T>;
 
+export type DepositNativeAndPreSignDeltaOrderParams = Pick<
+  DepositNativeAndPreSignParams,
+  'depositAmount'
+> & {
+  signableOrderData: SignableDeltaOrderData;
+};
+
 export type DepositNativeAndPreSignDeltaOrder<T> = (
-  signableOrderData: SignableDeltaOrderData,
-  overrides?: TxSendOverrides,
+  params: DepositNativeAndPreSignDeltaOrderParams,
+  overrides?: Omit<TxSendOverrides, 'value'>, // value is set internally based on depositAmount
   requestParams?: RequestParameters
 ) => Promise<T>;
 
@@ -245,7 +258,16 @@ export const constructDeltaTokenModule = <T>(
   const { getDeltaContract } = constructGetDeltaContract(options);
 
   const cancelAndWithdrawDeltaOrder: CancelAndWithdrawDeltaOrder<T> = async (
-    { order, signature, bridgeOverride, cosignature, isFillable },
+    {
+      order,
+      signature,
+      bridgeOverride = {
+        protocolData: DEFAULT_BRIDGE.protocolData,
+        protocolSelector: DEFAULT_BRIDGE.protocolSelector,
+      },
+      cosignature = '0x',
+      isFillable = false,
+    },
     overrides = {},
     requestParams
   ) => {
@@ -294,7 +316,7 @@ export const constructDeltaTokenModule = <T>(
   };
 
   const depositNativeAndPreSign: DepositNativeAndPreSign<T> = async (
-    orderHash,
+    { orderHash, depositAmount },
     overrides = {},
     requestParams
   ) => {
@@ -308,7 +330,10 @@ export const constructDeltaTokenModule = <T>(
       abi: DeltaTokenModuleAbi,
       contractMethod: 'depositNativeAndPreSign',
       args: [orderHash],
-      overrides,
+      overrides: {
+        ...overrides,
+        value: depositAmount,
+      },
     });
 
     return res;
@@ -316,7 +341,11 @@ export const constructDeltaTokenModule = <T>(
 
   const depositNativeAndPreSignDeltaOrder: DepositNativeAndPreSignDeltaOrder<
     T
-  > = async (signableOrderData, overrides = {}, requestParams) => {
+  > = async (
+    { signableOrderData, depositAmount },
+    overrides = {},
+    requestParams
+  ) => {
     // types allow to pass OrderData & extra_stuff, but tx will break like that
     const typedDataOnly: SignableDeltaOrderData = {
       ...signableOrderData,
@@ -325,7 +354,7 @@ export const constructDeltaTokenModule = <T>(
 
     const orderHash = produceDeltaOrderHash(typedDataOnly);
     const res = await depositNativeAndPreSign(
-      orderHash,
+      { orderHash, depositAmount },
       overrides,
       requestParams
     );
