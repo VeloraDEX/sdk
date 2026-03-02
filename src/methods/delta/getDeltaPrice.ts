@@ -99,6 +99,10 @@ export type DeltaPrice = {
 
 type AvailableBridgePrice = Pick<
   DeltaPrice,
+  | 'srcAmount'
+  | 'srcAmountBeforeFee' // Available for BUY side
+  | 'srcUSD'
+  | 'srcUSDBeforeFee' // Available for BUY side
   | 'destToken'
   | 'destAmount'
   | 'destAmountBeforeFee' // Available for SELL side
