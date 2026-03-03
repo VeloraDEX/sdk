@@ -8,14 +8,13 @@ import { sanitizeDeltaOrderData } from './helpers/misc';
 import { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 import { produceDeltaOrderHash } from './preSignDeltaOrder';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
-import type { Bridge, DeltaAuctionOrder } from './helpers/types';
+import type { DeltaAuctionOrder } from './helpers/types';
 import { DEFAULT_BRIDGE } from './constants';
 
 export type CancelAndWithdrawDeltaOrderParams = {
   order: DeltaAuctionOrder;
   signature: string;
-  bridgeOverride?: Pick<Bridge, 'protocolSelector' | 'protocolData'>;
-  cosignature?: string;
+  /** @description A boolean indicating whether the order is a fillable order. False by default */
   isFillable?: boolean;
 };
 
@@ -260,16 +259,7 @@ export const constructDeltaTokenModule = <T>(
   const { getDeltaContract } = constructGetDeltaContract(options);
 
   const cancelAndWithdrawDeltaOrder: CancelAndWithdrawDeltaOrder<T> = async (
-    {
-      order,
-      signature,
-      bridgeOverride = {
-        protocolData: DEFAULT_BRIDGE.protocolData,
-        protocolSelector: DEFAULT_BRIDGE.protocolSelector,
-      },
-      cosignature = '0x',
-      isFillable = false,
-    },
+    { order, signature, isFillable = false },
     overrides = {},
     requestParams
   ) => {
@@ -281,8 +271,13 @@ export const constructDeltaTokenModule = <T>(
     const orderWithSig = {
       order,
       signature,
-      bridgeOverride,
-      cosignature,
+      // bridgeOverride and cosignature are not used by the contract,
+      // can always provide defaults
+      bridgeOverride: {
+        protocolData: DEFAULT_BRIDGE.protocolData,
+        protocolSelector: DEFAULT_BRIDGE.protocolSelector,
+      },
+      cosignature: '0x',
     };
 
     const res = await options.contractCaller.transactCall<AvailableMethods>({
