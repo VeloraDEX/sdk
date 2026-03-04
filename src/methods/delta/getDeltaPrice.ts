@@ -7,7 +7,6 @@ import type {
   EnumerateLiteral,
   RequestParameters,
 } from '../../types';
-import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
 import { BridgePriceInfo } from './helpers/types';
 
 type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
@@ -55,15 +54,6 @@ type DeltaPriceQueryOptions = Omit<
   includeBridges?: string;
   excludeBridges?: string;
 };
-
-// for same-chain Orders, all 0 params
-export const DEFAULT_BRIDGE = {
-  protocolSelector: '0x00000000', // 4 bytes
-  destinationChainId: 0,
-  outputToken: ZERO_ADDRESS,
-  scalingFactor: 0,
-  protocolData: '0x',
-} as const satisfies Bridge;
 
 export type DeltaPrice = {
   srcToken: string;
