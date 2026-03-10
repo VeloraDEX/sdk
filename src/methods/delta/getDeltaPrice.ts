@@ -34,6 +34,8 @@ export type DeltaPriceParams = {
   destChainId?: number;
   /** @description SELL or BUY, default is SELL */
   side?: SwapSideUnion;
+  /** @description In %. It's a way to bypass the API price impact check (default = 15%) */
+  maxImpact?: number;
 
   includeAgents?: string[];
   excludeAgents?: string[];
