@@ -139,6 +139,7 @@ type RateQueryParams = {
    * @description 	Exclude all RFQs from pricing, e.g.: AugustusRFQ, Hashflow. Default: false
    */
   excludeRFQ?: boolean;
+  degenMode?: boolean;
 };
 
 // more details in the docs https://developers.velora.xyz/api/velora-api/velora-market-api/get-rate-for-a-token-pair#query-parameters
@@ -169,6 +170,7 @@ export type RateOptions = {
   srcTokenDexTransferFee?: string;
   /** @description Some tokens only charge tax when swapped in/out DEXs and not on ordinary transfers.  */
   destTokenDexTransferFee?: string;
+  degenMode?: boolean;
 };
 
 type CommonGetRateInput = {
