@@ -64,8 +64,6 @@ type BuildDeltaOrderDataParamsBase = {
   /** @description A boolean indicating whether the surplus should be capped. True by default */
   capSurplus?: boolean;
 
-  /** @description The side of the order. Default is SELL */
-  side?: SwapSideUnion;
   /** @description Metadata for the order, hex string */
   metadata?: string;
 };
@@ -77,6 +75,8 @@ type DeltaAmountsSellSlippage = {
   /** @description The amount of src token to swap */
   srcAmount: string;
   destAmount?: never;
+  /** @description The side of the order */
+  side?: 'SELL';
 };
 /** @description BUY with slippage: destAmount provided, srcAmount auto-computed from deltaPrice.srcAmount */
 type DeltaAmountsBuySlippage = {
@@ -85,6 +85,8 @@ type DeltaAmountsBuySlippage = {
   /** @description The minimum amount of dest token to receive */
   destAmount: string;
   srcAmount?: never;
+  /** @description The side of the order */
+  side?: 'BUY';
 };
 /** @description Explicit amounts, no slippage (backward-compatible) */
 type DeltaAmountsExplicit = {
@@ -93,6 +95,8 @@ type DeltaAmountsExplicit = {
   srcAmount: string;
   /** @description The minimum amount of dest token to receive */
   destAmount: string;
+  /** @description The side of the order. Default is SELL */
+  side?: SwapSideUnion;
 };
 
 export type BuildDeltaOrderDataParams = BuildDeltaOrderDataParamsBase &
@@ -162,16 +166,14 @@ export const constructBuildDeltaOrder = (
     partnerFeeBps = partnerFeeBps ?? 0;
     partnerTakesSurplus = partnerTakesSurplus ?? false;
 
-    const swapSide = options.side ?? SwapSide.SELL;
-
-    const expectedAmount =
-      swapSide === SwapSide.SELL
-        ? options.deltaPrice.destAmount
-        : options.deltaPrice.srcAmount;
-
-    // Resolve srcAmount and destAmount, applying slippage if provided
+    // Resolve srcAmount, destAmount and side.
+    // When slippage is used, side is inferred from which amount is present.
     let srcAmount: string;
     let destAmount: string;
+
+    const swapSide: SwapSideUnion = options.slippage != null
+      ? (options.srcAmount ? SwapSide.SELL : SwapSide.BUY)
+      : (options.side ?? SwapSide.SELL);
 
     if (options.slippage != null) {
       if (options.srcAmount) {
@@ -195,6 +197,11 @@ export const constructBuildDeltaOrder = (
       srcAmount = options.srcAmount;
       destAmount = options.destAmount;
     }
+
+    const expectedAmount =
+      swapSide === SwapSide.SELL
+        ? options.deltaPrice.destAmount
+        : options.deltaPrice.srcAmount;
 
     const input: BuildDeltaOrderDataInput = {
       owner: options.owner,
