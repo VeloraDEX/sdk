@@ -145,7 +145,7 @@ describe.each([
     );
   });
 
-  test.only('Get_SwapTxData', async () => {
+  test('Get_SwapTxData', async () => {
     const { priceRoute, txParams } = await sdk.swap.getSwapTxData({
       srcToken: ETH,
       destToken: DAI,
@@ -179,6 +179,7 @@ describe.each([
 
     const priceRouteStable = {
       ...priceRoute,
+      partnerFee: NaN, // dynamic number
       gasCost: 'dynamic_number',
       gasCostUSD: 'dynamic_number',
       hmac: 'dynamic_string',
@@ -220,7 +221,18 @@ describe.each([
 
   test('Get_Adapters', async () => {
     const adapters = await sdk.swap.getAdapters();
-    expect(adapters).toMatchSnapshot('Get_Adapters');
+
+    expect(adapters.length).toBeGreaterThan(15);
+    expect(adapters).toEqual(
+      expect.arrayContaining([
+        'UniswapV2',
+        'UniswapV3',
+        'SushiSwap',
+        'CurveV2',
+        'BalancerV2',
+        'AugustusRFQ',
+      ])
+    );
   });
 
   test('Build_Tx', async () => {

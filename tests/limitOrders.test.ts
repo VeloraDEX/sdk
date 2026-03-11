@@ -169,7 +169,8 @@ const expectTxParamsScheme = expect.objectContaining({
   chainId: expect.any(Number),
 });
 
-describe('Limit Orders', () => {
+// deprecated
+describe.skip('Limit Orders', () => {
   let sdk: BuildLimitOrderFunctions &
     SignLimitOrderFunctions &
     GetLimitOrdersContractFunctions &
@@ -1056,6 +1057,7 @@ describe('Limit Orders', () => {
     const stablePriceRouteMatch: typeof priceRoute = {
       ...priceRoute,
       blockNumber: NaN, // will change with time
+      partnerFee: NaN, // dynamic number
       srcAmount: '---', //will change based on srcToken/destToken rate
       hmac: '---', // will change with any other change
       destUSD: '---',

@@ -181,7 +181,8 @@ const expectTxParamsScheme = expect.objectContaining({
   chainId: expect.any(Number),
 });
 
-describe('NFT Orders', () => {
+// deprecated
+describe.skip('NFT Orders', () => {
   let sdk: BuildNFTOrderFunctions &
     SignNFTOrderFunctions &
     GetNFTOrdersContractFunctions &

@@ -60,7 +60,7 @@ exports[`Limit Orders Build_Swap+LO_Tx 1`] = `
   "maxImpactReached": false,
   "network": 1,
   "partner": "anon",
-  "partnerFee": 0,
+  "partnerFee": NaN,
   "side": "BUY",
   "srcAmount": "---",
   "srcDecimals": 18,

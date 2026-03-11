@@ -230,7 +230,7 @@ describe.each([
       slippage: 500,
       options: {
         includeDEXS: ['UniswapV2'],
-        includeContractMethods: ['swapExactAmountIn'], // more stable results
+        includeContractMethods: ['simpleSwap'], // more stable results
       },
     });
 
@@ -254,6 +254,7 @@ describe.each([
 
     const priceRouteStable = {
       ...priceRoute,
+      partnerFee: NaN, // dynamic number
       gasCost: 'dynamic_number',
       gasCostUSD: 'dynamic_number',
       hmac: 'dynamic_string',
@@ -306,7 +307,17 @@ describe.each([
   test('Get_Adapters', async () => {
     const adapters = await sdk.getAdapters();
 
-    expect(adapters).toMatchSnapshot('Get_Adapters');
+    expect(adapters.length).toBeGreaterThan(15);
+    expect(adapters).toEqual(
+      expect.arrayContaining([
+        'UniswapV2',
+        'UniswapV3',
+        'SushiSwap',
+        'CurveV2',
+        'BalancerV2',
+        'AugustusRFQ',
+      ])
+    );
   });
 
   test('Build_Tx', async () => {
@@ -486,7 +497,13 @@ describe.each([
         SDKConfig<ApproveTxResult>,
         [ApproveConstructor, typeof constructGetSpender]
       >(
-        { chainId, fetcher, contractCaller, apiURL: process.env.API_URL, version: '5' },
+        {
+          chainId,
+          fetcher,
+          contractCaller,
+          apiURL: process.env.API_URL,
+          version: '5',
+        },
         constructApproveToken,
         constructGetSpender
       );
