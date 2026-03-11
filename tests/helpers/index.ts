@@ -38,7 +38,7 @@ export async function buyErc20TokenForEth({
   destDecimals = 18,
 }: BuyErc20TokenForEthInput): Promise<BuyErc20TokenForEthReturn> {
   const _sdk = constructSimpleSDK(
-    { chainId, ...fetcherOptions },
+    { chainId, ...fetcherOptions, apiURL: process.env.API_URL },
     providerOptions
   );
 

@@ -130,7 +130,7 @@ describe.each([
     });
 
     sdk = constructPartialSDK(
-      { chainId, fetcher, version: '5' },
+      { chainId, fetcher, apiURL: process.env.API_URL, version: '5' },
       constructGetBalances,
       constructGetAdapters,
       constructGetTokens,
@@ -486,7 +486,7 @@ describe.each([
         SDKConfig<ApproveTxResult>,
         [ApproveConstructor, typeof constructGetSpender]
       >(
-        { chainId, fetcher, contractCaller, version: '5' },
+        { chainId, fetcher, contractCaller, apiURL: process.env.API_URL, version: '5' },
         constructApproveToken,
         constructGetSpender
       );

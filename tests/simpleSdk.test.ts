@@ -58,7 +58,12 @@ describe.each([
   beforeAll(async () => {
     await setupFork({ accounts: [{ address: senderAddress, balance: 8e18 }] });
 
-    sdk = constructSimpleSDK({ chainId, ...fetcherOptions, version: '6.2' });
+    sdk = constructSimpleSDK({
+      chainId,
+      ...fetcherOptions,
+      apiURL: process.env.API_URL,
+      version: '6.2',
+    });
   });
   test('getBalance', async () => {
     try {
@@ -140,7 +145,7 @@ describe.each([
     );
   });
 
-  test('Get_SwapTxData', async () => {
+  test.only('Get_SwapTxData', async () => {
     const { priceRoute, txParams } = await sdk.swap.getSwapTxData({
       srcToken: ETH,
       destToken: DAI,
@@ -384,7 +389,12 @@ describe.each([
 
     beforeAll(() => {
       sdk = constructSimpleSDK(
-        { chainId, ...fetcherOptions, version: '5' },
+        {
+          chainId,
+          ...fetcherOptions,
+          apiURL: process.env.API_URL,
+          version: '5',
+        },
         providerOptions
       );
     });

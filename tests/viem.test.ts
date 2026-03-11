@@ -85,6 +85,7 @@ describe('SDK with viem: contract calling methods', () => {
       {
         chainId,
         axios,
+        apiURL: process.env.API_URL,
         version: '6.2',
       },
       {
@@ -98,6 +99,7 @@ describe('SDK with viem: contract calling methods', () => {
       {
         chainId,
         axios,
+        apiURL: process.env.API_URL,
         version: '6.2',
       },
       {
