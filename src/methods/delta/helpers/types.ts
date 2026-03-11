@@ -52,6 +52,37 @@ export type Bridge = {
   protocolData: string; // Hex string
 };
 
+export type ExternalDeltaOrder = {
+  /** @description The address of the order owner */
+  owner: string;
+  /** @description The address of the external handler contract */
+  handler: string;
+  /** @description The address of the src token */
+  srcToken: string;
+  /** @description The address of the dest token */
+  destToken: string;
+  /** @description The amount of src token to swap */
+  srcAmount: string;
+  /** @description The minimum amount of dest token to receive */
+  destAmount: string;
+  /** @description The expected amount of token to receive */
+  expectedAmount: string;
+  /** @description The kind of the order */
+  kind: number;
+  /** @description Metadata for the order, hex string */
+  metadata: string;
+  /** @description The deadline for the order */
+  deadline: number;
+  /** @description The nonce of the order */
+  nonce: string;
+  /** @description Optional permit signature for the src token */
+  permit: string;
+  /** @description Encoded partner address, fee bps, and flags for the order */
+  partnerAndFee: string;
+  /** @description Protocol-specific encoded bytes for the external handler */
+  data: string;
+};
+
 export type DeltaAuctionStatus =
   | 'NOT_STARTED'
   | 'AWAITING_PRE_SIGNATURE'

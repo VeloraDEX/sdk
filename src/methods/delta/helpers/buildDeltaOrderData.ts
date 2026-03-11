@@ -166,7 +166,7 @@ type ProducePartnerAndFeeInput = {
 };
 
 // fee and address are encoded together
-function producePartnerAndFee({
+export function producePartnerAndFee({
   partnerFeeBps,
   partnerAddress,
   partnerTakesSurplus,
