@@ -171,9 +171,12 @@ export const constructBuildDeltaOrder = (
     let srcAmount: string;
     let destAmount: string;
 
-    const swapSide: SwapSideUnion = options.slippage != null
-      ? (options.srcAmount ? SwapSide.SELL : SwapSide.BUY)
-      : (options.side ?? SwapSide.SELL);
+    const swapSide: SwapSideUnion =
+      options.slippage != null
+        ? options.srcAmount
+          ? SwapSide.SELL
+          : SwapSide.BUY
+        : options.side ?? SwapSide.SELL;
 
     if (options.slippage != null) {
       if (options.srcAmount) {
