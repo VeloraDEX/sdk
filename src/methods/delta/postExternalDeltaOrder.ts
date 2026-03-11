@@ -1,7 +1,16 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import { ExternalDeltaOrder } from './helpers/types';
-import { DeltaOrderApiResponse } from './postDeltaOrder';
+import { DeltaAuction, ExternalDeltaOrder } from './helpers/types';
+
+export type ExternalDeltaOrderApiResponse = Omit<
+  DeltaAuction,
+  'transactions' | 'order'
+> & {
+  order: ExternalDeltaOrder;
+  orderVersion: string;
+  deltaGasOverhead: number;
+  type: 'MARKET' | 'LIMIT';
+};
 
 export type ExternalDeltaOrderToPost = {
   /** @description Partner string */
@@ -30,7 +39,7 @@ export type PostExternalDeltaOrderParams = Omit<
 type PostExternalDeltaOrder = (
   postData: PostExternalDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderApiResponse>;
+) => Promise<ExternalDeltaOrderApiResponse>;
 
 export type PostExternalDeltaOrderFunctions = {
   postExternalDeltaOrder: PostExternalDeltaOrder;
@@ -49,7 +58,7 @@ export const constructPostExternalDeltaOrder = ({
   ) => {
     const deltaOrderToPost: ExternalDeltaOrderToPost = { ...postData, chainId };
 
-    return fetcher<DeltaOrderApiResponse>({
+    return fetcher<ExternalDeltaOrderApiResponse>({
       url: postOrderUrl,
       method: 'POST',
       data: deltaOrderToPost,

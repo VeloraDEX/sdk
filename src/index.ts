@@ -216,6 +216,7 @@ import {
 } from './methods/delta/signExternalDeltaOrder';
 import {
   constructPostExternalDeltaOrder,
+  ExternalDeltaOrderApiResponse,
   PostExternalDeltaOrderFunctions,
   PostExternalDeltaOrderParams,
 } from './methods/delta/postExternalDeltaOrder';
@@ -441,6 +442,7 @@ export type {
   BuildExternalDeltaOrderParams,
   BuildExternalDeltaOrderFunctions,
   SignExternalDeltaOrderFunctions,
+  ExternalDeltaOrderApiResponse,
   PostExternalDeltaOrderFunctions,
   PostExternalDeltaOrderParams,
   PreSignExternalDeltaOrderFunctions,

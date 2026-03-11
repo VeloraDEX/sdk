@@ -65,6 +65,7 @@ import {
 } from './signExternalDeltaOrder';
 import {
   constructPostExternalDeltaOrder,
+  ExternalDeltaOrderApiResponse,
   PostExternalDeltaOrderFunctions,
   ExternalDeltaOrderToPost,
 } from './postExternalDeltaOrder';
@@ -126,7 +127,7 @@ export type SubmitExternalDeltaOrderParams = BuildExternalDeltaOrderParams & {
 
 type SubmitExternalDeltaOrder = (
   orderParams: SubmitExternalDeltaOrderParams
-) => Promise<DeltaOrderApiResponse>;
+) => Promise<ExternalDeltaOrderApiResponse>;
 
 export type SubmitExternalDeltaOrderFuncs = {
   submitExternalDeltaOrder: SubmitExternalDeltaOrder;
