@@ -1,6 +1,7 @@
 import { MarkOptional } from 'ts-essentials';
-import { Domain, ZERO_ADDRESS } from '../../common/orders/buildOrderData';
+import { Domain } from '../../common/orders/buildOrderData';
 import { Bridge, DeltaAuctionOrder } from './types';
+import { DELTA_DEFAULT_EXPIRY, producePartnerAndFee } from './misc';
 
 // Order(address owner,address beneficiary,address srcToken,address destToken,uint256 srcAmount,uint256 destAmount,uint256 deadline,uint256 nonce,bytes permit, bridge Bridge)";
 const SWAP_ORDER_EIP_712_TYPES = {
@@ -64,7 +65,7 @@ export function produceDeltaOrderTypedData({
   chainId,
   paraswapDeltaAddress,
 }: SignDeltaOrderInput): SignableDeltaOrderData {
-  const typedData = {
+  return {
     types: {
       Order: SWAP_ORDER_EIP_712_TYPES.Order,
       Bridge: SWAP_ORDER_EIP_712_TYPES.Bridge,
@@ -77,8 +78,6 @@ export function produceDeltaOrderTypedData({
     },
     data: orderInput,
   };
-
-  return typedData;
 }
 
 export type DeltaOrderDataInput = MarkOptional<
@@ -98,9 +97,6 @@ export type BuildDeltaOrderDataInput = MarkOptional<
   chainId: number;
   bridge: Bridge;
 };
-
-// default deadline = 1 hour for now (may be changed later)
-export const DELTA_DEFAULT_EXPIRY = 60 * 60; // seconds
 
 export function buildDeltaSignableOrderData({
   owner,
@@ -156,32 +152,4 @@ export function buildDeltaSignableOrderData({
     chainId,
     paraswapDeltaAddress,
   });
-}
-
-type ProducePartnerAndFeeInput = {
-  partnerFeeBps: number;
-  partnerAddress: string;
-  partnerTakesSurplus: boolean;
-  capSurplus: boolean;
-};
-
-// fee and address are encoded together
-export function producePartnerAndFee({
-  partnerFeeBps,
-  partnerAddress,
-  partnerTakesSurplus,
-  capSurplus,
-}: ProducePartnerAndFeeInput): string {
-  const capSurplusShifted = BigInt(capSurplus) << BigInt(9);
-  if (partnerAddress === ZERO_ADDRESS) {
-    return capSurplusShifted.toString(10);
-  } else {
-    const partnerAndFee =
-      (BigInt(partnerAddress) << BigInt(96)) |
-      BigInt(partnerFeeBps.toFixed(0)) |
-      (BigInt(partnerTakesSurplus) << BigInt(8)) |
-      capSurplusShifted;
-
-    return partnerAndFee.toString(10);
-  }
 }

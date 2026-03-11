@@ -1,5 +1,37 @@
+import { ZERO_ADDRESS } from '../../common/orders/buildOrderData';
 import type { SignableDeltaOrderData } from './buildDeltaOrderData';
 import type { SignableExternalOrderData } from './buildExternalOrderData';
+
+// default deadline = 1 hour for now (may be changed later)
+export const DELTA_DEFAULT_EXPIRY = 60 * 60; // seconds
+
+type ProducePartnerAndFeeInput = {
+  partnerFeeBps: number;
+  partnerAddress: string;
+  partnerTakesSurplus: boolean;
+  capSurplus: boolean;
+};
+
+// fee and address are encoded together
+export function producePartnerAndFee({
+  partnerFeeBps,
+  partnerAddress,
+  partnerTakesSurplus,
+  capSurplus,
+}: ProducePartnerAndFeeInput): string {
+  const capSurplusShifted = BigInt(capSurplus) << BigInt(9);
+  if (partnerAddress === ZERO_ADDRESS) {
+    return capSurplusShifted.toString(10);
+  } else {
+    const partnerAndFee =
+      (BigInt(partnerAddress) << BigInt(96)) |
+      BigInt(partnerFeeBps.toFixed(0)) |
+      (BigInt(partnerTakesSurplus) << BigInt(8)) |
+      capSurplusShifted;
+
+    return partnerAndFee.toString(10);
+  }
+}
 
 export function applySlippage(
   amount: string,

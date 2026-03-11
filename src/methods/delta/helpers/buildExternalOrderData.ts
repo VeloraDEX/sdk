@@ -1,9 +1,7 @@
 import { MarkOptional } from 'ts-essentials';
-import { Domain, ZERO_ADDRESS } from '../../common/orders/buildOrderData';
+import { Domain } from '../../common/orders/buildOrderData';
 import { ExternalDeltaOrder } from './types';
-import { producePartnerAndFee } from './buildDeltaOrderData';
-
-export { DELTA_DEFAULT_EXPIRY } from './buildDeltaOrderData';
+import { DELTA_DEFAULT_EXPIRY, producePartnerAndFee } from './misc';
 
 const EXTERNAL_ORDER_EIP_712_TYPES = {
   ExternalOrder: [
@@ -43,7 +41,7 @@ export function produceExternalOrderTypedData({
   chainId,
   paraswapDeltaAddress,
 }: SignExternalOrderInput): SignableExternalOrderData {
-  const typedData = {
+  return {
     types: {
       ExternalOrder: EXTERNAL_ORDER_EIP_712_TYPES.ExternalOrder,
     },
@@ -55,8 +53,6 @@ export function produceExternalOrderTypedData({
     },
     data: orderInput,
   };
-
-  return typedData;
 }
 
 export type ExternalOrderDataInput = MarkOptional<
@@ -86,7 +82,7 @@ export function buildExternalOrderSignableData({
   destAmount,
   expectedAmount,
 
-  deadline = Math.floor(Date.now() / 1000 + 60 * 60),
+  deadline = Math.floor(Date.now() / 1000 + DELTA_DEFAULT_EXPIRY),
   nonce = Date.now().toString(10),
 
   permit = '0x',
