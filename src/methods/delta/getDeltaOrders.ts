@@ -5,9 +5,16 @@ import type {
   ConstructFetchInput,
   RequestParameters,
 } from '../../types';
-import type { DeltaAuction, DeltaAuctionStatus } from './helpers/types';
+import type {
+  DeltaAuction,
+  DeltaAuctionOrder,
+  DeltaAuctionStatus,
+  ExternalDeltaOrder,
+} from './helpers/types';
 
-export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature'>;
+export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature' | 'order'> & {
+  order: DeltaAuctionOrder | ExternalDeltaOrder;
+};
 
 export type DeltaOrderFilterByStatus =
   | DeltaAuctionStatus

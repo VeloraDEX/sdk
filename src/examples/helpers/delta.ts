@@ -1,13 +1,17 @@
-import { DeltaAuction, DeltaOrderFromAPI } from '../..';
+import { DeltaOrderFromAPI } from '../..';
 
 function isExecutedDeltaAuction(
-  auction: Omit<DeltaAuction, 'signature'>,
+  auction: DeltaOrderFromAPI,
   waitForCrosschain = true // only consider executed when destChain work is done
 ) {
   if (auction.status !== 'EXECUTED') return false;
 
   // crosschain Order is executed on destChain if bridgeStatus is filled
-  if (waitForCrosschain && auction.order.bridge.destinationChainId !== 0) {
+  if (
+    waitForCrosschain &&
+    'bridge' in auction.order &&
+    auction.order.bridge.destinationChainId !== 0
+  ) {
     return auction.bridgeStatus === 'filled';
   }
 
