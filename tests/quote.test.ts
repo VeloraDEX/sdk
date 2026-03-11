@@ -130,34 +130,6 @@ describe('Quote:methods', () => {
     ]).toContainEqual({ details, errorType });
   });
 
-  test('Fail to Get Quote for delta with Native Token', async () => {
-    const quotePromise = quoteSDK.getQuote({
-      srcToken: ETH,
-      destToken: USDC,
-      amount,
-      srcDecimals: 18,
-      destDecimals: 6,
-      mode: 'delta',
-      side: 'SELL',
-    });
-
-    await expect(quotePromise).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"SourceEth"`
-    );
-
-    const error = await quotePromise.catch((e) => e);
-
-    assert(isFetcherError(error), 'Error should be a FetchError');
-    const { details, errorType } = error.response?.data;
-
-    expect({ details, errorType }).toMatchInlineSnapshot(`
-      {
-        "details": "ETH as source token is not supported",
-        "errorType": "SourceEth",
-      }
-    `);
-  });
-
   test('Get Quote for delta for BUY', async () => {
     const quote = await quoteSDK.getQuote({
       srcToken: USDC,

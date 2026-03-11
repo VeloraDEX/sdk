@@ -19,7 +19,7 @@ export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 
 export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
-export type BuildDeltaOrderDataParams = {
+type BuildDeltaOrderDataParamsBase = {
   /** @description The address of the order owner */
   owner: string;
   /** @description The address of the order beneficiary */
@@ -28,10 +28,6 @@ export type BuildDeltaOrderDataParams = {
   srcToken: string; // lowercase
   /** @description The address of the dest token. For Crosschain Order - destination token on the destination chain */
   destToken: string; // lowercase
-  /** @description The amount of src token to swap */
-  srcAmount: string; // wei
-  /** @description The minimum amount of dest token to receive */
-  destAmount: string; // wei, deltaPrice.destAmount - slippage
   /** @description The deadline for the order */
   deadline?: number; // seconds
   /** @description The nonce of the order */
@@ -68,11 +64,43 @@ export type BuildDeltaOrderDataParams = {
   /** @description A boolean indicating whether the surplus should be capped. True by default */
   capSurplus?: boolean;
 
-  /** @description The side of the order. Default is SELL */
-  side?: SwapSideUnion;
   /** @description Metadata for the order, hex string */
   metadata?: string;
 };
+
+/** @description SELL with slippage: srcAmount provided, destAmount auto-computed from deltaPrice.destAmount */
+type DeltaAmountsSellSlippage = {
+  /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
+  slippage: number;
+  /** @description The amount of src token to swap */
+  srcAmount: string;
+  destAmount?: never;
+  /** @description The side of the order */
+  side?: 'SELL';
+};
+/** @description BUY with slippage: destAmount provided, srcAmount auto-computed from deltaPrice.srcAmount */
+type DeltaAmountsBuySlippage = {
+  /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
+  slippage: number;
+  /** @description The minimum amount of dest token to receive */
+  destAmount: string;
+  srcAmount?: never;
+  /** @description The side of the order */
+  side?: 'BUY';
+};
+/** @description Explicit amounts, no slippage (backward-compatible) */
+type DeltaAmountsExplicit = {
+  slippage?: never;
+  /** @description The amount of src token to swap */
+  srcAmount: string;
+  /** @description The minimum amount of dest token to receive */
+  destAmount: string;
+  /** @description The side of the order. Default is SELL */
+  side?: SwapSideUnion;
+};
+
+export type BuildDeltaOrderDataParams = BuildDeltaOrderDataParamsBase &
+  (DeltaAmountsSellSlippage | DeltaAmountsBuySlippage | DeltaAmountsExplicit);
 
 type BuildDeltaOrder = (
   buildOrderParams: BuildDeltaOrderDataParams,
@@ -138,7 +166,40 @@ export const constructBuildDeltaOrder = (
     partnerFeeBps = partnerFeeBps ?? 0;
     partnerTakesSurplus = partnerTakesSurplus ?? false;
 
-    const swapSide = options.side ?? SwapSide.SELL;
+    // Resolve srcAmount, destAmount and side.
+    // When slippage is used, side is inferred from which amount is present.
+    let srcAmount: string;
+    let destAmount: string;
+
+    const swapSide: SwapSideUnion =
+      options.slippage != null
+        ? options.srcAmount
+          ? SwapSide.SELL
+          : SwapSide.BUY
+        : options.side ?? SwapSide.SELL;
+
+    if (options.slippage != null) {
+      if (options.srcAmount) {
+        // SELL with slippage: destAmount auto-computed
+        srcAmount = options.srcAmount;
+        destAmount = applySlippage(
+          options.deltaPrice.destAmount,
+          options.slippage,
+          false
+        );
+      } else {
+        // BUY with slippage: srcAmount auto-computed
+        destAmount = options.destAmount!;
+        srcAmount = applySlippage(
+          options.deltaPrice.srcAmount,
+          options.slippage,
+          true
+        );
+      }
+    } else {
+      srcAmount = options.srcAmount;
+      destAmount = options.destAmount;
+    }
 
     const expectedAmount =
       swapSide === SwapSide.SELL
@@ -152,8 +213,8 @@ export const constructBuildDeltaOrder = (
       // for some cases of WETH->ETH crosschain swaps, the destToken is changed to WETH or ETH,
       // this is already reflected in deltaPrice
       destToken: options.deltaPrice.destToken,
-      srcAmount: options.srcAmount,
-      destAmount: options.destAmount,
+      srcAmount,
+      destAmount,
       expectedAmount,
       deadline: options.deadline,
       nonce: options.nonce?.toString(10),
@@ -179,3 +240,17 @@ export const constructBuildDeltaOrder = (
     buildDeltaOrder,
   };
 };
+
+function applySlippage(
+  amount: string,
+  slippageBps: number,
+  increase: boolean
+): string {
+  const BPS_BASE = 10_000n;
+  const amt = BigInt(amount);
+  const bps = BigInt(slippageBps);
+
+  return increase
+    ? ((amt * (BPS_BASE + bps)) / BPS_BASE).toString(10)
+    : ((amt * (BPS_BASE - bps)) / BPS_BASE).toString(10);
+}
