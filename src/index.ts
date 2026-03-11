@@ -145,13 +145,13 @@ import type {
   BridgeStatus,
   Bridge,
   ExternalDeltaOrder,
+  SwapSideUnion,
 } from './methods/delta/helpers/types';
 import {
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
   constructBuildDeltaOrder,
   SignableDeltaOrderData,
-  SwapSideUnion,
 } from './methods/delta/buildDeltaOrder';
 import {
   constructPostDeltaOrder,
