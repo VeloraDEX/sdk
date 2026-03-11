@@ -139,7 +139,9 @@ export const constructSubmitExternalDeltaOrder = (
   const { signExternalDeltaOrder } = constructSignExternalDeltaOrder(options);
   const { postExternalDeltaOrder } = constructPostExternalDeltaOrder(options);
 
-  const submitExternalDeltaOrder: SubmitExternalDeltaOrder = async (orderParams) => {
+  const submitExternalDeltaOrder: SubmitExternalDeltaOrder = async (
+    orderParams
+  ) => {
     const orderData = await buildExternalDeltaOrder(orderParams);
     const signature = await signExternalDeltaOrder(orderData);
 
@@ -212,7 +214,8 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
   const externalDeltaOrdersBuild = constructBuildExternalDeltaOrder(options);
   const externalDeltaOrdersSign = constructSignExternalDeltaOrder(options);
   const externalDeltaOrdersPost = constructPostExternalDeltaOrder(options);
-  const externalDeltaOrdersPreSign = constructPreSignExternalDeltaOrder(options);
+  const externalDeltaOrdersPreSign =
+    constructPreSignExternalDeltaOrder(options);
 
   return {
     ...deltaOrdersGetters,

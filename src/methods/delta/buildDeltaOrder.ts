@@ -1,8 +1,4 @@
-import type {
-  ConstructFetchInput,
-  EnumerateLiteral,
-  RequestParameters,
-} from '../../types';
+import type { ConstructFetchInput, RequestParameters } from '../../types';
 import { constructGetDeltaContract } from './getDeltaContract';
 import type { BridgePrice } from './getDeltaPrice';
 import { constructGetPartnerFee } from './getPartnerFee';
@@ -11,13 +7,14 @@ import {
   type BuildDeltaOrderDataInput,
   type SignableDeltaOrderData,
 } from './helpers/buildDeltaOrderData';
+import type { SwapSideUnion, AmountsWithSlippage } from './helpers/types';
 import { SwapSideToOrderKind } from './helpers/types';
+import { applySlippage } from './helpers/misc';
 import { SwapSide } from '../../constants';
 import type { MarkOptional } from 'ts-essentials';
 import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
-
-export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
+export type { SwapSideUnion } from './helpers/types';
 
 type BuildDeltaOrderDataParamsBase = {
   /** @description The address of the order owner */
@@ -68,39 +65,8 @@ type BuildDeltaOrderDataParamsBase = {
   metadata?: string;
 };
 
-/** @description SELL with slippage: srcAmount provided, destAmount auto-computed from deltaPrice.destAmount */
-type DeltaAmountsSellSlippage = {
-  /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
-  slippage: number;
-  /** @description The amount of src token to swap */
-  srcAmount: string;
-  destAmount?: never;
-  /** @description The side of the order */
-  side?: 'SELL';
-};
-/** @description BUY with slippage: destAmount provided, srcAmount auto-computed from deltaPrice.srcAmount */
-type DeltaAmountsBuySlippage = {
-  /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
-  slippage: number;
-  /** @description The minimum amount of dest token to receive */
-  destAmount: string;
-  srcAmount?: never;
-  /** @description The side of the order */
-  side?: 'BUY';
-};
-/** @description Explicit amounts, no slippage (backward-compatible) */
-type DeltaAmountsExplicit = {
-  slippage?: never;
-  /** @description The amount of src token to swap */
-  srcAmount: string;
-  /** @description The minimum amount of dest token to receive */
-  destAmount: string;
-  /** @description The side of the order. Default is SELL */
-  side?: SwapSideUnion;
-};
-
 export type BuildDeltaOrderDataParams = BuildDeltaOrderDataParamsBase &
-  (DeltaAmountsSellSlippage | DeltaAmountsBuySlippage | DeltaAmountsExplicit);
+  AmountsWithSlippage;
 
 type BuildDeltaOrder = (
   buildOrderParams: BuildDeltaOrderDataParams,
@@ -240,17 +206,3 @@ export const constructBuildDeltaOrder = (
     buildDeltaOrder,
   };
 };
-
-function applySlippage(
-  amount: string,
-  slippageBps: number,
-  increase: boolean
-): string {
-  const BPS_BASE = 10_000n;
-  const amt = BigInt(amount);
-  const bps = BigInt(slippageBps);
-
-  return increase
-    ? ((amt * (BPS_BASE + bps)) / BPS_BASE).toString(10)
-    : ((amt * (BPS_BASE - bps)) / BPS_BASE).toString(10);
-}

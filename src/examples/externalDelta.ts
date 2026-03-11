@@ -60,11 +60,6 @@ async function collateralSwapFlow() {
     side: SwapSide.SELL,
   });
 
-  const destAmountAfterSlippage = (
-    (BigInt(deltaPrice.destAmount) * 95n) /
-    100n
-  ).toString();
-
   const signableOrderData = await deltaSDK.buildExternalDeltaOrder({
     deltaPrice,
     owner: account,
@@ -73,8 +68,7 @@ async function collateralSwapFlow() {
     srcToken: USDC,
     destToken: WETH,
     srcAmount: amount,
-    destAmount: destAmountAfterSlippage,
-    side: SwapSide.SELL,
+    slippage: 500, // 5% slippage in bps
   });
 
   const signature = await deltaSDK.signExternalDeltaOrder(signableOrderData);
@@ -101,11 +95,6 @@ async function debtSwapFlow() {
     side: SwapSide.BUY,
   });
 
-  const srcAmountWithSlippage = (
-    (BigInt(deltaPrice.srcAmount) * 105n) /
-    100n
-  ).toString();
-
   const signableOrderData = await deltaSDK.buildExternalDeltaOrder({
     deltaPrice,
     owner: account,
@@ -113,9 +102,8 @@ async function debtSwapFlow() {
     data: AaveOrderTypes.DEBT_SWAP,
     srcToken: USDC,
     destToken: WETH,
-    srcAmount: srcAmountWithSlippage,
-    destAmount: deltaPrice.destAmount,
-    side: SwapSide.BUY,
+    destAmount: debtAmount,
+    slippage: 500, // 5% slippage in bps
   });
 
   const signature = await deltaSDK.signExternalDeltaOrder(signableOrderData);
@@ -142,11 +130,6 @@ async function repayWithCollateralFlow() {
     side: SwapSide.BUY,
   });
 
-  const srcAmountWithSlippage = (
-    (BigInt(deltaPrice.srcAmount) * 105n) /
-    100n
-  ).toString();
-
   const signableOrderData = await deltaSDK.buildExternalDeltaOrder({
     deltaPrice,
     owner: account,
@@ -154,9 +137,8 @@ async function repayWithCollateralFlow() {
     data: AaveOrderTypes.REPAY_WITH_COLLATERAL,
     srcToken: USDC,
     destToken: WETH,
-    srcAmount: srcAmountWithSlippage,
-    destAmount: deltaPrice.destAmount,
-    side: SwapSide.BUY,
+    destAmount: collateralAmount,
+    slippage: 500, // 5% slippage in bps
   });
 
   const signature = await deltaSDK.signExternalDeltaOrder(signableOrderData);

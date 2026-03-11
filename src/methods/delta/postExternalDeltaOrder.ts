@@ -22,7 +22,10 @@ export type ExternalDeltaOrderToPost = {
   excludeAgents?: string[];
 };
 
-export type PostExternalDeltaOrderParams = Omit<ExternalDeltaOrderToPost, 'chainId'>;
+export type PostExternalDeltaOrderParams = Omit<
+  ExternalDeltaOrderToPost,
+  'chainId'
+>;
 
 type PostExternalDeltaOrder = (
   postData: PostExternalDeltaOrderParams,
@@ -40,7 +43,10 @@ export const constructPostExternalDeltaOrder = ({
 }: ConstructFetchInput): PostExternalDeltaOrderFunctions => {
   const postOrderUrl = `${apiURL}/delta/orders` as const;
 
-  const postExternalDeltaOrder: PostExternalDeltaOrder = (postData, requestParams) => {
+  const postExternalDeltaOrder: PostExternalDeltaOrder = (
+    postData,
+    requestParams
+  ) => {
     const deltaOrderToPost: ExternalDeltaOrderToPost = { ...postData, chainId };
 
     return fetcher<DeltaOrderApiResponse>({

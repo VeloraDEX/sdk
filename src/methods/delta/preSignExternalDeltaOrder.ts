@@ -70,7 +70,9 @@ type AvailableMethods = ExtractAbiMethodNames<typeof PreSignatureModuleAbi>;
 export const constructPreSignExternalDeltaOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
 ): PreSignExternalDeltaOrderFunctions<T> => {
-  const hashExternalDeltaOrderTypedData: HashExternalDeltaOrderTypedData = (typedData) => {
+  const hashExternalDeltaOrderTypedData: HashExternalDeltaOrderTypedData = (
+    typedData
+  ) => {
     // types allow to pass OrderData & extra_stuff, but tx will break like that
     const typedDataOnly: SignableExternalOrderData = {
       ...typedData,
@@ -84,7 +86,10 @@ export const constructPreSignExternalDeltaOrder = <T>(
   // cached internally
   const { getDeltaContract } = constructGetDeltaContract(options);
 
-  const hashExternalDeltaOrder: HashExternalDeltaOrder = async (orderData, requestParams) => {
+  const hashExternalDeltaOrder: HashExternalDeltaOrder = async (
+    orderData,
+    requestParams
+  ) => {
     const ParaswapDelta = await getDeltaContract(requestParams);
     if (!ParaswapDelta) {
       throw new Error(`Delta is not available on chain ${options.chainId}`);
@@ -98,11 +103,9 @@ export const constructPreSignExternalDeltaOrder = <T>(
     return hashExternalDeltaOrderTypedData(typedData);
   };
 
-  const setExternalDeltaOrderPreSignature: SetExternalDeltaOrderPreSignature<T> = async (
-    orderHash,
-    overrides = {},
-    requestParams
-  ) => {
+  const setExternalDeltaOrderPreSignature: SetExternalDeltaOrderPreSignature<
+    T
+  > = async (orderHash, overrides = {}, requestParams) => {
     const ParaswapDelta = await getDeltaContract(requestParams);
     if (!ParaswapDelta) {
       throw new Error(`Delta is not available on chain ${options.chainId}`);

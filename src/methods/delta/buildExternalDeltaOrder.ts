@@ -1,8 +1,4 @@
-import type {
-  ConstructFetchInput,
-  EnumerateLiteral,
-  RequestParameters,
-} from '../../types';
+import type { ConstructFetchInput, RequestParameters } from '../../types';
 import { constructGetDeltaContract } from './getDeltaContract';
 import type { DeltaPrice } from './getDeltaPrice';
 import { constructGetPartnerFee } from './getPartnerFee';
@@ -11,15 +7,15 @@ import {
   type BuildExternalOrderDataInput,
   type SignableExternalOrderData,
 } from './helpers/buildExternalOrderData';
+import type { SwapSideUnion, AmountsWithSlippage } from './helpers/types';
 import { SwapSideToOrderKind } from './helpers/types';
 import { SwapSide } from '../../constants';
 import type { MarkOptional } from 'ts-essentials';
 import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
+import { applySlippage } from './helpers/misc';
 export type { SignableExternalOrderData } from './helpers/buildExternalOrderData';
 
-export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
-
-export type BuildExternalDeltaOrderParams = {
+type BuildExternalDeltaOrderParamsBase = {
   /** @description The address of the order owner */
   owner: string;
   /** @description The address of the external handler contract */
@@ -30,10 +26,6 @@ export type BuildExternalDeltaOrderParams = {
   srcToken: string;
   /** @description The address of the dest token */
   destToken: string;
-  /** @description The amount of src token to swap */
-  srcAmount: string;
-  /** @description The minimum amount of dest token to receive */
-  destAmount: string;
   /** @description The deadline for the order */
   deadline?: number;
   /** @description The nonce of the order */
@@ -50,17 +42,21 @@ export type BuildExternalDeltaOrderParams = {
   partnerTakesSurplus?: boolean;
   /** @description A boolean indicating whether the surplus should be capped. True by default */
   capSurplus?: boolean;
-  /** @description The side of the order. Default is SELL */
-  side?: SwapSideUnion;
   /** @description Metadata for the order, hex string */
   metadata?: string;
 
   /** @description price response received from /delta/prices (getDeltaPrice method) */
   deltaPrice: MarkOptional<
-    Pick<DeltaPrice, 'destAmount' | 'partner' | 'partnerFee' | 'destToken' | 'srcAmount'>,
+    Pick<
+      DeltaPrice,
+      'destAmount' | 'partner' | 'partnerFee' | 'destToken' | 'srcAmount'
+    >,
     'partner' | 'partnerFee'
   >;
 };
+
+export type BuildExternalDeltaOrderParams = BuildExternalDeltaOrderParamsBase &
+  AmountsWithSlippage;
 
 type BuildExternalDeltaOrder = (
   buildOrderParams: BuildExternalDeltaOrderParams,
@@ -82,7 +78,10 @@ export const constructBuildExternalDeltaOrder = (
   // cached internally for `partner`
   const { getPartnerFee } = constructGetPartnerFee(options);
 
-  const buildExternalDeltaOrder: BuildExternalDeltaOrder = async (options, requestParams) => {
+  const buildExternalDeltaOrder: BuildExternalDeltaOrder = async (
+    options,
+    requestParams
+  ) => {
     const ParaswapDelta = await getDeltaContract(requestParams);
     if (!ParaswapDelta) {
       throw new Error(`Delta is not available on chain ${chainId}`);
@@ -123,7 +122,40 @@ export const constructBuildExternalDeltaOrder = (
     partnerFeeBps = partnerFeeBps ?? 0;
     partnerTakesSurplus = partnerTakesSurplus ?? false;
 
-    const swapSide = options.side ?? SwapSide.SELL;
+    // Resolve srcAmount, destAmount and side.
+    // When slippage is used, side is inferred from which amount is present.
+    let srcAmount: string;
+    let destAmount: string;
+
+    const swapSide: SwapSideUnion =
+      options.slippage != null
+        ? options.srcAmount
+          ? SwapSide.SELL
+          : SwapSide.BUY
+        : options.side ?? SwapSide.SELL;
+
+    if (options.slippage != null) {
+      if (options.srcAmount) {
+        // SELL with slippage: destAmount auto-computed
+        srcAmount = options.srcAmount;
+        destAmount = applySlippage(
+          options.deltaPrice.destAmount,
+          options.slippage,
+          false
+        );
+      } else {
+        // BUY with slippage: srcAmount auto-computed
+        destAmount = options.destAmount!;
+        srcAmount = applySlippage(
+          options.deltaPrice.srcAmount,
+          options.slippage,
+          true
+        );
+      }
+    } else {
+      srcAmount = options.srcAmount;
+      destAmount = options.destAmount;
+    }
 
     const expectedAmount =
       swapSide === SwapSide.SELL
@@ -135,8 +167,8 @@ export const constructBuildExternalDeltaOrder = (
       handler: options.handler,
       srcToken: options.srcToken,
       destToken: options.deltaPrice.destToken,
-      srcAmount: options.srcAmount,
-      destAmount: options.destAmount,
+      srcAmount,
+      destAmount,
       expectedAmount,
       deadline: options.deadline,
       nonce: options.nonce?.toString(10),
