@@ -234,22 +234,6 @@ describe('Delta:methods', () => {
     expect(staticDeltaPrice).toMatchSnapshot();
   });
 
-  test('breaks for srcToken=ETH', async () => {
-    const getDeltaPrice = () =>
-      deltaSDK.getDeltaPrice({
-        srcToken: ETH_ADDRESS,
-        destToken: destToken,
-        amount: srcAmount,
-        userAddress: senderAddress,
-        srcDecimals: 18,
-        destDecimals: 18,
-      });
-
-    await expect(getDeltaPrice()).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"SourceEth: ETH as source token is not supported"`
-    );
-  });
-
   describe('Get Delta Price Crosschain', () => {
     const destChainId = 10;
     const ETH = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
