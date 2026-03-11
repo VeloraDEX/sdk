@@ -7,12 +7,10 @@ import {
   type BuildExternalOrderDataInput,
   type SignableExternalOrderData,
 } from './helpers/buildExternalOrderData';
-import type { SwapSideUnion, AmountsWithSlippage } from './helpers/types';
+import type { AmountsWithSlippage } from './helpers/types';
 import { SwapSideToOrderKind } from './helpers/types';
-import { SwapSide } from '../../constants';
 import type { MarkOptional } from 'ts-essentials';
-import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
-import { applySlippage } from './helpers/misc';
+import { resolvePartnerFee, resolveAmounts } from './helpers/misc';
 export type { SignableExternalOrderData } from './helpers/buildExternalOrderData';
 
 type BuildExternalDeltaOrderParamsBase = {
@@ -87,80 +85,11 @@ export const constructBuildExternalDeltaOrder = (
       throw new Error(`Delta is not available on chain ${chainId}`);
     }
 
-    ////// Partner logic //////
+    const { partnerAddress, partnerFeeBps, partnerTakesSurplus } =
+      await resolvePartnerFee(options, getPartnerFee, requestParams);
 
-    // externally supplied partner fee data takes precedence
-    let partnerAddress = options.partnerAddress;
-    let partnerFeeBps =
-      options.partnerFeeBps ??
-      (options.deltaPrice.partnerFee
-        ? options.deltaPrice.partnerFee * 100
-        : undefined);
-    let partnerTakesSurplus = options.partnerTakesSurplus;
-
-    // if fee given, takeSurplus is ignored
-    const feeOrTakeSurplusSupplied =
-      partnerFeeBps !== undefined || partnerTakesSurplus !== undefined;
-
-    if (partnerAddress === undefined || feeOrTakeSurplusSupplied) {
-      const partner = options.partner || options.deltaPrice.partner;
-      if (!partner) {
-        partnerAddress = partnerAddress ?? ZERO_ADDRESS;
-      } else {
-        const partnerFeeResponse = await getPartnerFee(
-          { partner },
-          requestParams
-        );
-
-        partnerAddress = partnerAddress ?? partnerFeeResponse.partnerAddress;
-        partnerFeeBps = partnerFeeBps ?? partnerFeeResponse.partnerFee;
-        partnerTakesSurplus =
-          partnerTakesSurplus ?? partnerFeeResponse.takeSurplus;
-      }
-    }
-
-    partnerFeeBps = partnerFeeBps ?? 0;
-    partnerTakesSurplus = partnerTakesSurplus ?? false;
-
-    // Resolve srcAmount, destAmount and side.
-    // When slippage is used, side is inferred from which amount is present.
-    let srcAmount: string;
-    let destAmount: string;
-
-    const swapSide: SwapSideUnion =
-      options.slippage != null
-        ? options.srcAmount
-          ? SwapSide.SELL
-          : SwapSide.BUY
-        : options.side ?? SwapSide.SELL;
-
-    if (options.slippage != null) {
-      if (options.srcAmount) {
-        // SELL with slippage: destAmount auto-computed
-        srcAmount = options.srcAmount;
-        destAmount = applySlippage(
-          options.deltaPrice.destAmount,
-          options.slippage,
-          false
-        );
-      } else {
-        // BUY with slippage: srcAmount auto-computed
-        destAmount = options.destAmount!;
-        srcAmount = applySlippage(
-          options.deltaPrice.srcAmount,
-          options.slippage,
-          true
-        );
-      }
-    } else {
-      srcAmount = options.srcAmount;
-      destAmount = options.destAmount;
-    }
-
-    const expectedAmount =
-      swapSide === SwapSide.SELL
-        ? options.deltaPrice.destAmount
-        : options.deltaPrice.srcAmount;
+    const { srcAmount, destAmount, expectedAmount, swapSide } =
+      resolveAmounts(options);
 
     const input: BuildExternalOrderDataInput = {
       owner: options.owner,
