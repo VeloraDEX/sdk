@@ -9,6 +9,7 @@ import {
   SignableExternalOrderData,
 } from './helpers/buildExternalOrderData';
 import { sanitizeExternalOrderData } from './helpers/misc';
+import { PreSignatureModuleAbi } from './helpers/abi';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
 import { findPrimaryType } from '../../helpers/providers/helpers';
 import { constructGetDeltaContract } from './getDeltaContract';
@@ -41,27 +42,6 @@ export type PreSignExternalDeltaOrderFunctions<T> = {
   setExternalDeltaOrderPreSignature: SetExternalDeltaOrderPreSignature<T>;
   preSignExternalDeltaOrder: PreSignExternalDeltaOrder<T>;
 };
-
-const PreSignatureModuleAbi = [
-  {
-    inputs: [
-      {
-        internalType: 'bytes32',
-        name: 'orderHash',
-        type: 'bytes32',
-      },
-      {
-        internalType: 'bool',
-        name: 'preSigned',
-        type: 'bool',
-      },
-    ],
-    name: 'setPreSignature',
-    outputs: [],
-    stateMutability: 'nonpayable',
-    type: 'function',
-  },
-] as const;
 
 type AvailableMethods = ExtractAbiMethodNames<typeof PreSignatureModuleAbi>;
 
