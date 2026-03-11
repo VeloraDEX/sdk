@@ -576,9 +576,10 @@ describe('Delta:methods', () => {
     };
 
     const slippageBps = 50; // 50 bps = 0.5%
+    const BPS_BASE = BigInt(10_000);
     const expectedDestAmount = (
-      (BigInt(sampleDeltaPrice.destAmount) * (10_000n - BigInt(slippageBps))) /
-      10_000n
+      (BigInt(sampleDeltaPrice.destAmount) * (BPS_BASE - BigInt(slippageBps))) /
+      BPS_BASE
     ).toString(10);
 
     const amount = '1000000000000000000';
@@ -628,9 +629,10 @@ describe('Delta:methods', () => {
     const slippageBps = 50; // 50 bps = 0.5%
     const destAmount = '3163263721766488892666';
 
+    const BPS_BASE = BigInt(10_000);
     const expectedSrcAmount = (
-      (BigInt(sampleDeltaPrice.srcAmount) * (10_000n + BigInt(slippageBps))) /
-      10_000n
+      (BigInt(sampleDeltaPrice.srcAmount) * (BPS_BASE + BigInt(slippageBps))) /
+      BPS_BASE
     ).toString(10);
 
     const signableOrderData = await deltaSDK.buildDeltaOrder({
