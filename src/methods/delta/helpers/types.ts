@@ -107,7 +107,7 @@ export type ExternalDeltaOrder = {
   /** @description The expected amount of token to receive */
   expectedAmount: string;
   /** @description The kind of the order */
-  kind: number;
+  kind: OrderKind;
   /** @description Metadata for the order, hex string */
   metadata: string;
   /** @description The deadline for the order */
