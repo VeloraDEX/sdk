@@ -15,10 +15,13 @@ const fetcher = constructAxiosFetcher(axios);
 const provider = ethers.getDefaultProvider(8453); // Base
 const signer = Wallet.createRandom().connect(provider);
 const account = signer.address;
-const contractCaller = constructEthersContractCaller({
-  ethersProviderOrSigner: signer,
-  EthersContract: ethers.Contract,
-});
+const contractCaller = constructEthersContractCaller(
+  {
+    ethersProviderOrSigner: signer,
+    EthersContract: ethers.Contract,
+  },
+  account
+);
 
 const deltaSDK = constructPartialSDK(
   {
