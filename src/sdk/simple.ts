@@ -145,12 +145,14 @@ export type SwapFetchMethods = GetBalancesFunctions &
   GetRateFunctions &
   GetSwapTxFunctions;
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type LimitOrdersFetchMethods = GetLimitOrdersContractFunctions &
   GetLimitOrdersFunctions &
   BuildLimitOrderFunctions &
   PostLimitOrderFunctions &
   BuildLimitOrdersTxFunctions;
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type NFTOrdersFetchMethods = GetNFTOrdersContractFunctions &
   GetNFTOrdersFunctions &
   BuildNFTOrderFunctions &
@@ -168,7 +170,9 @@ export type DeltaFetchMethods = BuildDeltaOrderFunctions &
 
 export type SimpleFetchSDK = {
   swap: SwapFetchMethods;
+  /** @deprecated Limit Orders are deprecated and will be removed in a future version. */
   limitOrders: LimitOrdersFetchMethods;
+  /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrdersFetchMethods;
   delta: DeltaFetchMethods;
   quote: QuoteFetchMethods;
@@ -178,7 +182,9 @@ export type QuoteFetchMethods = GetQuoteFunctions;
 
 export type SimpleSDK = {
   swap: SwapSDKMethods<TxHash>;
+  /** @deprecated Limit Orders are deprecated and will be removed in a future version. */
   limitOrders: LimitOrderHandlers<TxHash>;
+  /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrderHandlers<TxHash>;
   delta: DeltaOrderHandlers<TxHash>;
   quote: QuoteFetchMethods;
@@ -202,6 +208,9 @@ export type ProviderOptions = (
 ) & {
   account: Address;
 };
+
+let _limitOrdersFetchDeprecationWarned = false;
+let _nftOrdersFetchDeprecationWarned = false;
 
 const constructFetcher = (options: FetcherOptions): FetcherFunction => {
   if ('axios' in options) {
@@ -262,6 +271,12 @@ export function constructSimpleSDK(
       constructSwapTx
     );
 
+    if (!_limitOrdersFetchDeprecationWarned) {
+      _limitOrdersFetchDeprecationWarned = true;
+      console.warn(
+        '[velora/sdk] Limit Orders are deprecated and will be removed in a future version.'
+      );
+    }
     const limitOrders = constructPartialSDK(
       config,
       constructBuildLimitOrder,
@@ -271,6 +286,12 @@ export function constructSimpleSDK(
       constructBuildLimitOrderTx
     );
 
+    if (!_nftOrdersFetchDeprecationWarned) {
+      _nftOrdersFetchDeprecationWarned = true;
+      console.warn(
+        '[velora/sdk] NFT Orders are deprecated and will be removed in a future version.'
+      );
+    }
     const nftOrders = constructPartialSDK(
       config,
       constructBuildNFTOrder,

@@ -3,6 +3,7 @@ import { ApproveToken, approveTokenMethodFactory } from '../../helpers/approve';
 import { constructApproveToken } from '../swap/approve';
 import { constructGetSpender } from '../swap/spender';
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type ApproveTokenForLimitOrderFunctions<T> = {
   /** @description approving AugustusRFQ as spender for makerAsset */
   approveMakerTokenForLimitOrder: ApproveToken<T>;
@@ -14,6 +15,7 @@ export type ApproveTokenForLimitOrderFunctions<T> = {
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export const constructApproveTokenForLimitOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
 ): ApproveTokenForLimitOrderFunctions<T> => {

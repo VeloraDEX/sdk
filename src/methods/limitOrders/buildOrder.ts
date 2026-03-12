@@ -8,6 +8,7 @@ import {
 } from './helpers/buildOrderData';
 export * from './helpers/buildOrderData';
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type BuildLimitOrderInput = Omit<
   BuildOrderDataInput,
   'chainId' | 'verifyingContract' | 'AugustusAddress' | 'AppVersion'
@@ -18,11 +19,13 @@ type BuildLimitOrder = (
   requestParams?: RequestParameters
 ) => Promise<SignableOrderData>;
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type BuildLimitOrderFunctions = {
   /** @description Build Orders that will be excuted through AugustusSwapper */
   buildLimitOrder: BuildLimitOrder;
 };
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export const constructBuildLimitOrder = (
   options: ConstructFetchInput
 ): BuildLimitOrderFunctions => {

@@ -2,12 +2,14 @@ import type { ConstructProviderFetchInput } from '../../types';
 import type { SignableOrderData } from './buildOrder';
 import { sanitizeOrderData } from './helpers/misc';
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type SignLimitOrderFunctions = {
   signLimitOrder: (signableOrderData: SignableOrderData) => Promise<string>;
 };
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export const constructSignLimitOrder = (
   options: Pick<
     ConstructProviderFetchInput<any, 'signTypedDataCall'>,

@@ -13,11 +13,13 @@ type PostNFTOrder = (
   requestParams?: RequestParameters
 ) => Promise<NFTOrderFromAPI>;
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type PostNFTOrderFunctions = {
   postNFTLimitOrder: PostNFTOrder;
   postNFTP2POrder: PostNFTOrder;
 };
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const constructPostNFTOrder = ({
   apiURL = API_URL,
   chainId,

@@ -21,7 +21,9 @@ import { API_URL, DEFAULT_VERSION } from '../constants';
 
 export type AllSDKMethods<TxResponse> = {
   swap: SwapSDKMethods<TxResponse>;
+  /** @deprecated Limit Orders are deprecated and will be removed in a future version. */
   limitOrders: LimitOrderHandlers<TxResponse>;
+  /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrderHandlers<TxResponse>;
   delta: DeltaOrderHandlers<TxResponse>;
   quote: GetQuoteFunctions;

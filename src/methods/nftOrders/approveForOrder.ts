@@ -15,6 +15,7 @@ type ApproveNFT<T> = (
   requestParams?: RequestParameters
 ) => Promise<T>;
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type ApproveTokenForNFTOrderFunctions<T> = {
   /** @description approving AugustusSwapper as spender for takerAsset (ERC20) for Limit Orders that will be executed through it */
   approveERC20ForNFTOrder: ApproveToken<T>;
@@ -47,6 +48,7 @@ type ApprovalMethods = ExtractAbiMethodNames<typeof MinNFTAbi>;
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const constructApproveTokenForNFTOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
 ): ApproveTokenForNFTOrderFunctions<T> => {
