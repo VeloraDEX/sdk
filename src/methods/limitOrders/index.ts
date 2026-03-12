@@ -120,8 +120,6 @@ export type LimitOrderHandlers<T> = SubmitLimitOrderFuncs &
   ApproveTokenForLimitOrderFunctions<T> &
   FillOrderDirectlyFunctions<T>;
 
-let _limitOrdersDeprecationWarned = false;
-
 /**
  * @description construct SDK with every LimitOrders-related method, fetching from API and contract calls
  * @deprecated Limit Orders are deprecated and will be removed in a future version.
@@ -132,13 +130,6 @@ export const constructAllLimitOrdersHandlers = <TxResponse>(
     'signTypedDataCall' | 'transactCall' | 'staticCall'
   >
 ): LimitOrderHandlers<TxResponse> => {
-  if (!_limitOrdersDeprecationWarned) {
-    _limitOrdersDeprecationWarned = true;
-    console.warn(
-      '[velora/sdk] Limit Orders are deprecated and will be removed in a future version.'
-    );
-  }
-
   const limitOrdersGetters = constructGetLimitOrders(options);
   const limitOrdersContractGetter = constructGetLimitOrdersContract(options);
 

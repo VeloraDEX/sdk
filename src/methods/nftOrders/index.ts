@@ -108,8 +108,6 @@ export type NFTOrderHandlers<T> = SubmitNFTOrderFuncs &
   CancelNFTOrderFunctions<T> &
   ApproveTokenForNFTOrderFunctions<T>;
 
-let _nftOrdersDeprecationWarned = false;
-
 /**
  * @description construct SDK with every NFTOrders-related method, fetching from API and contract calls
  * @deprecated NFT Orders are deprecated and will be removed in a future version.
@@ -120,13 +118,6 @@ export const constructAllNFTOrdersHandlers = <TxResponse>(
     'signTypedDataCall' | 'transactCall' | 'staticCall'
   >
 ): NFTOrderHandlers<TxResponse> => {
-  if (!_nftOrdersDeprecationWarned) {
-    _nftOrdersDeprecationWarned = true;
-    console.warn(
-      '[velora/sdk] NFT Orders are deprecated and will be removed in a future version.'
-    );
-  }
-
   const NFTOrdersGetters = constructGetNFTOrders(options);
   const NFTOrdersContractGetter = constructGetNFTOrdersContract(options);
 

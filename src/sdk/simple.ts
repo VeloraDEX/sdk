@@ -209,9 +209,6 @@ export type ProviderOptions = (
   account: Address;
 };
 
-let _limitOrdersFetchDeprecationWarned = false;
-let _nftOrdersFetchDeprecationWarned = false;
-
 const constructFetcher = (options: FetcherOptions): FetcherFunction => {
   if ('axios' in options) {
     return constructAxiosFetcher(options.axios, options);
@@ -271,12 +268,6 @@ export function constructSimpleSDK(
       constructSwapTx
     );
 
-    if (!_limitOrdersFetchDeprecationWarned) {
-      _limitOrdersFetchDeprecationWarned = true;
-      console.warn(
-        '[velora/sdk] Limit Orders are deprecated and will be removed in a future version.'
-      );
-    }
     const limitOrders = constructPartialSDK(
       config,
       constructBuildLimitOrder,
@@ -286,12 +277,6 @@ export function constructSimpleSDK(
       constructBuildLimitOrderTx
     );
 
-    if (!_nftOrdersFetchDeprecationWarned) {
-      _nftOrdersFetchDeprecationWarned = true;
-      console.warn(
-        '[velora/sdk] NFT Orders are deprecated and will be removed in a future version.'
-      );
-    }
     const nftOrders = constructPartialSDK(
       config,
       constructBuildNFTOrder,
