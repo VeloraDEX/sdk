@@ -36,6 +36,7 @@ export type DeltaPriceParams = {
   side?: SwapSideUnion;
   /** @description In %. It's a way to bypass the API price impact check (default = 15%) */
   maxImpact?: number;
+  maxUSDImpact?: number;
 
   includeAgents?: string[];
   excludeAgents?: string[];
@@ -198,7 +199,7 @@ export const constructGetDeltaPrice = ({
       excludeBridges: excludeBridgesString,
     });
 
-    const fetchURL = `${pricesUrl}/${search}` as const;
+    const fetchURL = `${pricesUrl}${search}` as const;
 
     const data = await fetcher<DeltaPriceResponse>({
       url: fetchURL,
