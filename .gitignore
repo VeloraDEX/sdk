@@ -14,7 +14,9 @@ docker
 
 build
 
-src/*.js
+src/**/*.js
+src/**/*.d.ts
+src/**/*.d.ts.map
 
 dist
 

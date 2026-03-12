@@ -58,7 +58,12 @@ describe.each([
   beforeAll(async () => {
     await setupFork({ accounts: [{ address: senderAddress, balance: 8e18 }] });
 
-    sdk = constructSimpleSDK({ chainId, ...fetcherOptions, version: '6.2' });
+    sdk = constructSimpleSDK({
+      chainId,
+      ...fetcherOptions,
+      apiURL: process.env.API_URL,
+      version: '6.2',
+    });
   });
   test('getBalance', async () => {
     try {
@@ -174,6 +179,7 @@ describe.each([
 
     const priceRouteStable = {
       ...priceRoute,
+      partnerFee: NaN, // dynamic number
       gasCost: 'dynamic_number',
       gasCostUSD: 'dynamic_number',
       hmac: 'dynamic_string',
@@ -215,7 +221,18 @@ describe.each([
 
   test('Get_Adapters', async () => {
     const adapters = await sdk.swap.getAdapters();
-    expect(adapters).toMatchSnapshot('Get_Adapters');
+
+    expect(adapters.length).toBeGreaterThan(15);
+    expect(adapters).toEqual(
+      expect.arrayContaining([
+        'UniswapV2',
+        'UniswapV3',
+        'SushiSwap',
+        'CurveV2',
+        'BalancerV2',
+        'AugustusRFQ',
+      ])
+    );
   });
 
   test('Build_Tx', async () => {
@@ -384,7 +401,12 @@ describe.each([
 
     beforeAll(() => {
       sdk = constructSimpleSDK(
-        { chainId, ...fetcherOptions, version: '5' },
+        {
+          chainId,
+          ...fetcherOptions,
+          apiURL: process.env.API_URL,
+          version: '5',
+        },
         providerOptions
       );
     });

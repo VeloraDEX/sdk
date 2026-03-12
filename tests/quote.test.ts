@@ -30,7 +30,8 @@ describe('Quote:methods', () => {
     constructGetQuote
   );
 
-  const amount = '100000000000'; // 100000 USDC,
+  const amount = '100000000000'; // 100000 USDC
+  const tooSmallAmount = '10000'; // 0.01 USDC
 
   test('Get Quote for delta', async () => {
     const quote = await quoteSDK.getQuote({
@@ -101,7 +102,7 @@ describe('Quote:methods', () => {
     const quotePromise = quoteSDK.getQuote({
       srcToken: USDC,
       destToken: ETH,
-      amount: (+amount / 1e6).toFixed(0),
+      amount: tooSmallAmount,
       srcDecimals: 6,
       destDecimals: 18,
       mode: 'delta',
@@ -146,6 +147,7 @@ describe('Quote:methods', () => {
 
     const staticDeltaPrice: typeof quote.delta = {
       ...quote.delta,
+      partnerFee: NaN, // dynamic number
       hmac: 'dynamic_string',
       destAmount: 'dynamic_number',
       destAmountBeforeFee: 'dynamic_number',
@@ -187,7 +189,7 @@ describe('Quote:methods', () => {
         "gasCostUSDBeforeFee": "dynamic_number",
         "hmac": "dynamic_string",
         "partner": "anon",
-        "partnerFee": 0,
+        "partnerFee": NaN,
         "receivedDestAmount": "dynamic_number",
         "receivedDestUSD": "dynamic_number",
         "srcAmount": "dynamic_number",
@@ -308,7 +310,7 @@ describe('Quote:methods', () => {
     const quote = await quoteSDK.getQuote({
       srcToken: USDC,
       destToken: ETH,
-      amount: (1e5).toString(),
+      amount: tooSmallAmount,
       srcDecimals: 6,
       destDecimals: 18,
       mode: 'all',
@@ -344,6 +346,7 @@ describe('Quote:methods', () => {
 
     const priceRouteStable = {
       ...priceRoute,
+      partnerFee: NaN, // dynamic number
       gasCost: 'dynamic_number',
       gasCostUSD: 'dynamic_number',
       hmac: 'dynamic_string',

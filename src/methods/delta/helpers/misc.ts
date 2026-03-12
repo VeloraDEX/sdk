@@ -42,6 +42,14 @@ export function applySlippage(
   slippageBps: number,
   increase: boolean
 ): string {
+  if (
+    !Number.isInteger(slippageBps) ||
+    slippageBps < 0 ||
+    slippageBps >= 10_000
+  ) {
+    throw new Error('slippageBps must be an integer between 0 and 10_000');
+  }
+
   const BPS_BASE = 10_000n;
   const amt = BigInt(amount);
   const bps = BigInt(slippageBps);
