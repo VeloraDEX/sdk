@@ -173,7 +173,7 @@ export const constructBuildDeltaOrder = (
 
     const swapSide: SwapSideUnion =
       options.slippage !== undefined
-        ? options.srcAmount
+        ? options.srcAmount !== undefined
           ? SwapSide.SELL
           : SwapSide.BUY
         : options.side ?? SwapSide.SELL;
