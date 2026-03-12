@@ -134,14 +134,14 @@ export function resolveAmounts(options: ResolveAmountsInput): ResolvedAmounts {
   let destAmount: string;
 
   const swapSide: SwapSideUnion =
-    options.slippage != null
+    options.slippage !== undefined
       ? options.srcAmount
         ? SwapSide.SELL
         : SwapSide.BUY
       : options.side ?? SwapSide.SELL;
 
-  if (options.slippage != null) {
-    if (options.srcAmount) {
+  if (options.slippage !== undefined) {
+    if (options.srcAmount !== undefined) {
       // SELL with slippage: destAmount auto-computed
       srcAmount = options.srcAmount;
       destAmount = applySlippage(
@@ -151,7 +151,7 @@ export function resolveAmounts(options: ResolveAmountsInput): ResolvedAmounts {
       );
     } else {
       // BUY with slippage: srcAmount auto-computed
-      destAmount = options.destAmount!;
+      destAmount = options.destAmount;
       srcAmount = applySlippage(
         options.deltaPrice.srcAmount,
         options.slippage,
