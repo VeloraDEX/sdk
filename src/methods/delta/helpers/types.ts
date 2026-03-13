@@ -62,7 +62,8 @@ export type DeltaAuctionStatus =
   | 'EXPIRED'
   | 'CANCELLED'
   | 'CANCELLING'
-  | 'SUSPENDED';
+  | 'SUSPENDED'
+  | 'REFUNDED';
 
 type DeltaAuctionTransaction = {
   id: string;
