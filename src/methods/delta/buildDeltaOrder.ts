@@ -13,7 +13,7 @@ import {
 } from './helpers/buildDeltaOrderData';
 import { SwapSideToOrderKind } from './helpers/types';
 import { SwapSide } from '../../constants';
-import type { MarkOptional } from 'ts-essentials';
+import { assert, type MarkOptional } from 'ts-essentials';
 import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 
@@ -252,13 +252,10 @@ function applySlippage({
   slippageBps,
   increase,
 }: ApplySlippageInput): string {
-  if (
-    !Number.isInteger(slippageBps) ||
-    slippageBps < 0 ||
-    slippageBps >= 10_000
-  ) {
-    throw new Error('slippageBps must be an integer between 0 and 10_000');
-  }
+  assert(
+    Number.isInteger(slippageBps) && slippageBps >= 0 && slippageBps <= 10_000,
+    'slippageBps must be an integer between 0 and 10_000'
+  );
 
   const BPS_BASE = 10_000n;
   const amt = BigInt(amount);
