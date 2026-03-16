@@ -182,19 +182,19 @@ export const constructBuildDeltaOrder = (
       if (options.srcAmount !== undefined) {
         // SELL with slippage: destAmount auto-computed
         srcAmount = options.srcAmount;
-        destAmount = applySlippage(
-          options.deltaPrice.destAmount,
-          options.slippage,
-          false
-        );
+        destAmount = applySlippage({
+          amount: options.deltaPrice.destAmount,
+          slippageBps: options.slippage,
+          increase: false,
+        });
       } else {
         // BUY with slippage: srcAmount auto-computed
         destAmount = options.destAmount;
-        srcAmount = applySlippage(
-          options.deltaPrice.srcAmount,
-          options.slippage,
-          true
-        );
+        srcAmount = applySlippage({
+          amount: options.deltaPrice.srcAmount,
+          slippageBps: options.slippage,
+          increase: true,
+        });
       }
     } else {
       srcAmount = options.srcAmount;
@@ -241,11 +241,17 @@ export const constructBuildDeltaOrder = (
   };
 };
 
-function applySlippage(
-  amount: string,
-  slippageBps: number,
-  increase: boolean
-): string {
+type ApplySlippageInput = {
+  amount: string;
+  slippageBps: number;
+  increase: boolean;
+};
+
+function applySlippage({
+  amount,
+  slippageBps,
+  increase,
+}: ApplySlippageInput): string {
   if (
     !Number.isInteger(slippageBps) ||
     slippageBps < 0 ||
