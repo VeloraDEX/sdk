@@ -168,6 +168,7 @@ export type BuildOptionsBase = {
   ignoreAllowance?: boolean;
   /** @description Allows the API to return the contract parameters only. */
   onlyParams?: boolean;
+  degenMode?: boolean;
 };
 
 export type BuildOptionsWithGasPrice = BuildOptionsBase & Partial<WithGasPrice>;

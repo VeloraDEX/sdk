@@ -1,4 +1,5 @@
 import { API_URL } from '../../constants';
+import { constructSearchString } from '../../helpers/misc';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
 import { DeltaAuctionOrder, DeltaAuction } from './helpers/types';
 
@@ -21,7 +22,9 @@ export type DeltaOrderToPost = {
   excludeAgents?: string[];
 };
 
-export type PostDeltaOrderParams = Omit<DeltaOrderToPost, 'chainId'>;
+export type PostDeltaOrderParams = Omit<DeltaOrderToPost, 'chainId'> & {
+  degenMode?: boolean;
+};
 
 export type DeltaOrderApiResponse = Omit<DeltaAuction, 'transactions'> & {
   orderVersion: string; // "2.0.0"
@@ -45,11 +48,17 @@ export const constructPostDeltaOrder = ({
 }: ConstructFetchInput): PostDeltaOrderFunctions => {
   const postOrderUrl = `${apiURL}/delta/orders` as const;
 
-  const postDeltaOrder: PostDeltaOrder = (postData, requestParams) => {
+  const postDeltaOrder: PostDeltaOrder = (_postData, requestParams) => {
+    const { degenMode, ...postData } = _postData;
     const deltaOrderToPost: DeltaOrderToPost = { ...postData, chainId };
 
+    const search = constructSearchString<{ degenMode?: boolean }>({
+      degenMode,
+    });
+    const fetchURL = `${postOrderUrl}/${search}` as const;
+
     return fetcher<DeltaOrderApiResponse>({
-      url: postOrderUrl,
+      url: fetchURL,
       method: 'POST',
       data: deltaOrderToPost,
       requestParams,
