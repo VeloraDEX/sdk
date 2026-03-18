@@ -7,7 +7,6 @@ import type {
   EnumerateLiteral,
   RequestParameters,
 } from '../../types';
-import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
 import { BridgePriceInfo } from './helpers/types';
 
 type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
@@ -35,6 +34,9 @@ export type DeltaPriceParams = {
   destChainId?: number;
   /** @description SELL or BUY, default is SELL */
   side?: SwapSideUnion;
+  /** @description In %. It's a way to bypass the API price impact check (default = 15%) */
+  maxImpact?: number;
+  maxUSDImpact?: number;
 
   includeAgents?: string[];
   excludeAgents?: string[];
@@ -43,6 +45,7 @@ export type DeltaPriceParams = {
 
   /** @description Allow swap on destChain after bridge. Default is true. */
   allowBridgeAndSwap?: boolean;
+  degenMode?: boolean;
 };
 
 type DeltaPriceQueryOptions = Omit<
@@ -55,15 +58,6 @@ type DeltaPriceQueryOptions = Omit<
   includeBridges?: string;
   excludeBridges?: string;
 };
-
-// for same-chain Orders, all 0 params
-export const DEFAULT_BRIDGE = {
-  protocolSelector: '0x00000000', // 4 bytes
-  destinationChainId: 0,
-  outputToken: ZERO_ADDRESS,
-  scalingFactor: 0,
-  protocolData: '0x',
-} as const satisfies Bridge;
 
 export type DeltaPrice = {
   srcToken: string;
@@ -209,7 +203,7 @@ export const constructGetDeltaPrice = ({
       excludeBridges: excludeBridgesString,
     });
 
-    const fetchURL = `${pricesUrl}/${search}` as const;
+    const fetchURL = `${pricesUrl}${search}` as const;
 
     const data = await fetcher<DeltaPriceResponse>({
       url: fetchURL,

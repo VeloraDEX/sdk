@@ -13,6 +13,7 @@ import type { ApproveTokenForNFTOrderFunctions } from '../methods/nftOrders/appr
 import type { FillOrderDirectlyFunctions } from '../methods/limitOrders/fillOrderDirectly';
 import type { ApproveTokenForDeltaFunctions } from '../methods/delta/approveForDelta';
 import type { PreSignDeltaOrderFunctions } from '../methods/delta/preSignDeltaOrder';
+import type { DeltaTokenModuleFunctions } from '../methods/delta/deltaTokenModule';
 import { API_URL, DEFAULT_VERSION } from '../constants';
 
 export type SDKConfig<TxResponse = any> = ConstructProviderFetchInput<
@@ -52,7 +53,8 @@ type InferWithTxResponse<
           CancelNFTOrderFunctions<TxResponse>,
           ApproveTokenForNFTOrderFunctions<TxResponse>,
           ApproveTokenForDeltaFunctions<TxResponse>,
-          PreSignDeltaOrderFunctions<TxResponse>
+          PreSignDeltaOrderFunctions<TxResponse>,
+          DeltaTokenModuleFunctions<TxResponse>
         ]
         // then merge IntersectionOfReturns<Funcs> with them recursively
       >

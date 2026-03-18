@@ -50,12 +50,17 @@ import {
   constructPreSignDeltaOrder,
   PreSignDeltaOrderFunctions,
 } from './preSignDeltaOrder';
+import {
+  DeltaTokenModuleFunctions,
+  constructDeltaTokenModule,
+} from './deltaTokenModule';
 
 export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
   /** @description designates the Order as being able to be partially filled, as opposed to fill-or-kill */
   partiallyFillable?: boolean;
   /** @description Referrer address */
   referrerAddress?: string;
+  degenMode?: boolean;
 } & Pick<DeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
 
 type SubmitDeltaOrder = (
@@ -87,6 +92,7 @@ export const constructSubmitDeltaOrder = (
       type: orderParams.type,
       includeAgents: orderParams.includeAgents,
       excludeAgents: orderParams.excludeAgents,
+      degenMode: orderParams.degenMode,
     });
 
     return response;
@@ -107,7 +113,8 @@ export type DeltaOrderHandlers<T> = SubmitDeltaOrderFuncs &
   PostDeltaOrderFunctions &
   SignDeltaOrderFunctions &
   PreSignDeltaOrderFunctions<T> &
-  CancelDeltaOrderFunctions;
+  CancelDeltaOrderFunctions &
+  DeltaTokenModuleFunctions<T>;
 
 /** @description construct SDK with every Delta Order-related method, fetching from API and Order signing */
 export const constructAllDeltaOrdersHandlers = <TxResponse>(
@@ -135,6 +142,8 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
 
   const deltaOrdersCancel = constructCancelDeltaOrder(options);
 
+  const deltaTokenModule = constructDeltaTokenModule(options);
+
   return {
     ...deltaOrdersGetters,
     ...deltaOrdersContractGetter,
@@ -149,5 +158,6 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
     ...deltaOrdersPreSign,
     ...deltaOrdersPost,
     ...deltaOrdersCancel,
+    ...deltaTokenModule,
   };
 };
