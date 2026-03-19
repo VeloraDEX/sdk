@@ -10,6 +10,7 @@ import type {
   DeltaAuctionOrder,
   DeltaAuctionStatus,
   ExternalDeltaOrder,
+  OnChainOrderType,
 } from './helpers/types';
 
 export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature' | 'order'> & {
@@ -55,6 +56,8 @@ type OrdersFilter = {
   status?: DeltaOrderFilterByStatus[];
   /** @description Filter by type. MARKET, LIMIT. Orders with both types are returned if not specified */
   type?: 'MARKET' | 'LIMIT';
+  /** @description Filter by on-chain order type. Order, ExternalOrder. Orders of all types are returned if not specified */
+  onChainOrderType?: OnChainOrderType;
 };
 type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
   chainId?: string;
@@ -129,6 +132,7 @@ export const constructGetDeltaOrders = ({
       page: options.page,
       limit: options.limit,
       type: options.type,
+      onChainOrderType: options.onChainOrderType,
       chainId: chainIdString,
       status: statusString,
     });

@@ -145,6 +145,7 @@ import type {
   BridgeStatus,
   Bridge,
   ExternalDeltaOrder,
+  OnChainOrderType,
   SwapSideUnion,
 } from './methods/delta/helpers/types';
 import {
@@ -438,6 +439,7 @@ export type {
   DepositNativeAndPreSignDeltaOrderParams,
   // External Delta types
   ExternalDeltaOrder,
+  OnChainOrderType,
   SignableExternalOrderData,
   BuildExternalDeltaOrderParams,
   BuildExternalDeltaOrderFunctions,

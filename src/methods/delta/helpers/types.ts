@@ -165,7 +165,6 @@ export type DeltaAuction = {
   id: string;
   deltaVersion: string; // 1.0 or 2.0 currently
   user: string;
-  signature: string;
   status: DeltaAuctionStatus;
   order: DeltaAuctionOrder;
   orderHash: string | null; // not available on old Orders only
@@ -189,6 +188,8 @@ export type DeltaAuction = {
   // deltaGasOverhead: number;
 
   type: 'MARKET' | 'LIMIT'; // @TODO when available in API for individual /order/:hash|:id
+
+  onChainOrderType: OnChainOrderType;
 };
 
 export type BridgeMetadata = {
@@ -206,6 +207,8 @@ export type BridgeMetadata = {
 
 //                                                             refunded is basically failed
 export type BridgeStatus = 'pending' | 'filled' | 'expired' | 'refunded';
+
+export type OnChainOrderType = 'Order' | 'ExternalOrder';
 
 //// available on BridgePrice ////
 
