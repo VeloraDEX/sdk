@@ -7,15 +7,12 @@ import type {
 } from '../../types';
 import type {
   DeltaAuction,
-  DeltaAuctionOrder,
   DeltaAuctionStatus,
-  ExternalDeltaOrder,
   OnChainOrderType,
 } from './helpers/types';
 
-export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature' | 'order'> & {
-  order: DeltaAuctionOrder | ExternalDeltaOrder;
-};
+/** @deprecated Use DeltaAuction directly */
+export type DeltaOrderFromAPI = DeltaAuction;
 
 export type DeltaOrderFilterByStatus =
   | DeltaAuctionStatus
@@ -28,12 +25,12 @@ export type DeltaOrderFilterByStatus =
 type GetDeltaOrderById = (
   orderId: string,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderFromAPI>;
+) => Promise<DeltaAuction>;
 
 type GetDeltaOrderByHash = (
   orderHash: string,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderFromAPI>;
+) => Promise<DeltaAuction>;
 
 type OrdersFilter = {
   /** @description Order.owner to fetch Delta Order for */
@@ -67,7 +64,7 @@ type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
 type GetDeltaOrders = (
   options: OrdersFilter,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderFromAPI[]>;
+) => Promise<DeltaAuction[]>;
 
 type GetRequiredBalanceParams = {
   userAddress: Address;
@@ -99,7 +96,7 @@ export const constructGetDeltaOrders = ({
   ) => {
     const fetchURL = `${baseUrl}/${orderId}` as const;
 
-    const order = await fetcher<DeltaOrderFromAPI>({
+    const order = await fetcher<DeltaAuction>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -114,7 +111,7 @@ export const constructGetDeltaOrders = ({
   ) => {
     const fetchURL = `${baseUrl}/hash/${orderHash}` as const;
 
-    const order = await fetcher<DeltaOrderFromAPI>({
+    const order = await fetcher<DeltaAuction>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -139,7 +136,7 @@ export const constructGetDeltaOrders = ({
 
     const fetchURL = `${baseUrl}${search}` as const;
 
-    const orders = await fetcher<DeltaOrderFromAPI[]>({
+    const orders = await fetcher<DeltaAuction[]>({
       url: fetchURL,
       method: 'GET',
       requestParams,

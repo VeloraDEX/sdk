@@ -156,7 +156,6 @@ import {
 } from './methods/delta/buildDeltaOrder';
 import {
   constructPostDeltaOrder,
-  DeltaOrderApiResponse,
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
 } from './methods/delta/postDeltaOrder';
@@ -217,7 +216,6 @@ import {
 } from './methods/delta/signExternalDeltaOrder';
 import {
   constructPostExternalDeltaOrder,
-  ExternalDeltaOrderApiResponse,
   PostExternalDeltaOrderFunctions,
   PostExternalDeltaOrderParams,
 } from './methods/delta/postExternalDeltaOrder';
@@ -412,7 +410,6 @@ export type {
   DeltaAuction,
   DeltaAuctionStatus,
   DeltaOrderFilterByStatus,
-  DeltaOrderApiResponse,
   DeltaOrderFromAPI,
   // bridge part of DeltaOrder
   BridgeMetadata,
@@ -444,7 +441,6 @@ export type {
   BuildExternalDeltaOrderParams,
   BuildExternalDeltaOrderFunctions,
   SignExternalDeltaOrderFunctions,
-  ExternalDeltaOrderApiResponse,
   PostExternalDeltaOrderFunctions,
   PostExternalDeltaOrderParams,
   PreSignExternalDeltaOrderFunctions,

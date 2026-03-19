@@ -161,12 +161,16 @@ type DeltaAuctionTransaction = {
   auctionId: string;
 };
 
-export type DeltaAuction = {
+export type OnChainOrderMap = {
+  Order: DeltaAuctionOrder;
+  ExternalOrder: ExternalDeltaOrder;
+};
+
+type DeltaAuctionBase = {
   id: string;
   deltaVersion: string; // 1.0 or 2.0 currently
   user: string;
   status: DeltaAuctionStatus;
-  order: DeltaAuctionOrder;
   orderHash: string | null; // not available on old Orders only
   transactions: DeltaAuctionTransaction[];
   chainId: number;
@@ -183,14 +187,16 @@ export type DeltaAuction = {
   bridgeMetadata: BridgeMetadata | null;
   bridgeStatus: BridgeStatus | null;
 
-  // @TODO only returned after POST Order so far
-  // orderVersion: string; // "2.0.0"
-  // deltaGasOverhead: number;
-
-  type: 'MARKET' | 'LIMIT'; // @TODO when available in API for individual /order/:hash|:id
-
-  onChainOrderType: OnChainOrderType;
+  type: 'MARKET' | 'LIMIT';
 };
+
+export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
+  T extends T
+    ? DeltaAuctionBase & {
+        onChainOrderType: T;
+        order: OnChainOrderMap[T];
+      }
+    : never;
 
 export type BridgeMetadata = {
   /** @description The amount that user should expect to get */

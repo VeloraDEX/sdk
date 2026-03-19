@@ -1,4 +1,5 @@
 import type { ConstructProviderFetchInput } from '../../types';
+import type { DeltaAuction } from './helpers/types';
 import {
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
@@ -6,7 +7,6 @@ import {
 } from './buildDeltaOrder';
 import {
   constructPostDeltaOrder,
-  DeltaOrderApiResponse,
   DeltaOrderToPost,
   PostDeltaOrderFunctions,
 } from './postDeltaOrder';
@@ -65,9 +65,7 @@ import {
 } from './signExternalDeltaOrder';
 import {
   constructPostExternalDeltaOrder,
-  ExternalDeltaOrderApiResponse,
   PostExternalDeltaOrderFunctions,
-  ExternalDeltaOrderToPost,
 } from './postExternalDeltaOrder';
 import {
   constructPreSignExternalDeltaOrder,
@@ -83,7 +81,7 @@ export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
 
 type SubmitDeltaOrder = (
   orderParams: SubmitDeltaOrderParams
-) => Promise<DeltaOrderApiResponse>;
+) => Promise<DeltaAuction<'Order'>>;
 
 export type SubmitDeltaOrderFuncs = {
   submitDeltaOrder: SubmitDeltaOrder;
@@ -123,11 +121,11 @@ export type SubmitExternalDeltaOrderParams = BuildExternalDeltaOrderParams & {
   partiallyFillable?: boolean;
   /** @description Referrer address */
   referrerAddress?: string;
-} & Pick<ExternalDeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
+} & Pick<DeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
 
 type SubmitExternalDeltaOrder = (
   orderParams: SubmitExternalDeltaOrderParams
-) => Promise<ExternalDeltaOrderApiResponse>;
+) => Promise<DeltaAuction<'ExternalOrder'>>;
 
 export type SubmitExternalDeltaOrderFuncs = {
   submitExternalDeltaOrder: SubmitExternalDeltaOrder;

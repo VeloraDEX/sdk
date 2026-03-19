@@ -1,45 +1,17 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import { DeltaAuction, ExternalDeltaOrder } from './helpers/types';
-
-export type ExternalDeltaOrderApiResponse = Omit<
-  DeltaAuction,
-  'transactions' | 'order'
-> & {
-  order: ExternalDeltaOrder;
-  orderVersion: string;
-  deltaGasOverhead: number;
-  type: 'MARKET' | 'LIMIT';
-};
-
-export type ExternalDeltaOrderToPost = {
-  /** @description Partner string */
-  partner?: string;
-  /** @description Referrer address */
-  referrerAddress?: string;
-  order: ExternalDeltaOrder;
-  /** @description Signature of the order from order.owner address. EOA signatures must be submitted in ERC-2098 Compact Representation. */
-  signature: string;
-  chainId: number;
-  /** @description designates the Order as being able to partially filled, as opposed to fill-or-kill */
-  partiallyFillable?: boolean;
-
-  /** @description Type of the order. MARKET or LIMIT. Default is MARKET */
-  type?: 'MARKET' | 'LIMIT';
-
-  includeAgents?: string[];
-  excludeAgents?: string[];
-};
+import type { DeltaAuction } from './helpers/types';
+import type { DeltaOrderToPost } from './postDeltaOrder';
 
 export type PostExternalDeltaOrderParams = Omit<
-  ExternalDeltaOrderToPost,
+  DeltaOrderToPost<'ExternalOrder'>,
   'chainId'
 >;
 
 type PostExternalDeltaOrder = (
   postData: PostExternalDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<ExternalDeltaOrderApiResponse>;
+) => Promise<DeltaAuction<'ExternalOrder'>>;
 
 export type PostExternalDeltaOrderFunctions = {
   postExternalDeltaOrder: PostExternalDeltaOrder;
@@ -56,9 +28,12 @@ export const constructPostExternalDeltaOrder = ({
     postData,
     requestParams
   ) => {
-    const deltaOrderToPost: ExternalDeltaOrderToPost = { ...postData, chainId };
+    const deltaOrderToPost: DeltaOrderToPost<'ExternalOrder'> = {
+      ...postData,
+      chainId,
+    };
 
-    return fetcher<ExternalDeltaOrderApiResponse>({
+    return fetcher<DeltaAuction<'ExternalOrder'>>({
       url: postOrderUrl,
       method: 'POST',
       data: deltaOrderToPost,

@@ -126,6 +126,7 @@ exports[`Delta:methods Get Delta Order by Id and Hash 1`] = `
   "expiresAt": "2025-04-18T15:03:33.000Z",
   "id": "7ec0dc82-98ad-4501-9f46-03e31e51098f",
   "includeAgents": null,
+  "onChainOrderType": "Order",
   "order": {
     "beneficiary": "0x0ddc793680ff4f5793849c8c6992be1695cbe72a",
     "bridge": {
@@ -195,6 +196,7 @@ exports[`Delta:methods Get Delta Orders for user 1`] = `
     "expiresAt": "2024-10-10T17:17:47.000Z",
     "id": "8515cce6-c7c6-486b-9f1e-5702f204edd6",
     "includeAgents": null,
+    "onChainOrderType": "Order",
     "order": {
       "beneficiary": "0x76176c2971300217e9f48e3dd4e40591500b96ff",
       "bridge": {
@@ -259,6 +261,7 @@ exports[`Delta:methods Get Delta Orders for user 1`] = `
     "expiresAt": "2024-10-09T17:52:08.000Z",
     "id": "7696f983-4f0d-4bb0-b591-61957abf74de",
     "includeAgents": null,
+    "onChainOrderType": "Order",
     "order": {
       "beneficiary": "0x76176c2971300217e9f48e3dd4e40591500b96ff",
       "bridge": {
