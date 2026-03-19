@@ -12,7 +12,7 @@ import { startStatusCheck } from './helpers/delta';
 
 const fetcher = constructAxiosFetcher(axios);
 
-const provider = ethers.getDefaultProvider(8453); // Base
+const provider = ethers.getDefaultProvider(1); // Ethereum
 const signer = Wallet.createRandom().connect(provider);
 const account = signer.address;
 const contractCaller = constructEthersContractCaller(
@@ -25,21 +25,25 @@ const contractCaller = constructEthersContractCaller(
 
 const deltaSDK = constructPartialSDK(
   {
-    chainId: 8453, // Base
+    chainId: 1, // Ethereum
     fetcher,
     contractCaller,
   },
   constructAllDeltaOrdersHandlers
 );
 
-// Base tokens
-const USDC = '0x833589fcd6edb6e08f4c7c32d4f71b54bda02913';
-const WETH = '0x4200000000000000000000000000000000000006';
+// Ethereum tokens
+const USDC = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48';
+const WETH = '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2';
 
-// Aave external handler on Base
-const AAVE_HANDLER = '0xe4c9d68f134b6d2380d124233002535ba786d5a1';
+// Aave external handler on Ethereum (https://etherscan.io/address/0xb4a2c36668cf8b19fe08f263e3685a5e16e82912#code)
+// The handler contract is provided by the integrator and must implement IExternalProtocolHandler.
+// Different handlers serve different purposes and may have different prerequisites
+// (e.g. token approvals, credit delegation, position setup).
+const AAVE_HANDLER = '0xb4a2c36668cf8b19fe08f263e3685a5e16e82912';
 
-// Aave order types passed as `data` field
+// Aave-specific order types passed as `data` field.
+// The `data` encoding is handler-specific — each handler defines its own format.
 const AaveOrderTypes = {
   COLLATERAL_SWAP:
     '0x0000000000000000000000000000000000000000000000000000000000000000',
@@ -50,8 +54,9 @@ const AaveOrderTypes = {
 };
 
 // Aave Collateral Swap: swap one collateral asset for another (SELL side)
+// Prerequisites: user must approve the source aToken to the handler
 async function collateralSwapFlow() {
-  const amount = (10 ** 6).toString(); // 1 USDC in wei
+  const amount = ethers.utils.parseUnits('1', 6).toString(); // 1 USDC
 
   const deltaPrice = await deltaSDK.getDeltaPrice({
     srcToken: USDC,
@@ -71,7 +76,7 @@ async function collateralSwapFlow() {
     srcToken: USDC,
     destToken: WETH,
     srcAmount: amount,
-    slippage: 500, // 5% slippage in bps
+    slippage: 50, // 0.5% slippage in bps
   });
 
   const signature = await deltaSDK.signExternalDeltaOrder(signableOrderData);
@@ -85,8 +90,9 @@ async function collateralSwapFlow() {
 }
 
 // Aave Debt Swap: swap one debt for another (BUY side)
+// Prerequisites: user must grant borrowAllowance on the source variable debt token to the handler
 async function debtSwapFlow() {
-  const debtAmount = (10 ** 6).toString(); // amount of debt to swap
+  const debtAmount = ethers.utils.parseUnits('1', 6).toString(); // amount of debt to swap
 
   const deltaPrice = await deltaSDK.getDeltaPrice({
     srcToken: USDC,
@@ -106,7 +112,7 @@ async function debtSwapFlow() {
     srcToken: USDC,
     destToken: WETH,
     destAmount: debtAmount,
-    slippage: 500, // 5% slippage in bps
+    slippage: 50, // 0.5% slippage in bps
   });
 
   const signature = await deltaSDK.signExternalDeltaOrder(signableOrderData);
@@ -120,8 +126,9 @@ async function debtSwapFlow() {
 }
 
 // Aave Repay with Collateral: use collateral to repay debt (BUY side)
+// Prerequisites: user must approve the source aToken to the handler
 async function repayWithCollateralFlow() {
-  const collateralAmount = (10 ** 6).toString();
+  const collateralAmount = ethers.utils.parseUnits('1', 6).toString();
 
   const deltaPrice = await deltaSDK.getDeltaPrice({
     srcToken: USDC,
@@ -141,7 +148,7 @@ async function repayWithCollateralFlow() {
     srcToken: USDC,
     destToken: WETH,
     destAmount: collateralAmount,
-    slippage: 500, // 5% slippage in bps
+    slippage: 50, // 0.5% slippage in bps
   });
 
   const signature = await deltaSDK.signExternalDeltaOrder(signableOrderData);
