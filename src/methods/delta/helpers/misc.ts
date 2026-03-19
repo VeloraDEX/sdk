@@ -109,7 +109,7 @@ export async function resolvePartnerFee(
 
       partnerAddress = partnerAddress ?? partnerFeeResponse.partnerAddress;
       // deltaPrice.partnerFee and partnerFeeResponse.partnerFee should be the same, but give priority to externally provided
-      partnerFeeBps = partnerFeeBps ?? partnerFeeResponse.partnerFee;
+      partnerFeeBps = partnerFeeBps ?? partnerFeeResponse.partnerFee * 100;
       partnerTakesSurplus =
         partnerTakesSurplus ?? partnerFeeResponse.takeSurplus;
     }
