@@ -7,6 +7,7 @@ import {
 } from './helpers/buildOrderData';
 export * from './helpers/buildOrderData';
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type BuildNFTOrderInput = Omit<
   BuildNFTOrderDataInput,
   'chainId' | 'verifyingContract' | 'AugustusAddress'
@@ -17,11 +18,13 @@ type BuildNFTOrder = (
   requestParams?: RequestParameters
 ) => Promise<SignableNFTOrderData>;
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type BuildNFTOrderFunctions = {
   /** @description Build Orders that will be excuted through AugustusSwapper */
   buildNFTOrder: BuildNFTOrder;
 };
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const constructBuildNFTOrder = (
   options: ConstructFetchInput
 ): BuildNFTOrderFunctions => {

@@ -28,11 +28,13 @@ type GetNFTOrders = (
   requestParams?: RequestParameters
 ) => Promise<NFTOrdersApiResponse>;
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type GetNFTOrdersFunctions = {
   getNFTOrders: GetNFTOrders;
   getNFTOrderByHash: GetNFTOrderByHash;
 };
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const constructGetNFTOrders = ({
   apiURL = API_URL,
   chainId,

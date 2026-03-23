@@ -2,12 +2,14 @@ import type { ConstructProviderFetchInput } from '../../types';
 import type { SignableNFTOrderData } from './buildOrder';
 import { sanitizeOrderData } from './helpers/misc';
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type SignNFTOrderFunctions = {
   signNFTOrder: (signableOrderData: SignableNFTOrderData) => Promise<string>;
 };
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const constructSignNFTOrder = (
   options: Pick<
     ConstructProviderFetchInput<any, 'signTypedDataCall'>,

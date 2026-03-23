@@ -1,12 +1,14 @@
 import type { ConstructFetchInput } from '../../types';
 import { constructGetSpender, GetSpender } from '../swap/spender';
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type GetNFTOrdersContractFunctions = {
   getNFTOrdersContract: GetSpender;
   getTokenTransferProxy: GetSpender;
 };
 
 // should work the same as LimitOrders
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const constructGetNFTOrdersContract = (
   options: ConstructFetchInput
 ): GetNFTOrdersContractFunctions => {

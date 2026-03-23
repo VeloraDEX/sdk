@@ -13,11 +13,13 @@ type PostLimitOrder = (
   requestParams?: RequestParameters
 ) => Promise<LimitOrderFromApi>;
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type PostLimitOrderFunctions = {
   postLimitOrder: PostLimitOrder;
   postP2POrder: PostLimitOrder;
 };
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export const constructPostLimitOrder = ({
   apiURL = API_URL,
   chainId,

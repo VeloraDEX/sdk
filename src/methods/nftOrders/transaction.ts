@@ -43,6 +43,7 @@ type BuildNFTOrdersTx = (
   requestParams?: RequestParameters
 ) => Promise<TransactionParams>;
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type BuildNFTOrdersTxFunctions = {
   getNFTOrdersRate: GetNFTOrdersRate;
   buildNFTOrderTx: BuildNFTOrdersTx;
@@ -56,6 +57,7 @@ type GetNFTOrdersRate = (
   requestParams?: RequestParameters
 ) => Promise<OptimalRate>;
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const constructBuildNFTOrderTx = ({
   apiURL = API_URL,
   version = DEFAULT_VERSION,
