@@ -7,8 +7,8 @@ import type { AmountsWithSlippage, SwapSideUnion } from './types';
 import { SwapSide } from '../../../constants';
 import { assert } from 'ts-essentials';
 
-// default deadline = 10 min
-export const DELTA_DEFAULT_EXPIRY = 10 * 60; // seconds
+// default deadline = 1 hour for now (may be changed later)
+export const DELTA_DEFAULT_EXPIRY = 60 * 60; // seconds
 
 type ProducePartnerAndFeeInput = {
   partnerFeeBps: number;
