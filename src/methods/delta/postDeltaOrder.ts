@@ -1,13 +1,17 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import { DeltaAuctionOrder, DeltaAuction } from './helpers/types';
+import type {
+  DeltaAuction,
+  OnChainOrderMap,
+  OnChainOrderType,
+} from './helpers/types';
 
-export type DeltaOrderToPost = {
+export type DeltaOrderToPost<T extends OnChainOrderType = 'Order'> = {
   /** @description Partner string */
   partner?: string;
   /** @description Referrer address */
   referrerAddress?: string;
-  order: DeltaAuctionOrder;
+  order: OnChainOrderMap[T];
   /** @description Signature of the order from order.owner address. EOA signatures must be submitted in ERC-2098 Compact Representation. */
   signature: string;
   chainId: number;
@@ -23,16 +27,10 @@ export type DeltaOrderToPost = {
 
 export type PostDeltaOrderParams = Omit<DeltaOrderToPost, 'chainId'>;
 
-export type DeltaOrderApiResponse = Omit<DeltaAuction, 'transactions'> & {
-  orderVersion: string; // "2.0.0"
-  deltaGasOverhead: number; // @TODO may be removed
-  type: 'MARKET' | 'LIMIT';
-};
-
 type PostDeltaOrder = (
   postData: PostDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderApiResponse>;
+) => Promise<DeltaAuction<'Order'>>;
 
 export type PostDeltaOrderFunctions = {
   postDeltaOrder: PostDeltaOrder;
@@ -48,7 +46,7 @@ export const constructPostDeltaOrder = ({
   const postDeltaOrder: PostDeltaOrder = (postData, requestParams) => {
     const deltaOrderToPost: DeltaOrderToPost = { ...postData, chainId };
 
-    return fetcher<DeltaOrderApiResponse>({
+    return fetcher<DeltaAuction<'Order'>>({
       url: postOrderUrl,
       method: 'POST',
       data: deltaOrderToPost,

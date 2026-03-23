@@ -1,8 +1,4 @@
-import type {
-  ConstructFetchInput,
-  EnumerateLiteral,
-  RequestParameters,
-} from '../../types';
+import type { ConstructFetchInput, RequestParameters } from '../../types';
 import { constructGetDeltaContract } from './getDeltaContract';
 import type { BridgePrice } from './getDeltaPrice';
 import { constructGetPartnerFee } from './getPartnerFee';
@@ -11,13 +7,11 @@ import {
   type BuildDeltaOrderDataInput,
   type SignableDeltaOrderData,
 } from './helpers/buildDeltaOrderData';
+import type { AmountsWithSlippage } from './helpers/types';
 import { SwapSideToOrderKind } from './helpers/types';
-import { SwapSide } from '../../constants';
-import { assert, type MarkOptional } from 'ts-essentials';
-import { ZERO_ADDRESS } from '../common/orders/buildOrderData';
+import { resolvePartnerFee, resolveAmounts } from './helpers/misc';
+import type { MarkOptional } from 'ts-essentials';
 export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
-
-export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
 type BuildDeltaOrderDataParamsBase = {
   /** @description The address of the order owner */
@@ -68,39 +62,8 @@ type BuildDeltaOrderDataParamsBase = {
   metadata?: string;
 };
 
-/** @description SELL with slippage: srcAmount provided, destAmount auto-computed from deltaPrice.destAmount */
-type DeltaAmountsSellSlippage = {
-  /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
-  slippage: number;
-  /** @description The amount of src token to swap */
-  srcAmount: string;
-  destAmount?: never;
-  /** @description The side of the order */
-  side?: 'SELL';
-};
-/** @description BUY with slippage: destAmount provided, srcAmount auto-computed from deltaPrice.srcAmount */
-type DeltaAmountsBuySlippage = {
-  /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
-  slippage: number;
-  /** @description The minimum amount of dest token to receive */
-  destAmount: string;
-  srcAmount?: never;
-  /** @description The side of the order */
-  side?: 'BUY';
-};
-/** @description Explicit amounts, no slippage (backward-compatible) */
-type DeltaAmountsExplicit = {
-  slippage?: never;
-  /** @description The amount of src token to swap */
-  srcAmount: string;
-  /** @description The minimum amount of dest token to receive */
-  destAmount: string;
-  /** @description The side of the order. Default is SELL */
-  side?: SwapSideUnion;
-};
-
 export type BuildDeltaOrderDataParams = BuildDeltaOrderDataParamsBase &
-  (DeltaAmountsSellSlippage | DeltaAmountsBuySlippage | DeltaAmountsExplicit);
+  AmountsWithSlippage;
 
 type BuildDeltaOrder = (
   buildOrderParams: BuildDeltaOrderDataParams,
@@ -128,83 +91,11 @@ export const constructBuildDeltaOrder = (
       throw new Error(`Delta is not available on chain ${chainId}`);
     }
 
-    ////// Partner logic //////
+    const { partnerAddress, partnerFeeBps, partnerTakesSurplus } =
+      await resolvePartnerFee(options, getPartnerFee, requestParams);
 
-    // externally supplied partner fee data takes precedence
-    let partnerAddress = options.partnerAddress;
-    let partnerFeeBps =
-      options.partnerFeeBps ??
-      (options.deltaPrice.partnerFee
-        ? options.deltaPrice.partnerFee * 100
-        : undefined);
-    let partnerTakesSurplus = options.partnerTakesSurplus;
-
-    // if fee given, takeSurplus is ignored
-    const feeOrTakeSurplusSupplied =
-      partnerFeeBps !== undefined || partnerTakesSurplus !== undefined;
-
-    if (partnerAddress === undefined || feeOrTakeSurplusSupplied) {
-      const partner = options.partner || options.deltaPrice.partner;
-      if (!partner) {
-        // if no partner given in options or deltaPrice, default partnerAddress to zero,
-        // unless supplied explicitly
-        partnerAddress = partnerAddress ?? ZERO_ADDRESS;
-      } else {
-        const partnerFeeResponse = await getPartnerFee(
-          { partner },
-          requestParams
-        );
-
-        partnerAddress = partnerAddress ?? partnerFeeResponse.partnerAddress;
-        // deltaPrice.partnerFee and partnerFeeResponse.partnerFee should be the same, but give priority to externally provided
-        partnerFeeBps = partnerFeeBps ?? partnerFeeResponse.partnerFee;
-        partnerTakesSurplus =
-          partnerTakesSurplus ?? partnerFeeResponse.takeSurplus;
-      }
-    }
-
-    partnerFeeBps = partnerFeeBps ?? 0;
-    partnerTakesSurplus = partnerTakesSurplus ?? false;
-
-    // Resolve srcAmount, destAmount and side.
-    // When slippage is used, side is inferred from which amount is present.
-    let srcAmount: string;
-    let destAmount: string;
-
-    const swapSide: SwapSideUnion =
-      options.slippage !== undefined
-        ? options.srcAmount !== undefined
-          ? SwapSide.SELL
-          : SwapSide.BUY
-        : options.side ?? SwapSide.SELL;
-
-    if (options.slippage !== undefined) {
-      if (options.srcAmount !== undefined) {
-        // SELL with slippage: destAmount auto-computed
-        srcAmount = options.srcAmount;
-        destAmount = applySlippage({
-          amount: options.deltaPrice.destAmount,
-          slippageBps: options.slippage,
-          increase: false,
-        });
-      } else {
-        // BUY with slippage: srcAmount auto-computed
-        destAmount = options.destAmount;
-        srcAmount = applySlippage({
-          amount: options.deltaPrice.srcAmount,
-          slippageBps: options.slippage,
-          increase: true,
-        });
-      }
-    } else {
-      srcAmount = options.srcAmount;
-      destAmount = options.destAmount;
-    }
-
-    const expectedAmount =
-      swapSide === SwapSide.SELL
-        ? options.deltaPrice.destAmount
-        : options.deltaPrice.srcAmount;
+    const { srcAmount, destAmount, expectedAmount, swapSide } =
+      resolveAmounts(options);
 
     const input: BuildDeltaOrderDataInput = {
       owner: options.owner,
@@ -240,28 +131,3 @@ export const constructBuildDeltaOrder = (
     buildDeltaOrder,
   };
 };
-
-type ApplySlippageInput = {
-  amount: string;
-  slippageBps: number;
-  increase: boolean;
-};
-
-function applySlippage({
-  amount,
-  slippageBps,
-  increase,
-}: ApplySlippageInput): string {
-  assert(
-    Number.isInteger(slippageBps) && slippageBps >= 0 && slippageBps <= 10_000,
-    'slippageBps must be an integer between 0 and 10_000'
-  );
-
-  const BPS_BASE = 10_000n;
-  const amt = BigInt(amount);
-  const bps = BigInt(slippageBps);
-
-  return increase
-    ? ((amt * (BPS_BASE + bps)) / BPS_BASE).toString(10)
-    : ((amt * (BPS_BASE - bps)) / BPS_BASE).toString(10);
-}

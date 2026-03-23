@@ -5,9 +5,14 @@ import type {
   ConstructFetchInput,
   RequestParameters,
 } from '../../types';
-import type { DeltaAuction, DeltaAuctionStatus } from './helpers/types';
+import type {
+  DeltaAuction,
+  DeltaAuctionStatus,
+  OnChainOrderType,
+} from './helpers/types';
 
-export type DeltaOrderFromAPI = Omit<DeltaAuction, 'signature'>;
+/** @deprecated Use DeltaAuction directly */
+export type DeltaOrderFromAPI = DeltaAuction;
 
 export type DeltaOrderFilterByStatus =
   | DeltaAuctionStatus
@@ -20,14 +25,14 @@ export type DeltaOrderFilterByStatus =
 type GetDeltaOrderById = (
   orderId: string,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderFromAPI>;
+) => Promise<DeltaAuction>;
 
 type GetDeltaOrderByHash = (
   orderHash: string,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderFromAPI>;
+) => Promise<DeltaAuction>;
 
-type OrdersFilter = {
+type OrdersFilter<T extends OnChainOrderType = OnChainOrderType> = {
   /** @description Order.owner to fetch Delta Order for */
   userAddress: Address;
   /** @description Pagination option, page. Default 1 */
@@ -48,16 +53,23 @@ type OrdersFilter = {
   status?: DeltaOrderFilterByStatus[];
   /** @description Filter by type. MARKET, LIMIT. Orders with both types are returned if not specified */
   type?: 'MARKET' | 'LIMIT';
+  /** @description Filter by on-chain order type. Order, ExternalOrder. Orders of all types are returned if not specified */
+  onChainOrderType?: T;
 };
 type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
   chainId?: string;
   status?: string;
 };
 
-type GetDeltaOrders = (
-  options: OrdersFilter,
-  requestParams?: RequestParameters
-) => Promise<DeltaOrderFromAPI[]>;
+type GetDeltaOrders = {
+  <T extends OnChainOrderType>(
+    options: OrdersFilter<T> & { onChainOrderType: T },
+    requestParams?: RequestParameters
+  ): Promise<DeltaAuction<T>[]>;
+  (options: OrdersFilter, requestParams?: RequestParameters): Promise<
+    DeltaAuction[]
+  >;
+};
 
 type GetRequiredBalanceParams = {
   userAddress: Address;
@@ -89,7 +101,7 @@ export const constructGetDeltaOrders = ({
   ) => {
     const fetchURL = `${baseUrl}/${orderId}` as const;
 
-    const order = await fetcher<DeltaOrderFromAPI>({
+    const order = await fetcher<DeltaAuction>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -104,7 +116,7 @@ export const constructGetDeltaOrders = ({
   ) => {
     const fetchURL = `${baseUrl}/hash/${orderHash}` as const;
 
-    const order = await fetcher<DeltaOrderFromAPI>({
+    const order = await fetcher<DeltaAuction>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -113,7 +125,12 @@ export const constructGetDeltaOrders = ({
     return order;
   };
 
-  const getDeltaOrders: GetDeltaOrders = async (options, requestParams) => {
+  const getDeltaOrders: GetDeltaOrders = async <
+    T extends OnChainOrderType = OnChainOrderType
+  >(
+    options: OrdersFilter<T>,
+    requestParams?: RequestParameters
+  ) => {
     const chainIdString = options.chainId?.join(',');
     const statusString = options.status?.join(',');
 
@@ -122,13 +139,14 @@ export const constructGetDeltaOrders = ({
       page: options.page,
       limit: options.limit,
       type: options.type,
+      onChainOrderType: options.onChainOrderType,
       chainId: chainIdString,
       status: statusString,
     });
 
     const fetchURL = `${baseUrl}${search}` as const;
 
-    const orders = await fetcher<DeltaOrderFromAPI[]>({
+    const orders = await fetcher<DeltaAuction<T>[]>({
       url: fetchURL,
       method: 'GET',
       requestParams,

@@ -5,84 +5,87 @@ import type {
   TxSendOverrides,
 } from '../../types';
 import {
-  produceDeltaOrderTypedData,
-  SignableDeltaOrderData,
-} from './helpers/buildDeltaOrderData';
-import { sanitizeDeltaOrderData } from './helpers/misc';
+  produceExternalOrderTypedData,
+  SignableExternalOrderData,
+} from './helpers/buildExternalOrderData';
+import { sanitizeExternalOrderData } from './helpers/misc';
 import { PreSignatureModuleAbi } from './helpers/abi';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
 import { findPrimaryType } from '../../helpers/providers/helpers';
 import { constructGetDeltaContract } from './getDeltaContract';
-import type { DeltaAuctionOrder } from './helpers/types';
+import type { ExternalDeltaOrder } from './helpers/types';
 
-type HashDeltaOrderTypedData = (
-  signableOrderData: SignableDeltaOrderData
+type HashExternalDeltaOrderTypedData = (
+  signableOrderData: SignableExternalOrderData
 ) => string;
 
-type HashDeltaOrder = (
-  orderData: DeltaAuctionOrder,
+type HashExternalDeltaOrder = (
+  orderData: ExternalDeltaOrder,
   requestParams?: RequestParameters
 ) => Promise<string>;
 
-export type SetDeltaOrderPreSignature<T> = (
+export type SetExternalDeltaOrderPreSignature<T> = (
   orderHash: string,
   overrides?: TxSendOverrides,
   requestParams?: RequestParameters
 ) => Promise<T>;
 
-export type PreSignDeltaOrder<T> = (
-  signableOrderData: SignableDeltaOrderData,
+export type PreSignExternalDeltaOrder<T> = (
+  signableOrderData: SignableExternalOrderData,
   overrides?: TxSendOverrides,
   requestParams?: RequestParameters
 ) => Promise<T>;
 
-export type PreSignDeltaOrderFunctions<T> = {
-  hashDeltaOrderTypedData: HashDeltaOrderTypedData;
-  hashDeltaOrder: HashDeltaOrder;
-  setDeltaOrderPreSignature: SetDeltaOrderPreSignature<T>;
-  preSignDeltaOrder: PreSignDeltaOrder<T>;
+export type PreSignExternalDeltaOrderFunctions<T> = {
+  hashExternalDeltaOrderTypedData: HashExternalDeltaOrderTypedData;
+  hashExternalDeltaOrder: HashExternalDeltaOrder;
+  setExternalDeltaOrderPreSignature: SetExternalDeltaOrderPreSignature<T>;
+  preSignExternalDeltaOrder: PreSignExternalDeltaOrder<T>;
 };
 
 type AvailableMethods = ExtractAbiMethodNames<typeof PreSignatureModuleAbi>;
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
-export const constructPreSignDeltaOrder = <T>(
+export const constructPreSignExternalDeltaOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
-): PreSignDeltaOrderFunctions<T> => {
-  const hashDeltaOrderTypedData: HashDeltaOrderTypedData = (typedData) => {
+): PreSignExternalDeltaOrderFunctions<T> => {
+  const hashExternalDeltaOrderTypedData: HashExternalDeltaOrderTypedData = (
+    typedData
+  ) => {
     // types allow to pass OrderData & extra_stuff, but tx will break like that
-    const typedDataOnly: SignableDeltaOrderData = {
+    const typedDataOnly: SignableExternalOrderData = {
       ...typedData,
-      data: sanitizeDeltaOrderData(typedData.data),
+      data: sanitizeExternalOrderData(typedData.data),
     };
 
-    const orderHash = produceDeltaOrderHash(typedDataOnly);
+    const orderHash = produceExternalOrderHash(typedDataOnly);
 
     return orderHash;
   };
   // cached internally
   const { getDeltaContract } = constructGetDeltaContract(options);
 
-  const hashDeltaOrder: HashDeltaOrder = async (orderData, requestParams) => {
+  const hashExternalDeltaOrder: HashExternalDeltaOrder = async (
+    orderData,
+    requestParams
+  ) => {
     const ParaswapDelta = await getDeltaContract(requestParams);
     if (!ParaswapDelta) {
       throw new Error(`Delta is not available on chain ${options.chainId}`);
     }
 
-    const typedData = produceDeltaOrderTypedData({
+    const typedData = produceExternalOrderTypedData({
       orderInput: orderData,
       chainId: options.chainId,
       paraswapDeltaAddress: ParaswapDelta,
     });
-    return hashDeltaOrderTypedData(typedData);
+    return hashExternalDeltaOrderTypedData(typedData);
   };
 
-  const setDeltaOrderPreSignature: SetDeltaOrderPreSignature<T> = async (
-    orderHash,
-    overrides = {},
-    requestParams
-  ) => {
+  const setExternalDeltaOrderPreSignature: SetExternalDeltaOrderPreSignature<
+    T
+  > = async (orderHash, overrides = {}, requestParams) => {
     const ParaswapDelta = await getDeltaContract(requestParams);
     if (!ParaswapDelta) {
       throw new Error(`Delta is not available on chain ${options.chainId}`);
@@ -99,13 +102,13 @@ export const constructPreSignDeltaOrder = <T>(
     return res;
   };
 
-  const preSignDeltaOrder: PreSignDeltaOrder<T> = async (
+  const preSignExternalDeltaOrder: PreSignExternalDeltaOrder<T> = async (
     signableOrderData,
     overrides = {},
     requestParams
   ) => {
-    const orderHash = hashDeltaOrderTypedData(signableOrderData);
-    const res = await setDeltaOrderPreSignature(
+    const orderHash = hashExternalDeltaOrderTypedData(signableOrderData);
+    const res = await setExternalDeltaOrderPreSignature(
       orderHash,
       overrides,
       requestParams
@@ -114,15 +117,15 @@ export const constructPreSignDeltaOrder = <T>(
   };
 
   return {
-    hashDeltaOrderTypedData,
-    hashDeltaOrder,
-    setDeltaOrderPreSignature,
-    preSignDeltaOrder,
+    hashExternalDeltaOrderTypedData,
+    hashExternalDeltaOrder,
+    setExternalDeltaOrderPreSignature,
+    preSignExternalDeltaOrder,
   };
 };
 
-export function produceDeltaOrderHash(
-  typedData: SignableDeltaOrderData
+export function produceExternalOrderHash(
+  typedData: SignableExternalOrderData
 ): string {
   return hashTypedData({
     domain: {
