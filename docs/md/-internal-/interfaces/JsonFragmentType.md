@@ -16,7 +16,7 @@ The components for a tuple.
 
 #### Defined in
 
-[src/types.ts:192](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L192)
+[src/types.ts:195](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L195)
 
 ***
 
@@ -28,7 +28,7 @@ If the parameter is indexed.
 
 #### Defined in
 
-[src/types.ts:177](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L177)
+[src/types.ts:180](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L180)
 
 ***
 
@@ -40,7 +40,7 @@ The internal Solidity type.
 
 #### Defined in
 
-[src/types.ts:187](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L187)
+[src/types.ts:190](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L190)
 
 ***
 
@@ -52,7 +52,7 @@ The parameter name.
 
 #### Defined in
 
-[src/types.ts:172](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L172)
+[src/types.ts:175](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L175)
 
 ***
 
@@ -64,4 +64,4 @@ The type of the parameter.
 
 #### Defined in
 
-[src/types.ts:182](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L182)
+[src/types.ts:185](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L185)

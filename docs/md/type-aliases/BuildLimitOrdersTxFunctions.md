@@ -4,24 +4,28 @@
 
 [@velora-dex/sdk](../globals.md) / BuildLimitOrdersTxFunctions
 
-# Type Alias: BuildLimitOrdersTxFunctions
+# Type Alias: ~~BuildLimitOrdersTxFunctions~~
 
 > **BuildLimitOrdersTxFunctions**: `object`
 
 ## Type declaration
 
-### buildLimitOrderTx
+### ~~buildLimitOrderTx~~
 
 > **buildLimitOrderTx**: [`BuildLimitOrdersTx`](../-internal-/type-aliases/BuildLimitOrdersTx.md)
 
-### buildSwapAndLimitOrderTx
+### ~~buildSwapAndLimitOrderTx~~
 
 > **buildSwapAndLimitOrderTx**: [`BuildSwapAndLimitOrdersTx`](../-internal-/type-aliases/BuildSwapAndLimitOrdersTx.md)
 
-### getLimitOrdersRate
+### ~~getLimitOrdersRate~~
 
 > **getLimitOrdersRate**: [`GetLimitOrdersRate`](../-internal-/type-aliases/GetLimitOrdersRate.md)
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/transaction.ts:47](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/transaction.ts#L47)
+[src/methods/limitOrders/transaction.ts:48](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/transaction.ts#L48)

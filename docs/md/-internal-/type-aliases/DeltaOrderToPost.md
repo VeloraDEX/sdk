@@ -4,9 +4,13 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / DeltaOrderToPost
 
-# Type Alias: DeltaOrderToPost
+# Type Alias: DeltaOrderToPost\<T\>
 
-> **DeltaOrderToPost**: `object`
+> **DeltaOrderToPost**\<`T`\>: `object`
+
+## Type Parameters
+
+• **T** *extends* [`OnChainOrderType`](../../type-aliases/OnChainOrderType.md) = `"Order"`
 
 ## Type declaration
 
@@ -24,7 +28,7 @@
 
 ### order
 
-> **order**: [`DeltaAuctionOrder`](../../type-aliases/DeltaAuctionOrder.md)
+> **order**: [`OnChainOrderMap`](OnChainOrderMap.md)\[`T`\]
 
 ### partiallyFillable?
 
@@ -68,4 +72,4 @@ Type of the order. MARKET or LIMIT. Default is MARKET
 
 ## Defined in
 
-[src/methods/delta/postDeltaOrder.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L5)
+[src/methods/delta/postDeltaOrder.ts:10](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L10)

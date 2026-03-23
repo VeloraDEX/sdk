@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructPostLimitOrder
 
-# Function: constructPostLimitOrder()
+# Function: ~~constructPostLimitOrder()~~
 
 > **constructPostLimitOrder**(`__namedParameters`): [`PostLimitOrderFunctions`](../type-aliases/PostLimitOrderFunctions.md)
 
@@ -16,6 +16,10 @@
 
 [`PostLimitOrderFunctions`](../type-aliases/PostLimitOrderFunctions.md)
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/postOrder.ts:21](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/postOrder.ts#L21)
+[src/methods/limitOrders/postOrder.ts:23](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/postOrder.ts#L23)

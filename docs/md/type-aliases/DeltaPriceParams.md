@@ -34,6 +34,10 @@ srcToken amount in wei
 
 Beneficiary Address
 
+### degenMode?
+
+> `optional` **degenMode**: `boolean`
+
 ### destChainId?
 
 > `optional` **destChainId**: `number`
@@ -74,6 +78,18 @@ Destination Token Address
 
 > `optional` **includeBridges**: `string`[]
 
+### maxImpact?
+
+> `optional` **maxImpact**: `number`
+
+#### Description
+
+In %. It's a way to bypass the API price impact check (default = 15%)
+
+### maxUSDImpact?
+
+> `optional` **maxUSDImpact**: `number`
+
 ### partner?
 
 > `optional` **partner**: `string`
@@ -81,6 +97,14 @@ Destination Token Address
 #### Description
 
 Partner string.
+
+### partnerFeeBps?
+
+> `optional` **partnerFeeBps**: `number`
+
+#### Description
+
+Used together with `partner` if provided. Represented in basis points, 50bps=0.5%
 
 ### side?
 
@@ -116,4 +140,4 @@ User's Wallet Address
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:14](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L14)
+[src/methods/delta/getDeltaPrice.ts:14](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L14)

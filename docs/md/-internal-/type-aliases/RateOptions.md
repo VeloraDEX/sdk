@@ -10,6 +10,10 @@
 
 ## Type declaration
 
+### degenMode?
+
+> `optional` **degenMode**: `boolean`
+
 ### destTokenDexTransferFee?
 
 > `optional` **destTokenDexTransferFee**: `string`
@@ -90,6 +94,14 @@ In %. It's a way to bypass the API price impact check (default = 15%)
 
 > `optional` **partner**: `string`
 
+### partnerFeeBps?
+
+> `optional` **partnerFeeBps**: `number`
+
+#### Description
+
+Used together with `partner` if provided. Represented in basis points, 50bps=0.5%
+
 ### srcTokenDexTransferFee?
 
 > `optional` **srcTokenDexTransferFee**: `string`
@@ -108,4 +120,4 @@ If the source token is a tax token, you should specify the tax amount in BPS.
 
 ## Defined in
 
-[src/methods/swap/rates.ts:145](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L145)
+[src/methods/swap/rates.ts:146](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/rates.ts#L146)

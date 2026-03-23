@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructSubmitNFTOrder
 
-# Function: constructSubmitNFTOrder()
+# Function: ~~constructSubmitNFTOrder()~~
 
 > **constructSubmitNFTOrder**(`options`): [`SubmitNFTOrderFuncs`](../type-aliases/SubmitNFTOrderFuncs.md)
 
@@ -16,6 +16,10 @@
 
 [`SubmitNFTOrderFuncs`](../type-aliases/SubmitNFTOrderFuncs.md)
 
+## Deprecated
+
+NFT Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/nftOrders/index.ts:42](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/index.ts#L42)
+[src/methods/nftOrders/index.ts:44](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/index.ts#L44)

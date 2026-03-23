@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructAllLimitOrdersHandlers
 
-# Function: constructAllLimitOrdersHandlers()
+# Function: ~~constructAllLimitOrdersHandlers()~~
 
 > **constructAllLimitOrdersHandlers**\<`TxResponse`\>(`options`): [`LimitOrderHandlers`](../type-aliases/LimitOrderHandlers.md)\<`TxResponse`\>
 
@@ -24,6 +24,10 @@
 
 construct SDK with every LimitOrders-related method, fetching from API and contract calls
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/index.ts:121](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/index.ts#L121)
+[src/methods/limitOrders/index.ts:127](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/index.ts#L127)

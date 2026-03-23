@@ -6,8 +6,8 @@
 
 # Type Alias: DeltaAuctionStatus
 
-> **DeltaAuctionStatus**: `"NOT_STARTED"` \| `"AWAITING_PRE_SIGNATURE"` \| `"RUNNING"` \| `"EXECUTING"` \| `"EXECUTED"` \| `"FAILED"` \| `"EXPIRED"` \| `"CANCELLED"` \| `"SUSPENDED"`
+> **DeltaAuctionStatus**: `"NOT_STARTED"` \| `"AWAITING_PRE_SIGNATURE"` \| `"RUNNING"` \| `"EXECUTING"` \| `"EXECUTED"` \| `"FAILED"` \| `"EXPIRED"` \| `"CANCELLED"` \| `"CANCELLING"` \| `"SUSPENDED"` \| `"REFUNDED"`
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:55](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L55)
+[src/methods/delta/helpers/types.ts:125](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L125)

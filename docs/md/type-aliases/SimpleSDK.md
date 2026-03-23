@@ -14,13 +14,21 @@
 
 > **delta**: [`DeltaOrderHandlers`](DeltaOrderHandlers.md)\<[`TxHash`](TxHash.md)\>
 
-### limitOrders
+### ~~limitOrders~~
 
 > **limitOrders**: [`LimitOrderHandlers`](LimitOrderHandlers.md)\<[`TxHash`](TxHash.md)\>
 
-### nftOrders
+#### Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
+### ~~nftOrders~~
 
 > **nftOrders**: [`NFTOrderHandlers`](NFTOrderHandlers.md)\<[`TxHash`](TxHash.md)\>
+
+#### Deprecated
+
+NFT Orders are deprecated and will be removed in a future version.
 
 ### quote
 
@@ -32,4 +40,4 @@
 
 ## Defined in
 
-[src/sdk/simple.ts:179](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L179)
+[src/sdk/simple.ts:183](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/simple.ts#L183)

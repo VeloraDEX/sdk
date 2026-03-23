@@ -12,7 +12,7 @@
 
 • **axios**: [`AxiosRequirement`](../-internal-/type-aliases/AxiosRequirement.md)
 
-• **extra?**: [`ExtraFetchParams`](../-internal-/type-aliases/ExtraFetchParams.md)
+• **extra?**: [`ExtraFetchParams`](../type-aliases/ExtraFetchParams.md)
 
 ## Returns
 
@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/helpers/fetchers/axios.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/fetchers/axios.ts#L8)
+[src/helpers/fetchers/axios.ts:8](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/fetchers/axios.ts#L8)

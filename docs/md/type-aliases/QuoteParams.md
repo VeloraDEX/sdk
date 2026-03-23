@@ -38,6 +38,22 @@ Destination Token Decimals
 
 Destination Token Address
 
+### maxImpact?
+
+> `optional` **maxImpact**: `number`
+
+#### Description
+
+Maximum price impact (in percentage) acceptable for the trade
+
+### maxUSDImpact?
+
+> `optional` **maxUSDImpact**: `number`
+
+#### Description
+
+Maximum price impact (in USD) acceptable for the trade
+
 ### mode
 
 > **mode**: `M`
@@ -53,6 +69,14 @@ Preferred mode for the trade. In case of "all", Delta pricing is returned, with 
 #### Description
 
 Partner string
+
+### partnerFeeBps?
+
+> `optional` **partnerFeeBps**: `number`
+
+#### Description
+
+Used together with `partner` if provided. Represented in basis points, 50bps=0.5%
 
 ### side?
 
@@ -88,4 +112,4 @@ User's Wallet Address
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L15)
+[src/methods/quote/getQuote.ts:15](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L15)

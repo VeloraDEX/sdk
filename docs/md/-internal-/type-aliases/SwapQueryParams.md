@@ -20,6 +20,14 @@ Types for transaction parameters.
 
 srcToken amount (in case of SELL) or destToken amount (in case of BUY). The amount should be in **WEI/Raw units** (eg. 1WBTC -> 100000000).
 
+### chainId?
+
+> `optional` **chainId**: `number`
+
+#### Description
+
+Chain ID. (Mainnet - 1, Optimism - 10, BSC - 56, Polygon - 137, Base - 8453, Arbitrum - 42161, Avalanche - 43114, Gnosis - 100, Unichain - 130, Sonic - 146). Default: `1`.
+
 ### destDecimals?
 
 > `optional` **destDecimals**: `number`
@@ -123,14 +131,6 @@ Specify if user should receive surplus instead of partner. Default: `false`.
 #### Description
 
 In %. It's a way to bypass the API price impact check (default = 15%).
-
-### network?
-
-> `optional` **network**: `number`
-
-#### Description
-
-Network ID. (Mainnet - 1, Optimism - 10, BSC - 56, Polygon - 137, Fantom - 250, zkEVM - 1101, Base - 8453, Arbitrum - 42161, Avalanche - 43114). Default: `1`.
 
 ### partner?
 
@@ -246,4 +246,4 @@ To specify the protocol version. **Values:** 5 or 6.2 **Default**: 5.
 
 ## Defined in
 
-[src/methods/swap/swapTx.ts:17](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L17)
+[src/methods/swap/swapTx.ts:17](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/swapTx.ts#L17)

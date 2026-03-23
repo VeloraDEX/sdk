@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructCancelLimitOrder
 
-# Function: constructCancelLimitOrder()
+# Function: ~~constructCancelLimitOrder()~~
 
 > **constructCancelLimitOrder**\<`T`\>(`options`): [`CancelLimitOrderFunctions`](../type-aliases/CancelLimitOrderFunctions.md)\<`T`\>
 
@@ -20,6 +20,10 @@
 
 [`CancelLimitOrderFunctions`](../type-aliases/CancelLimitOrderFunctions.md)\<`T`\>
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/cancelOrder.ts:60](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/cancelOrder.ts#L60)
+[src/methods/limitOrders/cancelOrder.ts:62](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/cancelOrder.ts#L62)

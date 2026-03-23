@@ -32,4 +32,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/helpers/types.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/helpers/types.ts#L13)
+[src/methods/limitOrders/helpers/types.ts:13](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/helpers/types.ts#L13)

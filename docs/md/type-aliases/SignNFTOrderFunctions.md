@@ -4,13 +4,13 @@
 
 [@velora-dex/sdk](../globals.md) / SignNFTOrderFunctions
 
-# Type Alias: SignNFTOrderFunctions
+# Type Alias: ~~SignNFTOrderFunctions~~
 
 > **SignNFTOrderFunctions**: `object`
 
 ## Type declaration
 
-### signNFTOrder()
+### ~~signNFTOrder()~~
 
 > **signNFTOrder**: (`signableOrderData`) => `Promise`\<`string`\>
 
@@ -22,6 +22,10 @@
 
 `Promise`\<`string`\>
 
+## Deprecated
+
+NFT Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/nftOrders/signOrder.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/signOrder.ts#L5)
+[src/methods/nftOrders/signOrder.ts:6](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/signOrder.ts#L6)

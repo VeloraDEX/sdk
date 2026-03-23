@@ -28,4 +28,4 @@ Include only the specified bridges. Default is all bridges.
 
 ## Defined in
 
-[src/methods/delta/getBridgeInfo.ts:14](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L14)
+[src/methods/delta/getBridgeInfo.ts:14](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L14)

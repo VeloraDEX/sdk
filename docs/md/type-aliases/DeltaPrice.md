@@ -128,4 +128,4 @@ Available for BUY side
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:65](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L65)
+[src/methods/delta/getDeltaPrice.ts:62](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L62)

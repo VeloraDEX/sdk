@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructFillOrderDirectly
 
-# Function: constructFillOrderDirectly()
+# Function: ~~constructFillOrderDirectly()~~
 
 > **constructFillOrderDirectly**\<`T`\>(`options`): [`FillOrderDirectlyFunctions`](../type-aliases/FillOrderDirectlyFunctions.md)\<`T`\>
 
@@ -20,6 +20,10 @@
 
 [`FillOrderDirectlyFunctions`](../type-aliases/FillOrderDirectlyFunctions.md)\<`T`\>
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/fillOrderDirectly.ts:207](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/fillOrderDirectly.ts#L207)
+[src/methods/limitOrders/fillOrderDirectly.ts:209](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/fillOrderDirectly.ts#L209)

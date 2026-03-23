@@ -20,4 +20,4 @@ Build Orders to be posted to Delta API for execution
 
 ## Defined in
 
-[src/methods/delta/buildDeltaOrder.ts:82](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L82)
+[src/methods/delta/buildDeltaOrder.ts:73](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L73)

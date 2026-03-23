@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructBuildNFTOrder
 
-# Function: constructBuildNFTOrder()
+# Function: ~~constructBuildNFTOrder()~~
 
 > **constructBuildNFTOrder**(`options`): [`BuildNFTOrderFunctions`](../type-aliases/BuildNFTOrderFunctions.md)
 
@@ -16,6 +16,10 @@
 
 [`BuildNFTOrderFunctions`](../type-aliases/BuildNFTOrderFunctions.md)
 
+## Deprecated
+
+NFT Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/nftOrders/buildOrder.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/buildOrder.ts#L25)
+[src/methods/nftOrders/buildOrder.ts:28](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/buildOrder.ts#L28)

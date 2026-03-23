@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructCancelNFTOrder
 
-# Function: constructCancelNFTOrder()
+# Function: ~~constructCancelNFTOrder()~~
 
 > **constructCancelNFTOrder**\<`T`\>(`options`): [`CancelNFTOrderFunctions`](../type-aliases/CancelNFTOrderFunctions.md)\<`T`\>
 
@@ -20,6 +20,10 @@
 
 [`CancelNFTOrderFunctions`](../type-aliases/CancelNFTOrderFunctions.md)\<`T`\>
 
+## Deprecated
+
+NFT Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/nftOrders/cancelOrder.ts:14](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/cancelOrder.ts#L14)
+[src/methods/nftOrders/cancelOrder.ts:16](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/cancelOrder.ts#L16)

@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructGetNFTOrdersContract
 
-# Function: constructGetNFTOrdersContract()
+# Function: ~~constructGetNFTOrdersContract()~~
 
 > **constructGetNFTOrdersContract**(`options`): [`GetNFTOrdersContractFunctions`](../type-aliases/GetNFTOrdersContractFunctions.md)
 
@@ -16,6 +16,10 @@
 
 [`GetNFTOrdersContractFunctions`](../type-aliases/GetNFTOrdersContractFunctions.md)
 
+## Deprecated
+
+NFT Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/nftOrders/getOrdersContract.ts:10](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/getOrdersContract.ts#L10)
+[src/methods/nftOrders/getOrdersContract.ts:12](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/getOrdersContract.ts#L12)

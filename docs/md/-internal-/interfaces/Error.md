@@ -10,7 +10,7 @@
 
 - [`FetcherError`](../../classes/FetcherError.md)
 - [`ProviderRpcError`](ProviderRpcError.md)
-- [`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md)
+- [`Web3Error`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md)
 - [`AxiosError`](../classes/AxiosError.md)
 - [`EthersError`](EthersError.md)
 - [`BaseWeb3Error`](../classes/BaseWeb3Error.md)

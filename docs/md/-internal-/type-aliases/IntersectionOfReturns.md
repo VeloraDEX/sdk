@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[src/sdk/partial.ts:28](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L28)
+[src/sdk/partial.ts:30](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/partial.ts#L30)

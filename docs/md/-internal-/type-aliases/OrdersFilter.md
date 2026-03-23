@@ -4,9 +4,13 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / OrdersFilter
 
-# Type Alias: OrdersFilter
+# Type Alias: OrdersFilter\<T\>
 
-> **OrdersFilter**: `object`
+> **OrdersFilter**\<`T`\>: `object`
+
+## Type Parameters
+
+• **T** *extends* [`OnChainOrderType`](../../type-aliases/OnChainOrderType.md) = [`OnChainOrderType`](../../type-aliases/OnChainOrderType.md)
 
 ## Type declaration
 
@@ -26,6 +30,14 @@ Filter by chainId, without this filter, orders from all chains are returned
 
 Pagination option, limit. Default 100
 
+### onChainOrderType?
+
+> `optional` **onChainOrderType**: `T`
+
+#### Description
+
+Filter by on-chain order type. Order, ExternalOrder. Orders of all types are returned if not specified
+
 ### page?
 
 > `optional` **page**: `number`
@@ -44,7 +56,7 @@ Filter by any known DeltaAuctionStatus and some custom statuses:
 - **INSUFFICIENT_BALANCE** —  returned as SUSPENDED from API
 - **INSUFFICIENT_ALLOWANCE** —  returned as SUSPENDED from API
 - **INVALIDATED** —  returned as FAILED from API
-- **ACTIVE** —  All orders with NOT_STARTED, RUNNING, EXECUTING or SUSPENDED statuses.
+- **ACTIVE** —  All orders with NOT_STARTED, RUNNING, EXECUTING, CANCELLING or SUSPENDED statuses.
 - **INACTIVE** —  All orders with EXECUTED, FAILED, EXPIRED, CANCELLED or INVALIDATED statuses.
 
 ### type?
@@ -65,4 +77,4 @@ Order.owner to fetch Delta Order for
 
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L30)
+[src/methods/delta/getDeltaOrders.ts:35](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L35)

@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/buildCancelDeltaOrderData.ts:7](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildCancelDeltaOrderData.ts#L7)
+[src/methods/delta/helpers/buildCancelDeltaOrderData.ts:7](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/buildCancelDeltaOrderData.ts#L7)

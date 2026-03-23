@@ -4,13 +4,13 @@
 
 [@velora-dex/sdk](../globals.md) / BuildLimitOrderFunctions
 
-# Type Alias: BuildLimitOrderFunctions
+# Type Alias: ~~BuildLimitOrderFunctions~~
 
 > **BuildLimitOrderFunctions**: `object`
 
 ## Type declaration
 
-### buildLimitOrder
+### ~~buildLimitOrder~~
 
 > **buildLimitOrder**: [`BuildLimitOrder`](../-internal-/type-aliases/BuildLimitOrder.md)
 
@@ -18,6 +18,10 @@
 
 Build Orders that will be excuted through AugustusSwapper
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/buildOrder.ts:21](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/buildOrder.ts#L21)
+[src/methods/limitOrders/buildOrder.ts:23](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/buildOrder.ts#L23)

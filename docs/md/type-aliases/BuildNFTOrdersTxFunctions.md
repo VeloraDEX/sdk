@@ -4,24 +4,28 @@
 
 [@velora-dex/sdk](../globals.md) / BuildNFTOrdersTxFunctions
 
-# Type Alias: BuildNFTOrdersTxFunctions
+# Type Alias: ~~BuildNFTOrdersTxFunctions~~
 
 > **BuildNFTOrdersTxFunctions**: `object`
 
 ## Type declaration
 
-### buildNFTOrderTx
+### ~~buildNFTOrderTx~~
 
 > **buildNFTOrderTx**: [`BuildNFTOrdersTx`](../-internal-/type-aliases/BuildNFTOrdersTx.md)
 
-### buildSwapAndNFTOrderTx
+### ~~buildSwapAndNFTOrderTx~~
 
 > **buildSwapAndNFTOrderTx**: [`BuildSwapAndNFTOrdersTx`](../-internal-/type-aliases/BuildSwapAndNFTOrdersTx.md)
 
-### getNFTOrdersRate
+### ~~getNFTOrdersRate~~
 
 > **getNFTOrdersRate**: [`GetNFTOrdersRate`](../-internal-/type-aliases/GetNFTOrdersRate.md)
 
+## Deprecated
+
+NFT Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/nftOrders/transaction.ts:46](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/transaction.ts#L46)
+[src/methods/nftOrders/transaction.ts:47](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/transaction.ts#L47)

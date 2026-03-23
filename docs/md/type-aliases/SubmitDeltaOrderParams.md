@@ -10,6 +10,10 @@
 
 ## Type declaration
 
+### degenMode?
+
+> `optional` **degenMode**: `boolean`
+
 ### partiallyFillable?
 
 > `optional` **partiallyFillable**: `boolean`
@@ -28,4 +32,4 @@ Referrer address
 
 ## Defined in
 
-[src/methods/delta/index.ts:54](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L54)
+[src/methods/delta/index.ts:75](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/index.ts#L75)

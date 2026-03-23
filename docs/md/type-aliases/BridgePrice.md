@@ -12,7 +12,7 @@
 
 ### availableBridges
 
-> **availableBridges**: [`AvailableBridge`](../-internal-/type-aliases/AvailableBridge.md)[]
+> **availableBridges**: [`AvailableBridge`](AvailableBridge.md)[]
 
 ### bridge
 
@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:117](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L117)
+[src/methods/delta/getDeltaPrice.ts:119](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L119)

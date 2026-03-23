@@ -473,6 +473,8 @@ startStatusCheck(deltaAuction.id);
 
 For more Delta protocol usage, and **Crosschain Delta Orders**, refer to [DELTA.md](_media/DELTA.md)
 
+For **External Delta Orders** (orders that delegate token handling to an external handler contract, enabling complex DeFi strategies like Aave collateral/debt swaps), refer to [EXTERNAL_ORDERS.md](_media/EXTERNAL_ORDERS.md)
+
 ------------
 
 ### Market Swap handling

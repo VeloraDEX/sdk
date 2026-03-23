@@ -6,7 +6,7 @@
 
 # Type Alias: SubmitDeltaOrder()
 
-> **SubmitDeltaOrder**: (`orderParams`) => `Promise`\<[`DeltaOrderApiResponse`](../../type-aliases/DeltaOrderApiResponse.md)\>
+> **SubmitDeltaOrder**: (`orderParams`) => `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\<`"Order"`\>\>
 
 ## Parameters
 
@@ -14,8 +14,8 @@
 
 ## Returns
 
-`Promise`\<[`DeltaOrderApiResponse`](../../type-aliases/DeltaOrderApiResponse.md)\>
+`Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\<`"Order"`\>\>
 
 ## Defined in
 
-[src/methods/delta/index.ts:61](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L61)
+[src/methods/delta/index.ts:83](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/index.ts#L83)

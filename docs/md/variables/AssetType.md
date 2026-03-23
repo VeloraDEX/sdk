@@ -4,24 +4,28 @@
 
 [@velora-dex/sdk](../globals.md) / AssetType
 
-# Variable: AssetType
+# Variable: ~~AssetType~~
 
 > `const` **AssetType**: `object`
 
 ## Type declaration
 
-### ERC1155
+### ~~ERC1155~~
 
 > `readonly` **ERC1155**: `1` = `1`
 
-### ERC20
+### ~~ERC20~~
 
 > `readonly` **ERC20**: `0` = `0`
 
-### ERC721
+### ~~ERC721~~
 
 > `readonly` **ERC721**: `2` = `2`
 
+## Deprecated
+
+NFT Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/nftOrders/helpers/misc.ts:21](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/misc.ts#L21)
+[src/methods/nftOrders/helpers/misc.ts:22](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/helpers/misc.ts#L22)

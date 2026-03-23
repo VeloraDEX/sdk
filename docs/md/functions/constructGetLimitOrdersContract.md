@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructGetLimitOrdersContract
 
-# Function: constructGetLimitOrdersContract()
+# Function: ~~constructGetLimitOrdersContract()~~
 
 > **constructGetLimitOrdersContract**(`options`): [`GetLimitOrdersContractFunctions`](../type-aliases/GetLimitOrdersContractFunctions.md)
 
@@ -16,6 +16,10 @@
 
 [`GetLimitOrdersContractFunctions`](../type-aliases/GetLimitOrdersContractFunctions.md)
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/getOrdersContract.ts:9](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/getOrdersContract.ts#L9)
+[src/methods/limitOrders/getOrdersContract.ts:11](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/getOrdersContract.ts#L11)

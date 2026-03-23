@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructApproveTokenForLimitOrder
 
-# Function: constructApproveTokenForLimitOrder()
+# Function: ~~constructApproveTokenForLimitOrder()~~
 
 > **constructApproveTokenForLimitOrder**\<`T`\>(`options`): [`ApproveTokenForLimitOrderFunctions`](../type-aliases/ApproveTokenForLimitOrderFunctions.md)\<`T`\>
 
@@ -20,6 +20,10 @@
 
 [`ApproveTokenForLimitOrderFunctions`](../type-aliases/ApproveTokenForLimitOrderFunctions.md)\<`T`\>
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/approveForOrder.ts:17](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/approveForOrder.ts#L17)
+[src/methods/limitOrders/approveForOrder.ts:19](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/approveForOrder.ts#L19)

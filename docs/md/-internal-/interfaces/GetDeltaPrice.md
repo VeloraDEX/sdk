@@ -20,7 +20,7 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:134](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L134)
+[src/methods/delta/getDeltaPrice.ts:136](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L136)
 
 > **GetDeltaPrice**(`options`, `requestParams`?): `Promise`\<[`DeltaPrice`](../../type-aliases/DeltaPrice.md)\>
 
@@ -36,7 +36,7 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:138](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L138)
+[src/methods/delta/getDeltaPrice.ts:140](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L140)
 
 > **GetDeltaPrice**(`options`, `requestParams`?): `Promise`\<[`DeltaPrice`](../../type-aliases/DeltaPrice.md) \| [`BridgePrice`](../../type-aliases/BridgePrice.md)\>
 
@@ -52,4 +52,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:142](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L142)
+[src/methods/delta/getDeltaPrice.ts:144](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L144)

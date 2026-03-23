@@ -6,7 +6,7 @@
 
 # Type Alias: GetDeltaOrderByHash()
 
-> **GetDeltaOrderByHash**: (`orderHash`, `requestParams`?) => `Promise`\<[`DeltaOrderFromAPI`](../../type-aliases/DeltaOrderFromAPI.md)\>
+> **GetDeltaOrderByHash**: (`orderHash`, `requestParams`?) => `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\>
 
 ## Parameters
 
@@ -16,8 +16,8 @@
 
 ## Returns
 
-`Promise`\<[`DeltaOrderFromAPI`](../../type-aliases/DeltaOrderFromAPI.md)\>
+`Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\>
 
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L25)
+[src/methods/delta/getDeltaOrders.ts:30](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L30)

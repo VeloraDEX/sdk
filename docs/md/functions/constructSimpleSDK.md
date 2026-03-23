@@ -24,7 +24,7 @@ construct SDK with methods that fetch from API and optionally with blockchain pr
 
 ### Defined in
 
-[src/sdk/simple.ts:228](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L228)
+[src/sdk/simple.ts:239](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/simple.ts#L239)
 
 ## constructSimpleSDK(options, providerOptions)
 
@@ -42,4 +42,4 @@ construct SDK with methods that fetch from API and optionally with blockchain pr
 
 ### Defined in
 
-[src/sdk/simple.ts:230](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L230)
+[src/sdk/simple.ts:241](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/simple.ts#L241)

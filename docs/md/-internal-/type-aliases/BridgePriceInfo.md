@@ -10,6 +10,10 @@
 
 ## Type declaration
 
+### bestReturn
+
+> **bestReturn**: `boolean`
+
 ### destAmountAfterBridge
 
 > **destAmountAfterBridge**: `string`
@@ -22,6 +26,10 @@
 
 > **estimatedTimeMs**: `number`
 
+### fastest
+
+> **fastest**: `boolean`
+
 ### fees
 
 > **fees**: [`BridgeQuoteFee`](BridgeQuoteFee.md)[]
@@ -30,6 +38,10 @@
 
 > **protocolName**: `string`
 
+### recommended
+
+> **recommended**: `boolean`
+
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:148](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L148)
+[src/methods/delta/helpers/types.ts:229](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L229)

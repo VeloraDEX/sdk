@@ -4,21 +4,21 @@
 
 [@velora-dex/sdk](../globals.md) / GetLimitOrdersFunctions
 
-# Type Alias: GetLimitOrdersFunctions
+# Type Alias: ~~GetLimitOrdersFunctions~~
 
 > **GetLimitOrdersFunctions**: `object`
 
 ## Type declaration
 
-### getLimitOrderByHash
+### ~~getLimitOrderByHash~~
 
 > **getLimitOrderByHash**: [`GetLimitOrderByHash`](../-internal-/type-aliases/GetLimitOrderByHash.md)
 
-### getLimitOrders
+### ~~getLimitOrders~~
 
 > **getLimitOrders**: [`GetLimitOrders`](../-internal-/type-aliases/GetLimitOrders.md)
 
-### getRequiredBalance
+### ~~getRequiredBalance~~
 
 > **getRequiredBalance**: [`GetRequiredBalance`](../-internal-/type-aliases/GetRequiredBalance.md)
 
@@ -45,6 +45,10 @@ requestParams passed to fetcher, can include {signal: AbortSignal, timeout: for 
 
 `{Lowercase<Address> => wei number as string}` mapping of token to fillableBalance
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/getOrders.ts:55](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/getOrders.ts#L55)
+[src/methods/limitOrders/getOrders.ts:56](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/getOrders.ts#L56)

@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:72](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L72)
+[src/methods/delta/getDeltaOrders.ts:84](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L84)

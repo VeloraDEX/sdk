@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:54](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L54)
+[src/methods/quote/getQuote.ts:60](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L60)

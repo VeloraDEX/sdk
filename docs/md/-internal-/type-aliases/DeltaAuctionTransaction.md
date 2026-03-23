@@ -108,4 +108,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:66](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L66)
+[src/methods/delta/helpers/types.ts:138](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L138)

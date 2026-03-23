@@ -6,8 +6,8 @@
 
 # Type Alias: FetcherOptions
 
-> **FetcherOptions**: `object` \| `object` \| `object` & [`ExtraFetchParams`](ExtraFetchParams.md)
+> **FetcherOptions**: `object` \| `object` \| `object` & [`ExtraFetchParams`](../../type-aliases/ExtraFetchParams.md)
 
 ## Defined in
 
-[src/sdk/simple.ts:187](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L187)
+[src/sdk/simple.ts:193](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/simple.ts#L193)

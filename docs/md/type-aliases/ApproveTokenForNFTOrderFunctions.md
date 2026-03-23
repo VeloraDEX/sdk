@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / ApproveTokenForNFTOrderFunctions
 
-# Type Alias: ApproveTokenForNFTOrderFunctions\<T\>
+# Type Alias: ~~ApproveTokenForNFTOrderFunctions\<T\>~~
 
 > **ApproveTokenForNFTOrderFunctions**\<`T`\>: `object`
 
@@ -14,7 +14,7 @@
 
 ## Type declaration
 
-### approveERC20ForNFTOrder
+### ~~approveERC20ForNFTOrder~~
 
 > **approveERC20ForNFTOrder**: [`ApproveToken`](../-internal-/type-aliases/ApproveToken.md)\<`T`\>
 
@@ -22,7 +22,7 @@
 
 approving AugustusSwapper as spender for takerAsset (ERC20) for Limit Orders that will be executed through it
 
-### approveNFTForNFTOrder
+### ~~approveNFTForNFTOrder~~
 
 > **approveNFTForNFTOrder**: [`ApproveNFT`](../-internal-/type-aliases/ApproveNFT.md)\<`T`\>
 
@@ -30,6 +30,10 @@ approving AugustusSwapper as spender for takerAsset (ERC20) for Limit Orders tha
 
 approving AugustusRFQ as spender for makerAsset (NFT)
 
+## Deprecated
+
+NFT Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/nftOrders/approveForOrder.ts:18](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/approveForOrder.ts#L18)
+[src/methods/nftOrders/approveForOrder.ts:19](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/approveForOrder.ts#L19)

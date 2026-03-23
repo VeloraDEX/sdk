@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructBuildLimitOrder
 
-# Function: constructBuildLimitOrder()
+# Function: ~~constructBuildLimitOrder()~~
 
 > **constructBuildLimitOrder**(`options`): [`BuildLimitOrderFunctions`](../type-aliases/BuildLimitOrderFunctions.md)
 
@@ -16,6 +16,10 @@
 
 [`BuildLimitOrderFunctions`](../type-aliases/BuildLimitOrderFunctions.md)
 
+## Deprecated
+
+Limit Orders are deprecated and will be removed in a future version.
+
 ## Defined in
 
-[src/methods/limitOrders/buildOrder.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/buildOrder.ts#L26)
+[src/methods/limitOrders/buildOrder.ts:29](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/buildOrder.ts#L29)
