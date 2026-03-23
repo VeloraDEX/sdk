@@ -77,6 +77,7 @@ export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
   partiallyFillable?: boolean;
   /** @description Referrer address */
   referrerAddress?: string;
+  degenMode?: boolean;
 } & Pick<DeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
 
 type SubmitDeltaOrder = (
@@ -108,6 +109,7 @@ export const constructSubmitDeltaOrder = (
       type: orderParams.type,
       includeAgents: orderParams.includeAgents,
       excludeAgents: orderParams.excludeAgents,
+      degenMode: orderParams.degenMode,
     });
 
     return response;

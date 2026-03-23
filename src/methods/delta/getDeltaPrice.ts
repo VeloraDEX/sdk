@@ -34,6 +34,9 @@ export type DeltaPriceParams = {
   destChainId?: number;
   /** @description SELL or BUY, default is SELL */
   side?: SwapSideUnion;
+  /** @description In %. It's a way to bypass the API price impact check (default = 15%) */
+  maxImpact?: number;
+  maxUSDImpact?: number;
 
   includeAgents?: string[];
   excludeAgents?: string[];
@@ -42,6 +45,7 @@ export type DeltaPriceParams = {
 
   /** @description Allow swap on destChain after bridge. Default is true. */
   allowBridgeAndSwap?: boolean;
+  degenMode?: boolean;
 };
 
 type DeltaPriceQueryOptions = Omit<
@@ -89,6 +93,10 @@ export type DeltaPrice = {
 
 type AvailableBridgePrice = Pick<
   DeltaPrice,
+  | 'srcAmount'
+  | 'srcAmountBeforeFee' // Available for BUY side
+  | 'srcUSD'
+  | 'srcUSDBeforeFee' // Available for BUY side
   | 'destToken'
   | 'destAmount'
   | 'destAmountBeforeFee' // Available for SELL side
@@ -195,7 +203,7 @@ export const constructGetDeltaPrice = ({
       excludeBridges: excludeBridgesString,
     });
 
-    const fetchURL = `${pricesUrl}/${search}` as const;
+    const fetchURL = `${pricesUrl}${search}` as const;
 
     const data = await fetcher<DeltaPriceResponse>({
       url: fetchURL,
