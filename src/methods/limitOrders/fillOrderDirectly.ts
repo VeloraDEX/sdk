@@ -12,6 +12,7 @@ import {
   encodeEIP_2612PermitFunctionInput,
 } from '../common/orders/encoding';
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type FillOrderDirectlyFunctions<T> = {
   fillOrderDirectly: FillOrderDirectly<T>;
 };
@@ -204,6 +205,7 @@ type FillOrderMethods = ExtractAbiMethodNames<typeof MinAugustusRFQAbi>;
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export function constructFillOrderDirectly<T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
 ): FillOrderDirectlyFunctions<T> {

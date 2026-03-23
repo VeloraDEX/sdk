@@ -52,6 +52,7 @@ type GetRequiredBalance = (
   requestParams?: RequestParameters
 ) => Promise<Record<string, string>>;
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type GetLimitOrdersFunctions = {
   getLimitOrders: GetLimitOrders;
   getLimitOrderByHash: GetLimitOrderByHash;
@@ -67,6 +68,7 @@ export type GetLimitOrdersFunctions = {
   getRequiredBalance: GetRequiredBalance;
 };
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export const constructGetLimitOrders = ({
   apiURL = API_URL,
   chainId,

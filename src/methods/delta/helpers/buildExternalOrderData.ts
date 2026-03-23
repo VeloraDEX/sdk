@@ -1,13 +1,12 @@
 import { MarkOptional } from 'ts-essentials';
 import { Domain } from '../../common/orders/buildOrderData';
-import { Bridge, DeltaAuctionOrder } from './types';
+import { ExternalDeltaOrder } from './types';
 import { DELTA_DEFAULT_EXPIRY, producePartnerAndFee } from './misc';
 
-// Order(address owner,address beneficiary,address srcToken,address destToken,uint256 srcAmount,uint256 destAmount,uint256 deadline,uint256 nonce,bytes permit, bridge Bridge)";
-const SWAP_ORDER_EIP_712_TYPES = {
-  Order: [
+const EXTERNAL_ORDER_EIP_712_TYPES = {
+  ExternalOrder: [
     { name: 'owner', type: 'address' },
-    { name: 'beneficiary', type: 'address' },
+    { name: 'handler', type: 'address' },
     { name: 'srcToken', type: 'address' },
     { name: 'destToken', type: 'address' },
     { name: 'srcAmount', type: 'uint256' },
@@ -19,56 +18,32 @@ const SWAP_ORDER_EIP_712_TYPES = {
     { name: 'partnerAndFee', type: 'uint256' },
     { name: 'permit', type: 'bytes' },
     { name: 'metadata', type: 'bytes' },
-    { name: 'bridge', type: 'Bridge' },
-  ],
-  Bridge: [
-    {
-      name: 'protocolSelector',
-      type: 'bytes4',
-    },
-    {
-      name: 'destinationChainId',
-      type: 'uint256',
-    },
-    {
-      name: 'outputToken',
-      type: 'address',
-    },
-    {
-      name: 'scalingFactor',
-      type: 'int8',
-    },
-    {
-      name: 'protocolData',
-      type: 'bytes',
-    },
+    { name: 'data', type: 'bytes' },
   ],
 };
 
-export type SignableDeltaOrderData = {
+export type SignableExternalOrderData = {
   types: {
-    Order: typeof SWAP_ORDER_EIP_712_TYPES.Order;
-    Bridge: typeof SWAP_ORDER_EIP_712_TYPES.Bridge;
+    ExternalOrder: typeof EXTERNAL_ORDER_EIP_712_TYPES.ExternalOrder;
   };
   domain: Domain;
-  data: DeltaAuctionOrder;
+  data: ExternalDeltaOrder;
 };
 
-type SignDeltaOrderInput = {
-  orderInput: DeltaAuctionOrder;
+type SignExternalOrderInput = {
+  orderInput: ExternalDeltaOrder;
   paraswapDeltaAddress: string;
   chainId: number;
 };
 
-export function produceDeltaOrderTypedData({
+export function produceExternalOrderTypedData({
   orderInput,
   chainId,
   paraswapDeltaAddress,
-}: SignDeltaOrderInput): SignableDeltaOrderData {
+}: SignExternalOrderInput): SignableExternalOrderData {
   return {
     types: {
-      Order: SWAP_ORDER_EIP_712_TYPES.Order,
-      Bridge: SWAP_ORDER_EIP_712_TYPES.Bridge,
+      ExternalOrder: EXTERNAL_ORDER_EIP_712_TYPES.ExternalOrder,
     },
     domain: {
       name: 'Portikus',
@@ -80,13 +55,13 @@ export function produceDeltaOrderTypedData({
   };
 }
 
-export type DeltaOrderDataInput = MarkOptional<
-  Omit<DeltaAuctionOrder, 'partnerAndFee'>,
-  'beneficiary' | 'deadline' | 'nonce' | 'permit'
+export type ExternalOrderDataInput = MarkOptional<
+  Omit<ExternalDeltaOrder, 'partnerAndFee'>,
+  'deadline' | 'nonce' | 'permit'
 >;
 
-export type BuildDeltaOrderDataInput = MarkOptional<
-  DeltaOrderDataInput,
+export type BuildExternalOrderDataInput = MarkOptional<
+  ExternalOrderDataInput,
   'metadata'
 > & {
   partnerAddress: string;
@@ -95,12 +70,11 @@ export type BuildDeltaOrderDataInput = MarkOptional<
   partnerTakesSurplus?: boolean;
   capSurplus?: boolean;
   chainId: number;
-  bridge: Bridge;
 };
 
-export function buildDeltaSignableOrderData({
+export function buildExternalOrderSignableData({
   owner,
-  beneficiary = owner,
+  handler,
 
   srcToken,
   destToken,
@@ -109,12 +83,13 @@ export function buildDeltaSignableOrderData({
   expectedAmount,
 
   deadline = Math.floor(Date.now() / 1000 + DELTA_DEFAULT_EXPIRY),
-  nonce = Date.now().toString(10), // random enough to not cause collisions
+  nonce = Date.now().toString(10),
 
   permit = '0x',
 
   kind,
   metadata = '0x',
+  data,
 
   partnerAddress,
   partnerFeeBps,
@@ -123,11 +98,10 @@ export function buildDeltaSignableOrderData({
 
   chainId,
   paraswapDeltaAddress,
-  bridge,
-}: BuildDeltaOrderDataInput): SignableDeltaOrderData {
-  const orderInput: DeltaAuctionOrder = {
+}: BuildExternalOrderDataInput): SignableExternalOrderData {
+  const orderInput: ExternalDeltaOrder = {
     owner,
-    beneficiary,
+    handler,
     srcToken,
     destToken,
     srcAmount,
@@ -142,12 +116,12 @@ export function buildDeltaSignableOrderData({
       partnerTakesSurplus,
       capSurplus,
     }),
-    bridge,
     kind,
     metadata,
+    data,
   };
 
-  return produceDeltaOrderTypedData({
+  return produceExternalOrderTypedData({
     orderInput,
     chainId,
     paraswapDeltaAddress,

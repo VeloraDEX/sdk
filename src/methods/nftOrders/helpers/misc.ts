@@ -18,6 +18,7 @@ import {
 //   ERC721 = 2,
 // }
 
+/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const AssetType = {
   ERC20: 0,
   ERC1155: 1,

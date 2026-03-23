@@ -44,6 +44,7 @@ type BuildLimitOrdersTx = (
   requestParams?: RequestParameters
 ) => Promise<TransactionParams>;
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type BuildLimitOrdersTxFunctions = {
   getLimitOrdersRate: GetLimitOrdersRate;
   buildLimitOrderTx: BuildLimitOrdersTx;
@@ -57,6 +58,7 @@ type GetLimitOrdersRate = (
   requestParams?: RequestParameters
 ) => Promise<OptimalRate>;
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export const constructBuildLimitOrderTx = ({
   apiURL = API_URL,
   version = DEFAULT_VERSION,

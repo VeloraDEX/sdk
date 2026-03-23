@@ -14,10 +14,13 @@ const fetcher = constructAxiosFetcher(axios);
 const provider = ethers.getDefaultProvider(1);
 const signer = Wallet.createRandom().connect(provider);
 const account = signer.address;
-const contractCaller = constructEthersContractCaller({
-  ethersProviderOrSigner: provider,
-  EthersContract: ethers.Contract,
-});
+const contractCaller = constructEthersContractCaller(
+  {
+    ethersProviderOrSigner: provider,
+    EthersContract: ethers.Contract,
+  },
+  account
+);
 
 // type AdaptersFunctions & ApproveTokenFunctions<ethers.ContractTransaction>
 const deltaSDK = constructPartialSDK(
@@ -51,14 +54,6 @@ async function simpleDeltaFlow() {
   const tx = await deltaSDK.approveTokenForDelta(amount, DAI_TOKEN);
   await tx.wait();
 
-  const slippagePercent = 0.5;
-  const destAmountAfterSlippage = BigInt(
-    // get rid of exponential notation
-
-    +(+deltaPrice.destAmount * (1 - slippagePercent / 100)).toFixed(0)
-    // get rid of decimals
-  ).toString(10);
-
   const deltaAuction = await deltaSDK.submitDeltaOrder({
     deltaPrice,
     owner: account,
@@ -67,7 +62,7 @@ async function simpleDeltaFlow() {
     srcToken: DAI_TOKEN,
     destToken: USDC_TOKEN,
     srcAmount: amount,
-    destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
+    slippage: 50, // 50 bps = 0.5% slippage, destAmount auto-computed from deltaPrice
   });
 
   // poll if necessary
@@ -92,12 +87,6 @@ async function manualDeltaFlow() {
   const tx = await deltaSDK.approveTokenForDelta(amount, DAI_TOKEN);
   await tx.wait();
 
-  const slippagePercent = 0.5;
-  const destAmountAfterSlippage = (
-    +deltaPrice.destAmount *
-    (1 - slippagePercent / 100)
-  ).toString(10);
-
   const signableOrderData = await deltaSDK.buildDeltaOrder({
     deltaPrice,
     owner: account,
@@ -106,7 +95,7 @@ async function manualDeltaFlow() {
     srcToken: DAI_TOKEN,
     destToken: USDC_TOKEN,
     srcAmount: amount,
-    destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
+    slippage: 50, // 50 bps = 0.5% slippage, destAmount auto-computed from deltaPrice
   });
 
   const signature = await deltaSDK.signDeltaOrder(signableOrderData);

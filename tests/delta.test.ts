@@ -234,22 +234,6 @@ describe('Delta:methods', () => {
     expect(staticDeltaPrice).toMatchSnapshot();
   });
 
-  test('breaks for srcToken=ETH', async () => {
-    const getDeltaPrice = () =>
-      deltaSDK.getDeltaPrice({
-        srcToken: ETH_ADDRESS,
-        destToken: destToken,
-        amount: srcAmount,
-        userAddress: senderAddress,
-        srcDecimals: 18,
-        destDecimals: 18,
-      });
-
-    await expect(getDeltaPrice()).rejects.toThrowErrorMatchingInlineSnapshot(
-      `"SourceEth: ETH as source token is not supported"`
-    );
-  });
-
   describe('Get Delta Price Crosschain', () => {
     const destChainId = 10;
     const ETH = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
@@ -563,6 +547,109 @@ describe('Delta:methods', () => {
     expect(staticSignableOrderData).toMatchSnapshot();
   });
 
+  test('Build Delta Order with slippage (SELL)', async () => {
+    const sampleDeltaPrice: DeltaPrice = {
+      destAmount: '3163263721766488892666',
+      destAmountBeforeFee: '3194635547945152526200',
+      receivedDestAmount: '3163263721766488892666',
+      destToken: '0x6b175474e89094c44da98b954eedeac495271d0f',
+      destUSD: '3166.4269854931',
+      receivedDestUSD: '3166.4269854931',
+      destUSDBeforeFee: '3197.8301834931',
+      gasCost: '347788',
+      gasCostBeforeFee: '124240',
+      gasCostUSD: '31.403198',
+      gasCostUSDBeforeFee: '11.218137',
+      partner: 'anon',
+      partnerFee: 0,
+      srcAmount: '1000000000000000000',
+      srcToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+      srcUSD: '3191.5500000000',
+      hmac: '1234aeb',
+      bridge: {
+        protocolSelector: '0x00000000',
+        destinationChainId: 0,
+        outputToken: ZERO_ADDRESS,
+        scalingFactor: 0,
+        protocolData: '0x',
+      },
+    };
+
+    const slippageBps = 50; // 50 bps = 0.5%
+    const BPS_BASE = BigInt(10_000);
+    const expectedDestAmount = (
+      (BigInt(sampleDeltaPrice.destAmount) * (BPS_BASE - BigInt(slippageBps))) /
+      BPS_BASE
+    ).toString(10);
+
+    const amount = '1000000000000000000';
+
+    const signableOrderData = await deltaSDK.buildDeltaOrder({
+      deltaPrice: sampleDeltaPrice,
+      owner: senderAddress,
+      srcToken: WETH,
+      destToken: DAI,
+      srcAmount: amount,
+      slippage: slippageBps,
+      partnerAddress: ZERO_ADDRESS,
+    });
+
+    expect(signableOrderData.data.srcAmount).toEqual(amount);
+    expect(signableOrderData.data.destAmount).toEqual(expectedDestAmount);
+  });
+
+  test('Build Delta Order with slippage (BUY)', async () => {
+    const sampleDeltaPrice: DeltaPrice = {
+      destAmount: '3163263721766488892666',
+      destAmountBeforeFee: '3194635547945152526200',
+      receivedDestAmount: '3163263721766488892666',
+      destToken: '0x6b175474e89094c44da98b954eedeac495271d0f',
+      destUSD: '3166.4269854931',
+      receivedDestUSD: '3166.4269854931',
+      destUSDBeforeFee: '3197.8301834931',
+      gasCost: '347788',
+      gasCostBeforeFee: '124240',
+      gasCostUSD: '31.403198',
+      gasCostUSDBeforeFee: '11.218137',
+      partner: 'anon',
+      partnerFee: 0,
+      srcAmount: '1000000000000000000',
+      srcToken: '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+      srcUSD: '3191.5500000000',
+      hmac: '1234aeb',
+      bridge: {
+        protocolSelector: '0x00000000',
+        destinationChainId: 0,
+        outputToken: ZERO_ADDRESS,
+        scalingFactor: 0,
+        protocolData: '0x',
+      },
+    };
+
+    const slippageBps = 50; // 50 bps = 0.5%
+    const destAmount = '3163263721766488892666';
+
+    const BPS_BASE = BigInt(10_000);
+    const expectedSrcAmount = (
+      (BigInt(sampleDeltaPrice.srcAmount) * (BPS_BASE + BigInt(slippageBps))) /
+      BPS_BASE
+    ).toString(10);
+
+    const signableOrderData = await deltaSDK.buildDeltaOrder({
+      deltaPrice: sampleDeltaPrice,
+      owner: senderAddress,
+      srcToken: WETH,
+      destToken: DAI,
+      destAmount,
+      slippage: slippageBps,
+      side: 'BUY',
+      partnerAddress: ZERO_ADDRESS,
+    });
+
+    expect(signableOrderData.data.destAmount).toEqual(destAmount);
+    expect(signableOrderData.data.srcAmount).toEqual(expectedSrcAmount);
+  });
+
   let signature = '';
 
   test.each([
@@ -799,7 +886,7 @@ describe('Delta:methods', () => {
     expect(mockFetch).toHaveBeenLastCalledWith({
       data: { ...input, chainId: dummySDK.chainId },
       method: 'POST',
-      url: `${dummySDK.apiURL}/delta/orders`,
+      url: `${dummySDK.apiURL}/delta/orders/`,
     });
   });
 

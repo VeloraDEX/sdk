@@ -144,17 +144,18 @@ import type {
   BridgeMetadata,
   BridgeStatus,
   Bridge,
+  ExternalDeltaOrder,
+  OnChainOrderType,
+  SwapSideUnion,
 } from './methods/delta/helpers/types';
 import {
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
   constructBuildDeltaOrder,
   SignableDeltaOrderData,
-  SwapSideUnion,
 } from './methods/delta/buildDeltaOrder';
 import {
   constructPostDeltaOrder,
-  DeltaOrderApiResponse,
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
 } from './methods/delta/postDeltaOrder';
@@ -204,6 +205,26 @@ import {
 } from './methods/delta/isTokenSupportedInDelta';
 
 import {
+  constructBuildExternalDeltaOrder,
+  BuildExternalDeltaOrderFunctions,
+  BuildExternalDeltaOrderParams,
+} from './methods/delta/buildExternalDeltaOrder';
+import type { SignableExternalOrderData } from './methods/delta/helpers/buildExternalOrderData';
+import {
+  constructSignExternalDeltaOrder,
+  SignExternalDeltaOrderFunctions,
+} from './methods/delta/signExternalDeltaOrder';
+import {
+  constructPostExternalDeltaOrder,
+  PostExternalDeltaOrderFunctions,
+  PostExternalDeltaOrderParams,
+} from './methods/delta/postExternalDeltaOrder';
+import {
+  constructPreSignExternalDeltaOrder,
+  PreSignExternalDeltaOrderFunctions,
+} from './methods/delta/preSignExternalDeltaOrder';
+
+import {
   constructGetQuote,
   GetQuoteFunctions,
   QuoteParams,
@@ -235,8 +256,10 @@ export {
 export {
   constructAllDeltaOrdersHandlers,
   constructSubmitDeltaOrder,
+  constructSubmitExternalDeltaOrder,
   DeltaOrderHandlers,
   SubmitDeltaOrderParams,
+  SubmitExternalDeltaOrderParams,
 } from './methods/delta';
 
 export type {
@@ -309,6 +332,11 @@ export {
   constructCancelDeltaOrder,
   constructDeltaTokenModule,
   constructApproveTokenForDelta,
+  // External Delta methods
+  constructBuildExternalDeltaOrder,
+  constructSignExternalDeltaOrder,
+  constructPostExternalDeltaOrder,
+  constructPreSignExternalDeltaOrder,
   // Quote methods
   constructGetQuote,
   // different helpers
@@ -382,7 +410,6 @@ export type {
   DeltaAuction,
   DeltaAuctionStatus,
   DeltaOrderFilterByStatus,
-  DeltaOrderApiResponse,
   DeltaOrderFromAPI,
   // bridge part of DeltaOrder
   BridgeMetadata,
@@ -407,6 +434,16 @@ export type {
   CancelAndWithdrawDeltaOrderParams,
   DepositNativeAndPreSignParams,
   DepositNativeAndPreSignDeltaOrderParams,
+  // External Delta types
+  ExternalDeltaOrder,
+  OnChainOrderType,
+  SignableExternalOrderData,
+  BuildExternalDeltaOrderParams,
+  BuildExternalDeltaOrderFunctions,
+  SignExternalDeltaOrderFunctions,
+  PostExternalDeltaOrderFunctions,
+  PostExternalDeltaOrderParams,
+  PreSignExternalDeltaOrderFunctions,
   // types for Quote methods
   GetQuoteFunctions,
   QuoteParams,

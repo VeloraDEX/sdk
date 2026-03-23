@@ -18,6 +18,7 @@ export type CancelOrderBulk<T> = (
   requestParams?: RequestParameters
 ) => Promise<T>;
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type CancelLimitOrderFunctions<T> = {
   cancelLimitOrder: CancelOrder<T>;
   cancelLimitOrderBulk: CancelOrderBulk<T>;
@@ -57,6 +58,7 @@ type AvailableMethods = ExtractAbiMethodNames<typeof MinAugustusRFQAbi>;
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export const constructCancelLimitOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
 ): CancelLimitOrderFunctions<T> => {

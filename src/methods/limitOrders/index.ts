@@ -45,11 +45,13 @@ type SubmitP2POrder = (
   requestParams?: RequestParameters
 ) => Promise<LimitOrderFromApi>;
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type SubmitLimitOrderFuncs = {
   submitLimitOrder: SubmitLimitOrder;
   submitP2POrder: SubmitP2POrder;
 };
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export const constructSubmitLimitOrder = (
   options: ConstructProviderFetchInput<any, 'signTypedDataCall'>
 ): SubmitLimitOrderFuncs => {
@@ -106,6 +108,7 @@ export const constructSubmitLimitOrder = (
   return { submitLimitOrder, submitP2POrder };
 };
 
+/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
 export type LimitOrderHandlers<T> = SubmitLimitOrderFuncs &
   BuildLimitOrderFunctions &
   SignLimitOrderFunctions &
@@ -117,7 +120,10 @@ export type LimitOrderHandlers<T> = SubmitLimitOrderFuncs &
   ApproveTokenForLimitOrderFunctions<T> &
   FillOrderDirectlyFunctions<T>;
 
-/** @description construct SDK with every LimitOrders-related method, fetching from API and contract calls */
+/**
+ * @description construct SDK with every LimitOrders-related method, fetching from API and contract calls
+ * @deprecated Limit Orders are deprecated and will be removed in a future version.
+ */
 export const constructAllLimitOrdersHandlers = <TxResponse>(
   options: ConstructProviderFetchInput<
     TxResponse,
