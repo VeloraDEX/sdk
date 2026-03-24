@@ -122,6 +122,37 @@ export type ExternalDeltaOrder = {
   data: string;
 };
 
+export type TWAPDeltaOrder = {
+  /** @description The address of the order owner */
+  owner: string;
+  /** @description The address of the order beneficiary */
+  beneficiary: string; // beneficiary==owner if no transferTo
+  /** @description The address of the src token */
+  srcToken: string; // lowercase
+  /** @description The address of the dest token */
+  destToken: string; // lowercase
+  /** @description The nonce of the order */
+  nonce: string; // can be random, can even be Date.now()
+  /** @description Encoded partner address, fee bps, and flags for the order. partnerAndFee = (partner << 96) | (partnerTakesSurplus << 8) | fee in bps (max fee is 2%) */
+  partnerAndFee: string;
+  /** @description The deadline for the order */
+  deadline: number; // seconds
+  /** @description The interval between each slice execution */
+  interval: number; // seconds
+  /** @description The number of slices to execute */
+  numSlices: number;
+  /** @description The amount of dest token to receive per slice */
+  destAmountPerSlice: string; // wei
+  /** @description The total amount of src token to swap */
+  totalSrcAmount: string; // wei
+  /** @description Optional permit signature for the src token */
+  permit: string; //can be "0x"
+  /** @description Metadata for the order, hex string */
+  metadata: string;
+  /** @description The bridge input */
+  bridge: Bridge;
+};
+
 export type DeltaAuctionStatus =
   | 'NOT_STARTED'
   | 'AWAITING_PRE_SIGNATURE'
@@ -135,7 +166,7 @@ export type DeltaAuctionStatus =
   | 'SUSPENDED'
   | 'REFUNDED';
 
-type DeltaAuctionTransaction = {
+export type DeltaAuctionTransaction = {
   id: string;
   hash: string;
   orderId: string;
@@ -165,6 +196,7 @@ type DeltaAuctionTransaction = {
 export type OnChainOrderMap = {
   Order: DeltaAuctionOrder;
   ExternalOrder: ExternalDeltaOrder;
+  TWAPOrder: TWAPDeltaOrder;
 };
 
 type DeltaAuctionBase = {
@@ -215,7 +247,7 @@ export type BridgeMetadata = {
 //                                                             refunded is basically failed
 export type BridgeStatus = 'pending' | 'filled' | 'expired' | 'refunded';
 
-export type OnChainOrderType = 'Order' | 'ExternalOrder';
+export type OnChainOrderType = 'Order' | 'ExternalOrder' | 'TWAPOrder';
 
 //// available on BridgePrice ////
 
