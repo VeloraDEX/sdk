@@ -250,6 +250,10 @@ import {
   DepositNativeAndPreSignParams,
   DepositNativeAndPreSignDeltaOrderParams,
 } from './methods/delta/deltaTokenModule';
+import {
+  CancelDeltaOrderData,
+  SignableCancelDeltaOrderData,
+} from './methods/delta/helpers/buildCancelDeltaOrderData';
 
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
 
@@ -418,6 +422,8 @@ export type {
   DeltaAuctionTransaction,
   DeltaOrderFilterByStatus,
   DeltaOrderFromAPI,
+  CancelDeltaOrderData,
+  SignableCancelDeltaOrderData,
   // bridge part of DeltaOrder
   BridgeMetadata,
   BridgeStatus,
