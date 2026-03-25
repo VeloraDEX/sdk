@@ -1,15 +1,19 @@
+import { Prettify } from 'ts-essentials';
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
 import type { DeltaAuction, TWAPOnChainOrderType } from './helpers/types';
 import type { DeltaOrderToPost } from './postDeltaOrder';
 
-export type PostTWAPDeltaOrderParams = Omit<
-  DeltaOrderToPost<'TWAPOrder'> | DeltaOrderToPost<'TWAPBuyOrder'>,
-  'chainId'
-> & {
-  /** @description Must be "TWAPOrder" or "TWAPBuyOrder" */
-  onChainOrderType: TWAPOnChainOrderType;
-};
+export type PostTWAPDeltaOrderParams = Prettify<
+  Omit<
+    DeltaOrderToPost<'TWAPOrder'> | DeltaOrderToPost<'TWAPBuyOrder'>,
+    'chainId'
+  > & {
+    /** @description Must be "TWAPOrder" or "TWAPBuyOrder" */
+    onChainOrderType: TWAPOnChainOrderType;
+    degenMode?: boolean;
+  }
+>;
 
 type PostTWAPDeltaOrder = (
   postData: PostTWAPDeltaOrderParams,
