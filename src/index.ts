@@ -147,6 +147,8 @@ import type {
   Bridge,
   ExternalDeltaOrder,
   TWAPDeltaOrder,
+  TWAPBuyDeltaOrder,
+  TWAPOnChainOrderType,
   OnChainOrderType,
   SwapSideUnion,
   AmountsWithSlippage,
@@ -231,6 +233,26 @@ import {
 } from './methods/delta/preSignExternalDeltaOrder';
 
 import {
+  BuildTWAPDeltaOrderParams,
+  BuildTWAPDeltaOrderFunctions,
+  constructBuildTWAPDeltaOrder,
+} from './methods/delta/buildTWAPDeltaOrder';
+import type { SignableTWAPOrderData } from './methods/delta/helpers/buildTWAPOrderData';
+import {
+  constructSignTWAPDeltaOrder,
+  SignTWAPDeltaOrderFunctions,
+} from './methods/delta/signTWAPDeltaOrder';
+import {
+  constructPostTWAPDeltaOrder,
+  PostTWAPDeltaOrderFunctions,
+  PostTWAPDeltaOrderParams,
+} from './methods/delta/postTWAPDeltaOrder';
+import {
+  constructPreSignTWAPDeltaOrder,
+  PreSignTWAPDeltaOrderFunctions,
+} from './methods/delta/preSignTWAPDeltaOrder';
+
+import {
   constructGetQuote,
   GetQuoteFunctions,
   QuoteParams,
@@ -267,9 +289,11 @@ export {
   constructAllDeltaOrdersHandlers,
   constructSubmitDeltaOrder,
   constructSubmitExternalDeltaOrder,
+  constructSubmitTWAPDeltaOrder,
   DeltaOrderHandlers,
   SubmitDeltaOrderParams,
   SubmitExternalDeltaOrderParams,
+  SubmitTWAPDeltaOrderParams,
 } from './methods/delta';
 
 export type {
@@ -347,6 +371,11 @@ export {
   constructSignExternalDeltaOrder,
   constructPostExternalDeltaOrder,
   constructPreSignExternalDeltaOrder,
+  // TWAP Delta methods
+  constructBuildTWAPDeltaOrder,
+  constructSignTWAPDeltaOrder,
+  constructPostTWAPDeltaOrder,
+  constructPreSignTWAPDeltaOrder,
   // Quote methods
   constructGetQuote,
   // different helpers
@@ -450,6 +479,8 @@ export type {
   // External Delta types
   ExternalDeltaOrder,
   TWAPDeltaOrder,
+  TWAPBuyDeltaOrder,
+  TWAPOnChainOrderType,
   OnChainOrderType,
   AmountsWithSlippage,
   AmountsSellSlippage,
@@ -462,6 +493,14 @@ export type {
   PostExternalDeltaOrderFunctions,
   PostExternalDeltaOrderParams,
   PreSignExternalDeltaOrderFunctions,
+  // TWAP Delta types
+  BuildTWAPDeltaOrderParams,
+  BuildTWAPDeltaOrderFunctions,
+  SignableTWAPOrderData,
+  SignTWAPDeltaOrderFunctions,
+  PostTWAPDeltaOrderFunctions,
+  PostTWAPDeltaOrderParams,
+  PreSignTWAPDeltaOrderFunctions,
   // types for Quote methods
   GetQuoteFunctions,
   QuoteParams,

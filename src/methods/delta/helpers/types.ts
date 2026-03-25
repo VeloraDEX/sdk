@@ -122,7 +122,7 @@ export type ExternalDeltaOrder = {
   data: string;
 };
 
-export type TWAPDeltaOrder = {
+type TWAPDeltaOrderBase = {
   /** @description The address of the order owner */
   owner: string;
   /** @description The address of the order beneficiary */
@@ -141,16 +141,27 @@ export type TWAPDeltaOrder = {
   interval: number; // seconds
   /** @description The number of slices to execute */
   numSlices: number;
-  /** @description The amount of dest token to receive per slice */
-  destAmountPerSlice: string; // wei
-  /** @description The total amount of src token to swap */
-  totalSrcAmount: string; // wei
   /** @description Optional permit signature for the src token */
   permit: string; //can be "0x"
   /** @description Metadata for the order, hex string */
   metadata: string;
   /** @description The bridge input */
   bridge: Bridge;
+};
+
+export type TWAPDeltaOrder = TWAPDeltaOrderBase & {
+  /** @description The amount of dest token to receive per slice */
+  destAmountPerSlice: string; // wei
+  /** @description The total amount of src token to swap */
+  totalSrcAmount: string; // wei
+  /** @description Optional permit signature for the src token */
+};
+
+export type TWAPBuyDeltaOrder = TWAPDeltaOrderBase & {
+  /** @description The total amount of dest token to buy across all slices */
+  totalDestAmount: string; // wei
+  /** @description The maximum amount of src token willing to spend */
+  maxSrcAmount: string; // wei
 };
 
 export type DeltaAuctionStatus =
@@ -197,6 +208,7 @@ export type OnChainOrderMap = {
   Order: DeltaAuctionOrder;
   ExternalOrder: ExternalDeltaOrder;
   TWAPOrder: TWAPDeltaOrder;
+  TWAPBuyOrder: TWAPBuyDeltaOrder;
 };
 
 type DeltaAuctionBase = {
@@ -247,7 +259,13 @@ export type BridgeMetadata = {
 //                                                             refunded is basically failed
 export type BridgeStatus = 'pending' | 'filled' | 'expired' | 'refunded';
 
-export type OnChainOrderType = 'Order' | 'ExternalOrder' | 'TWAPOrder';
+export type OnChainOrderType =
+  | 'Order'
+  | 'ExternalOrder'
+  | 'TWAPOrder'
+  | 'TWAPBuyOrder';
+
+export type TWAPOnChainOrderType = 'TWAPOrder' | 'TWAPBuyOrder';
 
 //// available on BridgePrice ////
 
