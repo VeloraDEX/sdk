@@ -234,6 +234,8 @@ import {
 
 import {
   BuildTWAPDeltaOrderParams,
+  BuildTWAPSellOrderParams,
+  BuildTWAPBuyOrderParams,
   BuildTWAPDeltaOrderFunctions,
   constructBuildTWAPDeltaOrder,
 } from './methods/delta/buildTWAPDeltaOrder';
@@ -495,6 +497,8 @@ export type {
   PreSignExternalDeltaOrderFunctions,
   // TWAP Delta types
   BuildTWAPDeltaOrderParams,
+  BuildTWAPSellOrderParams,
+  BuildTWAPBuyOrderParams,
   BuildTWAPDeltaOrderFunctions,
   SignableTWAPOrderData,
   SignTWAPDeltaOrderFunctions,

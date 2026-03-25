@@ -63,14 +63,14 @@ type BuildTWAPDeltaOrderParamsBase = {
   metadata?: string;
 };
 
-type BuildTWAPSellOrderParams = BuildTWAPDeltaOrderParamsBase & {
+export type BuildTWAPSellOrderParams = BuildTWAPDeltaOrderParamsBase & {
   /** @description Must be "TWAPOrder" for sell orders */
   onChainOrderType: 'TWAPOrder';
   /** @description Total source token amount across all slices */
   totalSrcAmount: string;
 };
 
-type BuildTWAPBuyOrderParams = BuildTWAPDeltaOrderParamsBase & {
+export type BuildTWAPBuyOrderParams = BuildTWAPDeltaOrderParamsBase & {
   /** @description Must be "TWAPBuyOrder" for buy orders */
   onChainOrderType: 'TWAPBuyOrder';
   /** @description Total destination token amount to buy across all slices */
