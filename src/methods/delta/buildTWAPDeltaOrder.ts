@@ -158,7 +158,7 @@ export const constructBuildTWAPDeltaOrder = (
       const maxSrcAmount =
         slippage > 0
           ? applySlippage({
-              amount: params.deltaPrice.srcAmount,
+              amount: params.maxSrcAmount,
               slippageBps: slippage,
               increase: true,
             })
