@@ -3,6 +3,7 @@ import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
 import type { DeltaAuction, TWAPOnChainOrderType } from './helpers/types';
 import type { DeltaOrderToPost } from './postDeltaOrder';
+import { constructSearchString } from '../../helpers/misc';
 
 export type PostTWAPDeltaOrderParams = Prettify<
   Omit<
@@ -31,15 +32,21 @@ export const constructPostTWAPDeltaOrder = ({
 }: ConstructFetchInput): PostTWAPDeltaOrderFunctions => {
   const postOrderUrl = `${apiURL}/delta/orders` as const;
 
-  const postTWAPDeltaOrder: PostTWAPDeltaOrder = (postData, requestParams) => {
-    const { onChainOrderType, ...rest } = postData;
-    const deltaOrderToPost = {
-      ...rest,
+  const postTWAPDeltaOrder: PostTWAPDeltaOrder = (_postData, requestParams) => {
+    const { degenMode, ...postData } = _postData;
+    const deltaOrderToPost: DeltaOrderToPost<'TWAPOrder' | 'TWAPBuyOrder'> = {
+      ...postData,
       chainId,
     };
 
+    const search = constructSearchString<{ degenMode?: boolean }>({
+      degenMode,
+    });
+
+    const fetchURL = `${postOrderUrl}/${search}` as const;
+
     return fetcher<DeltaAuction<'TWAPOrder'> | DeltaAuction<'TWAPBuyOrder'>>({
-      url: postOrderUrl,
+      url: fetchURL,
       method: 'POST',
       data: deltaOrderToPost,
       requestParams,
