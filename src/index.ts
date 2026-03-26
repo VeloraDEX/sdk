@@ -164,6 +164,7 @@ import {
 } from './methods/delta/buildDeltaOrder';
 import {
   constructPostDeltaOrder,
+  DeltaOrderToPost,
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
 } from './methods/delta/postDeltaOrder';
@@ -465,6 +466,7 @@ export type {
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
   SignableDeltaOrderData,
+  DeltaOrderToPost,
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
   SignDeltaOrderFunctions,
