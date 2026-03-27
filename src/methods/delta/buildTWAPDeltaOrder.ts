@@ -128,6 +128,7 @@ export const constructBuildTWAPDeltaOrder = (
       numSlices: params.numSlices,
       bridge: {
         ...params.deltaPrice.bridge,
+        // TWAP child orders get their bridge data at execution time
         protocolData: DEFAULT_BRIDGE.protocolData,
       },
 
