@@ -34,13 +34,10 @@ export const constructFullSDK = <TxResponse = any>(
   config: SDKConfig<TxResponse>
 ): AllSDKMethods<TxResponse> => {
   // include all available functions
-  const swap: SwapSDKMethods<TxResponse> = constructSwapSDK(config);
-  const limitOrders: LimitOrderHandlers<TxResponse> =
-    constructAllLimitOrdersHandlers(config);
-  const nftOrders: NFTOrderHandlers<TxResponse> =
-    constructAllNFTOrdersHandlers(config);
-  const delta: DeltaOrderHandlers<TxResponse> =
-    constructAllDeltaOrdersHandlers(config);
+  const swap = constructSwapSDK(config);
+  const limitOrders = constructAllLimitOrdersHandlers(config);
+  const nftOrders = constructAllNFTOrdersHandlers(config);
+  const delta = constructAllDeltaOrdersHandlers(config);
   const quote = constructGetQuote(config);
 
   return {
