@@ -1,9 +1,11 @@
 import type { ConstructFetchInput, RequestParameters } from '../../types';
+import { DEFAULT_BRIDGE } from './constants';
 import { constructGetDeltaContract } from './getDeltaContract';
 import type { BridgePrice } from './getDeltaPrice';
 import { constructGetPartnerFee } from './getPartnerFee';
 import {
   buildTWAPSignableOrderData,
+  TWAPOrderCommonInput,
   type BuildTWAPOrderDataInput,
   type SignableTWAPOrderData,
 } from './helpers/buildTWAPOrderData';
@@ -113,7 +115,7 @@ export const constructBuildTWAPDeltaOrder = (
     const { partnerAddress, partnerFeeBps, partnerTakesSurplus } =
       await resolvePartnerFee(params, getPartnerFee, requestParams);
 
-    const commonInput = {
+    const commonInput: TWAPOrderCommonInput = {
       owner: params.owner,
       beneficiary: params.beneficiary,
       srcToken: params.srcToken,
@@ -124,7 +126,10 @@ export const constructBuildTWAPDeltaOrder = (
       metadata: params.metadata,
       interval: params.interval,
       numSlices: params.numSlices,
-      bridge: params.deltaPrice.bridge,
+      bridge: {
+        ...params.deltaPrice.bridge,
+        protocolData: DEFAULT_BRIDGE.protocolData,
+      },
 
       chainId,
       paraswapDeltaAddress: ParaswapDelta,

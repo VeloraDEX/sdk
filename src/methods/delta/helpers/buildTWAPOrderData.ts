@@ -113,7 +113,7 @@ export function produceTWAPOrderTypedData({
   };
 }
 
-type TWAPOrderCommonInput = {
+export type TWAPOrderCommonInput = {
   owner: string;
   beneficiary?: string;
   srcToken: string;
