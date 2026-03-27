@@ -83,6 +83,7 @@ export const constructPreSignTWAPDeltaOrder = <T>(
       throw new Error(`Delta is not available on chain ${options.chainId}`);
     }
 
+    // TwapOrder (SELL)
     if (onChainOrderType === 'TWAPOrder' && 'totalSrcAmount' in orderData) {
       const typedData = produceTWAPOrderTypedData({
         orderInput: orderData,
@@ -93,6 +94,7 @@ export const constructPreSignTWAPDeltaOrder = <T>(
       return hashTWAPDeltaOrderTypedData(typedData);
     }
 
+    // TWAPBuyOrder (BUY)
     if (onChainOrderType === 'TWAPBuyOrder' && 'maxSrcAmount' in orderData) {
       const typedData = produceTWAPOrderTypedData({
         orderInput: orderData,

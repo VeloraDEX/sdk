@@ -265,6 +265,7 @@ export function sanitizeTWAPOrderData(
   };
 
   if ('destAmountPerSlice' in orderData) {
+    // TWAPOrder (SELL)
     return {
       ...common,
       destAmountPerSlice: orderData.destAmountPerSlice,
@@ -272,6 +273,7 @@ export function sanitizeTWAPOrderData(
     };
   }
 
+  // TWAPBuyOrder (BUY)
   return {
     ...common,
     totalDestAmount: orderData.totalDestAmount,
