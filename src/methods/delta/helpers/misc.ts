@@ -4,7 +4,7 @@ import type { SignableExternalOrderData } from './buildExternalOrderData';
 import type { SignableTWAPOrderData } from './buildTWAPOrderData';
 import type { GetPartnerFeeFunctions } from '../getPartnerFee';
 import type { RequestParameters } from '../../../types';
-import type { AmountsWithSlippage, SwapSideUnion } from './types';
+import type { DeltaAmountsWithSlippage, SwapSideUnion } from './types';
 import { SwapSide } from '../../../constants';
 import { assert } from 'ts-essentials';
 
@@ -123,7 +123,7 @@ export async function resolvePartnerFee(
   };
 }
 
-export type ResolveAmountsInput = AmountsWithSlippage & {
+export type ResolveAmountsInput = DeltaAmountsWithSlippage & {
   deltaPrice: { destAmount: string; srcAmount: string };
 };
 

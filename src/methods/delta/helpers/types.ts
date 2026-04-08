@@ -4,7 +4,7 @@ import { SwapSide } from '../../../constants';
 export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
 /** @description SELL with slippage: srcAmount provided, destAmount auto-computed from deltaPrice.destAmount */
-export type AmountsSellSlippage = {
+export type DeltaAmountsSellSlippage = {
   /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
   slippage: number;
   /** @description The amount of src token to swap */
@@ -14,7 +14,7 @@ export type AmountsSellSlippage = {
   side?: 'SELL';
 };
 /** @description BUY with slippage: destAmount provided, srcAmount auto-computed from deltaPrice.srcAmount */
-export type AmountsBuySlippage = {
+export type DeltaAmountsBuySlippage = {
   /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
   slippage: number;
   /** @description The minimum amount of dest token to receive */
@@ -24,7 +24,7 @@ export type AmountsBuySlippage = {
   side?: 'BUY';
 };
 /** @description Explicit amounts, no slippage (backward-compatible) */
-export type AmountsExplicit = {
+export type DeltaAmountsExplicit = {
   slippage?: never;
   /** @description The amount of src token to swap */
   srcAmount: string;
@@ -34,10 +34,10 @@ export type AmountsExplicit = {
   side?: SwapSideUnion;
 };
 
-export type AmountsWithSlippage =
-  | AmountsSellSlippage
-  | AmountsBuySlippage
-  | AmountsExplicit;
+export type DeltaAmountsWithSlippage =
+  | DeltaAmountsSellSlippage
+  | DeltaAmountsBuySlippage
+  | DeltaAmountsExplicit;
 
 enum OrderKind {
   Sell = 0,

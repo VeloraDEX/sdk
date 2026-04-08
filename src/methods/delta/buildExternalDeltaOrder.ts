@@ -7,7 +7,7 @@ import {
   type BuildExternalOrderDataInput,
   type SignableExternalOrderData,
 } from './helpers/buildExternalOrderData';
-import type { AmountsWithSlippage } from './helpers/types';
+import type { DeltaAmountsWithSlippage } from './helpers/types';
 import { SwapSideToOrderKind } from './helpers/types';
 import type { MarkOptional } from 'ts-essentials';
 import { resolvePartnerFee, resolveAmounts } from './helpers/misc';
@@ -54,7 +54,7 @@ type BuildExternalDeltaOrderParamsBase = {
 };
 
 export type BuildExternalDeltaOrderParams = BuildExternalDeltaOrderParamsBase &
-  AmountsWithSlippage;
+  DeltaAmountsWithSlippage;
 
 type BuildExternalDeltaOrder = (
   buildOrderParams: BuildExternalDeltaOrderParams,
