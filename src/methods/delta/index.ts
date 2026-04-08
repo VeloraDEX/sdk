@@ -185,6 +185,7 @@ export type SubmitTWAPDeltaOrderParams = BuildTWAPDeltaOrderParams & {
   partiallyFillable?: boolean;
   /** @description Referrer address */
   referrerAddress?: string;
+  degenMode?: boolean;
 } & Pick<DeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
 
 type SubmitTWAPDeltaOrder = (
@@ -216,6 +217,7 @@ export const constructSubmitTWAPDeltaOrder = (
       type: orderParams.type,
       includeAgents: orderParams.includeAgents,
       excludeAgents: orderParams.excludeAgents,
+      degenMode: orderParams.degenMode,
     });
 
     return response;
