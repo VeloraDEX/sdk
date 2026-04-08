@@ -159,7 +159,6 @@ export function buildTWAPSignableOrderData(
     srcToken,
     destToken,
     nonce = Date.now().toString(10),
-    deadline = Math.floor(Date.now() / 1000 + DELTA_DEFAULT_EXPIRY),
     permit = '0x',
     metadata = '0x',
     interval,
@@ -174,6 +173,13 @@ export function buildTWAPSignableOrderData(
     paraswapDeltaAddress,
     onChainOrderType,
   } = input;
+
+  const deadline =
+    input.deadline ??
+    // all slices must execute before the deadline,
+    // so we add the total duration of the TWAP (interval * numSlices) to the current time,
+    // plus a buffer defined by DELTA_DEFAULT_EXPIRY
+    Math.floor(Date.now() / 1000 + interval * numSlices + DELTA_DEFAULT_EXPIRY);
 
   const partnerAndFee = producePartnerAndFee({
     partnerFeeBps,
