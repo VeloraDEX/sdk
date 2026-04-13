@@ -353,7 +353,7 @@ function isExecutedAuction(
 }
 
 function getFilledPercent(auction: DeltaAuctionUnion): number {
-  const transaction = isOrderCrosschain(auction.order)
+  const transaction = !isOrderCrosschain(auction.order)
     ? auction.transactions
     : auction.transactions.filter(
         (transaction) => transaction.bridgeStatus === 'filled'
