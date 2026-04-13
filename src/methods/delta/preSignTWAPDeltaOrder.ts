@@ -14,7 +14,7 @@ import type { ExtractAbiMethodNames } from '../../helpers/misc';
 import { findPrimaryType } from '../../helpers/providers/helpers';
 import { constructGetDeltaContract } from './getDeltaContract';
 import type { TWAPDeltaOrder, TWAPBuyDeltaOrder } from './helpers/types';
-import { TypedDataField } from 'ethersV5';
+import { TypedDataField } from '../common/orders/buildOrderData';
 
 type HashTWAPDeltaOrderTypedData = (
   signableOrderData: SignableTWAPOrderData
