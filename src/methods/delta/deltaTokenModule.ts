@@ -4,7 +4,7 @@ import type {
   TxSendOverrides,
 } from '../../types';
 import { constructGetDeltaContract } from './getDeltaContract';
-import { sanitizeDeltaOrderData } from './helpers/misc';
+import { sanitizeDeltaOrderData, sanitizeTWAPOrderData } from './helpers/misc';
 import { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 import { produceDeltaOrderHash } from './preSignDeltaOrder';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
@@ -457,7 +457,7 @@ export const constructDeltaTokenModule = <T>(
     }
 
     const orderWithSig = {
-      order,
+      order: sanitizeDeltaOrderData(order),
       signature,
       // bridgeOverride and cosignature are not used by the contract,
       // can always provide defaults
@@ -558,7 +558,7 @@ export const constructDeltaTokenModule = <T>(
       address: ParaswapDelta,
       abi: DeltaTokenModuleAbi,
       contractMethod: 'cancelTWAPAndWithdraw',
-      args: [order],
+      args: [sanitizeTWAPOrderData(order)],
       overrides,
     });
 
@@ -577,7 +577,7 @@ export const constructDeltaTokenModule = <T>(
       address: ParaswapDelta,
       abi: DeltaTokenModuleAbi,
       contractMethod: 'cancelTWAPBuyAndWithdraw',
-      args: [order],
+      args: [sanitizeTWAPOrderData(order)],
       overrides,
     });
 
