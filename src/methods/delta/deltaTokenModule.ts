@@ -9,11 +9,9 @@ import { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 import { produceDeltaOrderHash } from './preSignDeltaOrder';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
 import type { DeltaAuctionOrder } from './helpers/types';
-import { DEFAULT_BRIDGE } from './constants';
 
 export type CancelAndWithdrawDeltaOrderParams = {
   order: DeltaAuctionOrder;
-  signature: string;
   /** @description A boolean indicating whether the order is a fillable order. False by default */
   isFillable?: boolean;
 };
@@ -225,7 +223,7 @@ export const constructDeltaTokenModule = <T>(
   const { getDeltaContract } = constructGetDeltaContract(options);
 
   const cancelAndWithdrawDeltaOrder: CancelAndWithdrawDeltaOrder<T> = async (
-    { order, signature, isFillable = false },
+    { order, isFillable = false },
     overrides = {},
     requestParams
   ) => {
