@@ -4,7 +4,7 @@ import { SwapSide } from '../../../constants';
 export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
 /** @description SELL with slippage: srcAmount provided, destAmount auto-computed from deltaPrice.destAmount */
-export type AmountsSellSlippage = {
+export type DeltaAmountsSellSlippage = {
   /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
   slippage: number;
   /** @description The amount of src token to swap */
@@ -14,7 +14,7 @@ export type AmountsSellSlippage = {
   side?: 'SELL';
 };
 /** @description BUY with slippage: destAmount provided, srcAmount auto-computed from deltaPrice.srcAmount */
-export type AmountsBuySlippage = {
+export type DeltaAmountsBuySlippage = {
   /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5% */
   slippage: number;
   /** @description The minimum amount of dest token to receive */
@@ -24,7 +24,7 @@ export type AmountsBuySlippage = {
   side?: 'BUY';
 };
 /** @description Explicit amounts, no slippage (backward-compatible) */
-export type AmountsExplicit = {
+export type DeltaAmountsExplicit = {
   slippage?: never;
   /** @description The amount of src token to swap */
   srcAmount: string;
@@ -34,10 +34,10 @@ export type AmountsExplicit = {
   side?: SwapSideUnion;
 };
 
-export type AmountsWithSlippage =
-  | AmountsSellSlippage
-  | AmountsBuySlippage
-  | AmountsExplicit;
+export type DeltaAmountsWithSlippage =
+  | DeltaAmountsSellSlippage
+  | DeltaAmountsBuySlippage
+  | DeltaAmountsExplicit;
 
 enum OrderKind {
   Sell = 0,
@@ -122,6 +122,48 @@ export type ExternalDeltaOrder = {
   data: string;
 };
 
+type TWAPDeltaOrderBase = {
+  /** @description The address of the order owner */
+  owner: string;
+  /** @description The address of the order beneficiary */
+  beneficiary: string; // beneficiary==owner if no transferTo
+  /** @description The address of the src token */
+  srcToken: string; // lowercase
+  /** @description The address of the dest token */
+  destToken: string; // lowercase
+  /** @description The nonce of the order */
+  nonce: string; // can be random, can even be Date.now()
+  /** @description Encoded partner address, fee bps, and flags for the order. partnerAndFee = (partner << 96) | (partnerTakesSurplus << 8) | fee in bps (max fee is 2%) */
+  partnerAndFee: string;
+  /** @description The deadline for the order */
+  deadline: number; // seconds
+  /** @description The interval between each slice execution */
+  interval: number; // seconds
+  /** @description The number of slices to execute */
+  numSlices: number;
+  /** @description Optional permit signature for the src token */
+  permit: string; //can be "0x"
+  /** @description Metadata for the order, hex string */
+  metadata: string;
+  /** @description The bridge input */
+  bridge: Bridge;
+};
+
+export type TWAPDeltaOrder = TWAPDeltaOrderBase & {
+  /** @description The amount of dest token to receive per slice */
+  destAmountPerSlice: string; // wei
+  /** @description The total amount of src token to swap */
+  totalSrcAmount: string; // wei
+  /** @description Optional permit signature for the src token */
+};
+
+export type TWAPBuyDeltaOrder = TWAPDeltaOrderBase & {
+  /** @description The total amount of dest token to buy across all slices */
+  totalDestAmount: string; // wei
+  /** @description The maximum amount of src token willing to spend */
+  maxSrcAmount: string; // wei
+};
+
 export type DeltaAuctionStatus =
   | 'NOT_STARTED'
   | 'AWAITING_PRE_SIGNATURE'
@@ -135,7 +177,7 @@ export type DeltaAuctionStatus =
   | 'SUSPENDED'
   | 'REFUNDED';
 
-type DeltaAuctionTransaction = {
+export type DeltaAuctionTransaction = {
   id: string;
   hash: string;
   orderId: string;
@@ -165,6 +207,8 @@ type DeltaAuctionTransaction = {
 export type OnChainOrderMap = {
   Order: DeltaAuctionOrder;
   ExternalOrder: ExternalDeltaOrder;
+  TWAPOrder: TWAPDeltaOrder;
+  TWAPBuyOrder: TWAPBuyDeltaOrder;
 };
 
 type DeltaAuctionBase = {
@@ -215,7 +259,13 @@ export type BridgeMetadata = {
 //                                                             refunded is basically failed
 export type BridgeStatus = 'pending' | 'filled' | 'expired' | 'refunded';
 
-export type OnChainOrderType = 'Order' | 'ExternalOrder';
+export type OnChainOrderType =
+  | 'Order'
+  | 'ExternalOrder'
+  | 'TWAPOrder'
+  | 'TWAPBuyOrder';
+
+export type TWAPOnChainOrderType = 'TWAPOrder' | 'TWAPBuyOrder';
 
 //// available on BridgePrice ////
 
