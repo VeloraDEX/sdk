@@ -71,123 +71,79 @@ const DeltaTokenModuleAbi = [
     name: 'cancelAndWithdraw',
     inputs: [
       {
-        name: 'orderWithSig',
+        name: 'order',
         type: 'tuple',
-        internalType: 'struct OrderWithSig',
+        internalType: 'struct Order',
         components: [
           {
-            name: 'order',
-            type: 'tuple',
-            internalType: 'struct Order',
-            components: [
-              {
-                name: 'owner',
-                type: 'address',
-                internalType: 'address',
-              },
-              {
-                name: 'beneficiary',
-                type: 'address',
-                internalType: 'address',
-              },
-              {
-                name: 'srcToken',
-                type: 'address',
-                internalType: 'address',
-              },
-              {
-                name: 'destToken',
-                type: 'address',
-                internalType: 'address',
-              },
-              {
-                name: 'srcAmount',
-                type: 'uint256',
-                internalType: 'uint256',
-              },
-              {
-                name: 'destAmount',
-                type: 'uint256',
-                internalType: 'uint256',
-              },
-              {
-                name: 'expectedAmount',
-                type: 'uint256',
-                internalType: 'uint256',
-              },
-              {
-                name: 'deadline',
-                type: 'uint256',
-                internalType: 'uint256',
-              },
-              {
-                name: 'kind',
-                type: 'uint8',
-                internalType: 'enum OrderKind',
-              },
-              {
-                name: 'nonce',
-                type: 'uint256',
-                internalType: 'uint256',
-              },
-              {
-                name: 'partnerAndFee',
-                type: 'uint256',
-                internalType: 'uint256',
-              },
-              {
-                name: 'permit',
-                type: 'bytes',
-                internalType: 'bytes',
-              },
-              {
-                name: 'metadata',
-                type: 'bytes',
-                internalType: 'bytes',
-              },
-              {
-                name: 'bridge',
-                type: 'tuple',
-                internalType: 'struct Bridge',
-                components: [
-                  {
-                    name: 'protocolSelector',
-                    type: 'bytes4',
-                    internalType: 'bytes4',
-                  },
-                  {
-                    name: 'destinationChainId',
-                    type: 'uint256',
-                    internalType: 'uint256',
-                  },
-                  {
-                    name: 'outputToken',
-                    type: 'address',
-                    internalType: 'address',
-                  },
-                  {
-                    name: 'scalingFactor',
-                    type: 'int8',
-                    internalType: 'int8',
-                  },
-                  {
-                    name: 'protocolData',
-                    type: 'bytes',
-                    internalType: 'bytes',
-                  },
-                ],
-              },
-            ],
+            name: 'owner',
+            type: 'address',
+            internalType: 'address',
           },
           {
-            name: 'signature',
+            name: 'beneficiary',
+            type: 'address',
+            internalType: 'address',
+          },
+          {
+            name: 'srcToken',
+            type: 'address',
+            internalType: 'address',
+          },
+          {
+            name: 'destToken',
+            type: 'address',
+            internalType: 'address',
+          },
+          {
+            name: 'srcAmount',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          {
+            name: 'destAmount',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          {
+            name: 'expectedAmount',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          {
+            name: 'deadline',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          {
+            name: 'kind',
+            type: 'uint8',
+            internalType: 'enum OrderKind',
+          },
+          {
+            name: 'nonce',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          {
+            name: 'partnerAndFee',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          {
+            name: 'permit',
             type: 'bytes',
             internalType: 'bytes',
           },
           {
-            name: 'bridgeOverride',
+            name: 'metadata',
+            type: 'bytes',
+            internalType: 'bytes',
+          },
+          {
+            name: 'bridge',
             type: 'tuple',
-            internalType: 'struct BridgeOverride',
+            internalType: 'struct Bridge',
             components: [
               {
                 name: 'protocolSelector',
@@ -195,16 +151,26 @@ const DeltaTokenModuleAbi = [
                 internalType: 'bytes4',
               },
               {
+                name: 'destinationChainId',
+                type: 'uint256',
+                internalType: 'uint256',
+              },
+              {
+                name: 'outputToken',
+                type: 'address',
+                internalType: 'address',
+              },
+              {
+                name: 'scalingFactor',
+                type: 'int8',
+                internalType: 'int8',
+              },
+              {
                 name: 'protocolData',
                 type: 'bytes',
                 internalType: 'bytes',
               },
             ],
-          },
-          {
-            name: 'cosignature',
-            type: 'bytes',
-            internalType: 'bytes',
           },
         ],
       },
@@ -268,23 +234,11 @@ export const constructDeltaTokenModule = <T>(
       throw new Error(`Delta is not available on chain ${options.chainId}`);
     }
 
-    const orderWithSig = {
-      order,
-      signature,
-      // bridgeOverride and cosignature are not used by the contract,
-      // can always provide defaults
-      bridgeOverride: {
-        protocolData: DEFAULT_BRIDGE.protocolData,
-        protocolSelector: DEFAULT_BRIDGE.protocolSelector,
-      },
-      cosignature: '0x',
-    };
-
     const res = await options.contractCaller.transactCall<AvailableMethods>({
       address: ParaswapDelta,
       abi: DeltaTokenModuleAbi,
       contractMethod: 'cancelAndWithdraw',
-      args: [orderWithSig, isFillable],
+      args: [sanitizeDeltaOrderData(order), isFillable],
       overrides,
     });
 
