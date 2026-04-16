@@ -7,7 +7,7 @@ import {
   type BuildDeltaOrderDataInput,
   type SignableDeltaOrderData,
 } from './helpers/buildDeltaOrderData';
-import type { AmountsWithSlippage } from './helpers/types';
+import type { DeltaAmountsWithSlippage } from './helpers/types';
 import { SwapSideToOrderKind } from './helpers/types';
 import { resolvePartnerFee, resolveAmounts } from './helpers/misc';
 import type { MarkOptional } from 'ts-essentials';
@@ -63,7 +63,7 @@ type BuildDeltaOrderDataParamsBase = {
 };
 
 export type BuildDeltaOrderDataParams = BuildDeltaOrderDataParamsBase &
-  AmountsWithSlippage;
+  DeltaAmountsWithSlippage;
 
 type BuildDeltaOrder = (
   buildOrderParams: BuildDeltaOrderDataParams,

@@ -71,6 +71,23 @@ import {
   constructPreSignExternalDeltaOrder,
   PreSignExternalDeltaOrderFunctions,
 } from './preSignExternalDeltaOrder';
+import {
+  BuildTWAPDeltaOrderParams,
+  BuildTWAPDeltaOrderFunctions,
+  constructBuildTWAPDeltaOrder,
+} from './buildTWAPDeltaOrder';
+import {
+  constructSignTWAPDeltaOrder,
+  SignTWAPDeltaOrderFunctions,
+} from './signTWAPDeltaOrder';
+import {
+  constructPostTWAPDeltaOrder,
+  PostTWAPDeltaOrderFunctions,
+} from './postTWAPDeltaOrder';
+import {
+  constructPreSignTWAPDeltaOrder,
+  PreSignTWAPDeltaOrderFunctions,
+} from './preSignTWAPDeltaOrder';
 
 export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
   /** @description designates the Order as being able to be partially filled, as opposed to fill-or-kill */
@@ -163,6 +180,52 @@ export const constructSubmitExternalDeltaOrder = (
   return { submitExternalDeltaOrder };
 };
 
+export type SubmitTWAPDeltaOrderParams = BuildTWAPDeltaOrderParams & {
+  /** @description designates the Order as being able to be partially filled, as opposed to fill-or-kill */
+  partiallyFillable?: boolean;
+  /** @description Referrer address */
+  referrerAddress?: string;
+  degenMode?: boolean;
+} & Pick<DeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
+
+type SubmitTWAPDeltaOrder = (
+  orderParams: SubmitTWAPDeltaOrderParams
+) => Promise<DeltaAuction<'TWAPOrder'> | DeltaAuction<'TWAPBuyOrder'>>;
+
+export type SubmitTWAPDeltaOrderFuncs = {
+  submitTWAPDeltaOrder: SubmitTWAPDeltaOrder;
+};
+
+export const constructSubmitTWAPDeltaOrder = (
+  options: ConstructProviderFetchInput<any, 'signTypedDataCall'>
+): SubmitTWAPDeltaOrderFuncs => {
+  const { buildTWAPDeltaOrder } = constructBuildTWAPDeltaOrder(options);
+  const { signTWAPDeltaOrder } = constructSignTWAPDeltaOrder(options);
+  const { postTWAPDeltaOrder } = constructPostTWAPDeltaOrder(options);
+
+  const submitTWAPDeltaOrder: SubmitTWAPDeltaOrder = async (orderParams) => {
+    const orderData = await buildTWAPDeltaOrder(orderParams);
+    const signature = await signTWAPDeltaOrder(orderData);
+
+    const response = await postTWAPDeltaOrder({
+      signature,
+      partner: orderParams.partner,
+      order: orderData.data,
+      onChainOrderType: orderParams.onChainOrderType,
+      partiallyFillable: orderParams.partiallyFillable,
+      referrerAddress: orderParams.referrerAddress,
+      type: orderParams.type,
+      includeAgents: orderParams.includeAgents,
+      excludeAgents: orderParams.excludeAgents,
+      degenMode: orderParams.degenMode,
+    });
+
+    return response;
+  };
+
+  return { submitTWAPDeltaOrder };
+};
+
 export type DeltaOrderHandlers<T> = SubmitDeltaOrderFuncs &
   ApproveTokenForDeltaFunctions<T> &
   BuildDeltaOrderFunctions &
@@ -181,7 +244,12 @@ export type DeltaOrderHandlers<T> = SubmitDeltaOrderFuncs &
   BuildExternalDeltaOrderFunctions &
   SignExternalDeltaOrderFunctions &
   PostExternalDeltaOrderFunctions &
-  PreSignExternalDeltaOrderFunctions<T>;
+  PreSignExternalDeltaOrderFunctions<T> &
+  SubmitTWAPDeltaOrderFuncs &
+  BuildTWAPDeltaOrderFunctions &
+  SignTWAPDeltaOrderFunctions &
+  PostTWAPDeltaOrderFunctions &
+  PreSignTWAPDeltaOrderFunctions<T>;
 
 /** @description construct SDK with every Delta Order-related method, fetching from API and Order signing */
 export const constructAllDeltaOrdersHandlers = <TxResponse>(
@@ -218,6 +286,12 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
   const externalDeltaOrdersPreSign =
     constructPreSignExternalDeltaOrder(options);
 
+  const twapDeltaOrdersSubmit = constructSubmitTWAPDeltaOrder(options);
+  const twapDeltaOrdersBuild = constructBuildTWAPDeltaOrder(options);
+  const twapDeltaOrdersSign = constructSignTWAPDeltaOrder(options);
+  const twapDeltaOrdersPost = constructPostTWAPDeltaOrder(options);
+  const twapDeltaOrdersPreSign = constructPreSignTWAPDeltaOrder(options);
+
   return {
     ...deltaOrdersGetters,
     ...deltaOrdersContractGetter,
@@ -238,5 +312,10 @@ export const constructAllDeltaOrdersHandlers = <TxResponse>(
     ...externalDeltaOrdersSign,
     ...externalDeltaOrdersPost,
     ...externalDeltaOrdersPreSign,
+    ...twapDeltaOrdersSubmit,
+    ...twapDeltaOrdersBuild,
+    ...twapDeltaOrdersSign,
+    ...twapDeltaOrdersPost,
+    ...twapDeltaOrdersPreSign,
   };
 };

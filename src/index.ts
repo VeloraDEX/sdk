@@ -141,12 +141,20 @@ import type {
   DeltaAuctionOrder,
   DeltaAuction,
   DeltaAuctionStatus,
+  DeltaAuctionTransaction,
   BridgeMetadata,
   BridgeStatus,
   Bridge,
   ExternalDeltaOrder,
+  TWAPDeltaOrder,
+  TWAPBuyDeltaOrder,
+  TWAPOnChainOrderType,
   OnChainOrderType,
   SwapSideUnion,
+  DeltaAmountsWithSlippage,
+  DeltaAmountsSellSlippage,
+  DeltaAmountsBuySlippage,
+  DeltaAmountsExplicit,
 } from './methods/delta/helpers/types';
 import {
   BuildDeltaOrderDataParams,
@@ -156,6 +164,7 @@ import {
 } from './methods/delta/buildDeltaOrder';
 import {
   constructPostDeltaOrder,
+  DeltaOrderToPost,
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
 } from './methods/delta/postDeltaOrder';
@@ -225,6 +234,28 @@ import {
 } from './methods/delta/preSignExternalDeltaOrder';
 
 import {
+  BuildTWAPDeltaOrderParams,
+  BuildTWAPSellOrderParams,
+  BuildTWAPBuyOrderParams,
+  BuildTWAPDeltaOrderFunctions,
+  constructBuildTWAPDeltaOrder,
+} from './methods/delta/buildTWAPDeltaOrder';
+import type { SignableTWAPOrderData } from './methods/delta/helpers/buildTWAPOrderData';
+import {
+  constructSignTWAPDeltaOrder,
+  SignTWAPDeltaOrderFunctions,
+} from './methods/delta/signTWAPDeltaOrder';
+import {
+  constructPostTWAPDeltaOrder,
+  PostTWAPDeltaOrderFunctions,
+  PostTWAPDeltaOrderParams,
+} from './methods/delta/postTWAPDeltaOrder';
+import {
+  constructPreSignTWAPDeltaOrder,
+  PreSignTWAPDeltaOrderFunctions,
+} from './methods/delta/preSignTWAPDeltaOrder';
+
+import {
   constructGetQuote,
   GetQuoteFunctions,
   QuoteParams,
@@ -244,6 +275,10 @@ import {
   DepositNativeAndPreSignParams,
   DepositNativeAndPreSignDeltaOrderParams,
 } from './methods/delta/deltaTokenModule';
+import {
+  CancelDeltaOrderData,
+  SignableCancelDeltaOrderData,
+} from './methods/delta/helpers/buildCancelDeltaOrderData';
 
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
 
@@ -257,9 +292,11 @@ export {
   constructAllDeltaOrdersHandlers,
   constructSubmitDeltaOrder,
   constructSubmitExternalDeltaOrder,
+  constructSubmitTWAPDeltaOrder,
   DeltaOrderHandlers,
   SubmitDeltaOrderParams,
   SubmitExternalDeltaOrderParams,
+  SubmitTWAPDeltaOrderParams,
 } from './methods/delta';
 
 export type {
@@ -337,6 +374,11 @@ export {
   constructSignExternalDeltaOrder,
   constructPostExternalDeltaOrder,
   constructPreSignExternalDeltaOrder,
+  // TWAP Delta methods
+  constructBuildTWAPDeltaOrder,
+  constructSignTWAPDeltaOrder,
+  constructPostTWAPDeltaOrder,
+  constructPreSignTWAPDeltaOrder,
   // Quote methods
   constructGetQuote,
   // different helpers
@@ -409,8 +451,11 @@ export type {
   DeltaAuctionOrder,
   DeltaAuction,
   DeltaAuctionStatus,
+  DeltaAuctionTransaction,
   DeltaOrderFilterByStatus,
   DeltaOrderFromAPI,
+  CancelDeltaOrderData,
+  SignableCancelDeltaOrderData,
   // bridge part of DeltaOrder
   BridgeMetadata,
   BridgeStatus,
@@ -421,6 +466,7 @@ export type {
   BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
   SignableDeltaOrderData,
+  DeltaOrderToPost,
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
   SignDeltaOrderFunctions,
@@ -436,7 +482,14 @@ export type {
   DepositNativeAndPreSignDeltaOrderParams,
   // External Delta types
   ExternalDeltaOrder,
+  TWAPDeltaOrder,
+  TWAPBuyDeltaOrder,
+  TWAPOnChainOrderType,
   OnChainOrderType,
+  DeltaAmountsWithSlippage,
+  DeltaAmountsSellSlippage,
+  DeltaAmountsBuySlippage,
+  DeltaAmountsExplicit,
   SignableExternalOrderData,
   BuildExternalDeltaOrderParams,
   BuildExternalDeltaOrderFunctions,
@@ -444,6 +497,16 @@ export type {
   PostExternalDeltaOrderFunctions,
   PostExternalDeltaOrderParams,
   PreSignExternalDeltaOrderFunctions,
+  // TWAP Delta types
+  BuildTWAPDeltaOrderParams,
+  BuildTWAPSellOrderParams,
+  BuildTWAPBuyOrderParams,
+  BuildTWAPDeltaOrderFunctions,
+  SignableTWAPOrderData,
+  SignTWAPDeltaOrderFunctions,
+  PostTWAPDeltaOrderFunctions,
+  PostTWAPDeltaOrderParams,
+  PreSignTWAPDeltaOrderFunctions,
   // types for Quote methods
   GetQuoteFunctions,
   QuoteParams,

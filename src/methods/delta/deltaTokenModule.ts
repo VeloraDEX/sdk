@@ -4,11 +4,15 @@ import type {
   TxSendOverrides,
 } from '../../types';
 import { constructGetDeltaContract } from './getDeltaContract';
-import { sanitizeDeltaOrderData } from './helpers/misc';
+import { sanitizeDeltaOrderData, sanitizeTWAPOrderData } from './helpers/misc';
 import { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
 import { produceDeltaOrderHash } from './preSignDeltaOrder';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
-import type { DeltaAuctionOrder } from './helpers/types';
+import type {
+  DeltaAuctionOrder,
+  TWAPDeltaOrder,
+  TWAPBuyDeltaOrder,
+} from './helpers/types';
 
 export type CancelAndWithdrawDeltaOrderParams = {
   order: DeltaAuctionOrder;
@@ -39,6 +43,18 @@ export type DepositNativeAndPreSign<T> = (
   requestParams?: RequestParameters
 ) => Promise<T>;
 
+export type CancelTWAPAndWithdrawDeltaOrder<T> = (
+  order: TWAPDeltaOrder,
+  overrides?: TxSendOverrides,
+  requestParams?: RequestParameters
+) => Promise<T>;
+
+export type CancelTWAPBuyAndWithdrawDeltaOrder<T> = (
+  order: TWAPBuyDeltaOrder,
+  overrides?: TxSendOverrides,
+  requestParams?: RequestParameters
+) => Promise<T>;
+
 export type DepositNativeAndPreSignDeltaOrderParams = Pick<
   DepositNativeAndPreSignParams,
   'depositAmount'
@@ -61,6 +77,10 @@ export type DeltaTokenModuleFunctions<T> = {
   depositNativeAndPreSign: DepositNativeAndPreSign<T>;
   /** @description Deposit native ETH and pre-sign a Delta order from signable order data */
   depositNativeAndPreSignDeltaOrder: DepositNativeAndPreSignDeltaOrder<T>;
+  /** @description Cancel a TWAP sell order on-chain and withdraw native ETH back to the owner */
+  cancelTWAPAndWithdrawDeltaOrder: CancelTWAPAndWithdrawDeltaOrder<T>;
+  /** @description Cancel a TWAP buy order on-chain and withdraw native ETH back to the owner */
+  cancelTWAPBuyAndWithdrawDeltaOrder: CancelTWAPBuyAndWithdrawDeltaOrder<T>;
 };
 
 const DeltaTokenModuleAbi = [
@@ -176,6 +196,174 @@ const DeltaTokenModuleAbi = [
         name: 'isFillable',
         type: 'bool',
         internalType: 'bool',
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'cancelTWAPAndWithdraw',
+    inputs: [
+      {
+        name: 'order',
+        type: 'tuple',
+        internalType: 'struct TWAPOrder',
+        components: [
+          { name: 'owner', type: 'address', internalType: 'address' },
+          {
+            name: 'beneficiary',
+            type: 'address',
+            internalType: 'address',
+          },
+          {
+            name: 'srcToken',
+            type: 'address',
+            internalType: 'address',
+          },
+          {
+            name: 'destToken',
+            type: 'address',
+            internalType: 'address',
+          },
+          { name: 'nonce', type: 'uint256', internalType: 'uint256' },
+          {
+            name: 'partnerAndFee',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          { name: 'deadline', type: 'uint64', internalType: 'uint64' },
+          { name: 'interval', type: 'uint64', internalType: 'uint64' },
+          { name: 'numSlices', type: 'uint32', internalType: 'uint32' },
+          {
+            name: 'destAmountPerSlice',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          {
+            name: 'totalSrcAmount',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          { name: 'permit', type: 'bytes', internalType: 'bytes' },
+          { name: 'metadata', type: 'bytes', internalType: 'bytes' },
+          {
+            name: 'bridge',
+            type: 'tuple',
+            internalType: 'struct Bridge',
+            components: [
+              {
+                name: 'protocolSelector',
+                type: 'bytes4',
+                internalType: 'bytes4',
+              },
+              {
+                name: 'destinationChainId',
+                type: 'uint256',
+                internalType: 'uint256',
+              },
+              {
+                name: 'outputToken',
+                type: 'address',
+                internalType: 'address',
+              },
+              {
+                name: 'scalingFactor',
+                type: 'int8',
+                internalType: 'int8',
+              },
+              {
+                name: 'protocolData',
+                type: 'bytes',
+                internalType: 'bytes',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+    outputs: [],
+    stateMutability: 'nonpayable',
+  },
+  {
+    type: 'function',
+    name: 'cancelTWAPBuyAndWithdraw',
+    inputs: [
+      {
+        name: 'order',
+        type: 'tuple',
+        internalType: 'struct TWAPBuyOrder',
+        components: [
+          { name: 'owner', type: 'address', internalType: 'address' },
+          {
+            name: 'beneficiary',
+            type: 'address',
+            internalType: 'address',
+          },
+          {
+            name: 'srcToken',
+            type: 'address',
+            internalType: 'address',
+          },
+          {
+            name: 'destToken',
+            type: 'address',
+            internalType: 'address',
+          },
+          { name: 'nonce', type: 'uint256', internalType: 'uint256' },
+          {
+            name: 'partnerAndFee',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          { name: 'deadline', type: 'uint64', internalType: 'uint64' },
+          { name: 'interval', type: 'uint64', internalType: 'uint64' },
+          { name: 'numSlices', type: 'uint32', internalType: 'uint32' },
+          {
+            name: 'totalDestAmount',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          {
+            name: 'maxSrcAmount',
+            type: 'uint256',
+            internalType: 'uint256',
+          },
+          { name: 'permit', type: 'bytes', internalType: 'bytes' },
+          { name: 'metadata', type: 'bytes', internalType: 'bytes' },
+          {
+            name: 'bridge',
+            type: 'tuple',
+            internalType: 'struct Bridge',
+            components: [
+              {
+                name: 'protocolSelector',
+                type: 'bytes4',
+                internalType: 'bytes4',
+              },
+              {
+                name: 'destinationChainId',
+                type: 'uint256',
+                internalType: 'uint256',
+              },
+              {
+                name: 'outputToken',
+                type: 'address',
+                internalType: 'address',
+              },
+              {
+                name: 'scalingFactor',
+                type: 'int8',
+                internalType: 'int8',
+              },
+              {
+                name: 'protocolData',
+                type: 'bytes',
+                internalType: 'bytes',
+              },
+            ],
+          },
+        ],
       },
     ],
     outputs: [],
@@ -310,10 +498,50 @@ export const constructDeltaTokenModule = <T>(
     return res;
   };
 
+  const cancelTWAPAndWithdrawDeltaOrder: CancelTWAPAndWithdrawDeltaOrder<
+    T
+  > = async (order, overrides = {}, requestParams) => {
+    const ParaswapDelta = await getDeltaContract(requestParams);
+    if (!ParaswapDelta) {
+      throw new Error(`Delta is not available on chain ${options.chainId}`);
+    }
+
+    const res = await options.contractCaller.transactCall<AvailableMethods>({
+      address: ParaswapDelta,
+      abi: DeltaTokenModuleAbi,
+      contractMethod: 'cancelTWAPAndWithdraw',
+      args: [sanitizeTWAPOrderData(order)],
+      overrides,
+    });
+
+    return res;
+  };
+
+  const cancelTWAPBuyAndWithdrawDeltaOrder: CancelTWAPBuyAndWithdrawDeltaOrder<
+    T
+  > = async (order, overrides = {}, requestParams) => {
+    const ParaswapDelta = await getDeltaContract(requestParams);
+    if (!ParaswapDelta) {
+      throw new Error(`Delta is not available on chain ${options.chainId}`);
+    }
+
+    const res = await options.contractCaller.transactCall<AvailableMethods>({
+      address: ParaswapDelta,
+      abi: DeltaTokenModuleAbi,
+      contractMethod: 'cancelTWAPBuyAndWithdraw',
+      args: [sanitizeTWAPOrderData(order)],
+      overrides,
+    });
+
+    return res;
+  };
+
   return {
     cancelAndWithdrawDeltaOrder,
     withdrawDeltaNative,
     depositNativeAndPreSign,
     depositNativeAndPreSignDeltaOrder,
+    cancelTWAPAndWithdrawDeltaOrder,
+    cancelTWAPBuyAndWithdrawDeltaOrder,
   };
 };

@@ -15,6 +15,7 @@ import type { ApproveTokenForDeltaFunctions } from '../methods/delta/approveForD
 import type { PreSignDeltaOrderFunctions } from '../methods/delta/preSignDeltaOrder';
 import type { PreSignExternalDeltaOrderFunctions } from '../methods/delta/preSignExternalDeltaOrder';
 import type { DeltaTokenModuleFunctions } from '../methods/delta/deltaTokenModule';
+import type { PreSignTWAPDeltaOrderFunctions } from '../methods/delta/preSignTWAPDeltaOrder';
 import { API_URL, DEFAULT_VERSION } from '../constants';
 
 export type SDKConfig<TxResponse = any> = ConstructProviderFetchInput<
@@ -56,7 +57,8 @@ type InferWithTxResponse<
           ApproveTokenForDeltaFunctions<TxResponse>,
           PreSignDeltaOrderFunctions<TxResponse>,
           PreSignExternalDeltaOrderFunctions<TxResponse>,
-          DeltaTokenModuleFunctions<TxResponse>
+          DeltaTokenModuleFunctions<TxResponse>,
+          PreSignTWAPDeltaOrderFunctions<TxResponse>
         ]
         // then merge IntersectionOfReturns<Funcs> with them recursively
       >
