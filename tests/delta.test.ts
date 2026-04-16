@@ -1037,10 +1037,6 @@ function decreaseBySlippage(amount: string, slippagePercent: number): string {
   return amountAfterSlippage;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-
-const ETH_ADDRESS = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
-
 type VerifySignedCancelRequestInput = {
   orderId: string;
   signature: string;
