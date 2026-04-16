@@ -139,9 +139,7 @@ function getTwapAuctionAmounts(
     | Pick<DeltaAuctionTWAP, 'status' | 'transactions' | 'order'>
     | Pick<DeltaAuctionTWAPBuy, 'status' | 'transactions' | 'order'>
 ) {
-  const isExecuted =
-    twapAuction.status === 'EXECUTED' &&
-    twapAuction.transactions.length === twapAuction.order.numSlices;
+  const isExecuted = isExecutedAuction(twapAuction);
 
   const expected = getExpectedTwapOrderAmounts(twapAuction.order);
   if (isExecuted) {
@@ -334,14 +332,14 @@ function scaleByFactor(amount?: bigint, scalingFactor?: number): bigint {
     : amount * base ** BigInt(scalingFactor);
 }
 
-type ExecutedDeltaAuction = DeltaAuction & {
+type ExecutedDeltaAuctionProps = {
   status: 'EXECUTED';
   transactions: NonEmptyArray<DeltaAuctionTransaction>;
 };
 
-function isExecutedAuction(
-  auction: DeltaAuction
-): auction is ExecutedDeltaAuction {
+function isExecutedAuction<
+  T extends Pick<DeltaAuction, 'order' | 'status' | 'transactions'>
+>(auction: T): auction is T & ExecutedDeltaAuctionProps {
   if (auction.status !== 'EXECUTED') return false;
 
   if (isOrderCrosschain(auction.order)) {
@@ -352,7 +350,9 @@ function isExecutedAuction(
   return true;
 }
 
-function getFilledPercent(auction: DeltaAuctionUnion): number {
+function getFilledPercent(
+  auction: Pick<DeltaAuction, 'order' | 'transactions'>
+): number {
   const transaction = !isOrderCrosschain(auction.order)
     ? auction.transactions
     : auction.transactions.filter(
