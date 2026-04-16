@@ -320,7 +320,7 @@ function isOrderCrosschain<T extends { bridge?: Bridge } | object>(
   );
 }
 
-function scaleByFactor(amount?: bigint, scalingFactor?: number): bigint {
+function scaleByFactor(amount: bigint, scalingFactor: number): bigint {
   if (!amount) return 0n;
 
   if (scalingFactor === undefined) return amount;
