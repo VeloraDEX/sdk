@@ -160,6 +160,7 @@ import type {
   DeltaAuctionTWAPBuy,
   DeltaAuctionExternal,
   DeltaOrderUnion,
+  DeltaAuctionUnion,
   UnifiedDeltaOrderData,
 } from './methods/delta/helpers/types';
 import {
@@ -461,6 +462,7 @@ export type {
   DeltaAuctionTWAPBuy,
   DeltaAuctionExternal,
   DeltaOrderUnion,
+  DeltaAuctionUnion,
   UnifiedDeltaOrderData,
   DeltaAuctionStatus,
   DeltaAuctionTransaction,
