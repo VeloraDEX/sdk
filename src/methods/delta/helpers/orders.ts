@@ -3,6 +3,7 @@ import {
   Bridge,
   DeltaAuction,
   DeltaAuctionOrder,
+  DeltaAuctionStatus,
   DeltaAuctionTransaction,
   DeltaAuctionTWAP,
   DeltaAuctionTWAPBuy,
@@ -92,6 +93,12 @@ const checks = {
   isDeltaAuction,
   isExternalAuction,
   isOrderCrosschain,
+  isExecutedAuction,
+  isPartiallyExecutedAuction,
+  isFailedAuction,
+  isCanceledAuction,
+  isExpiredAuction,
+  isPendingAuction,
 };
 
 ///// GETTERS //////
@@ -227,6 +234,8 @@ function getUnifiedDeltaOrderData(
 
   const swapSide = getAuctionSwapSide(auction);
 
+  const filledPercent = getFilledPercent(auction);
+
   return {
     srcChainId,
     destChainId,
@@ -239,6 +248,7 @@ function getUnifiedDeltaOrderData(
     srcToken,
     destToken,
     swapSide,
+    filledPercent,
   };
 }
 
@@ -348,6 +358,94 @@ function isExecutedAuction<
   }
 
   return true;
+}
+
+const failedAuctionStatuses = [
+  'FAILED',
+  'EXPIRED',
+  'CANCELLED',
+  'REFUNDED',
+] as const;
+
+const failedAuctionStatusesSet = new Set<DeltaAuctionStatus>(
+  failedAuctionStatuses
+);
+
+type FailedDeltaAuctionProps =
+  | {
+      status: (typeof failedAuctionStatuses)[number];
+    }
+  | {
+      status: 'EXECUTED'; // srcChain tx succeeded
+      bridgeStatus: 'expired' | 'refunded'; // destChain tx failed or relayer didn't deliver
+    };
+
+function isFailedAuction<
+  T extends Pick<DeltaAuction, 'status' | 'order' | 'bridgeStatus'>
+>(auction: T): auction is T & FailedDeltaAuctionProps {
+  // already failed on srcChain, whether Order is crosschain or not
+  if (failedAuctionStatusesSet.has(auction.status)) return true;
+
+  // crosschain Order is executed on srcChain, but failed on destChain
+  if (auction.status === 'EXECUTED' && isOrderCrosschain(auction.order)) {
+    return (
+      auction.bridgeStatus === 'expired' || auction.bridgeStatus === 'refunded'
+    );
+  }
+
+  return false;
+}
+
+function isCanceledAuction<T extends Pick<DeltaAuction, 'status'>>(
+  auction: T
+): auction is T & {
+  status: 'CANCELLED';
+} {
+  return auction.status === 'CANCELLED';
+}
+
+function isExpiredAuction<T extends Pick<DeltaAuction, 'status'>>(
+  auction: T
+): auction is T & {
+  status: 'EXPIRED';
+} {
+  return auction.status === 'EXPIRED';
+}
+
+const pendingAuctionStatuses = [
+  'NOT_STARTED',
+  'AWAITING_PRE_SIGNATURE',
+  'RUNNING',
+  'EXECUTING',
+] as const;
+
+const pendingAuctionStatusesSet = new Set<DeltaAuctionStatus>(
+  pendingAuctionStatuses
+);
+function isPendingAuction<T extends Pick<DeltaAuction, 'status'>>(
+  auction: T
+): auction is T & {
+  status: (typeof pendingAuctionStatuses)[number];
+} {
+  return pendingAuctionStatusesSet.has(auction.status);
+}
+
+/**
+ * @description Auction can be cancelled in the middle of execution,
+ * or crosschain-TWAP slices may not all be bridged,
+ * or order can be suspended if it runs out of user balance/allowance.
+ * Orders in the middle of normal execution can also be considered partially executed if they have any transactions.
+ */
+function isPartiallyExecutedAuction<
+  T extends Pick<DeltaAuction, 'order' | 'transactions'>
+>(
+  auction: T
+): auction is T & { transactions: NonEmptyArray<DeltaAuctionTransaction> } {
+  if (auction.transactions.length === 0) return false;
+
+  const filledPercent = getFilledPercent(auction);
+
+  return filledPercent > 0 && filledPercent < 100;
 }
 
 function getFilledPercent(
