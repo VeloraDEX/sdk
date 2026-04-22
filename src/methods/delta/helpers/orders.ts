@@ -20,12 +20,18 @@ import {
 
 ///// CHECKS //////
 
+/**
+ * @description Checks whether an order is a TWAP Sell or TWAP Buy order.
+ */
 function isTWAPOrder(
   order: DeltaOrderUnion
 ): order is TWAPDeltaOrder | TWAPBuyDeltaOrder {
   return 'numSlices' in order && typeof order.numSlices === 'number';
 }
 
+/**
+ * @description Checks whether an order is a TWAP Sell order.
+ */
 function isTWAPSellOrder(order: DeltaOrderUnion): order is TWAPDeltaOrder {
   return (
     isTWAPOrder(order) &&
@@ -33,6 +39,9 @@ function isTWAPSellOrder(order: DeltaOrderUnion): order is TWAPDeltaOrder {
     typeof order.totalSrcAmount === 'string'
   );
 }
+/**
+ * @description Checks whether an order is a TWAP Buy order.
+ */
 function isTWAPBuyOrder(order: DeltaOrderUnion): order is TWAPBuyDeltaOrder {
   return (
     isTWAPOrder(order) &&
@@ -41,40 +50,61 @@ function isTWAPBuyOrder(order: DeltaOrderUnion): order is TWAPBuyDeltaOrder {
   );
 }
 
+/**
+ * @description Checks whether an order is an External order.
+ */
 function isExternalOrder(order: DeltaOrderUnion): order is ExternalDeltaOrder {
   return 'handler' in order;
 }
 
+/**
+ * @description Checks whether an order is a regular Delta auction order.
+ */
 function isDeltaOrder(order: DeltaOrderUnion): order is DeltaAuctionOrder {
   return (
     !isExternalOrder(order) && 'kind' in order && typeof order.kind === 'number'
   );
 }
 
+/**
+ * @description Checks whether an auction is a TWAP auction.
+ */
 function isTWAPAuction<T extends OnChainOrderType>(auction: {
   onChainOrderType: T;
 }): auction is { onChainOrderType: ('TWAPOrder' | 'TWAPBuyOrder') & T } {
   return isTWAPSellAuction(auction) || isTWAPBuyAuction(auction);
 }
 
+/**
+ * @description Checks whether an auction is a TWAP Sell auction.
+ */
 function isTWAPSellAuction<T extends OnChainOrderType>(auction: {
   onChainOrderType: T;
 }): auction is { onChainOrderType: 'TWAPOrder' & T } {
   return auction.onChainOrderType === 'TWAPOrder';
 }
 
+/**
+ * @description Checks whether an auction is a TWAP Buy auction.
+ */
 function isTWAPBuyAuction<T extends OnChainOrderType>(auction: {
   onChainOrderType: T;
 }): auction is { onChainOrderType: 'TWAPBuyOrder' & T } {
   return auction.onChainOrderType === 'TWAPBuyOrder';
 }
 
+/**
+ * @description Checks whether an auction is a Delta auction.
+ */
 function isDeltaAuction<T extends OnChainOrderType>(auction: {
   onChainOrderType: T;
 }): auction is { onChainOrderType: 'Order' & T } {
   return auction.onChainOrderType === 'Order';
 }
 
+/**
+ * @description Checks whether an auction is an External auction.
+ */
 function isExternalAuction<T extends OnChainOrderType>(auction: {
   onChainOrderType: T;
 }): auction is { onChainOrderType: 'ExternalOrder' & T } {
@@ -103,6 +133,9 @@ const checks = {
 
 ///// GETTERS //////
 
+/**
+ * @description Returns the expected source amount for a TWAP order.
+ */
 function getExpectedTwapSrcAmount(
   order:
     | Pick<TWAPDeltaOrder, 'totalSrcAmount'>
@@ -116,6 +149,9 @@ function getExpectedTwapSrcAmount(
   return order.maxSrcAmount; // BUY
 }
 
+/**
+ * @description Returns the expected destination amount for a TWAP order.
+ */
 function getExpectedTwapDestAmount(
   order:
     | Pick<TWAPDeltaOrder, 'destAmountPerSlice' | 'numSlices' | 'bridge'>
@@ -133,6 +169,9 @@ function getExpectedTwapDestAmount(
   return destAmount.toString();
 }
 
+/**
+ * @description Returns expected source and destination amounts for a TWAP order.
+ */
 function getExpectedTwapOrderAmounts(
   order: TWAPDeltaOrder | TWAPBuyDeltaOrder
 ) {
@@ -141,6 +180,9 @@ function getExpectedTwapOrderAmounts(
   return { srcAmount, destAmount };
 }
 
+/**
+ * @description Returns expected and, when available, final amounts for a TWAP auction.
+ */
 function getTwapAuctionAmounts(
   twapAuction:
     | Pick<DeltaAuctionTWAP, 'status' | 'transactions' | 'order'>
@@ -184,6 +226,9 @@ export const OrderHelpers = {
 
 // -------------------- Auction Unified Data --------------------
 
+/**
+ * @description Returns the destination chain id for the auction.
+ */
 function getAuctionDestChainId({
   order,
   chainId,
@@ -196,6 +241,9 @@ const OrderKindToSwapSide = {
   [OrderKind.Buy]: 'BUY',
 } as const;
 
+/**
+ * @description Returns swap side from a Delta or External order kind.
+ */
 function getSwapSideFromDeltaOrder(
   order: DeltaAuctionOrder | ExternalDeltaOrder
 ): SwapSideUnion {
@@ -207,12 +255,18 @@ const TwapTypeToSwapSide = {
   TWAPBuyOrder: 'BUY',
 } as const;
 
+/**
+ * @description Returns swap side from TWAP on-chain order type.
+ */
 function getSwapSideFromTwapOrderType(
   onChainOrderType: 'TWAPOrder' | 'TWAPBuyOrder'
 ): SwapSideUnion {
   return TwapTypeToSwapSide[onChainOrderType];
 }
 
+/**
+ * @description Returns swap side for any auction type.
+ */
 function getAuctionSwapSide(auction: DeltaAuction): SwapSideUnion {
   if (isTWAPAuction(auction)) {
     // TWAP orders have onChainOrderType instead of kind
@@ -221,6 +275,9 @@ function getAuctionSwapSide(auction: DeltaAuction): SwapSideUnion {
   return getSwapSideFromDeltaOrder(auction.order);
 }
 
+/**
+ * @description Returns unified order data with normalized amounts, tokens, and side.
+ */
 function getUnifiedDeltaOrderData(
   auction: DeltaAuction
 ): UnifiedDeltaOrderData {
@@ -252,6 +309,9 @@ function getUnifiedDeltaOrderData(
   };
 }
 
+/**
+ * @description Returns source and destination token addresses for an order.
+ */
 function getOrderTokenAddresses(order: DeltaAuction['order']) {
   const srcToken = order.srcToken;
   const destToken = isOrderCrosschain(order)
@@ -263,6 +323,9 @@ function getOrderTokenAddresses(order: DeltaAuction['order']) {
   };
 }
 
+/**
+ * @description Aggregates transaction amounts into total source and destination values.
+ */
 function getTransactionAmounts(transactions: DeltaAuctionTransaction[]) {
   const { srcAmount, destAmount } = transactions.reduce(
     (acc, { spentAmount, receivedAmount, bridgeMetadata }) => {
@@ -285,6 +348,9 @@ function getTransactionAmounts(transactions: DeltaAuctionTransaction[]) {
   };
 }
 
+/**
+ * @description Returns expected and, when available, final amounts for an auction.
+ */
 function getAuctionAmounts(auction: DeltaAuction) {
   const isTwap = checks.isTWAPAuction(auction);
   if (isTwap) {
@@ -321,6 +387,9 @@ function getAuctionAmounts(auction: DeltaAuction) {
   };
 }
 
+/**
+ * @description Checks whether an order includes valid cross-chain bridge details.
+ */
 function isOrderCrosschain<T extends { bridge?: Bridge } | object>(
   order: T
   // Extract<ExternalOrder, { bridge?: Bridge }> == never
@@ -347,6 +416,9 @@ type ExecutedDeltaAuctionProps = {
   transactions: NonEmptyArray<DeltaAuctionTransaction>;
 };
 
+/**
+ * @description Checks whether an auction is fully executed.
+ */
 function isExecutedAuction<
   T extends Pick<DeltaAuction, 'order' | 'status' | 'transactions'>
 >(auction: T): auction is T & ExecutedDeltaAuctionProps {
@@ -380,6 +452,9 @@ type FailedDeltaAuctionProps =
       bridgeStatus: 'expired' | 'refunded'; // destChain tx failed or relayer didn't deliver
     };
 
+/**
+ * @description Checks whether an auction is failed on source or destination chain.
+ */
 function isFailedAuction<
   T extends Pick<DeltaAuction, 'status' | 'order' | 'bridgeStatus'>
 >(auction: T): auction is T & FailedDeltaAuctionProps {
@@ -396,6 +471,9 @@ function isFailedAuction<
   return false;
 }
 
+/**
+ * @description Checks whether an auction status is cancelled.
+ */
 function isCanceledAuction<T extends Pick<DeltaAuction, 'status'>>(
   auction: T
 ): auction is T & {
@@ -404,6 +482,9 @@ function isCanceledAuction<T extends Pick<DeltaAuction, 'status'>>(
   return auction.status === 'CANCELLED';
 }
 
+/**
+ * @description Checks whether an auction status is expired.
+ */
 function isExpiredAuction<T extends Pick<DeltaAuction, 'status'>>(
   auction: T
 ): auction is T & {
@@ -422,6 +503,9 @@ const pendingAuctionStatuses = [
 const pendingAuctionStatusesSet = new Set<DeltaAuctionStatus>(
   pendingAuctionStatuses
 );
+/**
+ * @description Checks whether an auction status is in pending execution states.
+ */
 function isPendingAuction<T extends Pick<DeltaAuction, 'status'>>(
   auction: T
 ): auction is T & {
@@ -448,6 +532,9 @@ function isPartiallyExecutedAuction<
   return filledPercent > 0 && filledPercent < 100;
 }
 
+/**
+ * @description Calculates filled percentage from auction transaction filled bps values.
+ */
 function getFilledPercent(
   auction: Pick<DeltaAuction, 'order' | 'transactions'>
 ): number {
