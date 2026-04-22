@@ -1,5 +1,6 @@
 import type { EnumerateLiteral } from '../../../types';
 import { SwapSide } from '../../../constants';
+import { Prettify } from 'ts-essentials';
 
 export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
@@ -203,7 +204,7 @@ export type DeltaAuctionTransaction = {
   agent: string;
   auctionId: string;
 
-  // bridge* fileds = null for single-crosschain orders
+  // bridge* fileds = null for single-chain orders and all TWAP orders
   bridgeMetadata: BridgeMetadata | null;
   bridgeStatus: BridgeStatus | null;
   bridgeProtocol: string | null;
@@ -215,6 +216,18 @@ export type OnChainOrderMap = {
   ExternalOrder: ExternalDeltaOrder;
   TWAPOrder: TWAPDeltaOrder;
   TWAPBuyOrder: TWAPBuyDeltaOrder;
+};
+
+type BaseBridgeAuctionFields = Pick<
+  DeltaAuctionBase,
+  'bridgeMetadata' | 'bridgeStatus'
+>;
+
+type BridgeAuctionFiledsMap = {
+  Order: BaseBridgeAuctionFields;
+  ExternalOrder: BaseBridgeAuctionFields;
+  TWAPOrder: Record<keyof BaseBridgeAuctionFields, null>;
+  TWAPBuyOrder: Record<keyof BaseBridgeAuctionFields, null>;
 };
 
 type DeltaAuctionBase = {
@@ -243,10 +256,12 @@ type DeltaAuctionBase = {
 
 export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
   T extends T
-    ? DeltaAuctionBase & {
-        onChainOrderType: T;
-        order: OnChainOrderMap[T];
-      }
+    ? Prettify<
+        DeltaAuctionBase & {
+          onChainOrderType: T;
+          order: OnChainOrderMap[T];
+        } & BridgeAuctionFiledsMap[T]
+      >
     : never;
 
 export type DeltaAuctionDelta = DeltaAuction<'Order'>;
@@ -334,4 +349,6 @@ export type UnifiedDeltaOrderData = {
   destToken: string;
   /** @description  swap side of the order */
   swapSide: SwapSideUnion;
+  /** @description  filled percent of the order (based on transactions[].filledPercent) */
+  filledPercent: number;
 };
