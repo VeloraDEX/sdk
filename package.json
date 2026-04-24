@@ -68,7 +68,6 @@
     "typedoc-plugin-missing-exports": "^3.0.0",
     "typedoc-plugin-replace-text": "^4.0.0",
     "typescript": "^5.6.3",
-    "viem": "^2.39.0",
     "wagmi": "^2.19.4",
     "web3": "^4.14.0"
   },
