@@ -87,7 +87,7 @@ export async function resolvePartnerFee(
   let partnerAddress = options.partnerAddress;
   let partnerFeeBps =
     options.partnerFeeBps ??
-    (options.deltaPrice.partnerFee
+    (options.deltaPrice.partnerFee !== undefined
       ? options.deltaPrice.partnerFee * 100
       : undefined);
   let partnerTakesSurplus = options.partnerTakesSurplus;
@@ -117,7 +117,7 @@ export async function resolvePartnerFee(
   }
 
   return {
-    partnerAddress: partnerAddress!,
+    partnerAddress,
     partnerFeeBps: partnerFeeBps ?? 0,
     partnerTakesSurplus: partnerTakesSurplus ?? false,
   };
