@@ -403,7 +403,7 @@ function isOrderCrosschain<T extends { bridge?: Bridge } | object>(
 function scaleByFactor(amount: bigint, scalingFactor: number): bigint {
   if (!amount) return 0n;
 
-  if (scalingFactor === undefined) return amount;
+  if (scalingFactor === 0) return amount;
 
   const base = 10n;
 
@@ -446,12 +446,12 @@ const failedAuctionStatusesSet = new Set<DeltaAuctionStatus>(
 
 type FailedDeltaAuctionProps =
   | {
-      status: (typeof failedAuctionStatuses)[number];
-    }
+    status: (typeof failedAuctionStatuses)[number];
+  }
   | {
-      status: 'EXECUTED'; // srcChain tx succeeded
-      bridgeStatus: 'expired' | 'refunded'; // destChain tx failed or relayer didn't deliver
-    };
+    status: 'EXECUTED'; // srcChain tx succeeded
+    bridgeStatus: 'expired' | 'refunded'; // destChain tx failed or relayer didn't deliver
+  };
 
 /**
  * @description Checks whether an auction is failed on source or destination chain.
@@ -542,8 +542,8 @@ function getFilledPercent(
   const transaction = !isOrderCrosschain(auction.order)
     ? auction.transactions
     : auction.transactions.filter(
-        (transaction) => transaction.bridgeStatus === 'filled'
-      );
+      (transaction) => transaction.bridgeStatus === 'filled'
+    );
 
   const filledPercentBps = transaction.reduce((acc, { filledPercent }) => {
     return acc + filledPercent;
