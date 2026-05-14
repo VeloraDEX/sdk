@@ -539,15 +539,18 @@ function isPartiallyExecutedAuction<
 function getFilledPercent(
   auction: Pick<DeltaAuction, 'order' | 'transactions'>
 ): number {
-  const transaction = !isOrderCrosschain(auction.order)
+  const completeTransactions = !isOrderCrosschain(auction.order)
     ? auction.transactions
     : auction.transactions.filter(
         (transaction) => transaction.bridgeStatus === 'filled'
       );
 
-  const filledPercentBps = transaction.reduce((acc, { filledPercent }) => {
-    return acc + filledPercent;
-  }, 0);
+  const filledPercentBps = completeTransactions.reduce(
+    (acc, { filledPercent }) => {
+      return acc + filledPercent;
+    },
+    0
+  );
 
   const filledPercent = filledPercentBps / 100;
   return filledPercent;
