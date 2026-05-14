@@ -155,6 +155,13 @@ import type {
   DeltaAmountsSellSlippage,
   DeltaAmountsBuySlippage,
   DeltaAmountsExplicit,
+  DeltaAuctionDelta,
+  DeltaAuctionTWAP,
+  DeltaAuctionTWAPBuy,
+  DeltaAuctionExternal,
+  DeltaOrderUnion,
+  DeltaAuctionUnion,
+  UnifiedDeltaOrderData,
 } from './methods/delta/helpers/types';
 import {
   BuildDeltaOrderDataParams,
@@ -450,6 +457,13 @@ export type {
   DeltaPriceParams,
   DeltaAuctionOrder,
   DeltaAuction,
+  DeltaAuctionDelta,
+  DeltaAuctionTWAP,
+  DeltaAuctionTWAPBuy,
+  DeltaAuctionExternal,
+  DeltaOrderUnion,
+  DeltaAuctionUnion,
+  UnifiedDeltaOrderData,
   DeltaAuctionStatus,
   DeltaAuctionTransaction,
   DeltaOrderFilterByStatus,
@@ -552,3 +566,6 @@ export * from './methods/limitOrders/helpers/types';
 export * from './methods/nftOrders';
 export * from './methods/nftOrders/helpers/types';
 export { AssetType } from './methods/nftOrders/helpers/misc';
+
+// helpers for Delta Orders
+export { OrderHelpers } from './methods/delta/helpers/orders';

@@ -63,6 +63,7 @@ exports[`Quote:methods Get Quote for market 1`] = `
   "contractAddress": "0x6a000f20005980200259b80c5102003040001068",
   "contractMethod": "dynamic_string",
   "destAmount": "dynamic_number",
+  "destAmountAfterFee": "dynamic_number",
   "destDecimals": 18,
   "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
   "destUSD": "dynamic_number",

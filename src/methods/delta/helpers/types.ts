@@ -1,5 +1,6 @@
 import type { EnumerateLiteral } from '../../../types';
 import { SwapSide } from '../../../constants';
+import { Prettify } from 'ts-essentials';
 
 export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
@@ -39,7 +40,7 @@ export type DeltaAmountsWithSlippage =
   | DeltaAmountsBuySlippage
   | DeltaAmountsExplicit;
 
-enum OrderKind {
+export enum OrderKind {
   Sell = 0,
   Buy = 1,
 }
@@ -202,6 +203,12 @@ export type DeltaAuctionTransaction = {
   partnerFee: string;
   agent: string;
   auctionId: string;
+
+  // transactgion.bridge* fields = null for single-chain orders
+  bridgeMetadata: BridgeMetadata | null;
+  bridgeStatus: BridgeStatus | null;
+  bridgeProtocol: string | null;
+  bridgeOverride: Pick<Bridge, 'protocolSelector' | 'protocolData'> | null;
 };
 
 export type OnChainOrderMap = {
@@ -209,6 +216,18 @@ export type OnChainOrderMap = {
   ExternalOrder: ExternalDeltaOrder;
   TWAPOrder: TWAPDeltaOrder;
   TWAPBuyOrder: TWAPBuyDeltaOrder;
+};
+
+type BaseBridgeAuctionFields = Pick<
+  DeltaAuctionBase,
+  'bridgeMetadata' | 'bridgeStatus'
+>;
+
+type BridgeAuctionFiledsMap = {
+  Order: BaseBridgeAuctionFields;
+  ExternalOrder: BaseBridgeAuctionFields;
+  TWAPOrder: Record<keyof BaseBridgeAuctionFields, null>;
+  TWAPBuyOrder: Record<keyof BaseBridgeAuctionFields, null>;
 };
 
 type DeltaAuctionBase = {
@@ -229,6 +248,7 @@ type DeltaAuctionBase = {
   excludeAgents: string[] | null;
   includeAgents: string[] | null;
 
+  // bridge* fields = null for single-chain orders and all TWAP orders
   bridgeMetadata: BridgeMetadata | null;
   bridgeStatus: BridgeStatus | null;
 
@@ -237,19 +257,34 @@ type DeltaAuctionBase = {
 
 export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
   T extends T
-    ? DeltaAuctionBase & {
-        onChainOrderType: T;
-        order: OnChainOrderMap[T];
-      }
+    ? Prettify<
+        DeltaAuctionBase & {
+          onChainOrderType: T;
+          order: OnChainOrderMap[T];
+        } & BridgeAuctionFiledsMap[T]
+      >
     : never;
+
+export type DeltaAuctionDelta = DeltaAuction<'Order'>;
+export type DeltaAuctionExternal = DeltaAuction<'ExternalOrder'>;
+export type DeltaAuctionTWAP = DeltaAuction<'TWAPOrder'>;
+export type DeltaAuctionTWAPBuy = DeltaAuction<'TWAPBuyOrder'>;
+
+export type DeltaAuctionUnion =
+  | DeltaAuctionDelta
+  | DeltaAuctionExternal
+  | DeltaAuctionTWAP
+  | DeltaAuctionTWAPBuy;
+
+export type DeltaOrderUnion = OnChainOrderMap[keyof OnChainOrderMap];
 
 export type BridgeMetadata = {
   /** @description The amount that user should expect to get */
   outputAmount: string;
   /** @description The cross-chain deadline. If deadline passes, the bridgeStatus would be expired */
-  fillDeadline: number;
+  fillDeadline?: number; // available for Across protocol
   /** @description The deposit id */
-  depositId: number;
+  depositId?: number; // available for Across protocol
   /** @description The transaction hash on the destination chain that fulfilled the order. When bridgeStatus='filled' */
   fillTx?: string;
   /** @description The transaction hash on the source chain that refunded the deposit. When bridgeStatus='refunded' */
@@ -285,4 +320,36 @@ export type BridgePriceInfo = {
   fastest: boolean;
   bestReturn: boolean;
   recommended: boolean;
+};
+
+export type UnifiedDeltaOrderData = {
+  /** @description  amounts at the start of Order execution and after Order execution. May differ from each other */
+  amounts: {
+    /** @description  expected amounts at the start of Order execution */
+    expected: {
+      srcAmount: string;
+      destAmount: string;
+    };
+    /** @description  final amounts after Order execution. May be less than expected if there is slippage  or only partial execution was achieved */
+    final?: {
+      srcAmount: string;
+      destAmount: string;
+    };
+  };
+  /** @description  source chain id */
+  srcChainId: number;
+  /** @description  destination chain id (same as source chain id for single chain orders) */
+  destChainId: number;
+  /** @description  input token amount */
+  srcAmount: string;
+  /** @description  output token amount (expected amount for pending orders, actual received amount for executed orders) */
+  destAmount: string;
+  /** @description  input token address */
+  srcToken: string;
+  /** @description  output token address */
+  destToken: string;
+  /** @description  swap side of the order */
+  swapSide: SwapSideUnion;
+  /** @description  filled percent of the order (based on transactions[].filledPercent) */
+  filledPercent: number;
 };
