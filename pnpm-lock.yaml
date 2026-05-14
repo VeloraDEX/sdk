@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@paraswap/core':
-        specifier: 2.4.1
-        version: 2.4.1
+        specifier: 2.4.3
+        version: 2.4.3
       ts-essentials:
         specifier: ^10.0.3
         version: 10.0.3(typescript@5.6.3)
@@ -1434,8 +1434,8 @@ packages:
     resolution: {integrity: sha512-q4n32/FNKIhQ3zQGGw5CvPF6GTvDCpYwIf7bEY/dZTZbgfDsHyjJwURxUJf3VQuuJj+fDIFl4+KkBVbw4Ef6jA==}
     engines: {node: '>= 12'}
 
-  '@paraswap/core@2.4.1':
-    resolution: {integrity: sha512-mb0GCuLqQcrGZBzILC8N4WetnIqWEG6DxA2KZuk4X5HJZ9zeW9FQTCXMzZhGAJSx2ZiBMdHbV6RevmXI7IlJbQ==}
+  '@paraswap/core@2.4.3':
+    resolution: {integrity: sha512-2AxAsSzGfaaUWdsbr5qAAwP0eiEfIFd9LDzGMK+aMXYAbS7LgC33LqGnhMDXKJsAQuPgdXhCMpMcasuFrYXz0w==}
 
   '@parcel/watcher-android-arm64@2.4.1':
     resolution: {integrity: sha512-LOi/WTbbh3aTn2RYddrO8pnapixAziFl6SMxHM69r3tvdSm94JtCenaKgk1GRg5FJ5wpMCpHeW+7yqPlvZv7kg==}
@@ -8269,7 +8269,7 @@ snapshots:
       '@nomicfoundation/solidity-analyzer-linux-x64-musl': 0.1.2
       '@nomicfoundation/solidity-analyzer-win32-x64-msvc': 0.1.2
 
-  '@paraswap/core@2.4.1': {}
+  '@paraswap/core@2.4.3': {}
 
   '@parcel/watcher-android-arm64@2.4.1':
     optional: true
