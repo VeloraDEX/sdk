@@ -359,6 +359,7 @@ function getAuctionAmounts(auction: DeltaAuction) {
 
   let expected = {
     srcAmount: auction.order.srcAmount,
+    // defensive fallback in case Order shape changes or legacy Orders don't have all fields
     destAmount: auction.order.expectedAmount || auction.order.destAmount,
   };
 
