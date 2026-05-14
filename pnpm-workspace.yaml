@@ -1,3 +1,8 @@
+allowBuilds:
+  bufferutil: false
+  esbuild: false
+  keccak: false
+  utf-8-validate: false
 minimumReleaseAgeExclude:
   - cookie@0.7.0
   - '@babel/helpers@7.26.10'
