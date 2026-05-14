@@ -75,7 +75,6 @@
     "typedoc-plugin-replace-text": "^4.0.0",
     "typescript": "^5.6.3",
     "viem": "^2.39.0",
-    "wagmi": "^2.19.4",
     "web3": "^4.14.0",
     "web3-eth-contract": "4.7.0"
   },
