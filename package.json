@@ -18,8 +18,8 @@
     "start": "dts watch",
     "test": "dts test",
     "docs:html": "typedoc --gitRevision \"$(git branch --show-current)\"",
-    "docs:md": "MD=true yarn docs:html",
-    "docs": "yarn docs:html && yarn docs:md"
+    "docs:md": "MD=true pnpm docs:html",
+    "docs": "pnpm docs:html && pnpm docs:md"
   },
   "husky": {
     "hooks": {
