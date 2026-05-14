@@ -204,7 +204,7 @@ export type DeltaAuctionTransaction = {
   agent: string;
   auctionId: string;
 
-  // bridge* fileds = null for single-chain orders and all TWAP orders
+  // transactgion.bridge* fields = null for single-chain orders
   bridgeMetadata: BridgeMetadata | null;
   bridgeStatus: BridgeStatus | null;
   bridgeProtocol: string | null;
@@ -248,6 +248,7 @@ type DeltaAuctionBase = {
   excludeAgents: string[] | null;
   includeAgents: string[] | null;
 
+  // bridge* fields = null for single-chain orders and all TWAP orders
   bridgeMetadata: BridgeMetadata | null;
   bridgeStatus: BridgeStatus | null;
 
