@@ -41,7 +41,7 @@ importers:
         version: 5.8.0
       '@size-limit/preset-small-lib':
         specifier: ^12.1.0
-        version: 12.1.0(size-limit@12.0.0)
+        version: 12.1.0(size-limit@12.1.0)
       '@tsconfig/recommended':
         specifier: ^1.0.8
         version: 1.0.8
@@ -82,8 +82,8 @@ importers:
         specifier: ^4.0.2
         version: 4.0.2
       size-limit:
-        specifier: ^12.0.0
-        version: 12.0.0
+        specifier: ^12.1.0
+        version: 12.1.0
       tslib:
         specifier: ^2.8.1
         version: 2.8.1
@@ -4057,8 +4057,8 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
-  size-limit@12.0.0:
-    resolution: {integrity: sha512-JBG8dioIs0m2kHOhs9jD6E/tZKD08vmbf2bfqj/rJyNWqJxk/ZcakixjhYtsqdbi+AKVbfPkt3g2RRZiKaizYA==}
+  size-limit@12.1.0:
+    resolution: {integrity: sha512-VnDS2fycANrJFVPQwjaD+h+hkISY7EB3LsPsYWje4lBCjQwwsZLxjwwRwVJKHrcj2ZqyG+DdXykWm9mbZklZrw==}
     engines: {node: ^20.0.0 || ^22.0.0 || >=24.0.0}
     hasBin: true
     peerDependencies:
@@ -4233,6 +4233,10 @@ packages:
 
   tinyglobby@0.2.15:
     resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
+    engines: {node: '>=12.0.0'}
+
+  tinyglobby@0.2.16:
+    resolution: {integrity: sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg==}
     engines: {node: '>=12.0.0'}
 
   tmp@0.2.5:
@@ -6442,21 +6446,21 @@ snapshots:
     dependencies:
       '@sinonjs/commons': 3.0.1
 
-  '@size-limit/esbuild@12.1.0(size-limit@12.0.0)':
+  '@size-limit/esbuild@12.1.0(size-limit@12.1.0)':
     dependencies:
       esbuild: 0.28.0
       nanoid: 5.1.11
-      size-limit: 12.0.0
+      size-limit: 12.1.0
 
-  '@size-limit/file@12.1.0(size-limit@12.0.0)':
+  '@size-limit/file@12.1.0(size-limit@12.1.0)':
     dependencies:
-      size-limit: 12.0.0
+      size-limit: 12.1.0
 
-  '@size-limit/preset-small-lib@12.1.0(size-limit@12.0.0)':
+  '@size-limit/preset-small-lib@12.1.0(size-limit@12.1.0)':
     dependencies:
-      '@size-limit/esbuild': 12.1.0(size-limit@12.0.0)
-      '@size-limit/file': 12.1.0(size-limit@12.0.0)
-      size-limit: 12.0.0
+      '@size-limit/esbuild': 12.1.0(size-limit@12.1.0)
+      '@size-limit/file': 12.1.0(size-limit@12.1.0)
+      size-limit: 12.1.0
 
   '@tootallnate/once@3.0.1': {}
 
@@ -9692,13 +9696,13 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
-  size-limit@12.0.0:
+  size-limit@12.1.0:
     dependencies:
       bytes-iec: 3.1.1
       lilconfig: 3.1.3
       nanospinner: 1.2.2
       picocolors: 1.1.1
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
 
   slash@3.0.0: {}
 
@@ -9891,6 +9895,11 @@ snapshots:
       globrex: 0.1.2
 
   tinyglobby@0.2.15:
+    dependencies:
+      fdir: 6.5.0(picomatch@4.0.4)
+      picomatch: 4.0.4
+
+  tinyglobby@0.2.16:
     dependencies:
       fdir: 6.5.0(picomatch@4.0.4)
       picomatch: 4.0.4
