@@ -7,7 +7,6 @@ import {
   DeltaAuctionTransaction,
   DeltaAuctionTWAP,
   DeltaAuctionTWAPBuy,
-  DeltaAuctionUnion,
   DeltaOrderUnion,
   ExternalDeltaOrder,
   OnChainOrderType,
