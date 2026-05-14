@@ -259,6 +259,7 @@ describe.each([
       gasCostUSD: 'dynamic_number',
       hmac: 'dynamic_string',
       destAmount: 'dynamic_number',
+      destAmountAfterFee: 'dynamic_number',
       blockNumber: 'dynamic_number',
       srcUSD: 'dynamic_number',
       destUSD: 'dynamic_number',

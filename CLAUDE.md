@@ -1,6 +1,53 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Velora SDK — Architecture Guide
 
 TypeScript SDK for the Paraswap/Velora Delta protocol (on-chain order-based DEX).
+
+## Commands
+
+```bash
+yarn build          # compile to dist/
+yarn test           # run Jest tests (testEnvironment: node)
+yarn lint           # dts lint
+yarn start          # watch mode (dts watch)
+npx tsc --noEmit    # type-check without emitting
+```
+
+Run a single test file:
+```bash
+yarn test --testPathPattern=src/path/to/file.test.ts
+```
+
+## SDK Entry Points (`src/sdk/`)
+
+Three ways to construct the SDK:
+
+| File | Export | Use When |
+|------|--------|----------|
+| `simple.ts` | `constructSimpleSDK(options, providerOptions?)` | Most consumers — handles fetcher/provider wiring automatically |
+| `full.ts` | `constructFullSDK<TxResponse>(config)` | Full control over all methods, namespaced (`sdk.delta.*`, `sdk.swap.*`) |
+| `partial.ts` | `constructPartialSDK<Config, Funcs>(config, ...funcs)` | Pick only the constructors you need; TypeScript infers the return type |
+
+`constructSimpleSDK` accepts `{ axios }`, `{ fetch }`, or `{ fetcher }` for the network layer, and optionally `{ ethersProviderOrSigner | ethersV6ProviderOrSigner | viemClient | web3, account }` for signing/transacting.
+
+## Provider Adapters (`src/helpers/providers/`)
+
+Each file exports `constructContractCaller(provider, account)` → `ContractCallerFunctions<TxResponse>`:
+- `viem.ts` — viem `PublicClient` + `WalletClient` (`Hex` tx response)
+- `ethers.ts` — ethersv5 provider/signer (`ContractTransaction` tx response)
+- `ethersV6.ts` — ethersv6 provider/signer
+- `web3.ts` — Web3.js
+
+## Module Structure (`src/methods/`)
+
+- `delta/` — Core feature: Delta auction orders (see detail below)
+- `swap/` — Token swap: rates, transaction building, approvals, balances
+- `limitOrders/` — **Deprecated.** EIP-712 signed limit orders
+- `nftOrders/` — **Deprecated.** EIP-712 signed NFT orders
+- `quote/` — Unified quote endpoint
 
 ## Composable Constructor Pattern
 
@@ -24,9 +71,21 @@ Every feature module exports a `constructXxx(options) => XxxFunctions` factory:
 1. Sign EIP-712 typed data via `options.contractCaller.signTypedDataCall(typedData)`
 2. POST to API via `options.fetcher<ResponseType>({ url, method, data })`
 
-## Key File Locations
+## Delta Module (`src/methods/delta/`)
 
-### Delta Module (`src/methods/delta/`)
+Three order families, each with build/sign/post/preSign constructors:
+
+| Family | `onChainOrderType` | Order type | Build input key |
+|--------|-------------------|-----------|-----------------|
+| Standard | `'Order'` | `DeltaAuctionOrder` | `buildDeltaOrder` |
+| External | `'ExternalOrder'` | `ExternalDeltaOrder` | `buildExternalDeltaOrder` (has `handler` field instead of `bridge`) |
+| TWAP Sell | `'TWAPOrder'` | `TWAPDeltaOrder` | `buildTWAPDeltaOrder` |
+| TWAP Buy | `'TWAPBuyOrder'` | `TWAPBuyDeltaOrder` | `buildTWAPDeltaOrder` |
+
+Each family has four files: `build*`, `sign*`, `post*`, `preSign*`. High-level orchestrators (`constructSubmitDeltaOrder`, `constructSubmitExternalDeltaOrder`, `constructSubmitTWAPDeltaOrder`) in `index.ts` wrap build→sign→post.
+
+### Key Files
+
 | File | Constructor | Purpose | Generic? | Pattern |
 |------|-------------|---------|----------|---------|
 | `index.ts` | `constructSubmitDeltaOrder`, `constructAllDeltaOrdersHandlers` | Composite: orchestrates all modules, defines `DeltaOrderHandlers<T>` | `submitDelta`: No, `allHandlers`: `<T>` | Composite |
@@ -46,10 +105,14 @@ Every feature module exports a `constructXxx(options) => XxxFunctions` factory:
 | `constants.ts` | — | `DEFAULT_BRIDGE` constant (all-zero values for same-chain orders) | — | — |
 
 ### Delta Helpers (`src/methods/delta/helpers/`)
-- `types.ts` — `DeltaAuctionOrder`, `Bridge`, `DeltaAuction`, `DeltaAuctionStatus`, `BridgeMetadata`, `BridgeStatus`, `BridgePriceInfo`, `SwapSideToOrderKind`
+- `types.ts` — `DeltaAuctionOrder`, `Bridge`, `DeltaAuction`, `DeltaAuctionStatus`, `BridgeMetadata`, `BridgeStatus`, `BridgePriceInfo`, `SwapSideToOrderKind`, `OnChainOrderType`, `DeltaAuctionUnion`
 - `buildDeltaOrderData.ts` — `buildDeltaSignableOrderData`, `produceDeltaOrderTypedData`, `SignableDeltaOrderData`, `BuildDeltaOrderDataInput`, `DELTA_DEFAULT_EXPIRY`
 - `buildCancelDeltaOrderData.ts` — `buildCancelDeltaOrderSignableData`, `SignableCancelDeltaOrderData`, `CancelDeltaOrderData`
-- `misc.ts` — `sanitizeDeltaOrderData` (strips extra fields from order data before signing/hashing)
+- `buildTWAPOrderData.ts` — `buildTWAPSignableOrderData`, `SignableTWAPOrderData`, `BuildTWAPOrderDataInput`
+- `buildExternalOrderData.ts` — `buildExternalSignableOrderData`, `SignableExternalOrderData`
+- `misc.ts` — `sanitizeDeltaOrderData` (strips extra fields before signing/hashing), `applySlippage`, `resolvePartnerFee`
+- `orders.ts` — `OrderHelpers` namespace with `.checks` (type guards: `isDeltaOrder`, `isTWAPOrder`, `isExternalOrder`, `isOrderCrosschain`, `isExecutedAuction`, etc.) and `.getters` (`getUnifiedDeltaOrderData`, `getAuctionAmounts`, `getTwapAuctionAmounts`, `getFilledPercent`, etc.)
+- `abi.ts` — shared ABI fragments
 
 ### Core Types (`src/`)
 - `types.ts` — `ConstructProviderFetchInput`, `ContractCallerFunctions`, `TxSendOverrides`
@@ -105,3 +168,4 @@ OrderWithSig tuple:
 - EIP-712 domain: `{ name: 'Portikus', version: '2.0.0', chainId, verifyingContract }`
 - Order hash: computed via viem's `hashTypedData` in `produceDeltaOrderHash()`
 - ABI style: always inline `const ... as const`, never imported from external ABI files
+- Cross-chain detection: `isOrderCrosschain(order)` checks `bridge.destinationChainId !== 0`; `DEFAULT_BRIDGE` has all-zero values for same-chain orders

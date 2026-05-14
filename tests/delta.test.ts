@@ -175,21 +175,6 @@ describe('Delta:methods', () => {
           protocol: 'Across',
         },
         {
-          displayName: 'Stargate Bus',
-          icon: expect.any(String),
-          protocol: 'StargateBus',
-        },
-        {
-          displayName: 'Stargate Taxi',
-          icon: expect.any(String),
-          protocol: 'StargateTaxi',
-        },
-        {
-          displayName: 'Stargate OFT V2',
-          icon: expect.any(String),
-          protocol: 'StargateOftV2',
-        },
-        {
           displayName: 'Relay',
           icon: expect.any(String),
           protocol: 'Relay',
@@ -1036,10 +1021,6 @@ function decreaseBySlippage(amount: string, slippagePercent: number): string {
 
   return amountAfterSlippage;
 }
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-
-const ETH_ADDRESS = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE';
 
 type VerifySignedCancelRequestInput = {
   orderId: string;
