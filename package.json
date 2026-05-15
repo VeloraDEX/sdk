@@ -55,6 +55,7 @@
     "@ethersproject/providers": "^5.8.0",
     "@size-limit/preset-small-lib": "^12.1.0",
     "@tsconfig/recommended": "^1.0.8",
+    "@types/jest": "^30.0.0",
     "@wagmi/connectors": "^8.0.13",
     "@wagmi/core": "^3.4.11",
     "axios": "^1.13.2",
