@@ -36,7 +36,7 @@
     "testEnvironment": "node"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=22"
   },
   "size-limit": [
     {
@@ -129,5 +129,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "bugs": "https://github.com/VeloraDEX/paraswap-sdk/issues"
+  "bugs": "https://github.com/VeloraDEX/paraswap-sdk/issues",
+  "packageManager": "pnpm@11.1.2"
 }
