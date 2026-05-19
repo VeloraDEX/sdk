@@ -21,7 +21,7 @@ Refer to the documentation of the Velora API: https://developers.velora.xyz/
 ## Installing Velora SDK
 
 ```bash
-yarn add @velora-dex/sdk
+pnpm add @velora-dex/sdk
 ```
 
 ## Using Velora SDK
@@ -554,5 +554,5 @@ Refer to [SDK API documentation](docs/md/modules.md) for detailed documentation 
 
 ## Tests
 
-To run `yarn test` it is necessary to provide `PROVIDER_URL=<mainnet_rpc_url>` environment variable.
+To run `pnpm test` it is necessary to provide `PROVIDER_URL=<mainnet_rpc_url>` environment variable.
 If it is necessary to run tests against a different API endpoint, provide `API_URL=url_to_API` environment variable.

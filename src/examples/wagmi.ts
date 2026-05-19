@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { mainnet } from '@wagmi/core/chains';
 import {
-  getAccount,
+  getConnection,
   getWalletClient,
   sendTransaction,
   waitForTransactionReceipt,
@@ -23,7 +23,7 @@ export const config = createConfig({
 
 async function simpleSDKExample() {
   const walletClient = await getWalletClient(config, { chainId: mainnet.id });
-  const account = getAccount(config).address; // make sure wallet is connected at this point
+  const account = getConnection(config).address; // make sure wallet is connected at this point
   assert(account, 'account is necessary for Order signing');
 
   const simpleSDK = constructSimpleSDK(
