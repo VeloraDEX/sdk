@@ -155,7 +155,9 @@ async function externalDeltaV2Flow() {
 async function twapSellDeltaV2Flow() {
   const numSlices = 4;
   const totalSrcAmount = ethers.utils.parseUnits('100', 18).toString(); // 100 DAI total
-  const perSliceAmount = (BigInt(totalSrcAmount) / BigInt(numSlices)).toString();
+  const perSliceAmount = (
+    BigInt(totalSrcAmount) / BigInt(numSlices)
+  ).toString();
 
   // quote a single slice — route amounts must match floor(totalSrcAmount / numSlices)
   const deltaPrice = await deltaSDK.getDeltaPriceV2({

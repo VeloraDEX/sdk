@@ -256,7 +256,7 @@ type DeltaAuctionBase = {
 };
 
 export type DeltaAuction<
-  T extends keyof OnChainOrderMap = keyof OnChainOrderMap,
+  T extends keyof OnChainOrderMap = keyof OnChainOrderMap
 > = T extends T
   ? Prettify<
       DeltaAuctionBase & {

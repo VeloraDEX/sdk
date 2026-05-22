@@ -141,10 +141,9 @@ interface GetDeltaPrice {
     options: DeltaPriceParams & { destChainId?: undefined },
     requestParams?: RequestParameters
   ): Promise<DeltaPrice>;
-  (
-    options: DeltaPriceParams,
-    requestParams?: RequestParameters
-  ): Promise<DeltaPrice | BridgePrice>;
+  (options: DeltaPriceParams, requestParams?: RequestParameters): Promise<
+    DeltaPrice | BridgePrice
+  >;
 }
 
 export type GetDeltaPriceFunctions = {
