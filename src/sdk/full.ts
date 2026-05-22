@@ -13,6 +13,10 @@ import {
   DeltaOrderHandlers,
 } from '../methods/delta';
 import {
+  constructAllDeltaV2OrdersHandlers,
+  DeltaV2OrderHandlers,
+} from '../methods/deltaV2';
+import {
   constructGetQuote,
   GetQuoteFunctions,
 } from '../methods/quote/getQuote';
@@ -26,6 +30,7 @@ export type AllSDKMethods<TxResponse> = {
   /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrderHandlers<TxResponse>;
   delta: DeltaOrderHandlers<TxResponse>;
+  deltaV2: DeltaV2OrderHandlers<TxResponse>;
   quote: GetQuoteFunctions;
 } & Required<ConstructBaseInput>;
 
@@ -41,6 +46,8 @@ export const constructFullSDK = <TxResponse = any>(
     constructAllNFTOrdersHandlers(config);
   const delta: DeltaOrderHandlers<TxResponse> =
     constructAllDeltaOrdersHandlers(config);
+  const deltaV2: DeltaV2OrderHandlers<TxResponse> =
+    constructAllDeltaV2OrdersHandlers(config);
   const quote = constructGetQuote(config);
 
   return {
@@ -48,6 +55,7 @@ export const constructFullSDK = <TxResponse = any>(
     limitOrders,
     nftOrders,
     delta,
+    deltaV2,
     quote,
     apiURL: config.apiURL ?? API_URL,
     chainId: config.chainId,

@@ -135,6 +135,7 @@ import type {
   OptionalRate,
   APIVersion,
   ExtraFetchParams,
+  PaginatedResponse,
 } from './types';
 
 import type {
@@ -287,6 +288,85 @@ import {
   SignableCancelDeltaOrderData,
 } from './methods/delta/helpers/buildCancelDeltaOrderData';
 
+// Delta v2 modules
+import {
+  BuildDeltaOrderV2Functions,
+  BuildDeltaOrderV2Params,
+  constructBuildDeltaOrderV2,
+} from './methods/deltaV2/buildDeltaOrderV2';
+import {
+  BuildExternalDeltaOrderV2Functions,
+  BuildExternalDeltaOrderV2Params,
+  constructBuildExternalDeltaOrderV2,
+} from './methods/deltaV2/buildExternalDeltaOrderV2';
+import {
+  BuildTWAPDeltaOrderV2Functions,
+  BuildTWAPDeltaOrderV2Params,
+  BuildTWAPSellDeltaOrderV2Params,
+  BuildTWAPBuyDeltaOrderV2Params,
+  constructBuildTWAPDeltaOrderV2,
+} from './methods/deltaV2/buildTWAPDeltaOrderV2';
+import {
+  constructPostDeltaOrderV2,
+  DeltaOrderToPostV2,
+  PostDeltaOrderV2Functions,
+  PostDeltaOrderV2Params,
+} from './methods/deltaV2/postDeltaOrderV2';
+import {
+  constructPostExternalDeltaOrderV2,
+  PostExternalDeltaOrderV2Functions,
+  PostExternalDeltaOrderV2Params,
+} from './methods/deltaV2/postExternalDeltaOrderV2';
+import {
+  constructPostTWAPDeltaOrderV2,
+  PostTWAPDeltaOrderV2Functions,
+  PostTWAPDeltaOrderV2Params,
+} from './methods/deltaV2/postTWAPDeltaOrderV2';
+import {
+  constructGetDeltaPriceV2,
+  DeltaPriceV2Params,
+  GetDeltaPriceV2Functions,
+} from './methods/deltaV2/getDeltaPriceV2';
+import {
+  constructGetDeltaOrdersV2,
+  GetDeltaOrdersV2Functions,
+} from './methods/deltaV2/getDeltaOrdersV2';
+import {
+  constructGetBridgeRoutes,
+  GetBridgeRoutesFunctions,
+} from './methods/deltaV2/getBridgeRoutes';
+import {
+  constructIsTokenSupportedInDeltaV2,
+  IsTokenSupportedInDeltaV2Functions,
+} from './methods/deltaV2/isTokenSupportedInDeltaV2';
+import {
+  CancelDeltaOrderV2Functions,
+  constructCancelDeltaOrderV2,
+} from './methods/deltaV2/cancelDeltaOrderV2';
+import {
+  AgentList,
+  constructGetAgentsListV2,
+  GetAgentsListV2Functions,
+} from './methods/deltaV2/getAgentsListV2';
+import type {
+  DeltaOrderStatusV2,
+  BuiltDeltaOrderV2,
+  DeltaPriceToken,
+  DeltaTokenAmount,
+  BridgeTag,
+  DeltaRouteBridge,
+  DeltaRouteBridgeContractParams,
+  DeltaRouteStep,
+  DeltaRoute,
+  DeltaPriceV2,
+  BridgeRoute,
+  DeltaOnChainOrderTypeReported,
+  DeltaOrderTypeV2,
+  DeltaTokenSide,
+  DeltaTransactionV2,
+  DeltaOrderV2Response,
+} from './methods/deltaV2/types';
+
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
 
 export {
@@ -305,6 +385,19 @@ export {
   SubmitExternalDeltaOrderParams,
   SubmitTWAPDeltaOrderParams,
 } from './methods/delta';
+
+export {
+  constructAllDeltaV2OrdersHandlers,
+  constructSubmitDeltaOrderV2,
+  constructSubmitExternalDeltaOrderV2,
+  constructSubmitTWAPDeltaOrderV2,
+  constructSignDeltaOrderV2,
+  DeltaV2OrderHandlers,
+  SubmitDeltaOrderV2Params,
+  SubmitExternalDeltaOrderV2Params,
+  SubmitTWAPDeltaOrderV2Params,
+  SignDeltaOrderV2Functions,
+} from './methods/deltaV2';
 
 export type {
   TransactionParams,
@@ -388,6 +481,21 @@ export {
   constructPreSignTWAPDeltaOrder,
   // Quote methods
   constructGetQuote,
+  // Delta v2 runtime values (const-object enums etc.)
+  DeltaOrderStatusV2,
+  // Delta V2 methods
+  constructBuildDeltaOrderV2,
+  constructBuildExternalDeltaOrderV2,
+  constructBuildTWAPDeltaOrderV2,
+  constructPostDeltaOrderV2,
+  constructPostExternalDeltaOrderV2,
+  constructPostTWAPDeltaOrderV2,
+  constructGetDeltaPriceV2,
+  constructGetDeltaOrdersV2,
+  constructGetBridgeRoutes,
+  constructIsTokenSupportedInDeltaV2,
+  constructCancelDeltaOrderV2,
+  constructGetAgentsListV2,
   // different helpers
   constructGetPartnerFee,
   constructGetBridgeInfo,
@@ -521,6 +629,45 @@ export type {
   PostTWAPDeltaOrderFunctions,
   PostTWAPDeltaOrderParams,
   PreSignTWAPDeltaOrderFunctions,
+  // Delta v2 types
+  BuiltDeltaOrderV2,
+  DeltaPriceToken,
+  DeltaTokenAmount,
+  BridgeTag,
+  DeltaRouteBridge,
+  DeltaRouteBridgeContractParams,
+  DeltaRouteStep,
+  DeltaRoute,
+  DeltaPriceV2,
+  BridgeRoute,
+  DeltaOnChainOrderTypeReported,
+  DeltaOrderTypeV2,
+  DeltaTokenSide,
+  DeltaTransactionV2,
+  DeltaOrderV2Response,
+  DeltaPriceV2Params,
+  GetDeltaPriceV2Functions,
+  GetDeltaOrdersV2Functions,
+  GetBridgeRoutesFunctions,
+  IsTokenSupportedInDeltaV2Functions,
+  BuildDeltaOrderV2Params,
+  BuildDeltaOrderV2Functions,
+  BuildExternalDeltaOrderV2Params,
+  BuildExternalDeltaOrderV2Functions,
+  BuildTWAPDeltaOrderV2Params,
+  BuildTWAPSellDeltaOrderV2Params,
+  BuildTWAPBuyDeltaOrderV2Params,
+  BuildTWAPDeltaOrderV2Functions,
+  DeltaOrderToPostV2,
+  PostDeltaOrderV2Params,
+  PostDeltaOrderV2Functions,
+  PostExternalDeltaOrderV2Params,
+  PostExternalDeltaOrderV2Functions,
+  PostTWAPDeltaOrderV2Params,
+  PostTWAPDeltaOrderV2Functions,
+  CancelDeltaOrderV2Functions,
+  AgentList as AgentInfo,
+  GetAgentsListV2Functions,
   // types for Quote methods
   GetQuoteFunctions,
   QuoteParams,
@@ -548,6 +695,7 @@ export type {
   APIVersion,
   SwapSideUnion,
   ExtraFetchParams,
+  PaginatedResponse,
 };
 
 export { SDKConfig, constructPartialSDK } from './sdk/partial';
