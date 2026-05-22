@@ -12,7 +12,7 @@ import { BridgePriceInfo } from './helpers/types';
 type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
 export type DeltaPriceParams = {
-  /** @description Source Token Address. Not Native Token */
+  /** @description Source Token Address */
   srcToken: string;
   /** @description Destination Token Address */
   destToken: string;
@@ -141,9 +141,10 @@ interface GetDeltaPrice {
     options: DeltaPriceParams & { destChainId?: undefined },
     requestParams?: RequestParameters
   ): Promise<DeltaPrice>;
-  (options: DeltaPriceParams, requestParams?: RequestParameters): Promise<
-    DeltaPrice | BridgePrice
-  >;
+  (
+    options: DeltaPriceParams,
+    requestParams?: RequestParameters
+  ): Promise<DeltaPrice | BridgePrice>;
 }
 
 export type GetDeltaPriceFunctions = {

@@ -8,7 +8,7 @@ import type {
 import type {
   DeltaAuction,
   DeltaAuctionStatus,
-  OnChainOrderType,
+  OnChainOrderMap,
 } from './helpers/types';
 
 /** @deprecated Use DeltaAuction directly */
@@ -32,7 +32,7 @@ type GetDeltaOrderByHash = (
   requestParams?: RequestParameters
 ) => Promise<DeltaAuction>;
 
-type OrdersFilter<T extends OnChainOrderType = OnChainOrderType> = {
+type OrdersFilter<T extends keyof OnChainOrderMap = keyof OnChainOrderMap> = {
   /** @description Order.owner to fetch Delta Order for */
   userAddress: Address;
   /** @description Pagination option, page. Default 1 */
@@ -62,7 +62,7 @@ type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
 };
 
 type GetDeltaOrders = {
-  <T extends OnChainOrderType>(
+  <T extends keyof OnChainOrderMap>(
     options: OrdersFilter<T> & { onChainOrderType: T },
     requestParams?: RequestParameters
   ): Promise<DeltaAuction<T>[]>;
@@ -126,7 +126,7 @@ export const constructGetDeltaOrders = ({
   };
 
   const getDeltaOrders: GetDeltaOrders = async <
-    T extends OnChainOrderType = OnChainOrderType
+    T extends keyof OnChainOrderMap = keyof OnChainOrderMap
   >(
     options: OrdersFilter<T>,
     requestParams?: RequestParameters
