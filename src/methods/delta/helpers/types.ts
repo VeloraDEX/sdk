@@ -255,15 +255,16 @@ type DeltaAuctionBase = {
   type: 'MARKET' | 'LIMIT';
 };
 
-export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
-  T extends T
-    ? Prettify<
-        DeltaAuctionBase & {
-          onChainOrderType: T;
-          order: OnChainOrderMap[T];
-        } & BridgeAuctionFiledsMap[T]
-      >
-    : never;
+export type DeltaAuction<
+  T extends keyof OnChainOrderMap = keyof OnChainOrderMap,
+> = T extends T
+  ? Prettify<
+      DeltaAuctionBase & {
+        onChainOrderType: T;
+        order: OnChainOrderMap[T];
+      } & BridgeAuctionFiledsMap[T]
+    >
+  : never;
 
 export type DeltaAuctionDelta = DeltaAuction<'Order'>;
 export type DeltaAuctionExternal = DeltaAuction<'ExternalOrder'>;
@@ -298,7 +299,8 @@ export type OnChainOrderType =
   | 'Order'
   | 'ExternalOrder'
   | 'TWAPOrder'
-  | 'TWAPBuyOrder';
+  | 'TWAPBuyOrder'
+  | 'ProductiveOrder';
 
 export type TWAPOnChainOrderType = 'TWAPOrder' | 'TWAPBuyOrder';
 
