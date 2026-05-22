@@ -1,9 +1,9 @@
 import { API_URL } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type { DeltaAuction, OnChainOrderMap } from './helpers/types';
+import type { DeltaAuction, OnChainOrderMap } from '../delta/helpers/types';
 
-export type DeltaOrderToPost<T extends keyof OnChainOrderMap = 'Order'> = {
+export type DeltaOrderToPostV2<T extends keyof OnChainOrderMap = 'Order'> = {
   /** @description Partner string */
   partner?: string;
   /** @description Referrer address */
@@ -12,39 +12,37 @@ export type DeltaOrderToPost<T extends keyof OnChainOrderMap = 'Order'> = {
   /** @description Signature of the order from order.owner address. EOA signatures must be submitted in ERC-2098 Compact Representation. */
   signature: string;
   chainId: number;
-  /** @description designates the Order as being able to partially filled, as opposed to fill-or-kill */
+  /** @description Designates the Order as being able to be partially filled, as opposed to fill-or-kill */
   partiallyFillable?: boolean;
-
   /** @description Type of the order. MARKET or LIMIT. Default is MARKET */
   type?: 'MARKET' | 'LIMIT';
-
   includeAgents?: string[];
   excludeAgents?: string[];
 };
 
-export type PostDeltaOrderParams = Omit<DeltaOrderToPost, 'chainId'> & {
+export type PostDeltaOrderV2Params = Omit<DeltaOrderToPostV2, 'chainId'> & {
   degenMode?: boolean;
 };
 
-type PostDeltaOrder = (
-  postData: PostDeltaOrderParams,
+type PostDeltaOrderV2 = (
+  postData: PostDeltaOrderV2Params,
   requestParams?: RequestParameters
 ) => Promise<DeltaAuction<'Order'>>;
 
-export type PostDeltaOrderFunctions = {
-  postDeltaOrder: PostDeltaOrder;
+export type PostDeltaOrderV2Functions = {
+  postDeltaOrderV2: PostDeltaOrderV2;
 };
 
-export const constructPostDeltaOrder = ({
+export const constructPostDeltaOrderV2 = ({
   apiURL = API_URL,
   chainId,
   fetcher,
-}: ConstructFetchInput): PostDeltaOrderFunctions => {
-  const postOrderUrl = `${apiURL}/delta/orders` as const;
+}: ConstructFetchInput): PostDeltaOrderV2Functions => {
+  const postOrderUrl = `${apiURL}/delta/v2/orders` as const;
 
-  const postDeltaOrder: PostDeltaOrder = (_postData, requestParams) => {
+  const postDeltaOrderV2: PostDeltaOrderV2 = (_postData, requestParams) => {
     const { degenMode, ...postData } = _postData;
-    const deltaOrderToPost: DeltaOrderToPost = { ...postData, chainId };
+    const deltaOrderToPost: DeltaOrderToPostV2 = { ...postData, chainId };
 
     const search = constructSearchString<{ degenMode?: boolean }>({
       degenMode,
@@ -59,5 +57,5 @@ export const constructPostDeltaOrder = ({
     });
   };
 
-  return { postDeltaOrder };
+  return { postDeltaOrderV2 };
 };
