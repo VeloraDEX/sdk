@@ -105,8 +105,7 @@ export const constructSignDeltaOrderV2 = (
     return options.contractCaller.signTypedDataCall({
       types: builtOrder.toSign.types,
       domain: builtOrder.toSign.domain,
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      data: builtOrder.toSign.value as Record<string, any>,
+      data: builtOrder.toSign.value,
     });
   };
   return { signDeltaOrderV2 };
