@@ -108,7 +108,7 @@ Each family has four files: `build*`, `sign*`, `post*`, `preSign*`. High-level o
 | `constants.ts` | — | `DEFAULT_BRIDGE` constant (all-zero values for same-chain orders) | — | — |
 
 ### Delta Helpers (`src/methods/delta/helpers/`)
-- `types.ts` — `DeltaAuctionOrder`, `Bridge`, `DeltaAuction<T>`, `OnChainOrderMap`, `DeltaAuctionStatus`, `BridgeMetadata`, `BridgeStatus`, `OnChainOrderType` (includes `'ProductiveOrder'`), `DeltaAuctionUnion`
+- `types.ts` — `DeltaAuctionOrder`, `Bridge`, `DeltaAuction<T>`, `OnChainOrderMap`, `DeltaAuctionStatus`, `BridgeMetadata`, `BridgeStatus`, `OnChainOrderType` (includes `'ProductiveOrder'`), `DeltaOrderType` (`'MARKET' | 'LIMIT'`, shared by v1 & v2), `DeltaAuctionUnion`
 - `buildDeltaOrderData.ts` — `buildDeltaSignableOrderData`, `produceDeltaOrderTypedData`, `SignableDeltaOrderData`, `BuildDeltaOrderDataInput`, `DELTA_DEFAULT_EXPIRY`
 - `buildCancelDeltaOrderData.ts` — `buildCancelDeltaOrderSignableData`, `SignableCancelDeltaOrderData`, `CancelDeltaOrderData`
 - `buildTWAPOrderData.ts` — `buildTWAPSignableOrderData`, `SignableTWAPOrderData`, `BuildTWAPOrderDataInput`
@@ -158,7 +158,7 @@ Same three families as v1, all built via `POST /delta/v2/orders/build` with an `
 | `getDeltaPriceV2.ts` | `constructGetDeltaPriceV2` | GET `/v2/prices` → `DeltaPriceV2` |
 | `getDeltaOrdersV2.ts` | `constructGetDeltaOrdersV2` | `getDeltaOrdersV2` (paginated list), `getDeltaOrderByIdV2`, `getDeltaOrderByHashV2` |
 | `postDeltaOrderV2.ts` | `constructPostDeltaOrderV2` | POST `/v2/orders` → `DeltaAuction<'Order'>` |
-| `cancelDeltaOrderV2.ts` | `constructCancelDeltaOrderV2` | Sign + POST `/v2/orders/cancel` |
+| `cancelDeltaOrderV2.ts` | `constructCancelDeltaOrderV2` | `signCancelDeltaOrderRequestV2` → `postCancelDeltaOrderRequestV2` → `cancelDeltaOrdersV2` (orchestrator). POSTs to `/v2/orders/cancel`. |
 | `getBridgeRoutes.ts` | `constructGetBridgeRoutes` | `getBridgeRoutes` (flat `BridgeRoute[]`) + `getBridgeProtocolsV2` |
 | `isTokenSupportedInDeltaV2.ts` | `constructIsTokenSupportedInDeltaV2` | GET `/v2/prices/is-token-supported` → `boolean` |
 | `getAgentsListV2.ts` | `constructGetAgentsListV2` | GET `/v2/agents/list/:chainId` → `string[]` |
@@ -175,7 +175,6 @@ On-chain methods (preSign, approve, deltaTokenModule) and `getPartnerFee`/`getDe
 - `BridgeRoute` — flat bridge route entry `{ srcChainId, destChainId, tokens }`
 - `DeltaOrderV2Response` — order shape from v2 order endpoints (different from v1's `DeltaAuction`)
 - `DeltaOrderStatusV2` — integrator-facing status enum values
-- `DeltaOrderTypeV2` — `'MARKET' | 'LIMIT'`
 - `DeltaOnChainOrderTypeReported` — `OnChainOrderType | 'FillableOrder'`
 - `DeltaTokenSide` / `DeltaTransactionV2` — order input/output and transaction entry types
 
