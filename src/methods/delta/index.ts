@@ -99,7 +99,7 @@ export type SubmitDeltaOrderParams = BuildDeltaOrderDataParams & {
 
 type SubmitDeltaOrder = (
   orderParams: SubmitDeltaOrderParams
-) => Promise<DeltaAuction<'Order'>>;
+) => Promise<DeltaAuction>;
 
 export type SubmitDeltaOrderFuncs = {
   submitDeltaOrder: SubmitDeltaOrder;
