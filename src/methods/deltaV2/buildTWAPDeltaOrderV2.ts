@@ -36,6 +36,8 @@ type BuildTWAPDeltaOrderV2Base = {
   metadata?: string;
   /** @description Designates the Order as partially fillable. Default false. */
   partiallyFillable?: boolean;
+  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount for each slice */
+  limitAmount?: string;
 };
 
 export type BuildTWAPSellDeltaOrderV2Params = BuildTWAPDeltaOrderV2Base & {
@@ -85,6 +87,7 @@ export const constructBuildTWAPDeltaOrderV2 = (
       nonce: params.nonce,
       permit: params.permit,
       slippage: params.slippage,
+      limitAmount: params.limitAmount,
       metadata: params.metadata,
       partiallyFillable: params.partiallyFillable,
       partner: params.partner,

@@ -39,6 +39,8 @@ export type BuildExternalDeltaOrderV2Params = {
   side: 'SELL' | 'BUY';
   /** @description Slippage in basis points (bps). Default 0. */
   slippage?: number;
+  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount */
+  limitAmount?: string;
 };
 
 type BuildExternalDeltaOrderV2 = (
@@ -76,6 +78,7 @@ export const constructBuildExternalDeltaOrderV2 = (
         nonce: params.nonce,
         permit: params.permit,
         slippage: params.slippage,
+        limitAmount: params.limitAmount,
         metadata: params.metadata,
         partiallyFillable: params.partiallyFillable,
         partner: params.partner,
