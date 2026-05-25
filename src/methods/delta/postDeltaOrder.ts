@@ -33,7 +33,7 @@ export type PostDeltaOrderParams = Omit<DeltaOrderToPost, 'chainId'> & {
 type PostDeltaOrder = (
   postData: PostDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<DeltaAuction>;
+) => Promise<DeltaAuction<'Order'>>;
 
 export type PostDeltaOrderFunctions = {
   postDeltaOrder: PostDeltaOrder;
@@ -55,7 +55,7 @@ export const constructPostDeltaOrder = ({
     });
     const fetchURL = `${postOrderUrl}${search}` as const;
 
-    return fetcher<DeltaAuction>({
+    return fetcher<DeltaAuction<'Order'>>({
       url: fetchURL,
       method: 'POST',
       data: deltaOrderToPost,
