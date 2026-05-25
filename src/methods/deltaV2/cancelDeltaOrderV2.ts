@@ -1,3 +1,4 @@
+import { API_URL } from '../../constants';
 import type {
   ConstructProviderFetchInput,
   RequestParameters,
@@ -43,35 +44,41 @@ export const constructCancelDeltaOrderV2 = (
     'contractCaller' | 'fetcher' | 'apiURL' | 'chainId'
   >
 ): CancelDeltaOrderV2Functions => {
+  const apiURL = options.apiURL ?? API_URL;
+
   const { getDeltaContract } = constructGetDeltaContract(options);
 
-  const signCancelDeltaOrderRequestV2: SignCancelDeltaOrderRequestV2 =
-    async (params, requestParams) => {
-      const ParaswapDelta = await getDeltaContract(requestParams);
-      if (!ParaswapDelta) {
-        throw new Error(`Delta is not available on chain ${options.chainId}`);
-      }
+  const signCancelDeltaOrderRequestV2: SignCancelDeltaOrderRequestV2 = async (
+    params,
+    requestParams
+  ) => {
+    const ParaswapDelta = await getDeltaContract(requestParams);
+    if (!ParaswapDelta) {
+      throw new Error(`Delta is not available on chain ${options.chainId}`);
+    }
 
-      const typedData = buildCancelDeltaOrderSignableData({
-        orderInput: params,
-        paraswapDeltaAddress: ParaswapDelta,
-        chainId: options.chainId,
-      });
+    const typedData = buildCancelDeltaOrderSignableData({
+      orderInput: params,
+      paraswapDeltaAddress: ParaswapDelta,
+      chainId: options.chainId,
+    });
 
-      return options.contractCaller.signTypedDataCall(typedData);
-    };
+    return options.contractCaller.signTypedDataCall(typedData);
+  };
 
-  const postCancelDeltaOrderRequestV2: PostCancelDeltaOrderRequestV2 =
-    async (params, requestParams) => {
-      const cancelUrl = `${options.apiURL}/delta/v2/orders/cancel` as const;
+  const postCancelDeltaOrderRequestV2: PostCancelDeltaOrderRequestV2 = async (
+    params,
+    requestParams
+  ) => {
+    const cancelUrl = `${apiURL}/delta/v2/orders/cancel` as const;
 
-      return options.fetcher<SuccessResponse>({
-        url: cancelUrl,
-        method: 'POST',
-        data: params,
-        requestParams,
-      });
-    };
+    return options.fetcher<SuccessResponse>({
+      url: cancelUrl,
+      method: 'POST',
+      data: params,
+      requestParams,
+    });
+  };
 
   const cancelDeltaOrdersV2: CancelDeltaOrderV2 = async (
     { orderIds },

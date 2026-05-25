@@ -1,3 +1,4 @@
+import { API_URL } from '../../constants';
 import type {
   ConstructProviderFetchInput,
   RequestParameters,
@@ -43,6 +44,8 @@ export const constructCancelDeltaOrder = (
     'contractCaller' | 'fetcher' | 'apiURL' | 'chainId'
   >
 ): CancelDeltaOrderFunctions => {
+  const apiURL = options.apiURL ?? API_URL;
+
   // cached internally
   const { getDeltaContract } = constructGetDeltaContract(options);
 
@@ -69,7 +72,7 @@ export const constructCancelDeltaOrder = (
     params,
     requestParams
   ) => {
-    const cancelUrl = `${options.apiURL}/delta/orders/cancel` as const;
+    const cancelUrl = `${apiURL}/delta/orders/cancel` as const;
 
     const res = await options.fetcher<SuccessResponse>({
       url: cancelUrl,
