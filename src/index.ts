@@ -147,6 +147,7 @@ import type {
   BridgeStatus,
   Bridge,
   ExternalDeltaOrder,
+  ProductiveDeltaOrder,
   TWAPDeltaOrder,
   TWAPBuyDeltaOrder,
   TWAPOnChainOrderType,
@@ -161,6 +162,7 @@ import type {
   DeltaAuctionTWAP,
   DeltaAuctionTWAPBuy,
   DeltaAuctionExternal,
+  DeltaAuctionProductive,
   DeltaOrderUnion,
   DeltaAuctionUnion,
   UnifiedDeltaOrderData,
@@ -569,6 +571,7 @@ export type {
   DeltaAuctionTWAP,
   DeltaAuctionTWAPBuy,
   DeltaAuctionExternal,
+  DeltaAuctionProductive,
   DeltaOrderUnion,
   DeltaAuctionUnion,
   UnifiedDeltaOrderData,
@@ -604,6 +607,8 @@ export type {
   DepositNativeAndPreSignDeltaOrderParams,
   // External Delta types
   ExternalDeltaOrder,
+  // Productive Delta types
+  ProductiveDeltaOrder,
   TWAPDeltaOrder,
   TWAPBuyDeltaOrder,
   TWAPOnChainOrderType,

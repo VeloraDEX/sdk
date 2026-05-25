@@ -123,6 +123,41 @@ export type ExternalDeltaOrder = {
   data: string;
 };
 
+export type ProductiveDeltaOrder = {
+  /** @description The address of the order owner */
+  owner: string;
+  /** @description The address of the order beneficiary */
+  beneficiary: string;
+  /** @description The address of the src token */
+  srcToken: string;
+  /** @description The address of the dest token */
+  destToken: string;
+  /** @description The amount of src token to swap */
+  srcAmount: string;
+  /** @description The minimum amount of dest token to receive */
+  destAmount: string;
+  /** @description The expected amount of token to receive */
+  expectedAmount: string;
+  /** @description The deadline for the order */
+  deadline: number;
+  /** @description The nonce of the order */
+  nonce: string;
+  /** @description Metadata for the order, hex string */
+  metadata: string;
+  /** @description Encoded partner address, fee bps, and flags for the order. partnerAndFee = (partner << 96) | (partnerTakesSurplus << 8) | fee in bps (max fee is 2%) */
+  partnerAndFee: string;
+  /** @description Optional permit signature for the src token */
+  permit: string;
+  /** @description The strategy address. */
+  strategy: string;
+  /** @description The number of shares to execute for this order. */
+  shares: string;
+  /** @description Whether the order uses shares or raw amounts. */
+  useShares: boolean;
+  /** @description The bridge input */
+  bridge: Bridge;
+};
+
 type TWAPDeltaOrderBase = {
   /** @description The address of the order owner */
   owner: string;
@@ -216,6 +251,7 @@ export type OnChainOrderMap = {
   ExternalOrder: ExternalDeltaOrder;
   TWAPOrder: TWAPDeltaOrder;
   TWAPBuyOrder: TWAPBuyDeltaOrder;
+  ProductiveOrder: ProductiveDeltaOrder;
 };
 
 type BaseBridgeAuctionFields = Pick<
@@ -228,6 +264,7 @@ type BridgeAuctionFiledsMap = {
   ExternalOrder: BaseBridgeAuctionFields;
   TWAPOrder: Record<keyof BaseBridgeAuctionFields, null>;
   TWAPBuyOrder: Record<keyof BaseBridgeAuctionFields, null>;
+  ProductiveOrder: BaseBridgeAuctionFields;
 };
 
 type DeltaAuctionBase = {
@@ -256,7 +293,7 @@ type DeltaAuctionBase = {
 };
 
 export type DeltaAuction<
-  T extends keyof OnChainOrderMap = keyof OnChainOrderMap
+  T extends keyof OnChainOrderMap = keyof OnChainOrderMap,
 > = T extends T
   ? Prettify<
       DeltaAuctionBase & {
@@ -270,12 +307,14 @@ export type DeltaAuctionDelta = DeltaAuction<'Order'>;
 export type DeltaAuctionExternal = DeltaAuction<'ExternalOrder'>;
 export type DeltaAuctionTWAP = DeltaAuction<'TWAPOrder'>;
 export type DeltaAuctionTWAPBuy = DeltaAuction<'TWAPBuyOrder'>;
+export type DeltaAuctionProductive = DeltaAuction<'ProductiveOrder'>;
 
 export type DeltaAuctionUnion =
   | DeltaAuctionDelta
   | DeltaAuctionExternal
   | DeltaAuctionTWAP
-  | DeltaAuctionTWAPBuy;
+  | DeltaAuctionTWAPBuy
+  | DeltaAuctionProductive;
 
 export type DeltaOrderUnion = OnChainOrderMap[keyof OnChainOrderMap];
 

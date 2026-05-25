@@ -11,6 +11,7 @@ import {
   ExternalDeltaOrder,
   OnChainOrderType,
   OrderKind,
+  ProductiveDeltaOrder,
   SwapSideUnion,
   TWAPBuyDeltaOrder,
   TWAPDeltaOrder,
@@ -66,6 +67,16 @@ function isDeltaOrder(order: DeltaOrderUnion): order is DeltaAuctionOrder {
 }
 
 /**
+ * @description Checks whether an order is a Productive Delta order
+ * (strategy-routed order without an explicit OrderKind).
+ */
+function isProductiveOrder(
+  order: DeltaOrderUnion
+): order is ProductiveDeltaOrder {
+  return 'strategy' in order && typeof order.strategy === 'string';
+}
+
+/**
  * @description Checks whether an auction is a TWAP auction.
  */
 function isTWAPAuction<T extends OnChainOrderType>(auction: {
@@ -110,17 +121,28 @@ function isExternalAuction<T extends OnChainOrderType>(auction: {
   return auction.onChainOrderType === 'ExternalOrder';
 }
 
+/**
+ * @description Checks whether an auction is a Productive auction.
+ */
+function isProductiveAuction<T extends OnChainOrderType>(auction: {
+  onChainOrderType: T;
+}): auction is { onChainOrderType: 'ProductiveOrder' & T } {
+  return auction.onChainOrderType === 'ProductiveOrder';
+}
+
 const checks = {
   isTWAPOrder,
   isTWAPSellOrder,
   isTWAPBuyOrder,
   isExternalOrder,
   isDeltaOrder,
+  isProductiveOrder,
   isTWAPAuction,
   isTWAPSellAuction,
   isTWAPBuyAuction,
   isDeltaAuction,
   isExternalAuction,
+  isProductiveAuction,
   isOrderCrosschain,
   isExecutedAuction,
   isPartiallyExecutedAuction,
@@ -270,6 +292,10 @@ function getAuctionSwapSide(auction: DeltaAuction): SwapSideUnion {
   if (isTWAPAuction(auction)) {
     // TWAP orders have onChainOrderType instead of kind
     return getSwapSideFromTwapOrderType(auction.onChainOrderType);
+  }
+  if (isProductiveAuction(auction)) {
+    // ProductiveOrders don't carry an explicit OrderKind; treated as SELL.
+    return 'SELL';
   }
   return getSwapSideFromDeltaOrder(auction.order);
 }

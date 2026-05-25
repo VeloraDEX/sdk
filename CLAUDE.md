@@ -76,7 +76,7 @@ Every feature module exports a `constructXxx(options) => XxxFunctions` factory:
 
 ## Delta Module (`src/methods/delta/`)
 
-Three order families, each with build/sign/post/preSign constructors:
+Four order families with build/sign/post/preSign constructors, plus a read-only Productive family:
 
 | Family | `onChainOrderType` | Order type | Build input key |
 |--------|-------------------|-----------|-----------------|
@@ -84,8 +84,9 @@ Three order families, each with build/sign/post/preSign constructors:
 | External | `'ExternalOrder'` | `ExternalDeltaOrder` | `buildExternalDeltaOrder` (has `handler` field instead of `bridge`) |
 | TWAP Sell | `'TWAPOrder'` | `TWAPDeltaOrder` | `buildTWAPDeltaOrder` |
 | TWAP Buy | `'TWAPBuyOrder'` | `TWAPBuyDeltaOrder` | `buildTWAPDeltaOrder` |
+| Productive | `'ProductiveOrder'` | `ProductiveDeltaOrder` | _read-only_ — no SDK builder (server-produced) |
 
-Each family has four files: `build*`, `sign*`, `post*`, `preSign*`. High-level orchestrators (`constructSubmitDeltaOrder`, `constructSubmitExternalDeltaOrder`, `constructSubmitTWAPDeltaOrder`) in `index.ts` wrap build→sign→post.
+The first four families have four files each: `build*`, `sign*`, `post*`, `preSign*`. High-level orchestrators (`constructSubmitDeltaOrder`, `constructSubmitExternalDeltaOrder`, `constructSubmitTWAPDeltaOrder`) in `index.ts` wrap build→sign→post. Productive orders surface only through the read paths (`getDeltaOrders*` / `getDeltaOrderById*` / `DeltaAuctionUnion`).
 
 ### Key Files
 
@@ -108,7 +109,7 @@ Each family has four files: `build*`, `sign*`, `post*`, `preSign*`. High-level o
 | `constants.ts` | — | `DEFAULT_BRIDGE` constant (all-zero values for same-chain orders) | — | — |
 
 ### Delta Helpers (`src/methods/delta/helpers/`)
-- `types.ts` — `DeltaAuctionOrder`, `Bridge`, `DeltaAuction<T>`, `OnChainOrderMap`, `DeltaAuctionStatus`, `BridgeMetadata`, `BridgeStatus`, `OnChainOrderType` (includes `'ProductiveOrder'`), `DeltaOrderType` (`'MARKET' | 'LIMIT'`, shared by v1 & v2), `DeltaAuctionUnion`
+- `types.ts` — `DeltaAuctionOrder`, `ExternalDeltaOrder`, `ProductiveDeltaOrder`, `TWAPDeltaOrder`, `TWAPBuyDeltaOrder`, `Bridge`, `DeltaAuction<T>`, `OnChainOrderMap` (covers all five families), `DeltaAuctionStatus`, `BridgeMetadata`, `BridgeStatus`, `OnChainOrderType`, `DeltaOrderType` (`'MARKET' | 'LIMIT'`, shared by v1 & v2), `DeltaAuctionUnion` (= `DeltaAuctionDelta | DeltaAuctionExternal | DeltaAuctionTWAP | DeltaAuctionTWAPBuy | DeltaAuctionProductive`)
 - `buildDeltaOrderData.ts` — `buildDeltaSignableOrderData`, `produceDeltaOrderTypedData`, `SignableDeltaOrderData`, `BuildDeltaOrderDataInput`, `DELTA_DEFAULT_EXPIRY`
 - `buildCancelDeltaOrderData.ts` — `buildCancelDeltaOrderSignableData`, `SignableCancelDeltaOrderData`, `CancelDeltaOrderData`
 - `buildTWAPOrderData.ts` — `buildTWAPSignableOrderData`, `SignableTWAPOrderData`, `BuildTWAPOrderDataInput`
@@ -182,7 +183,7 @@ On-chain methods (preSign, approve, deltaTokenModule) and `getPartnerFee`/`getDe
 
 ### `OnChainOrderType` note
 
-`'ProductiveOrder'` is part of `OnChainOrderType` (in `delta/helpers/types.ts`) but is **not** in `OnChainOrderMap` (no SDK build support yet). Generics constrained to `keyof OnChainOrderMap` (`DeltaAuction<T>`, `getDeltaOrders`) will not accept `'ProductiveOrder'` as `T`.
+`'ProductiveOrder'` is part of `OnChainOrderType` and `OnChainOrderMap` — `DeltaAuction<'ProductiveOrder'>` (also exported as `DeltaAuctionProductive`) resolves to `ProductiveDeltaOrder`. The type is wired through the public surface, but **no build/sign/post helpers** exist for productive orders yet (`constructSubmit*` / `construct(Build|Sign|Post)*` cover only `Order`, `ExternalOrder`, `TWAPOrder`, `TWAPBuyOrder`). Productive orders are read-only from the SDK's perspective — produced and managed by the server. Sides are inferred as `SELL` (productive orders carry no `OrderKind`).
 
 ## Checklist: Adding a New On-Chain Method
 
