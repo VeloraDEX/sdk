@@ -6,12 +6,11 @@ import type {
   PaginatedResponse,
   RequestParameters,
 } from '../../types';
-import type { OnChainOrderType } from '../delta/helpers/types';
 import type {
-  DeltaOrderStatusV2,
-  DeltaOrderTypeV2,
-  DeltaOrderV2Response,
-} from './types';
+  DeltaOrderType,
+  OnChainOrderType,
+} from '../delta/helpers/types';
+import type { DeltaOrderStatusV2, DeltaOrderV2Response } from './types';
 
 type GetDeltaOrderByIdV2 = (
   orderId: string,
@@ -35,7 +34,7 @@ type OrdersV2Filter = {
   /** @description Filter by integrator-facing status. */
   status?: DeltaOrderStatusV2[];
   /** @description Filter by order type. MARKET or LIMIT. */
-  type?: DeltaOrderTypeV2;
+  type?: DeltaOrderType;
   /** @description Filter by on-chain order type. */
   onChainOrderType?: OnChainOrderType;
 };

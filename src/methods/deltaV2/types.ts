@@ -2,6 +2,7 @@ import type { Address } from '../../types';
 import type { TypedDataField } from '../common/orders/buildOrderData';
 import type {
   Bridge,
+  DeltaOrderType,
   DeltaOrderUnion,
   OnChainOrderType,
 } from '../delta/helpers/types';
@@ -140,9 +141,6 @@ export type DeltaOrderStatusV2 =
 /** @description `OnChainOrderType` plus the synthetic `FillableOrder` label, used when a Standard `Order` is `partiallyFillable`. */
 export type DeltaOnChainOrderTypeReported = OnChainOrderType | 'FillableOrder';
 
-/** @description Order kind: MARKET (immediate) vs LIMIT (rate-pegged). */
-export type DeltaOrderTypeV2 = 'MARKET' | 'LIMIT';
-
 /** @description Token side on an order. SELL provides an explicit `amount`; BUY provides expected/executed amounts. */
 export type DeltaTokenSide =
   | {
@@ -172,7 +170,7 @@ export type DeltaOrderV2Response = {
   id: string;
   status: DeltaOrderStatusV2;
   side: 'SELL' | 'BUY';
-  type: DeltaOrderTypeV2;
+  type: DeltaOrderType;
   onChainOrderType: DeltaOnChainOrderTypeReported | null;
   input: DeltaTokenSide;
   output: DeltaTokenSide;

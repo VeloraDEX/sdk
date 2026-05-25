@@ -8,6 +8,7 @@ import type {
 import type {
   DeltaAuction,
   DeltaAuctionStatus,
+  DeltaOrderType,
   OnChainOrderMap,
 } from './helpers/types';
 
@@ -52,7 +53,7 @@ type OrdersFilter<T extends keyof OnChainOrderMap = keyof OnChainOrderMap> = {
    */
   status?: DeltaOrderFilterByStatus[];
   /** @description Filter by type. MARKET, LIMIT. Orders with both types are returned if not specified */
-  type?: 'MARKET' | 'LIMIT';
+  type?: DeltaOrderType;
   /** @description Filter by on-chain order type. Order, ExternalOrder. Orders of all types are returned if not specified */
   onChainOrderType?: T;
 };

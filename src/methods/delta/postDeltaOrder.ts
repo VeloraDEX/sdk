@@ -1,7 +1,11 @@
 import { API_URL } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type { DeltaAuction, OnChainOrderMap } from './helpers/types';
+import type {
+  DeltaAuction,
+  DeltaOrderType,
+  OnChainOrderMap,
+} from './helpers/types';
 
 export type DeltaOrderToPost<T extends keyof OnChainOrderMap = 'Order'> = {
   /** @description Partner string */
@@ -16,7 +20,7 @@ export type DeltaOrderToPost<T extends keyof OnChainOrderMap = 'Order'> = {
   partiallyFillable?: boolean;
 
   /** @description Type of the order. MARKET or LIMIT. Default is MARKET */
-  type?: 'MARKET' | 'LIMIT';
+  type?: DeltaOrderType;
 
   includeAgents?: string[];
   excludeAgents?: string[];

@@ -252,7 +252,7 @@ type DeltaAuctionBase = {
   bridgeMetadata: BridgeMetadata | null;
   bridgeStatus: BridgeStatus | null;
 
-  type: 'MARKET' | 'LIMIT';
+  type: DeltaOrderType;
 };
 
 export type DeltaAuction<
@@ -303,6 +303,9 @@ export type OnChainOrderType =
   | 'ProductiveOrder';
 
 export type TWAPOnChainOrderType = 'TWAPOrder' | 'TWAPBuyOrder';
+
+/** @description Order kind: MARKET (immediate) vs LIMIT (rate-pegged). */
+export type DeltaOrderType = 'MARKET' | 'LIMIT';
 
 //// available on BridgePrice ////
 
