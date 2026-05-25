@@ -282,6 +282,11 @@ export type DeltaOrderUnion = OnChainOrderMap[keyof OnChainOrderMap];
 export type BridgeMetadata = {
   /** @description The amount that user should expect to get */
   outputAmount: string;
+  /** @description Field is present iff: order was built via POST /v2/orders/build,
+   * the route is cross-chain (route.bridge !== null and not an external handler),
+   * and the order is posted before the per-order cache entry expires.
+   */
+  expectedOutputAmount?: string;
   /** @description The cross-chain deadline. If deadline passes, the bridgeStatus would be expired */
   fillDeadline?: number; // available for Across protocol
   /** @description The deposit id */
