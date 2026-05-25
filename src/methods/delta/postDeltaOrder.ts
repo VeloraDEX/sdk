@@ -53,7 +53,7 @@ export const constructPostDeltaOrder = ({
     const search = constructSearchString<{ degenMode?: boolean }>({
       degenMode,
     });
-    const fetchURL = `${postOrderUrl}/${search}` as const;
+    const fetchURL = `${postOrderUrl}${search}` as const;
 
     return fetcher<DeltaAuction>({
       url: fetchURL,
