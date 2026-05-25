@@ -43,7 +43,7 @@ export const constructPostTWAPDeltaOrder = ({
       degenMode,
     });
 
-    const fetchURL = `${postOrderUrl}/${search}` as const;
+    const fetchURL = `${postOrderUrl}${search}` as const;
 
     return fetcher<DeltaAuction<'TWAPOrder'> | DeltaAuction<'TWAPBuyOrder'>>({
       url: fetchURL,
