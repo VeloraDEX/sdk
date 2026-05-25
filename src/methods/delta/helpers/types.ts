@@ -280,7 +280,7 @@ export type DeltaAuctionUnion =
 export type DeltaOrderUnion = OnChainOrderMap[keyof OnChainOrderMap];
 
 export type BridgeMetadata = {
-  /** @description The amount that user should expect to get */
+  /** @description Actual amount received on the destination chain. */
   outputAmount: string;
   /** @description Field is present iff: order was built via POST /v2/orders/build,
    * the route is cross-chain (route.bridge !== null and not an external handler),
