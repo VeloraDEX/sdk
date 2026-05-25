@@ -31,10 +31,10 @@ export type CancelDeltaOrderV2 = (
 ) => Promise<SuccessResponse>;
 
 export type CancelDeltaOrderV2Functions = {
-  signCancelLimitDeltaOrderRequestV2: SignCancelDeltaOrderRequestV2;
-  postCancelLimitDeltaOrderRequestV2: PostCancelDeltaOrderRequestV2;
-  /** @description Cancel one or more Limit Delta orders via the v2 endpoint */
-  cancelLimitDeltaOrdersV2: CancelDeltaOrderV2;
+  signCancelDeltaOrderRequestV2: SignCancelDeltaOrderRequestV2;
+  postCancelDeltaOrderRequestV2: PostCancelDeltaOrderRequestV2;
+  /** @description Cancel one or more Delta orders via the v2 endpoint */
+  cancelDeltaOrdersV2: CancelDeltaOrderV2;
 };
 
 export const constructCancelDeltaOrderV2 = (
@@ -45,7 +45,7 @@ export const constructCancelDeltaOrderV2 = (
 ): CancelDeltaOrderV2Functions => {
   const { getDeltaContract } = constructGetDeltaContract(options);
 
-  const signCancelLimitDeltaOrderRequestV2: SignCancelDeltaOrderRequestV2 =
+  const signCancelDeltaOrderRequestV2: SignCancelDeltaOrderRequestV2 =
     async (params, requestParams) => {
       const ParaswapDelta = await getDeltaContract(requestParams);
       if (!ParaswapDelta) {
@@ -61,7 +61,7 @@ export const constructCancelDeltaOrderV2 = (
       return options.contractCaller.signTypedDataCall(typedData);
     };
 
-  const postCancelLimitDeltaOrderRequestV2: PostCancelDeltaOrderRequestV2 =
+  const postCancelDeltaOrderRequestV2: PostCancelDeltaOrderRequestV2 =
     async (params, requestParams) => {
       const cancelUrl = `${options.apiURL}/delta/v2/orders/cancel` as const;
 
@@ -73,24 +73,24 @@ export const constructCancelDeltaOrderV2 = (
       });
     };
 
-  const cancelLimitDeltaOrdersV2: CancelDeltaOrderV2 = async (
+  const cancelDeltaOrdersV2: CancelDeltaOrderV2 = async (
     { orderIds },
     requestParams
   ) => {
-    const signature = await signCancelLimitDeltaOrderRequestV2(
+    const signature = await signCancelDeltaOrderRequestV2(
       { orderIds },
       requestParams
     );
 
-    return postCancelLimitDeltaOrderRequestV2(
+    return postCancelDeltaOrderRequestV2(
       { orderIds, signature },
       requestParams
     );
   };
 
   return {
-    signCancelLimitDeltaOrderRequestV2,
-    postCancelLimitDeltaOrderRequestV2,
-    cancelLimitDeltaOrdersV2,
+    signCancelDeltaOrderRequestV2,
+    postCancelDeltaOrderRequestV2,
+    cancelDeltaOrdersV2,
   };
 };
