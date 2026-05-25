@@ -797,14 +797,14 @@ describe('Delta v2: cancel', () => {
       throw new Error('unexpected');
     });
 
-    const { cancelLimitDeltaOrdersV2 } = constructCancelDeltaOrderV2({
+    const { cancelDeltaOrdersV2 } = constructCancelDeltaOrderV2({
       apiURL: API_URL,
       chainId: 1,
       fetcher,
       contractCaller: makeMockContractCaller(),
     });
 
-    const result = await cancelLimitDeltaOrdersV2({
+    const result = await cancelDeltaOrdersV2({
       orderIds: ['a', 'b'],
     });
 
@@ -934,7 +934,7 @@ describe('Delta v2: SDK wiring', () => {
     expect(typeof sdk.submitDeltaOrderV2).toBe('function');
     expect(typeof sdk.submitExternalDeltaOrderV2).toBe('function');
     expect(typeof sdk.submitTWAPDeltaOrderV2).toBe('function');
-    expect(typeof sdk.cancelLimitDeltaOrdersV2).toBe('function');
+    expect(typeof sdk.cancelDeltaOrdersV2).toBe('function');
     expect(typeof sdk.isTokenSupportedInDeltaV2).toBe('function');
     expect(typeof sdk.getAgentsListV2).toBe('function');
     // reused v1 utilities
