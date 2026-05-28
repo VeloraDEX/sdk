@@ -475,6 +475,130 @@ For **External Delta Orders** (orders that delegate token handling to an externa
 
 ------------
 
+### Delta V2 (server-built orders)
+
+Delta V2 ships alongside v1. It moves order construction to the server (`POST /delta/v2/orders/build`), returns route-based prices with same-chain and cross-chain alternatives in one response, and uses a single signer for every order family (standard, external, TWAP). The pre-bound bag is available as `simpleSDK.deltaV2.*`. The raw constructors and types live under the `DeltaV2` namespace at the package root.
+
+```ts
+import { constructSimpleSDK, DeltaV2 } from '@velora-dex/sdk';
+
+// types: DeltaV2.DeltaPrice, DeltaV2.DeltaRoute, DeltaV2.BuiltDeltaOrder,
+//        DeltaV2.DeltaOrderResponse, DeltaV2.BridgeRoute, ...
+// values: DeltaV2.constructBuildDeltaOrder, DeltaV2.constructPostDeltaOrder,
+//         DeltaV2.constructAllDeltaOrdersHandlers, ...
+```
+
+#### Quick flow (simple SDK)
+
+```ts
+const simpleSDK = constructSimpleSDK({ chainId: 1, axios }, {
+  ethersProviderOrSigner: signer,
+  EthersContract: ethers.Contract,
+  account,
+});
+
+const deltaPrice = await simpleSDK.deltaV2.getDeltaPrice({
+  srcToken: Token1,
+  destToken: Token2,
+  amount,
+  srcDecimals: 18,
+  destDecimals: 18,
+  userAddress: account,
+  // destChainId: 42161, // for cross-chain — bridge details land in deltaPrice.route.bridge
+});
+
+// approve once (Permit1 / Permit2 also supported — see v1 flow above)
+await simpleSDK.deltaV2.approveTokenForDelta(amount, Token1);
+
+// build → sign → post in one call
+const deltaAuction = await simpleSDK.deltaV2.submitDeltaOrder({
+  route: deltaPrice.route, // or any deltaPrice.alternatives[i]
+  side: deltaPrice.side,
+  owner: account,
+  slippage: 50, // 50 bps = 0.5%
+  // partner, partnerAddress, partnerFeeBps — passed through to the server
+});
+
+// status polling — v2 status COMPLETED already accounts for the dest-chain bridge
+const isDone = (o: DeltaV2.DeltaOrderResponse) => o.status === 'COMPLETED';
+```
+
+#### Manual flow (full control over signing)
+
+```ts
+const built = await simpleSDK.deltaV2.buildDeltaOrder({
+  route: deltaPrice.route,
+  side: deltaPrice.side,
+  owner: account,
+  slippage: 50,
+});
+
+// one signer for every v2 family (Order / ExternalOrder / TWAPOrder / TWAPBuyOrder)
+const signature = await simpleSDK.deltaV2.signDeltaOrder(built);
+
+const deltaAuction = await simpleSDK.deltaV2.postDeltaOrder({
+  order: built.toSign.value as Parameters<
+    typeof simpleSDK.deltaV2.postDeltaOrder
+  >[0]['order'],
+  signature,
+});
+```
+
+#### TWAP order
+
+A TWAP sell splits `totalSrcAmount` into `numSlices` equal slices executed `interval` seconds apart. Price is quoted for a single slice — the server multiplies amounts internally.
+
+```ts
+const perSliceAmount = (BigInt(totalSrcAmount) / BigInt(numSlices)).toString();
+
+const slicePrice = await simpleSDK.deltaV2.getDeltaPrice({
+  srcToken: Token1,
+  destToken: Token2,
+  amount: perSliceAmount,
+  srcDecimals: 18,
+  destDecimals: 18,
+  userAddress: account,
+});
+
+await simpleSDK.deltaV2.approveTokenForDelta(totalSrcAmount, Token1);
+
+const twapAuction = await simpleSDK.deltaV2.submitTWAPDeltaOrder({
+  onChainOrderType: 'TWAPOrder', // or 'TWAPBuyOrder'
+  route: slicePrice.route,
+  owner: account,
+  totalSrcAmount,
+  numSlices,
+  interval: 300, // seconds (min 60)
+  slippage: 50,
+});
+```
+
+#### Partial SDK with v2
+
+For bundle-savvy code, pull only the v2 constructors you need. The `DeltaV2` namespace doubles as a runtime object, so it tree-shakes cleanly.
+
+```ts
+import {
+  constructPartialSDK,
+  constructFetchFetcher,
+  DeltaV2,
+} from '@velora-dex/sdk';
+
+const sdk = constructPartialSDK(
+  { chainId: 1, fetcher: constructFetchFetcher(fetch) },
+  DeltaV2.constructGetDeltaPrice,
+  DeltaV2.constructGetDeltaOrders,
+  DeltaV2.constructGetBridgeRoutes,
+);
+
+const price = await sdk.getDeltaPrice({ /* ... */ });
+const orders = await sdk.getDeltaOrders({ userAddress: account, page: 1, limit: 50 });
+```
+
+A complete v2 example (standard, external handler, TWAP, and order listing) is in [examples/deltaV2](./src/examples/deltaV2.ts).
+
+------------
+
 ### Market Swap handling
 
 #### A more detailed overview of the Trade Flow, Market variant.
