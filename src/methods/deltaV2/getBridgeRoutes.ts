@@ -34,7 +34,7 @@ type BridgeProtocolsV2Response = {
 export type GetBridgeRoutesFunctions = {
   /** @description Fetch supported bridge routes as a flat array (v2 replacement for bridge-info). */
   getBridgeRoutes: GetBridgeRoutes;
-  /** @description Fetch supported bridge protocols (falls through to v1 controller on the v2 path). */
+  /** @description Fetch supported bridge protocols (unchanged from v1). */
   getBridgeProtocolsV2: GetBridgeProtocolsV2;
 };
 
