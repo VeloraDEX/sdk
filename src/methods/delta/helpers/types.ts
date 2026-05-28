@@ -318,7 +318,7 @@ export type DeltaAuctionUnion =
 export type DeltaOrderUnion = OnChainOrderMap[keyof OnChainOrderMap];
 
 export type BridgeMetadata = {
-  /** @description Fild is present after bridge is executed.
+  /** @description Field is present after bridge is executed.
    * The actual amount received from the bridge, which may differ
    * from the expectedOutputAmount due to bridge slippage or other factors.
    * */
