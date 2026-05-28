@@ -302,10 +302,12 @@ describe('Delta v2: fetch methods', () => {
       fetcher,
     });
 
-    await getBridgeRoutes({
-      allowBridgeAndSwap: false,
-      bridges: ['Across', 'Relay'],
-    });
+    expect(
+      await getBridgeRoutes({
+        allowBridgeAndSwap: false,
+        bridges: ['Across', 'Relay'],
+      })
+    ).toEqual([]);
   });
 
   test('isTokenSupportedInDelta unwraps `supported`', async () => {
@@ -709,11 +711,13 @@ describe('Delta v2: submit (build → sign → post)', () => {
       fetcher,
     });
 
-    await postDeltaOrder({
-      signature: FAKE_SIGNATURE,
-      order: {} as any,
-      degenMode: true,
-    });
+    expect(
+      await postDeltaOrder({
+        signature: FAKE_SIGNATURE,
+        order: {} as any,
+        degenMode: true,
+      })
+    ).toEqual({ id: 'x' });
   });
 
   test('postExternalDeltaOrder sends to /delta/v2/orders', async () => {
@@ -729,10 +733,12 @@ describe('Delta v2: submit (build → sign → post)', () => {
       fetcher,
     });
 
-    await postExternalDeltaOrder({
-      signature: FAKE_SIGNATURE,
-      order: {} as any,
-    });
+    expect(
+      await postExternalDeltaOrder({
+        signature: FAKE_SIGNATURE,
+        order: {} as any,
+      })
+    ).toEqual({ id: 'ext-1' });
   });
 
   test('postTWAPDeltaOrder sends to /delta/v2/orders with onChainOrderType', async () => {
@@ -749,11 +755,13 @@ describe('Delta v2: submit (build → sign → post)', () => {
       fetcher,
     });
 
-    await postTWAPDeltaOrder({
-      signature: FAKE_SIGNATURE,
-      order: {} as any,
-      onChainOrderType: 'TWAPOrder',
-    });
+    expect(
+      await postTWAPDeltaOrder({
+        signature: FAKE_SIGNATURE,
+        order: {} as any,
+        onChainOrderType: 'TWAPOrder',
+      })
+    ).toEqual({ id: 'twap-1' });
   });
 });
 
