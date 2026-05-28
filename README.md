@@ -597,6 +597,22 @@ const orders = await sdk.getDeltaOrders({ userAddress: account, page: 1, limit: 
 
 A complete v2 example (standard, external handler, TWAP, and order listing) is in [examples/deltaV2](./src/examples/deltaV2.ts).
 
+#### Productive Orders (read-only)
+
+Alongside the four buildable families (`Order`, `ExternalOrder`, `TWAPOrder`, `TWAPBuyOrder`), the SDK surfaces a fifth `onChainOrderType` — **`ProductiveOrder`** — through the read endpoints (`sdk.delta.getDeltaOrderById`, `sdk.deltaV2.getDeltaOrders`, etc.). Productive orders are produced and managed entirely by the server: there are deliberately **no `buildProductiveOrder`, `signProductiveOrder`, or `submitProductiveOrder` helpers**. The shape is wired through `OnChainOrderType`, `OnChainOrderMap`, and `DeltaAuctionUnion` (also exported individually as `DeltaAuctionProductive`) so that consumers iterating over an order list can type-narrow on `onChainOrderType === 'ProductiveOrder'` and read the order safely — productive orders carry no `OrderKind`, so the side is always `SELL`.
+
+```ts
+import { OrderHelpers, type DeltaAuctionUnion } from '@velora-dex/sdk';
+
+function describe(order: DeltaAuctionUnion) {
+  if (order.onChainOrderType === 'ProductiveOrder') {
+    // order: DeltaAuctionProductive — read-only, no SDK builder
+    return `productive: ${order.order.srcToken}`;
+  }
+  // ... handle Order / ExternalOrder / TWAPOrder / TWAPBuyOrder
+}
+```
+
 ------------
 
 ### Market Swap handling
