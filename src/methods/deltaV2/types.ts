@@ -108,7 +108,7 @@ export type DeltaPriceV2 = {
   alternatives: DeltaRoute[];
 };
 
-/** @description A flat bridge-routes entry returned by GET /delta/v2/prices/bridge-routes. */
+/** @description A flat bridge-routes entry returned by GET /delta/v2/prices/bridge-routes. (better version of v1 prices/bridge-info) */
 export type BridgeRoute = {
   srcChainId: number;
   destChainId: number;
