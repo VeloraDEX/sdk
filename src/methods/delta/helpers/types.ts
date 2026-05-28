@@ -292,16 +292,15 @@ type DeltaAuctionBase = {
   type: DeltaOrderType;
 };
 
-export type DeltaAuction<
-  T extends keyof OnChainOrderMap = keyof OnChainOrderMap,
-> = T extends T
-  ? Prettify<
-      DeltaAuctionBase & {
-        onChainOrderType: T;
-        order: OnChainOrderMap[T];
-      } & BridgeAuctionFiledsMap[T]
-    >
-  : never;
+export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
+  T extends T
+    ? Prettify<
+        DeltaAuctionBase & {
+          onChainOrderType: T;
+          order: OnChainOrderMap[T];
+        } & BridgeAuctionFiledsMap[T]
+      >
+    : never;
 
 export type DeltaAuctionDelta = DeltaAuction<'Order'>;
 export type DeltaAuctionExternal = DeltaAuction<'ExternalOrder'>;
@@ -342,12 +341,7 @@ export type BridgeMetadata = {
 //                                                             refunded is basically failed
 export type BridgeStatus = 'pending' | 'filled' | 'expired' | 'refunded';
 
-export type OnChainOrderType =
-  | 'Order'
-  | 'ExternalOrder'
-  | 'TWAPOrder'
-  | 'TWAPBuyOrder'
-  | 'ProductiveOrder';
+export type OnChainOrderType = keyof OnChainOrderMap;
 
 export type TWAPOnChainOrderType = 'TWAPOrder' | 'TWAPBuyOrder';
 
