@@ -1,9 +1,9 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type { BuiltDeltaOrderV2, DeltaRoute } from './types';
-export type { BuiltDeltaOrderV2 } from './types';
+import type { BuiltDeltaOrder, DeltaRoute } from './types';
+export type { BuiltDeltaOrder } from './types';
 
-type BuildTWAPDeltaOrderV2Base = {
+type BuildTWAPDeltaOrderBase = {
   /** @description The address of the order owner */
   owner: string;
   /** @description The address of the order beneficiary. Defaults to owner. */
@@ -22,7 +22,7 @@ type BuildTWAPDeltaOrderV2Base = {
   numSlices: number;
   /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5%. Default 0. */
   slippage?: number;
-  /** @description DeltaRoute from getDeltaPriceV2 for a single slice */
+  /** @description DeltaRoute from getDeltaPrice for a single slice */
   route: DeltaRoute;
   /** @description Partner fee in basis points (bps) */
   partnerFeeBps?: number;
@@ -40,13 +40,13 @@ type BuildTWAPDeltaOrderV2Base = {
   limitAmount?: string;
 };
 
-export type BuildTWAPSellDeltaOrderV2Params = BuildTWAPDeltaOrderV2Base & {
+export type BuildTWAPSellDeltaOrderParams = BuildTWAPDeltaOrderBase & {
   onChainOrderType: 'TWAPOrder';
   /** @description Total source token amount across all slices. route.origin.input.amount must equal floor(totalSrcAmount / numSlices). */
   totalSrcAmount: string;
 };
 
-export type BuildTWAPBuyDeltaOrderV2Params = BuildTWAPDeltaOrderV2Base & {
+export type BuildTWAPBuyDeltaOrderParams = BuildTWAPDeltaOrderBase & {
   onChainOrderType: 'TWAPBuyOrder';
   /** @description Total destination token amount to buy across all slices. route.origin.output.amount must equal floor(totalDestAmount / numSlices). */
   totalDestAmount: string;
@@ -54,27 +54,27 @@ export type BuildTWAPBuyDeltaOrderV2Params = BuildTWAPDeltaOrderV2Base & {
   maxSrcAmount: string;
 };
 
-export type BuildTWAPDeltaOrderV2Params =
-  | BuildTWAPSellDeltaOrderV2Params
-  | BuildTWAPBuyDeltaOrderV2Params;
+export type BuildTWAPDeltaOrderParams =
+  | BuildTWAPSellDeltaOrderParams
+  | BuildTWAPBuyDeltaOrderParams;
 
-type BuildTWAPDeltaOrderV2 = (
-  buildOrderParams: BuildTWAPDeltaOrderV2Params,
+type BuildTWAPDeltaOrder = (
+  buildOrderParams: BuildTWAPDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<BuiltDeltaOrderV2>;
+) => Promise<BuiltDeltaOrder>;
 
-export type BuildTWAPDeltaOrderV2Functions = {
+export type BuildTWAPDeltaOrderFunctions = {
   /** @description Build a Delta v2 TWAP Order (sell or buy) from a DeltaRoute via the server endpoint, ready to sign and post. */
-  buildTWAPDeltaOrderV2: BuildTWAPDeltaOrderV2;
+  buildTWAPDeltaOrder: BuildTWAPDeltaOrder;
 };
 
-export const constructBuildTWAPDeltaOrderV2 = (
+export const constructBuildTWAPDeltaOrder = (
   options: ConstructFetchInput
-): BuildTWAPDeltaOrderV2Functions => {
+): BuildTWAPDeltaOrderFunctions => {
   const { apiURL = API_URL, chainId, fetcher } = options;
   const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
 
-  const buildTWAPDeltaOrderV2: BuildTWAPDeltaOrderV2 = async (
+  const buildTWAPDeltaOrder: BuildTWAPDeltaOrder = async (
     params,
     requestParams
   ) => {
@@ -100,7 +100,7 @@ export const constructBuildTWAPDeltaOrderV2 = (
     };
 
     if (params.onChainOrderType === 'TWAPOrder') {
-      return fetcher<BuiltDeltaOrderV2>({
+      return fetcher<BuiltDeltaOrder>({
         url: buildUrl,
         method: 'POST',
         data: {
@@ -113,7 +113,7 @@ export const constructBuildTWAPDeltaOrderV2 = (
       });
     }
 
-    return fetcher<BuiltDeltaOrderV2>({
+    return fetcher<BuiltDeltaOrder>({
       url: buildUrl,
       method: 'POST',
       data: {
@@ -127,5 +127,5 @@ export const constructBuildTWAPDeltaOrderV2 = (
     });
   };
 
-  return { buildTWAPDeltaOrderV2 };
+  return { buildTWAPDeltaOrder };
 };

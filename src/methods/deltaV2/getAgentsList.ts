@@ -3,26 +3,26 @@ import type { ConstructFetchInput, RequestParameters } from '../../types';
 
 export type AgentList = string[];
 
-type AgentsListV2Response = AgentList;
+type AgentsListResponse = AgentList;
 
-type GetAgentsListV2 = (
+type GetAgentsList = (
   requestParams?: RequestParameters
 ) => Promise<AgentList>;
 
-export type GetAgentsListV2Functions = {
+export type GetAgentsListFunctions = {
   /** @description List agents available on the current chain. */
-  getAgentsListV2: GetAgentsListV2;
+  getAgentsList: GetAgentsList;
 };
 
-export const constructGetAgentsListV2 = ({
+export const constructGetAgentsList = ({
   apiURL = API_URL,
   chainId,
   fetcher,
-}: ConstructFetchInput): GetAgentsListV2Functions => {
+}: ConstructFetchInput): GetAgentsListFunctions => {
   const baseUrl = `${apiURL}/delta/v2/agents/list/${chainId}` as const;
 
-  const getAgentsListV2: GetAgentsListV2 = async (requestParams) => {
-    const data = await fetcher<AgentsListV2Response>({
+  const getAgentsList: GetAgentsList = async (requestParams) => {
+    const data = await fetcher<AgentsListResponse>({
       url: baseUrl,
       method: 'GET',
       requestParams,
@@ -30,5 +30,5 @@ export const constructGetAgentsListV2 = ({
     return data;
   };
 
-  return { getAgentsListV2 };
+  return { getAgentsList };
 };

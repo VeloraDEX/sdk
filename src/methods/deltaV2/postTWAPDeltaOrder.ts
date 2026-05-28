@@ -6,11 +6,11 @@ import type {
   DeltaAuction,
   TWAPOnChainOrderType,
 } from '../delta/helpers/types';
-import type { DeltaOrderToPostV2 } from './postDeltaOrderV2';
+import type { DeltaOrderToPost } from './postDeltaOrder';
 
-export type PostTWAPDeltaOrderV2Params = Prettify<
+export type PostTWAPDeltaOrderParams = Prettify<
   Omit<
-    DeltaOrderToPostV2<'TWAPOrder'> | DeltaOrderToPostV2<'TWAPBuyOrder'>,
+    DeltaOrderToPost<'TWAPOrder'> | DeltaOrderToPost<'TWAPBuyOrder'>,
     'chainId'
   > & {
     /** @description Must be "TWAPOrder" or "TWAPBuyOrder" */
@@ -19,28 +19,28 @@ export type PostTWAPDeltaOrderV2Params = Prettify<
   }
 >;
 
-type PostTWAPDeltaOrderV2 = (
-  postData: PostTWAPDeltaOrderV2Params,
+type PostTWAPDeltaOrder = (
+  postData: PostTWAPDeltaOrderParams,
   requestParams?: RequestParameters
 ) => Promise<DeltaAuction<'TWAPOrder'> | DeltaAuction<'TWAPBuyOrder'>>;
 
-export type PostTWAPDeltaOrderV2Functions = {
-  postTWAPDeltaOrderV2: PostTWAPDeltaOrderV2;
+export type PostTWAPDeltaOrderFunctions = {
+  postTWAPDeltaOrder: PostTWAPDeltaOrder;
 };
 
-export const constructPostTWAPDeltaOrderV2 = ({
+export const constructPostTWAPDeltaOrder = ({
   apiURL = API_URL,
   chainId,
   fetcher,
-}: ConstructFetchInput): PostTWAPDeltaOrderV2Functions => {
+}: ConstructFetchInput): PostTWAPDeltaOrderFunctions => {
   const postOrderUrl = `${apiURL}/delta/v2/orders` as const;
 
-  const postTWAPDeltaOrderV2: PostTWAPDeltaOrderV2 = (
+  const postTWAPDeltaOrder: PostTWAPDeltaOrder = (
     _postData,
     requestParams
   ) => {
     const { degenMode, ...postData } = _postData;
-    const deltaOrderToPost: DeltaOrderToPostV2<'TWAPOrder' | 'TWAPBuyOrder'> = {
+    const deltaOrderToPost: DeltaOrderToPost<'TWAPOrder' | 'TWAPBuyOrder'> = {
       ...postData,
       chainId,
     };
@@ -59,5 +59,5 @@ export const constructPostTWAPDeltaOrderV2 = ({
     });
   };
 
-  return { postTWAPDeltaOrderV2 };
+  return { postTWAPDeltaOrder };
 };

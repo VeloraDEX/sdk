@@ -1,11 +1,15 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type { BuiltDeltaOrderV2, DeltaRoute } from './types';
-export type { BuiltDeltaOrderV2 } from './types';
+import type { BuiltDeltaOrder, DeltaRoute } from './types';
+export type { BuiltDeltaOrder } from './types';
 
-export type BuildDeltaOrderV2Params = {
+export type BuildExternalDeltaOrderParams = {
   /** @description The address of the order owner */
   owner: string;
+  /** @description The address of the external handler contract */
+  handler: string;
+  /** @description Protocol-specific encoded bytes for the external handler */
+  data: string;
   /** @description The address of the order beneficiary. Defaults to owner. */
   beneficiary?: string;
   /** @description The deadline for the order (unix seconds) */
@@ -26,37 +30,40 @@ export type BuildDeltaOrderV2Params = {
   capSurplus?: boolean;
   /** @description Metadata for the order, hex string */
   metadata?: string;
-  /** @description Designates the Order as partially fillable instead of fill-or-kill. Default false. */
+  /** @description Designates the Order as partially fillable. Default false. */
   partiallyFillable?: boolean;
 
-  /** @description DeltaRoute from getDeltaPriceV2 — either priceV2.route or any priceV2.alternatives[i] */
+  /** @description DeltaRoute from getDeltaPrice */
   route: DeltaRoute;
   /** @description Order side. SELL or BUY. */
   side: 'SELL' | 'BUY';
-  /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5%. Default 0. */
+  /** @description Slippage in basis points (bps). Default 0. */
   slippage?: number;
   /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount */
   limitAmount?: string;
 };
 
-type BuildDeltaOrderV2 = (
-  buildOrderParams: BuildDeltaOrderV2Params,
+type BuildExternalDeltaOrder = (
+  buildOrderParams: BuildExternalDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<BuiltDeltaOrderV2>;
+) => Promise<BuiltDeltaOrder>;
 
-export type BuildDeltaOrderV2Functions = {
-  /** @description Build a Delta v2 order from a DeltaRoute via the server endpoint, ready to sign and post. */
-  buildDeltaOrderV2: BuildDeltaOrderV2;
+export type BuildExternalDeltaOrderFunctions = {
+  /** @description Build a Delta v2 External Order from a DeltaRoute via the server endpoint, ready to sign and post. */
+  buildExternalDeltaOrder: BuildExternalDeltaOrder;
 };
 
-export const constructBuildDeltaOrderV2 = (
+export const constructBuildExternalDeltaOrder = (
   options: ConstructFetchInput
-): BuildDeltaOrderV2Functions => {
+): BuildExternalDeltaOrderFunctions => {
   const { apiURL = API_URL, chainId, fetcher } = options;
   const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
 
-  const buildDeltaOrderV2: BuildDeltaOrderV2 = async (params, requestParams) =>
-    fetcher<BuiltDeltaOrderV2>({
+  const buildExternalDeltaOrder: BuildExternalDeltaOrder = async (
+    params,
+    requestParams
+  ) =>
+    fetcher<BuiltDeltaOrder>({
       url: buildUrl,
       method: 'POST',
       data: {
@@ -64,6 +71,8 @@ export const constructBuildDeltaOrderV2 = (
         side: params.side,
         route: params.route,
         owner: params.owner,
+        handler: params.handler,
+        data: params.data,
         beneficiary: params.beneficiary,
         deadline: params.deadline,
         nonce: params.nonce,
@@ -77,10 +86,10 @@ export const constructBuildDeltaOrderV2 = (
         partnerFeeBps: params.partnerFeeBps,
         partnerTakesSurplus: params.partnerTakesSurplus,
         capSurplus: params.capSurplus,
-        orderType: 'Order',
+        orderType: 'ExternalOrder',
       },
       requestParams,
     });
 
-  return { buildDeltaOrderV2 };
+  return { buildExternalDeltaOrder };
 };

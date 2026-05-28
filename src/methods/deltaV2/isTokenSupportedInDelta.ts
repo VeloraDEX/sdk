@@ -12,23 +12,23 @@ type IsTokenSupportedQuery = {
   chainId: number;
 };
 
-type IsTokenSupportedInDeltaV2 = (
+type IsTokenSupportedInDelta = (
   token: Address,
   requestParams?: RequestParameters
 ) => Promise<boolean>;
 
-export type IsTokenSupportedInDeltaV2Functions = {
-  isTokenSupportedInDeltaV2: IsTokenSupportedInDeltaV2;
+export type IsTokenSupportedInDeltaFunctions = {
+  isTokenSupportedInDelta: IsTokenSupportedInDelta;
 };
 
-export const constructIsTokenSupportedInDeltaV2 = ({
+export const constructIsTokenSupportedInDelta = ({
   apiURL = API_URL,
   chainId,
   fetcher,
-}: ConstructFetchInput): IsTokenSupportedInDeltaV2Functions => {
+}: ConstructFetchInput): IsTokenSupportedInDeltaFunctions => {
   const baseUrl = `${apiURL}/delta/v2/prices/is-token-supported` as const;
 
-  const isTokenSupportedInDeltaV2: IsTokenSupportedInDeltaV2 = async (
+  const isTokenSupportedInDelta: IsTokenSupportedInDelta = async (
     token,
     requestParams
   ) => {
@@ -48,5 +48,5 @@ export const constructIsTokenSupportedInDeltaV2 = ({
     return data.supported;
   };
 
-  return { isTokenSupportedInDeltaV2 };
+  return { isTokenSupportedInDelta };
 };

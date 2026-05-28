@@ -23,11 +23,11 @@ type GetBridgeRoutes = (
   requestParams?: RequestParameters
 ) => Promise<BridgeRoute[]>;
 
-type GetBridgeProtocolsV2 = (
+type GetBridgeProtocols = (
   requestParams?: RequestParameters
 ) => Promise<BridgeProtocolResponse[]>;
 
-type BridgeProtocolsV2Response = {
+type BridgeProtocolsResponse = {
   bridgeProtocols: BridgeProtocolResponse[];
 };
 
@@ -35,7 +35,7 @@ export type GetBridgeRoutesFunctions = {
   /** @description Fetch supported bridge routes as a flat array (v2 replacement for bridge-info). */
   getBridgeRoutes: GetBridgeRoutes;
   /** @description Fetch supported bridge protocols (unchanged from v1). */
-  getBridgeProtocolsV2: GetBridgeProtocolsV2;
+  getBridgeProtocols: GetBridgeProtocols;
 };
 
 export const constructGetBridgeRoutes = ({
@@ -66,10 +66,10 @@ export const constructGetBridgeRoutes = ({
     return data.routes;
   };
 
-  const getBridgeProtocolsV2: GetBridgeProtocolsV2 = async (requestParams) => {
+  const getBridgeProtocols: GetBridgeProtocols = async (requestParams) => {
     const fetchURL = `${deltaPricesUrl}/bridge-protocols` as const;
 
-    const data = await fetcher<BridgeProtocolsV2Response>({
+    const data = await fetcher<BridgeProtocolsResponse>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -78,5 +78,5 @@ export const constructGetBridgeRoutes = ({
     return data.bridgeProtocols;
   };
 
-  return { getBridgeRoutes, getBridgeProtocolsV2 };
+  return { getBridgeRoutes, getBridgeProtocols };
 };

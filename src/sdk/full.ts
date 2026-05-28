@@ -13,8 +13,8 @@ import {
   DeltaOrderHandlers,
 } from '../methods/delta';
 import {
-  constructAllDeltaV2OrdersHandlers,
-  DeltaV2OrderHandlers,
+  constructAllDeltaOrdersHandlers as constructAllDeltaV2OrdersHandlers,
+  DeltaOrderHandlers as DeltaV2OrderHandlers,
 } from '../methods/deltaV2';
 import {
   constructGetQuote,

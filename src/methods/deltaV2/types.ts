@@ -8,7 +8,7 @@ import type {
 } from '../delta/helpers/types';
 
 /** @description Response from POST /delta/v2/orders/build — EIP-712 typed data ready to sign. */
-export type BuiltDeltaOrderV2 = {
+export type BuiltDeltaOrder = {
   toSign: {
     domain: {
       name: string;
@@ -85,7 +85,7 @@ export type DeltaRoute = {
 };
 
 /** @description v2 price response: route-based, cross-chain first. */
-export type DeltaPriceV2 = {
+export type DeltaPrice = {
   /** @description Unique request ID for tracing. */
   id: string;
   /** @description Order side. */
@@ -121,7 +121,7 @@ export type BridgeRoute = {
 /* ------------------------------------------------------------------ */
 
 /** @description Integrator-facing order status returned by v2 order endpoints. */
-const DeltaOrderStatusV2Map = {
+const DeltaOrderStatusMap = {
   Pending: 'PENDING',
   AwaitingSignature: 'AWAITING_SIGNATURE',
   Active: 'ACTIVE',
@@ -135,8 +135,8 @@ const DeltaOrderStatusV2Map = {
   Refunded: 'REFUNDED',
 } as const;
 
-export type DeltaOrderStatusV2 =
-  (typeof DeltaOrderStatusV2Map)[keyof typeof DeltaOrderStatusV2Map];
+export type DeltaOrderStatus =
+  (typeof DeltaOrderStatusMap)[keyof typeof DeltaOrderStatusMap];
 
 /** @description `OnChainOrderType` plus the synthetic `FillableOrder` label, used when a Standard `Order` is `partiallyFillable`. */
 export type DeltaOnChainOrderTypeReported = OnChainOrderType | 'FillableOrder';
@@ -156,7 +156,7 @@ export type DeltaTokenSide =
     };
 
 /** @description A single transaction entry on a v2 order. */
-export type DeltaTransactionV2 = {
+export type DeltaTransaction = {
   originTx: string;
   destinationTx: string | null;
   /** @description Filled percent of the slice (0–100). */
@@ -166,9 +166,9 @@ export type DeltaTransactionV2 = {
 };
 
 /** @description Order shape returned by GET /v2/orders, /v2/orders/:id, /v2/orders/hash/:hash. */
-export type DeltaOrderV2Response = {
+export type DeltaOrderResponse = {
   id: string;
-  status: DeltaOrderStatusV2;
+  status: DeltaOrderStatus;
   side: 'SELL' | 'BUY';
   type: DeltaOrderType;
   onChainOrderType: DeltaOnChainOrderTypeReported | null;
@@ -179,7 +179,7 @@ export type DeltaOrderV2Response = {
   orderHash: string | null;
   partner: string;
   order: DeltaOrderUnion;
-  transactions: DeltaTransactionV2[];
+  transactions: DeltaTransaction[];
   /** @description ISO datetime string. */
   createdAt: string | null;
   /** @description ISO datetime string. */

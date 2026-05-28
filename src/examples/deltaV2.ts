@@ -5,7 +5,7 @@ import {
   constructPartialSDK,
   constructEthersContractCaller,
   constructAxiosFetcher,
-  constructAllDeltaV2OrdersHandlers,
+  DeltaV2,
 } from '..';
 import { startStatusCheckV2 } from './helpers/deltaV2';
 
@@ -28,7 +28,7 @@ const deltaSDK = constructPartialSDK(
     fetcher,
     contractCaller,
   },
-  constructAllDeltaV2OrdersHandlers
+  DeltaV2.constructAllDeltaOrdersHandlers
 );
 
 const DAI_TOKEN = '0x6b175474e89094c44da98b954eedeac495271d0f';
@@ -37,7 +37,7 @@ const USDC_TOKEN = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48';
 async function simpleDeltaV2Flow() {
   const amount = '1000000000000'; // wei
 
-  const deltaPrice = await deltaSDK.getDeltaPriceV2({
+  const deltaPrice = await deltaSDK.getDeltaPrice({
     srcToken: DAI_TOKEN,
     destToken: USDC_TOKEN,
     amount,
@@ -53,7 +53,7 @@ async function simpleDeltaV2Flow() {
   const tx = await deltaSDK.approveTokenForDelta(amount, DAI_TOKEN);
   await tx.wait();
 
-  const deltaAuction = await deltaSDK.submitDeltaOrderV2({
+  const deltaAuction = await deltaSDK.submitDeltaOrder({
     route: deltaPrice.route, // or pick from deltaPrice.alternatives
     side: deltaPrice.side,
     owner: account,
@@ -63,13 +63,13 @@ async function simpleDeltaV2Flow() {
   });
 
   // poll if necessary
-  startStatusCheckV2(() => deltaSDK.getDeltaOrderByIdV2(deltaAuction.id));
+  startStatusCheckV2(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
 }
 
 async function manualDeltaV2Flow() {
   const amount = '1000000000000'; // wei
 
-  const deltaPrice = await deltaSDK.getDeltaPriceV2({
+  const deltaPrice = await deltaSDK.getDeltaPrice({
     srcToken: DAI_TOKEN,
     destToken: USDC_TOKEN,
     amount,
@@ -86,7 +86,7 @@ async function manualDeltaV2Flow() {
   await tx.wait();
 
   // server-side build (returns EIP-712 typed data + orderHash)
-  const builtOrder = await deltaSDK.buildDeltaOrderV2({
+  const builtOrder = await deltaSDK.buildDeltaOrder({
     route: deltaPrice.route, // or pick from deltaPrice.alternatives
     side: deltaPrice.side,
     owner: account,
@@ -96,18 +96,18 @@ async function manualDeltaV2Flow() {
   });
 
   // one signer for every v2 order type (Order / ExternalOrder / TWAPOrder / TWAPBuyOrder)
-  const signature = await deltaSDK.signDeltaOrderV2(builtOrder);
+  const signature = await deltaSDK.signDeltaOrder(builtOrder);
 
-  const deltaAuction = await deltaSDK.postDeltaOrderV2({
+  const deltaAuction = await deltaSDK.postDeltaOrder({
     // partner: "..." // if available
     order: builtOrder.toSign.value as Parameters<
-      typeof deltaSDK.postDeltaOrderV2
+      typeof deltaSDK.postDeltaOrder
     >[0]['order'],
     signature,
   });
 
   // poll if necessary
-  startStatusCheckV2(() => deltaSDK.getDeltaOrderByIdV2(deltaAuction.id));
+  startStatusCheckV2(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
 }
 
 // External orders forward execution to an integrator-provided handler contract.
@@ -116,7 +116,7 @@ async function manualDeltaV2Flow() {
 async function externalDeltaV2Flow() {
   const amount = ethers.utils.parseUnits('1', 6).toString(); // 1 USDC
 
-  const deltaPrice = await deltaSDK.getDeltaPriceV2({
+  const deltaPrice = await deltaSDK.getDeltaPrice({
     srcToken: USDC_TOKEN,
     destToken: DAI_TOKEN,
     amount,
@@ -129,7 +129,7 @@ async function externalDeltaV2Flow() {
   const HANDLER_DATA =
     '0x0000000000000000000000000000000000000000000000000000000000000000'; // handler-specific encoded bytes
 
-  const builtOrder = await deltaSDK.buildExternalDeltaOrderV2({
+  const builtOrder = await deltaSDK.buildExternalDeltaOrder({
     route: deltaPrice.route,
     side: deltaPrice.side,
     owner: account,
@@ -138,16 +138,16 @@ async function externalDeltaV2Flow() {
     slippage: 50,
   });
 
-  const signature = await deltaSDK.signDeltaOrderV2(builtOrder);
+  const signature = await deltaSDK.signDeltaOrder(builtOrder);
 
-  const deltaAuction = await deltaSDK.postExternalDeltaOrderV2({
+  const deltaAuction = await deltaSDK.postExternalDeltaOrder({
     order: builtOrder.toSign.value as Parameters<
-      typeof deltaSDK.postExternalDeltaOrderV2
+      typeof deltaSDK.postExternalDeltaOrder
     >[0]['order'],
     signature,
   });
 
-  startStatusCheckV2(() => deltaSDK.getDeltaOrderByIdV2(deltaAuction.id));
+  startStatusCheckV2(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
 }
 
 // TWAP sell splits a total srcAmount into N equal slices executed `interval` seconds apart.
@@ -160,7 +160,7 @@ async function twapSellDeltaV2Flow() {
   ).toString();
 
   // quote a single slice — route amounts must match floor(totalSrcAmount / numSlices)
-  const deltaPrice = await deltaSDK.getDeltaPriceV2({
+  const deltaPrice = await deltaSDK.getDeltaPrice({
     srcToken: DAI_TOKEN,
     destToken: USDC_TOKEN,
     amount: perSliceAmount,
@@ -172,7 +172,7 @@ async function twapSellDeltaV2Flow() {
   const tx = await deltaSDK.approveTokenForDelta(totalSrcAmount, DAI_TOKEN);
   await tx.wait();
 
-  const deltaAuction = await deltaSDK.submitTWAPDeltaOrderV2({
+  const deltaAuction = await deltaSDK.submitTWAPDeltaOrder({
     onChainOrderType: 'TWAPOrder',
     route: deltaPrice.route,
     owner: account,
@@ -182,12 +182,12 @@ async function twapSellDeltaV2Flow() {
     slippage: 50,
   });
 
-  startStatusCheckV2(() => deltaSDK.getDeltaOrderByIdV2(deltaAuction.id));
+  startStatusCheckV2(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
 }
 
 // Paginated list of a user's orders (v2 returns a { results, pagination } envelope).
 async function listUserOrders() {
-  const page1 = await deltaSDK.getDeltaOrdersV2({
+  const page1 = await deltaSDK.getDeltaOrders({
     userAddress: account,
     page: 1,
     limit: 50,

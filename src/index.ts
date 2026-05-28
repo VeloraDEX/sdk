@@ -291,84 +291,6 @@ import {
   SignableCancelDeltaOrderData,
 } from './methods/delta/helpers/buildCancelDeltaOrderData';
 
-// Delta v2 modules
-import {
-  BuildDeltaOrderV2Functions,
-  BuildDeltaOrderV2Params,
-  constructBuildDeltaOrderV2,
-} from './methods/deltaV2/buildDeltaOrderV2';
-import {
-  BuildExternalDeltaOrderV2Functions,
-  BuildExternalDeltaOrderV2Params,
-  constructBuildExternalDeltaOrderV2,
-} from './methods/deltaV2/buildExternalDeltaOrderV2';
-import {
-  BuildTWAPDeltaOrderV2Functions,
-  BuildTWAPDeltaOrderV2Params,
-  BuildTWAPSellDeltaOrderV2Params,
-  BuildTWAPBuyDeltaOrderV2Params,
-  constructBuildTWAPDeltaOrderV2,
-} from './methods/deltaV2/buildTWAPDeltaOrderV2';
-import {
-  constructPostDeltaOrderV2,
-  DeltaOrderToPostV2,
-  PostDeltaOrderV2Functions,
-  PostDeltaOrderV2Params,
-} from './methods/deltaV2/postDeltaOrderV2';
-import {
-  constructPostExternalDeltaOrderV2,
-  PostExternalDeltaOrderV2Functions,
-  PostExternalDeltaOrderV2Params,
-} from './methods/deltaV2/postExternalDeltaOrderV2';
-import {
-  constructPostTWAPDeltaOrderV2,
-  PostTWAPDeltaOrderV2Functions,
-  PostTWAPDeltaOrderV2Params,
-} from './methods/deltaV2/postTWAPDeltaOrderV2';
-import {
-  constructGetDeltaPriceV2,
-  DeltaPriceV2Params,
-  GetDeltaPriceV2Functions,
-} from './methods/deltaV2/getDeltaPriceV2';
-import {
-  constructGetDeltaOrdersV2,
-  GetDeltaOrdersV2Functions,
-} from './methods/deltaV2/getDeltaOrdersV2';
-import {
-  constructGetBridgeRoutes,
-  GetBridgeRoutesFunctions,
-} from './methods/deltaV2/getBridgeRoutes';
-import {
-  constructIsTokenSupportedInDeltaV2,
-  IsTokenSupportedInDeltaV2Functions,
-} from './methods/deltaV2/isTokenSupportedInDeltaV2';
-import {
-  CancelDeltaOrderV2Functions,
-  constructCancelDeltaOrderV2,
-} from './methods/deltaV2/cancelDeltaOrderV2';
-import {
-  AgentList,
-  constructGetAgentsListV2,
-  GetAgentsListV2Functions,
-} from './methods/deltaV2/getAgentsListV2';
-import type {
-  DeltaOrderStatusV2,
-  BuiltDeltaOrderV2,
-  DeltaPriceToken,
-  DeltaTokenAmount,
-  BridgeTag,
-  DeltaRouteBridge,
-  DeltaRouteBridgeContractParams,
-  DeltaRouteStep,
-  DeltaRoute,
-  DeltaPriceV2,
-  BridgeRoute,
-  DeltaOnChainOrderTypeReported,
-  DeltaTokenSide,
-  DeltaTransactionV2,
-  DeltaOrderV2Response,
-} from './methods/deltaV2/types';
-
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
 
 export {
@@ -388,18 +310,31 @@ export {
   SubmitTWAPDeltaOrderParams,
 } from './methods/delta';
 
-export {
-  constructAllDeltaV2OrdersHandlers,
-  constructSubmitDeltaOrderV2,
-  constructSubmitExternalDeltaOrderV2,
-  constructSubmitTWAPDeltaOrderV2,
-  constructSignDeltaOrderV2,
-  DeltaV2OrderHandlers,
-  SubmitDeltaOrderV2Params,
-  SubmitExternalDeltaOrderV2Params,
-  SubmitTWAPDeltaOrderV2Params,
-  SignDeltaOrderV2Functions,
-} from './methods/deltaV2';
+// Delta v2 is exposed as a single namespace so it can ship alongside v1 without
+// colliding at the top level. v2 source uses unsuffixed names internally
+// (constructBuildDeltaOrder, BuiltDeltaOrder, DeltaPrice, ...); consumers reach
+// them via `DeltaV2.constructBuildDeltaOrder` etc.
+//
+// Migration plan when deprecating v1 (breaking change):
+//   1. Replace the bare `export { ... } from './methods/delta'` block above with
+//      `export * from './methods/deltaV2'` (or named re-exports of v2 symbols).
+//      Top-level `constructPostDeltaOrder` now resolves to v2.
+//   2. Move v1 behind its own namespace for backcompat:
+//      `export * as DeltaV1 from './methods/delta'`.
+//   3. Keep `export * as DeltaV2 from './methods/deltaV2'` as a redundant alias
+//      so code written against the v2 namespace today keeps compiling.
+//   4. Mirror this on the bundled SDKs in sdk/full.ts and sdk/simple.ts:
+//      `sdk.delta.*` flips to v2 (use `constructAllDeltaOrdersHandlers` from
+//      './methods/deltaV2'), and add `sdk.deltaV1.*` for backcompat.
+//
+// Migration plan when dropping v1 entirely:
+//   - Delete the `DeltaV1` namespace export and `sdk.deltaV1` field.
+//   - Delete `src/methods/delta/`.
+//   - Delete the `DeltaV2` re-export alias (consumers can move to bare names).
+//   - The `methods/deltaV2/` folder can be renamed to `methods/delta/` (and the
+//     `/delta/v2/` URL prefix in the leaf modules updated if the server has by
+//     then collapsed v1 and v2 endpoints).
+export * as DeltaV2 from './methods/deltaV2';
 
 export type {
   TransactionParams,
@@ -483,21 +418,6 @@ export {
   constructPreSignTWAPDeltaOrder,
   // Quote methods
   constructGetQuote,
-  // Delta v2 runtime values (const-object enums etc.)
-  DeltaOrderStatusV2,
-  // Delta V2 methods
-  constructBuildDeltaOrderV2,
-  constructBuildExternalDeltaOrderV2,
-  constructBuildTWAPDeltaOrderV2,
-  constructPostDeltaOrderV2,
-  constructPostExternalDeltaOrderV2,
-  constructPostTWAPDeltaOrderV2,
-  constructGetDeltaPriceV2,
-  constructGetDeltaOrdersV2,
-  constructGetBridgeRoutes,
-  constructIsTokenSupportedInDeltaV2,
-  constructCancelDeltaOrderV2,
-  constructGetAgentsListV2,
   // different helpers
   constructGetPartnerFee,
   constructGetBridgeInfo,
@@ -635,44 +555,6 @@ export type {
   PostTWAPDeltaOrderFunctions,
   PostTWAPDeltaOrderParams,
   PreSignTWAPDeltaOrderFunctions,
-  // Delta v2 types
-  BuiltDeltaOrderV2,
-  DeltaPriceToken,
-  DeltaTokenAmount,
-  BridgeTag,
-  DeltaRouteBridge,
-  DeltaRouteBridgeContractParams,
-  DeltaRouteStep,
-  DeltaRoute,
-  DeltaPriceV2,
-  BridgeRoute,
-  DeltaOnChainOrderTypeReported,
-  DeltaTokenSide,
-  DeltaTransactionV2,
-  DeltaOrderV2Response,
-  DeltaPriceV2Params,
-  GetDeltaPriceV2Functions,
-  GetDeltaOrdersV2Functions,
-  GetBridgeRoutesFunctions,
-  IsTokenSupportedInDeltaV2Functions,
-  BuildDeltaOrderV2Params,
-  BuildDeltaOrderV2Functions,
-  BuildExternalDeltaOrderV2Params,
-  BuildExternalDeltaOrderV2Functions,
-  BuildTWAPDeltaOrderV2Params,
-  BuildTWAPSellDeltaOrderV2Params,
-  BuildTWAPBuyDeltaOrderV2Params,
-  BuildTWAPDeltaOrderV2Functions,
-  DeltaOrderToPostV2,
-  PostDeltaOrderV2Params,
-  PostDeltaOrderV2Functions,
-  PostExternalDeltaOrderV2Params,
-  PostExternalDeltaOrderV2Functions,
-  PostTWAPDeltaOrderV2Params,
-  PostTWAPDeltaOrderV2Functions,
-  CancelDeltaOrderV2Functions,
-  AgentList as AgentInfo,
-  GetAgentsListV2Functions,
   // types for Quote methods
   GetQuoteFunctions,
   QuoteParams,

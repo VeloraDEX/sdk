@@ -5,11 +5,11 @@ import type {
   EnumerateLiteral,
   RequestParameters,
 } from '../../types';
-import type { DeltaPriceV2 } from './types';
+import type { DeltaPrice } from './types';
 
 type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
-export type DeltaPriceV2Params = {
+export type DeltaPriceParams = {
   /** @description Source Token Address */
   srcToken: string;
   /** @description Destination Token Address. For Crosschain Orders, the destination token on the destination chain */
@@ -46,8 +46,8 @@ export type DeltaPriceV2Params = {
   degenMode?: boolean;
 };
 
-type DeltaPriceV2QueryOptions = Omit<
-  DeltaPriceV2Params,
+type DeltaPriceQueryOptions = Omit<
+  DeltaPriceParams,
   'includeAgents' | 'excludeAgents' | 'includeBridges' | 'excludeBridges'
 > & {
   chainId: number;
@@ -57,24 +57,24 @@ type DeltaPriceV2QueryOptions = Omit<
   excludeBridges?: string;
 };
 
-type GetDeltaPriceV2 = (
-  options: DeltaPriceV2Params,
+type GetDeltaPrice = (
+  options: DeltaPriceParams,
   requestParams?: RequestParameters
-) => Promise<DeltaPriceV2>;
+) => Promise<DeltaPrice>;
 
-export type GetDeltaPriceV2Functions = {
+export type GetDeltaPriceFunctions = {
   /** @description Fetch a v2 price quote (route-based response). */
-  getDeltaPriceV2: GetDeltaPriceV2;
+  getDeltaPrice: GetDeltaPrice;
 };
 
-export const constructGetDeltaPriceV2 = ({
+export const constructGetDeltaPrice = ({
   apiURL = API_URL,
   chainId,
   fetcher,
-}: ConstructFetchInput): GetDeltaPriceV2Functions => {
+}: ConstructFetchInput): GetDeltaPriceFunctions => {
   const pricesUrl = `${apiURL}/delta/v2/prices` as const;
 
-  const getDeltaPriceV2: GetDeltaPriceV2 = async (options, requestParams) => {
+  const getDeltaPrice: GetDeltaPrice = async (options, requestParams) => {
     const {
       includeAgents,
       excludeAgents,
@@ -83,7 +83,7 @@ export const constructGetDeltaPriceV2 = ({
       ...rest
     } = options;
 
-    const search = constructSearchString<DeltaPriceV2QueryOptions>({
+    const search = constructSearchString<DeltaPriceQueryOptions>({
       ...rest,
       chainId,
       side: options.side ?? SwapSide.SELL,
@@ -95,7 +95,7 @@ export const constructGetDeltaPriceV2 = ({
 
     const fetchURL = `${pricesUrl}${search}` as const;
 
-    const data = await fetcher<DeltaPriceV2>({
+    const data = await fetcher<DeltaPrice>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -104,5 +104,5 @@ export const constructGetDeltaPriceV2 = ({
     return data;
   };
 
-  return { getDeltaPriceV2 };
+  return { getDeltaPrice };
 };

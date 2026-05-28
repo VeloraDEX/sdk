@@ -16,39 +16,39 @@ type CancelDeltaOrderRequestParams = {
   signature: string;
 };
 
-export type SignCancelDeltaOrderRequestV2 = (
+export type SignCancelDeltaOrderRequest = (
   params: CancelDeltaOrderData,
   requestParams?: RequestParameters
 ) => Promise<string>;
 
-export type PostCancelDeltaOrderRequestV2 = (
+export type PostCancelDeltaOrderRequest = (
   params: CancelDeltaOrderRequestParams,
   requestParams?: RequestParameters
 ) => Promise<SuccessResponse>;
 
-export type CancelDeltaOrderV2 = (
+export type CancelDeltaOrder = (
   params: CancelDeltaOrderData,
   requestParams?: RequestParameters
 ) => Promise<SuccessResponse>;
 
-export type CancelDeltaOrderV2Functions = {
-  signCancelDeltaOrderRequestV2: SignCancelDeltaOrderRequestV2;
-  postCancelDeltaOrderRequestV2: PostCancelDeltaOrderRequestV2;
+export type CancelDeltaOrderFunctions = {
+  signCancelDeltaOrderRequest: SignCancelDeltaOrderRequest;
+  postCancelDeltaOrderRequest: PostCancelDeltaOrderRequest;
   /** @description Cancel one or more Delta orders via the v2 endpoint */
-  cancelDeltaOrdersV2: CancelDeltaOrderV2;
+  cancelDeltaOrders: CancelDeltaOrder;
 };
 
-export const constructCancelDeltaOrderV2 = (
+export const constructCancelDeltaOrder = (
   options: Pick<
     ConstructProviderFetchInput<any, 'signTypedDataCall'>,
     'contractCaller' | 'fetcher' | 'apiURL' | 'chainId'
   >
-): CancelDeltaOrderV2Functions => {
+): CancelDeltaOrderFunctions => {
   const apiURL = options.apiURL ?? API_URL;
 
   const { getDeltaContract } = constructGetDeltaContract(options);
 
-  const signCancelDeltaOrderRequestV2: SignCancelDeltaOrderRequestV2 = async (
+  const signCancelDeltaOrderRequest: SignCancelDeltaOrderRequest = async (
     params,
     requestParams
   ) => {
@@ -66,7 +66,7 @@ export const constructCancelDeltaOrderV2 = (
     return options.contractCaller.signTypedDataCall(typedData);
   };
 
-  const postCancelDeltaOrderRequestV2: PostCancelDeltaOrderRequestV2 = async (
+  const postCancelDeltaOrderRequest: PostCancelDeltaOrderRequest = async (
     params,
     requestParams
   ) => {
@@ -80,24 +80,24 @@ export const constructCancelDeltaOrderV2 = (
     });
   };
 
-  const cancelDeltaOrdersV2: CancelDeltaOrderV2 = async (
+  const cancelDeltaOrders: CancelDeltaOrder = async (
     { orderIds },
     requestParams
   ) => {
-    const signature = await signCancelDeltaOrderRequestV2(
+    const signature = await signCancelDeltaOrderRequest(
       { orderIds },
       requestParams
     );
 
-    return postCancelDeltaOrderRequestV2(
+    return postCancelDeltaOrderRequest(
       { orderIds, signature },
       requestParams
     );
   };
 
   return {
-    signCancelDeltaOrderRequestV2,
-    postCancelDeltaOrderRequestV2,
-    cancelDeltaOrdersV2,
+    signCancelDeltaOrderRequest,
+    postCancelDeltaOrderRequest,
+    cancelDeltaOrders,
   };
 };

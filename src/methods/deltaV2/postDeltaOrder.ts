@@ -7,7 +7,7 @@ import type {
   OnChainOrderMap,
 } from '../delta/helpers/types';
 
-export type DeltaOrderToPostV2<T extends keyof OnChainOrderMap = 'Order'> = {
+export type DeltaOrderToPost<T extends keyof OnChainOrderMap = 'Order'> = {
   /** @description Partner string */
   partner?: string;
   /** @description Referrer address */
@@ -24,29 +24,29 @@ export type DeltaOrderToPostV2<T extends keyof OnChainOrderMap = 'Order'> = {
   excludeAgents?: string[];
 };
 
-export type PostDeltaOrderV2Params = Omit<DeltaOrderToPostV2, 'chainId'> & {
+export type PostDeltaOrderParams = Omit<DeltaOrderToPost, 'chainId'> & {
   degenMode?: boolean;
 };
 
-type PostDeltaOrderV2 = (
-  postData: PostDeltaOrderV2Params,
+type PostDeltaOrder = (
+  postData: PostDeltaOrderParams,
   requestParams?: RequestParameters
 ) => Promise<DeltaAuction<'Order'>>;
 
-export type PostDeltaOrderV2Functions = {
-  postDeltaOrderV2: PostDeltaOrderV2;
+export type PostDeltaOrderFunctions = {
+  postDeltaOrder: PostDeltaOrder;
 };
 
-export const constructPostDeltaOrderV2 = ({
+export const constructPostDeltaOrder = ({
   apiURL = API_URL,
   chainId,
   fetcher,
-}: ConstructFetchInput): PostDeltaOrderV2Functions => {
+}: ConstructFetchInput): PostDeltaOrderFunctions => {
   const postOrderUrl = `${apiURL}/delta/v2/orders` as const;
 
-  const postDeltaOrderV2: PostDeltaOrderV2 = (_postData, requestParams) => {
+  const postDeltaOrder: PostDeltaOrder = (_postData, requestParams) => {
     const { degenMode, ...postData } = _postData;
-    const deltaOrderToPost: DeltaOrderToPostV2 = { ...postData, chainId };
+    const deltaOrderToPost: DeltaOrderToPost = { ...postData, chainId };
 
     const search = constructSearchString<{ degenMode?: boolean }>({
       degenMode,
@@ -61,5 +61,5 @@ export const constructPostDeltaOrderV2 = ({
     });
   };
 
-  return { postDeltaOrderV2 };
+  return { postDeltaOrder };
 };

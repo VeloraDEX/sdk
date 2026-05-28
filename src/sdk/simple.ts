@@ -137,33 +137,33 @@ import {
   IsTokenSupportedInDeltaFunctions,
 } from '../methods/delta/isTokenSupportedInDelta';
 import {
-  constructAllDeltaV2OrdersHandlers,
-  DeltaV2OrderHandlers,
+  constructAllDeltaOrdersHandlers as constructAllDeltaV2OrdersHandlers,
+  DeltaOrderHandlers as DeltaV2OrderHandlers,
 } from '../methods/deltaV2';
 import {
-  BuildDeltaOrderV2Functions,
-  constructBuildDeltaOrderV2,
-} from '../methods/deltaV2/buildDeltaOrderV2';
+  BuildDeltaOrderFunctions as BuildDeltaOrderV2Functions,
+  constructBuildDeltaOrder as constructBuildDeltaOrderV2,
+} from '../methods/deltaV2/buildDeltaOrder';
 import {
-  constructPostDeltaOrderV2,
-  PostDeltaOrderV2Functions,
-} from '../methods/deltaV2/postDeltaOrderV2';
+  constructPostDeltaOrder as constructPostDeltaOrderV2,
+  PostDeltaOrderFunctions as PostDeltaOrderV2Functions,
+} from '../methods/deltaV2/postDeltaOrder';
 import {
-  constructGetDeltaOrdersV2,
-  GetDeltaOrdersV2Functions,
-} from '../methods/deltaV2/getDeltaOrdersV2';
+  constructGetDeltaOrders as constructGetDeltaOrdersV2,
+  GetDeltaOrdersFunctions as GetDeltaOrdersV2Functions,
+} from '../methods/deltaV2/getDeltaOrders';
 import {
-  constructGetDeltaPriceV2,
-  GetDeltaPriceV2Functions,
-} from '../methods/deltaV2/getDeltaPriceV2';
+  constructGetDeltaPrice as constructGetDeltaPriceV2,
+  GetDeltaPriceFunctions as GetDeltaPriceV2Functions,
+} from '../methods/deltaV2/getDeltaPrice';
 import {
   constructGetBridgeRoutes,
   GetBridgeRoutesFunctions,
 } from '../methods/deltaV2/getBridgeRoutes';
 import {
-  constructIsTokenSupportedInDeltaV2,
-  IsTokenSupportedInDeltaV2Functions,
-} from '../methods/deltaV2/isTokenSupportedInDeltaV2';
+  constructIsTokenSupportedInDelta as constructIsTokenSupportedInDeltaV2,
+  IsTokenSupportedInDeltaFunctions as IsTokenSupportedInDeltaV2Functions,
+} from '../methods/deltaV2/isTokenSupportedInDelta';
 
 export type SwapFetchMethods = GetBalancesFunctions &
   GetTokensFunctions &

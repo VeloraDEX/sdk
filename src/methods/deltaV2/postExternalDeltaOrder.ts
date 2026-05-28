@@ -1,34 +1,34 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
 import type { DeltaAuction } from '../delta/helpers/types';
-import type { DeltaOrderToPostV2 } from './postDeltaOrderV2';
+import type { DeltaOrderToPost } from './postDeltaOrder';
 
-export type PostExternalDeltaOrderV2Params = Omit<
-  DeltaOrderToPostV2<'ExternalOrder'>,
+export type PostExternalDeltaOrderParams = Omit<
+  DeltaOrderToPost<'ExternalOrder'>,
   'chainId'
 >;
 
-type PostExternalDeltaOrderV2 = (
-  postData: PostExternalDeltaOrderV2Params,
+type PostExternalDeltaOrder = (
+  postData: PostExternalDeltaOrderParams,
   requestParams?: RequestParameters
 ) => Promise<DeltaAuction<'ExternalOrder'>>;
 
-export type PostExternalDeltaOrderV2Functions = {
-  postExternalDeltaOrderV2: PostExternalDeltaOrderV2;
+export type PostExternalDeltaOrderFunctions = {
+  postExternalDeltaOrder: PostExternalDeltaOrder;
 };
 
-export const constructPostExternalDeltaOrderV2 = ({
+export const constructPostExternalDeltaOrder = ({
   apiURL = API_URL,
   chainId,
   fetcher,
-}: ConstructFetchInput): PostExternalDeltaOrderV2Functions => {
+}: ConstructFetchInput): PostExternalDeltaOrderFunctions => {
   const postOrderUrl = `${apiURL}/delta/v2/orders` as const;
 
-  const postExternalDeltaOrderV2: PostExternalDeltaOrderV2 = (
+  const postExternalDeltaOrder: PostExternalDeltaOrder = (
     postData,
     requestParams
   ) => {
-    const deltaOrderToPost: DeltaOrderToPostV2<'ExternalOrder'> = {
+    const deltaOrderToPost: DeltaOrderToPost<'ExternalOrder'> = {
       ...postData,
       chainId,
     };
@@ -41,5 +41,5 @@ export const constructPostExternalDeltaOrderV2 = ({
     });
   };
 
-  return { postExternalDeltaOrderV2 };
+  return { postExternalDeltaOrder };
 };

@@ -1,12 +1,12 @@
-import { DeltaOrderV2Response } from '../..';
+import { DeltaV2 } from '../..';
 
 // v2 status COMPLETED already accounts for destChain bridge settlement
 // (crosschain orders sit in BRIDGING until the destChain leg is done).
-function isCompletedDeltaV2Order(order: DeltaOrderV2Response) {
+function isCompletedDeltaV2Order(order: DeltaV2.DeltaOrderResponse) {
   return order.status === 'COMPLETED';
 }
 
-type GetDeltaOrderV2Fn = () => Promise<DeltaOrderV2Response>;
+type GetDeltaOrderV2Fn = () => Promise<DeltaV2.DeltaOrderResponse>;
 
 function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrderV2Fn) {
   const intervalId = setInterval(async () => {

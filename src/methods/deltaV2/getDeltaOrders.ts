@@ -10,19 +10,19 @@ import type {
   DeltaOrderType,
   OnChainOrderType,
 } from '../delta/helpers/types';
-import type { DeltaOrderStatusV2, DeltaOrderV2Response } from './types';
+import type { DeltaOrderStatus, DeltaOrderResponse } from './types';
 
-type GetDeltaOrderByIdV2 = (
+type GetDeltaOrderById = (
   orderId: string,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderV2Response>;
+) => Promise<DeltaOrderResponse>;
 
-type GetDeltaOrderByHashV2 = (
+type GetDeltaOrderByHash = (
   orderHash: string,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderV2Response>;
+) => Promise<DeltaOrderResponse>;
 
-type OrdersV2Filter = {
+type OrdersFilter = {
   /** @description `order.owner` to fetch Delta Orders for. */
   userAddress: Address;
   /** @description Pagination option. Default 1. */
@@ -32,67 +32,67 @@ type OrdersV2Filter = {
   /** @description Filter by chainId. Omitted = orders across all chains. */
   chainId?: number[];
   /** @description Filter by integrator-facing status. */
-  status?: DeltaOrderStatusV2[];
+  status?: DeltaOrderStatus[];
   /** @description Filter by order type. MARKET or LIMIT. */
   type?: DeltaOrderType;
   /** @description Filter by on-chain order type. */
   onChainOrderType?: OnChainOrderType;
 };
 
-type OrderFiltersV2Query = Omit<OrdersV2Filter, 'chainId' | 'status'> & {
+type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
   chainId?: string;
   status?: string;
 };
 
-type GetDeltaOrdersV2 = (
-  options: OrdersV2Filter,
+type GetDeltaOrders = (
+  options: OrdersFilter,
   requestParams?: RequestParameters
-) => Promise<PaginatedResponse<DeltaOrderV2Response>>;
+) => Promise<PaginatedResponse<DeltaOrderResponse>>;
 
-export type GetDeltaOrdersV2Functions = {
+export type GetDeltaOrdersFunctions = {
   /** @description Fetch a single order by its UUID. */
-  getDeltaOrderByIdV2: GetDeltaOrderByIdV2;
+  getDeltaOrderById: GetDeltaOrderById;
   /** @description Fetch a single order by its EIP-712 order hash. */
-  getDeltaOrderByHashV2: GetDeltaOrderByHashV2;
+  getDeltaOrderByHash: GetDeltaOrderByHash;
   /** @description List Delta orders with the v2 pagination envelope. */
-  getDeltaOrdersV2: GetDeltaOrdersV2;
+  getDeltaOrders: GetDeltaOrders;
 };
 
-export const constructGetDeltaOrdersV2 = ({
+export const constructGetDeltaOrders = ({
   apiURL = API_URL,
   fetcher,
-}: ConstructFetchInput): GetDeltaOrdersV2Functions => {
+}: ConstructFetchInput): GetDeltaOrdersFunctions => {
   const baseUrl = `${apiURL}/delta/v2/orders` as const;
 
-  const getDeltaOrderByIdV2: GetDeltaOrderByIdV2 = async (
+  const getDeltaOrderById: GetDeltaOrderById = async (
     orderId,
     requestParams
   ) => {
     const fetchURL = `${baseUrl}/${orderId}` as const;
-    return fetcher<DeltaOrderV2Response>({
+    return fetcher<DeltaOrderResponse>({
       url: fetchURL,
       method: 'GET',
       requestParams,
     });
   };
 
-  const getDeltaOrderByHashV2: GetDeltaOrderByHashV2 = async (
+  const getDeltaOrderByHash: GetDeltaOrderByHash = async (
     orderHash,
     requestParams
   ) => {
     const fetchURL = `${baseUrl}/hash/${orderHash}` as const;
-    return fetcher<DeltaOrderV2Response>({
+    return fetcher<DeltaOrderResponse>({
       url: fetchURL,
       method: 'GET',
       requestParams,
     });
   };
 
-  const getDeltaOrdersV2: GetDeltaOrdersV2 = async (options, requestParams) => {
+  const getDeltaOrders: GetDeltaOrders = async (options, requestParams) => {
     const chainIdString = options.chainId?.join(',');
     const statusString = options.status?.join(',');
 
-    const search = constructSearchString<OrderFiltersV2Query>({
+    const search = constructSearchString<OrderFiltersQuery>({
       userAddress: options.userAddress,
       page: options.page,
       limit: options.limit,
@@ -104,7 +104,7 @@ export const constructGetDeltaOrdersV2 = ({
 
     const fetchURL = `${baseUrl}${search}` as const;
 
-    return fetcher<PaginatedResponse<DeltaOrderV2Response>>({
+    return fetcher<PaginatedResponse<DeltaOrderResponse>>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -112,8 +112,8 @@ export const constructGetDeltaOrdersV2 = ({
   };
 
   return {
-    getDeltaOrderByIdV2,
-    getDeltaOrderByHashV2,
-    getDeltaOrdersV2,
+    getDeltaOrderById,
+    getDeltaOrderByHash,
+    getDeltaOrders,
   };
 };
