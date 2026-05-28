@@ -49,6 +49,16 @@ type GetDeltaOrders = (
   requestParams?: RequestParameters
 ) => Promise<PaginatedResponse<DeltaOrderResponse>>;
 
+type GetRequiredBalanceParams = {
+  userAddress: Address;
+  tokenAddress?: Address;
+};
+
+type GetRequiredBalance = (
+  userParams: GetRequiredBalanceParams,
+  requestParams?: RequestParameters
+) => Promise<Record<string, string>>; // token -> required balance across open Delta orders
+
 export type GetDeltaOrdersFunctions = {
   /** @description Fetch a single order by its UUID. */
   getDeltaOrderById: GetDeltaOrderById;
@@ -56,11 +66,14 @@ export type GetDeltaOrdersFunctions = {
   getDeltaOrderByHash: GetDeltaOrderByHash;
   /** @description List Delta orders with the v2 pagination envelope. */
   getDeltaOrders: GetDeltaOrders;
+  /** @description Required balance per token across the user's open Delta v2 orders. Pass `tokenAddress` to narrow the result to a single token. */
+  getRequiredBalanceForDeltaOrders: GetRequiredBalance;
 };
 
 export const constructGetDeltaOrders = ({
   apiURL = API_URL,
   fetcher,
+  chainId,
 }: ConstructFetchInput): GetDeltaOrdersFunctions => {
   const baseUrl = `${apiURL}/delta/v2/orders` as const;
 
@@ -111,9 +124,29 @@ export const constructGetDeltaOrders = ({
     });
   };
 
+  const getRequiredBalanceForDeltaOrders: GetRequiredBalance = async (
+    userParams,
+    requestParams
+  ) => {
+    const userURL =
+      `${baseUrl}/fillablebalance/${chainId}/${userParams.userAddress}` as const;
+    const fetchURL = userParams.tokenAddress
+      ? (`${userURL}/${userParams.tokenAddress}` as const)
+      : userURL;
+
+    const response = await fetcher<Record<string, string>>({
+      url: fetchURL,
+      method: 'GET',
+      requestParams,
+    });
+
+    return response;
+  };
+
   return {
     getDeltaOrderById,
     getDeltaOrderByHash,
     getDeltaOrders,
+    getRequiredBalanceForDeltaOrders,
   };
 };

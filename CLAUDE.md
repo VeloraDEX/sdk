@@ -174,7 +174,7 @@ Symbol names below are as they appear **inside** the v2 folder (no V2 suffix). T
 | `buildExternalDeltaOrder.ts` | `constructBuildExternalDeltaOrder` | Same, `orderType: 'ExternalOrder'` |
 | `buildTWAPDeltaOrder.ts` | `constructBuildTWAPDeltaOrder` | Same, `orderType: 'TWAPOrder'` or `'TWAPBuyOrder'` |
 | `getDeltaPrice.ts` | `constructGetDeltaPrice` | GET `/v2/prices` → `DeltaPrice` |
-| `getDeltaOrders.ts` | `constructGetDeltaOrders` | `getDeltaOrders` (paginated list), `getDeltaOrderById`, `getDeltaOrderByHash` |
+| `getDeltaOrders.ts` | `constructGetDeltaOrders` | `getDeltaOrders` (paginated list), `getDeltaOrderById`, `getDeltaOrderByHash`, `getRequiredBalanceForDeltaOrders` (mirrors v1's `getRequiredBalanceForDeltaLimitOrders` under `/delta/v2/orders/fillablebalance/...`) |
 | `postDeltaOrder.ts` | `constructPostDeltaOrder` | POST `/v2/orders` → `DeltaAuction<'Order'>` |
 | `cancelDeltaOrder.ts` | `constructCancelDeltaOrder` | `signCancelDeltaOrderRequest` → `postCancelDeltaOrderRequest` → `cancelDeltaOrders` (orchestrator). POSTs to `/v2/orders/cancel`. |
 | `getBridgeRoutes.ts` | `constructGetBridgeRoutes` | `getBridgeRoutes` (flat `BridgeRoute[]`) + `getBridgeProtocols` |

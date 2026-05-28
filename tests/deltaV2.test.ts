@@ -381,6 +381,45 @@ describe('Delta v2: fetch methods', () => {
     expect(await getDeltaOrderByHash('0xhash')).toBe(order);
   });
 
+  test('getRequiredBalanceForDeltaOrders hits /delta/v2/orders/fillablebalance/:chainId/:userAddress', async () => {
+    const required = {
+      [WETH]: '500000000000000000',
+      [DAI]: '1500000000000000000000',
+    };
+    const fetcher = makeFetcher(({ url, method }) => {
+      expect(method).toBe('GET');
+      expect(url).toBe(
+        `${API_URL}/delta/v2/orders/fillablebalance/1/${OWNER}`
+      );
+      return required;
+    });
+
+    const { getRequiredBalanceForDeltaOrders } =
+      DeltaV2.constructGetDeltaOrders({ apiURL: API_URL, chainId: 1, fetcher });
+
+    expect(
+      await getRequiredBalanceForDeltaOrders({ userAddress: OWNER })
+    ).toEqual(required);
+  });
+
+  test('getRequiredBalanceForDeltaOrders narrows the URL when tokenAddress is passed', async () => {
+    const fetcher = makeFetcher(({ url }) => {
+      expect(url).toBe(
+        `${API_URL}/delta/v2/orders/fillablebalance/1/${OWNER}/${WETH}`
+      );
+      return { [WETH]: '500000000000000000' };
+    });
+
+    const { getRequiredBalanceForDeltaOrders } =
+      DeltaV2.constructGetDeltaOrders({ apiURL: API_URL, chainId: 1, fetcher });
+
+    const balance = await getRequiredBalanceForDeltaOrders({
+      userAddress: OWNER,
+      tokenAddress: WETH,
+    });
+    expect(balance[WETH]).toBe('500000000000000000');
+  });
+
   test('getAgentsList hits /delta/v2/agents/list/:chainId and returns agent names', async () => {
     const agents = ['agent-a', 'agent-b'];
     const fetcher = makeFetcher(({ url, method }) => {
@@ -920,6 +959,7 @@ describe('Delta v2: SDK wiring', () => {
 
     expect(typeof sdk.getDeltaPrice).toBe('function');
     expect(typeof sdk.getDeltaOrders).toBe('function');
+    expect(typeof sdk.getRequiredBalanceForDeltaOrders).toBe('function');
     expect(typeof sdk.getBridgeRoutes).toBe('function');
     expect(typeof sdk.buildDeltaOrder).toBe('function');
     expect(typeof sdk.postDeltaOrder).toBe('function');
@@ -954,6 +994,7 @@ describe('Delta v2: SDK wiring', () => {
     expect(typeof sdk.getDeltaPrice).toBe('function');
     expect(typeof sdk.getBridgeRoutes).toBe('function');
     expect(typeof sdk.getDeltaOrders).toBe('function');
+    expect(typeof sdk.getRequiredBalanceForDeltaOrders).toBe('function');
     expect(typeof sdk.buildDeltaOrder).toBe('function');
     expect(typeof sdk.postDeltaOrder).toBe('function');
     expect(typeof sdk.isTokenSupportedInDelta).toBe('function');
