@@ -136,34 +136,8 @@ import {
   constructIsTokenSupportedInDelta,
   IsTokenSupportedInDeltaFunctions,
 } from '../methods/delta/isTokenSupportedInDelta';
-import {
-  constructAllDeltaOrdersHandlers as constructAllDeltaV2OrdersHandlers,
-  DeltaOrderHandlers as DeltaV2OrderHandlers,
-} from '../methods/deltaV2';
-import {
-  BuildDeltaOrderFunctions as BuildDeltaOrderV2Functions,
-  constructBuildDeltaOrder as constructBuildDeltaOrderV2,
-} from '../methods/deltaV2/buildDeltaOrder';
-import {
-  constructPostDeltaOrder as constructPostDeltaOrderV2,
-  PostDeltaOrderFunctions as PostDeltaOrderV2Functions,
-} from '../methods/deltaV2/postDeltaOrder';
-import {
-  constructGetDeltaOrders as constructGetDeltaOrdersV2,
-  GetDeltaOrdersFunctions as GetDeltaOrdersV2Functions,
-} from '../methods/deltaV2/getDeltaOrders';
-import {
-  constructGetDeltaPrice as constructGetDeltaPriceV2,
-  GetDeltaPriceFunctions as GetDeltaPriceV2Functions,
-} from '../methods/deltaV2/getDeltaPrice';
-import {
-  constructGetBridgeRoutes,
-  GetBridgeRoutesFunctions,
-} from '../methods/deltaV2/getBridgeRoutes';
-import {
-  constructIsTokenSupportedInDelta as constructIsTokenSupportedInDeltaV2,
-  IsTokenSupportedInDeltaFunctions as IsTokenSupportedInDeltaV2Functions,
-} from '../methods/deltaV2/isTokenSupportedInDelta';
+
+import * as DeltaV2 from '../methods/deltaV2';
 
 export type SwapFetchMethods = GetBalancesFunctions &
   GetTokensFunctions &
@@ -196,14 +170,14 @@ export type DeltaFetchMethods = BuildDeltaOrderFunctions &
   IsTokenSupportedInDeltaFunctions &
   PostDeltaOrderFunctions;
 
-export type DeltaV2FetchMethods = BuildDeltaOrderV2Functions &
-  GetDeltaOrdersV2Functions &
-  GetDeltaPriceV2Functions &
+export type DeltaV2FetchMethods = DeltaV2.BuildDeltaOrderFunctions &
+  DeltaV2.GetDeltaOrdersFunctions &
+  DeltaV2.GetDeltaPriceFunctions &
   GetDeltaContractFunctions &
   GetPartnerFeeFunctions &
-  GetBridgeRoutesFunctions &
-  IsTokenSupportedInDeltaV2Functions &
-  PostDeltaOrderV2Functions;
+  DeltaV2.GetBridgeRoutesFunctions &
+  DeltaV2.IsTokenSupportedInDeltaFunctions &
+  DeltaV2.PostDeltaOrderFunctions;
 
 export type SimpleFetchSDK = {
   swap: SwapFetchMethods;
@@ -225,7 +199,7 @@ export type SimpleSDK = {
   /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrderHandlers<TxHash>;
   delta: DeltaOrderHandlers<TxHash>;
-  deltaV2: DeltaV2OrderHandlers<TxHash>;
+  deltaV2: DeltaV2.DeltaOrderHandlers<TxHash>;
   quote: QuoteFetchMethods;
 } & Required<ConstructBaseInput>;
 
@@ -339,14 +313,14 @@ export function constructSimpleSDK(
 
     const deltaV2 = constructPartialSDK(
       config,
-      constructBuildDeltaOrderV2,
-      constructPostDeltaOrderV2,
-      constructGetDeltaOrdersV2,
-      constructGetDeltaPriceV2,
+      DeltaV2.constructBuildDeltaOrder,
+      DeltaV2.constructPostDeltaOrder,
+      DeltaV2.constructGetDeltaOrders,
+      DeltaV2.constructGetDeltaPrice,
       constructGetDeltaContract,
       constructGetPartnerFee,
-      constructGetBridgeRoutes,
-      constructIsTokenSupportedInDeltaV2
+      DeltaV2.constructGetBridgeRoutes,
+      DeltaV2.constructIsTokenSupportedInDelta
     );
 
     const quote = constructPartialSDK(config, constructGetQuote);
@@ -385,8 +359,8 @@ export function constructSimpleSDK(
   const delta: DeltaOrderHandlers<TxHash> =
     constructAllDeltaOrdersHandlers<TxHash>(config);
 
-  const deltaV2: DeltaV2OrderHandlers<TxHash> =
-    constructAllDeltaV2OrdersHandlers<TxHash>(config);
+  const deltaV2: DeltaV2.DeltaOrderHandlers<TxHash> =
+    DeltaV2.constructAllDeltaOrdersHandlers<TxHash>(config);
 
   const quote = constructGetQuote(config);
 
