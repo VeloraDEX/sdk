@@ -871,7 +871,7 @@ describe('Delta:methods', () => {
     expect(mockFetch).toHaveBeenLastCalledWith({
       data: { ...input, chainId: dummySDK.chainId },
       method: 'POST',
-      url: `${dummySDK.apiURL}/delta/orders/`,
+      url: `${dummySDK.apiURL}/delta/orders`,
     });
   });
 
