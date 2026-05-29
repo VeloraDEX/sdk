@@ -6,10 +6,7 @@ import type {
   PaginatedResponse,
   RequestParameters,
 } from '../../types';
-import type {
-  DeltaOrderType,
-  OnChainOrderType,
-} from '../delta/helpers/types';
+import type { DeltaOrderType, OnChainOrderType } from '../delta/helpers/types';
 import type { DeltaOrderStatus, DeltaAuction } from './types';
 
 type GetDeltaOrderById = (

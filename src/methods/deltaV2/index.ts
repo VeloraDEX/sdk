@@ -2,21 +2,6 @@ import type { ConstructProviderFetchInput } from '../../types';
 import type { OnChainOrderMap } from '../delta/helpers/types';
 import type { DeltaAuction } from './types';
 
-// Re-export public surface so `import * as DeltaV2` carries everything.
-export * from './types';
-export * from './buildDeltaOrder';
-export * from './buildExternalDeltaOrder';
-export * from './buildTWAPDeltaOrder';
-export * from './postDeltaOrder';
-export * from './postExternalDeltaOrder';
-export * from './postTWAPDeltaOrder';
-export * from './getDeltaPrice';
-export * from './getDeltaOrders';
-export * from './getBridgeRoutes';
-export * from './isTokenSupportedInDelta';
-export * from './cancelDeltaOrder';
-export * from './getAgentsList';
-
 // reused v1 modules
 import {
   GetDeltaContractFunctions,
@@ -102,6 +87,21 @@ import {
   GetAgentsListFunctions,
 } from './getAgentsList';
 
+// Re-export public surface so `import * as DeltaV2` carries everything.
+export * from './types';
+export * from './buildDeltaOrder';
+export * from './buildExternalDeltaOrder';
+export * from './buildTWAPDeltaOrder';
+export * from './postDeltaOrder';
+export * from './postExternalDeltaOrder';
+export * from './postTWAPDeltaOrder';
+export * from './getDeltaPrice';
+export * from './getDeltaOrders';
+export * from './getBridgeRoutes';
+export * from './isTokenSupportedInDelta';
+export * from './cancelDeltaOrder';
+export * from './getAgentsList';
+
 // ── Sign v2 ─────────────────────────────────────────────────────────────────
 
 type SignDeltaOrder = (builtOrder: BuiltDeltaOrder) => Promise<string>;
@@ -170,10 +170,9 @@ export const constructSubmitDeltaOrder = (
   return { submitDeltaOrder };
 };
 
-export type SubmitExternalDeltaOrderParams =
-  BuildExternalDeltaOrderParams & {
-    referrerAddress?: string;
-  } & Pick<DeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
+export type SubmitExternalDeltaOrderParams = BuildExternalDeltaOrderParams & {
+  referrerAddress?: string;
+} & Pick<DeltaOrderToPost, 'type' | 'includeAgents' | 'excludeAgents'>;
 
 type SubmitExternalDeltaOrder = (
   orderParams: SubmitExternalDeltaOrderParams
@@ -186,8 +185,7 @@ export type SubmitExternalDeltaOrderFuncs = {
 export const constructSubmitExternalDeltaOrder = (
   options: ConstructProviderFetchInput<any, 'signTypedDataCall'>
 ): SubmitExternalDeltaOrderFuncs => {
-  const { buildExternalDeltaOrder } =
-    constructBuildExternalDeltaOrder(options);
+  const { buildExternalDeltaOrder } = constructBuildExternalDeltaOrder(options);
   const { signDeltaOrder } = constructSignDeltaOrder(options);
   const { postExternalDeltaOrder } = constructPostExternalDeltaOrder(options);
 
@@ -232,9 +230,7 @@ export const constructSubmitTWAPDeltaOrder = (
   const { signDeltaOrder } = constructSignDeltaOrder(options);
   const { postTWAPDeltaOrder } = constructPostTWAPDeltaOrder(options);
 
-  const submitTWAPDeltaOrder: SubmitTWAPDeltaOrder = async (
-    orderParams
-  ) => {
+  const submitTWAPDeltaOrder: SubmitTWAPDeltaOrder = async (orderParams) => {
     const orderData = await buildTWAPDeltaOrder(orderParams);
     const signature = await signDeltaOrder(orderData);
 

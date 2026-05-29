@@ -450,7 +450,7 @@ type ExecutedDeltaAuctionProps = {
  * @description Checks whether an auction is fully executed.
  */
 function isExecutedAuction<
-  T extends Pick<DeltaAuction, 'order' | 'status' | 'transactions'>,
+  T extends Pick<DeltaAuction, 'order' | 'status' | 'transactions'>
 >(auction: T): auction is T & ExecutedDeltaAuctionProps {
   if (auction.status !== 'EXECUTED') return false;
 
@@ -486,7 +486,7 @@ type FailedDeltaAuctionProps =
  * @description Checks whether an auction is failed on source or destination chain.
  */
 function isFailedAuction<
-  T extends Pick<DeltaAuction, 'status' | 'order' | 'bridgeStatus'>,
+  T extends Pick<DeltaAuction, 'status' | 'order' | 'bridgeStatus'>
 >(auction: T): auction is T & FailedDeltaAuctionProps {
   // already failed on srcChain, whether Order is crosschain or not
   if (failedAuctionStatusesSet.has(auction.status)) return true;
@@ -551,7 +551,7 @@ function isPendingAuction<T extends Pick<DeltaAuction, 'status'>>(
  * Orders in the middle of normal execution can also be considered partially executed if they have any transactions.
  */
 function isPartiallyExecutedAuction<
-  T extends Pick<DeltaAuction, 'order' | 'transactions'>,
+  T extends Pick<DeltaAuction, 'order' | 'transactions'>
 >(
   auction: T
 ): auction is T & { transactions: NonEmptyArray<DeltaAuctionTransaction> } {

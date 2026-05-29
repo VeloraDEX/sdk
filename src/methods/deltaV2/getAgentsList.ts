@@ -5,9 +5,7 @@ export type AgentList = string[];
 
 type AgentsListResponse = AgentList;
 
-type GetAgentsList = (
-  requestParams?: RequestParameters
-) => Promise<AgentList>;
+type GetAgentsList = (requestParams?: RequestParameters) => Promise<AgentList>;
 
 export type GetAgentsListFunctions = {
   /** @description List agents available on the current chain. */

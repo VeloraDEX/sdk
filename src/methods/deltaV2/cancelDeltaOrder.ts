@@ -89,10 +89,7 @@ export const constructCancelDeltaOrder = (
       requestParams
     );
 
-    return postCancelDeltaOrderRequest(
-      { orderIds, signature },
-      requestParams
-    );
+    return postCancelDeltaOrderRequest({ orderIds, signature }, requestParams);
   };
 
   return {
