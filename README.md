@@ -613,6 +613,22 @@ function describe(order: DeltaAuctionUnion) {
 }
 ```
 
+The top-level `OrderHelpers` (above) works with **v1** auctions. For **v2** auctions (`DeltaV2.DeltaAuction`, returned by `sdk.deltaV2.*` read/post methods) use `DeltaV2.OrderHelpers`, which has the same `{ checks, getters }` shape but reads the v2 auction envelope (`status: DeltaOrderStatus`, `input`/`output`, flat `transactions`, explicit `side`):
+
+```ts
+import { DeltaV2 } from '@velora-dex/sdk';
+
+const { checks, getters } = DeltaV2.OrderHelpers;
+
+if (checks.isCompletedAuction(auction)) {
+  const { expected, executed } = getters.getAuctionAmounts(auction);
+  // executed (not v1's `final`) — matches the API convention
+}
+
+const unified = getters.getUnifiedDeltaOrderData(auction);
+// { srcChainId, destChainId, srcToken, destToken, swapSide, filledPercent, amounts, ... }
+```
+
 ------------
 
 ### Market Swap handling

@@ -182,6 +182,7 @@ Symbol names below are as they appear **inside** the v2 folder (no V2 suffix). T
 | `getBridgeRoutes.ts` | `constructGetBridgeRoutes` | `getBridgeRoutes` (flat `BridgeRoute[]`) + `getBridgeProtocols` |
 | `isTokenSupportedInDelta.ts` | `constructIsTokenSupportedInDelta` | GET `/v2/prices/is-token-supported` → `boolean` |
 | `getAgentsList.ts` | `constructGetAgentsList` | GET `/v2/agents/list/:chainId` → `string[]` |
+| `helpers/orders.ts` | — (exports `OrderHelpers`) | v2 order/auction guards + getters. Reached as `DeltaV2.OrderHelpers`. See "V2 Helpers" below. |
 
 On-chain methods (preSign, approve, deltaTokenModule) and `getPartnerFee`/`getDeltaContract` are **reused from v1** — no duplication. Inside the v2 folder they're imported from `../delta/*`.
 
@@ -204,6 +205,20 @@ Because v1 and v2 share unsuffixed names, the SDK assembly files import v2 eithe
 - `DeltaTokenSide` / `DeltaTransaction` — order input/output and transaction entry types
 
 `PaginatedResponse<T>` lives in `src/types.ts` (shared, still exported bare from the top of the package).
+
+### V2 Helpers (`src/methods/deltaV2/helpers/orders.ts`)
+
+Exposed as `DeltaV2.OrderHelpers` — the v2 counterpart of v1's top-level `OrderHelpers`, with the same `{ checks, getters }` shape. Two distinct objects: top-level `OrderHelpers` (v1) and `DeltaV2.OrderHelpers` (v2).
+
+Because the on-chain order structs (`auction.order`) and the `onChainOrderType` union are **shared** between v1 and v2, the v2 file reuses v1's implementations directly for:
+- **order-struct guards** — `isTWAPOrder`, `isTWAPSellOrder`, `isTWAPBuyOrder`, `isExternalOrder`, `isDeltaOrder`, `isProductiveOrder`, `isOrderCrosschain`
+- **auction discriminant guards** — `isTWAPAuction`, `isTWAPSellAuction`, `isTWAPBuyAuction`, `isDeltaAuction`, `isExternalAuction`, `isProductiveAuction`
+- **order-level getters** — `getOrderTokenAddresses`, `getSwapSideFromDeltaOrder`, `getSwapSideFromTwapOrderType`, `getExpectedTwapSrcAmount`, `getExpectedTwapDestAmount`, `getExpectedTwapOrderAmounts`
+
+What's **reimplemented for the v2 auction envelope** (v2's `status: DeltaOrderStatus`, `input`/`output: DeltaTokenSide`, flat `transactions: DeltaTransaction`, explicit `side`):
+- **status / execution guards** — `isCompletedAuction` (v2's `COMPLETED`, replaces v1's `isExecutedAuction`/`EXECUTED`), `isFailedAuction` (`FAILED`/`EXPIRED`/`CANCELLED`/`REFUNDED`), `isCanceledAuction`, `isExpiredAuction`, `isPendingAuction` (`PENDING`/`AWAITING_SIGNATURE`/`ACTIVE`/`BRIDGING`), `isPartiallyExecutedAuction`
+- **`isFillableAuction`** — new guard for `onChainOrderType === 'FillableOrder'` (treat alongside `isDeltaAuction`)
+- **auction-level getters** — `getAuctionSwapSide` (just `auction.side`), `getAuctionSrcChainId`/`getAuctionDestChainId` (from `input`/`output.chainId`), `getAuctionTokenAddresses`, `getTransactionAmounts`, `getFilledPercent`, `getAuctionAmounts` (returns `{ expected, executed }` — note `executed`, matching the API, vs v1's `final`), and `getUnifiedDeltaOrderData` (returns the shared `UnifiedDeltaOrderData` shape).
 
 ### `OnChainOrderType` note
 

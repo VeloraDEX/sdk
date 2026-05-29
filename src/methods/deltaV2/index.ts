@@ -100,6 +100,7 @@ export * from './getBridgeRoutes';
 export * from './isTokenSupportedInDelta';
 export * from './cancelDeltaOrder';
 export * from './getAgentsList';
+export { OrderHelpers } from './helpers/orders';
 
 // ── Sign v2 ─────────────────────────────────────────────────────────────────
 
