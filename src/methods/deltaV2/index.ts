@@ -1,5 +1,4 @@
 import type { ConstructProviderFetchInput } from '../../types';
-import type { OnChainOrderMap } from '../delta/helpers/types';
 import type { DeltaAuction } from './types';
 
 // reused v1 modules
@@ -157,7 +156,7 @@ export const constructSubmitDeltaOrder = (
     return postDeltaOrder({
       signature,
       partner: orderParams.partner,
-      order: orderData.toSign.value as OnChainOrderMap['Order'],
+      order: orderData.toSign.value,
       partiallyFillable: orderParams.partiallyFillable,
       referrerAddress: orderParams.referrerAddress,
       type: orderParams.type,
@@ -198,7 +197,7 @@ export const constructSubmitExternalDeltaOrder = (
     return postExternalDeltaOrder({
       signature,
       partner: orderParams.partner,
-      order: orderData.toSign.value as OnChainOrderMap['ExternalOrder'],
+      order: orderData.toSign.value,
       partiallyFillable: orderParams.partiallyFillable,
       referrerAddress: orderParams.referrerAddress,
       type: orderParams.type,
@@ -237,9 +236,7 @@ export const constructSubmitTWAPDeltaOrder = (
     return postTWAPDeltaOrder({
       signature,
       partner: orderParams.partner,
-      order: orderData.toSign.value as
-        | OnChainOrderMap['TWAPOrder']
-        | OnChainOrderMap['TWAPBuyOrder'],
+      order: orderData.toSign.value,
       onChainOrderType: orderParams.onChainOrderType,
       partiallyFillable: orderParams.partiallyFillable,
       referrerAddress: orderParams.referrerAddress,

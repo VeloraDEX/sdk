@@ -1,5 +1,6 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
+import type { TWAPBuyDeltaOrder, TWAPDeltaOrder } from '../delta/helpers/types';
 import type { BuiltDeltaOrder, DeltaRoute } from './types';
 export type { BuiltDeltaOrder } from './types';
 
@@ -61,7 +62,7 @@ export type BuildTWAPDeltaOrderParams =
 type BuildTWAPDeltaOrder = (
   buildOrderParams: BuildTWAPDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<BuiltDeltaOrder>;
+) => Promise<BuiltDeltaOrder<TWAPDeltaOrder | TWAPBuyDeltaOrder>>;
 
 export type BuildTWAPDeltaOrderFunctions = {
   /** @description Build a Delta v2 TWAP Order (sell or buy) from a DeltaRoute via the server endpoint, ready to sign and post. */
@@ -100,7 +101,7 @@ export const constructBuildTWAPDeltaOrder = (
     };
 
     if (params.onChainOrderType === 'TWAPOrder') {
-      return fetcher<BuiltDeltaOrder>({
+      return fetcher<BuiltDeltaOrder<TWAPDeltaOrder>>({
         url: buildUrl,
         method: 'POST',
         data: {
@@ -113,7 +114,7 @@ export const constructBuildTWAPDeltaOrder = (
       });
     }
 
-    return fetcher<BuiltDeltaOrder>({
+    return fetcher<BuiltDeltaOrder<TWAPBuyDeltaOrder>>({
       url: buildUrl,
       method: 'POST',
       data: {

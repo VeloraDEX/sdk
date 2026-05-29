@@ -4,12 +4,13 @@ import type { TypedDataField } from '../common/orders/buildOrderData';
 import type {
   Bridge,
   DeltaOrderType,
+  DeltaOrderUnion,
   OnChainOrderMap,
   OnChainOrderType,
 } from '../delta/helpers/types';
 
 /** @description Response from POST /delta/v2/orders/build — EIP-712 typed data ready to sign. */
-export type BuiltDeltaOrder = {
+export type BuiltDeltaOrder<T extends DeltaOrderUnion = DeltaOrderUnion> = {
   toSign: {
     domain: {
       name: string;
@@ -20,7 +21,7 @@ export type BuiltDeltaOrder = {
     /** EIP-712 type definitions keyed by type name. */
     types: Record<string, TypedDataField[]>;
     /** The on-chain order struct value to sign. */
-    value: Record<string, unknown>;
+    value: T;
   };
   /** EIP-712 order hash. */
   orderHash: string;

@@ -1,5 +1,6 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
+import type { DeltaAuctionOrder } from '../delta/helpers/types';
 import type { BuiltDeltaOrder, DeltaRoute } from './types';
 export type { BuiltDeltaOrder } from './types';
 
@@ -42,7 +43,7 @@ export type BuildDeltaOrderParams = {
 type BuildDeltaOrder = (
   buildOrderParams: BuildDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<BuiltDeltaOrder>;
+) => Promise<BuiltDeltaOrder<DeltaAuctionOrder>>;
 
 export type BuildDeltaOrderFunctions = {
   /** @description Build a Delta v2 order from a DeltaRoute via the server endpoint, ready to sign and post. */
@@ -56,7 +57,7 @@ export const constructBuildDeltaOrder = (
   const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
 
   const buildDeltaOrder: BuildDeltaOrder = async (params, requestParams) =>
-    fetcher<BuiltDeltaOrder>({
+    fetcher<BuiltDeltaOrder<DeltaAuctionOrder>>({
       url: buildUrl,
       method: 'POST',
       data: {

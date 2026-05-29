@@ -100,9 +100,7 @@ async function manualDeltaV2Flow() {
 
   const deltaAuction = await deltaSDK.postDeltaOrder({
     // partner: "..." // if available
-    order: builtOrder.toSign.value as Parameters<
-      typeof deltaSDK.postDeltaOrder
-    >[0]['order'],
+    order: builtOrder.toSign.value,
     signature,
   });
 
@@ -141,9 +139,7 @@ async function externalDeltaV2Flow() {
   const signature = await deltaSDK.signDeltaOrder(builtOrder);
 
   const deltaAuction = await deltaSDK.postExternalDeltaOrder({
-    order: builtOrder.toSign.value as Parameters<
-      typeof deltaSDK.postExternalDeltaOrder
-    >[0]['order'],
+    order: builtOrder.toSign.value,
     signature,
   });
 

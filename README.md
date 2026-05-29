@@ -537,9 +537,7 @@ const built = await simpleSDK.deltaV2.buildDeltaOrder({
 const signature = await simpleSDK.deltaV2.signDeltaOrder(built);
 
 const deltaAuction = await simpleSDK.deltaV2.postDeltaOrder({
-  order: built.toSign.value as Parameters<
-    typeof simpleSDK.deltaV2.postDeltaOrder
-  >[0]['order'],
+  order: built.toSign.value,
   signature,
 });
 ```
