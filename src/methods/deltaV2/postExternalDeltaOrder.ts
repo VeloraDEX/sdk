@@ -1,7 +1,7 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type { DeltaAuction } from '../delta/helpers/types';
 import type { DeltaOrderToPost } from './postDeltaOrder';
+import type { DeltaAuction } from './types';
 
 export type PostExternalDeltaOrderParams = Omit<
   DeltaOrderToPost<'ExternalOrder'>,

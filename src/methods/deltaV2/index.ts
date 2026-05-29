@@ -1,5 +1,6 @@
 import type { ConstructProviderFetchInput } from '../../types';
-import type { DeltaAuction, OnChainOrderMap } from '../delta/helpers/types';
+import type { OnChainOrderMap } from '../delta/helpers/types';
+import type { DeltaAuction } from './types';
 
 // Re-export public surface so `import * as DeltaV2` carries everything.
 export * from './types';

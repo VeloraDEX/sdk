@@ -331,8 +331,8 @@ describe('Delta v2: fetch methods', () => {
   });
 
   test('getDeltaOrders returns the pagination envelope', async () => {
-    const order = { id: 'auction-1' } as unknown as DeltaV2.DeltaOrderResponse;
-    const envelope: PaginatedResponse<DeltaV2.DeltaOrderResponse> = {
+    const order = { id: 'auction-1' } as unknown as DeltaV2.DeltaAuction;
+    const envelope: PaginatedResponse<DeltaV2.DeltaAuction> = {
       data: [order],
       total: 1,
       page: 1,
@@ -367,7 +367,7 @@ describe('Delta v2: fetch methods', () => {
   });
 
   test('getDeltaOrders by id / by hash use the v2 path', async () => {
-    const order = { id: 'auction-1' } as unknown as DeltaV2.DeltaOrderResponse;
+    const order = { id: 'auction-1' } as unknown as DeltaV2.DeltaAuction;
     const fetcher = makeFetcher(({ url }) => {
       if (url === `${API_URL}/delta/v2/orders/auction-1`) return order;
       if (url === `${API_URL}/delta/v2/orders/hash/0xhash`) return order;

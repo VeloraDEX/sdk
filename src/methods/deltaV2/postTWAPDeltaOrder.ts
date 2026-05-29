@@ -2,11 +2,9 @@ import type { Prettify } from 'ts-essentials';
 import { API_URL } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type {
-  DeltaAuction,
-  TWAPOnChainOrderType,
-} from '../delta/helpers/types';
+import type { TWAPOnChainOrderType } from '../delta/helpers/types';
 import type { DeltaOrderToPost } from './postDeltaOrder';
+import type { DeltaAuction } from './types';
 
 export type PostTWAPDeltaOrderParams = Prettify<
   Omit<

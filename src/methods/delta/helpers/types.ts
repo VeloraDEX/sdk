@@ -248,6 +248,7 @@ export type DeltaAuctionTransaction = {
 
 export type OnChainOrderMap = {
   Order: DeltaAuctionOrder;
+  FillableOrder: DeltaAuctionOrder;
   ExternalOrder: ExternalDeltaOrder;
   TWAPOrder: TWAPDeltaOrder;
   TWAPBuyOrder: TWAPBuyDeltaOrder;
@@ -261,6 +262,7 @@ type BaseBridgeAuctionFields = Pick<
 
 type BridgeAuctionFiledsMap = {
   Order: BaseBridgeAuctionFields;
+  FillableOrder: BaseBridgeAuctionFields;
   ExternalOrder: BaseBridgeAuctionFields;
   TWAPOrder: Record<keyof BaseBridgeAuctionFields, null>;
   TWAPBuyOrder: Record<keyof BaseBridgeAuctionFields, null>;
@@ -303,6 +305,7 @@ export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
     : never;
 
 export type DeltaAuctionDelta = DeltaAuction<'Order'>;
+export type DeltaAuctionFillable = DeltaAuction<'FillableOrder'>;
 export type DeltaAuctionExternal = DeltaAuction<'ExternalOrder'>;
 export type DeltaAuctionTWAP = DeltaAuction<'TWAPOrder'>;
 export type DeltaAuctionTWAPBuy = DeltaAuction<'TWAPBuyOrder'>;
@@ -310,6 +313,7 @@ export type DeltaAuctionProductive = DeltaAuction<'ProductiveOrder'>;
 
 export type DeltaAuctionUnion =
   | DeltaAuctionDelta
+  | DeltaAuctionFillable
   | DeltaAuctionExternal
   | DeltaAuctionTWAP
   | DeltaAuctionTWAPBuy

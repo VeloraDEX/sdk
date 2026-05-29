@@ -10,17 +10,17 @@ import type {
   DeltaOrderType,
   OnChainOrderType,
 } from '../delta/helpers/types';
-import type { DeltaOrderStatus, DeltaOrderResponse } from './types';
+import type { DeltaOrderStatus, DeltaAuction } from './types';
 
 type GetDeltaOrderById = (
   orderId: string,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderResponse>;
+) => Promise<DeltaAuction>;
 
 type GetDeltaOrderByHash = (
   orderHash: string,
   requestParams?: RequestParameters
-) => Promise<DeltaOrderResponse>;
+) => Promise<DeltaAuction>;
 
 type OrdersFilter = {
   /** @description `order.owner` to fetch Delta Orders for. */
@@ -47,7 +47,7 @@ type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
 type GetDeltaOrders = (
   options: OrdersFilter,
   requestParams?: RequestParameters
-) => Promise<PaginatedResponse<DeltaOrderResponse>>;
+) => Promise<PaginatedResponse<DeltaAuction>>;
 
 type GetRequiredBalanceParams = {
   userAddress: Address;
@@ -82,7 +82,7 @@ export const constructGetDeltaOrders = ({
     requestParams
   ) => {
     const fetchURL = `${baseUrl}/${orderId}` as const;
-    return fetcher<DeltaOrderResponse>({
+    return fetcher<DeltaAuction>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -94,7 +94,7 @@ export const constructGetDeltaOrders = ({
     requestParams
   ) => {
     const fetchURL = `${baseUrl}/hash/${orderHash}` as const;
-    return fetcher<DeltaOrderResponse>({
+    return fetcher<DeltaAuction>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -117,7 +117,7 @@ export const constructGetDeltaOrders = ({
 
     const fetchURL = `${baseUrl}${search}` as const;
 
-    return fetcher<PaginatedResponse<DeltaOrderResponse>>({
+    return fetcher<PaginatedResponse<DeltaAuction>>({
       url: fetchURL,
       method: 'GET',
       requestParams,

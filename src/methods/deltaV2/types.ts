@@ -1,9 +1,10 @@
+import type { Prettify } from 'ts-essentials';
 import type { Address } from '../../types';
 import type { TypedDataField } from '../common/orders/buildOrderData';
 import type {
   Bridge,
   DeltaOrderType,
-  DeltaOrderUnion,
+  OnChainOrderMap,
   OnChainOrderType,
 } from '../delta/helpers/types';
 
@@ -120,7 +121,8 @@ export type BridgeRoute = {
 };
 
 /* ------------------------------------------------------------------ */
-/* Orders v2 response shape (different from v1's DeltaAuction)         */
+/* Orders v2 response shape: DeltaAuction<T>, same generic shape as     */
+/* v1's DeltaAuction but with v2 base fields.                           */
 /* ------------------------------------------------------------------ */
 
 /** @description Integrator-facing order status returned by v2 order endpoints. */
@@ -140,9 +142,6 @@ const DeltaOrderStatusMap = {
 
 export type DeltaOrderStatus =
   (typeof DeltaOrderStatusMap)[keyof typeof DeltaOrderStatusMap];
-
-/** @description `OnChainOrderType` plus the synthetic `FillableOrder` label, used when a Standard `Order` is `partiallyFillable`. */
-export type DeltaOnChainOrderTypeReported = OnChainOrderType | 'FillableOrder';
 
 /** @description Token side on an order. SELL provides an explicit `amount`; BUY provides expected/executed amounts. */
 export type DeltaTokenSide =
@@ -168,25 +167,35 @@ export type DeltaTransaction = {
   receivedAmount: string | null;
 };
 
-/** @description Order shape returned by GET /v2/orders, /v2/orders/:id, /v2/orders/hash/:hash. */
-export type DeltaOrderResponse = {
+type DeltaAuctionBase = {
   id: string;
   status: DeltaOrderStatus;
   side: 'SELL' | 'BUY';
   type: DeltaOrderType;
-  onChainOrderType: DeltaOnChainOrderTypeReported | null;
   input: DeltaTokenSide;
   output: DeltaTokenSide;
   owner: Address;
   beneficiary: Address;
-  orderHash: string | null;
+  orderHash: string;
   partner: string;
-  order: DeltaOrderUnion;
   transactions: DeltaTransaction[];
   /** @description ISO datetime string. */
-  createdAt: string | null;
+  createdAt: string;
   /** @description ISO datetime string. */
-  updatedAt: string | null;
+  updatedAt: string;
   /** @description ISO datetime string. */
-  expiresAt: string | null;
+  expiresAt: string;
 };
+
+/** @description Order shape returned by GET /v2/orders, /v2/orders/:id, /v2/orders/hash/:hash.
+ *  Generic over `onChainOrderType` like v1's `DeltaAuction`: the type distributes over the
+ *  union so that `order` narrows to the matching family (`OnChainOrderMap[T]`). */
+export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
+  T extends T
+    ? Prettify<
+        DeltaAuctionBase & {
+          onChainOrderType: T;
+          order: OnChainOrderMap[T];
+        }
+      >
+    : never;

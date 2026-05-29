@@ -1,11 +1,8 @@
 import { API_URL } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type {
-  DeltaAuction,
-  DeltaOrderType,
-  OnChainOrderMap,
-} from '../delta/helpers/types';
+import type { DeltaOrderType, OnChainOrderMap } from '../delta/helpers/types';
+import type { DeltaAuction } from './types';
 
 export type DeltaOrderToPost<T extends keyof OnChainOrderMap = 'Order'> = {
   /** @description Partner string */

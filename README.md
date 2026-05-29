@@ -483,7 +483,7 @@ Delta V2 ships alongside v1. It moves order construction to the server (`POST /d
 import { constructSimpleSDK, DeltaV2 } from '@velora-dex/sdk';
 
 // types: DeltaV2.DeltaPrice, DeltaV2.DeltaRoute, DeltaV2.BuiltDeltaOrder,
-//        DeltaV2.DeltaOrderResponse, DeltaV2.BridgeRoute, ...
+//        DeltaV2.DeltaAuction, DeltaV2.BridgeRoute, ...
 // values: DeltaV2.constructBuildDeltaOrder, DeltaV2.constructPostDeltaOrder,
 //         DeltaV2.constructAllDeltaOrdersHandlers, ...
 ```
@@ -520,7 +520,7 @@ const deltaAuction = await simpleSDK.deltaV2.submitDeltaOrder({
 });
 
 // status polling — v2 status COMPLETED already accounts for the dest-chain bridge
-const isDone = (o: DeltaV2.DeltaOrderResponse) => o.status === 'COMPLETED';
+const isDone = (o: DeltaV2.DeltaAuction) => o.status === 'COMPLETED';
 ```
 
 #### Manual flow (full control over signing)
@@ -600,6 +600,8 @@ A complete v2 example (standard, external handler, TWAP, and order listing) is i
 #### Productive Orders (read-only)
 
 Alongside the four buildable families (`Order`, `ExternalOrder`, `TWAPOrder`, `TWAPBuyOrder`), the SDK surfaces a fifth `onChainOrderType` — **`ProductiveOrder`** — through the read endpoints (`sdk.delta.getDeltaOrderById`, `sdk.deltaV2.getDeltaOrders`, etc.). Productive orders are produced and managed entirely by the server: there are deliberately **no `buildProductiveOrder`, `signProductiveOrder`, or `submitProductiveOrder` helpers**. The shape is wired through `OnChainOrderType`, `OnChainOrderMap`, and `DeltaAuctionUnion` (also exported individually as `DeltaAuctionProductive`) so that consumers iterating over an order list can type-narrow on `onChainOrderType === 'ProductiveOrder'` and read the order safely — productive orders carry no `OrderKind`, so the side is always `SELL`.
+
+`OnChainOrderType` additionally includes **`'FillableOrder'`**, which maps to the same shape as a Standard `'Order'` (`DeltaAuctionOrder`, also exported as `DeltaAuctionFillable` and part of `DeltaAuctionUnion`). It is not a separate buildable family — it's the `onChainOrderType` the server reports for a `partiallyFillable` Standard order, so treat it the same as `'Order'` when narrowing.
 
 ```ts
 import { OrderHelpers, type DeltaAuctionUnion } from '@velora-dex/sdk';
