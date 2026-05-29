@@ -72,7 +72,7 @@ export type BuildTWAPDeltaOrderFunctions = {
 export const constructBuildTWAPDeltaOrder = (
   options: ConstructFetchInput
 ): BuildTWAPDeltaOrderFunctions => {
-  const { apiURL = API_URL, chainId, fetcher } = options;
+  const { apiURL = API_URL, fetcher } = options;
   const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
 
   const buildTWAPDeltaOrder: BuildTWAPDeltaOrder = async (
@@ -80,7 +80,6 @@ export const constructBuildTWAPDeltaOrder = (
     requestParams
   ) => {
     const commonBody = {
-      chainId,
       route: params.route,
       owner: params.owner,
       beneficiary: params.beneficiary,

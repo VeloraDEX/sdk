@@ -53,7 +53,7 @@ export type BuildDeltaOrderFunctions = {
 export const constructBuildDeltaOrder = (
   options: ConstructFetchInput
 ): BuildDeltaOrderFunctions => {
-  const { apiURL = API_URL, chainId, fetcher } = options;
+  const { apiURL = API_URL, fetcher } = options;
   const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
 
   const buildDeltaOrder: BuildDeltaOrder = async (params, requestParams) =>
@@ -61,7 +61,6 @@ export const constructBuildDeltaOrder = (
       url: buildUrl,
       method: 'POST',
       data: {
-        chainId,
         side: params.side,
         route: params.route,
         owner: params.owner,
