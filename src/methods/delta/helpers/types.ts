@@ -257,13 +257,13 @@ type DeltaAuctionBase = {
 
 export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
   T extends T
-    ? Prettify<
-        DeltaAuctionBase & {
-          onChainOrderType: T;
-          order: OnChainOrderMap[T];
-        } & BridgeAuctionFiledsMap[T]
-      >
-    : never;
+  ? Prettify<
+    DeltaAuctionBase & {
+      onChainOrderType: T;
+      order: OnChainOrderMap[T];
+    } & BridgeAuctionFiledsMap[T]
+  >
+  : never;
 
 export type DeltaAuctionDelta = DeltaAuction<'Order'>;
 export type DeltaAuctionExternal = DeltaAuction<'ExternalOrder'>;
@@ -330,7 +330,12 @@ export type UnifiedDeltaOrderData = {
       srcAmount: string;
       destAmount: string;
     };
-    /** @description  final amounts after Order execution. May be less than expected if there is slippage  or only partial execution was achieved */
+    /** @description  minimal amounts that user should receive if the order is filled, known at the start of Order execution */
+    minimal: {
+      srcAmount: string;
+      destAmount: string;
+    };
+    /** @description  final amounts after Order execution. May be less than expected if there is slippage or only partial execution was achieved */
     final?: {
       srcAmount: string;
       destAmount: string;

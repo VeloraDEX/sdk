@@ -283,7 +283,7 @@ function getUnifiedDeltaOrderData(
   const { order, chainId } = auction;
 
   const { srcToken, destToken } = getOrderTokenAddresses(order);
-  const { expected, final } = getAuctionAmounts(auction);
+  const { expected, final, minimal } = getAuctionAmounts(auction);
 
   const srcChainId = chainId;
   const destChainId = getAuctionDestChainId({ order, chainId });
@@ -300,6 +300,7 @@ function getUnifiedDeltaOrderData(
     amounts: {
       expected,
       final,
+      minimal,
     },
     srcToken,
     destToken,
@@ -362,6 +363,11 @@ function getAuctionAmounts(auction: DeltaAuction) {
     destAmount: auction.order.expectedAmount || auction.order.destAmount,
   };
 
+  let minimal = {
+    srcAmount: auction.order.srcAmount,
+    destAmount: auction.order.destAmount,
+  }
+
   const order = auction.order;
 
   if (isOrderCrosschain(order)) {
@@ -369,6 +375,14 @@ function getAuctionAmounts(auction: DeltaAuction) {
       srcAmount: expected.srcAmount,
       destAmount: scaleByFactor(
         BigInt(expected.destAmount),
+        order.bridge.scalingFactor
+      ).toString(),
+    };
+
+    minimal = {
+      srcAmount: minimal.srcAmount,
+      destAmount: scaleByFactor(
+        BigInt(minimal.destAmount),
         order.bridge.scalingFactor
       ).toString(),
     };
@@ -380,10 +394,12 @@ function getAuctionAmounts(auction: DeltaAuction) {
     return {
       final,
       expected,
+      minimal,
     };
   }
   return {
     expected,
+    minimal,
   };
 }
 
