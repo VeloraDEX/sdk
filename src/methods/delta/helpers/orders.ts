@@ -195,10 +195,12 @@ function getTwapAuctionAmounts(
     return {
       final,
       expected,
+      minimal: expected, // TWAP orders don't have more detailed amounts
     };
   }
   return {
     expected,
+    minimal: expected, // TWAP orders don't have more detailed amounts
   };
 }
 
@@ -461,12 +463,12 @@ const failedAuctionStatusesSet = new Set<DeltaAuctionStatus>(
 
 type FailedDeltaAuctionProps =
   | {
-      status: (typeof failedAuctionStatuses)[number];
-    }
+    status: (typeof failedAuctionStatuses)[number];
+  }
   | {
-      status: 'EXECUTED'; // srcChain tx succeeded
-      bridgeStatus: 'expired' | 'refunded'; // destChain tx failed or relayer didn't deliver
-    };
+    status: 'EXECUTED'; // srcChain tx succeeded
+    bridgeStatus: 'expired' | 'refunded'; // destChain tx failed or relayer didn't deliver
+  };
 
 /**
  * @description Checks whether an auction is failed on source or destination chain.
@@ -557,8 +559,8 @@ function getFilledPercent(
   const completeTransactions = !isOrderCrosschain(auction.order)
     ? auction.transactions
     : auction.transactions.filter(
-        (transaction) => transaction.bridgeStatus === 'filled'
-      );
+      (transaction) => transaction.bridgeStatus === 'filled'
+    );
 
   const filledPercentBps = completeTransactions.reduce(
     (acc, { filledPercent }) => {
