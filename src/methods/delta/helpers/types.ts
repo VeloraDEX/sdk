@@ -330,7 +330,12 @@ export type UnifiedDeltaOrderData = {
       srcAmount: string;
       destAmount: string;
     };
-    /** @description  final amounts after Order execution. May be less than expected if there is slippage  or only partial execution was achieved */
+    /** @description  minimal amounts that user should receive if the order is filled, known at the start of Order execution */
+    minimal: {
+      srcAmount: string;
+      destAmount: string;
+    };
+    /** @description  final amounts after Order execution. May be less than expected if there is slippage or only partial execution was achieved */
     final?: {
       srcAmount: string;
       destAmount: string;
