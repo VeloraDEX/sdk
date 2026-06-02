@@ -16,4 +16,4 @@ A BLOb object that can be passed for [[link-eip-4844]]
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:106
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:106

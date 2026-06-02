@@ -18,4 +18,4 @@ NFT Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/nftOrders/index.ts:101](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/index.ts#L101)
+[src/methods/nftOrders/index.ts:101](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/index.ts#L101)

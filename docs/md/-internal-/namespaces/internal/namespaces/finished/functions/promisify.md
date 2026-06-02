@@ -10,7 +10,7 @@
 
 ## Parameters
 
-• **stream**: [`ReadableStream`](../../../../../interfaces/ReadableStream.md) \| [`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../../../interfaces/ReadWriteStream.md)
+• **stream**: `ReadableStream` \| `WritableStream` \| `ReadWriteStream`
 
 • **options?**: [`FinishedOptions`](../../../interfaces/FinishedOptions.md)
 
@@ -20,4 +20,4 @@
 
 ## Defined in
 
-node\_modules/@types/node/stream.d.ts:1468
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1468

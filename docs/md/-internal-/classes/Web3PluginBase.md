@@ -51,7 +51,7 @@ class CustomPlugin extends Web3PluginBase<CustomRpcApi> {...}
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:53
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:53
 
 ## Properties
 
@@ -65,7 +65,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:53
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:51
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:51
 
 ***
 
@@ -79,7 +79,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:51
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:49
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:49
 
 ***
 
@@ -93,7 +93,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:49
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:50
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:50
 
 ***
 
@@ -107,7 +107,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:50
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:52
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:52
 
 ***
 
@@ -121,7 +121,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:52
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:46
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:46
 
 ***
 
@@ -131,7 +131,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:46
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:185
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:185
 
 ***
 
@@ -153,7 +153,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:185
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:45
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:45
 
 ***
 
@@ -167,7 +167,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:45
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:44
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:44
 
 ***
 
@@ -189,7 +189,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:44
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:40
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:40
 
 ## Accessors
 
@@ -209,7 +209,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:40
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:60
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:60
 
 ***
 
@@ -235,7 +235,7 @@ Will return the [Web3BatchRequest](Web3BatchRequest.md) constructor.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:160
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:160
 
 ***
 
@@ -272,7 +272,7 @@ Will set the blockHeaderTimeout
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:169
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:169
 
 ***
 
@@ -311,7 +311,7 @@ Will set the contractDataInputFill
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:70
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:70
 
 ***
 
@@ -376,7 +376,7 @@ _eventsCount: 0,
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:123
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:123
 
 ***
 
@@ -408,7 +408,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:123
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:255
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:255
 
 ***
 
@@ -448,7 +448,7 @@ Will set the default account.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:82
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:82
 
 ***
 
@@ -497,7 +497,7 @@ Will set the default block.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:96
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:96
 
 ***
 
@@ -529,7 +529,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:96
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:195
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:195
 
 ***
 
@@ -573,7 +573,7 @@ Will set the default common property
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:235
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:235
 
 ***
 
@@ -624,7 +624,7 @@ Will set the default hardfork.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:216
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:216
 
 ***
 
@@ -656,7 +656,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:216
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:249
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:249
 
 ***
 
@@ -688,7 +688,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:249
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:193
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:193
 
 ***
 
@@ -720,7 +720,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:193
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:191
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:191
 
 ***
 
@@ -752,7 +752,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:191
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:247
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:247
 
 ***
 
@@ -801,7 +801,7 @@ Will set the enableExperimentalFeatures
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:178
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:178
 
 ***
 
@@ -825,7 +825,7 @@ When using web3.js in an Ethereum compatible browser, it will set with the curre
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:148
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:148
 
 ***
 
@@ -868,7 +868,7 @@ Will set the handleRevert
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:59
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:59
 
 ***
 
@@ -903,7 +903,7 @@ Will get the ignoreGasPricing property. When true, the gasPrice, maxPriorityFeeP
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:245
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:245
 
 ***
 
@@ -935,7 +935,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:245
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:189
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:189
 
 ***
 
@@ -1002,7 +1002,7 @@ Accepted providers are of type [SupportedProviders](../type-aliases/SupportedPro
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:88
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:88
 
 ***
 
@@ -1022,7 +1022,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:88
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:54
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:54
 
 ***
 
@@ -1044,7 +1044,7 @@ Will return the current subscriptionManager ([Web3SubscriptionManager](Web3Subsc
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:58
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:58
 
 ***
 
@@ -1081,7 +1081,7 @@ Will set the transactionBlockTimeout.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:122
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:122
 
 ***
 
@@ -1113,7 +1113,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:122
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:251
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:251
 
 ***
 
@@ -1150,7 +1150,7 @@ Will set the transactionConfirmationBlocks.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:131
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:131
 
 ***
 
@@ -1182,7 +1182,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:131
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:163
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:163
 
 ***
 
@@ -1219,7 +1219,7 @@ Will set the transactionPollingInterval.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:140
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:140
 
 ***
 
@@ -1256,7 +1256,7 @@ Will set the transactionPollingTimeout.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:149
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:149
 
 ***
 
@@ -1293,7 +1293,7 @@ Will set the transactionReceiptPollingInterval
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:158
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:158
 
 ***
 
@@ -1331,7 +1331,7 @@ Will set the transactionSendTimeout.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:113
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:113
 
 ***
 
@@ -1363,7 +1363,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:113
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:253
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:253
 
 ***
 
@@ -1383,7 +1383,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:253
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:59
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:59
 
 ## Methods
 
@@ -1411,7 +1411,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:59
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
 
 ***
 
@@ -1429,7 +1429,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 ***
 
@@ -1454,7 +1454,7 @@ Note: This method is only for backward compatibility, and It is recommended to u
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:165
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:165
 
 ***
 
@@ -1472,7 +1472,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:165
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:62
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:62
 
 ***
 
@@ -1490,7 +1490,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:62
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 ***
 
@@ -1518,7 +1518,7 @@ Link current context to another context.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:72
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:72
 
 ***
 
@@ -1544,7 +1544,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:72
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
 
 ***
 
@@ -1570,7 +1570,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
 
 ***
 
@@ -1598,7 +1598,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
 
 ***
 
@@ -1626,7 +1626,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
 
 ***
 
@@ -1654,7 +1654,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
 
 ***
 
@@ -1678,7 +1678,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:186
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:186
 
 ***
 
@@ -1700,17 +1700,17 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:186
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:73
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:73
 
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Returns
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Inherited from
 
@@ -1718,7 +1718,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:73
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
@@ -1740,7 +1740,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:48
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:48
 
 ***
 
@@ -1762,7 +1762,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:48
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
 
 ***
 
@@ -1790,7 +1790,7 @@ Returns true if the provider was set
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:155
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:155
 
 ***
 
@@ -1812,7 +1812,7 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:155
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:156
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:156
 
 ***
 
@@ -1846,7 +1846,7 @@ and then use it to create new objects of any type extended by `Web3Context`.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:68
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:68
 
 ***
 
@@ -1876,4 +1876,4 @@ node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:68
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:61
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:61

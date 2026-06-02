@@ -23,7 +23,7 @@ sink.
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:305
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:302
 
 ***
 
@@ -33,7 +33,7 @@ node\_modules/@types/node/stream/web.d.ts:305
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:306
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:303
 
 ***
 
@@ -43,7 +43,7 @@ node\_modules/@types/node/stream/web.d.ts:306
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:307
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:304
 
 ## Methods
 
@@ -61,7 +61,7 @@ node\_modules/@types/node/stream/web.d.ts:307
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:308
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:305
 
 ***
 
@@ -75,7 +75,7 @@ node\_modules/@types/node/stream/web.d.ts:308
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:309
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:306
 
 ***
 
@@ -89,7 +89,7 @@ node\_modules/@types/node/stream/web.d.ts:309
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:310
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:307
 
 ***
 
@@ -107,4 +107,4 @@ node\_modules/@types/node/stream/web.d.ts:310
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:311
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:308

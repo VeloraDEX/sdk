@@ -18,7 +18,7 @@ The chain ID of the signing domain.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:18
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:18
 
 ***
 
@@ -30,7 +30,7 @@ The human-readable name of the signing domain.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:10
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:10
 
 ***
 
@@ -42,7 +42,7 @@ A salt used for purposes decided by the specific domain.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:26
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:26
 
 ***
 
@@ -54,7 +54,7 @@ The the address of the contract that will verify the signature.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:22
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:22
 
 ***
 
@@ -66,4 +66,4 @@ The major version of the signing domain.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:14
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:14

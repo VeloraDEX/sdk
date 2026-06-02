@@ -18,4 +18,4 @@ From T, pick a set of properties whose keys are in the union K
 
 ## Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1599
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1599

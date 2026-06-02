@@ -24,4 +24,4 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/web/lib/index.d.ts:19
+node\_modules/.pnpm/@ethersproject+web@5.8.0/node\_modules/@ethersproject/web/lib/index.d.ts:19

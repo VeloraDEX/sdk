@@ -22,7 +22,7 @@ An **EventFilter** allows efficiently filtering logs (also known as
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1003
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1003
 
 ***
 
@@ -32,4 +32,4 @@ node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1003
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1004
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1004

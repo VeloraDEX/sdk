@@ -20,4 +20,4 @@
 
 ## Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:41
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:41

@@ -6,8 +6,8 @@
 
 # Type Alias: BuildExternalDeltaOrderParams
 
-> **BuildExternalDeltaOrderParams**: [`BuildExternalDeltaOrderParamsBase`](../-internal-/type-aliases/BuildExternalDeltaOrderParamsBase.md) & [`AmountsWithSlippage`](../-internal-/type-aliases/AmountsWithSlippage.md)
+> **BuildExternalDeltaOrderParams**: [`BuildExternalDeltaOrderParamsBase`](../-internal-/type-aliases/BuildExternalDeltaOrderParamsBase.md) & [`DeltaAmountsWithSlippage`](DeltaAmountsWithSlippage.md)
 
 ## Defined in
 
-[src/methods/delta/buildExternalDeltaOrder.ts:56](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildExternalDeltaOrder.ts#L56)
+[src/methods/delta/buildExternalDeltaOrder.ts:56](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildExternalDeltaOrder.ts#L56)

@@ -68,7 +68,7 @@
 
 ### transactions
 
-> **transactions**: [`DeltaAuctionTransaction`](DeltaAuctionTransaction.md)[]
+> **transactions**: [`DeltaAuctionTransaction`](../../type-aliases/DeltaAuctionTransaction.md)[]
 
 ### type
 
@@ -84,4 +84,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:170](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L170)
+[src/methods/delta/helpers/types.ts:233](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L233)

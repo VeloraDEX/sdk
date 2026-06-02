@@ -14,4 +14,4 @@ Use DeltaAuction directly
 
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:15](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L15)
+[src/methods/delta/getDeltaOrders.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L15)

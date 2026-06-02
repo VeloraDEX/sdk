@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/swap/transaction.ts:32](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/transaction.ts#L32)
+[src/methods/swap/transaction.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L32)

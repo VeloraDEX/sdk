@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:115
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:115

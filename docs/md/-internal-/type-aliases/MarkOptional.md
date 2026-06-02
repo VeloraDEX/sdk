@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/ts-essentials/dist/mark-optional/index.d.ts:1
+node\_modules/.pnpm/ts-essentials@10.0.3\_typescript@5.6.3/node\_modules/ts-essentials/dist/mark-optional/index.d.ts:1

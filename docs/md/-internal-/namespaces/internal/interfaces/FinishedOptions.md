@@ -10,10 +10,6 @@
 
 - [`Abortable`](../../EventEmitter/interfaces/Abortable.md)
 
-## Extended by
-
-- [`FinishedOptions`](../../node:stream_promises/interfaces/FinishedOptions.md)
-
 ## Properties
 
 ### error?
@@ -22,7 +18,7 @@
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1409
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1409
 
 ***
 
@@ -32,7 +28,7 @@ node\_modules/@types/node/stream.d.ts:1409
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1410
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1410
 
 ***
 
@@ -48,7 +44,7 @@ When provided the corresponding `AbortController` can be used to cancel an async
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:561
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:508
 
 ***
 
@@ -58,4 +54,4 @@ node\_modules/@types/node/events.d.ts:561
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1411
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1411

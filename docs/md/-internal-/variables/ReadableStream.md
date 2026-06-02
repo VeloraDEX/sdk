@@ -10,9 +10,9 @@
 
 ## Parameters
 
-• **underlyingSource**: [`UnderlyingByteSource`](../interfaces/UnderlyingByteSource.md)
+• **underlyingSource**: `UnderlyingByteSource`
 
-• **strategy?**: [`QueuingStrategy`](../interfaces/QueuingStrategy.md)\<`Uint8Array`\>
+• **strategy?**: `QueuingStrategy`\<`Uint8Array`\>
 
 ## Returns
 
@@ -20,9 +20,9 @@
 
 ## Parameters
 
-• **underlyingSource?**: [`UnderlyingSource`](../interfaces/UnderlyingSource.md)\<`R`\>
+• **underlyingSource?**: `UnderlyingSource`\<`R`\>
 
-• **strategy?**: [`QueuingStrategy`](../interfaces/QueuingStrategy.md)\<`R`\>
+• **strategy?**: `QueuingStrategy`\<`R`\>
 
 ## Returns
 
@@ -50,4 +50,4 @@
 
 ## Defined in
 
-node\_modules/@types/node/stream/web.d.ts:173
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:170

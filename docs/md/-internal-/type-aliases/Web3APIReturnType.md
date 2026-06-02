@@ -12,8 +12,8 @@
 
 • **API** *extends* [`Web3APISpec`](Web3APISpec.md)
 
-• **Method** *extends* [`Web3APIMethod`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
+• **Method** *extends* [`Web3APIMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:32
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:32

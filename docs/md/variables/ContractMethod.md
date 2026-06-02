@@ -110,6 +110,10 @@
 
 > **swapExactAmountInOutOnMakerPSM**: [`swapExactAmountInOutOnMakerPSM`](../enumerations/ContractMethodV6.md#swapexactamountinoutonmakerpsm)
 
+### swapExactAmountInPro
+
+> **swapExactAmountInPro**: [`swapExactAmountInPro`](../enumerations/ContractMethodV6.md#swapexactamountinpro)
+
 ### swapExactAmountOut
 
 > **swapExactAmountOut**: [`swapExactAmountOut`](../enumerations/ContractMethodV6.md#swapexactamountout)
@@ -125,6 +129,10 @@
 ### swapExactAmountOutOnUniswapV3
 
 > **swapExactAmountOutOnUniswapV3**: [`swapExactAmountOutOnUniswapV3`](../enumerations/ContractMethodV6.md#swapexactamountoutonuniswapv3)
+
+### swapExactAmountOutPro
+
+> **swapExactAmountOutPro**: [`swapExactAmountOutPro`](../enumerations/ContractMethodV6.md#swapexactamountoutpro)
 
 ### swapOnAugustusRFQTryBatchFill
 
@@ -152,4 +160,4 @@
 
 ## Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:44
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:46

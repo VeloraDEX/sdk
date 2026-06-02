@@ -6,6 +6,10 @@
 
 # Interface: AsyncIterator\<T, TReturn, TNext\>
 
+## Extended by
+
+- [`AsyncIterableIterator`](AsyncIterableIterator.md)
+
 ## Type Parameters
 
 • **T**
@@ -30,7 +34,7 @@
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:32
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:32
 
 ***
 
@@ -48,7 +52,7 @@ node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:32
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:33
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:33
 
 ***
 
@@ -66,4 +70,4 @@ node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:33
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:34
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:34

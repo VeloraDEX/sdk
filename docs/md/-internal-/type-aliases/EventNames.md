@@ -6,7 +6,7 @@
 
 # Type Alias: EventNames\<Events\>
 
-> **EventNames**\<`Events`\>: `object` *extends* `Events` ? `string` \| `symbol` : keyof `Events` \| keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md)
+> **EventNames**\<`Events`\>: `object` *extends* `Events` ? `string` \| `symbol` : keyof `Events` \| keyof [`EventEmitterBuiltInEventMap`](../interfaces/EventEmitterBuiltInEventMap.md)
 
 ## Type Parameters
 
@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/@types/node/events.d.ts:114
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:114

@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/@types/node/crypto.d.ts:675
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/crypto.d.ts:680

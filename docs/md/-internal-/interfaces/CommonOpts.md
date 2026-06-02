@@ -24,7 +24,7 @@ passed in via [CommonOpts.customChains](CommonOpts.md#customchains).
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:83
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:83
 
 ***
 
@@ -44,7 +44,7 @@ const common = new Common({ chain: 'myCustomChain1', customChains: [ myCustomCha
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:95
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:95
 
 ***
 
@@ -65,7 +65,7 @@ Currently supported:
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:72
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:72
 
 ***
 
@@ -83,4 +83,4 @@ Default: Hardfork.London
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:63
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:63

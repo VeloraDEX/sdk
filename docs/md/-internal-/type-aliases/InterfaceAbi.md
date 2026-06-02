@@ -28,4 +28,4 @@ An **InterfaceAbi** may be any supported ABI format.
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/abi/interface.d.ts:159
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:159

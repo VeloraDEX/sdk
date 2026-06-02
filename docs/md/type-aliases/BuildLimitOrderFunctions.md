@@ -24,4 +24,4 @@ Limit Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/limitOrders/buildOrder.ts:23](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/buildOrder.ts#L23)
+[src/methods/limitOrders/buildOrder.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/buildOrder.ts#L23)

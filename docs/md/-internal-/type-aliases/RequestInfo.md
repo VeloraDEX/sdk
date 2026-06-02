@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:27899
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:27899

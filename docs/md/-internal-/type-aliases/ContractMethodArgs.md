@@ -20,4 +20,4 @@ Arguments to a Contract method can always include an additional and
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:79
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:79

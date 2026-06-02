@@ -6,7 +6,7 @@
 
 # Type Alias: DeltaAuction\<T\>
 
-> **DeltaAuction**\<`T`\>: `T` *extends* `T` ? [`DeltaAuctionBase`](../-internal-/type-aliases/DeltaAuctionBase.md) & `object` : `never`
+> **DeltaAuction**\<`T`\>: `T` *extends* `T` ? [`Prettify`](../-internal-/type-aliases/Prettify.md)\<[`DeltaAuctionBase`](../-internal-/type-aliases/DeltaAuctionBase.md) & `object` & [`BridgeAuctionFiledsMap`](../-internal-/type-aliases/BridgeAuctionFiledsMap.md)\[`T`\]\> : `never`
 
 ## Type Parameters
 
@@ -14,4 +14,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:194](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L194)
+[src/methods/delta/helpers/types.ts:258](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L258)

@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/delta/index.ts:132](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/index.ts#L132)
+[src/methods/delta/index.ts:149](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L149)

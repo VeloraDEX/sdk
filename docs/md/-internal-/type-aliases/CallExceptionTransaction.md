@@ -26,4 +26,4 @@ The related transaction that caused the error.
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/utils/errors.d.ts:290
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:290

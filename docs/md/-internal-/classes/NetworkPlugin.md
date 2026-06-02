@@ -26,7 +26,7 @@ Creates a new **NetworkPlugin**.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:17
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:17
 
 ## Properties
 
@@ -41,7 +41,7 @@ The name of the plugin.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:13
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:13
 
 ## Methods
 
@@ -57,4 +57,4 @@ Creates a copy of this plugin.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:21
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:21

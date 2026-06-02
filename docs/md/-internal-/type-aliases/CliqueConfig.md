@@ -20,4 +20,4 @@
 
 ## Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:5
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:5

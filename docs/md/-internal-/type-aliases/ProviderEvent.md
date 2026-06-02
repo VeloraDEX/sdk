@@ -33,4 +33,4 @@ A **ProviderEvent** provides the types of events that can be subscribed
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1054
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1054

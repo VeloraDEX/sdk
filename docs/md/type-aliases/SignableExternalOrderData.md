@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/buildExternalOrderData.ts:25](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/buildExternalOrderData.ts#L25)
+[src/methods/delta/helpers/buildExternalOrderData.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildExternalOrderData.ts#L25)

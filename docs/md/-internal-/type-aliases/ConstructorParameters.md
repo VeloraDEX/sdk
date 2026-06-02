@@ -16,4 +16,4 @@ Obtain the parameters of a constructor function type in a tuple
 
 ## Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1638
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1638

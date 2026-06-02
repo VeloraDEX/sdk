@@ -42,4 +42,4 @@ A Promise for the completion of which ever callback is executed.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1537
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1537

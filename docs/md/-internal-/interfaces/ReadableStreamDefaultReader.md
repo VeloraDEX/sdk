@@ -8,7 +8,7 @@
 
 ## Extends
 
-- [`ReadableStreamGenericReader`](ReadableStreamGenericReader.md)
+- `ReadableStreamGenericReader`
 
 ## Type Parameters
 
@@ -22,33 +22,55 @@
 
 #### Inherited from
 
-[`ReadableStreamGenericReader`](ReadableStreamGenericReader.md).[`closed`](ReadableStreamGenericReader.md#closed)
+`ReadableStreamGenericReader.closed`
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:100
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:100
 
 ## Methods
 
 ### cancel()
 
+#### cancel(reason)
+
 > **cancel**(`reason`?): `Promise`\<`void`\>
 
-#### Parameters
+##### Parameters
 
 • **reason?**: `any`
 
-#### Returns
+##### Returns
 
 `Promise`\<`void`\>
 
-#### Inherited from
+##### Inherited from
 
-[`ReadableStreamGenericReader`](ReadableStreamGenericReader.md).[`cancel`](ReadableStreamGenericReader.md#cancel)
+`ReadableStreamGenericReader.cancel`
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:101
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:101
+
+#### cancel(reason)
+
+> **cancel**(`reason`?): `Promise`\<`void`\>
+
+##### Parameters
+
+• **reason?**: `any`
+
+##### Returns
+
+`Promise`\<`void`\>
+
+##### Inherited from
+
+`ReadableStreamGenericReader.cancel`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:101
 
 ***
 
@@ -62,7 +84,7 @@ node\_modules/@types/node/stream/web.d.ts:101
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:202
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:199
 
 ***
 
@@ -76,4 +98,4 @@ node\_modules/@types/node/stream/web.d.ts:202
 
 #### Defined in
 
-node\_modules/@types/node/stream/web.d.ts:203
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:200

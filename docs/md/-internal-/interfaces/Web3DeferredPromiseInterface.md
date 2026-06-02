@@ -26,7 +26,7 @@
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:176
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:176
 
 ***
 
@@ -36,7 +36,7 @@ node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:176
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:2
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:2
 
 ## Methods
 
@@ -68,7 +68,7 @@ A Promise for the completion of the callback.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1557
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1557
 
 ***
 
@@ -97,7 +97,7 @@ A Promise for the completion of the callback.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.promise.d.ts:29
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.promise.d.ts:29
 
 ***
 
@@ -115,7 +115,7 @@ node\_modules/typescript/lib/lib.es2018.promise.d.ts:29
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:4
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:4
 
 ***
 
@@ -133,7 +133,7 @@ node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:4
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:3
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:3
 
 ***
 
@@ -147,7 +147,7 @@ node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:3
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:5
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:5
 
 ***
 
@@ -185,4 +185,4 @@ A Promise for the completion of which ever callback is executed.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1550
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1550

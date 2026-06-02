@@ -155,7 +155,7 @@ Use `intType` instead
 
 > **strictAbiType**: [`Register`](../interfaces/Register.md) *extends* `object` ? `type` : [`Register`](../interfaces/Register.md) *extends* `object` ? `type` : [`DefaultRegister`](DefaultRegister.md)\[`"strictAbiType"`\]
 
-When set, validates [AbiParameter](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)'s `type` against [AbiType](AbiType.md)
+When set, validates [AbiParameter](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)'s `type` against [AbiType](AbiType.md)
 
 Note: You probably only want to set this to `true` if parsed types are returning as `unknown`
 and you want to figure out why.
@@ -176,4 +176,4 @@ Use `strictAbiType` instead
 
 ## Defined in
 
-node\_modules/viem/node\_modules/ox/node\_modules/abitype/dist/types/register.d.ts:3
+node\_modules/.pnpm/abitype@1.1.1\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/register.d.ts:3

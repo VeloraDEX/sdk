@@ -10,7 +10,7 @@
 
 ## Parameters
 
-• **params**: [`CancelDeltaOrderData`](CancelDeltaOrderData.md)
+• **params**: [`CancelDeltaOrderData`](../../type-aliases/CancelDeltaOrderData.md)
 
 • **requestParams?**: [`RequestParameters`](RequestParameters.md)
 
@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/delta/cancelDeltaOrder.ts:18](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L18)
+[src/methods/delta/cancelDeltaOrder.ts:18](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L18)

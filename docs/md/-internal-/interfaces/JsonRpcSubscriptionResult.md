@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:46
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:46
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:46
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:41
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:41
 
 ***
 
@@ -34,7 +34,7 @@ node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:41
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:42
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:42
 
 ***
 
@@ -44,7 +44,7 @@ node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:42
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:44
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:44
 
 ***
 
@@ -54,7 +54,7 @@ node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:44
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:45
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:45
 
 ***
 
@@ -64,4 +64,4 @@ node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:45
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:43
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:43

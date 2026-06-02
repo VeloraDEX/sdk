@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/common/orders/buildOrderData.ts:13](https://github.com/VeloraDEX/sdk/blob/master/src/methods/common/orders/buildOrderData.ts#L13)
+[src/methods/common/orders/buildOrderData.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/common/orders/buildOrderData.ts#L13)

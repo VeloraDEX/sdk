@@ -32,7 +32,7 @@ Creates a new FeeData for %%gasPrice%%, %%maxFeePerGas%% and
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:58
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:58
 
 ## Properties
 
@@ -44,7 +44,7 @@ The gas price for legacy networks.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:30
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:30
 
 ***
 
@@ -65,7 +65,7 @@ The maximum fee to pay per gas.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:43
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:43
 
 ***
 
@@ -83,7 +83,7 @@ The additional amout to pay per gas to encourage a validator
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:53
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:53
 
 ## Methods
 
@@ -99,4 +99,4 @@ Returns a JSON-friendly value.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:62
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:62

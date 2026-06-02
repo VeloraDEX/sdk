@@ -38,4 +38,4 @@
 
 ## Defined in
 
-node\_modules/@ethersproject/networks/lib/types.d.ts:1
+node\_modules/.pnpm/@ethersproject+networks@5.8.0/node\_modules/@ethersproject/networks/lib/types.d.ts:1

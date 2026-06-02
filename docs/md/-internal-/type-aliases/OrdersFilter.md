@@ -77,4 +77,4 @@ Order.owner to fetch Delta Order for
 
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:35](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L35)
+[src/methods/delta/getDeltaOrders.ts:35](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L35)

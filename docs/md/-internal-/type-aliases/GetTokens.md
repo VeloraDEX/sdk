@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/swap/token.ts:10](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/token.ts#L10)
+[src/methods/swap/token.ts:10](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/token.ts#L10)

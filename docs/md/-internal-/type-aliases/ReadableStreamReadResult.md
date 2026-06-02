@@ -6,7 +6,7 @@
 
 # Type Alias: ReadableStreamReadResult\<T\>
 
-> **ReadableStreamReadResult**\<`T`\>: [`ReadableStreamReadValueResult`](../interfaces/ReadableStreamReadValueResult.md)\<`T`\> \| [`ReadableStreamReadDoneResult`](../interfaces/ReadableStreamReadDoneResult.md)\<`T`\>
+> **ReadableStreamReadResult**\<`T`\>: `ReadableStreamReadValueResult`\<`T`\> \| `ReadableStreamReadDoneResult`\<`T`\>
 
 ## Type Parameters
 
@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/@types/node/stream/web.d.ts:112
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:112

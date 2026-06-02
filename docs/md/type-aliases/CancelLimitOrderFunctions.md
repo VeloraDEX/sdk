@@ -28,4 +28,4 @@ Limit Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/limitOrders/cancelOrder.ts:22](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/cancelOrder.ts#L22)
+[src/methods/limitOrders/cancelOrder.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/cancelOrder.ts#L22)

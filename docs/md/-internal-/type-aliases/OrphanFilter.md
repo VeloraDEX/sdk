@@ -16,4 +16,4 @@ An Orphan Filter allows detecting when an orphan block has
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:948
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:948

@@ -18,4 +18,4 @@ A **TopicFilter** provides a struture to define bloom-filter
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:997
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:997

@@ -47,7 +47,7 @@ You can subscribe to pending transactions by calling web3.eth.subscribe('pending
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:16
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:16
 
 ### new NewPendingTransactionsSubscription()
 
@@ -77,7 +77,7 @@ This constructor overloading should not be used
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:23
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:23
 
 ## Properties
 
@@ -91,7 +91,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:23
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:15
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:15
 
 ***
 
@@ -105,7 +105,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:15
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:11
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:11
 
 ## Accessors
 
@@ -125,7 +125,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:11
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:27
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:27
 
 ***
 
@@ -133,11 +133,11 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:27
 
 #### Get Signature
 
-> **get** **lastBlock**(): `undefined` \| [`BlockOutput`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
+> **get** **lastBlock**(): `undefined` \| [`BlockOutput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
 
 ##### Returns
 
-`undefined` \| [`BlockOutput`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
+`undefined` \| [`BlockOutput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
 
 #### Inherited from
 
@@ -145,7 +145,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:27
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:28
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:28
 
 ***
 
@@ -165,7 +165,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:28
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:32
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:32
 
 ***
 
@@ -185,7 +185,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:32
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:33
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:33
 
 ## Methods
 
@@ -203,7 +203,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:33
 
 #### Defined in
 
-node\_modules/web3-eth/lib/commonjs/web3\_subscriptions.d.ts:51
+node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_subscriptions.d.ts:51
 
 ***
 
@@ -225,7 +225,7 @@ node\_modules/web3-eth/lib/commonjs/web3\_subscriptions.d.ts:51
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:41
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:41
 
 ***
 
@@ -247,7 +247,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:41
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:40
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:40
 
 ***
 
@@ -275,7 +275,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:40
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
 
 ***
 
@@ -293,7 +293,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 ***
 
@@ -315,7 +315,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 #### Defined in
 
-node\_modules/web3-eth/lib/commonjs/web3\_subscriptions.d.ts:52
+node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_subscriptions.d.ts:52
 
 ***
 
@@ -333,7 +333,7 @@ node\_modules/web3-eth/lib/commonjs/web3\_subscriptions.d.ts:52
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 ***
 
@@ -359,7 +359,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
 
 ***
 
@@ -385,7 +385,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
 
 ***
 
@@ -413,7 +413,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
 
 ***
 
@@ -441,7 +441,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
 
 ***
 
@@ -469,7 +469,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
 
 ***
 
@@ -479,7 +479,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
 
 #### Parameters
 
-• **data**: [`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\>
+• **data**: [`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\>
 
 #### Returns
 
@@ -491,17 +491,17 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:30
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:30
 
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Returns
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Inherited from
 
@@ -509,7 +509,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:30
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
@@ -527,7 +527,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:36
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:36
 
 ***
 
@@ -545,7 +545,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:36
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:31
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:31
 
 ***
 
@@ -563,7 +563,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:31
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:38
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:38
 
 ***
 
@@ -585,7 +585,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:38
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
 
 ***
 
@@ -603,7 +603,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:29
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:29
 
 ***
 
@@ -621,4 +621,4 @@ node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:29
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:37
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:37

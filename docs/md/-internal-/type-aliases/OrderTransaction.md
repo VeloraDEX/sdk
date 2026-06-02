@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/common/orders/types.ts:1](https://github.com/VeloraDEX/sdk/blob/master/src/methods/common/orders/types.ts#L1)
+[src/methods/common/orders/types.ts:1](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/common/orders/types.ts#L1)

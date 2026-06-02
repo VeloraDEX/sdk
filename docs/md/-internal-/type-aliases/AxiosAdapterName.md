@@ -6,8 +6,8 @@
 
 # Type Alias: AxiosAdapterName
 
-> **AxiosAdapterName**: `"fetch"` \| `"xhr"` \| `"http"` \| `string` & `object`
+> **AxiosAdapterName**: [`StringLiteralsOrString`](StringLiteralsOrString.md)\<`"xhr"` \| `"http"` \| `"fetch"`\>
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:305
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:353

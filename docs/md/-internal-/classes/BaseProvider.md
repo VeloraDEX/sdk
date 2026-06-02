@@ -41,17 +41,17 @@ ready
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:89
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:89
 
 ## Properties
 
 ### \_bootstrapPoll
 
-> **\_bootstrapPoll**: [`Timer`](../interfaces/Timer.md)
+> **\_bootstrapPoll**: `Timer`
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:66
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:66
 
 ***
 
@@ -65,7 +65,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:66
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:61
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:61
 
 ***
 
@@ -75,7 +75,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:61
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:59
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:59
 
 ***
 
@@ -85,7 +85,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:59
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:69
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:69
 
 ***
 
@@ -95,7 +95,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:69
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:70
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:70
 
 ***
 
@@ -105,7 +105,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:70
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:71
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:71
 
 ***
 
@@ -129,7 +129,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:71
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:73
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:73
 
 ***
 
@@ -143,7 +143,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:73
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:152
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:152
 
 ***
 
@@ -153,7 +153,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:152
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:67
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:67
 
 ***
 
@@ -163,7 +163,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:67
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:68
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:68
 
 ***
 
@@ -173,7 +173,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:68
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:72
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:72
 
 ***
 
@@ -183,7 +183,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:72
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:58
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:58
 
 ***
 
@@ -193,17 +193,17 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:58
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:57
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:57
 
 ***
 
 ### \_poller
 
-> **\_poller**: [`Timer`](../interfaces/Timer.md)
+> **\_poller**: `Timer`
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:65
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:65
 
 ***
 
@@ -213,7 +213,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:65
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:64
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:64
 
 ***
 
@@ -223,7 +223,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:64
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:78
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:78
 
 ***
 
@@ -233,7 +233,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:78
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:79
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:79
 
 ***
 
@@ -243,7 +243,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:79
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:60
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:60
 
 ## Accessors
 
@@ -259,7 +259,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:60
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:101
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:101
 
 ***
 
@@ -275,7 +275,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:101
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:98
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:98
 
 ***
 
@@ -303,7 +303,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:98
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:102
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:102
 
 ***
 
@@ -331,7 +331,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:102
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:104
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:104
 
 ***
 
@@ -347,7 +347,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:104
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:91
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:91
 
 ## Methods
 
@@ -369,7 +369,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:91
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:147
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:147
 
 ***
 
@@ -391,7 +391,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:147
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:127
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:127
 
 ***
 
@@ -409,7 +409,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:127
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:130
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:130
 
 ***
 
@@ -429,7 +429,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:130
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:131
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:131
 
 ***
 
@@ -447,7 +447,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:131
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:138
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:138
 
 ***
 
@@ -461,7 +461,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:138
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:106
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:106
 
 ***
 
@@ -479,7 +479,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:106
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:126
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:126
 
 ***
 
@@ -497,7 +497,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:126
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:95
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:95
 
 ***
 
@@ -517,7 +517,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:95
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:140
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:140
 
 ***
 
@@ -535,7 +535,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:140
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:125
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:125
 
 ***
 
@@ -549,7 +549,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:125
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:90
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:90
 
 ***
 
@@ -567,7 +567,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:90
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:107
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:107
 
 ***
 
@@ -585,7 +585,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:107
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:145
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:145
 
 ***
 
@@ -603,7 +603,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:145
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:146
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:146
 
 ***
 
@@ -639,7 +639,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:146
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:109
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:109
 
 ***
 
@@ -661,7 +661,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:109
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:123
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:123
 
 ***
 
@@ -685,7 +685,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:123
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:149
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:149
 
 ***
 
@@ -709,7 +709,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:149
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:128
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:128
 
 ***
 
@@ -731,7 +731,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:128
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:94
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:94
 
 ***
 
@@ -745,7 +745,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:94
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:99
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:99
 
 ***
 
@@ -769,7 +769,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:99
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:150
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:150
 
 ***
 
@@ -791,7 +791,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:150
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:129
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:129
 
 ***
 
@@ -809,7 +809,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:129
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:143
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:143
 
 ***
 
@@ -833,7 +833,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:143
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:119
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:119
 
 ***
 
@@ -855,7 +855,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:119
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:132
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:132
 
 ***
 
@@ -873,7 +873,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:132
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:117
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:117
 
 ***
 
@@ -895,7 +895,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:117
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:133
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:133
 
 ***
 
@@ -919,7 +919,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:133
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:121
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:121
 
 ***
 
@@ -933,7 +933,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:121
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:137
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:137
 
 ***
 
@@ -951,7 +951,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:137
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:127
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:127
 
 ***
 
@@ -969,7 +969,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:127
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:118
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:118
 
 ***
 
@@ -991,7 +991,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:118
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:136
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:136
 
 ***
 
@@ -1009,7 +1009,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:136
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:100
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:100
 
 ***
 
@@ -1031,7 +1031,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:100
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:139
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:139
 
 ***
 
@@ -1057,7 +1057,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:139
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:122
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:122
 
 ***
 
@@ -1079,7 +1079,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:122
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:134
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:134
 
 ***
 
@@ -1103,7 +1103,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:134
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:120
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:120
 
 ***
 
@@ -1125,7 +1125,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:120
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:135
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:135
 
 ***
 
@@ -1147,7 +1147,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:135
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:151
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:151
 
 ***
 
@@ -1169,7 +1169,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:151
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:152
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:152
 
 ***
 
@@ -1195,7 +1195,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:152
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:142
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:142
 
 ***
 
@@ -1219,7 +1219,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:142
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:153
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:153
 
 ***
 
@@ -1243,7 +1243,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:153
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:148
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:148
 
 ***
 
@@ -1267,7 +1267,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:148
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:149
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:149
 
 ***
 
@@ -1287,7 +1287,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:149
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:144
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:144
 
 ***
 
@@ -1301,7 +1301,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:144
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:96
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:96
 
 ***
 
@@ -1323,7 +1323,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:96
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:154
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:154
 
 ***
 
@@ -1347,7 +1347,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:154
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:150
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:150
 
 ***
 
@@ -1365,7 +1365,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:150
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:97
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:97
 
 ***
 
@@ -1391,7 +1391,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:97
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:141
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:141
 
 ***
 
@@ -1413,7 +1413,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:141
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:124
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:124
 
 ***
 
@@ -1439,7 +1439,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:124
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:108
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:108
 
 ***
 
@@ -1453,7 +1453,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:108
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:92
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:92
 
 ***
 
@@ -1471,7 +1471,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:92
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:93
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:93
 
 ***
 
@@ -1493,4 +1493,4 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:93
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:154
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:154

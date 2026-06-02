@@ -52,7 +52,7 @@ const cleanup = finished(rs, (err) => {
 
 ### Parameters
 
-• **stream**: [`ReadableStream`](../../../interfaces/ReadableStream.md) \| [`WritableStream`](../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../interfaces/ReadWriteStream.md)
+• **stream**: `ReadableStream` \| `WritableStream` \| `ReadWriteStream`
 
 A readable and/or writable stream.
 
@@ -78,7 +78,7 @@ v10.0.0
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1458
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1458
 
 ## finished(stream, callback)
 
@@ -86,7 +86,7 @@ node\_modules/@types/node/stream.d.ts:1458
 
 ### Parameters
 
-• **stream**: [`ReadableStream`](../../../interfaces/ReadableStream.md) \| [`WritableStream`](../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../interfaces/ReadWriteStream.md)
+• **stream**: `ReadableStream` \| `WritableStream` \| `ReadWriteStream`
 
 • **callback**
 
@@ -100,4 +100,4 @@ node\_modules/@types/node/stream.d.ts:1458
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1463
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1463

@@ -18,4 +18,4 @@
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:88
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:88

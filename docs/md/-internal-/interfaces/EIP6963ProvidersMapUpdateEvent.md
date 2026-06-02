@@ -24,7 +24,7 @@
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8192
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8192
 
 ***
 
@@ -42,7 +42,7 @@ Returns true or false depending on how event was initialized. True if event goes
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8087
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8087
 
 ***
 
@@ -56,7 +56,7 @@ node\_modules/typescript/lib/lib.dom.d.ts:8087
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8193
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8193
 
 ***
 
@@ -74,7 +74,7 @@ Returns true or false depending on how event was initialized. Its return value d
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8099
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8099
 
 ***
 
@@ -92,7 +92,7 @@ node\_modules/typescript/lib/lib.dom.d.ts:8099
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8093
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8093
 
 ***
 
@@ -106,7 +106,7 @@ node\_modules/typescript/lib/lib.dom.d.ts:8093
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8191
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8191
 
 ***
 
@@ -124,7 +124,7 @@ Returns true or false depending on how event was initialized. True if event invo
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8105
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8105
 
 ***
 
@@ -142,7 +142,7 @@ Returns the object whose event listener's callback is currently being invoked.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8111
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8111
 
 ***
 
@@ -160,7 +160,7 @@ Returns true if preventDefault() was invoked successfully to indicate cancelatio
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8117
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8117
 
 ***
 
@@ -178,7 +178,7 @@ Returns any custom data event was created with. Typically used for synthetic eve
 
 #### Defined in
 
-node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:28
+node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:28
 
 ***
 
@@ -196,7 +196,7 @@ Returns the event's phase, which is one of NONE, CAPTURING_PHASE, AT_TARGET, and
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8123
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8123
 
 ***
 
@@ -214,7 +214,7 @@ Returns true if event was dispatched by the user agent, and false otherwise.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8129
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8129
 
 ***
 
@@ -228,7 +228,7 @@ node\_modules/typescript/lib/lib.dom.d.ts:8129
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8190
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8190
 
 ***
 
@@ -246,7 +246,7 @@ node\_modules/typescript/lib/lib.dom.d.ts:8190
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8135
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8135
 
 ***
 
@@ -264,7 +264,7 @@ node\_modules/typescript/lib/lib.dom.d.ts:8135
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8141
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8141
 
 ***
 
@@ -282,7 +282,7 @@ Returns the object to which event is dispatched (its target).
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8147
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8147
 
 ***
 
@@ -300,7 +300,7 @@ Returns the event's timestamp as the number of milliseconds measured relative to
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8153
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8153
 
 ***
 
@@ -318,7 +318,7 @@ Returns the type of event, e.g. "click", "hashchange", or "submit".
 
 #### Defined in
 
-node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:27
+node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:27
 
 ## Methods
 
@@ -340,7 +340,7 @@ Returns the invocation target objects of event's path (objects on which listener
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8165
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8165
 
 ***
 
@@ -372,7 +372,7 @@ node\_modules/typescript/lib/lib.dom.d.ts:8165
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:6051
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:6051
 
 ***
 
@@ -402,7 +402,7 @@ node\_modules/typescript/lib/lib.dom.d.ts:6051
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8171
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8171
 
 ***
 
@@ -424,7 +424,7 @@ If invoked when the cancelable attribute value is true, and while executing a li
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8177
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8177
 
 ***
 
@@ -446,7 +446,7 @@ Invoking this method prevents event from reaching any registered event listeners
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8183
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8183
 
 ***
 
@@ -468,4 +468,4 @@ When dispatched in a tree, invoking this method prevents event from reaching any
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.dom.d.ts:8189
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8189

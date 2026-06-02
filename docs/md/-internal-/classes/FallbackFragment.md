@@ -36,7 +36,7 @@ A Fragment which represents a method.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:378
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:378
 
 ## Properties
 
@@ -52,7 +52,7 @@ The inputs for the fragment.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:231
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:231
 
 ***
 
@@ -64,7 +64,7 @@ If the function can be sent value during invocation.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:377
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:377
 
 ***
 
@@ -80,7 +80,7 @@ The type of the fragment.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:227
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:227
 
 ## Methods
 
@@ -104,7 +104,7 @@ Returns a string representation of this fallback as %%format%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:382
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:382
 
 ***
 
@@ -128,7 +128,7 @@ Returns a new **FallbackFragment** for %%obj%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:386
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:386
 
 ***
 
@@ -152,7 +152,7 @@ Returns true if %%value%% is a [[ConstructorFragment]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:248
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:248
 
 ***
 
@@ -176,7 +176,7 @@ Returns true if %%value%% is an [[ErrorFragment]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:252
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:252
 
 ***
 
@@ -200,7 +200,7 @@ Returns true if %%value%% is an [[EventFragment]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:256
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:256
 
 ***
 
@@ -221,7 +221,7 @@ Returns ``true`` and provides a type guard if %%value%% is a
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:391
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:391
 
 ***
 
@@ -245,7 +245,7 @@ Returns true if %%value%% is a [[FunctionFragment]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:260
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:260
 
 ***
 
@@ -269,4 +269,4 @@ Returns true if %%value%% is a [[StructFragment]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:264
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:264

@@ -14,4 +14,4 @@ A SignatureLike
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:7
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:7

@@ -6,8 +6,8 @@
 
 # Type Alias: AbiFragment
 
-> **AbiFragment**: [`AbiConstructorFragment`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiConstructorFragment.md) \| [`AbiFunctionFragment`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md) \| [`AbiEventFragment`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiEventFragment.md) \| [`AbiErrorFragment`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiErrorFragment.md) \| [`AbiFallbackFragment`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFallbackFragment.md)
+> **AbiFragment**: [`AbiConstructorFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiConstructorFragment.md) \| [`AbiFunctionFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md) \| [`AbiEventFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiEventFragment.md) \| [`AbiErrorFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiErrorFragment.md) \| [`AbiFallbackFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFallbackFragment.md)
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:86
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:86

@@ -30,23 +30,23 @@
 
 ### confirmation.receipt
 
-> **receipt**: [`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>
+> **receipt**: [`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>
 
 ### error
 
-> **error**: [`TransactionRevertedWithoutReasonError`](../classes/TransactionRevertedWithoutReasonError.md)\<[`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>\> \| [`TransactionRevertInstructionError`](../classes/TransactionRevertInstructionError.md)\<[`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>\> \| [`TransactionRevertWithCustomError`](../classes/TransactionRevertWithCustomError.md)\<[`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>\> \| [`TransactionPollingTimeoutError`](../classes/TransactionPollingTimeoutError.md) \| [`InvalidResponseError`](../classes/InvalidResponseError.md) \| [`ContractExecutionError`](../classes/ContractExecutionError.md)
+> **error**: [`TransactionRevertedWithoutReasonError`](../classes/TransactionRevertedWithoutReasonError.md)\<[`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>\> \| [`TransactionRevertInstructionError`](../classes/TransactionRevertInstructionError.md)\<[`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>\> \| [`TransactionRevertWithCustomError`](../classes/TransactionRevertWithCustomError.md)\<[`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>\> \| [`TransactionPollingTimeoutError`](../classes/TransactionPollingTimeoutError.md) \| [`InvalidResponseError`](../classes/InvalidResponseError.md) \| [`ContractExecutionError`](../classes/ContractExecutionError.md)
 
 ### receipt
 
-> **receipt**: [`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>
+> **receipt**: [`FormatType`](FormatType.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), `ReturnFormat`\>
 
 ### sending
 
-> **sending**: [`FormatType`](FormatType.md)\<`TxType`, *typeof* [`ETH_DATA_FORMAT`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/variables/ETH_DATA_FORMAT.md)\>
+> **sending**: [`FormatType`](FormatType.md)\<`TxType`, *typeof* [`ETH_DATA_FORMAT`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/ETH_DATA_FORMAT.md)\>
 
 ### sent
 
-> **sent**: [`FormatType`](FormatType.md)\<`TxType`, *typeof* [`ETH_DATA_FORMAT`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/variables/ETH_DATA_FORMAT.md)\>
+> **sent**: [`FormatType`](FormatType.md)\<`TxType`, *typeof* [`ETH_DATA_FORMAT`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/ETH_DATA_FORMAT.md)\>
 
 ### transactionHash
 
@@ -54,4 +54,4 @@
 
 ## Defined in
 
-node\_modules/web3-eth/lib/commonjs/types.d.ts:5
+node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/types.d.ts:5

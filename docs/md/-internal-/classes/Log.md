@@ -38,7 +38,7 @@ A **Log** in Ethereum represents an event that has been included in a
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:511
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:511
 
 ## Properties
 
@@ -54,7 +54,7 @@ The address of the contract that emitted this log.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:486
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:486
 
 ***
 
@@ -71,7 +71,7 @@ The block hash of the block this log occurred in. Use the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:468
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:468
 
 ***
 
@@ -90,7 +90,7 @@ The block number of the block this log occurred in. It is preferred
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:475
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:475
 
 ***
 
@@ -106,7 +106,7 @@ The data included in this log when it was emitted.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:490
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:490
 
 ***
 
@@ -124,7 +124,7 @@ The index within the block this log occurred at. This is generally
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:503
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:503
 
 ***
 
@@ -137,7 +137,7 @@ The provider connected to the log used to fetch additional details
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:458
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:458
 
 ***
 
@@ -156,7 +156,7 @@ If the **Log** represents a block that was removed due to an orphaned
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:482
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:482
 
 ***
 
@@ -175,7 +175,7 @@ The indexed topics included in this log when it was emitted.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:497
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:497
 
 ***
 
@@ -192,7 +192,7 @@ The transaction hash of the transaction this log occurred in. Use the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:463
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:463
 
 ***
 
@@ -208,7 +208,7 @@ The index within the transaction of this log.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:507
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:507
 
 ## Methods
 
@@ -224,7 +224,7 @@ Returns the block that this log occurred in.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:519
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:519
 
 ***
 
@@ -240,7 +240,7 @@ Returns the transaction that this log occurred in.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:523
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:523
 
 ***
 
@@ -257,7 +257,7 @@ Returns the transaction receipt fot the transaction that this
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:528
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:528
 
 ***
 
@@ -273,7 +273,7 @@ node\_modules/ethers/lib.commonjs/providers/provider.d.ts:528
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:532
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:532
 
 ***
 
@@ -289,4 +289,4 @@ Returns a JSON-compatible object.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:515
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:515

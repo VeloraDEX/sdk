@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:222](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L222)
+[src/methods/delta/helpers/types.ts:307](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L307)

@@ -12,4 +12,4 @@ RPC block overrides.
 
 ## Defined in
 
-node\_modules/viem/node\_modules/ox/\_types/core/BlockOverrides.d.ts:28
+node\_modules/.pnpm/ox@0.9.6\_typescript@5.6.3\_zod@3.25.76/node\_modules/ox/\_types/core/BlockOverrides.d.ts:28

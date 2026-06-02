@@ -37,7 +37,7 @@ const subscriptionManager = new Web3SubscriptionManager(requestManager, {});
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:28
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:28
 
 ### new Web3SubscriptionManager()
 
@@ -61,7 +61,7 @@ This constructor overloading should not be used
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:32
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:32
 
 ## Properties
 
@@ -71,7 +71,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:32
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:14
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:14
 
 ***
 
@@ -81,7 +81,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:14
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:13
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:13
 
 ## Accessors
 
@@ -99,7 +99,7 @@ Will returns all subscriptions.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:49
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:49
 
 ## Methods
 
@@ -121,7 +121,7 @@ A [Web3Subscription](Web3Subscription.md) object
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:56
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:56
 
 ***
 
@@ -137,7 +137,7 @@ Clears all subscriptions
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:73
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:73
 
 ***
 
@@ -147,7 +147,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:73
 
 #### Parameters
 
-• **data?**: [`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\>
+• **data?**: [`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\>
 
 #### Returns
 
@@ -155,7 +155,7 @@ node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:73
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:34
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:34
 
 ***
 
@@ -175,7 +175,7 @@ Will clear a subscription
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:62
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:62
 
 ***
 
@@ -209,7 +209,7 @@ The subscription object
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:45
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:45
 
 ***
 
@@ -227,7 +227,7 @@ Check whether the current provider supports subscriptions.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:79
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:79
 
 ***
 
@@ -251,4 +251,4 @@ An array of all the un-subscribed subscriptions
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:69
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:69

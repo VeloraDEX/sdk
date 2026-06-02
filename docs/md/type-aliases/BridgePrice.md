@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:119](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L119)
+[src/methods/delta/getDeltaPrice.ts:119](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L119)

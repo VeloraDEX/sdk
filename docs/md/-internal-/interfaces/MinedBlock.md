@@ -34,7 +34,7 @@ The base fee per gas that all transactions in this block were
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:386
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:386
 
 ***
 
@@ -51,7 +51,7 @@ The total amount of blob gas consumed by the transactions
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:359
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:359
 
 ***
 
@@ -67,7 +67,7 @@ The block date, created from the [[timestamp]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:277
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:277
 
 ***
 
@@ -89,7 +89,7 @@ The difficulty target.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:337
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:337
 
 ***
 
@@ -106,7 +106,7 @@ The running total of blob gas consumed in excess of the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:364
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:364
 
 ***
 
@@ -122,7 +122,7 @@ Any extra data the validator wished to include.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:378
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:378
 
 ***
 
@@ -138,7 +138,7 @@ The total gas limit for this block.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:341
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:341
 
 ***
 
@@ -154,7 +154,7 @@ The total gas used in this block.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:345
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:345
 
 ***
 
@@ -170,7 +170,7 @@ The block hash.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:269
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:269
 
 ***
 
@@ -187,7 +187,7 @@ The miner of the block, also known as the ``author`` or
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:282
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:282
 
 ***
 
@@ -206,7 +206,7 @@ The nonce.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:327
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:327
 
 ***
 
@@ -222,7 +222,7 @@ The block number also known as the block height.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:265
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:265
 
 ***
 
@@ -239,7 +239,7 @@ The hash tree root of the parent beacon block for the given
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:320
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:320
 
 ***
 
@@ -255,7 +255,7 @@ The block hash of the parent block.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:315
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:315
 
 ***
 
@@ -272,7 +272,7 @@ The latest RANDAO mix of the post beacon state of
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:374
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:374
 
 ***
 
@@ -289,7 +289,7 @@ The provider connected to the block used to fetch additional details
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:294
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:294
 
 ***
 
@@ -305,7 +305,7 @@ The hash of the transaction receipts trie.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:354
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:354
 
 ***
 
@@ -322,7 +322,7 @@ The root hash for the global state after applying changes
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:350
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:350
 
 ***
 
@@ -338,7 +338,7 @@ The block timestamp, in seconds from epoch.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:273
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:273
 
 ## Accessors
 
@@ -360,7 +360,7 @@ The number of transactions in this block.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:416
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:416
 
 ***
 
@@ -387,7 +387,7 @@ Returns the complete transactions, in the order they
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:407
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:407
 
 ***
 
@@ -412,7 +412,7 @@ The list of transactions in the block.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:398
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:398
 
 ## Methods
 
@@ -430,7 +430,7 @@ node\_modules/ethers/lib.commonjs/providers/provider.d.ts:398
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:412
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:412
 
 ***
 
@@ -457,7 +457,7 @@ If a **Block** was fetched with a request to include the transactions
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:431
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:431
 
 ***
 
@@ -481,7 +481,7 @@ Get the transaction at %%indexe%% within this block.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:424
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:424
 
 ***
 
@@ -501,7 +501,7 @@ Returns true if this block is an [[link-eip-2930]] block.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:440
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:440
 
 ***
 
@@ -522,7 +522,7 @@ Returns true if this block been mined. This provides a type guard
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:436
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:436
 
 ***
 
@@ -542,7 +542,7 @@ node\_modules/ethers/lib.commonjs/providers/provider.d.ts:436
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:446
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:446
 
 ***
 
@@ -562,4 +562,4 @@ Returns a JSON-friendly value.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:411
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:411

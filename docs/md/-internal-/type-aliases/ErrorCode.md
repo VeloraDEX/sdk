@@ -70,4 +70,4 @@ All errors emitted by ethers have an **ErrorCode** to help
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/utils/errors.d.ts:80
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:80

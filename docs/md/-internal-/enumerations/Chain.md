@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:3
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:3
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:3
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:2
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:2
 
 ***
 
@@ -34,4 +34,4 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:2
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:4
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:4

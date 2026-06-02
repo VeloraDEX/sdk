@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:16
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:16
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:16
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:18
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:18
 
 ***
 
@@ -34,7 +34,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:18
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:32
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:32
 
 ***
 
@@ -44,7 +44,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:32
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:7
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:7
 
 ***
 
@@ -54,7 +54,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:7
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:8
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:8
 
 ***
 
@@ -64,7 +64,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:8
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:20
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:20
 
 ***
 
@@ -74,7 +74,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:20
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:23
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:23
 
 ***
 
@@ -84,7 +84,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:23
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:21
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:21
 
 ***
 
@@ -94,7 +94,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:21
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:25
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:25
 
 ***
 
@@ -104,7 +104,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:25
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:19
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:19
 
 ***
 
@@ -114,7 +114,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:19
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:33
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:33
 
 ***
 
@@ -124,7 +124,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:33
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:24
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:24
 
 ***
 
@@ -142,7 +142,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:24
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:26
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:26
 
 ***
 
@@ -152,7 +152,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:26
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:6
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:6
 
 ***
 
@@ -162,7 +162,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:6
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:22
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:22
 
 ***
 
@@ -172,7 +172,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:22
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:17
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:17
 
 ***
 
@@ -182,7 +182,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:17
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:10
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:10
 
 ***
 
@@ -192,7 +192,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:10
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:30
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:30
 
 ***
 
@@ -202,7 +202,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:30
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:11
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:11
 
 ***
 
@@ -212,7 +212,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:11
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:15
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:15
 
 ***
 
@@ -222,7 +222,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:15
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:12
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:12
 
 ***
 
@@ -232,7 +232,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:12
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:13
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:13
 
 ***
 
@@ -242,7 +242,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:13
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:14
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:14
 
 ***
 
@@ -252,7 +252,7 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:14
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:9
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:9
 
 ***
 
@@ -262,4 +262,4 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:9
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:31
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:31

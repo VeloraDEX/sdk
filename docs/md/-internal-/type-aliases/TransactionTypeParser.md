@@ -10,7 +10,7 @@
 
 ## Parameters
 
-• **transaction**: [`Transaction`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+• **transaction**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
 
 ## Returns
 
@@ -18,4 +18,4 @@
 
 ## Defined in
 
-node\_modules/web3-core/lib/commonjs/types.d.ts:3
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:3

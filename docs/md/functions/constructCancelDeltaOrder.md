@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/cancelDeltaOrder.ts:40](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L40)
+[src/methods/delta/cancelDeltaOrder.ts:40](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L40)

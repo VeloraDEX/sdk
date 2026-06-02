@@ -10,10 +10,8 @@
 
 ### Namespaces
 
-- ["/Users/nazariikyselevych/Projects/paraswap/sdk/node\_modules/web3-types/lib/commonjs/index"](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/README.md)
-- ["/Users/nazariikyselevych/Projects/paraswap/sdk/node\_modules/web3-utils/lib/commonjs/index"](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/README.md)
-- ["node:stream/consumers"](namespaces/node:stream_consumers/README.md)
-- ["node:stream/promises"](namespaces/node:stream_promises/README.md)
+- ["/home/velenir-gnx570/Projects/Paraswap/paraswap-sdk/node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/index"](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/README.md)
+- ["/home/velenir-gnx570/Projects/Paraswap/paraswap-sdk/node\_modules/.pnpm/web3-utils@4.3.2/node\_modules/web3-utils/lib/commonjs/index"](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/README.md)
 - [EventEmitter](namespaces/EventEmitter/README.md)
 - [EventEmitter](namespaces/EventEmitter/README.md)
 - [internal](namespaces/internal/README.md)
@@ -147,7 +145,6 @@
 - [\_Block](interfaces/Block.md)
 - [AccessListEIP2930TxData](interfaces/AccessListEIP2930TxData.md)
 - [Addressable](interfaces/Addressable.md)
-- [AddressInfo](interfaces/AddressInfo.md)
 - [ArrayBufferView](interfaces/ArrayBufferView.md)
 - [ArrayIterator](interfaces/ArrayIterator.md)
 - [ArrayLike](interfaces/ArrayLike.md)
@@ -155,13 +152,14 @@
 - [AsyncGenerator](interfaces/AsyncGenerator.md)
 - [AsyncGeneratorFunction](interfaces/AsyncGeneratorFunction.md)
 - [AsyncIterable](interfaces/AsyncIterable.md)
+- [AsyncIterableIterator](interfaces/AsyncIterableIterator.md)
 - [AsyncIterator](interfaces/AsyncIterator.md)
-- [AsyncResourceOptions](interfaces/AsyncResourceOptions.md)
 - [Avatar](interfaces/Avatar.md)
 - [AxiosAdapter](interfaces/AxiosAdapter.md)
 - [AxiosBasicCredentials](interfaces/AxiosBasicCredentials.md)
 - [AxiosDefaults](interfaces/AxiosDefaults.md)
 - [AxiosInstance](interfaces/AxiosInstance.md)
+- [AxiosInterceptorHandler](interfaces/AxiosInterceptorHandler.md)
 - [AxiosInterceptorManager](interfaces/AxiosInterceptorManager.md)
 - [AxiosInterceptorOptions](interfaces/AxiosInterceptorOptions.md)
 - [AxiosProgressEvent](interfaces/AxiosProgressEvent.md)
@@ -173,13 +171,11 @@
 - [AxiosStatic](interfaces/AxiosStatic.md)
 - [BaseContractMethod](interfaces/BaseContractMethod.md)
 - [BaseOpts](interfaces/BaseOpts.md)
-- [BlobOptions](interfaces/BlobOptions.md)
 - [Block](interfaces/Block.md)
 - [BlockParams](interfaces/BlockParams.md)
 - [BlockWithTransactions](interfaces/BlockWithTransactions.md)
 - [BootstrapNodeConfig](interfaces/BootstrapNodeConfig.md)
 - [CallExceptionError](interfaces/CallExceptionError.md)
-- [CallSite](interfaces/CallSite.md)
 - [Cancel](interfaces/Cancel.md)
 - [Canceler](interfaces/Canceler.md)
 - [CancelStatic](interfaces/CancelStatic.md)
@@ -212,7 +208,6 @@
 - [CustomEventInit](interfaces/CustomEventInit.md)
 - [CustomParamsSerializer](interfaces/CustomParamsSerializer.md)
 - [DeferredTopicFilter](interfaces/DeferredTopicFilter.md)
-- [Disposable](interfaces/Disposable.md)
 - [DuplexOptions](interfaces/DuplexOptions.md)
 - [ECDSASignature](interfaces/ECDSASignature.md)
 - [EIP6963ProviderDetail](interfaces/EIP6963ProviderDetail.md)
@@ -220,12 +215,11 @@
 - [EIP6963ProvidersMapUpdateEvent](interfaces/EIP6963ProvidersMapUpdateEvent.md)
 - [EnsProvider](interfaces/EnsProvider.md)
 - [EnsResolver](interfaces/EnsResolver.md)
-- [ErrnoException](interfaces/ErrnoException.md)
 - [Error](interfaces/Error.md)
 - [EthersError](interfaces/EthersError.md)
 - [Event](interfaces/Event.md)
-- [EventEmitter](interfaces/EventEmitter.md)
 - [EventEmitterable](interfaces/EventEmitterable.md)
+- [EventEmitterBuiltInEventMap](interfaces/EventEmitterBuiltInEventMap.md)
 - [EventEmitterOptions](interfaces/EventEmitterOptions.md)
 - [EventFilter](interfaces/EventFilter.md)
 - [EventFilter](interfaces/EventFilter.md)
@@ -255,7 +249,6 @@
 - [HeadersDefaults](interfaces/HeadersDefaults.md)
 - [Hexable](interfaces/Hexable.md)
 - [InternalAxiosRequestConfig](interfaces/InternalAxiosRequestConfig.md)
-- [IpcSocketConnectOpts](interfaces/IpcSocketConnectOpts.md)
 - [Iterable](interfaces/Iterable.md)
 - [IterableIterator](interfaces/IterableIterator.md)
 - [Iterator](interfaces/Iterator.md)
@@ -277,9 +270,7 @@
 - [KzgLibrary](interfaces/KzgLibrary.md)
 - [Log](interfaces/Log.md)
 - [LogParams](interfaces/LogParams.md)
-- [LookupAddress](interfaces/LookupAddress.md)
 - [LookupAddressEntry](interfaces/LookupAddressEntry.md)
-- [LookupOptions](interfaces/LookupOptions.md)
 - [Method](interfaces/Method.md)
 - [MinedBlock](interfaces/MinedBlock.md)
 - [MinedTransactionResponse](interfaces/MinedTransactionResponse.md)
@@ -287,7 +278,6 @@
 - [NonPayableMethodObject](interfaces/NonPayableMethodObject.md)
 - [Object](interfaces/Object.md)
 - [OnceBlockable](interfaces/OnceBlockable.md)
-- [OnReadOpts](interfaces/OnReadOpts.md)
 - [Overrides](interfaces/Overrides.md)
 - [OverridesBase](interfaces/OverridesBase.md)
 - [ParamEncoder](interfaces/ParamEncoder.md)
@@ -301,25 +291,10 @@
 - [ProviderConnectInfo](interfaces/ProviderConnectInfo.md)
 - [ProviderMessage](interfaces/ProviderMessage.md)
 - [ProviderRpcError](interfaces/ProviderRpcError.md)
-- [QueuingStrategy](interfaces/QueuingStrategy.md)
-- [QueuingStrategySize](interfaces/QueuingStrategySize.md)
 - [RawAxiosHeaders](interfaces/RawAxiosHeaders.md)
-- [ReadableByteStreamController](interfaces/ReadableByteStreamController.md)
-- [ReadableByteStreamControllerCallback](interfaces/ReadableByteStreamControllerCallback.md)
 - [ReadableStream](interfaces/ReadableStream.md)
-- [ReadableStream](interfaces/ReadableStream.md)
-- [ReadableStreamAsyncIterator](interfaces/ReadableStreamAsyncIterator.md)
 - [ReadableStreamBYOBReader](interfaces/ReadableStreamBYOBReader.md)
-- [ReadableStreamDefaultController](interfaces/ReadableStreamDefaultController.md)
 - [ReadableStreamDefaultReader](interfaces/ReadableStreamDefaultReader.md)
-- [ReadableStreamErrorCallback](interfaces/ReadableStreamErrorCallback.md)
-- [ReadableStreamGenericReader](interfaces/ReadableStreamGenericReader.md)
-- [ReadableStreamGetReaderOptions](interfaces/ReadableStreamGetReaderOptions.md)
-- [ReadableStreamReadDoneResult](interfaces/ReadableStreamReadDoneResult.md)
-- [ReadableStreamReadValueResult](interfaces/ReadableStreamReadValueResult.md)
-- [ReadableWritablePair](interfaces/ReadableWritablePair.md)
-- [ReadWriteStream](interfaces/ReadWriteStream.md)
-- [RefCounted](interfaces/RefCounted.md)
 - [Register](interfaces/Register.md)
 - [Register](interfaces/Register.md)
 - [Register](interfaces/Register.md)
@@ -330,14 +305,10 @@
 - [SerializerVisitor](interfaces/SerializerVisitor.md)
 - [SignedTransactionInfoAPI](interfaces/SignedTransactionInfoAPI.md)
 - [Signer](interfaces/Signer.md)
-- [SocketConstructorOpts](interfaces/SocketConstructorOpts.md)
 - [SocketRequestItem](interfaces/SocketRequestItem.md)
 - [StaticCallOverrides](interfaces/StaticCallOverrides.md)
 - [StaticEventEmitterIteratorOptions](interfaces/StaticEventEmitterIteratorOptions.md)
 - [StaticEventEmitterOptions](interfaces/StaticEventEmitterOptions.md)
-- [StreamPipeOptions](interfaces/StreamPipeOptions.md)
-- [TcpSocketConnectOpts](interfaces/TcpSocketConnectOpts.md)
-- [Timer](interfaces/Timer.md)
 - [Transaction](interfaces/Transaction.md)
 - [TransactionBase](interfaces/TransactionBase.md)
 - [TransactionCache](interfaces/TransactionCache.md)
@@ -356,16 +327,6 @@
 - [TypedDataDomain](interfaces/TypedDataDomain.md)
 - [TypedDataField](interfaces/TypedDataField.md)
 - [TypedString](interfaces/TypedString.md)
-- [UnderlyingByteSource](interfaces/UnderlyingByteSource.md)
-- [UnderlyingSink](interfaces/UnderlyingSink.md)
-- [UnderlyingSinkAbortCallback](interfaces/UnderlyingSinkAbortCallback.md)
-- [UnderlyingSinkCloseCallback](interfaces/UnderlyingSinkCloseCallback.md)
-- [UnderlyingSinkStartCallback](interfaces/UnderlyingSinkStartCallback.md)
-- [UnderlyingSinkWriteCallback](interfaces/UnderlyingSinkWriteCallback.md)
-- [UnderlyingSource](interfaces/UnderlyingSource.md)
-- [UnderlyingSourceCancelCallback](interfaces/UnderlyingSourceCancelCallback.md)
-- [UnderlyingSourcePullCallback](interfaces/UnderlyingSourcePullCallback.md)
-- [UnderlyingSourceStartCallback](interfaces/UnderlyingSourceStartCallback.md)
 - [Web3Account](interfaces/Web3Account.md)
 - [Web3AccountProvider](interfaces/Web3AccountProvider.md)
 - [Web3APIPayload](interfaces/Web3APIPayload.md)
@@ -377,8 +338,6 @@
 - [WebStorage](interfaces/WebStorage.md)
 - [WrappedFallback](interfaces/WrappedFallback.md)
 - [WritableStream](interfaces/WritableStream.md)
-- [WritableStream](interfaces/WritableStream.md)
-- [WritableStreamDefaultController](interfaces/WritableStreamDefaultController.md)
 - [WritableStreamDefaultWriter](interfaces/WritableStreamDefaultWriter.md)
 
 ### Type Aliases
@@ -437,14 +396,12 @@
 - [AddressLike](type-aliases/AddressLike.md)
 - [AddSubAccountParameters](type-aliases/AddSubAccountParameters.md)
 - [AddSubAccountReturnType](type-aliases/AddSubAccountReturnType.md)
-- [AmountsBuySlippage](type-aliases/AmountsBuySlippage.md)
-- [AmountsExplicit](type-aliases/AmountsExplicit.md)
-- [AmountsSellSlippage](type-aliases/AmountsSellSlippage.md)
-- [AmountsWithSlippage](type-aliases/AmountsWithSlippage.md)
 - [AnyFunction](type-aliases/AnyFunction.md)
+- [AnyRest](type-aliases/AnyRest.md)
 - [ApproveNFT](type-aliases/ApproveNFT.md)
 - [ApproveToken](type-aliases/ApproveToken.md)
 - [ApproveTokenBulk](type-aliases/ApproveTokenBulk.md)
+- [Args](type-aliases/Args.md)
 - [Args](type-aliases/Args.md)
 - [ArrayBufferLike](type-aliases/ArrayBufferLike.md)
 - [ArrayBufferView](type-aliases/ArrayBufferView.md)
@@ -463,12 +420,15 @@
 - [AxiosHeaderMatcher](type-aliases/AxiosHeaderMatcher.md)
 - [AxiosHeaderParser](type-aliases/AxiosHeaderParser.md)
 - [AxiosHeaderValue](type-aliases/AxiosHeaderValue.md)
+- [AxiosInterceptorFulfilled](type-aliases/AxiosInterceptorFulfilled.md)
+- [AxiosInterceptorRejected](type-aliases/AxiosInterceptorRejected.md)
 - [AxiosPromise](type-aliases/AxiosPromise.md)
 - [AxiosRequestHeaders](type-aliases/AxiosRequestHeaders.md)
 - [AxiosRequestInterceptorUse](type-aliases/AxiosRequestInterceptorUse.md)
 - [AxiosRequirement](type-aliases/AxiosRequirement.md)
 - [AxiosResponseHeaders](type-aliases/AxiosResponseHeaders.md)
 - [AxiosResponseInterceptorUse](type-aliases/AxiosResponseInterceptorUse.md)
+- [BaseBridgeAuctionFields](type-aliases/BaseBridgeAuctionFields.md)
 - [BaseProperties](type-aliases/BaseProperties.md)
 - [BigIntAsString](type-aliases/BigIntAsString.md)
 - [BigNumberish](type-aliases/BigNumberish.md)
@@ -489,6 +449,7 @@
 - [BlockTag](type-aliases/BlockTag.md)
 - [BlockTag](type-aliases/BlockTag.md)
 - [Branded](type-aliases/Branded.md)
+- [BridgeAuctionFiledsMap](type-aliases/BridgeAuctionFiledsMap.md)
 - [BridgePriceInfo](type-aliases/BridgePriceInfo.md)
 - [BridgeQuoteFee](type-aliases/BridgeQuoteFee.md)
 - [BufferEncoding](type-aliases/BufferEncoding.md)
@@ -502,10 +463,11 @@
 - [BuildNFTOrdersTx](type-aliases/BuildNFTOrdersTx.md)
 - [BuildSwapAndLimitOrdersTx](type-aliases/BuildSwapAndLimitOrdersTx.md)
 - [BuildSwapAndNFTOrdersTx](type-aliases/BuildSwapAndNFTOrdersTx.md)
+- [BuildTWAPDeltaOrder](type-aliases/BuildTWAPDeltaOrder.md)
+- [BuildTWAPDeltaOrderParamsBase](type-aliases/BuildTWAPDeltaOrderParamsBase.md)
 - [BuildTx](type-aliases/BuildTx.md)
 - [BuildTxInputBase](type-aliases/BuildTxInputBase.md)
 - [BuildTxInputBaseBUYForOrders](type-aliases/BuildTxInputBaseBUYForOrders.md)
-- [BuiltinIteratorReturn](type-aliases/BuiltinIteratorReturn.md)
 - [BuiltinIteratorReturn](type-aliases/BuiltinIteratorReturn.md)
 - [BundlerRpcSchema](type-aliases/BundlerRpcSchema.md)
 - [ByteArray](type-aliases/ByteArray.md)
@@ -524,10 +486,11 @@
 - [Calls](type-aliases/Calls.md)
 - [CancelAndWithdrawDeltaOrder](type-aliases/CancelAndWithdrawDeltaOrder.md)
 - [CancelDeltaOrder](type-aliases/CancelDeltaOrder.md)
-- [CancelDeltaOrderData](type-aliases/CancelDeltaOrderData.md)
 - [CancelDeltaOrderRequestParams](type-aliases/CancelDeltaOrderRequestParams.md)
 - [CancelOrder](type-aliases/CancelOrder.md)
 - [CancelOrderBulk](type-aliases/CancelOrderBulk.md)
+- [CancelTWAPAndWithdrawDeltaOrder](type-aliases/CancelTWAPAndWithdrawDeltaOrder.md)
+- [CancelTWAPBuyAndWithdrawDeltaOrder](type-aliases/CancelTWAPBuyAndWithdrawDeltaOrder.md)
 - [Capabilities](type-aliases/Capabilities.md)
 - [CapabilitiesSchema](type-aliases/CapabilitiesSchema.md)
 - [CasperConfig](type-aliases/CasperConfig.md)
@@ -559,6 +522,7 @@
 - [CoerceFunc](type-aliases/CoerceFunc.md)
 - [CommonGetRateInput](type-aliases/CommonGetRateInput.md)
 - [CommonRequestHeadersList](type-aliases/CommonRequestHeadersList.md)
+- [CommonResponseHeaderKey](type-aliases/CommonResponseHeaderKey.md)
 - [CommonResponseHeadersList](type-aliases/CommonResponseHeadersList.md)
 - [CommonSubscriptionEvents](type-aliases/CommonSubscriptionEvents.md)
 - [ComposeFnParam](type-aliases/ComposeFnParam.md)
@@ -600,15 +564,14 @@
 - [DataFormat](type-aliases/DataFormat.md)
 - [DataHexString](type-aliases/DataHexString.md)
 - [DefaultCapabilitiesSchema](type-aliases/DefaultCapabilitiesSchema.md)
+- [DefaultEventMap](type-aliases/DefaultEventMap.md)
 - [DefaultEventParameterOptions](type-aliases/DefaultEventParameterOptions.md)
 - [DefaultRegister](type-aliases/DefaultRegister.md)
 - [DefaultRegister](type-aliases/DefaultRegister.md)
 - [DefaultRegister](type-aliases/DefaultRegister.md)
 - [Deferrable](type-aliases/Deferrable.md)
 - [DeltaAuctionBase](type-aliases/DeltaAuctionBase.md)
-- [DeltaAuctionTransaction](type-aliases/DeltaAuctionTransaction.md)
 - [DeltaFetchMethods](type-aliases/DeltaFetchMethods.md)
-- [DeltaOrderToPost](type-aliases/DeltaOrderToPost.md)
 - [DeployContractParameters](type-aliases/DeployContractParameters.md)
 - [DeployContractReturnType](type-aliases/DeployContractReturnType.md)
 - [DepositNativeAndPreSign](type-aliases/DepositNativeAndPreSign.md)
@@ -649,12 +612,14 @@
 - [EthExtendedTypes](type-aliases/EthExtendedTypes.md)
 - [EventFilter](type-aliases/EventFilter.md)
 - [EventMap](type-aliases/EventMap.md)
+- [EventMap](type-aliases/EventMap.md)
 - [EventNames](type-aliases/EventNames.md)
 - [EventParameterOptions](type-aliases/EventParameterOptions.md)
 - [EventType](type-aliases/EventType.md)
 - [ExactPartial](type-aliases/ExactPartial.md)
 - [ExactRequired](type-aliases/ExactRequired.md)
 - [Exclude](type-aliases/Exclude.md)
+- [ExecutedDeltaAuctionProps](type-aliases/ExecutedDeltaAuctionProps.md)
 - [ExtendableProtectedActions](type-aliases/ExtendableProtectedActions.md)
 - [Extended](type-aliases/Extended.md)
 - [Extract](type-aliases/Extract.md)
@@ -669,6 +634,7 @@
 - [ExtractChainFormatterExclude](type-aliases/ExtractChainFormatterExclude.md)
 - [ExtractChainFormatterParameters](type-aliases/ExtractChainFormatterParameters.md)
 - [ExtractChainFormatterReturnType](type-aliases/ExtractChainFormatterReturnType.md)
+- [FailedDeltaAuctionProps](type-aliases/FailedDeltaAuctionProps.md)
 - [FallbackReason](type-aliases/FallbackReason.md)
 - [FallbackTransport](type-aliases/FallbackTransport.md)
 - [FeeHistory](type-aliases/FeeHistory.md)
@@ -805,6 +771,8 @@
 - [HashDeltaOrderTypedData](type-aliases/HashDeltaOrderTypedData.md)
 - [HashExternalDeltaOrder](type-aliases/HashExternalDeltaOrder.md)
 - [HashExternalDeltaOrderTypedData](type-aliases/HashExternalDeltaOrderTypedData.md)
+- [HashTWAPDeltaOrder](type-aliases/HashTWAPDeltaOrder.md)
+- [HashTWAPDeltaOrderTypedData](type-aliases/HashTWAPDeltaOrderTypedData.md)
 - [HasTransportType](type-aliases/HasTransportType.md)
 - [Hex](type-aliases/Hex.md)
 - [Hex](type-aliases/Hex.md)
@@ -834,6 +802,8 @@
 - [JsonRpcPayload](type-aliases/JsonRpcPayload.md)
 - [JsonRpcResponse](type-aliases/JsonRpcResponse.md)
 - [JsonRpcResult](type-aliases/JsonRpcResult.md)
+- [Key](type-aliases/Key.md)
+- [Key2](type-aliases/Key2.md)
 - [KeyofUnion](type-aliases/KeyofUnion.md)
 - [Kzg](type-aliases/Kzg.md)
 - [LastInUnion](type-aliases/LastInUnion.md)
@@ -844,13 +814,14 @@
 - [Listener](type-aliases/Listener.md)
 - [Listener](type-aliases/Listener.md)
 - [Listener](type-aliases/Listener.md)
+- [Listener](type-aliases/Listener.md)
 - [LocalAccount](type-aliases/LocalAccount.md)
 - [Log](type-aliases/Log.md)
 - [LogTopic](type-aliases/LogTopic.md)
 - [LogTopicType](type-aliases/LogTopicType.md)
 - [LookupAddress](type-aliases/LookupAddress.md)
-- [LookupFunction](type-aliases/LookupFunction.md)
 - [LooseOmit](type-aliases/LooseOmit.md)
+- [Lowercase](type-aliases/Lowercase.md)
 - [MarkOptional](type-aliases/MarkOptional.md)
 - [MaybeAbiEventName](type-aliases/MaybeAbiEventName.md)
 - [MaybeExtractArrayParameterType](type-aliases/MaybeExtractArrayParameterType.md)
@@ -865,6 +836,7 @@
 - [MergeExtendableOnce](type-aliases/MergeExtendableOnce.md)
 - [MergeExtendableRecursively](type-aliases/MergeExtendableRecursively.md)
 - [MessageDefinition](type-aliases/MessageDefinition.md)
+- [Method](type-aliases/Method.md)
 - [MinAxiosError](type-aliases/MinAxiosError.md)
 - [MinAxiosResponse](type-aliases/MinAxiosResponse.md)
 - [MinBuildLimitOrderTxInput](type-aliases/MinBuildLimitOrderTxInput.md)
@@ -886,6 +858,7 @@
 - [NoBits](type-aliases/NoBits.md)
 - [NoInfer](type-aliases/NoInfer.md)
 - [NonceManager](type-aliases/NonceManager.md)
+- [NonEmptyArray](type-aliases/NonEmptyArray.md)
 - [NonNullable](type-aliases/NonNullable.md)
 - [NumberAsString](type-aliases/NumberAsString.md)
 - [Numbers](type-aliases/Numbers.md)
@@ -927,6 +900,7 @@
 - [PostfixOverrides](type-aliases/PostfixOverrides.md)
 - [PostLimitOrder](type-aliases/PostLimitOrder.md)
 - [PostNFTOrder](type-aliases/PostNFTOrder.md)
+- [PostTWAPDeltaOrder](type-aliases/PostTWAPDeltaOrder.md)
 - [PrefixedHexString](type-aliases/PrefixedHexString.md)
 - [PrepareAuthorizationParameters](type-aliases/PrepareAuthorizationParameters.md)
 - [PrepareAuthorizationReturnType](type-aliases/PrepareAuthorizationReturnType.md)
@@ -936,6 +910,8 @@
 - [PrepareTransactionRequestReturnType](type-aliases/PrepareTransactionRequestReturnType.md)
 - [PreSignDeltaOrder](type-aliases/PreSignDeltaOrder.md)
 - [PreSignExternalDeltaOrder](type-aliases/PreSignExternalDeltaOrder.md)
+- [PreSignTWAPDeltaOrder](type-aliases/PreSignTWAPDeltaOrder.md)
+- [Prettify](type-aliases/Prettify.md)
 - [Prettify](type-aliases/Prettify.md)
 - [Pretty](type-aliases/Pretty.md)
 - [PrivateKeyAccount](type-aliases/PrivateKeyAccount.md)
@@ -955,7 +931,6 @@
 - [RawAxiosRequestHeaders](type-aliases/RawAxiosRequestHeaders.md)
 - [RawAxiosResponseHeaders](type-aliases/RawAxiosResponseHeaders.md)
 - [RawCommonResponseHeaders](type-aliases/RawCommonResponseHeaders.md)
-- [ReadableStreamController](type-aliases/ReadableStreamController.md)
 - [ReadableStreamReader](type-aliases/ReadableStreamReader.md)
 - [ReadableStreamReadResult](type-aliases/ReadableStreamReadResult.md)
 - [ReadContractParameters](type-aliases/ReadContractParameters.md)
@@ -975,6 +950,7 @@
 - [ResolvedRegister](type-aliases/ResolvedRegister.md)
 - [ResolvedRegister](type-aliases/ResolvedRegister.md)
 - [ResolvedRegister](type-aliases/ResolvedRegister.md)
+- [responseEncoding](type-aliases/responseEncoding.md)
 - [ResponseType](type-aliases/ResponseType.md)
 - [ReturnType](type-aliases/ReturnType.md)
 - [Rpc](type-aliases/Rpc.md)
@@ -1022,12 +998,15 @@
 - [SerializeTransactionFn](type-aliases/SerializeTransactionFn.md)
 - [SetDeltaOrderPreSignature](type-aliases/SetDeltaOrderPreSignature.md)
 - [SetExternalDeltaOrderPreSignature](type-aliases/SetExternalDeltaOrderPreSignature.md)
+- [SetTWAPDeltaOrderPreSignature](type-aliases/SetTWAPDeltaOrderPreSignature.md)
 - [Sha3Input](type-aliases/Sha3Input.md)
 - [ShortValidationSchema](type-aliases/ShortValidationSchema.md)
 - [ShouldUnsubscribeCondition](type-aliases/ShouldUnsubscribeCondition.md)
 - [ShowCallsStatusParameters](type-aliases/ShowCallsStatusParameters.md)
 - [ShowCallsStatusReturnType](type-aliases/ShowCallsStatusReturnType.md)
 - [SignableMessage](type-aliases/SignableMessage.md)
+- [SignableTWAPBuyOrderData](type-aliases/SignableTWAPBuyOrderData.md)
+- [SignableTWAPSellOrderData](type-aliases/SignableTWAPSellOrderData.md)
 - [Signature](type-aliases/Signature.md)
 - [SignatureLegacy](type-aliases/SignatureLegacy.md)
 - [SignatureLike](type-aliases/SignatureLike.md)
@@ -1048,6 +1027,7 @@
 - [SignTransactionRequest](type-aliases/SignTransactionRequest.md)
 - [SignTransactionResult](type-aliases/SignTransactionResult.md)
 - [SignTransactionReturnType](type-aliases/SignTransactionReturnType.md)
+- [SignTWAPDeltaOrder](type-aliases/SignTWAPDeltaOrder.md)
 - [SignTypedDataContractCallerFn](type-aliases/SignTypedDataContractCallerFn.md)
 - [SignTypedDataParameters](type-aliases/SignTypedDataParameters.md)
 - [SignTypedDataReturnType](type-aliases/SignTypedDataReturnType.md)
@@ -1084,6 +1064,7 @@
 - [StaticContractCallerFn](type-aliases/StaticContractCallerFn.md)
 - [Status](type-aliases/Status.md)
 - [StorageProof](type-aliases/StorageProof.md)
+- [StringLiteralsOrString](type-aliases/StringLiteralsOrString.md)
 - [SubmitDeltaOrder](type-aliases/SubmitDeltaOrder.md)
 - [SubmitDeltaOrderFuncs](type-aliases/SubmitDeltaOrderFuncs.md)
 - [SubmitExternalDeltaOrder](type-aliases/SubmitExternalDeltaOrder.md)
@@ -1091,6 +1072,8 @@
 - [SubmitLimitOrder](type-aliases/SubmitLimitOrder.md)
 - [SubmitNFTOrder](type-aliases/SubmitNFTOrder.md)
 - [SubmitP2POrder](type-aliases/SubmitP2POrder.md)
+- [SubmitTWAPDeltaOrder](type-aliases/SubmitTWAPDeltaOrder.md)
+- [SubmitTWAPDeltaOrderFuncs](type-aliases/SubmitTWAPDeltaOrderFuncs.md)
 - [SuccessResponse](type-aliases/SuccessResponse.md)
 - [SupportedProviders](type-aliases/SupportedProviders.md)
 - [SwapApiResponse](type-aliases/SwapApiResponse.md)
@@ -1160,6 +1143,7 @@
 - [Transport](type-aliases/Transport.md)
 - [TransportConfig](type-aliases/TransportConfig.md)
 - [Tuple](type-aliases/Tuple.md)
+- [TWAPDeltaOrderBase](type-aliases/TWAPDeltaOrderBase.md)
 - [TxData](type-aliases/TxData.md)
 - [TxInputAmountsPartBuy](type-aliases/TxInputAmountsPartBuy.md)
 - [TxInputAmountsPartBuyOrSell](type-aliases/TxInputAmountsPartBuyOrSell.md)
@@ -1191,6 +1175,8 @@
 - [UnionToIntersection](type-aliases/UnionToIntersection.md)
 - [UnionToTuple](type-aliases/UnionToTuple.md)
 - [UnionWiden](type-aliases/UnionWiden.md)
+- [UppercaseMethod](type-aliases/UppercaseMethod.md)
+- [UppercaseResponseEncoding](type-aliases/UppercaseResponseEncoding.md)
 - [UserOperation](type-aliases/UserOperation.md)
 - [UserOperationReceipt](type-aliases/UserOperationReceipt.md)
 - [UserOperationRequest](type-aliases/UserOperationRequest.md)
@@ -1275,174 +1261,181 @@
 - [CustomEvent](variables/CustomEvent.md)
 - [defaultParameters](variables/defaultParameters.md)
 - [Error](variables/Error.md)
+- [failedAuctionStatuses](variables/failedAuctionStatuses.md)
 - [NOT\_FOUND\_RESPONSE](variables/NOT_FOUND_RESPONSE.md)
 - [Object](variables/Object.md)
 - [Order](variables/Order.md)
+- [ORDER\_CANCELLATIONS\_EIP\_712\_TYPES](variables/ORDER_CANCELLATIONS_EIP_712_TYPES.md)
 - [OrderNFT](variables/OrderNFT.md)
-- [ReadableByteStreamController](variables/ReadableByteStreamController.md)
 - [ReadableStream](variables/ReadableStream.md)
 - [ReadableStreamBYOBReader](variables/ReadableStreamBYOBReader.md)
-- [ReadableStreamDefaultController](variables/ReadableStreamDefaultController.md)
 - [ReadableStreamDefaultReader](variables/ReadableStreamDefaultReader.md)
+- [TWAP\_BUY\_ORDER\_EIP\_712\_TYPES](variables/TWAP_BUY_ORDER_EIP_712_TYPES.md)
+- [TWAP\_ORDER\_EIP\_712\_TYPES](variables/TWAP_ORDER_EIP_712_TYPES.md)
 - [WritableStream](variables/WritableStream.md)
-- [WritableStreamDefaultController](variables/WritableStreamDefaultController.md)
 - [WritableStreamDefaultWriter](variables/WritableStreamDefaultWriter.md)
 
 ## References
 
 ### AbiFunctionFragment
 
-Re-exports [AbiFunctionFragment](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
+Re-exports [AbiFunctionFragment](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
 
 ***
 
 ### AbiInput
 
-Re-exports [AbiInput](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md)
+Re-exports [AbiInput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md)
 
 ***
 
 ### AbiParameter
 
-Re-exports [AbiParameter](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)
+Re-exports [AbiParameter](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)
+
+***
+
+### Abortable
+
+Re-exports [Abortable](namespaces/EventEmitter/interfaces/Abortable.md)
 
 ***
 
 ### BlockHeaderOutput
 
-Re-exports [BlockHeaderOutput](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockHeaderOutput.md)
+Re-exports [BlockHeaderOutput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/BlockHeaderOutput.md)
 
 ***
 
 ### BlockOutput
 
-Re-exports [BlockOutput](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
+Re-exports [BlockOutput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
 
 ***
 
 ### BlockTag
 
-Re-exports [BlockTag](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/BlockTag.md)
+Re-exports [BlockTag](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/BlockTag.md)
 
 ***
 
 ### CipherOptions
 
-Re-exports [CipherOptions](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/CipherOptions.md)
+Re-exports [CipherOptions](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/CipherOptions.md)
 
 ***
 
 ### ContractEvents
 
-Re-exports [ContractEvents](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractEvents.md)
+Re-exports [ContractEvents](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractEvents.md)
 
 ***
 
 ### CustomChain
 
-Re-exports [CustomChain](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/CustomChain.md)
+Re-exports [CustomChain](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/CustomChain.md)
 
 ***
 
 ### DecodedParams
 
-Re-exports [DecodedParams](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/DecodedParams.md)
+Re-exports [DecodedParams](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/DecodedParams.md)
 
 ***
 
 ### EIP1193Provider
 
-Re-exports [EIP1193Provider](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md)
+Re-exports [EIP1193Provider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md)
 
 ***
 
 ### Eip712TypedData
 
-Re-exports [Eip712TypedData](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Eip712TypedData.md)
+Re-exports [Eip712TypedData](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Eip712TypedData.md)
 
 ***
 
 ### EthPersonalAPI
 
-Re-exports [EthPersonalAPI](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/EthPersonalAPI.md)
+Re-exports [EthPersonalAPI](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/EthPersonalAPI.md)
 
 ***
 
 ### EventEmitter
 
-Re-exports [EventEmitter](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+Re-exports [EventEmitter](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 ***
 
 ### FMT\_BYTES
 
-Re-exports [FMT_BYTES](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_BYTES.md)
+Re-exports [FMT_BYTES](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_BYTES.md)
 
 ***
 
 ### FMT\_NUMBER
 
-Re-exports [FMT_NUMBER](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_NUMBER.md)
+Re-exports [FMT_NUMBER](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_NUMBER.md)
 
 ***
 
 ### JsonRpcSubscriptionResultOld
 
-Re-exports [JsonRpcSubscriptionResultOld](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)
+Re-exports [JsonRpcSubscriptionResultOld](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)
 
 ***
 
 ### KeyStore
 
-Re-exports [KeyStore](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)
+Re-exports [KeyStore](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)
 
 ***
 
 ### LegacyRequestProvider
 
-Re-exports [LegacyRequestProvider](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacyRequestProvider.md)
+Re-exports [LegacyRequestProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacyRequestProvider.md)
 
 ***
 
 ### LegacySendAsyncProvider
 
-Re-exports [LegacySendAsyncProvider](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md)
+Re-exports [LegacySendAsyncProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md)
 
 ***
 
 ### LegacySendProvider
 
-Re-exports [LegacySendProvider](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md)
+Re-exports [LegacySendProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md)
 
 ***
 
 ### Log
 
-Re-exports [Log](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)
+Re-exports [Log](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)
 
 ***
 
 ### LogsOutput
 
-Re-exports [LogsOutput](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LogsOutput.md)
+Re-exports [LogsOutput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LogsOutput.md)
 
 ***
 
 ### MatchPrimitiveType
 
-Re-exports [MatchPrimitiveType](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/MatchPrimitiveType.md)
+Re-exports [MatchPrimitiveType](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/MatchPrimitiveType.md)
 
 ***
 
 ### MetaMaskProvider
 
-Re-exports [MetaMaskProvider](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/MetaMaskProvider.md)
+Re-exports [MetaMaskProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/MetaMaskProvider.md)
 
 ***
 
 ### PayableCallOptions
 
-Re-exports [PayableCallOptions](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md)
+Re-exports [PayableCallOptions](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md)
 
 ***
 
@@ -1454,73 +1447,73 @@ Re-exports [ReadableOptions](namespaces/internal/interfaces/ReadableOptions.md)
 
 ### SimpleProvider
 
-Re-exports [SimpleProvider](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/SimpleProvider.md)
+Re-exports [SimpleProvider](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/SimpleProvider.md)
 
 ***
 
 ### SyncOutput
 
-Re-exports [SyncOutput](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/SyncOutput.md)
+Re-exports [SyncOutput](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/SyncOutput.md)
 
 ***
 
 ### Topic
 
-Re-exports [Topic](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Topic.md)
+Re-exports [Topic](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Topic.md)
 
 ***
 
 ### Transaction
 
-Re-exports [Transaction](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+Re-exports [Transaction](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
 
 ***
 
 ### TransactionCall
 
-Re-exports [TransactionCall](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
+Re-exports [TransactionCall](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
 
 ***
 
 ### TransactionForAccessList
 
-Re-exports [TransactionForAccessList](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionForAccessList.md)
+Re-exports [TransactionForAccessList](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionForAccessList.md)
 
 ***
 
 ### TransactionReceipt
 
-Re-exports [TransactionReceipt](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+Re-exports [TransactionReceipt](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
 
 ***
 
 ### TransactionWithFromAndToLocalWalletIndex
 
-Re-exports [TransactionWithFromAndToLocalWalletIndex](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromAndToLocalWalletIndex.md)
+Re-exports [TransactionWithFromAndToLocalWalletIndex](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromAndToLocalWalletIndex.md)
 
 ***
 
 ### TransactionWithFromLocalWalletIndex
 
-Re-exports [TransactionWithFromLocalWalletIndex](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromLocalWalletIndex.md)
+Re-exports [TransactionWithFromLocalWalletIndex](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromLocalWalletIndex.md)
 
 ***
 
 ### TransactionWithToLocalWalletIndex
 
-Re-exports [TransactionWithToLocalWalletIndex](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithToLocalWalletIndex.md)
+Re-exports [TransactionWithToLocalWalletIndex](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithToLocalWalletIndex.md)
 
 ***
 
 ### Web3APIRequest
 
-Re-exports [Web3APIRequest](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)
+Re-exports [Web3APIRequest](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)
 
 ***
 
 ### Web3NetAPI
 
-Re-exports [Web3NetAPI](namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3NetAPI.md)
+Re-exports [Web3NetAPI](namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3NetAPI.md)
 
 ***
 
@@ -1536,7 +1529,7 @@ Re-exports [WritableOptions](namespaces/internal/interfaces/WritableOptions.md)
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:6
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:6
 
 ***
 
@@ -1546,7 +1539,7 @@ node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:6
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:41
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:41
 
 ***
 
@@ -1556,4 +1549,4 @@ node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:41
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:15
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:15

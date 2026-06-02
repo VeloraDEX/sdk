@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:238
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:287
 
 ***
 
@@ -32,7 +32,7 @@ node\_modules/axios/index.d.ts:238
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:240
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:289
 
 ***
 
@@ -42,7 +42,7 @@ node\_modules/axios/index.d.ts:240
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:239
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:288
 
 ***
 
@@ -60,4 +60,4 @@ node\_modules/axios/index.d.ts:239
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:241
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:290

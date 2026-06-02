@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[src/methods/delta/helpers/types.ts:44](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L44)
+[src/methods/delta/helpers/types.ts:45](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L45)
 
 ***
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/methods/delta/helpers/types.ts:43](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L43)
+[src/methods/delta/helpers/types.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L44)

@@ -40,4 +40,4 @@ Data specific to the protocol
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:83](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L83)
+[src/methods/delta/helpers/types.ts:84](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L84)

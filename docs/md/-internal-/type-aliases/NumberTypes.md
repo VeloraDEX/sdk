@@ -28,4 +28,4 @@
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:8
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:8

@@ -12,4 +12,4 @@ Provides functionality common to all JavaScript objects.
 
 ## Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:123
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:123

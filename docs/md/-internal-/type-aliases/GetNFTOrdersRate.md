@@ -22,4 +22,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/transaction.ts:53](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/transaction.ts#L53)
+[src/methods/nftOrders/transaction.ts:53](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/transaction.ts#L53)

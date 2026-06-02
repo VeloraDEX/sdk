@@ -15,7 +15,7 @@ can be created via the main constructor and the [CommonOpts.customChains](../int
 
 ## Extends
 
-- [`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+- [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 ## Constructors
 
@@ -33,11 +33,11 @@ can be created via the main constructor and the [CommonOpts.customChains](../int
 
 #### Overrides
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`constructor`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#constructors)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`constructor`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#constructors)
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:60
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:60
 
 ## Properties
 
@@ -47,7 +47,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:60
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:15
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:15
 
 ***
 
@@ -57,11 +57,11 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:15
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`prefixed`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#prefixed)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`prefixed`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#prefixed)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:9
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:9
 
 ## Methods
 
@@ -89,7 +89,7 @@ Fork hash as hex string
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:241
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:241
 
 ***
 
@@ -113,7 +113,7 @@ Dictionary with hardfork params or null if hardfork not on chain
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:106
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:106
 
 ***
 
@@ -135,7 +135,7 @@ True if HF is active on block number
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:172
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:172
 
 ***
 
@@ -161,11 +161,11 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:172
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`addListener`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#addlistener)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`addListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#addlistener)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:45
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:45
 
 ***
 
@@ -183,7 +183,7 @@ Dict with bootstrap nodes
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:274
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:274
 
 ***
 
@@ -201,7 +201,7 @@ chain Id
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:289
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:289
 
 ***
 
@@ -219,7 +219,7 @@ chain name (lower case)
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:294
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:294
 
 ***
 
@@ -241,7 +241,7 @@ Note: This value can update along a Hardfork.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:321
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:321
 
 ***
 
@@ -267,7 +267,7 @@ Note: This value can update along a Hardfork.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:335
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:335
 
 ***
 
@@ -286,7 +286,7 @@ Note: This value can update along a Hardfork.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:311
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:311
 
 ***
 
@@ -302,7 +302,7 @@ Returns a deep copy of this [Common](Common.md) instance.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:341
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:341
 
 ***
 
@@ -320,7 +320,7 @@ Array of DNS ENR urls
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:279
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:279
 
 ***
 
@@ -344,7 +344,7 @@ Block number or null if unscheduled
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:199
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:199
 
 ***
 
@@ -362,7 +362,7 @@ List of EIPs
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:304
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:304
 
 ***
 
@@ -388,11 +388,11 @@ Calls each of the listeners registered for a given event.
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`emit`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#emit)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`emit`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#emit)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:32
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:32
 
 ***
 
@@ -409,11 +409,11 @@ listeners.
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`eventNames`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#eventnames)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`eventNames`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#eventnames)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:15
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:15
 
 ***
 
@@ -437,7 +437,7 @@ Genesis block hash of the chain, optional if already defined and not needed to b
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:247
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:247
 
 ***
 
@@ -455,7 +455,7 @@ Genesis dictionary
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:264
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:264
 
 ***
 
@@ -486,7 +486,7 @@ The name of the HF
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:86
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:86
 
 ***
 
@@ -500,11 +500,11 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:86
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`getMaxListeners`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#getmaxlisteners)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`getMaxListeners`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#getmaxlisteners)
 
 #### Defined in
 
-node\_modules/web3-utils/lib/commonjs/event\_emitter.d.ts:9
+node\_modules/.pnpm/web3-utils@4.3.2/node\_modules/web3-utils/lib/commonjs/event\_emitter.d.ts:9
 
 ***
 
@@ -528,7 +528,7 @@ True if hardfork set is greater than hardfork provided
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:186
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:186
 
 ***
 
@@ -546,7 +546,7 @@ Hardfork name
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:284
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:284
 
 ***
 
@@ -568,7 +568,7 @@ Block number or null if unscheduled
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:192
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:192
 
 ***
 
@@ -590,7 +590,7 @@ Array with hardfork data (name, block, forkHash)
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:253
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:253
 
 ***
 
@@ -616,7 +616,7 @@ True if HF1 gte HF2
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:180
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:180
 
 ***
 
@@ -640,7 +640,7 @@ True if HF is active on block number
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:166
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:166
 
 ***
 
@@ -658,7 +658,7 @@ Array with arrays of hardforks
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:269
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:269
 
 ***
 
@@ -676,7 +676,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:269
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:193
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:193
 
 ***
 
@@ -698,7 +698,7 @@ Total difficulty or null if no set
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:205
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:205
 
 ***
 
@@ -723,7 +723,7 @@ by the [CommonOpts.eips](../interfaces/BaseOpts.md#eips) constructor option
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:159
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:159
 
 ***
 
@@ -749,7 +749,7 @@ True if blockNumber is HF block
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:213
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:213
 
 ***
 
@@ -775,7 +775,7 @@ True if blockNumber is HF block
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:234
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:234
 
 ***
 
@@ -795,11 +795,11 @@ Return the number of listeners listening to a given event.
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`listenerCount`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#listenercount)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`listenerCount`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#listenercount)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:27
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:27
 
 ***
 
@@ -823,11 +823,11 @@ Return the listeners registered for a given event.
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`listeners`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#listeners)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`listeners`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#listeners)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:20
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:20
 
 ***
 
@@ -845,7 +845,7 @@ network Id
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:299
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:299
 
 ***
 
@@ -869,7 +869,7 @@ Block number or null if not available
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:226
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:226
 
 ***
 
@@ -891,7 +891,7 @@ Block timestamp, number or null if not available
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:219
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:219
 
 ***
 
@@ -919,11 +919,11 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:219
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`off`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#off)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`off`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#off)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:69
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:69
 
 ***
 
@@ -951,11 +951,11 @@ Add a listener for a given event.
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`on`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#on)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#on)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:40
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:40
 
 ***
 
@@ -983,11 +983,11 @@ Add a one-time listener for a given event.
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`once`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#once)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`once`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#once)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:54
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:54
 
 ***
 
@@ -1019,7 +1019,7 @@ The value requested or `BigInt(0)` if not found
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:123
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:123
 
 ***
 
@@ -1059,7 +1059,7 @@ The value requested or `BigInt(0)` if not found
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:149
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:149
 
 ***
 
@@ -1091,7 +1091,7 @@ The value requested or `undefined` if not found
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:139
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:139
 
 ***
 
@@ -1123,7 +1123,7 @@ The value requested or `BigInt(0)` if not found
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:131
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:131
 
 ***
 
@@ -1143,11 +1143,11 @@ Remove all listeners, or those of the specified event.
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`removeAllListeners`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#removealllisteners)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`removeAllListeners`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#removealllisteners)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:79
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:79
 
 ***
 
@@ -1177,11 +1177,11 @@ Remove the listeners of a given event.
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`removeListener`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#removelistener)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#removelistener)
 
 #### Defined in
 
-node\_modules/eventemitter3/index.d.ts:63
+node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:63
 
 ***
 
@@ -1206,7 +1206,7 @@ The dictionary with parameters set as chain
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:67
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:67
 
 ***
 
@@ -1226,7 +1226,7 @@ Sets the active EIPs
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:111
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:111
 
 ***
 
@@ -1248,7 +1248,7 @@ The genesis block hash
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:259
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:259
 
 ***
 
@@ -1270,7 +1270,7 @@ String identifier (e.g. 'byzantium') or Hardfork enum
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:72
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:72
 
 ***
 
@@ -1301,7 +1301,7 @@ The name of the HF set
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:100
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:100
 
 ***
 
@@ -1319,11 +1319,11 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:100
 
 #### Inherited from
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`setMaxListeners`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#setmaxlisteners)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md).[`setMaxListeners`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md#setmaxlisteners)
 
 #### Defined in
 
-node\_modules/web3-utils/lib/commonjs/event\_emitter.d.ts:8
+node\_modules/.pnpm/web3-utils@4.3.2/node\_modules/web3-utils/lib/commonjs/event\_emitter.d.ts:8
 
 ***
 
@@ -1341,7 +1341,7 @@ node\_modules/web3-utils/lib/commonjs/event\_emitter.d.ts:8
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:342
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:342
 
 ***
 
@@ -1385,7 +1385,7 @@ Custom chain options to set the [CustomCommonOpts.baseChain](../interfaces/Custo
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:45
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:45
 
 ***
 
@@ -1413,7 +1413,7 @@ Common
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:52
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:52
 
 ***
 
@@ -1437,4 +1437,4 @@ boolean
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:58
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/common.d.ts:58

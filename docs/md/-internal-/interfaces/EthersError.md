@@ -31,7 +31,7 @@ The string error code.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/errors.d.ts:89
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:89
 
 ***
 
@@ -43,7 +43,7 @@ Any related error.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/errors.d.ts:104
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:104
 
 ***
 
@@ -57,7 +57,7 @@ Additional info regarding the error that may be useful.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/errors.d.ts:100
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:100
 
 ***
 
@@ -71,7 +71,7 @@ node\_modules/ethers/lib.commonjs/utils/errors.d.ts:100
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1077
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -85,7 +85,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1076
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 ***
 
@@ -98,7 +98,7 @@ A short message describing the error, with minimal additional
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/errors.d.ts:94
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:94
 
 ***
 
@@ -112,4 +112,4 @@ node\_modules/ethers/lib.commonjs/utils/errors.d.ts:94
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1078
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1078

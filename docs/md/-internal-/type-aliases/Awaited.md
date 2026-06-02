@@ -16,4 +16,4 @@ Recursively unwraps the "awaited type" of a type. Non-promise "thenables" should
 
 ## Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1563
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1563

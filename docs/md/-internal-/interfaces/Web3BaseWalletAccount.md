@@ -22,13 +22,13 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:44
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:44
 
 ***
 
 ### encrypt()
 
-> `readonly` **encrypt**: (`password`, `options`?) => `Promise`\<[`KeyStore`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
+> `readonly` **encrypt**: (`password`, `options`?) => `Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
 
 #### Parameters
 
@@ -38,11 +38,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:44
 
 #### Returns
 
-`Promise`\<[`KeyStore`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
+`Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:62
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:62
 
 ***
 
@@ -52,7 +52,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:62
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:45
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:45
 
 ***
 
@@ -94,7 +94,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:45
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:54
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:54
 
 ***
 
@@ -104,7 +104,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:54
 
 #### Parameters
 
-• **tx**: [`Transaction`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+• **tx**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
 
 #### Returns
 
@@ -136,4 +136,4 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:54
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:46
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:46

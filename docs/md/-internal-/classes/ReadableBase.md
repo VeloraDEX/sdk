@@ -32,7 +32,7 @@ v0.1.26
 
 ## Implements
 
-- [`ReadableStream`](../interfaces/ReadableStream.md)
+- `ReadableStream`
 
 ## Constructors
 
@@ -54,7 +54,7 @@ v0.1.26
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:132
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:132
 
 ## Properties
 
@@ -70,7 +70,7 @@ v18.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:126
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:126
 
 ***
 
@@ -86,7 +86,7 @@ v8.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:121
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:121
 
 ***
 
@@ -102,7 +102,7 @@ v18.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:131
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:131
 
 ***
 
@@ -119,11 +119,11 @@ v11.4.0
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`readable`](../interfaces/ReadableStream.md#readable)
+`NodeJS.ReadableStream.readable`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:77
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:77
 
 ***
 
@@ -141,7 +141,7 @@ v16.8.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:71
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:71
 
 ***
 
@@ -159,7 +159,7 @@ v16.7.0, v14.18.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:83
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:83
 
 ***
 
@@ -175,7 +175,7 @@ v12.7.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:88
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:88
 
 ***
 
@@ -191,7 +191,7 @@ v12.9.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:93
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:93
 
 ***
 
@@ -208,7 +208,7 @@ v9.4.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:99
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:99
 
 ***
 
@@ -224,7 +224,7 @@ v9.3.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:104
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:104
 
 ***
 
@@ -242,7 +242,7 @@ v9.4.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:111
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:111
 
 ***
 
@@ -258,7 +258,7 @@ v12.3.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:116
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:116
 
 ***
 
@@ -280,7 +280,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:512
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:459
 
 ***
 
@@ -302,7 +302,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:505
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:452
 
 ***
 
@@ -356,7 +356,7 @@ v0.11.2
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:551
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:498
 
 ***
 
@@ -379,7 +379,7 @@ v13.6.0, v12.17.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:498
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:445
 
 ## Methods
 
@@ -397,7 +397,7 @@ node\_modules/@types/node/events.d.ts:498
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:133
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:133
 
 ***
 
@@ -417,7 +417,7 @@ node\_modules/@types/node/stream.d.ts:133
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:574
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:574
 
 ***
 
@@ -435,7 +435,7 @@ node\_modules/@types/node/stream.d.ts:574
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:134
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:134
 
 ***
 
@@ -455,25 +455,59 @@ v20.4.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:659
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:659
 
 ***
 
 ### \[asyncIterator\]()
 
-> **\[asyncIterator\]**(): `AsyncIterator`\<`any`, `any`, `any`\>
+> **\[asyncIterator\]**(): [`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`, `any`, `any`\>
 
 #### Returns
 
-`AsyncIterator`\<`any`, `any`, `any`\>
+[`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`, `any`, `any`\>
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`[asyncIterator]`](../interfaces/ReadableStream.md#%5Basynciterator%5D-1)
+`NodeJS.ReadableStream.[asyncIterator]`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:654
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:654
+
+***
+
+### \[captureRejectionSymbol\]()?
+
+> `optional` **\[captureRejectionSymbol\]**\<`K`\>(`error`, `event`, ...`args`): `void`
+
+#### Type Parameters
+
+• **K**
+
+#### Parameters
+
+• **error**: [`Error`](../interfaces/Error.md)
+
+• **event**: `string` \| `symbol`
+
+• ...**args**: [`AnyRest`](../type-aliases/AnyRest.md)
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+`NodeJS.ReadableStream.[captureRejectionSymbol]`
+
+#### Inherited from
+
+[`Stream`](Stream.md).[`[captureRejectionSymbol]`](Stream.md#%5Bcapturerejectionsymbol%5D-1)
+
+#### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:136
 
 ***
 
@@ -501,27 +535,31 @@ node\_modules/@types/node/stream.d.ts:654
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`[captureRejectionSymbol]`](../interfaces/ReadableStream.md#%5Bcapturerejectionsymbol%5D)
+`NodeJS.ReadableStream.[captureRejectionSymbol]`
 
 ##### Inherited from
 
-[`Stream`](Stream.md).[`[captureRejectionSymbol]`](Stream.md#%5Bcapturerejectionsymbol%5D)
+`Stream.[captureRejectionSymbol]`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:146
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:650
 
 #### \[captureRejectionSymbol\](error, event, args)
 
-> `optional` **\[captureRejectionSymbol\]**(`error`, `event`, ...`args`): `void`
+> `optional` **\[captureRejectionSymbol\]**\<`EventName`\>(`error`, `event`, ...`args`): `void`
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `symbol`
 
 ##### Parameters
 
 • **error**: [`Error`](../interfaces/Error.md)
 
-• **event**: `string` \| `symbol`
+• **event**: `EventName`
 
-• ...**args**: `any`[]
+• ...**args**: [`Args`](../type-aliases/Args.md)\<`object`, `EventName`\>
 
 ##### Returns
 
@@ -529,15 +567,15 @@ node\_modules/@types/node/events.d.ts:146
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`[captureRejectionSymbol]`](../interfaces/ReadableStream.md#%5Bcapturerejectionsymbol%5D)
+`NodeJS.ReadableStream.[captureRejectionSymbol]`
 
 ##### Inherited from
 
-[`Stream`](Stream.md).[`[captureRejectionSymbol]`](Stream.md#%5Bcapturerejectionsymbol%5D)
+`Stream.[captureRejectionSymbol]`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:151
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:655
 
 ***
 
@@ -569,7 +607,7 @@ The defined events on documents including:
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`addListener`](../interfaces/ReadableStream.md#addlistener)
+`NodeJS.ReadableStream.addListener`
 
 ##### Overrides
 
@@ -577,11 +615,13 @@ The defined events on documents including:
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:598
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:598
 
 #### addListener(event, listener)
 
 > **addListener**(`event`, `listener`): `this`
+
+Alias for `emitter.on(eventName, listener)`.
 
 ##### Parameters
 
@@ -593,9 +633,13 @@ node\_modules/@types/node/stream.d.ts:598
 
 `this`
 
+##### Since
+
+v0.1.26
+
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`addListener`](../interfaces/ReadableStream.md#addlistener)
+`NodeJS.ReadableStream.addListener`
 
 ##### Overrides
 
@@ -603,7 +647,7 @@ node\_modules/@types/node/stream.d.ts:598
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:599
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:599
 
 #### addListener(event, listener)
 
@@ -625,11 +669,11 @@ node\_modules/@types/node/stream.d.ts:599
 
 ##### Overrides
 
-`Stream.addListener`
+[`Stream`](Stream.md).[`addListener`](Stream.md#addlistener)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:600
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:600
 
 #### addListener(event, listener)
 
@@ -655,7 +699,7 @@ node\_modules/@types/node/stream.d.ts:600
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:601
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:601
 
 #### addListener(event, listener)
 
@@ -681,7 +725,7 @@ node\_modules/@types/node/stream.d.ts:601
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:602
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:602
 
 #### addListener(event, listener)
 
@@ -707,7 +751,7 @@ node\_modules/@types/node/stream.d.ts:602
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:603
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:603
 
 #### addListener(event, listener)
 
@@ -733,7 +777,7 @@ node\_modules/@types/node/stream.d.ts:603
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:604
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:604
 
 #### addListener(event, listener)
 
@@ -759,7 +803,7 @@ node\_modules/@types/node/stream.d.ts:604
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:605
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:605
 
 ***
 
@@ -786,7 +830,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:549
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:549
 
 ***
 
@@ -796,7 +840,7 @@ node\_modules/@types/node/stream.d.ts:549
 
 #### Type Parameters
 
-• **T** *extends* [`ReadableStream`](../interfaces/ReadableStream.md)
+• **T** *extends* `ReadableStream`
 
 #### Parameters
 
@@ -816,7 +860,7 @@ node\_modules/@types/node/stream.d.ts:549
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:36
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:36
 
 ***
 
@@ -848,7 +892,7 @@ v8.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:586
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:586
 
 ***
 
@@ -878,7 +922,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:535
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:535
 
 ***
 
@@ -940,7 +984,7 @@ v0.1.26
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`emit`](../interfaces/ReadableStream.md#emit)
+`NodeJS.ReadableStream.emit`
 
 ##### Overrides
 
@@ -948,11 +992,49 @@ v0.1.26
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:606
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:606
 
 #### emit(event, chunk)
 
 > **emit**(`event`, `chunk`): `boolean`
+
+Synchronously calls each of the listeners registered for the event named `eventName`, in the order they were registered, passing the supplied arguments
+to each.
+
+Returns `true` if the event had listeners, `false` otherwise.
+
+```js
+import { EventEmitter } from 'node:events';
+const myEmitter = new EventEmitter();
+
+// First listener
+myEmitter.on('event', function firstListener() {
+  console.log('Helloooo! first listener');
+});
+// Second listener
+myEmitter.on('event', function secondListener(arg1, arg2) {
+  console.log(`event with parameters ${arg1}, ${arg2} in second listener`);
+});
+// Third listener
+myEmitter.on('event', function thirdListener(...args) {
+  const parameters = args.join(', ');
+  console.log(`event with parameters ${parameters} in third listener`);
+});
+
+console.log(myEmitter.listeners('event'));
+
+myEmitter.emit('event', 1, 2, 3, 4, 5);
+
+// Prints:
+// [
+//   [Function: firstListener],
+//   [Function: secondListener],
+//   [Function: thirdListener]
+// ]
+// Helloooo! first listener
+// event with parameters 1, 2 in second listener
+// event with parameters 1, 2, 3, 4, 5 in third listener
+```
 
 ##### Parameters
 
@@ -964,9 +1046,13 @@ node\_modules/@types/node/stream.d.ts:606
 
 `boolean`
 
+##### Since
+
+v0.1.26
+
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`emit`](../interfaces/ReadableStream.md#emit)
+`NodeJS.ReadableStream.emit`
 
 ##### Overrides
 
@@ -974,7 +1060,7 @@ node\_modules/@types/node/stream.d.ts:606
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:607
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:607
 
 #### emit(event)
 
@@ -994,11 +1080,11 @@ node\_modules/@types/node/stream.d.ts:607
 
 ##### Overrides
 
-`Stream.emit`
+[`Stream`](Stream.md).[`emit`](Stream.md#emit)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:608
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:608
 
 #### emit(event, err)
 
@@ -1024,7 +1110,7 @@ node\_modules/@types/node/stream.d.ts:608
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:609
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:609
 
 #### emit(event)
 
@@ -1048,7 +1134,7 @@ node\_modules/@types/node/stream.d.ts:609
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:610
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:610
 
 #### emit(event)
 
@@ -1072,7 +1158,7 @@ node\_modules/@types/node/stream.d.ts:610
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:611
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:611
 
 #### emit(event)
 
@@ -1096,7 +1182,7 @@ node\_modules/@types/node/stream.d.ts:611
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:612
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:612
 
 #### emit(event, args)
 
@@ -1122,11 +1208,13 @@ node\_modules/@types/node/stream.d.ts:612
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:613
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:613
 
 ***
 
 ### eventNames()
+
+#### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
 
@@ -1147,25 +1235,66 @@ console.log(myEE.eventNames());
 // Prints: [ 'foo', 'bar', Symbol(symbol) ]
 ```
 
-#### Returns
+##### Returns
 
 (`string` \| `symbol`)[]
 
-#### Since
+##### Since
 
 v6.0.0
 
-#### Implementation of
+##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`eventNames`](../interfaces/ReadableStream.md#eventnames)
+`NodeJS.ReadableStream.eventNames`
 
-#### Inherited from
+##### Inherited from
 
 [`Stream`](Stream.md).[`eventNames`](Stream.md#eventnames)
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/events.d.ts:1065
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:922
+
+#### eventNames()
+
+> **eventNames**(): (`string` \| `symbol`)[] & [`EventNames`](../type-aliases/EventNames.md)\<`Events`\>[]
+
+Returns an array listing the events for which the emitter has registered
+listeners. The values in the array are strings or `Symbol`s.
+
+```js
+import { EventEmitter } from 'node:events';
+
+const myEE = new EventEmitter();
+myEE.on('foo', () => {});
+myEE.on('bar', () => {});
+
+const sym = Symbol('symbol');
+myEE.on(sym, () => {});
+
+console.log(myEE.eventNames());
+// Prints: [ 'foo', 'bar', Symbol(symbol) ]
+```
+
+##### Returns
+
+(`string` \| `symbol`)[] & [`EventNames`](../type-aliases/EventNames.md)\<`Events`\>[]
+
+##### Since
+
+v6.0.0
+
+##### Implementation of
+
+`NodeJS.ReadableStream.eventNames`
+
+##### Inherited from
+
+[`Stream`](Stream.md).[`eventNames`](Stream.md#eventnames)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1065
 
 ***
 
@@ -1198,7 +1327,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:514
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:514
 
 ***
 
@@ -1230,7 +1359,7 @@ v17.4.0, v16.14.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:442
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:442
 
 ***
 
@@ -1270,7 +1399,7 @@ v17.5.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:497
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:497
 
 #### find(fn, options)
 
@@ -1288,7 +1417,7 @@ node\_modules/@types/node/stream.d.ts:497
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:501
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:501
 
 ***
 
@@ -1322,7 +1451,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:528
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:528
 
 ***
 
@@ -1361,36 +1490,65 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:461
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:461
 
 ***
 
 ### getMaxListeners()
+
+#### getMaxListeners()
 
 > **getMaxListeners**(): `number`
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](ReadableBase.md#defaultmaxlisteners).
 
-#### Returns
+##### Returns
 
 `number`
 
-#### Since
+##### Since
 
 v1.0.0
 
-#### Implementation of
+##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`getMaxListeners`](../interfaces/ReadableStream.md#getmaxlisteners)
+`NodeJS.ReadableStream.getMaxListeners`
 
-#### Inherited from
+##### Inherited from
 
 [`Stream`](Stream.md).[`getMaxListeners`](Stream.md#getmaxlisteners)
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/events.d.ts:879
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:774
+
+#### getMaxListeners()
+
+> **getMaxListeners**(): `number`
+
+Returns the current max listener value for the `EventEmitter` which is either
+set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](ReadableBase.md#defaultmaxlisteners).
+
+##### Returns
+
+`number`
+
+##### Since
+
+v1.0.0
+
+##### Implementation of
+
+`NodeJS.ReadableStream.getMaxListeners`
+
+##### Inherited from
+
+[`Stream`](Stream.md).[`getMaxListeners`](Stream.md#getmaxlisteners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
 
 ***
 
@@ -1422,17 +1580,17 @@ v0.11.14
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`isPaused`](../interfaces/ReadableStream.md#ispaused)
+`NodeJS.ReadableStream.isPaused`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:295
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:295
 
 ***
 
 ### iterator()
 
-> **iterator**(`options`?): `AsyncIterator`\<`any`, `any`, `any`\>
+> **iterator**(`options`?): [`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`, `any`, `any`\>
 
 The iterator created by this method gives users the option to cancel the destruction
 of the stream if the `for await...of` loop is exited by `return`, `break`, or `throw`,
@@ -1450,7 +1608,7 @@ or exiting a `for await...of` iteration using a `break`, `return`, or `throw` wi
 
 #### Returns
 
-`AsyncIterator`\<`any`, `any`, `any`\>
+[`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`, `any`, `any`\>
 
 #### Since
 
@@ -1458,7 +1616,7 @@ v16.3.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:425
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:425
 
 ***
 
@@ -1466,7 +1624,7 @@ node\_modules/@types/node/stream.d.ts:425
 
 #### listenerCount(eventName, listener)
 
-> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+> **listenerCount**\<`K`\>(`eventName`, `listener`?): `number`
 
 Returns the number of listeners listening for the event named `eventName`.
 If `listener` is provided, it will return how many times the listener is found
@@ -1474,15 +1632,15 @@ in the list of the listeners of the event.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **K**
 
 ##### Parameters
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 The name of the event being listened for
 
-• **listener?**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+• **listener?**: `Function`
 
 The event handler function
 
@@ -1496,7 +1654,7 @@ v3.2.0
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`listenerCount`](../interfaces/ReadableStream.md#listenercount)
+`NodeJS.ReadableStream.listenerCount`
 
 ##### Inherited from
 
@@ -1504,7 +1662,49 @@ v3.2.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:990
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:868
+
+#### listenerCount(eventName, listener)
+
+> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+
+Returns the number of listeners listening for the event named `eventName`.
+If `listener` is provided, it will return how many times the listener is found
+in the list of the listeners of the event.
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `number` \| `symbol`
+
+##### Parameters
+
+• **eventName**: `EventName`
+
+The name of the event being listened for
+
+• **listener?**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+
+The event handler function
+
+##### Returns
+
+`number`
+
+##### Since
+
+v3.2.0
+
+##### Implementation of
+
+`NodeJS.ReadableStream.listenerCount`
+
+##### Inherited from
+
+[`Stream`](Stream.md).[`listenerCount`](Stream.md#listenercount)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
 
 #### listenerCount(eventName, listener)
 
@@ -1518,7 +1718,7 @@ node\_modules/@types/node/events.d.ts:990
 
 • **eventName**: `EventName`
 
-• **listener?**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+• **listener?**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
@@ -1526,7 +1726,7 @@ node\_modules/@types/node/events.d.ts:990
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`listenerCount`](../interfaces/ReadableStream.md#listenercount)
+`NodeJS.ReadableStream.listenerCount`
 
 ##### Inherited from
 
@@ -1534,7 +1734,7 @@ node\_modules/@types/node/events.d.ts:990
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:994
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:994
 
 ***
 
@@ -1542,7 +1742,7 @@ node\_modules/@types/node/events.d.ts:994
 
 #### listeners(eventName)
 
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **listeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -1556,15 +1756,15 @@ console.log(util.inspect(server.listeners('connection')));
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **K**
 
 ##### Parameters
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+`Function`[]
 
 ##### Since
 
@@ -1572,7 +1772,7 @@ v0.1.26
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`listeners`](../interfaces/ReadableStream.md#listeners)
+`NodeJS.ReadableStream.listeners`
 
 ##### Inherited from
 
@@ -1580,11 +1780,53 @@ v0.1.26
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:892
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:787
 
 #### listeners(eventName)
 
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+
+Returns a copy of the array of listeners for the event named `eventName`.
+
+```js
+server.on('connection', (stream) => {
+  console.log('someone connected!');
+});
+console.log(util.inspect(server.listeners('connection')));
+// Prints: [ [Function] ]
+```
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `number` \| `symbol`
+
+##### Parameters
+
+• **eventName**: `EventName`
+
+##### Returns
+
+[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+
+##### Since
+
+v0.1.26
+
+##### Implementation of
+
+`NodeJS.ReadableStream.listeners`
+
+##### Inherited from
+
+[`Stream`](Stream.md).[`listeners`](Stream.md#listeners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:892
+
+#### listeners(eventName)
+
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
 
 ##### Type Parameters
 
@@ -1596,11 +1838,11 @@ node\_modules/@types/node/events.d.ts:892
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`listeners`](../interfaces/ReadableStream.md#listeners)
+`NodeJS.ReadableStream.listeners`
 
 ##### Inherited from
 
@@ -1608,7 +1850,7 @@ node\_modules/@types/node/events.d.ts:892
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:895
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:895
 
 ***
 
@@ -1639,7 +1881,7 @@ v17.4.0, v16.14.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:433
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:433
 
 ***
 
@@ -1647,19 +1889,19 @@ node\_modules/@types/node/stream.d.ts:433
 
 #### off(eventName, listener)
 
-> **off**\<`EventName`\>(`eventName`, `listener`): `this`
+> **off**\<`K`\>(`eventName`, `listener`): `this`
 
 Alias for `emitter.removeListener()`.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **K**
 
 ##### Parameters
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+• **listener**
 
 ##### Returns
 
@@ -1671,7 +1913,7 @@ v10.0.0
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`off`](../interfaces/ReadableStream.md#off)
+`NodeJS.ReadableStream.off`
 
 ##### Inherited from
 
@@ -1679,7 +1921,43 @@ v10.0.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:842
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:747
+
+#### off(eventName, listener)
+
+> **off**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Alias for `emitter.removeListener()`.
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `number` \| `symbol`
+
+##### Parameters
+
+• **eventName**: `EventName`
+
+• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+
+##### Returns
+
+`this`
+
+##### Since
+
+v10.0.0
+
+##### Implementation of
+
+`NodeJS.ReadableStream.off`
+
+##### Inherited from
+
+[`Stream`](Stream.md).[`off`](Stream.md#off)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
 
 #### off(eventName, listener)
 
@@ -1693,7 +1971,7 @@ node\_modules/@types/node/events.d.ts:842
 
 • **eventName**: `EventName`
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
@@ -1701,7 +1979,7 @@ node\_modules/@types/node/events.d.ts:842
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`off`](../interfaces/ReadableStream.md#off)
+`NodeJS.ReadableStream.off`
 
 ##### Inherited from
 
@@ -1709,7 +1987,7 @@ node\_modules/@types/node/events.d.ts:842
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:846
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:846
 
 ***
 
@@ -1764,7 +2042,7 @@ v0.1.101
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`on`](../interfaces/ReadableStream.md#on)
+`NodeJS.ReadableStream.on`
 
 ##### Overrides
 
@@ -1772,11 +2050,38 @@ v0.1.101
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:614
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:614
 
 #### on(event, listener)
 
 > **on**(`event`, `listener`): `this`
+
+Adds the `listener` function to the end of the listeners array for the event
+named `eventName`. No checks are made to see if the `listener` has already
+been added. Multiple calls passing the same combination of `eventName` and
+`listener` will result in the `listener` being added, and called, multiple times.
+
+```js
+server.on('connection', (stream) => {
+  console.log('someone connected!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+By default, event listeners are invoked in the order they are added. The `emitter.prependListener()` method can be used as an alternative to add the
+event listener to the beginning of the listeners array.
+
+```js
+import { EventEmitter } from 'node:events';
+const myEE = new EventEmitter();
+myEE.on('foo', () => console.log('a'));
+myEE.prependListener('foo', () => console.log('b'));
+myEE.emit('foo');
+// Prints:
+//   b
+//   a
+```
 
 ##### Parameters
 
@@ -1784,13 +2089,19 @@ node\_modules/@types/node/stream.d.ts:614
 
 • **listener**
 
+The callback function
+
 ##### Returns
 
 `this`
 
+##### Since
+
+v0.1.101
+
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`on`](../interfaces/ReadableStream.md#on)
+`NodeJS.ReadableStream.on`
 
 ##### Overrides
 
@@ -1798,7 +2109,7 @@ node\_modules/@types/node/stream.d.ts:614
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:615
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:615
 
 #### on(event, listener)
 
@@ -1820,11 +2131,11 @@ node\_modules/@types/node/stream.d.ts:615
 
 ##### Overrides
 
-`Stream.on`
+[`Stream`](Stream.md).[`on`](Stream.md#on)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:616
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:616
 
 #### on(event, listener)
 
@@ -1850,7 +2161,7 @@ node\_modules/@types/node/stream.d.ts:616
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:617
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:617
 
 #### on(event, listener)
 
@@ -1876,7 +2187,7 @@ node\_modules/@types/node/stream.d.ts:617
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:618
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:618
 
 #### on(event, listener)
 
@@ -1902,7 +2213,7 @@ node\_modules/@types/node/stream.d.ts:618
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:619
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:619
 
 #### on(event, listener)
 
@@ -1928,7 +2239,7 @@ node\_modules/@types/node/stream.d.ts:619
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:620
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:620
 
 #### on(event, listener)
 
@@ -1954,7 +2265,7 @@ node\_modules/@types/node/stream.d.ts:620
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:621
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:621
 
 ***
 
@@ -2007,7 +2318,7 @@ v0.3.0
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`once`](../interfaces/ReadableStream.md#once)
+`NodeJS.ReadableStream.once`
 
 ##### Overrides
 
@@ -2015,11 +2326,36 @@ v0.3.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:622
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:622
 
 #### once(event, listener)
 
 > **once**(`event`, `listener`): `this`
+
+Adds a **one-time** `listener` function for the event named `eventName`. The
+next time `eventName` is triggered, this listener is removed and then invoked.
+
+```js
+server.once('connection', (stream) => {
+  console.log('Ah, we have our first user!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+By default, event listeners are invoked in the order they are added. The `emitter.prependOnceListener()` method can be used as an alternative to add the
+event listener to the beginning of the listeners array.
+
+```js
+import { EventEmitter } from 'node:events';
+const myEE = new EventEmitter();
+myEE.once('foo', () => console.log('a'));
+myEE.prependOnceListener('foo', () => console.log('b'));
+myEE.emit('foo');
+// Prints:
+//   b
+//   a
+```
 
 ##### Parameters
 
@@ -2027,13 +2363,19 @@ node\_modules/@types/node/stream.d.ts:622
 
 • **listener**
 
+The callback function
+
 ##### Returns
 
 `this`
 
+##### Since
+
+v0.3.0
+
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`once`](../interfaces/ReadableStream.md#once)
+`NodeJS.ReadableStream.once`
 
 ##### Overrides
 
@@ -2041,7 +2383,7 @@ node\_modules/@types/node/stream.d.ts:622
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:623
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:623
 
 #### once(event, listener)
 
@@ -2063,11 +2405,11 @@ node\_modules/@types/node/stream.d.ts:623
 
 ##### Overrides
 
-`Stream.once`
+[`Stream`](Stream.md).[`once`](Stream.md#once)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:624
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:624
 
 #### once(event, listener)
 
@@ -2093,7 +2435,7 @@ node\_modules/@types/node/stream.d.ts:624
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:625
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:625
 
 #### once(event, listener)
 
@@ -2119,7 +2461,7 @@ node\_modules/@types/node/stream.d.ts:625
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:626
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:626
 
 #### once(event, listener)
 
@@ -2145,7 +2487,7 @@ node\_modules/@types/node/stream.d.ts:626
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:627
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:627
 
 #### once(event, listener)
 
@@ -2171,7 +2513,7 @@ node\_modules/@types/node/stream.d.ts:627
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:628
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:628
 
 #### once(event, listener)
 
@@ -2197,7 +2539,7 @@ node\_modules/@types/node/stream.d.ts:628
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:629
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:629
 
 ***
 
@@ -2234,11 +2576,11 @@ v0.9.4
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`pause`](../interfaces/ReadableStream.md#pause)
+`NodeJS.ReadableStream.pause`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:259
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:259
 
 ***
 
@@ -2248,7 +2590,7 @@ node\_modules/@types/node/stream.d.ts:259
 
 #### Type Parameters
 
-• **T** *extends* [`WritableStream`](../interfaces/WritableStream.md)
+• **T** *extends* `WritableStream`
 
 #### Parameters
 
@@ -2264,7 +2606,7 @@ node\_modules/@types/node/stream.d.ts:259
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`pipe`](../interfaces/ReadableStream.md#pipe)
+`NodeJS.ReadableStream.pipe`
 
 #### Inherited from
 
@@ -2272,7 +2614,7 @@ node\_modules/@types/node/stream.d.ts:259
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:30
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:30
 
 ***
 
@@ -2313,7 +2655,7 @@ v6.0.0
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`prependListener`](../interfaces/ReadableStream.md#prependlistener)
+`NodeJS.ReadableStream.prependListener`
 
 ##### Overrides
 
@@ -2321,11 +2663,24 @@ v6.0.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:630
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:630
 
 #### prependListener(event, listener)
 
 > **prependListener**(`event`, `listener`): `this`
+
+Adds the `listener` function to the _beginning_ of the listeners array for the
+event named `eventName`. No checks are made to see if the `listener` has
+already been added. Multiple calls passing the same combination of `eventName`
+and `listener` will result in the `listener` being added, and called, multiple times.
+
+```js
+server.prependListener('connection', (stream) => {
+  console.log('someone connected!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Parameters
 
@@ -2333,13 +2688,19 @@ node\_modules/@types/node/stream.d.ts:630
 
 • **listener**
 
+The callback function
+
 ##### Returns
 
 `this`
 
+##### Since
+
+v6.0.0
+
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`prependListener`](../interfaces/ReadableStream.md#prependlistener)
+`NodeJS.ReadableStream.prependListener`
 
 ##### Overrides
 
@@ -2347,7 +2708,7 @@ node\_modules/@types/node/stream.d.ts:630
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:631
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:631
 
 #### prependListener(event, listener)
 
@@ -2369,11 +2730,11 @@ node\_modules/@types/node/stream.d.ts:631
 
 ##### Overrides
 
-`Stream.prependListener`
+[`Stream`](Stream.md).[`prependListener`](Stream.md#prependlistener)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:632
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:632
 
 #### prependListener(event, listener)
 
@@ -2399,7 +2760,7 @@ node\_modules/@types/node/stream.d.ts:632
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:633
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:633
 
 #### prependListener(event, listener)
 
@@ -2425,7 +2786,7 @@ node\_modules/@types/node/stream.d.ts:633
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:634
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:634
 
 #### prependListener(event, listener)
 
@@ -2451,7 +2812,7 @@ node\_modules/@types/node/stream.d.ts:634
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:635
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:635
 
 #### prependListener(event, listener)
 
@@ -2477,7 +2838,7 @@ node\_modules/@types/node/stream.d.ts:635
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:636
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:636
 
 #### prependListener(event, listener)
 
@@ -2503,7 +2864,7 @@ node\_modules/@types/node/stream.d.ts:636
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:637
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:637
 
 ***
 
@@ -2542,7 +2903,7 @@ v6.0.0
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`prependOnceListener`](../interfaces/ReadableStream.md#prependoncelistener)
+`NodeJS.ReadableStream.prependOnceListener`
 
 ##### Overrides
 
@@ -2550,11 +2911,22 @@ v6.0.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:638
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:638
 
 #### prependOnceListener(event, listener)
 
 > **prependOnceListener**(`event`, `listener`): `this`
+
+Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
+listener is removed, and then invoked.
+
+```js
+server.prependOnceListener('connection', (stream) => {
+  console.log('Ah, we have our first user!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Parameters
 
@@ -2562,13 +2934,19 @@ node\_modules/@types/node/stream.d.ts:638
 
 • **listener**
 
+The callback function
+
 ##### Returns
 
 `this`
 
+##### Since
+
+v6.0.0
+
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`prependOnceListener`](../interfaces/ReadableStream.md#prependoncelistener)
+`NodeJS.ReadableStream.prependOnceListener`
 
 ##### Overrides
 
@@ -2576,7 +2954,7 @@ node\_modules/@types/node/stream.d.ts:638
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:639
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:639
 
 #### prependOnceListener(event, listener)
 
@@ -2598,11 +2976,11 @@ node\_modules/@types/node/stream.d.ts:639
 
 ##### Overrides
 
-`Stream.prependOnceListener`
+[`Stream`](Stream.md).[`prependOnceListener`](Stream.md#prependoncelistener)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:640
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:640
 
 #### prependOnceListener(event, listener)
 
@@ -2628,7 +3006,7 @@ node\_modules/@types/node/stream.d.ts:640
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:641
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:641
 
 #### prependOnceListener(event, listener)
 
@@ -2654,7 +3032,7 @@ node\_modules/@types/node/stream.d.ts:641
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:642
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:642
 
 #### prependOnceListener(event, listener)
 
@@ -2680,7 +3058,7 @@ node\_modules/@types/node/stream.d.ts:642
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:643
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:643
 
 #### prependOnceListener(event, listener)
 
@@ -2706,7 +3084,7 @@ node\_modules/@types/node/stream.d.ts:643
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:644
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:644
 
 #### prependOnceListener(event, listener)
 
@@ -2732,7 +3110,7 @@ node\_modules/@types/node/stream.d.ts:644
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:645
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:645
 
 ***
 
@@ -2752,7 +3130,7 @@ node\_modules/@types/node/stream.d.ts:645
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:415
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:415
 
 ***
 
@@ -2760,7 +3138,7 @@ node\_modules/@types/node/stream.d.ts:415
 
 #### rawListeners(eventName)
 
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **rawListeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -2792,15 +3170,15 @@ emitter.emit('log');
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **K**
 
 ##### Parameters
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+`Function`[]
 
 ##### Since
 
@@ -2808,7 +3186,7 @@ v9.4.0
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`rawListeners`](../interfaces/ReadableStream.md#rawlisteners)
+`NodeJS.ReadableStream.rawListeners`
 
 ##### Inherited from
 
@@ -2816,11 +3194,71 @@ v9.4.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:928
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:818
 
 #### rawListeners(eventName)
 
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+
+Returns a copy of the array of listeners for the event named `eventName`,
+including any wrappers (such as those created by `.once()`).
+
+```js
+import { EventEmitter } from 'node:events';
+const emitter = new EventEmitter();
+emitter.once('log', () => console.log('log once'));
+
+// Returns a new Array with a function `onceWrapper` which has a property
+// `listener` which contains the original listener bound above
+const listeners = emitter.rawListeners('log');
+const logFnWrapper = listeners[0];
+
+// Logs "log once" to the console and does not unbind the `once` event
+logFnWrapper.listener();
+
+// Logs "log once" to the console and removes the listener
+logFnWrapper();
+
+emitter.on('log', () => console.log('log persistently'));
+// Will return a new Array with a single function bound by `.on()` above
+const newListeners = emitter.rawListeners('log');
+
+// Logs "log persistently" twice
+newListeners[0]();
+emitter.emit('log');
+```
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `number` \| `symbol`
+
+##### Parameters
+
+• **eventName**: `EventName`
+
+##### Returns
+
+[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+
+##### Since
+
+v9.4.0
+
+##### Implementation of
+
+`NodeJS.ReadableStream.rawListeners`
+
+##### Inherited from
+
+[`Stream`](Stream.md).[`rawListeners`](Stream.md#rawlisteners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:928
+
+#### rawListeners(eventName)
+
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
 
 ##### Type Parameters
 
@@ -2832,11 +3270,11 @@ node\_modules/@types/node/events.d.ts:928
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`rawListeners`](../interfaces/ReadableStream.md#rawlisteners)
+`NodeJS.ReadableStream.rawListeners`
 
 ##### Inherited from
 
@@ -2844,7 +3282,7 @@ node\_modules/@types/node/events.d.ts:928
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:931
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:931
 
 ***
 
@@ -2942,11 +3380,11 @@ v0.9.4
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`read`](../interfaces/ReadableStream.md#read)
+`NodeJS.ReadableStream.read`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:212
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:212
 
 ***
 
@@ -2993,7 +3431,7 @@ v17.5.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:564
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:564
 
 #### reduce(fn, initial, options)
 
@@ -3017,11 +3455,47 @@ node\_modules/@types/node/stream.d.ts:564
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:569
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:569
 
 ***
 
 ### removeAllListeners()
+
+#### removeAllListeners(eventName)
+
+> **removeAllListeners**(`eventName`?): `this`
+
+Removes all listeners, or those of the specified `eventName`.
+
+It is bad practice to remove listeners added elsewhere in the code,
+particularly when the `EventEmitter` instance was created by some other
+component or module (e.g. sockets or file streams).
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+##### Parameters
+
+• **eventName?**: `string` \| `symbol`
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.1.26
+
+##### Implementation of
+
+`NodeJS.ReadableStream.removeAllListeners`
+
+##### Inherited from
+
+[`Stream`](Stream.md).[`removeAllListeners`](Stream.md#removealllisteners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:758
 
 #### removeAllListeners(eventName)
 
@@ -3037,7 +3511,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **EventName** *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
@@ -3053,7 +3527,7 @@ v0.1.26
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`removeAllListeners`](../interfaces/ReadableStream.md#removealllisteners)
+`NodeJS.ReadableStream.removeAllListeners`
 
 ##### Inherited from
 
@@ -3061,7 +3535,7 @@ v0.1.26
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:861
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
 
 #### removeAllListeners(eventName)
 
@@ -3081,7 +3555,7 @@ node\_modules/@types/node/events.d.ts:861
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`removeAllListeners`](../interfaces/ReadableStream.md#removealllisteners)
+`NodeJS.ReadableStream.removeAllListeners`
 
 ##### Inherited from
 
@@ -3089,7 +3563,7 @@ node\_modules/@types/node/events.d.ts:861
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:862
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:862
 
 ***
 
@@ -3195,7 +3669,7 @@ v0.1.26
 
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`removeListener`](../interfaces/ReadableStream.md#removelistener)
+`NodeJS.ReadableStream.removeListener`
 
 ##### Overrides
 
@@ -3203,11 +3677,91 @@ v0.1.26
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:646
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:646
 
 #### removeListener(event, listener)
 
 > **removeListener**(`event`, `listener`): `this`
+
+Removes the specified `listener` from the listener array for the event named `eventName`.
+
+```js
+const callback = (stream) => {
+  console.log('someone connected!');
+};
+server.on('connection', callback);
+// ...
+server.removeListener('connection', callback);
+```
+
+`removeListener()` will remove, at most, one instance of a listener from the
+listener array. If any single listener has been added multiple times to the
+listener array for the specified `eventName`, then `removeListener()` must be
+called multiple times to remove each instance.
+
+Once an event is emitted, all listeners attached to it at the
+time of emitting are called in order. This implies that any `removeListener()` or `removeAllListeners()` calls _after_ emitting and _before_ the last listener finishes execution
+will not remove them from`emit()` in progress. Subsequent events behave as expected.
+
+```js
+import { EventEmitter } from 'node:events';
+class MyEmitter extends EventEmitter {}
+const myEmitter = new MyEmitter();
+
+const callbackA = () => {
+  console.log('A');
+  myEmitter.removeListener('event', callbackB);
+};
+
+const callbackB = () => {
+  console.log('B');
+};
+
+myEmitter.on('event', callbackA);
+
+myEmitter.on('event', callbackB);
+
+// callbackA removes listener callbackB but it will still be called.
+// Internal listener array at time of emit [callbackA, callbackB]
+myEmitter.emit('event');
+// Prints:
+//   A
+//   B
+
+// callbackB is now removed.
+// Internal listener array [callbackA]
+myEmitter.emit('event');
+// Prints:
+//   A
+```
+
+Because listeners are managed using an internal array, calling this will
+change the position indices of any listener registered _after_ the listener
+being removed. This will not impact the order in which listeners are called,
+but it means that any copies of the listener array as returned by
+the `emitter.listeners()` method will need to be recreated.
+
+When a single function has been added as a handler multiple times for a single
+event (as in the example below), `removeListener()` will remove the most
+recently added instance. In the example the `once('ping')` listener is removed:
+
+```js
+import { EventEmitter } from 'node:events';
+const ee = new EventEmitter();
+
+function pong() {
+  console.log('pong');
+}
+
+ee.on('ping', pong);
+ee.once('ping', pong);
+ee.removeListener('ping', pong);
+
+ee.emit('ping');
+ee.emit('ping');
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Parameters
 
@@ -3219,9 +3773,13 @@ node\_modules/@types/node/stream.d.ts:646
 
 `this`
 
+##### Since
+
+v0.1.26
+
 ##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`removeListener`](../interfaces/ReadableStream.md#removelistener)
+`NodeJS.ReadableStream.removeListener`
 
 ##### Overrides
 
@@ -3229,7 +3787,7 @@ node\_modules/@types/node/stream.d.ts:646
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:647
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:647
 
 #### removeListener(event, listener)
 
@@ -3251,11 +3809,11 @@ node\_modules/@types/node/stream.d.ts:647
 
 ##### Overrides
 
-`Stream.removeListener`
+[`Stream`](Stream.md).[`removeListener`](Stream.md#removelistener)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:648
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:648
 
 #### removeListener(event, listener)
 
@@ -3281,7 +3839,7 @@ node\_modules/@types/node/stream.d.ts:648
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:649
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:649
 
 #### removeListener(event, listener)
 
@@ -3307,7 +3865,7 @@ node\_modules/@types/node/stream.d.ts:649
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:650
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:650
 
 #### removeListener(event, listener)
 
@@ -3333,7 +3891,7 @@ node\_modules/@types/node/stream.d.ts:650
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:651
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:651
 
 #### removeListener(event, listener)
 
@@ -3359,7 +3917,7 @@ node\_modules/@types/node/stream.d.ts:651
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:652
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:652
 
 #### removeListener(event, listener)
 
@@ -3385,7 +3943,7 @@ node\_modules/@types/node/stream.d.ts:652
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:653
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:653
 
 ***
 
@@ -3419,11 +3977,11 @@ v0.9.4
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`resume`](../interfaces/ReadableStream.md#resume)
+`NodeJS.ReadableStream.resume`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:278
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:278
 
 ***
 
@@ -3468,15 +4026,17 @@ v0.9.4
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`setEncoding`](../interfaces/ReadableStream.md#setencoding)
+`NodeJS.ReadableStream.setEncoding`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:237
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:237
 
 ***
 
 ### setMaxListeners()
+
+#### setMaxListeners(n)
 
 > **setMaxListeners**(`n`): `this`
 
@@ -3487,29 +4047,64 @@ modified for this specific `EventEmitter` instance. The value can be set to `Inf
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
-#### Parameters
+##### Parameters
 
 • **n**: `number`
 
-#### Returns
+##### Returns
 
 `this`
 
-#### Since
+##### Since
 
 v0.3.5
 
-#### Implementation of
+##### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`setMaxListeners`](../interfaces/ReadableStream.md#setmaxlisteners)
+`NodeJS.ReadableStream.setMaxListeners`
 
-#### Inherited from
+##### Inherited from
 
 [`Stream`](Stream.md).[`setMaxListeners`](Stream.md#setmaxlisteners)
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/events.d.ts:873
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:768
+
+#### setMaxListeners(n)
+
+> **setMaxListeners**(`n`): `this`
+
+By default `EventEmitter`s will print a warning if more than `10` listeners are
+added for a particular event. This is a useful default that helps finding
+memory leaks. The `emitter.setMaxListeners()` method allows the limit to be
+modified for this specific `EventEmitter` instance. The value can be set to `Infinity` (or `0`) to indicate an unlimited number of listeners.
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+##### Parameters
+
+• **n**: `number`
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.3.5
+
+##### Implementation of
+
+`NodeJS.ReadableStream.setMaxListeners`
+
+##### Inherited from
+
+[`Stream`](Stream.md).[`setMaxListeners`](Stream.md#setmaxlisteners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873
 
 ***
 
@@ -3542,7 +4137,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:483
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:483
 
 ***
 
@@ -3572,7 +4167,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:542
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:542
 
 ***
 
@@ -3601,7 +4196,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:473
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:473
 
 ***
 
@@ -3634,7 +4229,7 @@ setTimeout(() => {
 
 #### Parameters
 
-• **destination?**: [`WritableStream`](../interfaces/WritableStream.md)
+• **destination?**: `WritableStream`
 
 Optional specific stream to unpipe
 
@@ -3648,11 +4243,11 @@ v0.9.4
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`unpipe`](../interfaces/ReadableStream.md#unpipe)
+`NodeJS.ReadableStream.unpipe`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:322
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:322
 
 ***
 
@@ -3741,11 +4336,11 @@ v0.9.11
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`unshift`](../interfaces/ReadableStream.md#unshift)
+`NodeJS.ReadableStream.unshift`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:388
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:388
 
 ***
 
@@ -3777,7 +4372,7 @@ myReader.on('readable', () => {
 
 #### Parameters
 
-• **stream**: [`ReadableStream`](../interfaces/ReadableStream.md)
+• **stream**: `ReadableStream`
 
 An "old style" readable stream
 
@@ -3791,17 +4386,17 @@ v0.9.4
 
 #### Implementation of
 
-[`ReadableStream`](../interfaces/ReadableStream.md).[`wrap`](../interfaces/ReadableStream.md#wrap)
+`NodeJS.ReadableStream.wrap`
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:414
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:414
 
 ***
 
 ### addAbortListener()
 
-> `static` **addAbortListener**(`signal`, `resource`): [`Disposable`](../interfaces/Disposable.md)
+> `static` **addAbortListener**(`signal`, `resource`): `Disposable`
 
 **`Experimental`**
 
@@ -3843,7 +4438,7 @@ function example(signal) {
 
 #### Returns
 
-[`Disposable`](../interfaces/Disposable.md)
+`Disposable`
 
 Disposable that removes the `abort` listener.
 
@@ -3857,7 +4452,7 @@ v20.5.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:490
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:437
 
 ***
 
@@ -3887,15 +4482,13 @@ v12.3.0, v10.17.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:60
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:60
 
 ***
 
 ### getEventListeners()
 
-#### getEventListeners(emitter, name)
-
-> `static` **getEventListeners**\<`Events`, `EventName`\>(`emitter`, `name`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -3922,55 +4515,27 @@ import { getEventListeners, EventEmitter } from 'node:events';
 }
 ```
 
-##### Type Parameters
+#### Parameters
 
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](EventEmitter.md)\<`Events`\>
-
-• **name**: `EventName`
-
-##### Returns
-
-[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
-
-##### Since
-
-v15.2.0, v14.17.0
-
-##### Inherited from
-
-[`Stream`](Stream.md).[`getEventListeners`](Stream.md#geteventlisteners)
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:404
-
-#### getEventListeners(emitter, name)
-
-> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
-
-##### Parameters
-
-• **emitter**: `EventTarget` \| [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
+• **emitter**: `EventTarget` \| `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
 • **name**: `string` \| `symbol`
 
-##### Returns
+#### Returns
 
 `Function`[]
 
-##### Inherited from
+#### Since
+
+v15.2.0, v14.17.0
+
+#### Inherited from
 
 [`Stream`](Stream.md).[`getEventListeners`](Stream.md#geteventlisteners)
 
-##### Defined in
+#### Defined in
 
-node\_modules/@types/node/events.d.ts:408
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:358
 
 ***
 
@@ -4006,7 +4571,7 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 #### Parameters
 
-• **emitter**: `EventTarget` \| [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
+• **emitter**: `EventTarget` \| `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
 #### Returns
 
@@ -4022,7 +4587,7 @@ v19.9.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:440
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:387
 
 ***
 
@@ -4034,7 +4599,7 @@ Returns whether the stream has been read from or cancelled.
 
 #### Parameters
 
-• **stream**: [`ReadableStream`](../interfaces/ReadableStream.md) \| [`Readable`](Readable.md)
+• **stream**: `ReadableStream` \| [`Readable`](Readable.md)
 
 #### Returns
 
@@ -4046,65 +4611,11 @@ v16.8.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:65
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:65
 
 ***
 
 ### ~~listenerCount()~~
-
-#### listenerCount(emitter, eventName)
-
-> `static` **listenerCount**\<`Events`, `EventName`\>(`emitter`, `eventName`): `number`
-
-A class method that returns the number of listeners for the given `eventName` registered on the given `emitter`.
-
-```js
-import { EventEmitter, listenerCount } from 'node:events';
-
-const myEmitter = new EventEmitter();
-myEmitter.on('event', () => {});
-myEmitter.on('event', () => {});
-console.log(listenerCount(myEmitter, 'event'));
-// Prints: 2
-```
-
-##### Type Parameters
-
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](EventEmitter.md)\<`Events`\>
-
-The emitter to query
-
-• **eventName**: `EventName`
-
-The event name
-
-##### Returns
-
-`number`
-
-##### Since
-
-v0.9.12
-
-##### Deprecated
-
-Since v3.2.0 - Use `listenerCount` instead.
-
-##### Inherited from
-
-[`Stream`](Stream.md).[`listenerCount`](Stream.md#listenercount-1)
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:355
-
-#### listenerCount(emitter, eventName)
 
 > `static` **listenerCount**(`emitter`, `eventName`): `number`
 
@@ -4120,9 +4631,9 @@ console.log(listenerCount(myEmitter, 'event'));
 // Prints: 2
 ```
 
-##### Parameters
+#### Parameters
 
-• **emitter**: [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
+• **emitter**: `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
 The emitter to query
 
@@ -4130,25 +4641,25 @@ The emitter to query
 
 The event name
 
-##### Returns
+#### Returns
 
 `number`
 
-##### Since
+#### Since
 
 v0.9.12
 
-##### Deprecated
+#### Deprecated
 
 Since v3.2.0 - Use `listenerCount` instead.
 
-##### Inherited from
+#### Inherited from
 
 [`Stream`](Stream.md).[`listenerCount`](Stream.md#listenercount-1)
 
-##### Defined in
+#### Defined in
 
-node\_modules/@types/node/events.d.ts:376
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:330
 
 ***
 
@@ -4156,7 +4667,7 @@ node\_modules/@types/node/events.d.ts:376
 
 #### on(emitter, eventName, options)
 
-> `static` **on**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options`?): `AsyncIterator`\<[`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>, `any`, `any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): [`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 ```js
 import { on, EventEmitter } from 'node:events';
@@ -4235,23 +4746,17 @@ for await (const event of on(ee, 'foo', { close: ['close'] })) {
 console.log('done'); // prints 'done'
 ```
 
-##### Type Parameters
-
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](EventEmitter.md)\<`Events`\>
+• **emitter**: `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 • **options?**: [`StaticEventEmitterIteratorOptions`](../interfaces/StaticEventEmitterIteratorOptions.md)
 
 ##### Returns
 
-`AsyncIterator`\<[`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>, `any`, `any`\>
+[`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 An `AsyncIterator` that iterates `eventName` events emitted by the `emitter`
 
@@ -4265,35 +4770,11 @@ v13.6.0, v12.16.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:323
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:303
 
 #### on(emitter, eventName, options)
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[], `any`, `any`\>
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
-
-• **eventName**: `string` \| `symbol`
-
-• **options?**: [`StaticEventEmitterIteratorOptions`](../interfaces/StaticEventEmitterIteratorOptions.md)
-
-##### Returns
-
-`AsyncIterator`\<`any`[], `any`, `any`\>
-
-##### Inherited from
-
-[`Stream`](Stream.md).[`on`](Stream.md#on-1)
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:328
-
-#### on(emitter, eventName, options)
-
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[], `any`, `any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): [`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 ##### Parameters
 
@@ -4305,7 +4786,7 @@ node\_modules/@types/node/events.d.ts:328
 
 ##### Returns
 
-`AsyncIterator`\<`any`[], `any`, `any`\>
+[`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 ##### Inherited from
 
@@ -4313,7 +4794,7 @@ node\_modules/@types/node/events.d.ts:328
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:333
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:308
 
 ***
 
@@ -4321,7 +4802,7 @@ node\_modules/@types/node/events.d.ts:333
 
 #### once(emitter, eventName, options)
 
-> `static` **once**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options`?): `Promise`\<[`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>\>
+> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -4400,23 +4881,17 @@ ac.abort(); // Abort waiting for the event
 ee.emit('foo'); // Prints: Waiting for the event was canceled!
 ```
 
-##### Type Parameters
-
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](EventEmitter.md)\<`Events`\>
+• **emitter**: `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 • **options?**: [`StaticEventEmitterOptions`](../interfaces/StaticEventEmitterOptions.md)
 
 ##### Returns
 
-`Promise`\<[`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>\>
+`Promise`\<`any`[]\>
 
 ##### Since
 
@@ -4428,31 +4903,7 @@ v11.13.0, v10.16.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:232
-
-#### once(emitter, eventName, options)
-
-> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
-
-• **eventName**: `string` \| `symbol`
-
-• **options?**: [`StaticEventEmitterOptions`](../interfaces/StaticEventEmitterOptions.md)
-
-##### Returns
-
-`Promise`\<`any`[]\>
-
-##### Inherited from
-
-[`Stream`](Stream.md).[`once`](Stream.md#once-1)
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:237
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:217
 
 #### once(emitter, eventName, options)
 
@@ -4476,7 +4927,7 @@ node\_modules/@types/node/events.d.ts:237
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:242
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:222
 
 ***
 
@@ -4499,7 +4950,7 @@ setMaxListeners(5, target, emitter);
 
 A non-negative number. The maximum number of listeners per `EventTarget` event.
 
-• ...**eventTargets?**: (`EventTarget` \| [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>)[]
+• ...**eventTargets?**: (`EventTarget` \| `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>)[]
 
 Zero or more {EventTarget} or {EventEmitter} instances. If none are specified, `n` is set as the default max for all newly created {EventTarget} and {EventEmitter}
 objects.
@@ -4518,4 +4969,4 @@ v15.4.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:455
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:402

@@ -40,4 +40,4 @@ NFT Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/sdk/simple.ts:183](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/simple.ts#L183)
+[src/sdk/simple.ts:183](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L183)

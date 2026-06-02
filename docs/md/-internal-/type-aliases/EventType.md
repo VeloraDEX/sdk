@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:121
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:121

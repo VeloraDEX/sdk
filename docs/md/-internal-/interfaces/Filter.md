@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:225
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:225
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:225
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:226
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:226
 
 ***
 
@@ -34,7 +34,7 @@ node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:226
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:228
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:228
 
 ***
 
@@ -44,7 +44,7 @@ node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:228
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:223
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:223
 
 ***
 
@@ -54,7 +54,7 @@ node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:223
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:224
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:224
 
 ***
 
@@ -64,4 +64,4 @@ node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:224
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:227
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:227

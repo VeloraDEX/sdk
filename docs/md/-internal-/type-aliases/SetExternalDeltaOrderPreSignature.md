@@ -26,4 +26,4 @@
 
 ## Defined in
 
-[src/methods/delta/preSignExternalDeltaOrder.ts:27](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/preSignExternalDeltaOrder.ts#L27)
+[src/methods/delta/preSignExternalDeltaOrder.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignExternalDeltaOrder.ts#L27)

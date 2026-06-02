@@ -18,7 +18,7 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:59
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:59
 
 ***
 
@@ -28,7 +28,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:59
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:56
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:56
 
 ***
 
@@ -38,7 +38,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:56
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:55
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:55
 
 ***
 
@@ -48,7 +48,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:55
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:60
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:60
 
 ***
 
@@ -58,7 +58,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:60
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:63
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:63
 
 ***
 
@@ -68,7 +68,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:63
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:58
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:58
 
 ***
 
@@ -78,7 +78,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:58
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:61
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:61
 
 ***
 
@@ -88,7 +88,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:61
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:62
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:62
 
 ***
 
@@ -98,4 +98,4 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:62
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:57
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:57

@@ -16,4 +16,4 @@ A Networkish can be used to allude to a Network, by specifing:
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:17
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:17

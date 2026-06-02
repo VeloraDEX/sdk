@@ -14,9 +14,9 @@
 
 ## Parameters
 
-• **onFulfilled?**: (`value`) => `T` \| `Promise`\<`T`\> \| `null`
+• **onFulfilled?**: [`AxiosInterceptorFulfilled`](AxiosInterceptorFulfilled.md)\<`T`\> \| `null`
 
-• **onRejected?**: (`error`) => `any` \| `null`
+• **onRejected?**: [`AxiosInterceptorRejected`](AxiosInterceptorRejected.md) \| `null`
 
 • **options?**: [`AxiosInterceptorOptions`](../interfaces/AxiosInterceptorOptions.md)
 
@@ -26,4 +26,4 @@
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:495
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:577

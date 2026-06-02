@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/buildDeltaOrder.ts:78](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L78)
+[src/methods/delta/buildDeltaOrder.ts:78](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L78)

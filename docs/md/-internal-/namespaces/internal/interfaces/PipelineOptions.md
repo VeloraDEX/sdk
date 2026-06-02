@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1497
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1497
 
 ***
 
@@ -24,4 +24,4 @@ node\_modules/@types/node/stream.d.ts:1497
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1496
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1496

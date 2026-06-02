@@ -16,7 +16,7 @@ The byte code of the contract. Used when the contract gets [deployed](../classes
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:23
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:23
 
 ***
 
@@ -26,7 +26,7 @@ node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:23
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:30
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:30
 
 ***
 
@@ -38,7 +38,7 @@ The address transactions should be made from
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:19
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:19
 
 ***
 
@@ -50,7 +50,7 @@ The maximum gas provided for a transaction (gas limit).
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:10
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:10
 
 ***
 
@@ -60,7 +60,7 @@ node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:10
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:11
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:11
 
 ***
 
@@ -72,7 +72,7 @@ The gas price in wei to use for transactions.
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:15
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:15
 
 ***
 
@@ -82,7 +82,7 @@ node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:15
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:24
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:24
 
 ***
 
@@ -92,7 +92,7 @@ node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:24
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:25
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:25
 
 ***
 
@@ -104,4 +104,4 @@ If `true`, the defaults of the contract instance will be updated automatically b
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:29
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_contract\_types.d.ts:29

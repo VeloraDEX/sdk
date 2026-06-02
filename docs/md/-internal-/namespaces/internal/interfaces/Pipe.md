@@ -18,7 +18,7 @@
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1701
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1701
 
 ***
 
@@ -32,7 +32,7 @@ node\_modules/@types/node/stream.d.ts:1701
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1702
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1702
 
 ***
 
@@ -46,7 +46,7 @@ node\_modules/@types/node/stream.d.ts:1702
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1703
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1703
 
 ***
 
@@ -60,4 +60,4 @@ node\_modules/@types/node/stream.d.ts:1703
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1704
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1704

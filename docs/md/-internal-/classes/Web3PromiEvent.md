@@ -40,7 +40,7 @@
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:5
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:5
 
 ## Properties
 
@@ -54,7 +54,7 @@ node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:5
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:6
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:6
 
 ## Methods
 
@@ -86,7 +86,7 @@ A Promise for the completion of the callback.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:8
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:8
 
 ***
 
@@ -114,7 +114,7 @@ node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:8
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
 
 ***
 
@@ -132,7 +132,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 ***
 
@@ -161,7 +161,7 @@ A Promise for the completion of the callback.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:9
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:9
 
 ***
 
@@ -179,7 +179,7 @@ node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:9
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 ***
 
@@ -205,7 +205,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
 
 ***
 
@@ -231,7 +231,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
 
 ***
 
@@ -259,7 +259,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
 
 ***
 
@@ -287,7 +287,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:10
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:10
 
 ***
 
@@ -315,17 +315,17 @@ node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:10
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:11
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:11
 
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Returns
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Inherited from
 
@@ -333,7 +333,7 @@ node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:11
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
@@ -355,7 +355,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
 
 ***
 
@@ -393,4 +393,4 @@ A Promise for the completion of which ever callback is executed.
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:7
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:7

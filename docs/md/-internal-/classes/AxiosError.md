@@ -48,17 +48,17 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:417
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:494
 
 ## Properties
 
 ### cause?
 
-> `optional` **cause**: `unknown`
+> `optional` **cause**: [`Error`](../interfaces/Error.md)
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:432
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:509
 
 ***
 
@@ -68,7 +68,7 @@ node\_modules/axios/index.d.ts:432
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:426
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:503
 
 ***
 
@@ -78,7 +78,7 @@ node\_modules/axios/index.d.ts:426
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:425
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:502
 
 ***
 
@@ -88,7 +88,7 @@ node\_modules/axios/index.d.ts:425
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:433
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:510
 
 ***
 
@@ -98,7 +98,7 @@ node\_modules/axios/index.d.ts:433
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:429
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:506
 
 ***
 
@@ -112,7 +112,7 @@ node\_modules/axios/index.d.ts:429
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1077
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -126,7 +126,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1076
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 ***
 
@@ -136,7 +136,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:427
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:504
 
 ***
 
@@ -146,7 +146,7 @@ node\_modules/axios/index.d.ts:427
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:428
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:505
 
 ***
 
@@ -160,7 +160,7 @@ node\_modules/axios/index.d.ts:428
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1078
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 ***
 
@@ -170,7 +170,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:430
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:507
 
 ***
 
@@ -184,127 +184,147 @@ node\_modules/axios/index.d.ts:430
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:431
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:508
 
 ***
 
 ### ECONNABORTED
 
-> `readonly` `static` **ECONNABORTED**: `"ECONNABORTED"` = `"ECONNABORTED"`
+> `readonly` `static` **ECONNABORTED**: `"ECONNABORTED"` = `'ECONNABORTED'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:452
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:530
+
+***
+
+### ECONNREFUSED
+
+> `readonly` `static` **ECONNREFUSED**: `"ECONNREFUSED"` = `'ECONNREFUSED'`
+
+#### Defined in
+
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:531
 
 ***
 
 ### ERR\_BAD\_OPTION
 
-> `readonly` `static` **ERR\_BAD\_OPTION**: `"ERR_BAD_OPTION"` = `"ERR_BAD_OPTION"`
+> `readonly` `static` **ERR\_BAD\_OPTION**: `"ERR_BAD_OPTION"` = `'ERR_BAD_OPTION'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:444
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:521
 
 ***
 
 ### ERR\_BAD\_OPTION\_VALUE
 
-> `readonly` `static` **ERR\_BAD\_OPTION\_VALUE**: `"ERR_BAD_OPTION_VALUE"` = `"ERR_BAD_OPTION_VALUE"`
+> `readonly` `static` **ERR\_BAD\_OPTION\_VALUE**: `"ERR_BAD_OPTION_VALUE"` = `'ERR_BAD_OPTION_VALUE'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:443
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:520
 
 ***
 
 ### ERR\_BAD\_REQUEST
 
-> `readonly` `static` **ERR\_BAD\_REQUEST**: `"ERR_BAD_REQUEST"` = `"ERR_BAD_REQUEST"`
+> `readonly` `static` **ERR\_BAD\_REQUEST**: `"ERR_BAD_REQUEST"` = `'ERR_BAD_REQUEST'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:448
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:525
 
 ***
 
 ### ERR\_BAD\_RESPONSE
 
-> `readonly` `static` **ERR\_BAD\_RESPONSE**: `"ERR_BAD_RESPONSE"` = `"ERR_BAD_RESPONSE"`
+> `readonly` `static` **ERR\_BAD\_RESPONSE**: `"ERR_BAD_RESPONSE"` = `'ERR_BAD_RESPONSE'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:447
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:524
 
 ***
 
 ### ERR\_CANCELED
 
-> `readonly` `static` **ERR\_CANCELED**: `"ERR_CANCELED"` = `"ERR_CANCELED"`
+> `readonly` `static` **ERR\_CANCELED**: `"ERR_CANCELED"` = `'ERR_CANCELED'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:451
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:528
 
 ***
 
 ### ERR\_DEPRECATED
 
-> `readonly` `static` **ERR\_DEPRECATED**: `"ERR_DEPRECATED"` = `"ERR_DEPRECATED"`
+> `readonly` `static` **ERR\_DEPRECATED**: `"ERR_DEPRECATED"` = `'ERR_DEPRECATED'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:446
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:523
+
+***
+
+### ERR\_FORM\_DATA\_DEPTH\_EXCEEDED
+
+> `readonly` `static` **ERR\_FORM\_DATA\_DEPTH\_EXCEEDED**: `"ERR_FORM_DATA_DEPTH_EXCEEDED"` = `'ERR_FORM_DATA_DEPTH_EXCEEDED'`
+
+#### Defined in
+
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:529
 
 ***
 
 ### ERR\_FR\_TOO\_MANY\_REDIRECTS
 
-> `readonly` `static` **ERR\_FR\_TOO\_MANY\_REDIRECTS**: `"ERR_FR_TOO_MANY_REDIRECTS"` = `"ERR_FR_TOO_MANY_REDIRECTS"`
+> `readonly` `static` **ERR\_FR\_TOO\_MANY\_REDIRECTS**: `"ERR_FR_TOO_MANY_REDIRECTS"` = `'ERR_FR_TOO_MANY_REDIRECTS'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:442
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:519
 
 ***
 
 ### ERR\_INVALID\_URL
 
-> `readonly` `static` **ERR\_INVALID\_URL**: `"ERR_INVALID_URL"` = `"ERR_INVALID_URL"`
+> `readonly` `static` **ERR\_INVALID\_URL**: `"ERR_INVALID_URL"` = `'ERR_INVALID_URL'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:450
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:527
 
 ***
 
 ### ERR\_NETWORK
 
-> `readonly` `static` **ERR\_NETWORK**: `"ERR_NETWORK"` = `"ERR_NETWORK"`
+> `readonly` `static` **ERR\_NETWORK**: `"ERR_NETWORK"` = `'ERR_NETWORK'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:445
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:522
 
 ***
 
 ### ERR\_NOT\_SUPPORT
 
-> `readonly` `static` **ERR\_NOT\_SUPPORT**: `"ERR_NOT_SUPPORT"` = `"ERR_NOT_SUPPORT"`
+> `readonly` `static` **ERR\_NOT\_SUPPORT**: `"ERR_NOT_SUPPORT"` = `'ERR_NOT_SUPPORT'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:449
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:526
 
 ***
 
 ### ETIMEDOUT
 
-> `readonly` `static` **ETIMEDOUT**: `"ETIMEDOUT"` = `"ETIMEDOUT"`
+> `readonly` `static` **ETIMEDOUT**: `"ETIMEDOUT"` = `'ETIMEDOUT'`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:453
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:532
 
 ***
 
@@ -318,7 +338,7 @@ Optional override for formatting stack traces
 
 • **err**: [`Error`](../interfaces/Error.md)
 
-• **stackTraces**: [`CallSite`](../interfaces/CallSite.md)[]
+• **stackTraces**: `CallSite`[]
 
 #### Returns
 
@@ -334,7 +354,7 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Defined in
 
-node\_modules/@types/node/globals.d.ts:143
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:143
 
 ***
 
@@ -348,33 +368,59 @@ node\_modules/@types/node/globals.d.ts:143
 
 #### Defined in
 
-node\_modules/@types/node/globals.d.ts:145
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:145
 
 ## Methods
 
 ### captureStackTrace()
 
+#### captureStackTrace(targetObject, constructorOpt)
+
 > `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
 
 Create .stack property on a target object
 
-#### Parameters
+##### Parameters
 
 • **targetObject**: `object`
 
 • **constructorOpt?**: `Function`
 
-#### Returns
+##### Returns
 
 `void`
 
-#### Inherited from
+##### Inherited from
 
 `Error.captureStackTrace`
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/globals.d.ts:136
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:136
+
+#### captureStackTrace(targetObject, constructorOpt)
+
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+
+Create .stack property on a target object
+
+##### Parameters
+
+• **targetObject**: `object`
+
+• **constructorOpt?**: `Function`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Error.captureStackTrace`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
 
 ***
 
@@ -408,4 +454,4 @@ node\_modules/@types/node/globals.d.ts:136
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:434
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:511

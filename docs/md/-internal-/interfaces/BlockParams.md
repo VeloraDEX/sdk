@@ -20,7 +20,7 @@ The protocol-defined base fee per gas in an [[link-eip-1559]]
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:81
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:81
 
 ***
 
@@ -33,7 +33,7 @@ The total amount of BLOb gas consumed by transactions within
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:58
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:58
 
 ***
 
@@ -46,7 +46,7 @@ For proof-of-work networks, the difficulty target is used to
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:45
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:45
 
 ***
 
@@ -59,7 +59,7 @@ The running total of BLOb gas consumed in excess of the target
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:63
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:63
 
 ***
 
@@ -71,7 +71,7 @@ Additional data the miner choose to include.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:76
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:76
 
 ***
 
@@ -83,7 +83,7 @@ The maximum amount of gas a block can consume.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:49
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:49
 
 ***
 
@@ -95,7 +95,7 @@ The amount of gas a block consumed.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:53
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:53
 
 ***
 
@@ -107,7 +107,7 @@ The block hash.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:16
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:16
 
 ***
 
@@ -119,7 +119,7 @@ The miner (or author) of a block.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:67
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:67
 
 ***
 
@@ -132,7 +132,7 @@ A random sequence provided during the mining process for
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:40
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:40
 
 ***
 
@@ -144,7 +144,7 @@ The block number.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:20
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:20
 
 ***
 
@@ -157,7 +157,7 @@ The hash tree root of the parent beacon block for the given
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:35
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:35
 
 ***
 
@@ -170,7 +170,7 @@ The hash of the previous block in the blockchain. The genesis block
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:30
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:30
 
 ***
 
@@ -183,7 +183,7 @@ The latest RANDAO mix of the post beacon state of
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:72
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:72
 
 ***
 
@@ -195,7 +195,7 @@ The hash of the transaction receipts trie.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:90
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:90
 
 ***
 
@@ -208,7 +208,7 @@ The root hash for the global state after applying changes
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:86
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:86
 
 ***
 
@@ -221,7 +221,7 @@ The timestamp for this block, which is the number of seconds
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:25
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:25
 
 ***
 
@@ -233,4 +233,4 @@ The list of transactions in the block.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:94
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:94

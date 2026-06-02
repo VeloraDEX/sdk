@@ -32,7 +32,7 @@ Describes a user-defined [Iterator](Iterator.md) that is also iterable.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:56
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:56
 
 ***
 
@@ -54,7 +54,7 @@ node\_modules/typescript/lib/lib.es2015.iterable.d.ts:56
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
 
 ***
 
@@ -76,7 +76,7 @@ node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
 
 ***
 
@@ -98,4 +98,4 @@ node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:45
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:45

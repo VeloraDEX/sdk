@@ -27,7 +27,7 @@ Currently supported:
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:72
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:72
 
 ***
 
@@ -41,4 +41,4 @@ Default: Hardfork.London
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:63
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:63

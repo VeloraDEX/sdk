@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/nftOrders/helpers/types.ts:6](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L6)
+[src/methods/nftOrders/helpers/types.ts:6](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L6)

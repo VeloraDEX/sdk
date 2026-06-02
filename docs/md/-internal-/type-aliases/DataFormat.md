@@ -16,12 +16,12 @@ strings.
 
 ### bytes
 
-> `readonly` **bytes**: [`FMT_BYTES`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_BYTES.md)
+> `readonly` **bytes**: [`FMT_BYTES`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_BYTES.md)
 
 ### number
 
-> `readonly` **number**: [`FMT_NUMBER`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_NUMBER.md)
+> `readonly` **number**: [`FMT_NUMBER`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_NUMBER.md)
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:27
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:27

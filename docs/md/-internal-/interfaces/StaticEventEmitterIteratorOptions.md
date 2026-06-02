@@ -20,7 +20,7 @@ Names of events that will end the iteration.
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:89
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:88
 
 ***
 
@@ -39,7 +39,7 @@ Number.MAX_SAFE_INTEGER
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:95
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:94
 
 ***
 
@@ -58,7 +58,7 @@ Supported only on emitters implementing `pause()` and `resume()` methods.
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:101
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:100
 
 ***
 
@@ -74,4 +74,4 @@ Can be used to cancel awaiting events.
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:83
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:82

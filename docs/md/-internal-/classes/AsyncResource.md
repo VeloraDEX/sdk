@@ -62,7 +62,7 @@ async_hook.executionAsyncId() is used.
 
 The type of async event.
 
-• **triggerAsyncId?**: `number` \| [`AsyncResourceOptions`](../interfaces/AsyncResourceOptions.md)
+• **triggerAsyncId?**: `number` \| `AsyncResourceOptions`
 
 The ID of the execution context that created
   this async event (default: `executionAsyncId()`), or an
@@ -74,7 +74,7 @@ The ID of the execution context that created
 
 #### Defined in
 
-node\_modules/@types/node/async\_hooks.d.ts:273
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/async\_hooks.d.ts:273
 
 ## Methods
 
@@ -90,7 +90,7 @@ The unique `asyncId` assigned to the resource.
 
 #### Defined in
 
-node\_modules/@types/node/async\_hooks.d.ts:317
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/async\_hooks.d.ts:317
 
 ***
 
@@ -120,7 +120,7 @@ v14.8.0, v12.19.0
 
 #### Defined in
 
-node\_modules/@types/node/async\_hooks.d.ts:290
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/async\_hooks.d.ts:290
 
 ***
 
@@ -141,7 +141,7 @@ A reference to `asyncResource`.
 
 #### Defined in
 
-node\_modules/@types/node/async\_hooks.d.ts:313
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/async\_hooks.d.ts:313
 
 ***
 
@@ -184,7 +184,7 @@ v9.6.0
 
 #### Defined in
 
-node\_modules/@types/node/async\_hooks.d.ts:301
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/async\_hooks.d.ts:301
 
 ***
 
@@ -200,7 +200,7 @@ The same `triggerAsyncId` that is passed to the `AsyncResource` constructor.
 
 #### Defined in
 
-node\_modules/@types/node/async\_hooks.d.ts:321
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/async\_hooks.d.ts:321
 
 ***
 
@@ -238,4 +238,4 @@ v14.8.0, v12.19.0
 
 #### Defined in
 
-node\_modules/@types/node/async\_hooks.d.ts:280
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/async\_hooks.d.ts:280

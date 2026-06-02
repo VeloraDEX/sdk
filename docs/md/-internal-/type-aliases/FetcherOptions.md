@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/sdk/simple.ts:193](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/simple.ts#L193)
+[src/sdk/simple.ts:193](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L193)

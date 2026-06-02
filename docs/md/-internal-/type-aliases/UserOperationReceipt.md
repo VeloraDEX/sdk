@@ -90,4 +90,4 @@ https://eips.ethereum.org/EIPS/eip-4337#-eth_getuseroperationreceipt
 
 ## Defined in
 
-node\_modules/viem/\_types/account-abstraction/types/userOperation.d.ts:150
+node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/account-abstraction/types/userOperation.d.ts:150

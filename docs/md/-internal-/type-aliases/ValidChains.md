@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:239
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:239

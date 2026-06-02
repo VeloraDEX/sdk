@@ -22,7 +22,7 @@
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:146
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:146
 
 ## Properties
 
@@ -35,7 +35,7 @@ The fragment of the Contract event. This will throw on ambiguous
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:155
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:155
 
 ***
 
@@ -47,7 +47,7 @@ The name of the Contract event.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:150
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:150
 
 ## Methods
 
@@ -68,4 +68,4 @@ Returns the fragment constrained by %%args%%. This can be used to
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:160
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:160

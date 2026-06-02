@@ -29,7 +29,7 @@ Creates a new **Network** for %%name%% and %%chainId%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:32
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:32
 
 ## Accessors
 
@@ -59,7 +59,7 @@ The network chain ID.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:48
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:48
 
 ***
 
@@ -92,7 +92,7 @@ The network common name.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:43
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:43
 
 ***
 
@@ -110,7 +110,7 @@ Returns the list of plugins currently attached to this Network.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:61
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:61
 
 ## Methods
 
@@ -131,7 +131,7 @@ Attach a new %%plugin%% to this Network. The network name
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:66
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:66
 
 ***
 
@@ -147,7 +147,7 @@ Create a copy of this Network.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:81
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:81
 
 ***
 
@@ -170,7 +170,7 @@ Compute the intrinsic gas required for a transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:88
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:88
 
 ***
 
@@ -196,7 +196,7 @@ Return the plugin, if any, matching %%name%% exactly. Plugins
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:72
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:72
 
 ***
 
@@ -221,7 +221,7 @@ Gets a list of all plugins that match %%name%%, with otr without
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:77
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:77
 
 ***
 
@@ -245,7 +245,7 @@ Returns true if %%other%% matches this network. Any chain ID
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:57
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:57
 
 ***
 
@@ -261,7 +261,7 @@ Returns a JSON-compatible representation of a Network.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:36
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:36
 
 ***
 
@@ -281,7 +281,7 @@ Returns a new Network for the %%network%% name or chainId.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:92
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:92
 
 ***
 
@@ -304,4 +304,4 @@ Register %%nameOrChainId%% with a function which returns
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/network.d.ts:97
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:97

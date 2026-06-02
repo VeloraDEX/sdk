@@ -26,7 +26,7 @@ A **Typed** that represents a UTF-8 sequence of bytes.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:90
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:90
 
 ***
 
@@ -42,7 +42,7 @@ The type, as a Solidity-compatible type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:82
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:82
 
 ***
 
@@ -58,7 +58,7 @@ The value.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:68
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:68
 
 ## Accessors
 
@@ -82,7 +82,7 @@ Returns the length of the array type or ``-1`` if it is dynamic.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:132
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:132
 
 ***
 
@@ -104,7 +104,7 @@ Returns the tuple name, if this is a tuple. Throws otherwise.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:126
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:126
 
 ## Methods
 
@@ -124,7 +124,7 @@ The default value for the string type is the empty string (i.e. ``""``).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:72
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:72
 
 ***
 
@@ -144,7 +144,7 @@ Format the type as a Human-Readable type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:98
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:98
 
 ***
 
@@ -164,7 +164,7 @@ Returns ``true`` and provides a type guard is this is a [[TypedBigInt]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:114
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:114
 
 ***
 
@@ -184,7 +184,7 @@ Returns ``true`` and provides a type guard is this is a [[TypedData]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:118
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:118
 
 ***
 
@@ -204,7 +204,7 @@ Returns ``true`` and provides a type guard is this is a [[TypedString]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:122
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:122
 
 ***
 
@@ -224,7 +224,7 @@ The maximum value for numeric types.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:110
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:110
 
 ***
 
@@ -244,4 +244,4 @@ The minimum value for numeric types.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:106
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:106

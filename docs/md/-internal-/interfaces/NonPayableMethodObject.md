@@ -20,7 +20,7 @@
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:24
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:24
 
 ## Methods
 
@@ -74,7 +74,7 @@ console.log(result);
 
 #### Parameters
 
-• **tx?**: [`NonPayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+• **tx?**: [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
 
 The options used for calling.
 
@@ -90,19 +90,19 @@ If you pass this parameter it will not use the default block set with contract.d
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:71
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:71
 
 ***
 
 ### createAccessList()
 
-> **createAccessList**(`tx`?, `block`?): `Promise`\<[`AccessListResult`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AccessListResult.md)\>
+> **createAccessList**(`tx`?, `block`?): `Promise`\<[`AccessListResult`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AccessListResult.md)\>
 
 This method generates an access list for a transaction. You must specify a `from` address and `gas` if it’s not specified in options.
 
 #### Parameters
 
-• **tx?**: [`NonPayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+• **tx?**: [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
 
 • **block?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
@@ -110,7 +110,7 @@ If you pass this parameter it will not use the default block set with contract.d
 
 #### Returns
 
-`Promise`\<[`AccessListResult`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AccessListResult.md)\>
+`Promise`\<[`AccessListResult`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AccessListResult.md)\>
 
 The returned data of the createAccessList,  e.g. The generated access list for transaction.
 
@@ -133,7 +133,7 @@ The returned data of the createAccessList,  e.g. The generated access list for t
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:199
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:199
 
 ***
 
@@ -161,7 +161,7 @@ The data to decode.
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:174
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:174
 
 ***
 
@@ -184,7 +184,7 @@ working with offline wallets and cold storage and creating transaction payload f
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:167
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:167
 
 ***
 
@@ -209,7 +209,7 @@ if(gasAmount == 5000000) {
 
 #### Parameters
 
-• **options?**: [`NonPayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+• **options?**: [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
 
 The options used for calling
 
@@ -225,27 +225,27 @@ The data format you want the output in.
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:156
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:156
 
 ***
 
 ### populateTransaction()
 
-> **populateTransaction**(`tx`?, `contractOptions`?): [`TransactionCall`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
+> **populateTransaction**(`tx`?, `contractOptions`?): [`TransactionCall`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
 
 #### Parameters
 
-• **tx?**: [`PayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md) \| [`NonPayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+• **tx?**: [`PayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md) \| [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
 
-• **contractOptions?**: [`ContractOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/ContractOptions.md)
+• **contractOptions?**: [`ContractOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/ContractOptions.md)
 
 #### Returns
 
-[`TransactionCall`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
+[`TransactionCall`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:139
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:139
 
 ***
 
@@ -316,7 +316,7 @@ sendObj.on('error', function(error, receipt) { // If the transaction was rejecte
 
 #### Parameters
 
-• **tx?**: [`NonPayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+• **tx?**: [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
 
 The options used for sending.
 
@@ -392,4 +392,4 @@ The options used for sending.
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:138
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:138

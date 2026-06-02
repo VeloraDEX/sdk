@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/types.ts:168](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L168)
+[src/types.ts:168](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L168)

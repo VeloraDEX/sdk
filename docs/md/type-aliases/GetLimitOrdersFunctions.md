@@ -51,4 +51,4 @@ Limit Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/limitOrders/getOrders.ts:56](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/getOrders.ts#L56)
+[src/methods/limitOrders/getOrders.ts:56](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/getOrders.ts#L56)

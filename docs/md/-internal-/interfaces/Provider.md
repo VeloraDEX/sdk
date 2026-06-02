@@ -47,7 +47,7 @@ The provider iteself.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1083
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1083
 
 ***
 
@@ -71,7 +71,7 @@ Required for state mutating calls
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:34
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:34
 
 ## Methods
 
@@ -97,7 +97,7 @@ Alias for [[on]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:46
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:46
 
 ***
 
@@ -119,7 +119,7 @@ Broadcasts the %%signedTx%% to the network, adding it to the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1149
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1149
 
 ***
 
@@ -143,7 +143,7 @@ Required for pure, view or static calls to contracts.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1143
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1143
 
 ***
 
@@ -160,7 +160,7 @@ Shutdown any resources this provider is using. No additional
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1088
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1088
 
 ***
 
@@ -186,7 +186,7 @@ Triggers each listener for %%event%% with the %%args%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:25
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:25
 
 ***
 
@@ -210,7 +210,7 @@ Required to estimate gas.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1138
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1138
 
 ***
 
@@ -239,7 +239,7 @@ On nodes without archive access enabled, the %%blockTag%% may be
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1109
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1109
 
 ***
 
@@ -266,7 +266,7 @@ Resolves to the block for %%blockHashOrBlockTag%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1158
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1158
 
 ***
 
@@ -282,7 +282,7 @@ Get the current block number.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1092
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1092
 
 ***
 
@@ -309,7 +309,7 @@ On nodes without archive access enabled, the %%blockTag%% may be
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1127
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1127
 
 ***
 
@@ -325,7 +325,7 @@ Get the best guess at the recommended [[FeeData]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1100
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1100
 
 ***
 
@@ -345,7 +345,7 @@ Resolves to the list of Logs that match %%filter%%
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1184
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1184
 
 ***
 
@@ -361,7 +361,7 @@ Get the connected [[Network]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1096
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1096
 
 ***
 
@@ -390,7 +390,7 @@ On nodes without archive access enabled, the %%blockTag%% may be
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1134
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1134
 
 ***
 
@@ -413,7 +413,7 @@ Resolves to the transaction for %%hash%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1165
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1165
 
 ***
 
@@ -444,7 +444,7 @@ On nodes without archive access enabled, the %%blockTag%% may be
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1120
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1120
 
 ***
 
@@ -468,7 +468,7 @@ Resolves to the transaction receipt for %%hash%%, if mined.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1173
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1173
 
 ***
 
@@ -491,7 +491,7 @@ Resolves to the result returned by the executions of %%hash%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1180
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1180
 
 ***
 
@@ -515,7 +515,7 @@ Resolves to the number of listeners for %%event%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:29
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:29
 
 ***
 
@@ -539,7 +539,7 @@ Resolves to the listeners for %%event%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:33
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:33
 
 ***
 
@@ -563,7 +563,7 @@ Resolves to the ENS name associated for the %%address%% or
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1197
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1197
 
 ***
 
@@ -590,7 +590,7 @@ Unregister the %%listener%% for %%event%%. If %%listener%%
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:38
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:38
 
 ***
 
@@ -617,7 +617,7 @@ Registers a %%listener%% that is called whenever the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:16
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:16
 
 ***
 
@@ -644,7 +644,7 @@ Registers a %%listener%% that is called the next time
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:21
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:21
 
 ***
 
@@ -668,7 +668,7 @@ Unregister all listeners for %%event%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:42
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:42
 
 ***
 
@@ -694,7 +694,7 @@ Alias for [[off]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:50
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:50
 
 ***
 
@@ -718,7 +718,7 @@ Required to support ENS names
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1189
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1189
 
 ***
 
@@ -741,7 +741,7 @@ Resolves to the block at %%blockTag%% once it has been mined.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1209
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1209
 
 ***
 
@@ -766,4 +766,4 @@ Waits until the transaction %%hash%% is mined and has %%confirms%%
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1202
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1202

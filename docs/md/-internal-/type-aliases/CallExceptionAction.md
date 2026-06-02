@@ -12,4 +12,4 @@ The action that resulted in the call exception.
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/utils/errors.d.ts:286
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:286

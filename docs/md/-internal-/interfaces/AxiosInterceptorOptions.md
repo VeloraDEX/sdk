@@ -8,21 +8,13 @@
 
 ## Properties
 
-### runWhen()?
+### runWhen?
 
-> `optional` **runWhen**: (`config`) => `boolean`
-
-#### Parameters
-
-• **config**: [`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)\<`any`\>
-
-#### Returns
-
-`boolean`
+> `optional` **runWhen**: `null` \| (`config`) => `boolean`
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:492
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:571
 
 ***
 
@@ -32,4 +24,4 @@ node\_modules/axios/index.d.ts:492
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:491
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:570

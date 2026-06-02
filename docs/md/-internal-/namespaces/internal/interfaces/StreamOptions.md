@@ -27,7 +27,7 @@
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:960
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:960
 
 ***
 
@@ -37,7 +37,7 @@ node\_modules/@types/node/stream.d.ts:960
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:955
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:955
 
 ***
 
@@ -47,7 +47,7 @@ node\_modules/@types/node/stream.d.ts:955
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:956
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:956
 
 ***
 
@@ -57,7 +57,7 @@ node\_modules/@types/node/stream.d.ts:956
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:957
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:957
 
 ***
 
@@ -73,7 +73,7 @@ When provided the corresponding `AbortController` can be used to cancel an async
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:561
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:508
 
 ## Methods
 
@@ -93,7 +93,7 @@ node\_modules/@types/node/events.d.ts:561
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:958
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:958
 
 ***
 
@@ -115,4 +115,4 @@ node\_modules/@types/node/stream.d.ts:958
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:959
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:959

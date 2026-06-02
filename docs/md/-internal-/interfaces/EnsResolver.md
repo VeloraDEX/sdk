@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:23
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:23
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:23
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:22
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:22
 
 ## Methods
 
@@ -42,7 +42,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:22
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:24
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:24
 
 ***
 
@@ -56,7 +56,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:24
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:25
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:25
 
 ***
 
@@ -74,4 +74,4 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:25
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:26
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:26

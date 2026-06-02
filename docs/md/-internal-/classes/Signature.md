@@ -28,7 +28,7 @@ The [[link-eip-2098]] compact representation.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:83
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:83
 
 ***
 
@@ -47,7 +47,7 @@ The chain ID for EIP-155 legacy transactions. For non-legacy
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:68
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:68
 
 ***
 
@@ -66,7 +66,7 @@ The EIP-155 ``v`` for legacy transactions. For non-legacy
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:63
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:63
 
 ***
 
@@ -99,7 +99,7 @@ The ``r`` value for a signautre.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:40
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:40
 
 ***
 
@@ -129,7 +129,7 @@ The ``s`` value for a signature.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:45
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:45
 
 ***
 
@@ -147,7 +147,7 @@ The serialized representation.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:87
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:87
 
 ***
 
@@ -184,7 +184,7 @@ The ``v`` value for a signature.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:57
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:57
 
 ***
 
@@ -204,7 +204,7 @@ The ``yParity`` for the signature.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:74
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:74
 
 ***
 
@@ -223,7 +223,7 @@ The [[link-eip-2098]] compact representation of the ``yParity``
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:79
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:79
 
 ## Methods
 
@@ -239,7 +239,7 @@ Returns a new identical [[Signature]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:95
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:95
 
 ***
 
@@ -255,7 +255,7 @@ Returns a representation that is compatible with ``JSON.stringify``.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:99
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:99
 
 ***
 
@@ -280,7 +280,7 @@ Creates a new [[Signature]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:156
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:156
 
 ***
 
@@ -307,7 +307,7 @@ Compute the chain ID from the ``v`` in a legacy EIP-155 transactions.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:110
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:110
 
 ***
 
@@ -339,7 +339,7 @@ Compute the ``v`` for a chain ID for a legacy EIP-155 transactions.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:125
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:125
 
 ***
 
@@ -377,4 +377,4 @@ Compute the normalized legacy transaction ``v`` from a ``yParirty``,
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:147
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:147

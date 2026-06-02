@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[src/methods/swap/spender.ts:26](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/spender.ts#L26)
+[src/methods/swap/spender.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L26)
 
 ***
 
@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[src/methods/swap/spender.ts:24](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/spender.ts#L24)
+[src/methods/swap/spender.ts:24](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L24)
 
 ***
 
@@ -38,7 +38,7 @@
 
 #### Defined in
 
-[src/methods/swap/spender.ts:27](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/spender.ts#L27)
+[src/methods/swap/spender.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L27)
 
 ***
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[src/methods/swap/spender.ts:30](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/spender.ts#L30)
+[src/methods/swap/spender.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L30)
 
 ***
 
@@ -58,4 +58,4 @@
 
 #### Defined in
 
-[src/methods/swap/spender.ts:25](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/spender.ts#L25)
+[src/methods/swap/spender.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L25)

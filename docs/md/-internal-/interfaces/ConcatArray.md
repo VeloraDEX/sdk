@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1316
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1316
 
 ## Methods
 
@@ -40,7 +40,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1316
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1318
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1318
 
 ***
 
@@ -60,4 +60,4 @@ node\_modules/typescript/lib/lib.es5.d.ts:1318
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1319
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1319

@@ -37,7 +37,7 @@ Required for pure, view or static calls to contracts.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:26
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:26
 
 ***
 
@@ -57,7 +57,7 @@ Required to estimate gas.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:22
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:22
 
 ***
 
@@ -72,7 +72,7 @@ The provider used for necessary state querying operations.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:18
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:18
 
 ***
 
@@ -92,7 +92,7 @@ Required to support ENS names
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:30
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:30
 
 ***
 
@@ -112,4 +112,4 @@ Required for state mutating calls
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:34
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:34

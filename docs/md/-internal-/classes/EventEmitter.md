@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / EventEmitter
 
-# Class: EventEmitter\<Events\>
+# Class: EventEmitter\<T\>
 
 The `EventEmitter` class is defined and exposed by the `node:events` module:
 
@@ -23,22 +23,22 @@ v0.1.26
 
 ## Extends
 
-- [`EventEmitter`](../interfaces/EventEmitter.md)\<`Events`\>
+- `EventEmitter`\<`T`\>
 
 ## Extended by
 
-- [`EventEmitterAsyncResource`](../namespaces/EventEmitter/classes/EventEmitterAsyncResource.md)
 - [`internal`](internal.md)
+- [`EventEmitterAsyncResource`](../namespaces/EventEmitter/classes/EventEmitterAsyncResource.md)
 
 ## Type Parameters
 
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\> = `object`
+• **T** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`T`\> = [`DefaultEventMap`](../type-aliases/DefaultEventMap.md)
 
 ## Constructors
 
 ### new EventEmitter()
 
-> **new EventEmitter**\<`Events`\>(`options`?): [`EventEmitter`](EventEmitter.md)\<`Events`\>
+> **new EventEmitter**\<`T`\>(`options`?): [`EventEmitter`](EventEmitter.md)\<`T`\>
 
 #### Parameters
 
@@ -46,15 +46,15 @@ v0.1.26
 
 #### Returns
 
-[`EventEmitter`](EventEmitter.md)\<`Events`\>
+[`EventEmitter`](EventEmitter.md)\<`T`\>
 
 #### Inherited from
 
-`NodeJS.EventEmitter<Events>.constructor`
+`NodeJS.EventEmitter<T>.constructor`
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:139
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:134
 
 ## Properties
 
@@ -72,7 +72,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:512
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:459
 
 ***
 
@@ -90,7 +90,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:505
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:452
 
 ***
 
@@ -140,7 +140,7 @@ v0.11.2
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:551
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:498
 
 ***
 
@@ -159,9 +159,39 @@ v13.6.0, v12.17.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:498
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:445
 
 ## Methods
+
+### \[captureRejectionSymbol\]()?
+
+> `optional` **\[captureRejectionSymbol\]**\<`K`\>(`error`, `event`, ...`args`): `void`
+
+#### Type Parameters
+
+• **K**
+
+#### Parameters
+
+• **error**: [`Error`](../interfaces/Error.md)
+
+• **event**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+• ...**args**: [`Args`](../type-aliases/Args.md)\<`K`, `T`\>
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+`NodeJS.EventEmitter.[captureRejectionSymbol]`
+
+#### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:136
+
+***
 
 ### \[captureRejectionSymbol\]()?
 
@@ -171,7 +201,7 @@ node\_modules/@types/node/events.d.ts:498
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+• **EventName** *extends* `string` \| `symbol`
 
 ##### Parameters
 
@@ -179,7 +209,7 @@ node\_modules/@types/node/events.d.ts:498
 
 • **event**: `EventName`
 
-• ...**args**: [`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>
+• ...**args**: [`Args`](../type-aliases/Args.md)\<`object`, `EventName`\>
 
 ##### Returns
 
@@ -187,23 +217,27 @@ node\_modules/@types/node/events.d.ts:498
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`[captureRejectionSymbol]`](../interfaces/EventEmitter.md#%5Bcapturerejectionsymbol%5D)
+`NodeJS.EventEmitter.[captureRejectionSymbol]`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:146
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:650
 
 #### \[captureRejectionSymbol\](error, event, args)
 
-> `optional` **\[captureRejectionSymbol\]**(`error`, `event`, ...`args`): `void`
+> `optional` **\[captureRejectionSymbol\]**\<`EventName`\>(`error`, `event`, ...`args`): `void`
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `symbol`
 
 ##### Parameters
 
 • **error**: [`Error`](../interfaces/Error.md)
 
-• **event**: `string` \| `symbol`
+• **event**: `EventName`
 
-• ...**args**: `any`[]
+• ...**args**: [`Args`](../type-aliases/Args.md)\<`object`, `EventName`\>
 
 ##### Returns
 
@@ -211,15 +245,47 @@ node\_modules/@types/node/events.d.ts:146
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`[captureRejectionSymbol]`](../interfaces/EventEmitter.md#%5Bcapturerejectionsymbol%5D)
+`NodeJS.EventEmitter.[captureRejectionSymbol]`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:151
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:655
 
 ***
 
 ### addListener()
+
+#### addListener(eventName, listener)
+
+> **addListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Alias for `emitter.on(eventName, listener)`.
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+• **listener**: [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, (...`args`) => `void`\>
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.1.26
+
+##### Inherited from
+
+`NodeJS.EventEmitter.addListener`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:597
 
 #### addListener(eventName, listener)
 
@@ -247,11 +313,11 @@ v0.1.26
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`addListener`](../interfaces/EventEmitter.md#addlistener)
+`NodeJS.EventEmitter.addListener`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:664
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:664
 
 #### addListener(eventName, listener)
 
@@ -273,15 +339,83 @@ node\_modules/@types/node/events.d.ts:664
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`addListener`](../interfaces/EventEmitter.md#addlistener)
+`NodeJS.EventEmitter.addListener`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:668
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:668
 
 ***
 
 ### emit()
+
+#### emit(eventName, args)
+
+> **emit**\<`K`\>(`eventName`, ...`args`): `boolean`
+
+Synchronously calls each of the listeners registered for the event named `eventName`, in the order they were registered, passing the supplied arguments
+to each.
+
+Returns `true` if the event had listeners, `false` otherwise.
+
+```js
+import { EventEmitter } from 'node:events';
+const myEmitter = new EventEmitter();
+
+// First listener
+myEmitter.on('event', function firstListener() {
+  console.log('Helloooo! first listener');
+});
+// Second listener
+myEmitter.on('event', function secondListener(arg1, arg2) {
+  console.log(`event with parameters ${arg1}, ${arg2} in second listener`);
+});
+// Third listener
+myEmitter.on('event', function thirdListener(...args) {
+  const parameters = args.join(', ');
+  console.log(`event with parameters ${parameters} in third listener`);
+});
+
+console.log(myEmitter.listeners('event'));
+
+myEmitter.emit('event', 1, 2, 3, 4, 5);
+
+// Prints:
+// [
+//   [Function: firstListener],
+//   [Function: secondListener],
+//   [Function: thirdListener]
+// ]
+// Helloooo! first listener
+// event with parameters 1, 2 in second listener
+// event with parameters 1, 2, 3, 4, 5 in third listener
+```
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+• ...**args**: [`Args`](../type-aliases/Args.md)\<`K`, `T`\>
+
+##### Returns
+
+`boolean`
+
+##### Since
+
+v0.1.26
+
+##### Inherited from
+
+`NodeJS.EventEmitter.emit`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:859
 
 #### emit(eventName, args)
 
@@ -345,11 +479,11 @@ v0.1.26
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`emit`](../interfaces/EventEmitter.md#emit)
+`NodeJS.EventEmitter.emit`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:974
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:974
 
 #### emit(eventName, args)
 
@@ -371,15 +505,54 @@ node\_modules/@types/node/events.d.ts:974
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`emit`](../interfaces/EventEmitter.md#emit)
+`NodeJS.EventEmitter.emit`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:978
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:978
 
 ***
 
 ### eventNames()
+
+#### eventNames()
+
+> **eventNames**(): `string` \| `symbol` & [`Key2`](../type-aliases/Key2.md)\<`unknown`, `T`\>[]
+
+Returns an array listing the events for which the emitter has registered
+listeners. The values in the array are strings or `Symbol`s.
+
+```js
+import { EventEmitter } from 'node:events';
+
+const myEE = new EventEmitter();
+myEE.on('foo', () => {});
+myEE.on('bar', () => {});
+
+const sym = Symbol('symbol');
+myEE.on(sym, () => {});
+
+console.log(myEE.eventNames());
+// Prints: [ 'foo', 'bar', Symbol(symbol) ]
+```
+
+##### Returns
+
+`string` \| `symbol` & [`Key2`](../type-aliases/Key2.md)\<`unknown`, `T`\>[]
+
+##### Since
+
+v6.0.0
+
+##### Inherited from
+
+`NodeJS.EventEmitter.eventNames`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:922
+
+#### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[] & [`EventNames`](../type-aliases/EventNames.md)\<`Events`\>[]
 
@@ -400,50 +573,113 @@ console.log(myEE.eventNames());
 // Prints: [ 'foo', 'bar', Symbol(symbol) ]
 ```
 
-#### Returns
+##### Returns
 
 (`string` \| `symbol`)[] & [`EventNames`](../type-aliases/EventNames.md)\<`Events`\>[]
 
-#### Since
+##### Since
 
 v6.0.0
 
-#### Inherited from
+##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`eventNames`](../interfaces/EventEmitter.md#eventnames)
+`NodeJS.EventEmitter.eventNames`
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/events.d.ts:1065
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1065
 
 ***
 
 ### getMaxListeners()
+
+#### getMaxListeners()
 
 > **getMaxListeners**(): `number`
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](EventEmitter.md#defaultmaxlisteners).
 
-#### Returns
+##### Returns
 
 `number`
 
-#### Since
+##### Since
 
 v1.0.0
 
-#### Inherited from
+##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`getMaxListeners`](../interfaces/EventEmitter.md#getmaxlisteners)
+`NodeJS.EventEmitter.getMaxListeners`
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/events.d.ts:879
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:774
+
+#### getMaxListeners()
+
+> **getMaxListeners**(): `number`
+
+Returns the current max listener value for the `EventEmitter` which is either
+set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](EventEmitter.md#defaultmaxlisteners).
+
+##### Returns
+
+`number`
+
+##### Since
+
+v1.0.0
+
+##### Inherited from
+
+`NodeJS.EventEmitter.getMaxListeners`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
 
 ***
 
 ### listenerCount()
+
+#### listenerCount(eventName, listener)
+
+> **listenerCount**\<`K`\>(`eventName`, `listener`?): `number`
+
+Returns the number of listeners listening for the event named `eventName`.
+If `listener` is provided, it will return how many times the listener is found
+in the list of the listeners of the event.
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+The name of the event being listened for
+
+• **listener?**: [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, `Function`\>
+
+The event handler function
+
+##### Returns
+
+`number`
+
+##### Since
+
+v3.2.0
+
+##### Inherited from
+
+`NodeJS.EventEmitter.listenerCount`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:868
 
 #### listenerCount(eventName, listener)
 
@@ -477,11 +713,11 @@ v3.2.0
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`listenerCount`](../interfaces/EventEmitter.md#listenercount)
+`NodeJS.EventEmitter.listenerCount`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:990
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
 
 #### listenerCount(eventName, listener)
 
@@ -503,15 +739,53 @@ node\_modules/@types/node/events.d.ts:990
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`listenerCount`](../interfaces/EventEmitter.md#listenercount)
+`NodeJS.EventEmitter.listenerCount`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:994
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:994
 
 ***
 
 ### listeners()
+
+#### listeners(eventName)
+
+> **listeners**\<`K`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, `Function`\>[]
+
+Returns a copy of the array of listeners for the event named `eventName`.
+
+```js
+server.on('connection', (stream) => {
+  console.log('someone connected!');
+});
+console.log(util.inspect(server.listeners('connection')));
+// Prints: [ [Function] ]
+```
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+##### Returns
+
+[`Listener`](../type-aliases/Listener.md)\<`K`, `T`, `Function`\>[]
+
+##### Since
+
+v0.1.26
+
+##### Inherited from
+
+`NodeJS.EventEmitter.listeners`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:787
 
 #### listeners(eventName)
 
@@ -545,11 +819,11 @@ v0.1.26
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`listeners`](../interfaces/EventEmitter.md#listeners)
+`NodeJS.EventEmitter.listeners`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:892
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:892
 
 #### listeners(eventName)
 
@@ -569,15 +843,47 @@ node\_modules/@types/node/events.d.ts:892
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`listeners`](../interfaces/EventEmitter.md#listeners)
+`NodeJS.EventEmitter.listeners`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:895
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:895
 
 ***
 
 ### off()
+
+#### off(eventName, listener)
+
+> **off**\<`K`\>(`eventName`, `listener`): `this`
+
+Alias for `emitter.removeListener()`.
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+• **listener**: [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, (...`args`) => `void`\>
+
+##### Returns
+
+`this`
+
+##### Since
+
+v10.0.0
+
+##### Inherited from
+
+`NodeJS.EventEmitter.off`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:747
 
 #### off(eventName, listener)
 
@@ -605,11 +911,11 @@ v10.0.0
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`off`](../interfaces/EventEmitter.md#off)
+`NodeJS.EventEmitter.off`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:842
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
 
 #### off(eventName, listener)
 
@@ -631,15 +937,76 @@ node\_modules/@types/node/events.d.ts:842
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`off`](../interfaces/EventEmitter.md#off)
+`NodeJS.EventEmitter.off`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:846
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:846
 
 ***
 
 ### on()
+
+#### on(eventName, listener)
+
+> **on**\<`K`\>(`eventName`, `listener`): `this`
+
+Adds the `listener` function to the end of the listeners array for the event
+named `eventName`. No checks are made to see if the `listener` has already
+been added. Multiple calls passing the same combination of `eventName` and
+`listener` will result in the `listener` being added, and called, multiple times.
+
+```js
+server.on('connection', (stream) => {
+  console.log('someone connected!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+By default, event listeners are invoked in the order they are added. The `emitter.prependListener()` method can be used as an alternative to add the
+event listener to the beginning of the listeners array.
+
+```js
+import { EventEmitter } from 'node:events';
+const myEE = new EventEmitter();
+myEE.on('foo', () => console.log('a'));
+myEE.prependListener('foo', () => console.log('b'));
+myEE.emit('foo');
+// Prints:
+//   b
+//   a
+```
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+The name of the event.
+
+• **listener**: [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, (...`args`) => `void`\>
+
+The callback function
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.1.101
+
+##### Inherited from
+
+`NodeJS.EventEmitter.on`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:629
 
 #### on(eventName, listener)
 
@@ -696,11 +1063,11 @@ v0.1.101
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`on`](../interfaces/EventEmitter.md#on)
+`NodeJS.EventEmitter.on`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:703
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:703
 
 #### on(eventName, listener)
 
@@ -722,15 +1089,74 @@ node\_modules/@types/node/events.d.ts:703
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`on`](../interfaces/EventEmitter.md#on)
+`NodeJS.EventEmitter.on`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:707
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:707
 
 ***
 
 ### once()
+
+#### once(eventName, listener)
+
+> **once**\<`K`\>(`eventName`, `listener`): `this`
+
+Adds a **one-time** `listener` function for the event named `eventName`. The
+next time `eventName` is triggered, this listener is removed and then invoked.
+
+```js
+server.once('connection', (stream) => {
+  console.log('Ah, we have our first user!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+By default, event listeners are invoked in the order they are added. The `emitter.prependOnceListener()` method can be used as an alternative to add the
+event listener to the beginning of the listeners array.
+
+```js
+import { EventEmitter } from 'node:events';
+const myEE = new EventEmitter();
+myEE.once('foo', () => console.log('a'));
+myEE.prependOnceListener('foo', () => console.log('b'));
+myEE.emit('foo');
+// Prints:
+//   b
+//   a
+```
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+The name of the event.
+
+• **listener**: [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, (...`args`) => `void`\>
+
+The callback function
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.3.0
+
+##### Inherited from
+
+`NodeJS.EventEmitter.once`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:659
 
 #### once(eventName, listener)
 
@@ -785,11 +1211,11 @@ v0.3.0
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`once`](../interfaces/EventEmitter.md#once)
+`NodeJS.EventEmitter.once`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:740
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:740
 
 #### once(eventName, listener)
 
@@ -811,15 +1237,62 @@ node\_modules/@types/node/events.d.ts:740
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`once`](../interfaces/EventEmitter.md#once)
+`NodeJS.EventEmitter.once`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:744
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:744
 
 ***
 
 ### prependListener()
+
+#### prependListener(eventName, listener)
+
+> **prependListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Adds the `listener` function to the _beginning_ of the listeners array for the
+event named `eventName`. No checks are made to see if the `listener` has
+already been added. Multiple calls passing the same combination of `eventName`
+and `listener` will result in the `listener` being added, and called, multiple times.
+
+```js
+server.prependListener('connection', (stream) => {
+  console.log('someone connected!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+The name of the event.
+
+• **listener**: [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, (...`args`) => `void`\>
+
+The callback function
+
+##### Returns
+
+`this`
+
+##### Since
+
+v6.0.0
+
+##### Inherited from
+
+`NodeJS.EventEmitter.prependListener`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:886
 
 #### prependListener(eventName, listener)
 
@@ -862,11 +1335,11 @@ v6.0.0
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`prependListener`](../interfaces/EventEmitter.md#prependlistener)
+`NodeJS.EventEmitter.prependListener`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:1015
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1015
 
 #### prependListener(eventName, listener)
 
@@ -888,15 +1361,60 @@ node\_modules/@types/node/events.d.ts:1015
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`prependListener`](../interfaces/EventEmitter.md#prependlistener)
+`NodeJS.EventEmitter.prependListener`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:1019
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1019
 
 ***
 
 ### prependOnceListener()
+
+#### prependOnceListener(eventName, listener)
+
+> **prependOnceListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
+listener is removed, and then invoked.
+
+```js
+server.prependOnceListener('connection', (stream) => {
+  console.log('Ah, we have our first user!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+The name of the event.
+
+• **listener**: [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, (...`args`) => `void`\>
+
+The callback function
+
+##### Returns
+
+`this`
+
+##### Since
+
+v6.0.0
+
+##### Inherited from
+
+`NodeJS.EventEmitter.prependOnceListener`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:902
 
 #### prependOnceListener(eventName, listener)
 
@@ -937,11 +1455,11 @@ v6.0.0
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`prependOnceListener`](../interfaces/EventEmitter.md#prependoncelistener)
+`NodeJS.EventEmitter.prependOnceListener`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:1038
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1038
 
 #### prependOnceListener(eventName, listener)
 
@@ -963,15 +1481,71 @@ node\_modules/@types/node/events.d.ts:1038
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`prependOnceListener`](../interfaces/EventEmitter.md#prependoncelistener)
+`NodeJS.EventEmitter.prependOnceListener`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:1042
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1042
 
 ***
 
 ### rawListeners()
+
+#### rawListeners(eventName)
+
+> **rawListeners**\<`K`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, `Function`\>[]
+
+Returns a copy of the array of listeners for the event named `eventName`,
+including any wrappers (such as those created by `.once()`).
+
+```js
+import { EventEmitter } from 'node:events';
+const emitter = new EventEmitter();
+emitter.once('log', () => console.log('log once'));
+
+// Returns a new Array with a function `onceWrapper` which has a property
+// `listener` which contains the original listener bound above
+const listeners = emitter.rawListeners('log');
+const logFnWrapper = listeners[0];
+
+// Logs "log once" to the console and does not unbind the `once` event
+logFnWrapper.listener();
+
+// Logs "log once" to the console and removes the listener
+logFnWrapper();
+
+emitter.on('log', () => console.log('log persistently'));
+// Will return a new Array with a single function bound by `.on()` above
+const newListeners = emitter.rawListeners('log');
+
+// Logs "log persistently" twice
+newListeners[0]();
+emitter.emit('log');
+```
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+##### Returns
+
+[`Listener`](../type-aliases/Listener.md)\<`K`, `T`, `Function`\>[]
+
+##### Since
+
+v9.4.0
+
+##### Inherited from
+
+`NodeJS.EventEmitter.rawListeners`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:818
 
 #### rawListeners(eventName)
 
@@ -1023,11 +1597,11 @@ v9.4.0
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`rawListeners`](../interfaces/EventEmitter.md#rawlisteners)
+`NodeJS.EventEmitter.rawListeners`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:928
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:928
 
 #### rawListeners(eventName)
 
@@ -1047,15 +1621,47 @@ node\_modules/@types/node/events.d.ts:928
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`rawListeners`](../interfaces/EventEmitter.md#rawlisteners)
+`NodeJS.EventEmitter.rawListeners`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:931
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:931
 
 ***
 
 ### removeAllListeners()
+
+#### removeAllListeners(eventName)
+
+> **removeAllListeners**(`eventName`?): `this`
+
+Removes all listeners, or those of the specified `eventName`.
+
+It is bad practice to remove listeners added elsewhere in the code,
+particularly when the `EventEmitter` instance was created by some other
+component or module (e.g. sockets or file streams).
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+##### Parameters
+
+• **eventName?**: [`Key`](../type-aliases/Key.md)\<`unknown`, `T`\>
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.1.26
+
+##### Inherited from
+
+`NodeJS.EventEmitter.removeAllListeners`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:758
 
 #### removeAllListeners(eventName)
 
@@ -1087,11 +1693,11 @@ v0.1.26
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`removeAllListeners`](../interfaces/EventEmitter.md#removealllisteners)
+`NodeJS.EventEmitter.removeAllListeners`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:861
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
 
 #### removeAllListeners(eventName)
 
@@ -1111,15 +1717,125 @@ node\_modules/@types/node/events.d.ts:861
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`removeAllListeners`](../interfaces/EventEmitter.md#removealllisteners)
+`NodeJS.EventEmitter.removeAllListeners`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:862
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:862
 
 ***
 
 ### removeListener()
+
+#### removeListener(eventName, listener)
+
+> **removeListener**\<`K`\>(`eventName`, `listener`): `this`
+
+Removes the specified `listener` from the listener array for the event named `eventName`.
+
+```js
+const callback = (stream) => {
+  console.log('someone connected!');
+};
+server.on('connection', callback);
+// ...
+server.removeListener('connection', callback);
+```
+
+`removeListener()` will remove, at most, one instance of a listener from the
+listener array. If any single listener has been added multiple times to the
+listener array for the specified `eventName`, then `removeListener()` must be
+called multiple times to remove each instance.
+
+Once an event is emitted, all listeners attached to it at the
+time of emitting are called in order. This implies that any `removeListener()` or `removeAllListeners()` calls _after_ emitting and _before_ the last listener finishes execution
+will not remove them from`emit()` in progress. Subsequent events behave as expected.
+
+```js
+import { EventEmitter } from 'node:events';
+class MyEmitter extends EventEmitter {}
+const myEmitter = new MyEmitter();
+
+const callbackA = () => {
+  console.log('A');
+  myEmitter.removeListener('event', callbackB);
+};
+
+const callbackB = () => {
+  console.log('B');
+};
+
+myEmitter.on('event', callbackA);
+
+myEmitter.on('event', callbackB);
+
+// callbackA removes listener callbackB but it will still be called.
+// Internal listener array at time of emit [callbackA, callbackB]
+myEmitter.emit('event');
+// Prints:
+//   A
+//   B
+
+// callbackB is now removed.
+// Internal listener array [callbackA]
+myEmitter.emit('event');
+// Prints:
+//   A
+```
+
+Because listeners are managed using an internal array, calling this will
+change the position indices of any listener registered _after_ the listener
+being removed. This will not impact the order in which listeners are called,
+but it means that any copies of the listener array as returned by
+the `emitter.listeners()` method will need to be recreated.
+
+When a single function has been added as a handler multiple times for a single
+event (as in the example below), `removeListener()` will remove the most
+recently added instance. In the example the `once('ping')` listener is removed:
+
+```js
+import { EventEmitter } from 'node:events';
+const ee = new EventEmitter();
+
+function pong() {
+  console.log('pong');
+}
+
+ee.on('ping', pong);
+ee.once('ping', pong);
+ee.removeListener('ping', pong);
+
+ee.emit('ping');
+ee.emit('ping');
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+##### Type Parameters
+
+• **K**
+
+##### Parameters
+
+• **eventName**: [`Key`](../type-aliases/Key.md)\<`K`, `T`\>
+
+• **listener**: [`Listener`](../type-aliases/Listener.md)\<`K`, `T`, (...`args`) => `void`\>
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.1.26
+
+##### Inherited from
+
+`NodeJS.EventEmitter.removeListener`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:742
 
 #### removeListener(eventName, listener)
 
@@ -1225,11 +1941,11 @@ v0.1.26
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`removeListener`](../interfaces/EventEmitter.md#removelistener)
+`NodeJS.EventEmitter.removeListener`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:830
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:830
 
 #### removeListener(eventName, listener)
 
@@ -1251,15 +1967,17 @@ node\_modules/@types/node/events.d.ts:830
 
 ##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`removeListener`](../interfaces/EventEmitter.md#removelistener)
+`NodeJS.EventEmitter.removeListener`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:834
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:834
 
 ***
 
 ### setMaxListeners()
+
+#### setMaxListeners(n)
 
 > **setMaxListeners**(`n`): `this`
 
@@ -1270,31 +1988,62 @@ modified for this specific `EventEmitter` instance. The value can be set to `Inf
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
-#### Parameters
+##### Parameters
 
 • **n**: `number`
 
-#### Returns
+##### Returns
 
 `this`
 
-#### Since
+##### Since
 
 v0.3.5
 
-#### Inherited from
+##### Inherited from
 
-[`EventEmitter`](../interfaces/EventEmitter.md).[`setMaxListeners`](../interfaces/EventEmitter.md#setmaxlisteners)
+`NodeJS.EventEmitter.setMaxListeners`
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/events.d.ts:873
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:768
+
+#### setMaxListeners(n)
+
+> **setMaxListeners**(`n`): `this`
+
+By default `EventEmitter`s will print a warning if more than `10` listeners are
+added for a particular event. This is a useful default that helps finding
+memory leaks. The `emitter.setMaxListeners()` method allows the limit to be
+modified for this specific `EventEmitter` instance. The value can be set to `Infinity` (or `0`) to indicate an unlimited number of listeners.
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+##### Parameters
+
+• **n**: `number`
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.3.5
+
+##### Inherited from
+
+`NodeJS.EventEmitter.setMaxListeners`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873
 
 ***
 
 ### addAbortListener()
 
-> `static` **addAbortListener**(`signal`, `resource`): [`Disposable`](../interfaces/Disposable.md)
+> `static` **addAbortListener**(`signal`, `resource`): `Disposable`
 
 **`Experimental`**
 
@@ -1336,7 +2085,7 @@ function example(signal) {
 
 #### Returns
 
-[`Disposable`](../interfaces/Disposable.md)
+`Disposable`
 
 Disposable that removes the `abort` listener.
 
@@ -1346,15 +2095,13 @@ v20.5.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:490
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:437
 
 ***
 
 ### getEventListeners()
 
-#### getEventListeners(emitter, name)
-
-> `static` **getEventListeners**\<`Events`, `EventName`\>(`emitter`, `name`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -1381,47 +2128,23 @@ import { getEventListeners, EventEmitter } from 'node:events';
 }
 ```
 
-##### Type Parameters
+#### Parameters
 
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](EventEmitter.md)\<`Events`\>
-
-• **name**: `EventName`
-
-##### Returns
-
-[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
-
-##### Since
-
-v15.2.0, v14.17.0
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:404
-
-#### getEventListeners(emitter, name)
-
-> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
-
-##### Parameters
-
-• **emitter**: `EventTarget` \| [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
+• **emitter**: `EventTarget` \| `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
 • **name**: `string` \| `symbol`
 
-##### Returns
+#### Returns
 
 `Function`[]
 
-##### Defined in
+#### Since
 
-node\_modules/@types/node/events.d.ts:408
+v15.2.0, v14.17.0
+
+#### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:358
 
 ***
 
@@ -1457,7 +2180,7 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 #### Parameters
 
-• **emitter**: `EventTarget` \| [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
+• **emitter**: `EventTarget` \| `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
 #### Returns
 
@@ -1473,65 +2196,11 @@ v19.9.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:440
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:387
 
 ***
 
 ### ~~listenerCount()~~
-
-#### listenerCount(emitter, eventName)
-
-> `static` **listenerCount**\<`Events`, `EventName`\>(`emitter`, `eventName`): `number`
-
-A class method that returns the number of listeners for the given `eventName` registered on the given `emitter`.
-
-```js
-import { EventEmitter, listenerCount } from 'node:events';
-
-const myEmitter = new EventEmitter();
-myEmitter.on('event', () => {});
-myEmitter.on('event', () => {});
-console.log(listenerCount(myEmitter, 'event'));
-// Prints: 2
-```
-
-##### Type Parameters
-
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](EventEmitter.md)\<`Events`\>
-
-The emitter to query
-
-• **eventName**: `EventName`
-
-The event name
-
-##### Returns
-
-`number`
-
-##### Since
-
-v0.9.12
-
-##### Deprecated
-
-Since v3.2.0 - Use `listenerCount` instead.
-
-##### Inherited from
-
-`NodeJS.EventEmitter.listenerCount`
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:355
-
-#### listenerCount(emitter, eventName)
 
 > `static` **listenerCount**(`emitter`, `eventName`): `number`
 
@@ -1547,9 +2216,9 @@ console.log(listenerCount(myEmitter, 'event'));
 // Prints: 2
 ```
 
-##### Parameters
+#### Parameters
 
-• **emitter**: [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
+• **emitter**: `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
 The emitter to query
 
@@ -1557,25 +2226,25 @@ The emitter to query
 
 The event name
 
-##### Returns
+#### Returns
 
 `number`
 
-##### Since
+#### Since
 
 v0.9.12
 
-##### Deprecated
+#### Deprecated
 
 Since v3.2.0 - Use `listenerCount` instead.
 
-##### Inherited from
+#### Inherited from
 
 `NodeJS.EventEmitter.listenerCount`
 
-##### Defined in
+#### Defined in
 
-node\_modules/@types/node/events.d.ts:376
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:330
 
 ***
 
@@ -1583,7 +2252,7 @@ node\_modules/@types/node/events.d.ts:376
 
 #### on(emitter, eventName, options)
 
-> `static` **on**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options`?): `AsyncIterator`\<[`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>, `any`, `any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): [`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 ```js
 import { on, EventEmitter } from 'node:events';
@@ -1662,23 +2331,17 @@ for await (const event of on(ee, 'foo', { close: ['close'] })) {
 console.log('done'); // prints 'done'
 ```
 
-##### Type Parameters
-
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](EventEmitter.md)\<`Events`\>
+• **emitter**: `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 • **options?**: [`StaticEventEmitterIteratorOptions`](../interfaces/StaticEventEmitterIteratorOptions.md)
 
 ##### Returns
 
-`AsyncIterator`\<[`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>, `any`, `any`\>
+[`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 An `AsyncIterator` that iterates `eventName` events emitted by the `emitter`
 
@@ -1692,35 +2355,11 @@ v13.6.0, v12.16.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:323
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:303
 
 #### on(emitter, eventName, options)
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[], `any`, `any`\>
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
-
-• **eventName**: `string` \| `symbol`
-
-• **options?**: [`StaticEventEmitterIteratorOptions`](../interfaces/StaticEventEmitterIteratorOptions.md)
-
-##### Returns
-
-`AsyncIterator`\<`any`[], `any`, `any`\>
-
-##### Inherited from
-
-`NodeJS.EventEmitter.on`
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:328
-
-#### on(emitter, eventName, options)
-
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[], `any`, `any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): [`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 ##### Parameters
 
@@ -1732,7 +2371,7 @@ node\_modules/@types/node/events.d.ts:328
 
 ##### Returns
 
-`AsyncIterator`\<`any`[], `any`, `any`\>
+[`AsyncIterableIterator`](../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 ##### Inherited from
 
@@ -1740,7 +2379,7 @@ node\_modules/@types/node/events.d.ts:328
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:333
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:308
 
 ***
 
@@ -1748,7 +2387,7 @@ node\_modules/@types/node/events.d.ts:333
 
 #### once(emitter, eventName, options)
 
-> `static` **once**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options`?): `Promise`\<[`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>\>
+> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -1827,23 +2466,17 @@ ac.abort(); // Abort waiting for the event
 ee.emit('foo'); // Prints: Waiting for the event was canceled!
 ```
 
-##### Type Parameters
-
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](EventEmitter.md)\<`Events`\>
+• **emitter**: `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 • **options?**: [`StaticEventEmitterOptions`](../interfaces/StaticEventEmitterOptions.md)
 
 ##### Returns
 
-`Promise`\<[`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>\>
+`Promise`\<`any`[]\>
 
 ##### Since
 
@@ -1855,31 +2488,7 @@ v11.13.0, v10.16.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:232
-
-#### once(emitter, eventName, options)
-
-> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>
-
-• **eventName**: `string` \| `symbol`
-
-• **options?**: [`StaticEventEmitterOptions`](../interfaces/StaticEventEmitterOptions.md)
-
-##### Returns
-
-`Promise`\<`any`[]\>
-
-##### Inherited from
-
-`NodeJS.EventEmitter.once`
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:237
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:217
 
 #### once(emitter, eventName, options)
 
@@ -1903,7 +2512,7 @@ node\_modules/@types/node/events.d.ts:237
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:242
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:222
 
 ***
 
@@ -1926,7 +2535,7 @@ setMaxListeners(5, target, emitter);
 
 A non-negative number. The maximum number of listeners per `EventTarget` event.
 
-• ...**eventTargets?**: (`EventTarget` \| [`EventEmitter`](../interfaces/EventEmitter.md)\<`object`\>)[]
+• ...**eventTargets?**: (`EventTarget` \| `EventEmitter`\<[`DefaultEventMap`](../type-aliases/DefaultEventMap.md), `object`\>)[]
 
 Zero or more {EventTarget} or {EventEmitter} instances. If none are specified, `n` is set as the default max for all newly created {EventTarget} and {EventEmitter}
 objects.
@@ -1945,4 +2554,4 @@ v15.4.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:455
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:402

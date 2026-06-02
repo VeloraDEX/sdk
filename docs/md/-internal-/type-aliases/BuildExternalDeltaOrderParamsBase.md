@@ -132,4 +132,4 @@ The address of the src token
 
 ## Defined in
 
-[src/methods/delta/buildExternalDeltaOrder.ts:16](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildExternalDeltaOrder.ts#L16)
+[src/methods/delta/buildExternalDeltaOrder.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildExternalDeltaOrder.ts#L16)

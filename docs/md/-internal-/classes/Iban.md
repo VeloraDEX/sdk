@@ -39,7 +39,7 @@ const iban = new web3.eth.Iban("XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS");
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:126
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:126
 
 ## Properties
 
@@ -68,7 +68,7 @@ iban.toAddress();
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:202
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:202
 
 ***
 
@@ -102,7 +102,7 @@ web3.eth.Iban.toAddress("XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS");
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:186
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:186
 
 ## Methods
 
@@ -126,7 +126,7 @@ iban.checksum();
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:240
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:240
 
 ***
 
@@ -152,7 +152,7 @@ iban.client();
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:228
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:228
 
 ***
 
@@ -176,7 +176,7 @@ iban.institution();
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:251
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:251
 
 ***
 
@@ -204,7 +204,7 @@ iban.isDirect();
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:49
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:49
 
 ***
 
@@ -232,7 +232,7 @@ iban.isIndirect();
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:78
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:78
 
 ***
 
@@ -261,7 +261,7 @@ iban.isValid();
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:111
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:111
 
 ***
 
@@ -285,7 +285,7 @@ iban.toString();
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:262
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:262
 
 ***
 
@@ -319,7 +319,7 @@ web3.eth.Iban.createIndirect({
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:157
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:157
 
 ***
 
@@ -350,7 +350,7 @@ web3.eth.Iban.fromAddress("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:170
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:170
 
 ***
 
@@ -383,7 +383,7 @@ web3.eth.Iban.fromBban('ETHXREGGAVOFYORK');
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:141
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:141
 
 ***
 
@@ -416,7 +416,7 @@ web3.eth.Iban.isDirect("XE81ETHXREGGAVOFYORK");
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:34
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:34
 
 ***
 
@@ -449,7 +449,7 @@ web3.eth.Iban.isIndirect("XE81ETHXREGGAVOFYORK");
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:63
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:63
 
 ***
 
@@ -484,7 +484,7 @@ web3.eth.Iban.isValid("XE82ETHXREGGAVOFYORK");
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:95
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:95
 
 ***
 
@@ -515,4 +515,4 @@ web3.eth.Iban.toIban("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
 
 #### Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:215
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:215

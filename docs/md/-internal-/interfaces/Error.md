@@ -10,11 +10,10 @@
 
 - [`FetcherError`](../../classes/FetcherError.md)
 - [`ProviderRpcError`](ProviderRpcError.md)
-- [`Web3Error`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md)
+- [`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md)
 - [`AxiosError`](../classes/AxiosError.md)
 - [`EthersError`](EthersError.md)
 - [`BaseWeb3Error`](../classes/BaseWeb3Error.md)
-- [`ErrnoException`](ErrnoException.md)
 
 ## Properties
 
@@ -24,7 +23,7 @@
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1077
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -34,7 +33,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1076
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 ***
 
@@ -44,4 +43,4 @@ node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1078
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1078

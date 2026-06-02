@@ -22,4 +22,4 @@ An object that could hold the components for an Indirect IBAN (BBAN)
 
 ## Defined in
 
-node\_modules/web3-eth-iban/lib/commonjs/types.d.ts:4
+node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/types.d.ts:4

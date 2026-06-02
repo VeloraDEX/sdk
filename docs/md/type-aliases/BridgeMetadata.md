@@ -10,9 +10,9 @@
 
 ## Type declaration
 
-### depositId
+### depositId?
 
-> **depositId**: `number`
+> `optional` **depositId**: `number`
 
 #### Description
 
@@ -26,9 +26,9 @@ The deposit id
 
 The transaction hash on the source chain that refunded the deposit. When bridgeStatus='refunded'
 
-### fillDeadline
+### fillDeadline?
 
-> **fillDeadline**: `number`
+> `optional` **fillDeadline**: `number`
 
 #### Description
 
@@ -52,4 +52,4 @@ The amount that user should expect to get
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:202](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L202)
+[src/methods/delta/helpers/types.ts:281](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L281)

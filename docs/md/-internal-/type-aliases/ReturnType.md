@@ -16,4 +16,4 @@ Obtain the return type of a function type
 
 ## Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1643
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1643

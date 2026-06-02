@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/web3-validator/lib/commonjs/types.d.ts:3
+node\_modules/.pnpm/web3-validator@2.0.6/node\_modules/web3-validator/lib/commonjs/types.d.ts:3

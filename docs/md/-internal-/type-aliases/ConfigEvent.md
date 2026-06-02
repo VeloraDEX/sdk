@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:35
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:35

@@ -14,14 +14,14 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:71
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:71
 
 ***
 
 ### tx
 
-> **tx**: [`TransactionSignedAPI`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionSignedAPI.md)
+> **tx**: [`TransactionSignedAPI`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionSignedAPI.md)
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:72
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:72

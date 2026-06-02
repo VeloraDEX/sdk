@@ -6,7 +6,7 @@
 
 # Type Alias: SubmitExternalDeltaOrderParams
 
-> **SubmitExternalDeltaOrderParams**: [`BuildExternalDeltaOrderParams`](BuildExternalDeltaOrderParams.md) & `object` & [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaOrderToPost`](../-internal-/type-aliases/DeltaOrderToPost.md), `"type"` \| `"includeAgents"` \| `"excludeAgents"`\>
+> **SubmitExternalDeltaOrderParams**: [`BuildExternalDeltaOrderParams`](BuildExternalDeltaOrderParams.md) & `object` & [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaOrderToPost`](DeltaOrderToPost.md), `"type"` \| `"includeAgents"` \| `"excludeAgents"`\>
 
 ## Type declaration
 
@@ -28,4 +28,4 @@ Referrer address
 
 ## Defined in
 
-[src/methods/delta/index.ts:121](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/index.ts#L121)
+[src/methods/delta/index.ts:138](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L138)

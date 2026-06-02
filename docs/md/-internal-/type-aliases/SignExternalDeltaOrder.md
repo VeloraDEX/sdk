@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/signExternalDeltaOrder.ts:5](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/signExternalDeltaOrder.ts#L5)
+[src/methods/delta/signExternalDeltaOrder.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/signExternalDeltaOrder.ts#L5)

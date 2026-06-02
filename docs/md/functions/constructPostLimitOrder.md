@@ -22,4 +22,4 @@ Limit Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/limitOrders/postOrder.ts:23](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/postOrder.ts#L23)
+[src/methods/limitOrders/postOrder.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/postOrder.ts#L23)

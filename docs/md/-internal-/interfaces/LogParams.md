@@ -19,7 +19,7 @@ The address of the contract that emitted this log.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:123
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:123
 
 ***
 
@@ -32,7 +32,7 @@ The block hash of the block that included the transaction for this
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:109
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:109
 
 ***
 
@@ -45,7 +45,7 @@ The block number of the block that included the transaction for this
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:114
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:114
 
 ***
 
@@ -57,7 +57,7 @@ The data emitted with this log.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:127
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:127
 
 ***
 
@@ -69,7 +69,7 @@ The index of this log.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:135
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:135
 
 ***
 
@@ -82,7 +82,7 @@ Whether this log was removed due to the transaction it was included
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:119
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:119
 
 ***
 
@@ -94,7 +94,7 @@ The topics emitted with this log.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:131
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:131
 
 ***
 
@@ -106,7 +106,7 @@ The transaction hash for the transaxction the log occurred in.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:104
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:104
 
 ***
 
@@ -118,4 +118,4 @@ The transaction index of this log.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:139
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:139

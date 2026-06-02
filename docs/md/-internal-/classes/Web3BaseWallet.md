@@ -38,7 +38,7 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:71
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:71
 
 ## Properties
 
@@ -48,7 +48,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:71
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:70
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:70
 
 ***
 
@@ -210,7 +210,7 @@ Gets or sets the length of the array. This is a number one higher than the highe
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:97
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:97
 
 ***
 
@@ -226,7 +226,7 @@ Gets or sets the length of the array. This is a number one higher than the highe
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1326
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1326
 
 ***
 
@@ -240,7 +240,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1326
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:316
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:316
 
 ## Methods
 
@@ -260,7 +260,7 @@ Iterator
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:78
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:78
 
 ***
 
@@ -278,29 +278,55 @@ node\_modules/typescript/lib/lib.es2015.iterable.d.ts:78
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:73
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:73
 
 ***
 
 ### at()
 
+#### at(index)
+
 > **at**(`index`): `undefined` \| `T`
 
-#### Parameters
+##### Parameters
 
 • **index**: `number`
 
-#### Returns
+##### Returns
 
 `undefined` \| `T`
 
-#### Inherited from
+##### Inherited from
 
 `Array.at`
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/compatibility/indexable.d.ts:7
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/indexable.d.ts:7
+
+#### at(index)
+
+> **at**(`index`): `undefined` \| `T`
+
+Takes an integer value and returns the item at that index,
+allowing for positive and negative integers.
+Negative integers count back from the last item in the array.
+
+##### Parameters
+
+• **index**: `number`
+
+##### Returns
+
+`undefined` \| `T`
+
+##### Inherited from
+
+`Array.at`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:297
 
 ***
 
@@ -314,7 +340,7 @@ node\_modules/@types/node/compatibility/indexable.d.ts:7
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:76
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:76
 
 ***
 
@@ -343,7 +369,7 @@ Additional arrays and/or items to add to the end of the array.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1350
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1350
 
 #### concat(items)
 
@@ -368,7 +394,7 @@ Additional arrays and/or items to add to the end of the array.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1356
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1356
 
 ***
 
@@ -405,7 +431,7 @@ If not specified, length of the this object is used as its default value.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.core.d.ts:62
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:62
 
 ***
 
@@ -423,7 +449,7 @@ node\_modules/typescript/lib/lib.es2015.core.d.ts:62
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:72
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:72
 
 ***
 
@@ -433,7 +459,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:72
 
 #### Parameters
 
-• **encryptedWallet**: [`KeyStore`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]
+• **encryptedWallet**: [`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]
 
 • **password**: `string`
 
@@ -445,13 +471,13 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:72
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:78
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:78
 
 ***
 
 ### encrypt()
 
-> `abstract` **encrypt**(`password`, `options`?): `Promise`\<[`KeyStore`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
+> `abstract` **encrypt**(`password`, `options`?): `Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
 
 #### Parameters
 
@@ -461,11 +487,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:78
 
 #### Returns
 
-`Promise`\<[`KeyStore`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
+`Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:77
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:77
 
 ***
 
@@ -485,7 +511,7 @@ Returns an iterable of key, value pairs for every entry in the array
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:83
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:83
 
 ***
 
@@ -524,7 +550,7 @@ If thisArg is omitted, undefined is used as the this value.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1433
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1433
 
 #### every(predicate, thisArg)
 
@@ -555,7 +581,7 @@ If thisArg is omitted, undefined is used as the this value.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1442
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1442
 
 ***
 
@@ -591,7 +617,7 @@ length+end.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.core.d.ts:51
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:51
 
 ***
 
@@ -627,7 +653,7 @@ An object to which the this keyword can refer in the predicate function. If this
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1469
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1469
 
 #### filter(predicate, thisArg)
 
@@ -655,7 +681,7 @@ An object to which the this keyword can refer in the predicate function. If this
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1475
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1475
 
 ***
 
@@ -695,7 +721,7 @@ predicate. If it is not provided, undefined is used instead.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es2015.core.d.ts:29
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:29
 
 #### find(predicate, thisArg)
 
@@ -717,7 +743,7 @@ node\_modules/typescript/lib/lib.es2015.core.d.ts:29
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es2015.core.d.ts:30
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:30
 
 ***
 
@@ -751,7 +777,7 @@ predicate. If it is not provided, undefined is used instead.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.core.d.ts:41
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:41
 
 ***
 
@@ -786,7 +812,7 @@ The maximum recursion depth
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2019.array.d.ts:75
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:75
 
 ***
 
@@ -826,7 +852,7 @@ thisArg is omitted, undefined is used as the this value.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2019.array.d.ts:64
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:64
 
 ***
 
@@ -856,7 +882,7 @@ An object to which the this keyword can refer in the callbackfn function. If thi
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1457
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1457
 
 ***
 
@@ -874,7 +900,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1457
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:74
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:74
 
 ***
 
@@ -904,7 +930,7 @@ The position in this array at which to begin searching for searchElement.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2016.array.include.d.ts:25
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2016.array.include.d.ts:25
 
 ***
 
@@ -934,7 +960,7 @@ The array index at which to begin the search. If fromIndex is omitted, the searc
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1418
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1418
 
 ***
 
@@ -960,7 +986,7 @@ A string used to separate one element of the array from the next in the resultin
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1361
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1361
 
 ***
 
@@ -980,7 +1006,7 @@ Returns an iterable of keys in the array
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:88
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:88
 
 ***
 
@@ -1010,7 +1036,7 @@ The array index at which to begin searching backward. If fromIndex is omitted, t
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1424
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1424
 
 ***
 
@@ -1030,7 +1056,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1424
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:80
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:80
 
 ***
 
@@ -1064,7 +1090,7 @@ An object to which the this keyword can refer in the callbackfn function. If thi
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1463
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1463
 
 ***
 
@@ -1085,7 +1111,7 @@ If the array is empty, undefined is returned and the array is not modified.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1339
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1339
 
 ***
 
@@ -1111,7 +1137,7 @@ New elements to add to the array.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1344
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1344
 
 ***
 
@@ -1139,7 +1165,7 @@ A function that accepts up to four arguments. The reduce method calls the callba
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1481
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1481
 
 #### reduce(callbackfn, initialValue)
 
@@ -1161,7 +1187,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1481
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1482
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1482
 
 #### reduce(callbackfn, initialValue)
 
@@ -1193,7 +1219,7 @@ If initialValue is specified, it is used as the initial value to start the accum
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1488
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1488
 
 ***
 
@@ -1221,7 +1247,7 @@ A function that accepts up to four arguments. The reduceRight method calls the c
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1494
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1494
 
 #### reduceRight(callbackfn, initialValue)
 
@@ -1243,7 +1269,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1494
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1495
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1495
 
 #### reduceRight(callbackfn, initialValue)
 
@@ -1275,7 +1301,7 @@ If initialValue is specified, it is used as the initial value to start the accum
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1501
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1501
 
 ***
 
@@ -1293,7 +1319,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1501
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:75
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:75
 
 ***
 
@@ -1314,7 +1340,7 @@ This method mutates the array and returns a reference to the same array.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1366
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1366
 
 ***
 
@@ -1334,7 +1360,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1366
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:79
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:79
 
 ***
 
@@ -1355,7 +1381,7 @@ If the array is empty, undefined is returned and the array is not modified.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1371
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1371
 
 ***
 
@@ -1389,7 +1415,7 @@ If end is undefined, then the slice extends to the end of the array.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1381
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1381
 
 ***
 
@@ -1422,7 +1448,7 @@ If thisArg is omitted, undefined is used as the this value.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1451
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1451
 
 ***
 
@@ -1454,7 +1480,7 @@ value otherwise. If omitted, the elements are sorted in ascending, ASCII charact
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1392
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1392
 
 ***
 
@@ -1488,7 +1514,7 @@ An array containing the elements that were deleted.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1399
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1399
 
 #### splice(start, deleteCount, items)
 
@@ -1522,7 +1548,7 @@ An array containing the elements that were deleted.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1407
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1407
 
 ***
 
@@ -1544,7 +1570,7 @@ Returns a string representation of an array. The elements are converted to strin
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1334
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1334
 
 #### toLocaleString(locales, options)
 
@@ -1566,7 +1592,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1334
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es2015.core.d.ts:64
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:64
 
 ***
 
@@ -1586,7 +1612,7 @@ Returns a string representation of an array.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1330
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1330
 
 ***
 
@@ -1612,7 +1638,7 @@ Elements to insert at the start of the array.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1412
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1412
 
 ***
 
@@ -1632,7 +1658,7 @@ Returns an iterable of values in the array
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:93
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:93
 
 ***
 
@@ -1664,7 +1690,7 @@ An array-like object to convert to an array.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es2015.core.d.ts:72
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:72
 
 #### from(arrayLike, mapfn, thisArg)
 
@@ -1702,7 +1728,7 @@ Value of 'this' used to invoke the mapfn.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es2015.core.d.ts:80
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:80
 
 #### from(iterable)
 
@@ -1730,7 +1756,7 @@ An iterable object to convert to an array.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:101
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:101
 
 #### from(iterable, mapfn, thisArg)
 
@@ -1768,7 +1794,7 @@ Value of 'this' used to invoke the mapfn.
 
 ##### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:109
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:109
 
 ***
 
@@ -1790,7 +1816,7 @@ node\_modules/typescript/lib/lib.es2015.iterable.d.ts:109
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1513
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1513
 
 ***
 
@@ -1820,4 +1846,4 @@ A set of elements to include in the new array object.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.core.d.ts:86
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:86

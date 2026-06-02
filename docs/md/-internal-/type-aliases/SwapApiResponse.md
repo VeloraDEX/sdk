@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/types.ts:157](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L157)
+[src/types.ts:157](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L157)

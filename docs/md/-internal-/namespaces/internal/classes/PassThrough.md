@@ -33,7 +33,7 @@ primarily for examples and testing, but there are some use cases where `stream.P
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1307
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1307
 
 ## Properties
 
@@ -58,7 +58,7 @@ v0.9.4
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1076
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1076
 
 ***
 
@@ -78,7 +78,7 @@ v18.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1065
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1065
 
 ***
 
@@ -98,7 +98,7 @@ v8.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:121
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:121
 
 ***
 
@@ -118,7 +118,7 @@ v18.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1066
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1066
 
 ***
 
@@ -139,7 +139,7 @@ v11.4.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:77
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:77
 
 ***
 
@@ -161,7 +161,7 @@ v16.8.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:71
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:71
 
 ***
 
@@ -183,7 +183,7 @@ v16.7.0, v14.18.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:83
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:83
 
 ***
 
@@ -203,7 +203,7 @@ v12.7.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:88
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:88
 
 ***
 
@@ -223,7 +223,7 @@ v12.9.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:93
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:93
 
 ***
 
@@ -244,7 +244,7 @@ v9.4.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:99
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:99
 
 ***
 
@@ -264,7 +264,7 @@ v9.3.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:104
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:104
 
 ***
 
@@ -286,7 +286,7 @@ v9.4.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:111
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:111
 
 ***
 
@@ -306,7 +306,7 @@ v12.3.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:116
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:116
 
 ***
 
@@ -327,7 +327,7 @@ v11.4.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1057
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1057
 
 ***
 
@@ -348,7 +348,7 @@ v13.2.0, v12.16.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1063
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1063
 
 ***
 
@@ -369,7 +369,7 @@ v12.9.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1058
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1058
 
 ***
 
@@ -389,7 +389,7 @@ v12.6.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1059
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1059
 
 ***
 
@@ -409,7 +409,7 @@ v9.3.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1060
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1060
 
 ***
 
@@ -431,7 +431,7 @@ v9.4.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1061
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1061
 
 ***
 
@@ -451,7 +451,7 @@ v15.2.0, v14.17.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1064
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1064
 
 ***
 
@@ -471,7 +471,7 @@ v12.3.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1062
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1062
 
 ***
 
@@ -493,7 +493,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:512
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:459
 
 ***
 
@@ -515,7 +515,7 @@ v13.4.0, v12.16.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:505
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:452
 
 ***
 
@@ -569,7 +569,7 @@ v0.11.2
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:551
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:498
 
 ***
 
@@ -592,7 +592,7 @@ v13.6.0, v12.17.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:498
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:445
 
 ## Methods
 
@@ -614,7 +614,7 @@ node\_modules/@types/node/events.d.ts:498
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:133
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:133
 
 ***
 
@@ -638,7 +638,7 @@ node\_modules/@types/node/stream.d.ts:133
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1119
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1119
 
 ***
 
@@ -660,7 +660,7 @@ node\_modules/@types/node/stream.d.ts:1119
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1120
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1120
 
 ***
 
@@ -682,7 +682,7 @@ node\_modules/@types/node/stream.d.ts:1120
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1309
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1309
 
 ***
 
@@ -704,7 +704,7 @@ node\_modules/@types/node/stream.d.ts:1309
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:134
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:134
 
 ***
 
@@ -730,7 +730,7 @@ node\_modules/@types/node/stream.d.ts:134
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1308
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1308
 
 ***
 
@@ -756,7 +756,7 @@ node\_modules/@types/node/stream.d.ts:1308
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1111
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1111
 
 ***
 
@@ -780,7 +780,7 @@ node\_modules/@types/node/stream.d.ts:1111
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1112
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1112
 
 ***
 
@@ -804,17 +804,17 @@ v20.4.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:659
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:659
 
 ***
 
 ### \[asyncIterator\]()
 
-> **\[asyncIterator\]**(): `AsyncIterator`\<`any`, `any`, `any`\>
+> **\[asyncIterator\]**(): [`AsyncIterableIterator`](../../../interfaces/AsyncIterableIterator.md)\<`any`, `any`, `any`\>
 
 #### Returns
 
-`AsyncIterator`\<`any`, `any`, `any`\>
+[`AsyncIterableIterator`](../../../interfaces/AsyncIterableIterator.md)\<`any`, `any`, `any`\>
 
 #### Inherited from
 
@@ -822,7 +822,37 @@ node\_modules/@types/node/stream.d.ts:659
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:654
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:654
+
+***
+
+### \[captureRejectionSymbol\]()?
+
+> `optional` **\[captureRejectionSymbol\]**\<`K`\>(`error`, `event`, ...`args`): `void`
+
+#### Type Parameters
+
+• **K**
+
+#### Parameters
+
+• **error**: [`Error`](../../../interfaces/Error.md)
+
+• **event**: `string` \| `symbol`
+
+• ...**args**: [`AnyRest`](../../../type-aliases/AnyRest.md)
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`Transform`](Transform.md).[`[captureRejectionSymbol]`](Transform.md#%5Bcapturerejectionsymbol%5D-1)
+
+#### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:136
 
 ***
 
@@ -850,23 +880,27 @@ node\_modules/@types/node/stream.d.ts:654
 
 ##### Inherited from
 
-[`Transform`](Transform.md).[`[captureRejectionSymbol]`](Transform.md#%5Bcapturerejectionsymbol%5D)
+`Transform.[captureRejectionSymbol]`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:146
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:650
 
 #### \[captureRejectionSymbol\](error, event, args)
 
-> `optional` **\[captureRejectionSymbol\]**(`error`, `event`, ...`args`): `void`
+> `optional` **\[captureRejectionSymbol\]**\<`EventName`\>(`error`, `event`, ...`args`): `void`
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `symbol`
 
 ##### Parameters
 
 • **error**: [`Error`](../../../interfaces/Error.md)
 
-• **event**: `string` \| `symbol`
+• **event**: `EventName`
 
-• ...**args**: `any`[]
+• ...**args**: [`Args`](../../../type-aliases/Args.md)\<`object`, `EventName`\>
 
 ##### Returns
 
@@ -874,11 +908,11 @@ node\_modules/@types/node/events.d.ts:146
 
 ##### Inherited from
 
-[`Transform`](Transform.md).[`[captureRejectionSymbol]`](Transform.md#%5Bcapturerejectionsymbol%5D)
+`Transform.[captureRejectionSymbol]`
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:151
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:655
 
 ***
 
@@ -918,11 +952,13 @@ The defined events on documents including:
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1168
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1168
 
 #### addListener(event, listener)
 
 > **addListener**(`event`, `listener`): `this`
+
+Alias for `emitter.on(eventName, listener)`.
 
 ##### Parameters
 
@@ -934,13 +970,17 @@ node\_modules/@types/node/stream.d.ts:1168
 
 `this`
 
+##### Since
+
+v0.1.26
+
 ##### Inherited from
 
 [`Transform`](Transform.md).[`addListener`](Transform.md#addlistener)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1169
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1169
 
 #### addListener(event, listener)
 
@@ -962,7 +1002,7 @@ node\_modules/@types/node/stream.d.ts:1169
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1170
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1170
 
 #### addListener(event, listener)
 
@@ -984,7 +1024,7 @@ node\_modules/@types/node/stream.d.ts:1170
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1171
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1171
 
 #### addListener(event, listener)
 
@@ -1006,7 +1046,7 @@ node\_modules/@types/node/stream.d.ts:1171
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1172
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1172
 
 #### addListener(event, listener)
 
@@ -1028,7 +1068,7 @@ node\_modules/@types/node/stream.d.ts:1172
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1173
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1173
 
 #### addListener(event, listener)
 
@@ -1050,7 +1090,7 @@ node\_modules/@types/node/stream.d.ts:1173
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1174
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1174
 
 #### addListener(event, listener)
 
@@ -1072,7 +1112,7 @@ node\_modules/@types/node/stream.d.ts:1174
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1175
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1175
 
 #### addListener(event, listener)
 
@@ -1094,7 +1134,7 @@ node\_modules/@types/node/stream.d.ts:1175
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1176
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1176
 
 #### addListener(event, listener)
 
@@ -1116,7 +1156,7 @@ node\_modules/@types/node/stream.d.ts:1176
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1177
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1177
 
 #### addListener(event, listener)
 
@@ -1138,7 +1178,7 @@ node\_modules/@types/node/stream.d.ts:1177
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1178
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1178
 
 #### addListener(event, listener)
 
@@ -1160,7 +1200,7 @@ node\_modules/@types/node/stream.d.ts:1178
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1179
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1179
 
 ***
 
@@ -1191,7 +1231,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:549
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:549
 
 ***
 
@@ -1201,7 +1241,7 @@ node\_modules/@types/node/stream.d.ts:549
 
 #### Type Parameters
 
-• **T** *extends* [`ReadableStream`](../../../interfaces/ReadableStream.md)
+• **T** *extends* `ReadableStream`
 
 #### Parameters
 
@@ -1221,7 +1261,7 @@ node\_modules/@types/node/stream.d.ts:549
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:36
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:36
 
 ***
 
@@ -1255,7 +1295,7 @@ v0.11.2
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1127
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1127
 
 ***
 
@@ -1291,7 +1331,7 @@ v8.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:586
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:586
 
 ***
 
@@ -1325,7 +1365,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:535
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:535
 
 ***
 
@@ -1391,11 +1431,49 @@ v0.1.26
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1180
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1180
 
 #### emit(event, chunk)
 
 > **emit**(`event`, `chunk`): `boolean`
+
+Synchronously calls each of the listeners registered for the event named `eventName`, in the order they were registered, passing the supplied arguments
+to each.
+
+Returns `true` if the event had listeners, `false` otherwise.
+
+```js
+import { EventEmitter } from 'node:events';
+const myEmitter = new EventEmitter();
+
+// First listener
+myEmitter.on('event', function firstListener() {
+  console.log('Helloooo! first listener');
+});
+// Second listener
+myEmitter.on('event', function secondListener(arg1, arg2) {
+  console.log(`event with parameters ${arg1}, ${arg2} in second listener`);
+});
+// Third listener
+myEmitter.on('event', function thirdListener(...args) {
+  const parameters = args.join(', ');
+  console.log(`event with parameters ${parameters} in third listener`);
+});
+
+console.log(myEmitter.listeners('event'));
+
+myEmitter.emit('event', 1, 2, 3, 4, 5);
+
+// Prints:
+// [
+//   [Function: firstListener],
+//   [Function: secondListener],
+//   [Function: thirdListener]
+// ]
+// Helloooo! first listener
+// event with parameters 1, 2 in second listener
+// event with parameters 1, 2, 3, 4, 5 in third listener
+```
 
 ##### Parameters
 
@@ -1407,13 +1485,17 @@ node\_modules/@types/node/stream.d.ts:1180
 
 `boolean`
 
+##### Since
+
+v0.1.26
+
 ##### Inherited from
 
 [`Transform`](Transform.md).[`emit`](Transform.md#emit)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1181
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1181
 
 #### emit(event)
 
@@ -1433,7 +1515,7 @@ node\_modules/@types/node/stream.d.ts:1181
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1182
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1182
 
 #### emit(event)
 
@@ -1453,7 +1535,7 @@ node\_modules/@types/node/stream.d.ts:1182
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1183
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1183
 
 #### emit(event, err)
 
@@ -1475,7 +1557,7 @@ node\_modules/@types/node/stream.d.ts:1183
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1184
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1184
 
 #### emit(event)
 
@@ -1495,7 +1577,7 @@ node\_modules/@types/node/stream.d.ts:1184
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1185
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1185
 
 #### emit(event)
 
@@ -1515,7 +1597,7 @@ node\_modules/@types/node/stream.d.ts:1185
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1186
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1186
 
 #### emit(event, src)
 
@@ -1537,7 +1619,7 @@ node\_modules/@types/node/stream.d.ts:1186
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1187
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1187
 
 #### emit(event)
 
@@ -1557,7 +1639,7 @@ node\_modules/@types/node/stream.d.ts:1187
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1188
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1188
 
 #### emit(event)
 
@@ -1577,7 +1659,7 @@ node\_modules/@types/node/stream.d.ts:1188
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1189
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1189
 
 #### emit(event, src)
 
@@ -1599,7 +1681,7 @@ node\_modules/@types/node/stream.d.ts:1189
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1190
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1190
 
 #### emit(event, args)
 
@@ -1621,7 +1703,7 @@ node\_modules/@types/node/stream.d.ts:1190
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1191
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1191
 
 ***
 
@@ -1665,7 +1747,7 @@ v0.9.4
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1124
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1124
 
 #### end(chunk, cb)
 
@@ -1687,7 +1769,7 @@ node\_modules/@types/node/stream.d.ts:1124
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1125
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1125
 
 #### end(chunk, encoding, cb)
 
@@ -1711,11 +1793,13 @@ node\_modules/@types/node/stream.d.ts:1125
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1126
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1126
 
 ***
 
 ### eventNames()
+
+#### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
 
@@ -1736,21 +1820,58 @@ console.log(myEE.eventNames());
 // Prints: [ 'foo', 'bar', Symbol(symbol) ]
 ```
 
-#### Returns
+##### Returns
 
 (`string` \| `symbol`)[]
 
-#### Since
+##### Since
 
 v6.0.0
 
-#### Inherited from
+##### Inherited from
 
 [`Transform`](Transform.md).[`eventNames`](Transform.md#eventnames)
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/events.d.ts:1065
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:922
+
+#### eventNames()
+
+> **eventNames**(): (`string` \| `symbol`)[] & [`EventNames`](../../../type-aliases/EventNames.md)\<`Events`\>[]
+
+Returns an array listing the events for which the emitter has registered
+listeners. The values in the array are strings or `Symbol`s.
+
+```js
+import { EventEmitter } from 'node:events';
+
+const myEE = new EventEmitter();
+myEE.on('foo', () => {});
+myEE.on('bar', () => {});
+
+const sym = Symbol('symbol');
+myEE.on(sym, () => {});
+
+console.log(myEE.eventNames());
+// Prints: [ 'foo', 'bar', Symbol(symbol) ]
+```
+
+##### Returns
+
+(`string` \| `symbol`)[] & [`EventNames`](../../../type-aliases/EventNames.md)\<`Events`\>[]
+
+##### Since
+
+v6.0.0
+
+##### Inherited from
+
+[`Transform`](Transform.md).[`eventNames`](Transform.md#eventnames)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1065
 
 ***
 
@@ -1787,7 +1908,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:514
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:514
 
 ***
 
@@ -1823,7 +1944,7 @@ v17.4.0, v16.14.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:442
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:442
 
 ***
 
@@ -1867,7 +1988,7 @@ v17.5.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:497
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:497
 
 #### find(fn, options)
 
@@ -1889,7 +2010,7 @@ node\_modules/@types/node/stream.d.ts:497
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:501
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:501
 
 ***
 
@@ -1927,7 +2048,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:528
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:528
 
 ***
 
@@ -1970,32 +2091,57 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:461
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:461
 
 ***
 
 ### getMaxListeners()
+
+#### getMaxListeners()
 
 > **getMaxListeners**(): `number`
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](PassThrough.md#defaultmaxlisteners).
 
-#### Returns
+##### Returns
 
 `number`
 
-#### Since
+##### Since
 
 v1.0.0
 
-#### Inherited from
+##### Inherited from
 
 [`Transform`](Transform.md).[`getMaxListeners`](Transform.md#getmaxlisteners)
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/events.d.ts:879
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:774
+
+#### getMaxListeners()
+
+> **getMaxListeners**(): `number`
+
+Returns the current max listener value for the `EventEmitter` which is either
+set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](PassThrough.md#defaultmaxlisteners).
+
+##### Returns
+
+`number`
+
+##### Since
+
+v1.0.0
+
+##### Inherited from
+
+[`Transform`](Transform.md).[`getMaxListeners`](Transform.md#getmaxlisteners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
 
 ***
 
@@ -2031,13 +2177,13 @@ v0.11.14
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:295
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:295
 
 ***
 
 ### iterator()
 
-> **iterator**(`options`?): `AsyncIterator`\<`any`, `any`, `any`\>
+> **iterator**(`options`?): [`AsyncIterableIterator`](../../../interfaces/AsyncIterableIterator.md)\<`any`, `any`, `any`\>
 
 The iterator created by this method gives users the option to cancel the destruction
 of the stream if the `for await...of` loop is exited by `return`, `break`, or `throw`,
@@ -2055,7 +2201,7 @@ or exiting a `for await...of` iteration using a `break`, `return`, or `throw` wi
 
 #### Returns
 
-`AsyncIterator`\<`any`, `any`, `any`\>
+[`AsyncIterableIterator`](../../../interfaces/AsyncIterableIterator.md)\<`any`, `any`, `any`\>
 
 #### Since
 
@@ -2067,7 +2213,7 @@ v16.3.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:425
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:425
 
 ***
 
@@ -2075,7 +2221,7 @@ node\_modules/@types/node/stream.d.ts:425
 
 #### listenerCount(eventName, listener)
 
-> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+> **listenerCount**\<`K`\>(`eventName`, `listener`?): `number`
 
 Returns the number of listeners listening for the event named `eventName`.
 If `listener` is provided, it will return how many times the listener is found
@@ -2083,15 +2229,15 @@ in the list of the listeners of the event.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **K**
 
 ##### Parameters
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 The name of the event being listened for
 
-• **listener?**: [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>
+• **listener?**: `Function`
 
 The event handler function
 
@@ -2109,7 +2255,45 @@ v3.2.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:990
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:868
+
+#### listenerCount(eventName, listener)
+
+> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+
+Returns the number of listeners listening for the event named `eventName`.
+If `listener` is provided, it will return how many times the listener is found
+in the list of the listeners of the event.
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `number` \| `symbol`
+
+##### Parameters
+
+• **eventName**: `EventName`
+
+The name of the event being listened for
+
+• **listener?**: [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>
+
+The event handler function
+
+##### Returns
+
+`number`
+
+##### Since
+
+v3.2.0
+
+##### Inherited from
+
+[`Transform`](Transform.md).[`listenerCount`](Transform.md#listenercount)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
 
 #### listenerCount(eventName, listener)
 
@@ -2123,7 +2307,7 @@ node\_modules/@types/node/events.d.ts:990
 
 • **eventName**: `EventName`
 
-• **listener?**: [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>
+• **listener?**: [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
@@ -2135,7 +2319,7 @@ node\_modules/@types/node/events.d.ts:990
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:994
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:994
 
 ***
 
@@ -2143,7 +2327,7 @@ node\_modules/@types/node/events.d.ts:994
 
 #### listeners(eventName)
 
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **listeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -2157,15 +2341,15 @@ console.log(util.inspect(server.listeners('connection')));
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **K**
 
 ##### Parameters
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 ##### Returns
 
-[`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+`Function`[]
 
 ##### Since
 
@@ -2177,11 +2361,49 @@ v0.1.26
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:892
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:787
 
 #### listeners(eventName)
 
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+
+Returns a copy of the array of listeners for the event named `eventName`.
+
+```js
+server.on('connection', (stream) => {
+  console.log('someone connected!');
+});
+console.log(util.inspect(server.listeners('connection')));
+// Prints: [ [Function] ]
+```
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `number` \| `symbol`
+
+##### Parameters
+
+• **eventName**: `EventName`
+
+##### Returns
+
+[`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+
+##### Since
+
+v0.1.26
+
+##### Inherited from
+
+[`Transform`](Transform.md).[`listeners`](Transform.md#listeners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:892
+
+#### listeners(eventName)
+
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
 
 ##### Type Parameters
 
@@ -2193,7 +2415,7 @@ node\_modules/@types/node/events.d.ts:892
 
 ##### Returns
 
-[`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
 
 ##### Inherited from
 
@@ -2201,7 +2423,7 @@ node\_modules/@types/node/events.d.ts:892
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:895
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:895
 
 ***
 
@@ -2236,7 +2458,7 @@ v17.4.0, v16.14.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:433
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:433
 
 ***
 
@@ -2244,19 +2466,19 @@ node\_modules/@types/node/stream.d.ts:433
 
 #### off(eventName, listener)
 
-> **off**\<`EventName`\>(`eventName`, `listener`): `this`
+> **off**\<`K`\>(`eventName`, `listener`): `this`
 
 Alias for `emitter.removeListener()`.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **K**
 
 ##### Parameters
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
-• **listener**: [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>
+• **listener**
 
 ##### Returns
 
@@ -2272,7 +2494,39 @@ v10.0.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:842
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:747
+
+#### off(eventName, listener)
+
+> **off**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Alias for `emitter.removeListener()`.
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `number` \| `symbol`
+
+##### Parameters
+
+• **eventName**: `EventName`
+
+• **listener**: [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>
+
+##### Returns
+
+`this`
+
+##### Since
+
+v10.0.0
+
+##### Inherited from
+
+[`Transform`](Transform.md).[`off`](Transform.md#off)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
 
 #### off(eventName, listener)
 
@@ -2286,7 +2540,7 @@ node\_modules/@types/node/events.d.ts:842
 
 • **eventName**: `EventName`
 
-• **listener**: [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>
+• **listener**: [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
@@ -2298,7 +2552,7 @@ node\_modules/@types/node/events.d.ts:842
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:846
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:846
 
 ***
 
@@ -2357,11 +2611,38 @@ v0.1.101
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1192
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1192
 
 #### on(event, listener)
 
 > **on**(`event`, `listener`): `this`
+
+Adds the `listener` function to the end of the listeners array for the event
+named `eventName`. No checks are made to see if the `listener` has already
+been added. Multiple calls passing the same combination of `eventName` and
+`listener` will result in the `listener` being added, and called, multiple times.
+
+```js
+server.on('connection', (stream) => {
+  console.log('someone connected!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+By default, event listeners are invoked in the order they are added. The `emitter.prependListener()` method can be used as an alternative to add the
+event listener to the beginning of the listeners array.
+
+```js
+import { EventEmitter } from 'node:events';
+const myEE = new EventEmitter();
+myEE.on('foo', () => console.log('a'));
+myEE.prependListener('foo', () => console.log('b'));
+myEE.emit('foo');
+// Prints:
+//   b
+//   a
+```
 
 ##### Parameters
 
@@ -2369,9 +2650,15 @@ node\_modules/@types/node/stream.d.ts:1192
 
 • **listener**
 
+The callback function
+
 ##### Returns
 
 `this`
+
+##### Since
+
+v0.1.101
 
 ##### Inherited from
 
@@ -2379,7 +2666,7 @@ node\_modules/@types/node/stream.d.ts:1192
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1193
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1193
 
 #### on(event, listener)
 
@@ -2401,7 +2688,7 @@ node\_modules/@types/node/stream.d.ts:1193
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1194
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1194
 
 #### on(event, listener)
 
@@ -2423,7 +2710,7 @@ node\_modules/@types/node/stream.d.ts:1194
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1195
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1195
 
 #### on(event, listener)
 
@@ -2445,7 +2732,7 @@ node\_modules/@types/node/stream.d.ts:1195
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1196
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1196
 
 #### on(event, listener)
 
@@ -2467,7 +2754,7 @@ node\_modules/@types/node/stream.d.ts:1196
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1197
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1197
 
 #### on(event, listener)
 
@@ -2489,7 +2776,7 @@ node\_modules/@types/node/stream.d.ts:1197
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1198
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1198
 
 #### on(event, listener)
 
@@ -2511,7 +2798,7 @@ node\_modules/@types/node/stream.d.ts:1198
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1199
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1199
 
 #### on(event, listener)
 
@@ -2533,7 +2820,7 @@ node\_modules/@types/node/stream.d.ts:1199
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1200
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1200
 
 #### on(event, listener)
 
@@ -2555,7 +2842,7 @@ node\_modules/@types/node/stream.d.ts:1200
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1201
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1201
 
 #### on(event, listener)
 
@@ -2577,7 +2864,7 @@ node\_modules/@types/node/stream.d.ts:1201
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1202
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1202
 
 #### on(event, listener)
 
@@ -2599,7 +2886,7 @@ node\_modules/@types/node/stream.d.ts:1202
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1203
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1203
 
 ***
 
@@ -2656,11 +2943,36 @@ v0.3.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1204
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1204
 
 #### once(event, listener)
 
 > **once**(`event`, `listener`): `this`
+
+Adds a **one-time** `listener` function for the event named `eventName`. The
+next time `eventName` is triggered, this listener is removed and then invoked.
+
+```js
+server.once('connection', (stream) => {
+  console.log('Ah, we have our first user!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+By default, event listeners are invoked in the order they are added. The `emitter.prependOnceListener()` method can be used as an alternative to add the
+event listener to the beginning of the listeners array.
+
+```js
+import { EventEmitter } from 'node:events';
+const myEE = new EventEmitter();
+myEE.once('foo', () => console.log('a'));
+myEE.prependOnceListener('foo', () => console.log('b'));
+myEE.emit('foo');
+// Prints:
+//   b
+//   a
+```
 
 ##### Parameters
 
@@ -2668,9 +2980,15 @@ node\_modules/@types/node/stream.d.ts:1204
 
 • **listener**
 
+The callback function
+
 ##### Returns
 
 `this`
+
+##### Since
+
+v0.3.0
 
 ##### Inherited from
 
@@ -2678,7 +2996,7 @@ node\_modules/@types/node/stream.d.ts:1204
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1205
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1205
 
 #### once(event, listener)
 
@@ -2700,7 +3018,7 @@ node\_modules/@types/node/stream.d.ts:1205
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1206
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1206
 
 #### once(event, listener)
 
@@ -2722,7 +3040,7 @@ node\_modules/@types/node/stream.d.ts:1206
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1207
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1207
 
 #### once(event, listener)
 
@@ -2744,7 +3062,7 @@ node\_modules/@types/node/stream.d.ts:1207
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1208
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1208
 
 #### once(event, listener)
 
@@ -2766,7 +3084,7 @@ node\_modules/@types/node/stream.d.ts:1208
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1209
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1209
 
 #### once(event, listener)
 
@@ -2788,7 +3106,7 @@ node\_modules/@types/node/stream.d.ts:1209
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1210
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1210
 
 #### once(event, listener)
 
@@ -2810,7 +3128,7 @@ node\_modules/@types/node/stream.d.ts:1210
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1211
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1211
 
 #### once(event, listener)
 
@@ -2832,7 +3150,7 @@ node\_modules/@types/node/stream.d.ts:1211
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1212
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1212
 
 #### once(event, listener)
 
@@ -2854,7 +3172,7 @@ node\_modules/@types/node/stream.d.ts:1212
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1213
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1213
 
 #### once(event, listener)
 
@@ -2876,7 +3194,7 @@ node\_modules/@types/node/stream.d.ts:1213
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1214
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1214
 
 #### once(event, listener)
 
@@ -2898,7 +3216,7 @@ node\_modules/@types/node/stream.d.ts:1214
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1215
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1215
 
 ***
 
@@ -2939,7 +3257,7 @@ v0.9.4
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:259
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:259
 
 ***
 
@@ -2949,7 +3267,7 @@ node\_modules/@types/node/stream.d.ts:259
 
 #### Type Parameters
 
-• **T** *extends* [`WritableStream`](../../../interfaces/WritableStream.md)
+• **T** *extends* `WritableStream`
 
 #### Parameters
 
@@ -2969,7 +3287,7 @@ node\_modules/@types/node/stream.d.ts:259
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:30
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:30
 
 ***
 
@@ -3014,11 +3332,24 @@ v6.0.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1216
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1216
 
 #### prependListener(event, listener)
 
 > **prependListener**(`event`, `listener`): `this`
+
+Adds the `listener` function to the _beginning_ of the listeners array for the
+event named `eventName`. No checks are made to see if the `listener` has
+already been added. Multiple calls passing the same combination of `eventName`
+and `listener` will result in the `listener` being added, and called, multiple times.
+
+```js
+server.prependListener('connection', (stream) => {
+  console.log('someone connected!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Parameters
 
@@ -3026,9 +3357,15 @@ node\_modules/@types/node/stream.d.ts:1216
 
 • **listener**
 
+The callback function
+
 ##### Returns
 
 `this`
+
+##### Since
+
+v6.0.0
 
 ##### Inherited from
 
@@ -3036,7 +3373,7 @@ node\_modules/@types/node/stream.d.ts:1216
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1217
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1217
 
 #### prependListener(event, listener)
 
@@ -3058,7 +3395,7 @@ node\_modules/@types/node/stream.d.ts:1217
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1218
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1218
 
 #### prependListener(event, listener)
 
@@ -3080,7 +3417,7 @@ node\_modules/@types/node/stream.d.ts:1218
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1219
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1219
 
 #### prependListener(event, listener)
 
@@ -3102,7 +3439,7 @@ node\_modules/@types/node/stream.d.ts:1219
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1220
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1220
 
 #### prependListener(event, listener)
 
@@ -3124,7 +3461,7 @@ node\_modules/@types/node/stream.d.ts:1220
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1221
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1221
 
 #### prependListener(event, listener)
 
@@ -3146,7 +3483,7 @@ node\_modules/@types/node/stream.d.ts:1221
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1222
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1222
 
 #### prependListener(event, listener)
 
@@ -3168,7 +3505,7 @@ node\_modules/@types/node/stream.d.ts:1222
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1223
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1223
 
 #### prependListener(event, listener)
 
@@ -3190,7 +3527,7 @@ node\_modules/@types/node/stream.d.ts:1223
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1224
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1224
 
 #### prependListener(event, listener)
 
@@ -3212,7 +3549,7 @@ node\_modules/@types/node/stream.d.ts:1224
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1225
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1225
 
 #### prependListener(event, listener)
 
@@ -3234,7 +3571,7 @@ node\_modules/@types/node/stream.d.ts:1225
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1226
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1226
 
 #### prependListener(event, listener)
 
@@ -3256,7 +3593,7 @@ node\_modules/@types/node/stream.d.ts:1226
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1227
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1227
 
 ***
 
@@ -3299,11 +3636,22 @@ v6.0.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1228
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1228
 
 #### prependOnceListener(event, listener)
 
 > **prependOnceListener**(`event`, `listener`): `this`
+
+Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
+listener is removed, and then invoked.
+
+```js
+server.prependOnceListener('connection', (stream) => {
+  console.log('Ah, we have our first user!');
+});
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Parameters
 
@@ -3311,9 +3659,15 @@ node\_modules/@types/node/stream.d.ts:1228
 
 • **listener**
 
+The callback function
+
 ##### Returns
 
 `this`
+
+##### Since
+
+v6.0.0
 
 ##### Inherited from
 
@@ -3321,7 +3675,7 @@ node\_modules/@types/node/stream.d.ts:1228
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1229
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1229
 
 #### prependOnceListener(event, listener)
 
@@ -3343,7 +3697,7 @@ node\_modules/@types/node/stream.d.ts:1229
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1230
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1230
 
 #### prependOnceListener(event, listener)
 
@@ -3365,7 +3719,7 @@ node\_modules/@types/node/stream.d.ts:1230
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1231
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1231
 
 #### prependOnceListener(event, listener)
 
@@ -3387,7 +3741,7 @@ node\_modules/@types/node/stream.d.ts:1231
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1232
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1232
 
 #### prependOnceListener(event, listener)
 
@@ -3409,7 +3763,7 @@ node\_modules/@types/node/stream.d.ts:1232
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1233
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1233
 
 #### prependOnceListener(event, listener)
 
@@ -3431,7 +3785,7 @@ node\_modules/@types/node/stream.d.ts:1233
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1234
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1234
 
 #### prependOnceListener(event, listener)
 
@@ -3453,7 +3807,7 @@ node\_modules/@types/node/stream.d.ts:1234
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1235
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1235
 
 #### prependOnceListener(event, listener)
 
@@ -3475,7 +3829,7 @@ node\_modules/@types/node/stream.d.ts:1235
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1236
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1236
 
 #### prependOnceListener(event, listener)
 
@@ -3497,7 +3851,7 @@ node\_modules/@types/node/stream.d.ts:1236
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1237
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1237
 
 #### prependOnceListener(event, listener)
 
@@ -3519,7 +3873,7 @@ node\_modules/@types/node/stream.d.ts:1237
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1238
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1238
 
 #### prependOnceListener(event, listener)
 
@@ -3541,7 +3895,7 @@ node\_modules/@types/node/stream.d.ts:1238
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1239
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1239
 
 ***
 
@@ -3565,7 +3919,7 @@ node\_modules/@types/node/stream.d.ts:1239
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:415
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:415
 
 ***
 
@@ -3573,7 +3927,7 @@ node\_modules/@types/node/stream.d.ts:415
 
 #### rawListeners(eventName)
 
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **rawListeners**\<`K`\>(`eventName`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -3605,15 +3959,15 @@ emitter.emit('log');
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **K**
 
 ##### Parameters
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 ##### Returns
 
-[`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+`Function`[]
 
 ##### Since
 
@@ -3625,11 +3979,67 @@ v9.4.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:928
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:818
 
 #### rawListeners(eventName)
 
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+
+Returns a copy of the array of listeners for the event named `eventName`,
+including any wrappers (such as those created by `.once()`).
+
+```js
+import { EventEmitter } from 'node:events';
+const emitter = new EventEmitter();
+emitter.once('log', () => console.log('log once'));
+
+// Returns a new Array with a function `onceWrapper` which has a property
+// `listener` which contains the original listener bound above
+const listeners = emitter.rawListeners('log');
+const logFnWrapper = listeners[0];
+
+// Logs "log once" to the console and does not unbind the `once` event
+logFnWrapper.listener();
+
+// Logs "log once" to the console and removes the listener
+logFnWrapper();
+
+emitter.on('log', () => console.log('log persistently'));
+// Will return a new Array with a single function bound by `.on()` above
+const newListeners = emitter.rawListeners('log');
+
+// Logs "log persistently" twice
+newListeners[0]();
+emitter.emit('log');
+```
+
+##### Type Parameters
+
+• **EventName** *extends* `string` \| `number` \| `symbol`
+
+##### Parameters
+
+• **eventName**: `EventName`
+
+##### Returns
+
+[`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+
+##### Since
+
+v9.4.0
+
+##### Inherited from
+
+[`Transform`](Transform.md).[`rawListeners`](Transform.md#rawlisteners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:928
+
+#### rawListeners(eventName)
+
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
 
 ##### Type Parameters
 
@@ -3641,7 +4051,7 @@ node\_modules/@types/node/events.d.ts:928
 
 ##### Returns
 
-[`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
 
 ##### Inherited from
 
@@ -3649,7 +4059,7 @@ node\_modules/@types/node/events.d.ts:928
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:931
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:931
 
 ***
 
@@ -3751,7 +4161,7 @@ v0.9.4
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:212
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:212
 
 ***
 
@@ -3802,7 +4212,7 @@ v17.5.0
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:564
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:564
 
 #### reduce(fn, initial, options)
 
@@ -3830,11 +4240,43 @@ node\_modules/@types/node/stream.d.ts:564
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:569
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:569
 
 ***
 
 ### removeAllListeners()
+
+#### removeAllListeners(eventName)
+
+> **removeAllListeners**(`eventName`?): `this`
+
+Removes all listeners, or those of the specified `eventName`.
+
+It is bad practice to remove listeners added elsewhere in the code,
+particularly when the `EventEmitter` instance was created by some other
+component or module (e.g. sockets or file streams).
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+##### Parameters
+
+• **eventName?**: `string` \| `symbol`
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.1.26
+
+##### Inherited from
+
+[`Transform`](Transform.md).[`removeAllListeners`](Transform.md#removealllisteners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:758
 
 #### removeAllListeners(eventName)
 
@@ -3850,7 +4292,7 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+• **EventName** *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
@@ -3870,7 +4312,7 @@ v0.1.26
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:861
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
 
 #### removeAllListeners(eventName)
 
@@ -3894,7 +4336,7 @@ node\_modules/@types/node/events.d.ts:861
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:862
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:862
 
 ***
 
@@ -4004,11 +4446,91 @@ v0.1.26
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1240
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1240
 
 #### removeListener(event, listener)
 
 > **removeListener**(`event`, `listener`): `this`
+
+Removes the specified `listener` from the listener array for the event named `eventName`.
+
+```js
+const callback = (stream) => {
+  console.log('someone connected!');
+};
+server.on('connection', callback);
+// ...
+server.removeListener('connection', callback);
+```
+
+`removeListener()` will remove, at most, one instance of a listener from the
+listener array. If any single listener has been added multiple times to the
+listener array for the specified `eventName`, then `removeListener()` must be
+called multiple times to remove each instance.
+
+Once an event is emitted, all listeners attached to it at the
+time of emitting are called in order. This implies that any `removeListener()` or `removeAllListeners()` calls _after_ emitting and _before_ the last listener finishes execution
+will not remove them from`emit()` in progress. Subsequent events behave as expected.
+
+```js
+import { EventEmitter } from 'node:events';
+class MyEmitter extends EventEmitter {}
+const myEmitter = new MyEmitter();
+
+const callbackA = () => {
+  console.log('A');
+  myEmitter.removeListener('event', callbackB);
+};
+
+const callbackB = () => {
+  console.log('B');
+};
+
+myEmitter.on('event', callbackA);
+
+myEmitter.on('event', callbackB);
+
+// callbackA removes listener callbackB but it will still be called.
+// Internal listener array at time of emit [callbackA, callbackB]
+myEmitter.emit('event');
+// Prints:
+//   A
+//   B
+
+// callbackB is now removed.
+// Internal listener array [callbackA]
+myEmitter.emit('event');
+// Prints:
+//   A
+```
+
+Because listeners are managed using an internal array, calling this will
+change the position indices of any listener registered _after_ the listener
+being removed. This will not impact the order in which listeners are called,
+but it means that any copies of the listener array as returned by
+the `emitter.listeners()` method will need to be recreated.
+
+When a single function has been added as a handler multiple times for a single
+event (as in the example below), `removeListener()` will remove the most
+recently added instance. In the example the `once('ping')` listener is removed:
+
+```js
+import { EventEmitter } from 'node:events';
+const ee = new EventEmitter();
+
+function pong() {
+  console.log('pong');
+}
+
+ee.on('ping', pong);
+ee.once('ping', pong);
+ee.removeListener('ping', pong);
+
+ee.emit('ping');
+ee.emit('ping');
+```
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Parameters
 
@@ -4020,13 +4542,17 @@ node\_modules/@types/node/stream.d.ts:1240
 
 `this`
 
+##### Since
+
+v0.1.26
+
 ##### Inherited from
 
 [`Transform`](Transform.md).[`removeListener`](Transform.md#removelistener)
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1241
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1241
 
 #### removeListener(event, listener)
 
@@ -4048,7 +4574,7 @@ node\_modules/@types/node/stream.d.ts:1241
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1242
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1242
 
 #### removeListener(event, listener)
 
@@ -4070,7 +4596,7 @@ node\_modules/@types/node/stream.d.ts:1242
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1243
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1243
 
 #### removeListener(event, listener)
 
@@ -4092,7 +4618,7 @@ node\_modules/@types/node/stream.d.ts:1243
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1244
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1244
 
 #### removeListener(event, listener)
 
@@ -4114,7 +4640,7 @@ node\_modules/@types/node/stream.d.ts:1244
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1245
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1245
 
 #### removeListener(event, listener)
 
@@ -4136,7 +4662,7 @@ node\_modules/@types/node/stream.d.ts:1245
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1246
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1246
 
 #### removeListener(event, listener)
 
@@ -4158,7 +4684,7 @@ node\_modules/@types/node/stream.d.ts:1246
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1247
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1247
 
 #### removeListener(event, listener)
 
@@ -4180,7 +4706,7 @@ node\_modules/@types/node/stream.d.ts:1247
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1248
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1248
 
 #### removeListener(event, listener)
 
@@ -4202,7 +4728,7 @@ node\_modules/@types/node/stream.d.ts:1248
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1249
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1249
 
 #### removeListener(event, listener)
 
@@ -4224,7 +4750,7 @@ node\_modules/@types/node/stream.d.ts:1249
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1250
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1250
 
 #### removeListener(event, listener)
 
@@ -4246,7 +4772,7 @@ node\_modules/@types/node/stream.d.ts:1250
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1251
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1251
 
 ***
 
@@ -4284,7 +4810,7 @@ v0.9.4
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:278
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:278
 
 ***
 
@@ -4314,7 +4840,7 @@ v0.11.15
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1123
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1123
 
 ***
 
@@ -4363,11 +4889,13 @@ v0.9.4
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:237
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:237
 
 ***
 
 ### setMaxListeners()
+
+#### setMaxListeners(n)
 
 > **setMaxListeners**(`n`): `this`
 
@@ -4378,25 +4906,56 @@ modified for this specific `EventEmitter` instance. The value can be set to `Inf
 
 Returns a reference to the `EventEmitter`, so that calls can be chained.
 
-#### Parameters
+##### Parameters
 
 • **n**: `number`
 
-#### Returns
+##### Returns
 
 `this`
 
-#### Since
+##### Since
 
 v0.3.5
 
-#### Inherited from
+##### Inherited from
 
 [`Transform`](Transform.md).[`setMaxListeners`](Transform.md#setmaxlisteners)
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/events.d.ts:873
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:768
+
+#### setMaxListeners(n)
+
+> **setMaxListeners**(`n`): `this`
+
+By default `EventEmitter`s will print a warning if more than `10` listeners are
+added for a particular event. This is a useful default that helps finding
+memory leaks. The `emitter.setMaxListeners()` method allows the limit to be
+modified for this specific `EventEmitter` instance. The value can be set to `Infinity` (or `0`) to indicate an unlimited number of listeners.
+
+Returns a reference to the `EventEmitter`, so that calls can be chained.
+
+##### Parameters
+
+• **n**: `number`
+
+##### Returns
+
+`this`
+
+##### Since
+
+v0.3.5
+
+##### Inherited from
+
+[`Transform`](Transform.md).[`setMaxListeners`](Transform.md#setmaxlisteners)
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873
 
 ***
 
@@ -4433,7 +4992,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:483
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:483
 
 ***
 
@@ -4467,7 +5026,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:542
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:542
 
 ***
 
@@ -4500,7 +5059,7 @@ v17.5.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:473
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:473
 
 ***
 
@@ -4553,7 +5112,7 @@ v0.11.2
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1128
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1128
 
 ***
 
@@ -4586,7 +5145,7 @@ setTimeout(() => {
 
 #### Parameters
 
-• **destination?**: [`WritableStream`](../../../interfaces/WritableStream.md)
+• **destination?**: `WritableStream`
 
 Optional specific stream to unpipe
 
@@ -4604,7 +5163,7 @@ v0.9.4
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:322
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:322
 
 ***
 
@@ -4697,7 +5256,7 @@ v0.9.11
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:388
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:388
 
 ***
 
@@ -4729,7 +5288,7 @@ myReader.on('readable', () => {
 
 #### Parameters
 
-• **stream**: [`ReadableStream`](../../../interfaces/ReadableStream.md)
+• **stream**: `ReadableStream`
 
 An "old style" readable stream
 
@@ -4747,7 +5306,7 @@ v0.9.4
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:414
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:414
 
 ***
 
@@ -4835,7 +5394,7 @@ v0.9.4
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1121
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1121
 
 #### write(chunk, cb)
 
@@ -4857,13 +5416,13 @@ node\_modules/@types/node/stream.d.ts:1121
 
 ##### Defined in
 
-node\_modules/@types/node/stream.d.ts:1122
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1122
 
 ***
 
 ### addAbortListener()
 
-> `static` **addAbortListener**(`signal`, `resource`): [`Disposable`](../../../interfaces/Disposable.md)
+> `static` **addAbortListener**(`signal`, `resource`): `Disposable`
 
 **`Experimental`**
 
@@ -4905,7 +5464,7 @@ function example(signal) {
 
 #### Returns
 
-[`Disposable`](../../../interfaces/Disposable.md)
+`Disposable`
 
 Disposable that removes the `abort` listener.
 
@@ -4919,7 +5478,7 @@ v20.5.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:490
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:437
 
 ***
 
@@ -4963,7 +5522,7 @@ v16.8.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1099
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1099
 
 ***
 
@@ -4999,15 +5558,13 @@ v17.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1143
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1143
 
 ***
 
 ### getEventListeners()
 
-#### getEventListeners(emitter, name)
-
-> `static` **getEventListeners**\<`Events`, `EventName`\>(`emitter`, `name`): [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -5034,55 +5591,27 @@ import { getEventListeners, EventEmitter } from 'node:events';
 }
 ```
 
-##### Type Parameters
+#### Parameters
 
-• **Events** *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](../../../classes/EventEmitter.md)\<`Events`\>
-
-• **name**: `EventName`
-
-##### Returns
-
-[`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
-
-##### Since
-
-v15.2.0, v14.17.0
-
-##### Inherited from
-
-[`Transform`](Transform.md).[`getEventListeners`](Transform.md#geteventlisteners)
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:404
-
-#### getEventListeners(emitter, name)
-
-> `static` **getEventListeners**(`emitter`, `name`): `Function`[]
-
-##### Parameters
-
-• **emitter**: `EventTarget` \| [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
+• **emitter**: `EventTarget` \| `EventEmitter`\<[`DefaultEventMap`](../../../type-aliases/DefaultEventMap.md), `object`\>
 
 • **name**: `string` \| `symbol`
 
-##### Returns
+#### Returns
 
 `Function`[]
 
-##### Inherited from
+#### Since
+
+v15.2.0, v14.17.0
+
+#### Inherited from
 
 [`Transform`](Transform.md).[`getEventListeners`](Transform.md#geteventlisteners)
 
-##### Defined in
+#### Defined in
 
-node\_modules/@types/node/events.d.ts:408
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:358
 
 ***
 
@@ -5118,7 +5647,7 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 #### Parameters
 
-• **emitter**: `EventTarget` \| [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
+• **emitter**: `EventTarget` \| `EventEmitter`\<[`DefaultEventMap`](../../../type-aliases/DefaultEventMap.md), `object`\>
 
 #### Returns
 
@@ -5134,7 +5663,7 @@ v19.9.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:440
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:387
 
 ***
 
@@ -5146,7 +5675,7 @@ Returns whether the stream has been read from or cancelled.
 
 #### Parameters
 
-• **stream**: [`ReadableStream`](../../../interfaces/ReadableStream.md) \| [`Readable`](../../../classes/Readable.md)
+• **stream**: `ReadableStream` \| [`Readable`](../../../classes/Readable.md)
 
 #### Returns
 
@@ -5162,65 +5691,11 @@ v16.8.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:65
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:65
 
 ***
 
 ### ~~listenerCount()~~
-
-#### listenerCount(emitter, eventName)
-
-> `static` **listenerCount**\<`Events`, `EventName`\>(`emitter`, `eventName`): `number`
-
-A class method that returns the number of listeners for the given `eventName` registered on the given `emitter`.
-
-```js
-import { EventEmitter, listenerCount } from 'node:events';
-
-const myEmitter = new EventEmitter();
-myEmitter.on('event', () => {});
-myEmitter.on('event', () => {});
-console.log(listenerCount(myEmitter, 'event'));
-// Prints: 2
-```
-
-##### Type Parameters
-
-• **Events** *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](../../../classes/EventEmitter.md)\<`Events`\>
-
-The emitter to query
-
-• **eventName**: `EventName`
-
-The event name
-
-##### Returns
-
-`number`
-
-##### Since
-
-v0.9.12
-
-##### Deprecated
-
-Since v3.2.0 - Use `listenerCount` instead.
-
-##### Inherited from
-
-[`Transform`](Transform.md).[`listenerCount`](Transform.md#listenercount-1)
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:355
-
-#### listenerCount(emitter, eventName)
 
 > `static` **listenerCount**(`emitter`, `eventName`): `number`
 
@@ -5236,9 +5711,9 @@ console.log(listenerCount(myEmitter, 'event'));
 // Prints: 2
 ```
 
-##### Parameters
+#### Parameters
 
-• **emitter**: [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
+• **emitter**: `EventEmitter`\<[`DefaultEventMap`](../../../type-aliases/DefaultEventMap.md), `object`\>
 
 The emitter to query
 
@@ -5246,25 +5721,25 @@ The emitter to query
 
 The event name
 
-##### Returns
+#### Returns
 
 `number`
 
-##### Since
+#### Since
 
 v0.9.12
 
-##### Deprecated
+#### Deprecated
 
 Since v3.2.0 - Use `listenerCount` instead.
 
-##### Inherited from
+#### Inherited from
 
 [`Transform`](Transform.md).[`listenerCount`](Transform.md#listenercount-1)
 
-##### Defined in
+#### Defined in
 
-node\_modules/@types/node/events.d.ts:376
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:330
 
 ***
 
@@ -5272,7 +5747,7 @@ node\_modules/@types/node/events.d.ts:376
 
 #### on(emitter, eventName, options)
 
-> `static` **on**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options`?): `AsyncIterator`\<[`Args`](../../../type-aliases/Args.md)\<`Events`, `EventName`\>, `any`, `any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): [`AsyncIterableIterator`](../../../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 ```js
 import { on, EventEmitter } from 'node:events';
@@ -5351,23 +5826,17 @@ for await (const event of on(ee, 'foo', { close: ['close'] })) {
 console.log('done'); // prints 'done'
 ```
 
-##### Type Parameters
-
-• **Events** *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](../../../classes/EventEmitter.md)\<`Events`\>
+• **emitter**: `EventEmitter`\<[`DefaultEventMap`](../../../type-aliases/DefaultEventMap.md), `object`\>
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 • **options?**: [`StaticEventEmitterIteratorOptions`](../../../interfaces/StaticEventEmitterIteratorOptions.md)
 
 ##### Returns
 
-`AsyncIterator`\<[`Args`](../../../type-aliases/Args.md)\<`Events`, `EventName`\>, `any`, `any`\>
+[`AsyncIterableIterator`](../../../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 An `AsyncIterator` that iterates `eventName` events emitted by the `emitter`
 
@@ -5381,35 +5850,11 @@ v13.6.0, v12.16.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:323
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:303
 
 #### on(emitter, eventName, options)
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[], `any`, `any`\>
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
-
-• **eventName**: `string` \| `symbol`
-
-• **options?**: [`StaticEventEmitterIteratorOptions`](../../../interfaces/StaticEventEmitterIteratorOptions.md)
-
-##### Returns
-
-`AsyncIterator`\<`any`[], `any`, `any`\>
-
-##### Inherited from
-
-[`Transform`](Transform.md).[`on`](Transform.md#on-1)
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:328
-
-#### on(emitter, eventName, options)
-
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[], `any`, `any`\>
+> `static` **on**(`emitter`, `eventName`, `options`?): [`AsyncIterableIterator`](../../../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 ##### Parameters
 
@@ -5421,7 +5866,7 @@ node\_modules/@types/node/events.d.ts:328
 
 ##### Returns
 
-`AsyncIterator`\<`any`[], `any`, `any`\>
+[`AsyncIterableIterator`](../../../interfaces/AsyncIterableIterator.md)\<`any`[], `any`, `any`\>
 
 ##### Inherited from
 
@@ -5429,7 +5874,7 @@ node\_modules/@types/node/events.d.ts:328
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:333
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:308
 
 ***
 
@@ -5437,7 +5882,7 @@ node\_modules/@types/node/events.d.ts:333
 
 #### once(emitter, eventName, options)
 
-> `static` **once**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options`?): `Promise`\<[`Args`](../../../type-aliases/Args.md)\<`Events`, `EventName`\>\>
+> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -5516,23 +5961,17 @@ ac.abort(); // Abort waiting for the event
 ee.emit('foo'); // Prints: Waiting for the event was canceled!
 ```
 
-##### Type Parameters
-
-• **Events** *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
-
-• **EventName** *extends* `string` \| `number` \| `symbol`
-
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](../../../classes/EventEmitter.md)\<`Events`\>
+• **emitter**: `EventEmitter`\<[`DefaultEventMap`](../../../type-aliases/DefaultEventMap.md), `object`\>
 
-• **eventName**: `EventName`
+• **eventName**: `string` \| `symbol`
 
 • **options?**: [`StaticEventEmitterOptions`](../../../interfaces/StaticEventEmitterOptions.md)
 
 ##### Returns
 
-`Promise`\<[`Args`](../../../type-aliases/Args.md)\<`Events`, `EventName`\>\>
+`Promise`\<`any`[]\>
 
 ##### Since
 
@@ -5544,31 +5983,7 @@ v11.13.0, v10.16.0
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:232
-
-#### once(emitter, eventName, options)
-
-> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
-
-##### Parameters
-
-• **emitter**: [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
-
-• **eventName**: `string` \| `symbol`
-
-• **options?**: [`StaticEventEmitterOptions`](../../../interfaces/StaticEventEmitterOptions.md)
-
-##### Returns
-
-`Promise`\<`any`[]\>
-
-##### Inherited from
-
-[`Transform`](Transform.md).[`once`](Transform.md#once-1)
-
-##### Defined in
-
-node\_modules/@types/node/events.d.ts:237
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:217
 
 #### once(emitter, eventName, options)
 
@@ -5592,7 +6007,7 @@ node\_modules/@types/node/events.d.ts:237
 
 ##### Defined in
 
-node\_modules/@types/node/events.d.ts:242
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:222
 
 ***
 
@@ -5615,7 +6030,7 @@ setMaxListeners(5, target, emitter);
 
 A non-negative number. The maximum number of listeners per `EventTarget` event.
 
-• ...**eventTargets?**: (`EventTarget` \| [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>)[]
+• ...**eventTargets?**: (`EventTarget` \| `EventEmitter`\<[`DefaultEventMap`](../../../type-aliases/DefaultEventMap.md), `object`\>)[]
 
 Zero or more {EventTarget} or {EventEmitter} instances. If none are specified, `n` is set as the default max for all newly created {EventTarget} and {EventEmitter}
 objects.
@@ -5634,7 +6049,7 @@ v15.4.0
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:455
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:402
 
 ***
 
@@ -5676,4 +6091,4 @@ v17.0.0
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1134
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1134

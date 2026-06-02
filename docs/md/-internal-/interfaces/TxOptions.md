@@ -6,7 +6,7 @@
 
 # Interface: TxOptions
 
-The options for initializing a [Transaction](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md).
+The options for initializing a [Transaction](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md).
 
 ## Properties
 
@@ -19,7 +19,7 @@ Gas cost for initcode size analysis will still be charged. Use with caution.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:62
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:62
 
 ***
 
@@ -38,7 +38,7 @@ Current default hardfork: `istanbul`
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:45
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:45
 
 ***
 
@@ -58,4 +58,4 @@ Default: true
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:57
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:57

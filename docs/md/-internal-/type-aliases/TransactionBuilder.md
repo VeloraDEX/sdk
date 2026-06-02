@@ -14,7 +14,7 @@
 
 ## Type Parameters
 
-• **ReturnType** = [`Transaction`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+• **ReturnType** = [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
 
 ## Parameters
 
@@ -24,7 +24,7 @@
 
 • **options.privateKey?**: [`HexString`](HexString.md) \| `Uint8Array`
 
-• **options.transaction**: [`Transaction`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+• **options.transaction**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
 
 • **options.web3Context**: [`Web3Context`](../classes/Web3Context.md)\<`API`\>
 
@@ -34,4 +34,4 @@
 
 ## Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:207
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:207

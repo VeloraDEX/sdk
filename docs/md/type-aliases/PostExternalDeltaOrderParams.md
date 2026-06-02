@@ -6,8 +6,8 @@
 
 # Type Alias: PostExternalDeltaOrderParams
 
-> **PostExternalDeltaOrderParams**: [`Omit`](../-internal-/type-aliases/Omit.md)\<[`DeltaOrderToPost`](../-internal-/type-aliases/DeltaOrderToPost.md)\<`"ExternalOrder"`\>, `"chainId"`\>
+> **PostExternalDeltaOrderParams**: [`Omit`](../-internal-/type-aliases/Omit.md)\<[`DeltaOrderToPost`](DeltaOrderToPost.md)\<`"ExternalOrder"`\>, `"chainId"`\>
 
 ## Defined in
 
-[src/methods/delta/postExternalDeltaOrder.ts:6](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/postExternalDeltaOrder.ts#L6)
+[src/methods/delta/postExternalDeltaOrder.ts:6](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postExternalDeltaOrder.ts#L6)

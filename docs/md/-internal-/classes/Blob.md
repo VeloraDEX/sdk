@@ -30,7 +30,7 @@ String sources are also copied into the `Blob`.
 
 • **sources**: (`ArrayBuffer` \| [`Blob`](Blob.md) \| [`BinaryLike`](../type-aliases/BinaryLike.md))[]
 
-• **options?**: [`BlobOptions`](../interfaces/BlobOptions.md)
+• **options?**: `BlobOptions`
 
 #### Returns
 
@@ -38,7 +38,7 @@ String sources are also copied into the `Blob`.
 
 #### Defined in
 
-node\_modules/@types/node/buffer.d.ts:171
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/buffer.d.ts:171
 
 ## Properties
 
@@ -54,7 +54,7 @@ v15.7.0, v14.18.0
 
 #### Defined in
 
-node\_modules/@types/node/buffer.d.ts:157
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/buffer.d.ts:157
 
 ***
 
@@ -70,7 +70,7 @@ v15.7.0, v14.18.0
 
 #### Defined in
 
-node\_modules/@types/node/buffer.d.ts:162
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/buffer.d.ts:162
 
 ## Methods
 
@@ -91,7 +91,7 @@ v15.7.0, v14.18.0
 
 #### Defined in
 
-node\_modules/@types/node/buffer.d.ts:177
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/buffer.d.ts:177
 
 ***
 
@@ -114,7 +114,7 @@ blob.bytes().then((bytes) => {
 
 #### Defined in
 
-node\_modules/@types/node/buffer.d.ts:188
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/buffer.d.ts:188
 
 ***
 
@@ -149,7 +149,7 @@ v15.7.0, v14.18.0
 
 #### Defined in
 
-node\_modules/@types/node/buffer.d.ts:197
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/buffer.d.ts:197
 
 ***
 
@@ -169,7 +169,7 @@ v16.7.0
 
 #### Defined in
 
-node\_modules/@types/node/buffer.d.ts:208
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/buffer.d.ts:208
 
 ***
 
@@ -190,4 +190,4 @@ v15.7.0, v14.18.0
 
 #### Defined in
 
-node\_modules/@types/node/buffer.d.ts:203
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/buffer.d.ts:203

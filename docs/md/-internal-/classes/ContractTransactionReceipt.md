@@ -39,7 +39,7 @@ A **ContractTransactionReceipt** includes the parsed logs from a
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:59
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:59
 
 ## Properties
 
@@ -55,7 +55,7 @@ The price paid per BLOB in gas. See [[link-eip-4844]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:614
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:614
 
 ***
 
@@ -71,7 +71,7 @@ The gas used for BLObs. See [[link-eip-4844]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:594
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:594
 
 ***
 
@@ -87,7 +87,7 @@ The block hash of the [[Block]] this transaction was included in.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:572
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:572
 
 ***
 
@@ -103,7 +103,7 @@ The block number of the [[Block]] this transaction was included in.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:576
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:576
 
 ***
 
@@ -123,7 +123,7 @@ The address of the contract if the transaction was directly
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:560
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:560
 
 ***
 
@@ -143,7 +143,7 @@ The amount of gas used by all transactions within the block for this
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:602
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:602
 
 ***
 
@@ -159,7 +159,7 @@ The sender of the transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:552
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:552
 
 ***
 
@@ -179,7 +179,7 @@ The actual gas price used during execution.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:610
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:610
 
 ***
 
@@ -199,7 +199,7 @@ The actual amount of gas used by this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:590
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:590
 
 ***
 
@@ -215,7 +215,7 @@ The transaction hash.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:564
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:564
 
 ***
 
@@ -231,7 +231,7 @@ The index of this transaction within the block transactions.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:568
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:568
 
 ***
 
@@ -249,7 +249,7 @@ The bloom filter bytes that represent all logs that occurred within
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:582
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:582
 
 ***
 
@@ -266,7 +266,7 @@ The provider connected to the log used to fetch additional details
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:544
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:544
 
 ***
 
@@ -285,7 +285,7 @@ The root hash of this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:633
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:633
 
 ***
 
@@ -305,7 +305,7 @@ The status of this transaction, indicating success (i.e. ``1``) or
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:626
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:626
 
 ***
 
@@ -321,7 +321,7 @@ The address the transaction was sent to.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:548
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:548
 
 ***
 
@@ -337,7 +337,7 @@ The [[link-eip-2718]] transaction type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:618
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:618
 
 ## Accessors
 
@@ -359,7 +359,7 @@ The total fee for this transaction, in wei.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:654
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:654
 
 ***
 
@@ -381,7 +381,7 @@ node\_modules/ethers/lib.commonjs/providers/provider.d.ts:654
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:649
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:649
 
 ***
 
@@ -406,7 +406,7 @@ The logs emitted during the execution of this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:64
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:64
 
 ## Methods
 
@@ -424,7 +424,7 @@ node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:64
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:650
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:650
 
 ***
 
@@ -444,7 +444,7 @@ Resolves to the number of confirmations this transaction has.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:673
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:673
 
 ***
 
@@ -464,7 +464,7 @@ Resolves to the block this transaction occurred in.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:658
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:658
 
 ***
 
@@ -487,7 +487,7 @@ Resolves to the return value of the execution of this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:669
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:669
 
 ***
 
@@ -507,7 +507,7 @@ Resolves to the transaction this transaction occurred in.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:662
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:662
 
 ***
 
@@ -527,7 +527,7 @@ node\_modules/ethers/lib.commonjs/providers/provider.d.ts:662
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:677
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:677
 
 ***
 
@@ -551,7 +551,7 @@ node\_modules/ethers/lib.commonjs/providers/provider.d.ts:677
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:681
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:681
 
 ***
 
@@ -571,4 +571,4 @@ Returns a JSON-compatible representation.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:645
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:645

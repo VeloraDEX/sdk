@@ -38,7 +38,7 @@ An **EventLog** contains additional properties parsed from the [[Log]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:27
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:27
 
 ## Properties
 
@@ -54,7 +54,7 @@ The address of the contract that emitted this log.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:486
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:486
 
 ***
 
@@ -66,7 +66,7 @@ The parsed arguments passed to the event by ``emit``.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:23
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:23
 
 ***
 
@@ -83,7 +83,7 @@ The block hash of the block this log occurred in. Use the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:468
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:468
 
 ***
 
@@ -102,7 +102,7 @@ The block number of the block this log occurred in. It is preferred
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:475
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:475
 
 ***
 
@@ -118,7 +118,7 @@ The data included in this log when it was emitted.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:490
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:490
 
 ***
 
@@ -130,7 +130,7 @@ The matching event.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:19
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:19
 
 ***
 
@@ -148,7 +148,7 @@ The index within the block this log occurred at. This is generally
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:503
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:503
 
 ***
 
@@ -160,7 +160,7 @@ The Contract Interface.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:15
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:15
 
 ***
 
@@ -177,7 +177,7 @@ The provider connected to the log used to fetch additional details
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:458
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:458
 
 ***
 
@@ -196,7 +196,7 @@ If the **Log** represents a block that was removed due to an orphaned
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:482
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:482
 
 ***
 
@@ -215,7 +215,7 @@ The indexed topics included in this log when it was emitted.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:497
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:497
 
 ***
 
@@ -232,7 +232,7 @@ The transaction hash of the transaction this log occurred in. Use the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:463
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:463
 
 ***
 
@@ -248,7 +248,7 @@ The index within the transaction of this log.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:507
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:507
 
 ## Accessors
 
@@ -266,7 +266,7 @@ The name of the event.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:31
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:31
 
 ***
 
@@ -284,7 +284,7 @@ The signature of the event.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:35
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:35
 
 ## Methods
 
@@ -304,7 +304,7 @@ Returns the block that this log occurred in.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:519
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:519
 
 ***
 
@@ -324,7 +324,7 @@ Returns the transaction that this log occurred in.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:523
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:523
 
 ***
 
@@ -345,7 +345,7 @@ Returns the transaction receipt fot the transaction that this
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:528
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:528
 
 ***
 
@@ -365,7 +365,7 @@ node\_modules/ethers/lib.commonjs/providers/provider.d.ts:528
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:532
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:532
 
 ***
 
@@ -385,4 +385,4 @@ Returns a JSON-compatible object.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:515
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:515

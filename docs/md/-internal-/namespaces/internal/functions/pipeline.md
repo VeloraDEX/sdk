@@ -8,7 +8,7 @@
 
 ## pipeline(source, destination, callback)
 
-> **pipeline**\<`A`, `B`\>(`source`, `destination`, `callback`): `B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+> **pipeline**\<`A`, `B`\>(`source`, `destination`, `callback`): `B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 A module method to pipe between streams and generators forwarding errors and
 properly cleaning up and provide a callback when the pipeline is complete.
@@ -76,7 +76,7 @@ const server = http.createServer((req, res) => {
 
 • **A** *extends* [`PipelineSource`](../type-aliases/PipelineSource.md)\<`any`\>
 
-• **B** *extends* [`WritableStream`](../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -90,7 +90,7 @@ Called when the pipeline is fully done.
 
 ### Returns
 
-`B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+`B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 ### Since
 
@@ -98,11 +98,11 @@ v10.0.0
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1564
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1564
 
 ## pipeline(source, transform1, destination, callback)
 
-> **pipeline**\<`A`, `T1`, `B`\>(`source`, `transform1`, `destination`, `callback`): `B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+> **pipeline**\<`A`, `T1`, `B`\>(`source`, `transform1`, `destination`, `callback`): `B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 ### Type Parameters
 
@@ -110,7 +110,7 @@ node\_modules/@types/node/stream.d.ts:1564
 
 • **T1** *extends* [`PipelineTransform`](../type-aliases/PipelineTransform.md)\<`A`, `any`\>
 
-• **B** *extends* [`WritableStream`](../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -124,15 +124,15 @@ node\_modules/@types/node/stream.d.ts:1564
 
 ### Returns
 
-`B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+`B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1569
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1569
 
 ## pipeline(source, transform1, transform2, destination, callback)
 
-> **pipeline**\<`A`, `T1`, `T2`, `B`\>(`source`, `transform1`, `transform2`, `destination`, `callback`): `B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+> **pipeline**\<`A`, `T1`, `T2`, `B`\>(`source`, `transform1`, `transform2`, `destination`, `callback`): `B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 ### Type Parameters
 
@@ -142,7 +142,7 @@ node\_modules/@types/node/stream.d.ts:1569
 
 • **T2** *extends* [`PipelineTransform`](../type-aliases/PipelineTransform.md)\<`T1`, `any`\>
 
-• **B** *extends* [`WritableStream`](../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -158,15 +158,15 @@ node\_modules/@types/node/stream.d.ts:1569
 
 ### Returns
 
-`B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+`B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1579
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1579
 
 ## pipeline(source, transform1, transform2, transform3, destination, callback)
 
-> **pipeline**\<`A`, `T1`, `T2`, `T3`, `B`\>(`source`, `transform1`, `transform2`, `transform3`, `destination`, `callback`): `B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+> **pipeline**\<`A`, `T1`, `T2`, `T3`, `B`\>(`source`, `transform1`, `transform2`, `transform3`, `destination`, `callback`): `B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 ### Type Parameters
 
@@ -178,7 +178,7 @@ node\_modules/@types/node/stream.d.ts:1579
 
 • **T3** *extends* [`PipelineTransform`](../type-aliases/PipelineTransform.md)\<`T2`, `any`\>
 
-• **B** *extends* [`WritableStream`](../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -196,15 +196,15 @@ node\_modules/@types/node/stream.d.ts:1579
 
 ### Returns
 
-`B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+`B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1591
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1591
 
 ## pipeline(source, transform1, transform2, transform3, transform4, destination, callback)
 
-> **pipeline**\<`A`, `T1`, `T2`, `T3`, `T4`, `B`\>(`source`, `transform1`, `transform2`, `transform3`, `transform4`, `destination`, `callback`): `B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+> **pipeline**\<`A`, `T1`, `T2`, `T3`, `T4`, `B`\>(`source`, `transform1`, `transform2`, `transform3`, `transform4`, `destination`, `callback`): `B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 ### Type Parameters
 
@@ -218,7 +218,7 @@ node\_modules/@types/node/stream.d.ts:1591
 
 • **T4** *extends* [`PipelineTransform`](../type-aliases/PipelineTransform.md)\<`T3`, `any`\>
 
-• **B** *extends* [`WritableStream`](../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -238,46 +238,46 @@ node\_modules/@types/node/stream.d.ts:1591
 
 ### Returns
 
-`B` *extends* [`WritableStream`](../../../interfaces/WritableStream.md) ? `B` : [`WritableStream`](../../../interfaces/WritableStream.md)
+`B` *extends* `NodeJS.WritableStream` ? `B` : `NodeJS.WritableStream`
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1605
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1605
 
 ## pipeline(streams, callback)
 
-> **pipeline**(`streams`, `callback`): [`WritableStream`](../../../interfaces/WritableStream.md)
+> **pipeline**(`streams`, `callback`): `NodeJS.WritableStream`
 
 ### Parameters
 
-• **streams**: readonly ([`ReadableStream`](../../../interfaces/ReadableStream.md) \| [`WritableStream`](../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../interfaces/ReadWriteStream.md))[]
+• **streams**: readonly (`ReadableStream` \| `WritableStream` \| `ReadWriteStream`)[]
 
 • **callback**
 
 ### Returns
 
-[`WritableStream`](../../../interfaces/WritableStream.md)
+`NodeJS.WritableStream`
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1621
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1621
 
 ## pipeline(stream1, stream2, streams)
 
-> **pipeline**(`stream1`, `stream2`, ...`streams`): [`WritableStream`](../../../interfaces/WritableStream.md)
+> **pipeline**(`stream1`, `stream2`, ...`streams`): `NodeJS.WritableStream`
 
 ### Parameters
 
-• **stream1**: [`ReadableStream`](../../../interfaces/ReadableStream.md)
+• **stream1**: `ReadableStream`
 
-• **stream2**: [`WritableStream`](../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../interfaces/ReadWriteStream.md)
+• **stream2**: `WritableStream` \| `ReadWriteStream`
 
-• ...**streams**: ([`WritableStream`](../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../interfaces/ReadWriteStream.md) \| (`err`) => `void`)[]
+• ...**streams**: (`WritableStream` \| `ReadWriteStream` \| (`err`) => `void`)[]
 
 ### Returns
 
-[`WritableStream`](../../../interfaces/WritableStream.md)
+`NodeJS.WritableStream`
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1625
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1625

@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:31
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:31
 
 ***
 
@@ -40,7 +40,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:31
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:30
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:30
 
 ***
 
@@ -58,4 +58,4 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:30
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:29
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:29

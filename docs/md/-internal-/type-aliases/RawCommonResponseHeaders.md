@@ -6,7 +6,7 @@
 
 # Type Alias: RawCommonResponseHeaders
 
-> **RawCommonResponseHeaders**: `{ [Key in CommonResponseHeadersList]: AxiosHeaderValue }` & `object`
+> **RawCommonResponseHeaders**: `{ [Key in CommonResponseHeaderKey]: AxiosHeaderValue }` & `object`
 
 ## Type declaration
 
@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:96
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:131

@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:121](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L121)
+[src/methods/quote/getQuote.ts:121](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L121)
