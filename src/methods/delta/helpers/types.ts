@@ -1,6 +1,5 @@
 import type { EnumerateLiteral } from '../../../types';
 import { SwapSide } from '../../../constants';
-import { Prettify } from 'ts-essentials';
 
 export type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
@@ -200,52 +199,6 @@ export type TWAPBuyDeltaOrder = TWAPDeltaOrderBase & {
   maxSrcAmount: string; // wei
 };
 
-export type DeltaAuctionStatus =
-  | 'NOT_STARTED'
-  | 'AWAITING_PRE_SIGNATURE'
-  | 'RUNNING'
-  | 'EXECUTING'
-  | 'EXECUTED'
-  | 'FAILED'
-  | 'EXPIRED'
-  | 'CANCELLED'
-  | 'CANCELLING'
-  | 'SUSPENDED'
-  | 'REFUNDED';
-
-export type DeltaAuctionTransaction = {
-  id: string;
-  hash: string;
-  orderId: string;
-  bidId: string | null;
-  blockNumber: number;
-  blockHash: string;
-  blockTimestamp: string | null; // ISO string, null for older Orders
-  gasUsed: bigint;
-  gasPrice: bigint;
-  blobGasUsed: bigint;
-  blobGasPrice: bigint;
-  index: number;
-  status: number;
-  from: string;
-  to: string;
-  receivedAmount: string;
-  receivedAmountUSD: number;
-  spentAmount: string;
-  spentAmountUSD: number;
-  filledPercent: number; // in base points
-  protocolFee: string;
-  partnerFee: string;
-  agent: string;
-  auctionId: string;
-
-  // transactgion.bridge* fields = null for single-chain orders
-  bridgeMetadata: BridgeMetadata | null;
-  bridgeStatus: BridgeStatus | null;
-  bridgeProtocol: string | null;
-  bridgeOverride: Pick<Bridge, 'protocolSelector' | 'protocolData'> | null;
-};
-
 export type OnChainOrderMap = {
   Order: DeltaAuctionOrder;
   FillableOrder: DeltaAuctionOrder;
@@ -255,95 +208,7 @@ export type OnChainOrderMap = {
   ProductiveOrder: ProductiveDeltaOrder;
 };
 
-type BaseBridgeAuctionFields = Pick<
-  DeltaAuctionBase,
-  'bridgeMetadata' | 'bridgeStatus'
->;
-
-type BridgeAuctionFiledsMap = {
-  Order: BaseBridgeAuctionFields;
-  FillableOrder: BaseBridgeAuctionFields;
-  ExternalOrder: BaseBridgeAuctionFields;
-  TWAPOrder: Record<keyof BaseBridgeAuctionFields, null>;
-  TWAPBuyOrder: Record<keyof BaseBridgeAuctionFields, null>;
-  ProductiveOrder: BaseBridgeAuctionFields;
-};
-
-type DeltaAuctionBase = {
-  id: string;
-  deltaVersion: string; // 1.0 or 2.0 currently
-  user: string;
-  status: DeltaAuctionStatus;
-  orderHash: string | null; // not available on old Orders only
-  transactions: DeltaAuctionTransaction[];
-  chainId: number;
-  partner: string;
-  referrerAddress: string | null;
-  expiresAt: string;
-  createdAt: string;
-  updatedAt: string;
-  partiallyFillable: boolean;
-
-  excludeAgents: string[] | null;
-  includeAgents: string[] | null;
-
-  // bridge* fields = null for single-chain orders and all TWAP orders
-  bridgeMetadata: BridgeMetadata | null;
-  bridgeStatus: BridgeStatus | null;
-
-  type: DeltaOrderType;
-};
-
-export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
-  T extends T
-    ? Prettify<
-        DeltaAuctionBase & {
-          onChainOrderType: T;
-          order: OnChainOrderMap[T];
-        } & BridgeAuctionFiledsMap[T]
-      >
-    : never;
-
-export type DeltaAuctionDelta = DeltaAuction<'Order'>;
-export type DeltaAuctionFillable = DeltaAuction<'FillableOrder'>;
-export type DeltaAuctionExternal = DeltaAuction<'ExternalOrder'>;
-export type DeltaAuctionTWAP = DeltaAuction<'TWAPOrder'>;
-export type DeltaAuctionTWAPBuy = DeltaAuction<'TWAPBuyOrder'>;
-export type DeltaAuctionProductive = DeltaAuction<'ProductiveOrder'>;
-
-export type DeltaAuctionUnion =
-  | DeltaAuctionDelta
-  | DeltaAuctionFillable
-  | DeltaAuctionExternal
-  | DeltaAuctionTWAP
-  | DeltaAuctionTWAPBuy
-  | DeltaAuctionProductive;
-
 export type DeltaOrderUnion = OnChainOrderMap[keyof OnChainOrderMap];
-
-export type BridgeMetadata = {
-  /** @description Field is present after bridge is executed.
-   * The actual amount received from the bridge, which may differ
-   * from the expectedOutputAmount due to bridge slippage or other factors.
-   * */
-  outputAmount?: string;
-  /** @description Field is present iff: order was built via POST /v2/orders/build,
-   * the route is cross-chain (route.bridge !== null and not an external handler),
-   * and the order is posted before the per-order cache entry expires.
-   */
-  expectedOutputAmount?: string;
-  /** @description The cross-chain deadline. If deadline passes, the bridgeStatus would be expired */
-  fillDeadline?: number; // available for Across protocol
-  /** @description The deposit id */
-  depositId?: number; // available for Across protocol
-  /** @description The transaction hash on the destination chain that fulfilled the order. When bridgeStatus='filled' */
-  fillTx?: string;
-  /** @description The transaction hash on the source chain that refunded the deposit. When bridgeStatus='refunded' */
-  depositRefundTxHash?: string;
-};
-
-//                                                             refunded is basically failed
-export type BridgeStatus = 'pending' | 'filled' | 'expired' | 'refunded';
 
 export type OnChainOrderType = keyof OnChainOrderMap;
 
@@ -351,26 +216,6 @@ export type TWAPOnChainOrderType = 'TWAPOrder' | 'TWAPBuyOrder';
 
 /** @description Order kind: MARKET (immediate) vs LIMIT (rate-pegged). */
 export type DeltaOrderType = 'MARKET' | 'LIMIT';
-
-//// available on BridgePrice ////
-
-type BridgeQuoteFee = {
-  feeToken: string;
-  amount: string;
-  amountInSrcToken: string;
-  amountInUSD: string;
-};
-
-export type BridgePriceInfo = {
-  protocolName: string;
-  destAmountAfterBridge: string;
-  destUSDAfterBridge: string;
-  fees: BridgeQuoteFee[];
-  estimatedTimeMs: number;
-  fastest: boolean;
-  bestReturn: boolean;
-  recommended: boolean;
-};
 
 export type UnifiedDeltaOrderData = {
   /** @description  amounts at the start of Order execution and after Order execution. May differ from each other */

@@ -1,31 +1,19 @@
 import { DeltaAuction } from '../..';
 
-function isExecutedDeltaAuction(
-  auction: DeltaAuction,
-  waitForCrosschain = true // only consider executed when destChain work is done
-) {
-  if (auction.status !== 'EXECUTED') return false;
-
-  // crosschain Order is executed on destChain if bridgeStatus is filled
-  if (
-    waitForCrosschain &&
-    auction.onChainOrderType === 'Order' &&
-    auction.order.bridge.destinationChainId !== 0
-  ) {
-    return auction.bridgeStatus === 'filled';
-  }
-
-  return true;
+// v2 status COMPLETED already accounts for destChain bridge settlement
+// (crosschain orders sit in BRIDGING until the destChain leg is done).
+function isCompletedDeltaOrder(order: DeltaAuction) {
+  return order.status === 'COMPLETED';
 }
 
 type GetDeltaOrderFn = () => Promise<DeltaAuction>;
 
 function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrderFn) {
   const intervalId = setInterval(async () => {
-    const auction = await getDeltaOrder();
-    console.log('checks: ', auction); // Handle or log the fetched auction as needed
+    const order = await getDeltaOrder();
+    console.log('checks: ', order); // Handle or log the fetched order as needed
 
-    if (isExecutedDeltaAuction(auction)) {
+    if (isCompletedDeltaOrder(order)) {
       clearInterval(intervalId); // Stop interval if completed
       console.log('Order completed');
     }

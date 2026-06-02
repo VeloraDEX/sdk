@@ -40,74 +40,10 @@ const DAI_TOKEN = '0x6b175474e89094c44da98b954eedeac495271d0f';
 const USDC_TOKEN = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48';
 
 /**
- * mode='delta' example
+ * mode='all' returns Delta pricing when possible, with Market price as a fallback.
+ * (mode='delta' and mode='market' request a single pricing source.)
  */
-async function deltaQuote() {
-  const amount = '1000000000000'; // wei
-
-  const quote = await quoteSDK.getQuote({
-    srcToken: DAI_TOKEN,
-    destToken: USDC_TOKEN,
-    amount,
-    userAddress: account,
-    srcDecimals: 18,
-    destDecimals: 6,
-    mode: 'delta',
-    side: 'SELL',
-    // partner: "..." // if available
-  });
-
-  try {
-    const deltaPrice = quote.delta;
-    await handleDeltaQuote({ amount, deltaPrice });
-  } catch (error) {
-    if (isFetcherError(error)) {
-      const data = error.response?.data;
-      console.log(`Delta Quote failed: ${data.errorType} - ${data.details}`);
-    }
-  }
-}
-
-/**
- * mode='market' example
- */
-async function marketQuote() {
-  const amount = '1000000000000'; // wei
-
-  const quote = await quoteSDK.getQuote({
-    srcToken: DAI_TOKEN,
-    destToken: USDC_TOKEN,
-    amount,
-    userAddress: account,
-    srcDecimals: 18,
-    destDecimals: 6,
-    mode: 'market',
-    side: 'SELL',
-    // partner: "..." // if available
-  });
-
-  const TokenTransferProxy = await quoteSDK.getSpender();
-
-  // or sign a Permit1 or Permit2 TransferFrom for TokenTransferProxy
-  const approveTxHash = quoteSDK.approveToken(amount, DAI_TOKEN);
-
-  const txParams = await quoteSDK.buildTx({
-    srcToken: DAI_TOKEN,
-    destToken: USDC_TOKEN,
-    srcAmount: amount,
-    slippage: 250, // 2.5%
-    priceRoute: quote.market,
-    userAddress: account,
-    // partner: '...' // if available
-  });
-
-  const swapTx = await handleMarketQuote({ amount, priceRoute: quote.market });
-}
-
-/**
- * mode='all' example
- */
-async function allQuote() {
+async function quoteExample() {
   const amount = '1000000000000'; // wei
 
   const quote = await quoteSDK.getQuote({
@@ -123,16 +59,14 @@ async function allQuote() {
   });
 
   if ('delta' in quote) {
-    const deltaPrice = quote.delta;
-    await handleDeltaQuote({ amount, deltaPrice });
+    // Delta path — quote.delta is the v2 DeltaPrice (route-based)
+    await handleDeltaQuote({ amount, deltaPrice: quote.delta });
   } else {
     console.log(
       `Delta Quote failed: ${quote.fallbackReason.errorType} - ${quote.fallbackReason.details}`
     );
-    const swapTx = await handleMarketQuote({
-      amount,
-      priceRoute: quote.market,
-    });
+    // settle against the current market price instead
+    await handleMarketQuote({ amount, priceRoute: quote.market });
   }
 }
 
@@ -151,23 +85,14 @@ async function handleDeltaQuote({
   // or sign a Permit1 or Permit2 TransferFrom for DeltaContract
   await quoteSDK.approveTokenForDelta(amount, DAI_TOKEN);
 
-  const slippagePercent = 0.5;
-  const destAmountAfterSlippage = BigInt(
-    // get rid of exponential notation
-
-    +(+deltaPrice.destAmount * (1 - slippagePercent / 100)).toFixed(0)
-    // get rid of decimals
-  ).toString(10);
-
+  // v2 order building is server-side: pass the quoted route/side, no deltaPrice
   const deltaAuction = await quoteSDK.submitDeltaOrder({
-    deltaPrice,
+    route: deltaPrice.route, // or pick from deltaPrice.alternatives
+    side: deltaPrice.side,
     owner: account,
     // beneficiary: anotherAccount, // if need to send destToken to another account
     // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-    srcToken: DAI_TOKEN,
-    destToken: USDC_TOKEN,
-    srcAmount: amount,
-    destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
+    slippage: 50, // 50 bps = 0.5% slippage
   });
 
   // poll if necessary

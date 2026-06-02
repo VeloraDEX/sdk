@@ -7,7 +7,7 @@ import type {
   DeltaOrderUnion,
   OnChainOrderMap,
   OnChainOrderType,
-} from '../delta/helpers/types';
+} from './helpers/types';
 
 /** @description Response from POST /delta/v2/orders/build — EIP-712 typed data ready to sign. */
 export type BuiltDeltaOrder<T extends DeltaOrderUnion = DeltaOrderUnion> = {

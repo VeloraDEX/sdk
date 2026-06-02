@@ -129,15 +129,13 @@ import {
   GetQuoteFunctions,
 } from '../methods/quote/getQuote';
 import {
-  constructGetBridgeInfo,
-  GetBridgeInfoFunctions,
-} from '../methods/delta/getBridgeInfo';
+  constructGetBridgeRoutes,
+  GetBridgeRoutesFunctions,
+} from '../methods/delta/getBridgeRoutes';
 import {
   constructIsTokenSupportedInDelta,
   IsTokenSupportedInDeltaFunctions,
 } from '../methods/delta/isTokenSupportedInDelta';
-
-import * as DeltaV2 from '../methods/deltaV2';
 
 export type SwapFetchMethods = GetBalancesFunctions &
   GetTokensFunctions &
@@ -166,18 +164,9 @@ export type DeltaFetchMethods = BuildDeltaOrderFunctions &
   GetDeltaPriceFunctions &
   GetDeltaContractFunctions &
   GetPartnerFeeFunctions &
-  GetBridgeInfoFunctions &
+  GetBridgeRoutesFunctions &
   IsTokenSupportedInDeltaFunctions &
   PostDeltaOrderFunctions;
-
-export type DeltaV2FetchMethods = DeltaV2.BuildDeltaOrderFunctions &
-  DeltaV2.GetDeltaOrdersFunctions &
-  DeltaV2.GetDeltaPriceFunctions &
-  GetDeltaContractFunctions &
-  GetPartnerFeeFunctions &
-  DeltaV2.GetBridgeRoutesFunctions &
-  DeltaV2.IsTokenSupportedInDeltaFunctions &
-  DeltaV2.PostDeltaOrderFunctions;
 
 export type SimpleFetchSDK = {
   swap: SwapFetchMethods;
@@ -186,7 +175,6 @@ export type SimpleFetchSDK = {
   /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrdersFetchMethods;
   delta: DeltaFetchMethods;
-  deltaV2: DeltaV2FetchMethods;
   quote: QuoteFetchMethods;
 } & Required<ConstructBaseInput>;
 
@@ -199,7 +187,6 @@ export type SimpleSDK = {
   /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrderHandlers<TxHash>;
   delta: DeltaOrderHandlers<TxHash>;
-  deltaV2: DeltaV2.DeltaOrderHandlers<TxHash>;
   quote: QuoteFetchMethods;
 } & Required<ConstructBaseInput>;
 
@@ -307,20 +294,8 @@ export function constructSimpleSDK(
       constructGetDeltaPrice,
       constructGetDeltaContract,
       constructGetPartnerFee,
-      constructGetBridgeInfo,
+      constructGetBridgeRoutes,
       constructIsTokenSupportedInDelta
-    );
-
-    const deltaV2 = constructPartialSDK(
-      config,
-      DeltaV2.constructBuildDeltaOrder,
-      DeltaV2.constructPostDeltaOrder,
-      DeltaV2.constructGetDeltaOrders,
-      DeltaV2.constructGetDeltaPrice,
-      constructGetDeltaContract,
-      constructGetPartnerFee,
-      DeltaV2.constructGetBridgeRoutes,
-      DeltaV2.constructIsTokenSupportedInDelta
     );
 
     const quote = constructPartialSDK(config, constructGetQuote);
@@ -330,7 +305,6 @@ export function constructSimpleSDK(
       limitOrders,
       nftOrders,
       delta,
-      deltaV2,
       quote,
       apiURL: options.apiURL ?? API_URL,
       chainId: options.chainId,
@@ -359,9 +333,6 @@ export function constructSimpleSDK(
   const delta: DeltaOrderHandlers<TxHash> =
     constructAllDeltaOrdersHandlers<TxHash>(config);
 
-  const deltaV2: DeltaV2.DeltaOrderHandlers<TxHash> =
-    DeltaV2.constructAllDeltaOrdersHandlers<TxHash>(config);
-
   const quote = constructGetQuote(config);
 
   return {
@@ -369,7 +340,6 @@ export function constructSimpleSDK(
     limitOrders,
     nftOrders,
     delta,
-    deltaV2,
     quote,
     apiURL: options.apiURL ?? API_URL,
     chainId: options.chainId,

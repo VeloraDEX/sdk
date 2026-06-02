@@ -1,7 +1,7 @@
 import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type { DeltaAuction } from './helpers/types';
 import type { DeltaOrderToPost } from './postDeltaOrder';
+import type { DeltaAuction } from './types';
 
 export type PostExternalDeltaOrderParams = Omit<
   DeltaOrderToPost<'ExternalOrder'>,
@@ -22,7 +22,7 @@ export const constructPostExternalDeltaOrder = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): PostExternalDeltaOrderFunctions => {
-  const postOrderUrl = `${apiURL}/delta/orders` as const;
+  const postOrderUrl = `${apiURL}/delta/v2/orders` as const;
 
   const postExternalDeltaOrder: PostExternalDeltaOrder = (
     postData,
