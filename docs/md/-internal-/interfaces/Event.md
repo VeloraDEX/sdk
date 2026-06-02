@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:59
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:59
 
 ***
 
@@ -32,7 +32,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:59
 
 #### Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:49
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:49
 
 ***
 
@@ -46,7 +46,7 @@ node\_modules/@ethersproject/contracts/lib/index.d.ts:49
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:56
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:56
 
 ***
 
@@ -60,7 +60,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:56
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:55
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:55
 
 ***
 
@@ -74,7 +74,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:55
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:60
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:60
 
 ***
 
@@ -94,7 +94,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:60
 
 #### Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:51
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:51
 
 ***
 
@@ -104,7 +104,7 @@ node\_modules/@ethersproject/contracts/lib/index.d.ts:51
 
 #### Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:50
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:50
 
 ***
 
@@ -114,7 +114,7 @@ node\_modules/@ethersproject/contracts/lib/index.d.ts:50
 
 #### Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:47
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:47
 
 ***
 
@@ -124,7 +124,7 @@ node\_modules/@ethersproject/contracts/lib/index.d.ts:47
 
 #### Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:48
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:48
 
 ***
 
@@ -138,7 +138,7 @@ node\_modules/@ethersproject/contracts/lib/index.d.ts:48
 
 #### Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:53
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:53
 
 ***
 
@@ -152,7 +152,7 @@ node\_modules/@ethersproject/contracts/lib/index.d.ts:53
 
 #### Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:54
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:54
 
 ***
 
@@ -166,7 +166,7 @@ node\_modules/@ethersproject/contracts/lib/index.d.ts:54
 
 #### Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:55
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:55
 
 ***
 
@@ -180,7 +180,7 @@ node\_modules/@ethersproject/contracts/lib/index.d.ts:55
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:63
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:63
 
 ***
 
@@ -194,7 +194,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:63
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:58
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:58
 
 ***
 
@@ -208,7 +208,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:58
 
 #### Defined in
 
-node\_modules/@ethersproject/contracts/lib/index.d.ts:52
+node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:52
 
 ***
 
@@ -222,7 +222,7 @@ node\_modules/@ethersproject/contracts/lib/index.d.ts:52
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:61
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:61
 
 ***
 
@@ -236,7 +236,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:61
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:62
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:62
 
 ***
 
@@ -250,4 +250,4 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:62
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:57
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:57

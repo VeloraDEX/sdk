@@ -14,7 +14,7 @@ Returns whether the stream is readable.
 
 ## Parameters
 
-• **stream**: [`ReadableStream`](../../../interfaces/ReadableStream.md) \| [`Readable`](../../../classes/Readable.md)
+• **stream**: `ReadableStream` \| [`Readable`](../../../classes/Readable.md)
 
 ## Returns
 
@@ -26,4 +26,4 @@ v17.4.0, v16.14.0
 
 ## Defined in
 
-node\_modules/@types/node/stream.d.ts:1717
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1717

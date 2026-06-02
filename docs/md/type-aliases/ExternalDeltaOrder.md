@@ -124,4 +124,4 @@ The address of the src token
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:94](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L94)
+[src/methods/delta/helpers/types.ts:95](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L95)

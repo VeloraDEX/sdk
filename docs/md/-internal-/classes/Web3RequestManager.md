@@ -38,7 +38,7 @@
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:14
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:14
 
 ## Properties
 
@@ -48,7 +48,7 @@ node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:14
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:13
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:13
 
 ## Accessors
 
@@ -68,7 +68,7 @@ Returns the current provider
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:27
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:27
 
 ***
 
@@ -94,7 +94,7 @@ Will return all available providers
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:31
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:31
 
 ***
 
@@ -120,7 +120,7 @@ Will return all available providers
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:18
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:18
 
 ## Methods
 
@@ -148,7 +148,7 @@ node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:18
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
 
 ***
 
@@ -166,7 +166,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 ***
 
@@ -184,7 +184,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 ***
 
@@ -210,7 +210,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
 
 ***
 
@@ -236,7 +236,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
 
 ***
 
@@ -264,7 +264,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
 
 ***
 
@@ -292,7 +292,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
 
 ***
 
@@ -320,17 +320,17 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
 
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Returns
 
-[`EventEmitter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
 
 #### Inherited from
 
@@ -338,7 +338,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
@@ -356,9 +356,9 @@ Will execute a request
 
 #### Parameters
 
-• **request**: [`Web3APIRequest`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)\<`API`, `Method`\>
+• **request**: [`Web3APIRequest`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)\<`API`, `Method`\>
 
-[Web3APIRequest](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md) The request to send
+[Web3APIRequest](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md) The request to send
 
 #### Returns
 
@@ -369,7 +369,7 @@ in the response, will throw an error
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:51
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:51
 
 ***
 
@@ -391,7 +391,7 @@ Same as send, but, will execute a batch of requests
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:57
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:57
 
 ***
 
@@ -413,7 +413,7 @@ node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:57
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
 
 ***
 
@@ -431,7 +431,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:41
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:41
 
 ***
 
@@ -453,4 +453,4 @@ The provider to set
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:40
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:40

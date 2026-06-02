@@ -6,8 +6,8 @@
 
 # Type Alias: BuildDeltaOrderDataParams
 
-> **BuildDeltaOrderDataParams**: [`BuildDeltaOrderDataParamsBase`](../-internal-/type-aliases/BuildDeltaOrderDataParamsBase.md) & [`AmountsWithSlippage`](../-internal-/type-aliases/AmountsWithSlippage.md)
+> **BuildDeltaOrderDataParams**: [`BuildDeltaOrderDataParamsBase`](../-internal-/type-aliases/BuildDeltaOrderDataParamsBase.md) & [`DeltaAmountsWithSlippage`](DeltaAmountsWithSlippage.md)
 
 ## Defined in
 
-[src/methods/delta/buildDeltaOrder.ts:65](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L65)
+[src/methods/delta/buildDeltaOrder.ts:65](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L65)

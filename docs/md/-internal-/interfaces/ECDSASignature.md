@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:75
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:75
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:75
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:76
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:76
 
 ***
 
@@ -34,4 +34,4 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:76
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:74
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:74

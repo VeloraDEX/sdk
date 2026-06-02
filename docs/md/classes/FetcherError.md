@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[src/helpers/misc.ts:63](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/misc.ts#L63)
+[src/helpers/misc.ts:63](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L63)
 
 ## Properties
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[src/helpers/misc.ts:57](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/misc.ts#L57)
+[src/helpers/misc.ts:57](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L57)
 
 ***
 
@@ -62,7 +62,7 @@
 
 #### Defined in
 
-[src/helpers/misc.ts:61](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/misc.ts#L61)
+[src/helpers/misc.ts:61](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L61)
 
 ***
 
@@ -80,7 +80,7 @@
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1077
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -94,7 +94,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1076
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 ***
 
@@ -108,7 +108,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Defined in
 
-[src/helpers/misc.ts:59](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/misc.ts#L59)
+[src/helpers/misc.ts:59](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L59)
 
 ***
 
@@ -122,7 +122,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Defined in
 
-[src/helpers/misc.ts:60](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/misc.ts#L60)
+[src/helpers/misc.ts:60](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L60)
 
 ***
 
@@ -136,7 +136,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1078
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 ***
 
@@ -150,7 +150,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Defined in
 
-[src/helpers/misc.ts:58](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/misc.ts#L58)
+[src/helpers/misc.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L58)
 
 ***
 
@@ -164,7 +164,7 @@ Optional override for formatting stack traces
 
 • **err**: [`Error`](../-internal-/interfaces/Error.md)
 
-• **stackTraces**: [`CallSite`](../-internal-/interfaces/CallSite.md)[]
+• **stackTraces**: `CallSite`[]
 
 #### Returns
 
@@ -180,7 +180,7 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Defined in
 
-node\_modules/@types/node/globals.d.ts:143
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:143
 
 ***
 
@@ -194,30 +194,56 @@ node\_modules/@types/node/globals.d.ts:143
 
 #### Defined in
 
-node\_modules/@types/node/globals.d.ts:145
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:145
 
 ## Methods
 
 ### captureStackTrace()
 
+#### captureStackTrace(targetObject, constructorOpt)
+
 > `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
 
 Create .stack property on a target object
 
-#### Parameters
+##### Parameters
 
 • **targetObject**: `object`
 
 • **constructorOpt?**: `Function`
 
-#### Returns
+##### Returns
 
 `void`
 
-#### Inherited from
+##### Inherited from
 
 `Error.captureStackTrace`
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/globals.d.ts:136
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:136
+
+#### captureStackTrace(targetObject, constructorOpt)
+
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+
+Create .stack property on a target object
+
+##### Parameters
+
+• **targetObject**: `object`
+
+• **constructorOpt?**: `Function`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Error.captureStackTrace`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136

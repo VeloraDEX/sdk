@@ -14,7 +14,7 @@
 
 #### Defined in
 
-[src/helpers/providers/ethers.ts:30](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/providers/ethers.ts#L30)
+[src/helpers/providers/ethers.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/ethers.ts#L30)
 
 ***
 
@@ -24,4 +24,4 @@
 
 #### Defined in
 
-[src/helpers/providers/ethers.ts:29](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/providers/ethers.ts#L29)
+[src/helpers/providers/ethers.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/ethers.ts#L29)

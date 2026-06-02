@@ -6,8 +6,8 @@
 
 # Type Alias: FullValidationSchema
 
-> **FullValidationSchema**: `ReadonlyArray`\<[`AbiParameter`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)\>
+> **FullValidationSchema**: `ReadonlyArray`\<[`AbiParameter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)\>
 
 ## Defined in
 
-node\_modules/web3-validator/lib/commonjs/types.d.ts:7
+node\_modules/.pnpm/web3-validator@2.0.6/node\_modules/web3-validator/lib/commonjs/types.d.ts:7

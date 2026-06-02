@@ -16,6 +16,58 @@
 
 ## Methods
 
+### \[dispose\]()
+
+#### \[dispose\]()
+
+> **\[dispose\]**(): `void`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`IteratorObject.[dispose]`
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.disposable.d.ts:36
+
+#### \[dispose\]()
+
+> **\[dispose\]**(): `void`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`IteratorObject.[dispose]`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:11
+
+#### \[dispose\]()
+
+> **\[dispose\]**(): `void`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`IteratorObject.[dispose]`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:282
+
+***
+
 ### \[iterator\]()
 
 > **\[iterator\]**(): [`ArrayIterator`](ArrayIterator.md)\<`T`\>
@@ -30,7 +82,7 @@
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:73
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:73
 
 ***
 
@@ -52,7 +104,7 @@ node\_modules/typescript/lib/lib.es2015.iterable.d.ts:73
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
 
 ***
 
@@ -74,7 +126,7 @@ node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
 
 ***
 
@@ -96,4 +148,4 @@ node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:45
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:45

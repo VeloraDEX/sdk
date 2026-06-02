@@ -32,7 +32,7 @@
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:9
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:9
 
 ***
 
@@ -56,7 +56,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:9
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:8
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:8
 
 ***
 
@@ -80,7 +80,7 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:8
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:6
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:6
 
 ***
 
@@ -104,4 +104,4 @@ node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:6
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:7
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:7

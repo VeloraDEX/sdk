@@ -28,7 +28,7 @@ The [[link-eip-2930]] access list. Storage slots included in the access
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:125
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:125
 
 ***
 
@@ -44,7 +44,7 @@ Any blobs to include in the transaction (see [[link-eip-4844]]).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:158
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:158
 
 ***
 
@@ -60,7 +60,7 @@ The blob versioned hashes (see [[link-eip-4844]]).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:150
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:150
 
 ***
 
@@ -78,7 +78,7 @@ When using ``call`` or ``estimateGas``, this allows a specific
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:136
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:136
 
 ***
 
@@ -94,7 +94,7 @@ The chain ID for the network this transaction is valid on.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:119
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:119
 
 ***
 
@@ -111,7 +111,7 @@ A custom object, which can be passed along for network-specific
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:130
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:130
 
 ***
 
@@ -133,7 +133,7 @@ When using ``call``, this enables CCIP-read, which permits the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:146
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:146
 
 ***
 
@@ -149,7 +149,7 @@ The sender of the transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:83
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:83
 
 ***
 
@@ -165,7 +165,7 @@ The maximum amount of gas to allow this transaction to consume.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:91
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:91
 
 ***
 
@@ -184,7 +184,7 @@ The gas price to use for legacy transactions or transactions on
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:98
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:98
 
 ***
 
@@ -204,7 +204,7 @@ An external library for computing the KZG commitments and
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:166
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:166
 
 ***
 
@@ -220,7 +220,7 @@ The maximum fee per blob gas (see [[link-eip-4844]]).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:154
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:154
 
 ***
 
@@ -237,7 +237,7 @@ The [[link-eip-1559]] maximum total fee to pay per gas. The actual
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:107
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:107
 
 ***
 
@@ -253,7 +253,7 @@ The [[link-eip-1559]] maximum priority fee to pay per gas.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:102
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:102
 
 ***
 
@@ -269,7 +269,7 @@ The nonce of the transaction, used to prevent replay attacks.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:87
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:87
 
 ***
 
@@ -285,7 +285,7 @@ The transaction type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:75
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:75
 
 ***
 
@@ -301,4 +301,4 @@ The transaction value (in wei).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:115
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:115

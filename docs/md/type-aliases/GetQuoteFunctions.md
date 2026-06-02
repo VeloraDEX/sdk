@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/quote/getQuote.ts:117](https://github.com/VeloraDEX/sdk/blob/master/src/methods/quote/getQuote.ts#L117)
+[src/methods/quote/getQuote.ts:117](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L117)

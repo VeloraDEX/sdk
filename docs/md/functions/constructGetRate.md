@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/swap/rates.ts:210](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/rates.ts#L210)
+[src/methods/swap/rates.ts:210](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L210)

@@ -14,7 +14,7 @@
 
 • **A** *extends* [`PipelineSource`](../../../type-aliases/PipelineSource.md)\<`any`\>
 
-• **B** *extends* [`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -30,7 +30,7 @@
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1633
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1633
 
 ## \_\_promisify\_\_(source, transform1, destination, options)
 
@@ -42,7 +42,7 @@ node\_modules/@types/node/stream.d.ts:1633
 
 • **T1** *extends* [`PipelineTransform`](../../../type-aliases/PipelineTransform.md)\<`A`, `any`\>
 
-• **B** *extends* [`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -60,7 +60,7 @@ node\_modules/@types/node/stream.d.ts:1633
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1638
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1638
 
 ## \_\_promisify\_\_(source, transform1, transform2, destination, options)
 
@@ -74,7 +74,7 @@ node\_modules/@types/node/stream.d.ts:1638
 
 • **T2** *extends* [`PipelineTransform`](../../../type-aliases/PipelineTransform.md)\<`T1`, `any`\>
 
-• **B** *extends* [`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -94,7 +94,7 @@ node\_modules/@types/node/stream.d.ts:1638
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1648
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1648
 
 ## \_\_promisify\_\_(source, transform1, transform2, transform3, destination, options)
 
@@ -110,7 +110,7 @@ node\_modules/@types/node/stream.d.ts:1648
 
 • **T3** *extends* [`PipelineTransform`](../../../type-aliases/PipelineTransform.md)\<`T2`, `any`\>
 
-• **B** *extends* [`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -132,7 +132,7 @@ node\_modules/@types/node/stream.d.ts:1648
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1660
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1660
 
 ## \_\_promisify\_\_(source, transform1, transform2, transform3, transform4, destination, options)
 
@@ -150,7 +150,7 @@ node\_modules/@types/node/stream.d.ts:1660
 
 • **T4** *extends* [`PipelineTransform`](../../../type-aliases/PipelineTransform.md)\<`T3`, `any`\>
 
-• **B** *extends* [`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
+• **B** *extends* `WritableStream` \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`string` \| `Buffer`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`string` \| `Buffer`, `any`\> \| [`PipelineDestinationIterableFunction`](../../../type-aliases/PipelineDestinationIterableFunction.md)\<`any`\> \| [`PipelineDestinationPromiseFunction`](../../../type-aliases/PipelineDestinationPromiseFunction.md)\<`any`, `any`\>
 
 ### Parameters
 
@@ -174,7 +174,7 @@ node\_modules/@types/node/stream.d.ts:1660
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1674
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1674
 
 ## \_\_promisify\_\_(streams, options)
 
@@ -182,7 +182,7 @@ node\_modules/@types/node/stream.d.ts:1674
 
 ### Parameters
 
-• **streams**: readonly ([`ReadableStream`](../../../../../interfaces/ReadableStream.md) \| [`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../../../interfaces/ReadWriteStream.md))[]
+• **streams**: readonly (`ReadableStream` \| `WritableStream` \| `ReadWriteStream`)[]
 
 • **options?**: [`PipelineOptions`](../../../interfaces/PipelineOptions.md)
 
@@ -192,7 +192,7 @@ node\_modules/@types/node/stream.d.ts:1674
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1690
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1690
 
 ## \_\_promisify\_\_(stream1, stream2, streams)
 
@@ -200,11 +200,11 @@ node\_modules/@types/node/stream.d.ts:1690
 
 ### Parameters
 
-• **stream1**: [`ReadableStream`](../../../../../interfaces/ReadableStream.md)
+• **stream1**: `ReadableStream`
 
-• **stream2**: [`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../../../interfaces/ReadWriteStream.md)
+• **stream2**: `WritableStream` \| `ReadWriteStream`
 
-• ...**streams**: ([`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../../../interfaces/ReadWriteStream.md) \| [`PipelineOptions`](../../../interfaces/PipelineOptions.md))[]
+• ...**streams**: (`WritableStream` \| `ReadWriteStream` \| [`PipelineOptions`](../../../interfaces/PipelineOptions.md))[]
 
 ### Returns
 
@@ -212,4 +212,4 @@ node\_modules/@types/node/stream.d.ts:1690
 
 ### Defined in
 
-node\_modules/@types/node/stream.d.ts:1694
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1694

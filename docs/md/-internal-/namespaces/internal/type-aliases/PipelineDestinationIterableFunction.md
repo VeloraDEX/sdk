@@ -22,4 +22,4 @@
 
 ## Defined in
 
-node\_modules/@types/node/stream.d.ts:1482
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1482

@@ -16,7 +16,7 @@ The ArrayBuffer instance referenced by the array.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1726
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1726
 
 ***
 
@@ -28,7 +28,7 @@ The length in bytes of the array.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1731
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1731
 
 ***
 
@@ -40,4 +40,4 @@ The offset in bytes of the array.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1736
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1736

@@ -6,7 +6,7 @@
 
 # Type Alias: PipelineTransform\<S, U\>
 
-> **PipelineTransform**\<`S`, `U`\>: [`ReadWriteStream`](../../../interfaces/ReadWriteStream.md) \| (`source`) => [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`U`\>
+> **PipelineTransform**\<`S`, `U`\>: `NodeJS.ReadWriteStream` \| (`source`) => [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`U`\>
 
 ## Type Parameters
 
@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/@types/node/stream.d.ts:1475
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1475

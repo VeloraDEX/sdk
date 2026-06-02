@@ -18,7 +18,7 @@
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:108
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:108
 
 ***
 
@@ -39,7 +39,7 @@ Currently supported:
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:72
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:72
 
 ***
 
@@ -49,7 +49,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:72
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:109
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:109
 
 ***
 
@@ -67,7 +67,7 @@ Default: Hardfork.London
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:63
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:63
 
 ***
 
@@ -77,4 +77,4 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:63
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:110
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:110

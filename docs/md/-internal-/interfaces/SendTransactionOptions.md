@@ -8,7 +8,7 @@
 
 ## Type Parameters
 
-• **ResolveType** = [`TransactionReceipt`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+• **ResolveType** = [`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
 
 ## Properties
 
@@ -18,7 +18,7 @@
 
 #### Defined in
 
-node\_modules/web3-eth/lib/commonjs/types.d.ts:23
+node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/types.d.ts:23
 
 ***
 
@@ -28,7 +28,7 @@ node\_modules/web3-eth/lib/commonjs/types.d.ts:23
 
 #### Defined in
 
-node\_modules/web3-eth/lib/commonjs/types.d.ts:22
+node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/types.d.ts:22
 
 ***
 
@@ -38,7 +38,7 @@ node\_modules/web3-eth/lib/commonjs/types.d.ts:22
 
 #### Defined in
 
-node\_modules/web3-eth/lib/commonjs/types.d.ts:24
+node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/types.d.ts:24
 
 ***
 
@@ -48,7 +48,7 @@ node\_modules/web3-eth/lib/commonjs/types.d.ts:24
 
 #### Defined in
 
-node\_modules/web3-eth/lib/commonjs/types.d.ts:20
+node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/types.d.ts:20
 
 ***
 
@@ -58,7 +58,7 @@ node\_modules/web3-eth/lib/commonjs/types.d.ts:20
 
 #### Parameters
 
-• **receipt**: [`TransactionReceipt`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+• **receipt**: [`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
 
 #### Returns
 
@@ -66,4 +66,4 @@ node\_modules/web3-eth/lib/commonjs/types.d.ts:20
 
 #### Defined in
 
-node\_modules/web3-eth/lib/commonjs/types.d.ts:21
+node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/types.d.ts:21

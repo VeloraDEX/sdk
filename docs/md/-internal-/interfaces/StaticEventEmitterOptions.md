@@ -20,4 +20,4 @@ Can be used to cancel awaiting events.
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:83
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:82

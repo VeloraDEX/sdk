@@ -26,4 +26,4 @@
 
 ## Defined in
 
-[src/methods/delta/deltaTokenModule.ts:51](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L51)
+[src/methods/delta/deltaTokenModule.ts:65](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L65)

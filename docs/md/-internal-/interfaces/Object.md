@@ -16,7 +16,7 @@ The initial value of Object.prototype.constructor is the standard built-in Objec
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:125
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:125
 
 ## Methods
 
@@ -38,7 +38,7 @@ A property name.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:140
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:140
 
 ***
 
@@ -60,7 +60,7 @@ Another object whose prototype chain is to be checked.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:146
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:146
 
 ***
 
@@ -82,7 +82,7 @@ A property name.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:152
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:152
 
 ***
 
@@ -98,7 +98,7 @@ Returns a date converted to a string using the current locale.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:131
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:131
 
 ***
 
@@ -114,7 +114,7 @@ Returns a string representation of an object.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:128
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:128
 
 ***
 
@@ -130,4 +130,4 @@ Returns the primitive value of the specified object.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:134
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:134

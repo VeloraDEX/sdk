@@ -22,4 +22,4 @@ A single [[AccessList]] entry of storage keys (slots) for an address.
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/index.d.ts:9
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/index.d.ts:9

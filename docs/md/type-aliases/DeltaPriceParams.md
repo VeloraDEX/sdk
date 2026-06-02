@@ -140,4 +140,4 @@ User's Wallet Address
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:14](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L14)
+[src/methods/delta/getDeltaPrice.ts:14](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L14)

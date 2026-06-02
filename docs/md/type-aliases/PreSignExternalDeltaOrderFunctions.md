@@ -32,4 +32,4 @@
 
 ## Defined in
 
-[src/methods/delta/preSignExternalDeltaOrder.ts:39](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/preSignExternalDeltaOrder.ts#L39)
+[src/methods/delta/preSignExternalDeltaOrder.ts:39](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignExternalDeltaOrder.ts#L39)

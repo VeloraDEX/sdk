@@ -44,7 +44,7 @@ Creates a new contract connected to %%target%% with the %%abi%% and
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:56
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:56
 
 ## Properties
 
@@ -56,7 +56,7 @@ node\_modules/ethers/lib.commonjs/contract/contract.d.ts:56
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:46
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:46
 
 ***
 
@@ -68,7 +68,7 @@ The fallback or receive function if any.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:50
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:50
 
 ***
 
@@ -80,7 +80,7 @@ All the Events available on this contract.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:42
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:42
 
 ***
 
@@ -92,7 +92,7 @@ The contract Interface.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:30
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:30
 
 ***
 
@@ -108,7 +108,7 @@ The connected runner. This is generally a [[Provider]] or a
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:38
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:38
 
 ***
 
@@ -124,7 +124,7 @@ The target to connect to.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:26
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:26
 
 ## Methods
 
@@ -150,7 +150,7 @@ Alias for [on].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:147
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:147
 
 ***
 
@@ -171,7 +171,7 @@ Return a new Contract instance with the same ABI and runner, but
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:66
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:66
 
 ***
 
@@ -192,7 +192,7 @@ Return a new Contract instance with the same target and ABI, but
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:61
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:61
 
 ***
 
@@ -211,7 +211,7 @@ Return the transaction used to deploy this contract.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:86
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:86
 
 ***
 
@@ -239,7 +239,7 @@ Emit an %%event%% calling all listeners with %%args%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:123
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:123
 
 ***
 
@@ -259,7 +259,7 @@ Return the resolved address of this Contract.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:70
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:70
 
 ***
 
@@ -275,7 +275,7 @@ Return the deployed bytecode or null if no bytecode is found.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:74
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:74
 
 ***
 
@@ -297,7 +297,7 @@ Return the event for a given name. This is useful when a contract
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:98
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:98
 
 ***
 
@@ -323,7 +323,7 @@ Return the function for a given name. This is useful when a contract
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:92
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:92
 
 ***
 
@@ -348,7 +348,7 @@ Resolves to the number of listeners of %%event%% or the total number
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:128
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:128
 
 ***
 
@@ -373,7 +373,7 @@ Resolves to the listeners subscribed to %%event%% or all listeners
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:133
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:133
 
 ***
 
@@ -400,7 +400,7 @@ Remove the %%listener%% from the listeners for %%event%% or remove
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:138
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:138
 
 ***
 
@@ -426,7 +426,7 @@ Add an event %%listener%% for the %%event%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:112
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:112
 
 ***
 
@@ -453,7 +453,7 @@ Add an event %%listener%% for the %%event%%, but remove the listener
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:117
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:117
 
 ***
 
@@ -479,7 +479,7 @@ Provide historic access to event data for %%event%% in the range
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:108
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:108
 
 ***
 
@@ -499,7 +499,7 @@ node\_modules/ethers/lib.commonjs/contract/contract.d.ts:108
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:102
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:102
 
 ***
 
@@ -524,7 +524,7 @@ Remove all the listeners for %%event%% or remove all listeners if
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:143
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:143
 
 ***
 
@@ -550,7 +550,7 @@ Alias for [off].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:151
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:151
 
 ***
 
@@ -567,7 +567,7 @@ Resolve to this Contract once the bytecode has been deployed, or
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:79
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:79
 
 ***
 
@@ -601,7 +601,7 @@ Create a new Class for the %%abi%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:155
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:155
 
 ***
 
@@ -629,4 +629,4 @@ Create a new BaseContract with a specified Interface.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/contract.d.ts:159
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:159

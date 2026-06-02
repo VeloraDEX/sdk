@@ -8,7 +8,7 @@
 
 ## Extended by
 
-- [`Eip1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-utils_lib_commonjs_index/classes/Eip1193Provider.md)
+- [`Eip1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/Eip1193Provider.md)
 
 ## Type Parameters
 
@@ -16,9 +16,9 @@
 
 ## Implements
 
-- [`LegacySendProvider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md)
-- [`LegacySendAsyncProvider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md)
-- [`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md)\<`API`\>
+- [`LegacySendProvider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md)
+- [`LegacySendAsyncProvider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md)
+- [`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md)\<`API`\>
 
 ## Constructors
 
@@ -44,7 +44,7 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:67
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:67
 
 ## Methods
 
@@ -74,7 +74,7 @@ console.log(result); // '0x0234c8a3397aab58' or something like that
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:97
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:97
 
 ***
 
@@ -88,7 +88,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:97
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:116
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:116
 
 ***
 
@@ -108,7 +108,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:116
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:117
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:117
 
 ***
 
@@ -122,7 +122,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:117
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:68
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:68
 
 ***
 
@@ -144,11 +144,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:68
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:99
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:99
 
 #### on(type, listener)
 
@@ -170,11 +170,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:99
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:100
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:100
 
 #### on(type, listener)
 
@@ -196,11 +196,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:100
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:101
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:101
 
 #### on(type, listener)
 
@@ -218,11 +218,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:101
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:102
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:102
 
 #### on(type, listener)
 
@@ -240,11 +240,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:102
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:103
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:103
 
 #### on(type, listener)
 
@@ -266,7 +266,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:103
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:104
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:104
 
 ***
 
@@ -288,7 +288,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:104
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:110
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:110
 
 #### once(type, listener)
 
@@ -310,7 +310,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:110
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:111
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:111
 
 #### once(type, listener)
 
@@ -328,7 +328,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:111
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:112
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:112
 
 #### once(type, listener)
 
@@ -346,7 +346,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:112
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:113
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:113
 
 #### once(type, listener)
 
@@ -364,7 +364,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:113
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:114
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:114
 
 ***
 
@@ -382,7 +382,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:114
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:115
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:115
 
 ***
 
@@ -404,11 +404,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:115
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:105
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:105
 
 #### removeListener(type, listener)
 
@@ -430,11 +430,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:105
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:106
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:106
 
 #### removeListener(type, listener)
 
@@ -452,11 +452,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:106
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:107
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:107
 
 #### removeListener(type, listener)
 
@@ -474,11 +474,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:107
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:108
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:108
 
 #### removeListener(type, listener)
 
@@ -496,11 +496,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:108
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
 
 ##### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:109
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:109
 
 ***
 
@@ -524,11 +524,11 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:109
 
 #### Implementation of
 
-[`EIP1193Provider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`request`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#request)
+[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`request`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#request)
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:98
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:98
 
 ***
 
@@ -542,7 +542,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:98
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:118
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:118
 
 ***
 
@@ -576,11 +576,11 @@ Please use `.request` instead.
 
 #### Implementation of
 
-[`LegacySendProvider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md).[`send`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md#send)
+[`LegacySendProvider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md).[`send`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md#send)
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:75
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:75
 
 ***
 
@@ -610,11 +610,11 @@ Please use `.request` instead.
 
 #### Implementation of
 
-[`LegacySendAsyncProvider`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md).[`sendAsync`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md#sendasync)
+[`LegacySendAsyncProvider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md).[`sendAsync`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md#sendasync)
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:80
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:80
 
 ***
 
@@ -628,7 +628,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:80
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:69
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:69
 
 ***
 
@@ -646,4 +646,4 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:69
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:66
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:66

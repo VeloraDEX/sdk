@@ -34,7 +34,7 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/properties/lib/index.d.ts:13
+node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
 
 ## Properties
 
@@ -44,7 +44,7 @@ node\_modules/@ethersproject/properties/lib/index.d.ts:13
 
 #### Defined in
 
-node\_modules/@ethersproject/abi/lib/interface.d.ts:32
+node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:32
 
 ***
 
@@ -54,7 +54,7 @@ node\_modules/@ethersproject/abi/lib/interface.d.ts:32
 
 #### Defined in
 
-node\_modules/@ethersproject/abi/lib/interface.d.ts:31
+node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:31
 
 ## Methods
 
@@ -72,4 +72,4 @@ node\_modules/@ethersproject/abi/lib/interface.d.ts:31
 
 #### Defined in
 
-node\_modules/@ethersproject/abi/lib/interface.d.ts:33
+node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:33

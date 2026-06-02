@@ -14,17 +14,17 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:324
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:324
 
 ***
 
 ### customChain
 
-> **customChain**: [`CustomChain`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/CustomChain.md)
+> **customChain**: [`CustomChain`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/CustomChain.md)
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:323
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:323
 
 ***
 
@@ -34,4 +34,4 @@ node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:323
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:325
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:325

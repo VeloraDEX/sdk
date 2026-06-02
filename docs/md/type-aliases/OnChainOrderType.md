@@ -6,8 +6,8 @@
 
 # Type Alias: OnChainOrderType
 
-> **OnChainOrderType**: `"Order"` \| `"ExternalOrder"`
+> **OnChainOrderType**: `"Order"` \| `"ExternalOrder"` \| `"TWAPOrder"` \| `"TWAPBuyOrder"`
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:218](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L218)
+[src/methods/delta/helpers/types.ts:297](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L297)

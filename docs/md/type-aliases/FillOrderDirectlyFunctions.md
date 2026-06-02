@@ -24,4 +24,4 @@ Limit Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/limitOrders/fillOrderDirectly.ts:16](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/fillOrderDirectly.ts#L16)
+[src/methods/limitOrders/fillOrderDirectly.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/fillOrderDirectly.ts#L16)

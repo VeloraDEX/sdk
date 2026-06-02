@@ -28,4 +28,4 @@ NFT Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/nftOrders/signOrder.ts:6](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/signOrder.ts#L6)
+[src/methods/nftOrders/signOrder.ts:6](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/signOrder.ts#L6)

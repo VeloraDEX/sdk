@@ -10,9 +10,9 @@
 
 ## Type Parameters
 
-• **Abi** *extends* [`AbiFunctionFragment`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
+• **Abi** *extends* [`AbiFunctionFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
 
-• **Method** *extends* [`ContractMethod`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\> = [`ContractMethod`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\>
+• **Method** *extends* [`ContractMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\> = [`ContractMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\>
 
 ## Parameters
 
@@ -24,4 +24,4 @@
 
 ## Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract.d.ts:7
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract.d.ts:7

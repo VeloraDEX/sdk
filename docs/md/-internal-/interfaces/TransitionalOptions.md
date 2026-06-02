@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:234
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:282
 
 ***
 
@@ -24,7 +24,17 @@ node\_modules/axios/index.d.ts:234
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:233
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:281
+
+***
+
+### legacyInterceptorReqResOrdering?
+
+> `optional` **legacyInterceptorReqResOrdering**: `boolean`
+
+#### Defined in
+
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:283
 
 ***
 
@@ -34,4 +44,4 @@ node\_modules/axios/index.d.ts:233
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:232
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:280

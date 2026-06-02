@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:31
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:31
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:31
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:37
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:37
 
 ***
 
@@ -34,7 +34,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:37
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:39
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:39
 
 ***
 
@@ -44,7 +44,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:39
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:40
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:40
 
 ***
 
@@ -54,7 +54,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:40
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:33
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:33
 
 ***
 
@@ -64,7 +64,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:33
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:35
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:35
 
 ***
 
@@ -74,7 +74,17 @@ node\_modules/@paraswap/core/build/constants.d.ts:35
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:42
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:42
+
+***
+
+### swapExactAmountInPro
+
+> **swapExactAmountInPro**: `"swapExactAmountInPro"`
+
+#### Defined in
+
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:43
 
 ***
 
@@ -84,7 +94,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:42
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:32
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:32
 
 ***
 
@@ -94,7 +104,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:32
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:38
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:38
 
 ***
 
@@ -104,7 +114,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:38
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:34
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:34
 
 ***
 
@@ -114,7 +124,17 @@ node\_modules/@paraswap/core/build/constants.d.ts:34
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:36
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:36
+
+***
+
+### swapExactAmountOutPro
+
+> **swapExactAmountOutPro**: `"swapExactAmountOutPro"`
+
+#### Defined in
+
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:44
 
 ***
 
@@ -124,4 +144,4 @@ node\_modules/@paraswap/core/build/constants.d.ts:36
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:41
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:41

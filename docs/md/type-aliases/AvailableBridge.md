@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:115](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L115)
+[src/methods/delta/getDeltaPrice.ts:115](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L115)

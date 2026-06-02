@@ -40,4 +40,4 @@
 
 ## Defined in
 
-[src/helpers/misc.ts:35](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/misc.ts#L35)
+[src/helpers/misc.ts:35](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L35)

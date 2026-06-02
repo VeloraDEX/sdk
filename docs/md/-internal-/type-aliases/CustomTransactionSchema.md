@@ -20,4 +20,4 @@
 
 ## Defined in
 
-node\_modules/web3-core/lib/commonjs/types.d.ts:20
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:20

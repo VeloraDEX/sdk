@@ -4,16 +4,18 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Listener
 
-# Type Alias: Listener\<Events, EventName\>
+# Type Alias: Listener\<K, T, F\>
 
-> **Listener**\<`Events`, `EventName`\>: `EventName` *extends* keyof `Events` ? (...`args`) => `void` \| `EventName` *extends* keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md) ? (...`args`) => `void` : `never` : `EventName` *extends* keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md) ? (...`args`) => `void` : (...`args`) => `void`
+> **Listener**\<`K`, `T`, `F`\>: `T` *extends* [`DefaultEventMap`](DefaultEventMap.md) ? `F` : `K` *extends* keyof `T` ? `T`\[`K`\] *extends* `unknown`[] ? (...`args`) => `void` : `never` : `never`
 
 ## Type Parameters
 
-• **Events** *extends* [`EventMap`](EventMap.md)\<`Events`\>
+• **K**
 
-• **EventName**
+• **T**
+
+• **F**
 
 ## Defined in
 
-node\_modules/@types/node/events.d.ts:116
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:111

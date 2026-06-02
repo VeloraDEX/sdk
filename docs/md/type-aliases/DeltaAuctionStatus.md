@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:125](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L125)
+[src/methods/delta/helpers/types.ts:168](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L168)

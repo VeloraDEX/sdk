@@ -40,7 +40,7 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/properties/lib/index.d.ts:13
+node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
 
 ## Properties
 
@@ -50,7 +50,7 @@ node\_modules/@ethersproject/properties/lib/index.d.ts:13
 
 #### Defined in
 
-node\_modules/@ethersproject/abi/lib/interface.d.ts:26
+node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:26
 
 ***
 
@@ -60,7 +60,7 @@ node\_modules/@ethersproject/abi/lib/interface.d.ts:26
 
 #### Defined in
 
-node\_modules/@ethersproject/abi/lib/interface.d.ts:24
+node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:24
 
 ***
 
@@ -70,7 +70,7 @@ node\_modules/@ethersproject/abi/lib/interface.d.ts:24
 
 #### Defined in
 
-node\_modules/@ethersproject/abi/lib/interface.d.ts:25
+node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:25
 
 ***
 
@@ -80,7 +80,7 @@ node\_modules/@ethersproject/abi/lib/interface.d.ts:25
 
 #### Defined in
 
-node\_modules/@ethersproject/abi/lib/interface.d.ts:28
+node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:28
 
 ***
 
@@ -90,4 +90,4 @@ node\_modules/@ethersproject/abi/lib/interface.d.ts:28
 
 #### Defined in
 
-node\_modules/@ethersproject/abi/lib/interface.d.ts:27
+node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:27

@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:3
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:3
 
 ## Properties
 
@@ -32,7 +32,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:3
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:2
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:2
 
 ## Methods
 
@@ -52,7 +52,7 @@ Is address equal to another.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:11
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:11
 
 ***
 
@@ -68,7 +68,7 @@ Is address zero.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:15
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:15
 
 ***
 
@@ -84,7 +84,7 @@ Returns Uint8Array representation of address.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:23
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:23
 
 ***
 
@@ -100,7 +100,7 @@ Returns hex encoding of address.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:19
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:19
 
 ***
 
@@ -125,7 +125,7 @@ Accept public keys in other formats
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:30
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:30
 
 ***
 
@@ -141,4 +141,4 @@ Returns the zero address.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:7
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:7

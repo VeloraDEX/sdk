@@ -16,7 +16,6 @@
 
 - [Abortable](interfaces/Abortable.md)
 - [EventEmitterAsyncResourceOptions](interfaces/EventEmitterAsyncResourceOptions.md)
-- [EventEmitterBuiltInEventMap](interfaces/EventEmitterBuiltInEventMap.md)
 - [EventEmitterReferencingAsyncResource](interfaces/EventEmitterReferencingAsyncResource.md)
 
 ## References

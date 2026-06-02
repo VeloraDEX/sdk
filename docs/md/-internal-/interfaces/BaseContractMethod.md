@@ -34,7 +34,7 @@ A Contract method can be called directly, or used in various ways.
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:86
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:86
 
 ## Properties
 
@@ -47,7 +47,7 @@ The fragment of the Contract method. This will throw on ambiguous
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:95
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:95
 
 ***
 
@@ -59,7 +59,7 @@ The name of the Contract method.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:90
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:90
 
 ## Methods
 
@@ -79,7 +79,7 @@ Estimate the gas to send the contract method with %%args%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:120
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:120
 
 ***
 
@@ -100,7 +100,7 @@ Returns the fragment constrained by %%args%%. This can be used to
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:100
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:100
 
 ***
 
@@ -121,7 +121,7 @@ Returns a populated transaction that can be used to perform the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:105
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:105
 
 ***
 
@@ -141,7 +141,7 @@ Send a transaction for the contract method with %%args%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:116
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:116
 
 ***
 
@@ -164,7 +164,7 @@ Call the contract method with %%args%% and return the value.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:112
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:112
 
 ***
 
@@ -185,4 +185,4 @@ Call the contract method with %%args%% and return the Result
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:125
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:125

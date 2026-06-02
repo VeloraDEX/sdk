@@ -6,8 +6,8 @@
 
 # Variable: promises
 
-> `const` **promises**: *typeof* [`"node:stream/promises"`](../../node:stream_promises/README.md)
+> `const` **promises**: *typeof* `streamPromises`
 
 ## Defined in
 
-node\_modules/@types/node/stream.d.ts:1718
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1718

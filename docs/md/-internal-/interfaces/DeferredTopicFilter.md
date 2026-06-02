@@ -16,7 +16,7 @@ When creating a filter using the ``contract.filters``, this is returned.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:36
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:36
 
 ## Methods
 
@@ -30,4 +30,4 @@ node\_modules/ethers/lib.commonjs/contract/types.d.ts:36
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:35
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:35

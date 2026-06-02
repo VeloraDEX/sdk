@@ -20,4 +20,4 @@ Build External Orders to be posted to Delta API for execution
 
 ## Defined in
 
-[src/methods/delta/buildExternalDeltaOrder.ts:64](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/buildExternalDeltaOrder.ts#L64)
+[src/methods/delta/buildExternalDeltaOrder.ts:64](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildExternalDeltaOrder.ts#L64)

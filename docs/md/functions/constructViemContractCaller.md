@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/helpers/providers/viem.ts:32](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/providers/viem.ts#L32)
+[src/helpers/providers/viem.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/viem.ts#L32)

@@ -28,37 +28,37 @@
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:25
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:25
 
 ## Properties
 
 ### args
 
-> `protected` `readonly` **args**: `never`[] \| [`ContractConstructorArgs`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractConstructorArgs.md)\<`FullContractAbi`\>
+> `protected` `readonly` **args**: `never`[] \| [`ContractConstructorArgs`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractConstructorArgs.md)\<`FullContractAbi`\>
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:20
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:20
 
 ***
 
 ### constructorAbi
 
-> `protected` `readonly` **constructorAbi**: [`AbiConstructorFragment`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiConstructorFragment.md)
+> `protected` `readonly` **constructorAbi**: [`AbiConstructorFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiConstructorFragment.md)
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:21
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:21
 
 ***
 
 ### contractOptions
 
-> `protected` `readonly` **contractOptions**: [`ContractOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/ContractOptions.md)
+> `protected` `readonly` **contractOptions**: [`ContractOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/ContractOptions.md)
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:22
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:22
 
 ***
 
@@ -68,7 +68,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:23
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:23
 
 ***
 
@@ -78,7 +78,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:9
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:9
 
 ***
 
@@ -88,7 +88,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:8
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:8
 
 ## Methods
 
@@ -98,7 +98,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Parameters
 
-• **tx**: [`TransactionCall`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
+• **tx**: [`TransactionCall`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
 
 #### Returns
 
@@ -106,7 +106,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:24
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:24
 
 ***
 
@@ -120,15 +120,15 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 ##### abi
 
-> **abi**: [`AbiConstructorFragment`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiConstructorFragment.md)
+> **abi**: [`AbiConstructorFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiConstructorFragment.md)
 
 ##### args
 
-> **args**: `never`[] \| [`NonNullable`](../type-aliases/NonNullable.md)\<[`ContractConstructorArgs`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractConstructorArgs.md)\<`FullContractAbi`\>\>
+> **args**: `never`[] \| [`NonNullable`](../type-aliases/NonNullable.md)\<[`ContractConstructorArgs`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractConstructorArgs.md)\<`FullContractAbi`\>\>
 
 ##### contractOptions
 
-> **contractOptions**: [`ContractOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/ContractOptions.md)
+> **contractOptions**: [`ContractOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/ContractOptions.md)
 
 ##### deployData
 
@@ -136,7 +136,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:38
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:38
 
 ***
 
@@ -162,7 +162,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:46
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:46
 
 ***
 
@@ -176,7 +176,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:45
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:45
 
 ***
 
@@ -190,7 +190,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Parameters
 
-• **options?**: [`PayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md)
+• **options?**: [`PayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md)
 
 • **returnFormat?**: `ReturnFormat`
 
@@ -200,25 +200,25 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:44
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:44
 
 ***
 
 ### populateTransaction()
 
-> **populateTransaction**(`txOptions`?): [`TransactionCall`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
+> **populateTransaction**(`txOptions`?): [`TransactionCall`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
 
 #### Parameters
 
-• **txOptions?**: [`PayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md) \| [`NonPayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+• **txOptions?**: [`PayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md) \| [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
 
 #### Returns
 
-[`TransactionCall`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
+[`TransactionCall`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:37
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:37
 
 ***
 
@@ -228,7 +228,7 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Parameters
 
-• **options?**: [`PayableCallOptions`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md)
+• **options?**: [`PayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md)
 
 #### Returns
 
@@ -236,4 +236,4 @@ node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:36
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:36

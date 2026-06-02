@@ -6,7 +6,7 @@
 
 # Type Alias: PipelineDestination\<S, P\>
 
-> **PipelineDestination**\<`S`, `P`\>: `S` *extends* [`PipelineTransformSource`](PipelineTransformSource.md)\<infer ST\> ? [`WritableStream`](../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](PipelineDestinationIterableFunction.md)\<`ST`\> \| [`PipelineDestinationPromiseFunction`](PipelineDestinationPromiseFunction.md)\<`ST`, `P`\> : `never`
+> **PipelineDestination**\<`S`, `P`\>: `S` *extends* [`PipelineTransformSource`](PipelineTransformSource.md)\<infer ST\> ? `NodeJS.WritableStream` \| [`PipelineDestinationIterableFunction`](PipelineDestinationIterableFunction.md)\<`ST`\> \| [`PipelineDestinationPromiseFunction`](PipelineDestinationPromiseFunction.md)\<`ST`, `P`\> : `never`
 
 ## Type Parameters
 
@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/@types/node/stream.d.ts:1484
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1484

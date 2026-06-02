@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:35
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:35
 
 ***
 
@@ -24,4 +24,4 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:35
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:34
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:34

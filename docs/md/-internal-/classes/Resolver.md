@@ -32,7 +32,7 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:46
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:46
 
 ## Properties
 
@@ -42,7 +42,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:46
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:44
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:44
 
 ***
 
@@ -52,7 +52,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:44
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:45
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:45
 
 ***
 
@@ -66,7 +66,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:45
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:43
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:43
 
 ***
 
@@ -80,7 +80,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:43
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:42
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:42
 
 ***
 
@@ -90,7 +90,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:42
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:41
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:41
 
 ## Methods
 
@@ -110,7 +110,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:41
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:48
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:48
 
 ***
 
@@ -130,7 +130,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:48
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:49
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:49
 
 ***
 
@@ -150,7 +150,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:49
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:50
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:50
 
 ***
 
@@ -172,7 +172,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:50
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:51
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:51
 
 ***
 
@@ -186,7 +186,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:51
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:52
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:52
 
 ***
 
@@ -204,7 +204,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:52
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:53
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:53
 
 ***
 
@@ -226,7 +226,7 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:53
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:54
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:54
 
 ***
 
@@ -240,4 +240,4 @@ node\_modules/@ethersproject/providers/lib/base-provider.d.ts:54
 
 #### Defined in
 
-node\_modules/@ethersproject/providers/lib/base-provider.d.ts:47
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:47

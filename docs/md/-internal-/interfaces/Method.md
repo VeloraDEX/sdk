@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/types.d.ts:6
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:6
 
 ***
 
@@ -24,4 +24,4 @@ node\_modules/web3-core/lib/commonjs/types.d.ts:6
 
 #### Defined in
 
-node\_modules/web3-core/lib/commonjs/types.d.ts:5
+node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:5

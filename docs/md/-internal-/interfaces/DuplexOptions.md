@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1026
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1026
 
 ***
 
@@ -36,7 +36,7 @@ node\_modules/@types/node/stream.d.ts:1026
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:960
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:960
 
 ***
 
@@ -50,7 +50,7 @@ node\_modules/@types/node/stream.d.ts:960
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:987
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:987
 
 ***
 
@@ -64,7 +64,7 @@ node\_modules/@types/node/stream.d.ts:987
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:988
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:988
 
 ***
 
@@ -78,7 +78,7 @@ node\_modules/@types/node/stream.d.ts:988
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:955
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:955
 
 ***
 
@@ -92,7 +92,7 @@ node\_modules/@types/node/stream.d.ts:955
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:963
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:963
 
 ***
 
@@ -106,7 +106,7 @@ node\_modules/@types/node/stream.d.ts:963
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:956
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:956
 
 ***
 
@@ -120,7 +120,7 @@ node\_modules/@types/node/stream.d.ts:956
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:957
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:957
 
 ***
 
@@ -130,7 +130,7 @@ node\_modules/@types/node/stream.d.ts:957
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1029
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1029
 
 ***
 
@@ -140,7 +140,7 @@ node\_modules/@types/node/stream.d.ts:1029
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1027
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1027
 
 ***
 
@@ -156,7 +156,7 @@ When provided the corresponding `AbortController` can be used to cancel an async
 
 #### Defined in
 
-node\_modules/@types/node/events.d.ts:561
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:508
 
 ***
 
@@ -166,7 +166,7 @@ node\_modules/@types/node/events.d.ts:561
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1031
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1031
 
 ***
 
@@ -176,7 +176,7 @@ node\_modules/@types/node/stream.d.ts:1031
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1030
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1030
 
 ***
 
@@ -186,7 +186,7 @@ node\_modules/@types/node/stream.d.ts:1030
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1028
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1028
 
 ## Methods
 
@@ -210,7 +210,7 @@ node\_modules/@types/node/stream.d.ts:1028
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1032
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1032
 
 ***
 
@@ -236,7 +236,7 @@ node\_modules/@types/node/stream.d.ts:1032
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1044
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1044
 
 ***
 
@@ -260,7 +260,7 @@ node\_modules/@types/node/stream.d.ts:1044
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1043
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1043
 
 ***
 
@@ -284,7 +284,7 @@ node\_modules/@types/node/stream.d.ts:1043
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1033
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1033
 
 ***
 
@@ -312,7 +312,7 @@ node\_modules/@types/node/stream.d.ts:1033
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1034
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1034
 
 ***
 
@@ -338,4 +338,4 @@ node\_modules/@types/node/stream.d.ts:1034
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:1035
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1035

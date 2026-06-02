@@ -6,7 +6,7 @@
 
 # Type Alias: PostDeltaOrderParams
 
-> **PostDeltaOrderParams**: [`Omit`](../-internal-/type-aliases/Omit.md)\<[`DeltaOrderToPost`](../-internal-/type-aliases/DeltaOrderToPost.md), `"chainId"`\> & `object`
+> **PostDeltaOrderParams**: [`Omit`](../-internal-/type-aliases/Omit.md)\<[`DeltaOrderToPost`](DeltaOrderToPost.md), `"chainId"`\> & `object`
 
 ## Type declaration
 
@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/delta/postDeltaOrder.ts:29](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L29)
+[src/methods/delta/postDeltaOrder.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L29)

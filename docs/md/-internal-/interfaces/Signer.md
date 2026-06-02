@@ -31,7 +31,7 @@ The [[Provider]] attached to this Signer (if any).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:18
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:18
 
 ## Methods
 
@@ -55,7 +55,7 @@ Required for pure, view or static calls to contracts.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:86
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:86
 
 ***
 
@@ -76,7 +76,7 @@ Returns a new instance of this Signer connected to //provider// or detached
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:23
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:23
 
 ***
 
@@ -108,7 +108,7 @@ UNPREDICTABLE_GAS_LIMIT A transaction that is believed by the node to likely
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:76
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:76
 
 ***
 
@@ -128,7 +128,7 @@ Get the address of the Signer.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:27
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:27
 
 ***
 
@@ -151,7 +151,7 @@ The blocktag to base the transaction count on, keep in mind
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:34
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:34
 
 ***
 
@@ -175,7 +175,7 @@ The call to prepare
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:42
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:42
 
 ***
 
@@ -211,7 +211,7 @@ Some Signer implementations may skip populating properties that
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:60
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:60
 
 ***
 
@@ -235,7 +235,7 @@ Required to support ENS names
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:90
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:90
 
 ***
 
@@ -259,7 +259,7 @@ Required for state mutating calls
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:101
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:101
 
 ***
 
@@ -286,7 +286,7 @@ Signs an [[link-eip-191]] prefixed personal message.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:112
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:112
 
 ***
 
@@ -307,7 +307,7 @@ Signs %%tx%%, returning the fully signed transaction. This does not
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:95
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:95
 
 ***
 
@@ -331,4 +331,4 @@ Signs the [[link-eip-712]] typed data.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/signer.d.ts:116
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:116

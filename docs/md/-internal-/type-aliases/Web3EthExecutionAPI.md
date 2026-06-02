@@ -20,7 +20,7 @@
 
 ### eth\_getProof()
 
-> **eth\_getProof**: (`address`, `storageKeys`, `blockNumber`) => [`AccountObject`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/AccountObject.md)
+> **eth\_getProof**: (`address`, `storageKeys`, `blockNumber`) => [`AccountObject`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/AccountObject.md)
 
 #### Parameters
 
@@ -32,15 +32,15 @@
 
 #### Returns
 
-[`AccountObject`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/AccountObject.md)
+[`AccountObject`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/AccountObject.md)
 
 ### eth\_pendingTransactions()
 
-> **eth\_pendingTransactions**: () => [`TransactionInfo`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionInfo.md)[]
+> **eth\_pendingTransactions**: () => [`TransactionInfo`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionInfo.md)[]
 
 #### Returns
 
-[`TransactionInfo`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionInfo.md)[]
+[`TransactionInfo`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionInfo.md)[]
 
 ### eth\_requestAccounts()
 
@@ -58,7 +58,7 @@
 
 • **address**: [`Address`](Address.md)
 
-• **typedData**: [`Eip712TypedData`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Eip712TypedData.md)
+• **typedData**: [`Eip712TypedData`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Eip712TypedData.md)
 
 • **useLegacy**: `true`
 
@@ -74,7 +74,7 @@
 
 • **address**: [`Address`](Address.md)
 
-• **typedData**: [`Eip712TypedData`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Eip712TypedData.md)
+• **typedData**: [`Eip712TypedData`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Eip712TypedData.md)
 
 • **useLegacy**: `false` \| `undefined`
 
@@ -92,4 +92,4 @@
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/apis/web3\_eth\_execution\_api.d.ts:3
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/web3\_eth\_execution\_api.d.ts:3

@@ -18,7 +18,7 @@ Arbitrum One - mainnet for Arbitrum roll-up
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:60
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:60
 
 ***
 
@@ -32,7 +32,7 @@ Arbitrum Rinkeby Testnet
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:54
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:54
 
 ***
 
@@ -46,7 +46,7 @@ Optimistic Ethereum - mainnet for Optimism roll-up
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:78
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:78
 
 ***
 
@@ -60,7 +60,7 @@ Optimistic Kovan - testnet for Optimism roll-up
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:72
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:72
 
 ***
 
@@ -74,7 +74,7 @@ Polygon (Matic) Mainnet
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:42
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:42
 
 ***
 
@@ -88,7 +88,7 @@ Polygon (Matic) Mumbai Testnet
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:48
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:48
 
 ***
 
@@ -102,4 +102,4 @@ xDai EVM sidechain with a native stable token
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:66
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:66

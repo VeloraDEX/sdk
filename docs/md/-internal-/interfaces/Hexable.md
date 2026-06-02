@@ -18,4 +18,4 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/bytes/lib/index.d.ts:8
+node\_modules/.pnpm/@ethersproject+bytes@5.8.0/node\_modules/@ethersproject/bytes/lib/index.d.ts:8

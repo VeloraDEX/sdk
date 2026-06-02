@@ -44,4 +44,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/helpers/buildOrderData.ts:47](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/helpers/buildOrderData.ts#L47)
+[src/methods/limitOrders/helpers/buildOrderData.ts:47](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/helpers/buildOrderData.ts#L47)

@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:9
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:9
 
 ***
 
@@ -32,4 +32,4 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:9
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:8
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:8

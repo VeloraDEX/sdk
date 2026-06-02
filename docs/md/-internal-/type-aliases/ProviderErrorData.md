@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:71
+node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:71

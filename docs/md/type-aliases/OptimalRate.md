@@ -30,6 +30,10 @@
 
 > **destAmount**: [`NumberAsString`](../-internal-/type-aliases/NumberAsString.md)
 
+### destAmountAfterFee?
+
+> `optional` **destAmountAfterFee**: [`NumberAsString`](../-internal-/type-aliases/NumberAsString.md)
+
 ### destDecimals
 
 > **destDecimals**: `number`
@@ -94,6 +98,10 @@
 
 > **srcAmount**: [`NumberAsString`](../-internal-/type-aliases/NumberAsString.md)
 
+### srcAmountAfterFee?
+
+> `optional` **srcAmountAfterFee**: [`NumberAsString`](../-internal-/type-aliases/NumberAsString.md)
+
 ### srcDecimals
 
 > **srcDecimals**: `number`
@@ -116,4 +124,4 @@
 
 ## Defined in
 
-node\_modules/@paraswap/core/build/types.d.ts:37
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/types.d.ts:37

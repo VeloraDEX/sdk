@@ -30,7 +30,7 @@
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:564
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:713
 
 > **AxiosStatic**\<`T`, `R`, `D`\>(`url`, `config`?): `Promise`\<`R`\>
 
@@ -54,7 +54,7 @@ node\_modules/axios/index.d.ts:564
 
 ## Defined in
 
-node\_modules/axios/index.d.ts:564
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:713
 
 ## Properties
 
@@ -76,7 +76,7 @@ node\_modules/axios/index.d.ts:564
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:572
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:721
 
 ***
 
@@ -86,7 +86,7 @@ node\_modules/axios/index.d.ts:572
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:567
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:716
 
 ***
 
@@ -96,7 +96,7 @@ node\_modules/axios/index.d.ts:567
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:568
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:717
 
 ***
 
@@ -106,7 +106,7 @@ node\_modules/axios/index.d.ts:568
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:579
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:728
 
 ***
 
@@ -116,7 +116,7 @@ node\_modules/axios/index.d.ts:579
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:565
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:714
 
 ***
 
@@ -126,7 +126,7 @@ node\_modules/axios/index.d.ts:565
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:578
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:727
 
 ***
 
@@ -136,7 +136,7 @@ node\_modules/axios/index.d.ts:578
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:566
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:715
 
 ***
 
@@ -156,7 +156,7 @@ node\_modules/axios/index.d.ts:566
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:531
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:669
 
 ***
 
@@ -174,7 +174,7 @@ node\_modules/axios/index.d.ts:531
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:576
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:725
 
 ***
 
@@ -192,7 +192,7 @@ node\_modules/axios/index.d.ts:576
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:577
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:726
 
 ***
 
@@ -202,7 +202,7 @@ node\_modules/axios/index.d.ts:577
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:569
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:718
 
 ***
 
@@ -224,7 +224,7 @@ node\_modules/axios/index.d.ts:569
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:508
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:605
 
 ***
 
@@ -248,7 +248,7 @@ node\_modules/axios/index.d.ts:508
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:574
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:723
 
 ***
 
@@ -270,7 +270,7 @@ node\_modules/axios/index.d.ts:574
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:571
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:720
 
 ***
 
@@ -294,7 +294,7 @@ node\_modules/axios/index.d.ts:571
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:580
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:729
 
 ***
 
@@ -326,7 +326,7 @@ node\_modules/axios/index.d.ts:580
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:573
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:722
 
 ***
 
@@ -348,7 +348,7 @@ node\_modules/axios/index.d.ts:573
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:575
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:724
 
 ***
 
@@ -358,7 +358,7 @@ node\_modules/axios/index.d.ts:575
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:570
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:719
 
 ## Methods
 
@@ -380,7 +380,7 @@ node\_modules/axios/index.d.ts:570
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:530
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:668
 
 ***
 
@@ -412,7 +412,7 @@ node\_modules/axios/index.d.ts:530
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:515
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:615
 
 ***
 
@@ -444,7 +444,7 @@ node\_modules/axios/index.d.ts:515
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:514
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:611
 
 ***
 
@@ -466,7 +466,7 @@ node\_modules/axios/index.d.ts:514
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:512
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:609
 
 ***
 
@@ -498,7 +498,7 @@ node\_modules/axios/index.d.ts:512
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:516
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:619
 
 ***
 
@@ -530,7 +530,7 @@ node\_modules/axios/index.d.ts:516
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:517
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:623
 
 ***
 
@@ -564,7 +564,7 @@ node\_modules/axios/index.d.ts:517
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:520
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:637
 
 ***
 
@@ -598,7 +598,7 @@ node\_modules/axios/index.d.ts:520
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:523
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:652
 
 ***
 
@@ -632,7 +632,7 @@ node\_modules/axios/index.d.ts:523
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:518
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:627
 
 ***
 
@@ -666,7 +666,7 @@ node\_modules/axios/index.d.ts:518
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:521
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:642
 
 ***
 
@@ -700,7 +700,7 @@ node\_modules/axios/index.d.ts:521
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:519
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:632
 
 ***
 
@@ -734,7 +734,41 @@ node\_modules/axios/index.d.ts:519
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:522
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:647
+
+***
+
+### query()
+
+> **query**\<`T`, `R`, `D`\>(`url`, `data`?, `config`?): `Promise`\<`R`\>
+
+#### Type Parameters
+
+• **T** = `any`
+
+• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+
+• **D** = `any`
+
+#### Parameters
+
+• **url**: `string`
+
+• **data?**: `D`
+
+• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+
+#### Returns
+
+`Promise`\<`R`\>
+
+#### Inherited from
+
+[`AxiosInstance`](AxiosInstance.md).[`query`](AxiosInstance.md#query)
+
+#### Defined in
+
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:657
 
 ***
 
@@ -764,4 +798,4 @@ node\_modules/axios/index.d.ts:522
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:513
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:610

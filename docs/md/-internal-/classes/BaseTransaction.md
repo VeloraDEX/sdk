@@ -34,7 +34,7 @@ It is therefore not recommended to use directly.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:56
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:56
 
 ## Properties
 
@@ -48,7 +48,7 @@ for FeeMarketEIP1559Transaction objects
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:39
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:39
 
 ***
 
@@ -58,7 +58,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:39
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:32
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:32
 
 ***
 
@@ -68,7 +68,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:32
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:31
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:31
 
 ***
 
@@ -78,7 +78,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:31
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:27
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:27
 
 ***
 
@@ -88,7 +88,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:27
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:24
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:24
 
 ***
 
@@ -98,7 +98,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:24
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:23
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:23
 
 ***
 
@@ -108,7 +108,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:23
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:29
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:29
 
 ***
 
@@ -118,7 +118,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:29
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:30
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:30
 
 ***
 
@@ -128,7 +128,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:30
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:25
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:25
 
 ***
 
@@ -138,7 +138,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:25
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:33
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:33
 
 ***
 
@@ -148,7 +148,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:33
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:28
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:28
 
 ***
 
@@ -158,7 +158,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:28
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:26
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:26
 
 ## Accessors
 
@@ -178,7 +178,7 @@ Note: legacy txs will return tx type `0`.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:62
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:62
 
 ## Methods
 
@@ -200,7 +200,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:62
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:193
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:193
 
 ***
 
@@ -217,7 +217,7 @@ tx type implementations.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:192
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:192
 
 ***
 
@@ -239,7 +239,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:192
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:155
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:155
 
 ***
 
@@ -269,7 +269,7 @@ Pass true if the number also cannot equal one less the maximum value
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:171
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:171
 
 ***
 
@@ -286,7 +286,7 @@ Reasoning: https://ethereum.stackexchange.com/a/55728
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:92
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:92
 
 ***
 
@@ -300,7 +300,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:92
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:87
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:87
 
 ***
 
@@ -316,7 +316,7 @@ Return a compact error string representation of the object
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:180
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:180
 
 ***
 
@@ -332,7 +332,7 @@ The minimum amount of gas the tx must have (DataFee + TxFee + Creation Fee)
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:96
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:96
 
 ***
 
@@ -348,7 +348,7 @@ The amount of gas paid for the data in this tx
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:100
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:100
 
 ***
 
@@ -368,7 +368,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:100
 
 ##### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:124
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:124
 
 #### getMessageToSign(hashMessage)
 
@@ -384,7 +384,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:124
 
 ##### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:125
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:125
 
 ***
 
@@ -398,7 +398,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:125
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:127
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:127
 
 ***
 
@@ -414,7 +414,7 @@ Returns the sender's address
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:136
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:136
 
 ***
 
@@ -430,7 +430,7 @@ Returns the public key of the sender
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:140
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:140
 
 ***
 
@@ -446,7 +446,7 @@ The up front amount that an account must have for this transaction to be valid
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:104
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:104
 
 ***
 
@@ -460,7 +460,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:104
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:126
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:126
 
 ***
 
@@ -474,7 +474,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:126
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:128
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:128
 
 ***
 
@@ -497,7 +497,7 @@ representation for external signing use [BaseTransaction.getMessageToSign](BaseT
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:119
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:119
 
 ***
 
@@ -513,7 +513,7 @@ Returns the encoding of the transaction.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:123
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:123
 
 ***
 
@@ -539,7 +539,7 @@ const signedTx = tx.sign(privateKey)
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:150
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:150
 
 ***
 
@@ -572,7 +572,7 @@ on all supported capabilities.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:79
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:79
 
 ***
 
@@ -588,7 +588,7 @@ If the tx's `to` is to the creation address
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:108
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:108
 
 ***
 
@@ -604,7 +604,7 @@ Returns an object with the JSON representation of the transaction
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:154
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:154
 
 ***
 
@@ -623,7 +623,7 @@ Checks if the transaction has the minimum amount of gas required
 
 ##### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:84
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:84
 
 #### validate(stringError)
 
@@ -639,7 +639,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:84
 
 ##### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:85
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:85
 
 #### validate(stringError)
 
@@ -655,7 +655,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:85
 
 ##### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:86
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:86
 
 ***
 
@@ -671,7 +671,7 @@ Determines if the signature is valid
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:132
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:132
 
 ***
 
@@ -689,7 +689,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:132
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:174
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:174
 
 ***
 
@@ -709,7 +709,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:174
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:194
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:194
 
 ***
 
@@ -729,4 +729,4 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:194
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:195
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:195

@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/@types/node/ts5.6/globals.typedarray.d.ts:5
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/ts5.6/globals.typedarray.d.ts:5

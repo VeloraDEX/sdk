@@ -18,7 +18,7 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:14
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:14
 
 ***
 
@@ -28,7 +28,7 @@ node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:14
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:15
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:15
 
 ***
 
@@ -42,7 +42,7 @@ node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:15
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1077
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -56,7 +56,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1076
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 ***
 
@@ -70,4 +70,4 @@ node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1078
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1078

@@ -22,7 +22,7 @@ A Fallback or Receive function on a Contract.
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:166
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:166
 
 ## Methods
 
@@ -44,7 +44,7 @@ Estimate the gas to send a transaction to the contract fallback.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:191
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:191
 
 ***
 
@@ -67,7 +67,7 @@ Returns a populated transaction that can be used to perform the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:173
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:173
 
 ***
 
@@ -89,7 +89,7 @@ Send a transaction to the contract fallback.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:185
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:185
 
 ***
 
@@ -111,4 +111,4 @@ Call the contract fallback and return the result.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/contract/types.d.ts:179
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:179

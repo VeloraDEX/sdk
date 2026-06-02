@@ -6,7 +6,7 @@
 
 # Type Alias: TransactionWithSenderAPI
 
-> **TransactionWithSenderAPI**: [`TransactionUnsignedAPI`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionUnsignedAPI.md) & `object`
+> **TransactionWithSenderAPI**: [`TransactionUnsignedAPI`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionUnsignedAPI.md) & `object`
 
 ## Type declaration
 
@@ -16,4 +16,4 @@
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:74
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:74

@@ -14,4 +14,4 @@ Limit Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/sdk/simple.ts:149](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/simple.ts#L149)
+[src/sdk/simple.ts:149](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L149)

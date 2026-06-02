@@ -22,7 +22,7 @@ The maximum concurrent invocations of `fn` to call on the stream at once.
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:49
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:49
 
 ***
 
@@ -34,4 +34,4 @@ Allows destroying the stream if the signal is aborted.
 
 #### Defined in
 
-node\_modules/@types/node/stream.d.ts:51
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:51

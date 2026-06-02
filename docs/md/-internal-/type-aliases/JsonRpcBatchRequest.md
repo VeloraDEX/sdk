@@ -10,4 +10,4 @@
 
 ## Defined in
 
-node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:58
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:58

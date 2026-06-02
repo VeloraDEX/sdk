@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:386
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:462
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/axios/index.d.ts:386
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:387
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:463
 
 ***
 
@@ -34,7 +34,7 @@ node\_modules/axios/index.d.ts:387
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:388
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:464
 
 ***
 
@@ -44,7 +44,7 @@ node\_modules/axios/index.d.ts:388
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:389
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:465
 
 ***
 
@@ -54,7 +54,7 @@ node\_modules/axios/index.d.ts:389
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:395
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:471
 
 ***
 
@@ -64,7 +64,7 @@ node\_modules/axios/index.d.ts:395
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:393
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:469
 
 ***
 
@@ -74,7 +74,7 @@ node\_modules/axios/index.d.ts:393
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:392
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:468
 
 ***
 
@@ -84,7 +84,7 @@ node\_modules/axios/index.d.ts:392
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:390
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:466
 
 ***
 
@@ -94,7 +94,7 @@ node\_modules/axios/index.d.ts:390
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:394
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:470
 
 ***
 
@@ -104,7 +104,17 @@ node\_modules/axios/index.d.ts:394
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:391
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:467
+
+***
+
+### query?
+
+> `optional` **query**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+
+#### Defined in
+
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:473
 
 ***
 
@@ -114,4 +124,4 @@ node\_modules/axios/index.d.ts:391
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:396
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:472

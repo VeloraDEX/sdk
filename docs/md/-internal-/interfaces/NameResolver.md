@@ -35,4 +35,4 @@ Resolve to the address for the ENS %%name%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/address/index.d.ts:44
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/address/index.d.ts:44

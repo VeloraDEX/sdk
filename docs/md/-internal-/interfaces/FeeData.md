@@ -31,7 +31,7 @@ And this value is just for getting informed about the fees of last block.
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:483
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:483
 
 ***
 
@@ -43,7 +43,7 @@ This filed is used for legacy networks that does not support EIP-1559.
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:474
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:474
 
 ***
 
@@ -60,7 +60,7 @@ If EIP-1559 is not supported, this will be `undefined`
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:492
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:492
 
 ***
 
@@ -74,4 +74,4 @@ If EIP-1559 is not supported, this will be `undefined`
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:498
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:498

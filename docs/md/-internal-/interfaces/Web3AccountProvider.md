@@ -22,7 +22,7 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:66
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:66
 
 ***
 
@@ -32,7 +32,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:66
 
 #### Parameters
 
-• **keystore**: `string` \| [`KeyStore`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)
+• **keystore**: `string` \| [`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)
 
 • **password**: `string`
 
@@ -44,7 +44,7 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:66
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:67
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:67
 
 ***
 
@@ -62,4 +62,4 @@ node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:67
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:65
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:65

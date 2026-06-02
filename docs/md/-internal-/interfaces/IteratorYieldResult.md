@@ -18,7 +18,7 @@
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:30
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:30
 
 ***
 
@@ -28,4 +28,4 @@ node\_modules/typescript/lib/lib.es2015.iterable.d.ts:30
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2015.iterable.d.ts:31
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:31

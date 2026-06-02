@@ -20,4 +20,4 @@
 
 ## Defined in
 
-node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:10
+node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:10

@@ -14,4 +14,4 @@
 
 #### Defined in
 
-node\_modules/axios/index.d.ts:467
+node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:546

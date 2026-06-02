@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/helpers/index.ts:14](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/index.ts#L14)
+[src/helpers/index.ts:14](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/index.ts#L14)

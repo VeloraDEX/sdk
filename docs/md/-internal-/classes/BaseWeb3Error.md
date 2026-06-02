@@ -23,7 +23,7 @@ Base class for Web3 errors.
 
 ## Implements
 
-- [`Web3Error`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md)
+- [`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md)
 
 ## Constructors
 
@@ -47,7 +47,7 @@ Base class for Web3 errors.
 
 #### Defined in
 
-node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:18
+node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:18
 
 ## Properties
 
@@ -57,7 +57,7 @@ node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:18
 
 #### Defined in
 
-node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:9
+node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:9
 
 ***
 
@@ -67,11 +67,11 @@ node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:9
 
 #### Implementation of
 
-[`Web3Error`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`code`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#code)
+[`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`code`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#code)
 
 #### Defined in
 
-node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:7
+node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:7
 
 ***
 
@@ -81,7 +81,7 @@ node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:7
 
 #### Implementation of
 
-[`Web3Error`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`message`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#message)
+[`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`message`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#message)
 
 #### Inherited from
 
@@ -89,7 +89,7 @@ node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:7
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1077
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -99,7 +99,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Implementation of
 
-[`Web3Error`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`name`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#name)
+[`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`name`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#name)
 
 #### Overrides
 
@@ -107,7 +107,7 @@ node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 #### Defined in
 
-node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
+node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
 
 ***
 
@@ -117,7 +117,7 @@ node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
 
 #### Implementation of
 
-[`Web3Error`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`stack`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#stack)
+[`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`stack`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#stack)
 
 #### Overrides
 
@@ -125,7 +125,7 @@ node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
 
 #### Defined in
 
-node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
+node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
 
 ***
 
@@ -139,7 +139,7 @@ Optional override for formatting stack traces
 
 • **err**: [`Error`](../interfaces/Error.md)
 
-• **stackTraces**: [`CallSite`](../interfaces/CallSite.md)[]
+• **stackTraces**: `CallSite`[]
 
 #### Returns
 
@@ -155,7 +155,7 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Defined in
 
-node\_modules/@types/node/globals.d.ts:143
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:143
 
 ***
 
@@ -169,7 +169,7 @@ node\_modules/@types/node/globals.d.ts:143
 
 #### Defined in
 
-node\_modules/@types/node/globals.d.ts:145
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:145
 
 ## Accessors
 
@@ -205,7 +205,7 @@ Use the `cause` property instead.
 
 #### Defined in
 
-node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
+node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
 
 ## Methods
 
@@ -239,33 +239,59 @@ node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
 
 #### Defined in
 
-node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:20
+node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:20
 
 ***
 
 ### captureStackTrace()
 
+#### captureStackTrace(targetObject, constructorOpt)
+
 > `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
 
 Create .stack property on a target object
 
-#### Parameters
+##### Parameters
 
 • **targetObject**: `object`
 
 • **constructorOpt?**: `Function`
 
-#### Returns
+##### Returns
 
 `void`
 
-#### Inherited from
+##### Inherited from
 
 `Error.captureStackTrace`
 
-#### Defined in
+##### Defined in
 
-node\_modules/@types/node/globals.d.ts:136
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:136
+
+#### captureStackTrace(targetObject, constructorOpt)
+
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+
+Create .stack property on a target object
+
+##### Parameters
+
+• **targetObject**: `object`
+
+• **constructorOpt?**: `Function`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Error.captureStackTrace`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
 
 ***
 
@@ -285,4 +311,4 @@ node\_modules/@types/node/globals.d.ts:136
 
 #### Defined in
 
-node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19
+node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19

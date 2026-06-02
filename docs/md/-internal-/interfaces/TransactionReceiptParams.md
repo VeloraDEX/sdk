@@ -19,7 +19,7 @@ The actual BLOb gas price that was charged. See [[link-eip-4844]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:206
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:206
 
 ***
 
@@ -31,7 +31,7 @@ The amount of BLOb gas used. See [[link-eip-4844]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:193
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:193
 
 ***
 
@@ -43,7 +43,7 @@ The block hash of the block that included this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:172
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:172
 
 ***
 
@@ -55,7 +55,7 @@ The block number of the block that included this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:176
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:176
 
 ***
 
@@ -69,7 +69,7 @@ If the transaction was directly deploying a contract, the [[to]]
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:160
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:160
 
 ***
 
@@ -82,7 +82,7 @@ The total amount of gas consumed during the entire block up to
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:198
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:198
 
 ***
 
@@ -94,7 +94,7 @@ The actual gas price per gas charged for this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:210
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:210
 
 ***
 
@@ -106,7 +106,7 @@ The sender of the transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:154
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:154
 
 ***
 
@@ -118,7 +118,7 @@ The actual gas price per gas charged for this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:202
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:202
 
 ***
 
@@ -130,7 +130,7 @@ The amount of gas consumed executing this transaciton.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:189
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:189
 
 ***
 
@@ -142,7 +142,7 @@ The transaction hash.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:164
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:164
 
 ***
 
@@ -154,7 +154,7 @@ The transaction index.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:168
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:168
 
 ***
 
@@ -166,7 +166,7 @@ The logs emitted during the execution of this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:185
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:185
 
 ***
 
@@ -179,7 +179,7 @@ The bloom filter for the logs emitted during execution of this
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:181
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:181
 
 ***
 
@@ -192,7 +192,7 @@ The root of this transaction in a pre-bazatium block. In
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:226
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:226
 
 ***
 
@@ -207,7 +207,7 @@ The status of the transaction execution. If ``1`` then the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:221
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:221
 
 ***
 
@@ -220,7 +220,7 @@ The target of the transaction. If null, the transaction was trying
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:150
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:150
 
 ***
 
@@ -232,4 +232,4 @@ The [[link-eip-2718]] envelope type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:214
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:214

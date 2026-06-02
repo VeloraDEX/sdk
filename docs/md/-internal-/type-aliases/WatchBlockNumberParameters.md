@@ -36,4 +36,4 @@ The callback to call when an error occurred when trying to get for a new block.
 
 ## Defined in
 
-node\_modules/viem/\_types/actions/public/watchBlockNumber.d.ts:10
+node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchBlockNumber.d.ts:10

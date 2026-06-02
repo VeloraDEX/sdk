@@ -44,4 +44,4 @@ Limit Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/limitOrders/approveForOrder.ts:7](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/approveForOrder.ts#L7)
+[src/methods/limitOrders/approveForOrder.ts:7](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/approveForOrder.ts#L7)

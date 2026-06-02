@@ -24,7 +24,7 @@ The access list for berlin and london transactions.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:66
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:66
 
 ***
 
@@ -36,7 +36,7 @@ The blobs (if any) attached to this transaction (see [[link-eip-4844]]).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:78
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:78
 
 ***
 
@@ -48,7 +48,7 @@ The versioned hashes (see [[link-eip-4844]]).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:74
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:74
 
 ***
 
@@ -60,7 +60,7 @@ The chain ID the transaction is valid on.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:54
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:54
 
 ***
 
@@ -72,7 +72,7 @@ The data.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:46
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:46
 
 ***
 
@@ -84,7 +84,7 @@ The sender.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:22
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:22
 
 ***
 
@@ -96,7 +96,7 @@ The maximum amount of gas that can be used.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:30
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:30
 
 ***
 
@@ -108,7 +108,7 @@ The gas price for legacy and berlin transactions.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:34
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:34
 
 ***
 
@@ -120,7 +120,7 @@ The transaction hash.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:58
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:58
 
 ***
 
@@ -136,7 +136,7 @@ An external library for computing the KZG commitments and
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:86
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:86
 
 ***
 
@@ -148,7 +148,7 @@ The maximum fee per blob gas (see [[link-eip-4844]]).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:70
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:70
 
 ***
 
@@ -160,7 +160,7 @@ The maximum total fee per gas for london transactions.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:42
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:42
 
 ***
 
@@ -172,7 +172,7 @@ The maximum priority fee per gas for london transactions.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:38
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:38
 
 ***
 
@@ -184,7 +184,7 @@ The nonce.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:26
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:26
 
 ***
 
@@ -196,7 +196,7 @@ The signature provided by the sender.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:62
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:62
 
 ***
 
@@ -208,7 +208,7 @@ The recipient address or ``null`` for an ``init`` transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:18
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:18
 
 ***
 
@@ -220,7 +220,7 @@ The type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:14
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:14
 
 ***
 
@@ -232,4 +232,4 @@ The value (in wei) to send.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:50
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:50

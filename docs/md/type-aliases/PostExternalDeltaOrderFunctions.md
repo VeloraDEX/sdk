@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/delta/postExternalDeltaOrder.ts:16](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/postExternalDeltaOrder.ts#L16)
+[src/methods/delta/postExternalDeltaOrder.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postExternalDeltaOrder.ts#L16)

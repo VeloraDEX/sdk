@@ -32,4 +32,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/buildDeltaOrderData.ts:48](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/buildDeltaOrderData.ts#L48)
+[src/methods/delta/helpers/buildDeltaOrderData.ts:48](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildDeltaOrderData.ts#L48)

@@ -22,4 +22,4 @@ Limit Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/limitOrders/signOrder.ts:13](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/signOrder.ts#L13)
+[src/methods/limitOrders/signOrder.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/signOrder.ts#L13)

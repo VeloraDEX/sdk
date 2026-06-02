@@ -18,4 +18,4 @@ Exclude from T those types that are assignable to U
 
 ## Defined in
 
-node\_modules/typescript/lib/lib.es5.d.ts:1613
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1613

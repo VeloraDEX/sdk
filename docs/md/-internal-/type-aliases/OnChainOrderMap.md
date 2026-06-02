@@ -18,6 +18,14 @@
 
 > **Order**: [`DeltaAuctionOrder`](../../type-aliases/DeltaAuctionOrder.md)
 
+### TWAPBuyOrder
+
+> **TWAPBuyOrder**: [`TWAPBuyDeltaOrder`](../../type-aliases/TWAPBuyDeltaOrder.md)
+
+### TWAPOrder
+
+> **TWAPOrder**: [`TWAPDeltaOrder`](../../type-aliases/TWAPDeltaOrder.md)
+
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:165](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/helpers/types.ts#L165)
+[src/methods/delta/helpers/types.ts:214](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L214)

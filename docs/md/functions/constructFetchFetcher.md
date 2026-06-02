@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/helpers/fetchers/fetch.ts:8](https://github.com/VeloraDEX/sdk/blob/master/src/helpers/fetchers/fetch.ts#L8)
+[src/helpers/fetchers/fetch.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/fetchers/fetch.ts#L8)

@@ -20,7 +20,7 @@ See: [1559](https://eips.ethereum.org/EIPS/eip-1559) Fee Market EIP
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:19
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:19
 
 ***
 
@@ -33,7 +33,7 @@ See: [155](https://eips.ethereum.org/EIPS/eip-155) Replay Attack Protection EIP
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:14
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:14
 
 ***
 
@@ -46,7 +46,7 @@ See: [2718](https://eips.ethereum.org/EIPS/eip-2718) Transaction Type EIP
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:24
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:24
 
 ***
 
@@ -59,4 +59,4 @@ See: [2930](https://eips.ethereum.org/EIPS/eip-2930) Access Lists EIP
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:29
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:29

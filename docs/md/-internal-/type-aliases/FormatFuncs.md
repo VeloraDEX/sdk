@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/@ethersproject/providers/lib/formatter.d.ts:5
+node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:5

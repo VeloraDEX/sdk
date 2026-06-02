@@ -19,7 +19,7 @@ The transaction access list.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:308
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:308
 
 ***
 
@@ -31,7 +31,7 @@ The [[link-eip-4844]] BLOb versioned hashes.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:312
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:312
 
 ***
 
@@ -43,7 +43,7 @@ The block hash of the block that included this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:240
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:240
 
 ***
 
@@ -55,7 +55,7 @@ The block number of the block that included this transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:236
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:236
 
 ***
 
@@ -67,7 +67,7 @@ The chain ID this transaction is valid on.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:300
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:300
 
 ***
 
@@ -79,7 +79,7 @@ The transaction data.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:292
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:292
 
 ***
 
@@ -91,7 +91,7 @@ The sender of the transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:261
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:261
 
 ***
 
@@ -103,7 +103,7 @@ The maximum amount of gas this transaction is authorized to consume.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:269
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:269
 
 ***
 
@@ -115,7 +115,7 @@ For legacy transactions, this is the gas price per gas to pay.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:273
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:273
 
 ***
 
@@ -127,7 +127,7 @@ The transaction hash.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:244
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:244
 
 ***
 
@@ -139,7 +139,7 @@ The transaction index.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:248
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:248
 
 ***
 
@@ -152,7 +152,7 @@ For [[link-eip-4844]] transactions, this is the maximum fee that
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:288
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:288
 
 ***
 
@@ -165,7 +165,7 @@ For [[link-eip-1559]] transactions, this is the maximum fee that
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:283
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:283
 
 ***
 
@@ -178,7 +178,7 @@ For [[link-eip-1559]] transactions, this is the maximum priority
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:278
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:278
 
 ***
 
@@ -190,7 +190,7 @@ The nonce of the transaction, used for replay protection.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:265
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:265
 
 ***
 
@@ -202,7 +202,7 @@ The signature of the transaction.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:304
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:304
 
 ***
 
@@ -215,7 +215,7 @@ The target of the transaction. If ``null``, the ``data`` is initcode
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:257
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:257
 
 ***
 
@@ -227,7 +227,7 @@ The [[link-eip-2718]] transaction type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:252
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:252
 
 ***
 
@@ -239,4 +239,4 @@ The transaction value (in wei).
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:296
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:296

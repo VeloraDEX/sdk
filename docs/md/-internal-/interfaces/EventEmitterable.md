@@ -39,7 +39,7 @@ Alias for [[on]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:46
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:46
 
 ***
 
@@ -61,7 +61,7 @@ Triggers each listener for %%event%% with the %%args%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:25
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:25
 
 ***
 
@@ -81,7 +81,7 @@ Resolves to the number of listeners for %%event%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:29
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:29
 
 ***
 
@@ -101,7 +101,7 @@ Resolves to the listeners for %%event%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:33
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:33
 
 ***
 
@@ -124,7 +124,7 @@ Unregister the %%listener%% for %%event%%. If %%listener%%
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:38
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:38
 
 ***
 
@@ -147,7 +147,7 @@ Registers a %%listener%% that is called whenever the
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:16
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:16
 
 ***
 
@@ -170,7 +170,7 @@ Registers a %%listener%% that is called the next time
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:21
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:21
 
 ***
 
@@ -190,7 +190,7 @@ Unregister all listeners for %%event%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:42
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:42
 
 ***
 
@@ -212,4 +212,4 @@ Alias for [[off]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/utils/events.d.ts:50
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:50

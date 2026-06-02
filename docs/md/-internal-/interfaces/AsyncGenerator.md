@@ -20,6 +20,58 @@
 
 ## Methods
 
+### \[asyncDispose\]()
+
+#### \[asyncDispose\]()
+
+> **\[asyncDispose\]**(): [`PromiseLike`](PromiseLike.md)\<`void`\>
+
+##### Returns
+
+[`PromiseLike`](PromiseLike.md)\<`void`\>
+
+##### Inherited from
+
+`AsyncIteratorObject.[asyncDispose]`
+
+##### Defined in
+
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.disposable.d.ts:40
+
+#### \[asyncDispose\]()
+
+> **\[asyncDispose\]**(): [`PromiseLike`](PromiseLike.md)\<`void`\>
+
+##### Returns
+
+[`PromiseLike`](PromiseLike.md)\<`void`\>
+
+##### Inherited from
+
+`AsyncIteratorObject.[asyncDispose]`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:15
+
+#### \[asyncDispose\]()
+
+> **\[asyncDispose\]**(): [`PromiseLike`](PromiseLike.md)\<`void`\>
+
+##### Returns
+
+[`PromiseLike`](PromiseLike.md)\<`void`\>
+
+##### Inherited from
+
+`AsyncIteratorObject.[asyncDispose]`
+
+##### Defined in
+
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:286
+
+***
+
 ### \[asyncIterator\]()
 
 > **\[asyncIterator\]**(): [`AsyncGenerator`](AsyncGenerator.md)\<`T`, `TReturn`, `TNext`\>
@@ -34,7 +86,7 @@
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:26
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:26
 
 ***
 
@@ -56,7 +108,7 @@ node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:26
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:23
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:23
 
 ***
 
@@ -78,7 +130,7 @@ node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:23
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:24
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:24
 
 ***
 
@@ -100,4 +152,4 @@ node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:24
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:25
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:25

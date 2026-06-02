@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[src/types.ts:37](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L37)
+[src/types.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L37)
 
 ***
 
@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[src/types.ts:39](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L39)
+[src/types.ts:39](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L39)
 
 ***
 
@@ -52,7 +52,7 @@
 
 #### Defined in
 
-[src/types.ts:130](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L130)
+[src/types.ts:130](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L130)
 
 ***
 
@@ -66,7 +66,7 @@
 
 #### Defined in
 
-[src/types.ts:71](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L71)
+[src/types.ts:71](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L71)
 
 ***
 
@@ -80,4 +80,4 @@
 
 #### Defined in
 
-[src/types.ts:38](https://github.com/VeloraDEX/sdk/blob/master/src/types.ts#L38)
+[src/types.ts:38](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L38)

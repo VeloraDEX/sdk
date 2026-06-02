@@ -22,7 +22,7 @@ Returns the number of key/value pairs.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:27
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:27
 
 ## Methods
 
@@ -40,7 +40,7 @@ Dispatches a storage event on Window objects holding an equivalent Storage objec
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:33
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:33
 
 ***
 
@@ -60,7 +60,7 @@ Returns the current value associated with the given key, or null if the given ke
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:35
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:35
 
 ***
 
@@ -80,7 +80,7 @@ Returns the name of the nth key, or null if n is greater than or equal to the nu
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:37
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:37
 
 ***
 
@@ -102,7 +102,7 @@ Dispatches a storage event on Window objects holding an equivalent Storage objec
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:43
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:43
 
 ***
 
@@ -128,4 +128,4 @@ Dispatches a storage event on Window objects holding an equivalent Storage objec
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:51
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:51

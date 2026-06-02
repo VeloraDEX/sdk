@@ -25,7 +25,7 @@ A **FilterByBlockHash** allows searching a specific block for mathcing
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1003
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1003
 
 ***
 
@@ -37,7 +37,7 @@ The blockhash of the specific block for the filter.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1028
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1028
 
 ***
 
@@ -51,4 +51,4 @@ node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1028
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1004
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1004

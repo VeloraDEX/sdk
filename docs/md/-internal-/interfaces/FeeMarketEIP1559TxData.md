@@ -26,7 +26,7 @@ The access list which contains the addresses/storage slots which the transaction
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:134
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:134
 
 ***
 
@@ -42,7 +42,7 @@ The transaction's chain ID
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:130
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:130
 
 ***
 
@@ -58,7 +58,7 @@ This will contain the data of the message or the init of a contract.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:105
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:105
 
 ***
 
@@ -74,7 +74,7 @@ The transaction's gas limit.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:93
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:93
 
 ***
 
@@ -82,7 +82,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:93
 
 > `optional` **gasPrice**: `null`
 
-The transaction's gas price, inherited from [Transaction](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md).  This property is not used for EIP1559
+The transaction's gas price, inherited from [Transaction](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md).  This property is not used for EIP1559
 transactions and should always be undefined for this specific transaction type.
 
 #### Overrides
@@ -91,7 +91,7 @@ transactions and should always be undefined for this specific transaction type.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:144
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:144
 
 ***
 
@@ -103,7 +103,7 @@ The maximum total fee
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:152
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:152
 
 ***
 
@@ -115,7 +115,7 @@ The maximum inclusion fee per gas (this fee is given to the miner)
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:148
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:148
 
 ***
 
@@ -131,7 +131,7 @@ The transaction's nonce.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:85
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:85
 
 ***
 
@@ -147,7 +147,7 @@ EC signature parameter.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:113
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:113
 
 ***
 
@@ -163,7 +163,7 @@ EC signature parameter.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:117
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:117
 
 ***
 
@@ -179,7 +179,7 @@ The transaction's the address is sent to.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:97
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:97
 
 ***
 
@@ -195,7 +195,7 @@ The transaction type
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:121
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:121
 
 ***
 
@@ -211,7 +211,7 @@ EC recovery ID.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:109
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:109
 
 ***
 
@@ -227,4 +227,4 @@ The amount of Ether sent.
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:101
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:101

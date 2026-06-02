@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:44
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:44
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:44
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:37
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:37
 
 ***
 
@@ -34,7 +34,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:37
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:40
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:40
 
 ***
 
@@ -64,7 +64,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:40
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:46
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:46
 
 ***
 
@@ -74,7 +74,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:46
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:39
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:39
 
 ***
 
@@ -84,7 +84,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:39
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:45
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:45
 
 ***
 
@@ -94,7 +94,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:45
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:42
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:42
 
 ***
 
@@ -104,7 +104,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:42
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:43
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:43
 
 ***
 
@@ -114,7 +114,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:43
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:36
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:36
 
 ***
 
@@ -124,7 +124,7 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:36
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:38
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:38
 
 ***
 
@@ -134,4 +134,4 @@ node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:38
 
 #### Defined in
 
-node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:41
+node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:41

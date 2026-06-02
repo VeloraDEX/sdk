@@ -120,4 +120,4 @@ If the source token is a tax token, you should specify the tax amount in BPS.
 
 ## Defined in
 
-[src/methods/swap/rates.ts:146](https://github.com/VeloraDEX/sdk/blob/master/src/methods/swap/rates.ts#L146)
+[src/methods/swap/rates.ts:146](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L146)

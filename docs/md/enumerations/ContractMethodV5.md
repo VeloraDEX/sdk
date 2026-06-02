@@ -14,7 +14,7 @@
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:22
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:22
 
 ***
 
@@ -24,7 +24,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:22
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:7
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:7
 
 ***
 
@@ -34,7 +34,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:7
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:9
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:9
 
 ***
 
@@ -44,7 +44,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:9
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:11
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:11
 
 ***
 
@@ -54,7 +54,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:11
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:27
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:27
 
 ***
 
@@ -64,7 +64,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:27
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:28
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:28
 
 ***
 
@@ -74,7 +74,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:28
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:25
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:25
 
 ***
 
@@ -84,7 +84,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:25
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:26
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:26
 
 ***
 
@@ -94,7 +94,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:26
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:24
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:24
 
 ***
 
@@ -104,7 +104,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:24
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:23
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:23
 
 ***
 
@@ -114,7 +114,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:23
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:15
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:15
 
 ***
 
@@ -124,7 +124,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:15
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:14
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:14
 
 ***
 
@@ -134,7 +134,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:14
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:17
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:17
 
 ***
 
@@ -144,7 +144,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:17
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:16
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:16
 
 ***
 
@@ -154,7 +154,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:16
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:19
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:19
 
 ***
 
@@ -164,7 +164,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:19
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:18
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:18
 
 ***
 
@@ -174,7 +174,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:18
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:12
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:12
 
 ***
 
@@ -184,7 +184,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:12
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:13
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:13
 
 ***
 
@@ -194,7 +194,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:13
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:6
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:6
 
 ***
 
@@ -204,7 +204,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:6
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:8
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:8
 
 ***
 
@@ -214,7 +214,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:8
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:10
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:10
 
 ***
 
@@ -224,7 +224,7 @@ node\_modules/@paraswap/core/build/constants.d.ts:10
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:20
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:20
 
 ***
 
@@ -234,4 +234,4 @@ node\_modules/@paraswap/core/build/constants.d.ts:20
 
 #### Defined in
 
-node\_modules/@paraswap/core/build/constants.d.ts:21
+node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:21

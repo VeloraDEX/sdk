@@ -22,10 +22,6 @@ A boolean indicating whether the order is a fillable order. False by default
 
 > **order**: [`DeltaAuctionOrder`](DeltaAuctionOrder.md)
 
-### signature
-
-> **signature**: `string`
-
 ## Defined in
 
-[src/methods/delta/deltaTokenModule.ts:14](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L14)
+[src/methods/delta/deltaTokenModule.ts:17](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L17)

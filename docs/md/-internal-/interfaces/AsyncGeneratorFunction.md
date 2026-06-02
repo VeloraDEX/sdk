@@ -22,7 +22,7 @@ A list of arguments the function accepts.
 
 ## Defined in
 
-node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:39
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:39
 
 ## Constructors
 
@@ -44,7 +44,7 @@ A list of arguments the function accepts.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:34
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:34
 
 ## Properties
 
@@ -56,7 +56,7 @@ The length of the arguments.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:43
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:43
 
 ***
 
@@ -68,7 +68,7 @@ Returns the name of the function.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:47
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:47
 
 ***
 
@@ -80,4 +80,4 @@ A reference to the prototype.
 
 #### Defined in
 
-node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:51
+node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:51

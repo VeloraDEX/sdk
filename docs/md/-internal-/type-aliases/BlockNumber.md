@@ -16,4 +16,4 @@ Represents a block number in the blockchain.
 
 ## Defined in
 
-node\_modules/viem/\_types/types/block.d.ts:71
+node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/block.d.ts:71

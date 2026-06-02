@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/@ethersproject/properties/lib/index.d.ts:3
+node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:3

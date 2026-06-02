@@ -38,7 +38,7 @@ The **Typed** class to wrap values providing explicit type information.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:94
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:94
 
 ## Properties
 
@@ -50,7 +50,7 @@ node\_modules/ethers/lib.commonjs/abi/typed.d.ts:94
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:90
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:90
 
 ***
 
@@ -62,7 +62,7 @@ The type, as a Solidity-compatible type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:82
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:82
 
 ***
 
@@ -74,7 +74,7 @@ The actual value.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:86
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:86
 
 ## Accessors
 
@@ -94,7 +94,7 @@ Returns the length of the array type or ``-1`` if it is dynamic.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:132
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:132
 
 ***
 
@@ -112,7 +112,7 @@ Returns the tuple name, if this is a tuple. Throws otherwise.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:126
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:126
 
 ## Methods
 
@@ -128,7 +128,7 @@ The default value returned by this type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:102
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:102
 
 ***
 
@@ -144,7 +144,7 @@ Format the type as a Human-Readable type.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:98
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:98
 
 ***
 
@@ -160,7 +160,7 @@ Returns ``true`` and provides a type guard is this is a [[TypedBigInt]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:114
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:114
 
 ***
 
@@ -176,7 +176,7 @@ Returns ``true`` and provides a type guard is this is a [[TypedData]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:118
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:118
 
 ***
 
@@ -192,7 +192,7 @@ Returns ``true`` and provides a type guard is this is a [[TypedString]].
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:122
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:122
 
 ***
 
@@ -208,7 +208,7 @@ The maximum value for numeric types.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:110
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:110
 
 ***
 
@@ -224,7 +224,7 @@ The minimum value for numeric types.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:106
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:106
 
 ***
 
@@ -244,7 +244,7 @@ Return a new ``address`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:532
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:532
 
 ***
 
@@ -266,7 +266,7 @@ Return a new ``array`` type for %%v%%, allowing %%dynamic%% length.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:548
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:548
 
 ***
 
@@ -286,7 +286,7 @@ Return a new ``bool`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:536
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:536
 
 ***
 
@@ -306,7 +306,7 @@ Return a new ``bytes`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:540
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:540
 
 ***
 
@@ -326,7 +326,7 @@ Return a new ``bytes1`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:404
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:404
 
 ***
 
@@ -346,7 +346,7 @@ Return a new ``bytes10`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:440
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:440
 
 ***
 
@@ -366,7 +366,7 @@ Return a new ``bytes11`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:444
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:444
 
 ***
 
@@ -386,7 +386,7 @@ Return a new ``bytes12`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:448
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:448
 
 ***
 
@@ -406,7 +406,7 @@ Return a new ``bytes13`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:452
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:452
 
 ***
 
@@ -426,7 +426,7 @@ Return a new ``bytes14`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:456
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:456
 
 ***
 
@@ -446,7 +446,7 @@ Return a new ``bytes15`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:460
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:460
 
 ***
 
@@ -466,7 +466,7 @@ Return a new ``bytes16`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:464
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:464
 
 ***
 
@@ -486,7 +486,7 @@ Return a new ``bytes17`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:468
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:468
 
 ***
 
@@ -506,7 +506,7 @@ Return a new ``bytes18`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:472
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:472
 
 ***
 
@@ -526,7 +526,7 @@ Return a new ``bytes19`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:476
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:476
 
 ***
 
@@ -546,7 +546,7 @@ Return a new ``bytes2`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:408
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:408
 
 ***
 
@@ -566,7 +566,7 @@ Return a new ``bytes20`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:480
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:480
 
 ***
 
@@ -586,7 +586,7 @@ Return a new ``bytes21`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:484
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:484
 
 ***
 
@@ -606,7 +606,7 @@ Return a new ``bytes22`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:488
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:488
 
 ***
 
@@ -626,7 +626,7 @@ Return a new ``bytes23`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:492
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:492
 
 ***
 
@@ -646,7 +646,7 @@ Return a new ``bytes24`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:496
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:496
 
 ***
 
@@ -666,7 +666,7 @@ Return a new ``bytes25`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:500
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:500
 
 ***
 
@@ -686,7 +686,7 @@ Return a new ``bytes26`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:504
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:504
 
 ***
 
@@ -706,7 +706,7 @@ Return a new ``bytes27`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:508
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:508
 
 ***
 
@@ -726,7 +726,7 @@ Return a new ``bytes28`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:512
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:512
 
 ***
 
@@ -746,7 +746,7 @@ Return a new ``bytes29`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:516
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:516
 
 ***
 
@@ -766,7 +766,7 @@ Return a new ``bytes3`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:412
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:412
 
 ***
 
@@ -786,7 +786,7 @@ Return a new ``bytes30`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:520
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:520
 
 ***
 
@@ -806,7 +806,7 @@ Return a new ``bytes31`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:524
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:524
 
 ***
 
@@ -826,7 +826,7 @@ Return a new ``bytes32`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:528
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:528
 
 ***
 
@@ -846,7 +846,7 @@ Return a new ``bytes4`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:416
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:416
 
 ***
 
@@ -866,7 +866,7 @@ Return a new ``bytes5`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:420
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:420
 
 ***
 
@@ -886,7 +886,7 @@ Return a new ``bytes6`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:424
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:424
 
 ***
 
@@ -906,7 +906,7 @@ Return a new ``bytes7`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:428
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:428
 
 ***
 
@@ -926,7 +926,7 @@ Return a new ``bytes8`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:432
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:432
 
 ***
 
@@ -946,7 +946,7 @@ Return a new ``bytes9`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:436
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:436
 
 ***
 
@@ -976,7 +976,7 @@ If the value is a [[Typed]] instance, validates the underlying value
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:568
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:568
 
 ***
 
@@ -998,7 +998,7 @@ Returns a new **Typed** of %%type%% with the %%value%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:136
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:136
 
 ***
 
@@ -1018,7 +1018,7 @@ Return a new ``int256`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:400
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:400
 
 ***
 
@@ -1038,7 +1038,7 @@ Return a new ``int104`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:320
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:320
 
 ***
 
@@ -1058,7 +1058,7 @@ Return a new ``int112`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:324
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:324
 
 ***
 
@@ -1078,7 +1078,7 @@ Return a new ``int120`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:328
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:328
 
 ***
 
@@ -1098,7 +1098,7 @@ Return a new ``int128`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:332
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:332
 
 ***
 
@@ -1118,7 +1118,7 @@ Return a new ``int136`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:336
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:336
 
 ***
 
@@ -1138,7 +1138,7 @@ Return a new ``int144`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:340
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:340
 
 ***
 
@@ -1158,7 +1158,7 @@ Return a new ``int52`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:344
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:344
 
 ***
 
@@ -1178,7 +1178,7 @@ Return a new ``int16`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:276
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:276
 
 ***
 
@@ -1198,7 +1198,7 @@ Return a new ``int160`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:348
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:348
 
 ***
 
@@ -1218,7 +1218,7 @@ Return a new ``int168`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:352
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:352
 
 ***
 
@@ -1238,7 +1238,7 @@ Return a new ``int176`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:356
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:356
 
 ***
 
@@ -1258,7 +1258,7 @@ Return a new ``int184`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:360
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:360
 
 ***
 
@@ -1278,7 +1278,7 @@ Return a new ``int92`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:364
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:364
 
 ***
 
@@ -1298,7 +1298,7 @@ Return a new ``int200`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:368
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:368
 
 ***
 
@@ -1318,7 +1318,7 @@ Return a new ``int208`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:372
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:372
 
 ***
 
@@ -1338,7 +1338,7 @@ Return a new ``int216`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:376
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:376
 
 ***
 
@@ -1358,7 +1358,7 @@ Return a new ``int224`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:380
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:380
 
 ***
 
@@ -1378,7 +1378,7 @@ Return a new ``int232`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:384
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:384
 
 ***
 
@@ -1398,7 +1398,7 @@ Return a new ``int24`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:280
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:280
 
 ***
 
@@ -1418,7 +1418,7 @@ Return a new ``int240`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:388
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:388
 
 ***
 
@@ -1438,7 +1438,7 @@ Return a new ``int248`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:392
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:392
 
 ***
 
@@ -1458,7 +1458,7 @@ Return a new ``int256`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:396
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:396
 
 ***
 
@@ -1478,7 +1478,7 @@ Return a new ``int32`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:284
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:284
 
 ***
 
@@ -1498,7 +1498,7 @@ Return a new ``int40`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:288
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:288
 
 ***
 
@@ -1518,7 +1518,7 @@ Return a new ``int48`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:292
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:292
 
 ***
 
@@ -1538,7 +1538,7 @@ Return a new ``int56`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:296
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:296
 
 ***
 
@@ -1558,7 +1558,7 @@ Return a new ``int64`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:300
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:300
 
 ***
 
@@ -1578,7 +1578,7 @@ Return a new ``int72`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:304
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:304
 
 ***
 
@@ -1598,7 +1598,7 @@ Return a new ``int8`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:272
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:272
 
 ***
 
@@ -1618,7 +1618,7 @@ Return a new ``int80`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:308
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:308
 
 ***
 
@@ -1638,7 +1638,7 @@ Return a new ``int88`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:312
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:312
 
 ***
 
@@ -1658,7 +1658,7 @@ Return a new ``int96`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:316
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:316
 
 ***
 
@@ -1678,7 +1678,7 @@ Returns true only if %%value%% is a [[Typed]] instance.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:560
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:560
 
 ***
 
@@ -1698,7 +1698,7 @@ Return a new ``uint8`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:556
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:556
 
 ***
 
@@ -1718,7 +1718,7 @@ Return a new ``string`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:544
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:544
 
 ***
 
@@ -1740,7 +1740,7 @@ Return a new ``tuple`` type for %%v%%, with the optional %%name%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:552
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:552
 
 ***
 
@@ -1760,7 +1760,7 @@ Return a new ``uint256`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:268
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:268
 
 ***
 
@@ -1780,7 +1780,7 @@ Return a new ``uint104`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:188
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:188
 
 ***
 
@@ -1800,7 +1800,7 @@ Return a new ``uint112`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:192
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:192
 
 ***
 
@@ -1820,7 +1820,7 @@ Return a new ``uint120`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:196
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:196
 
 ***
 
@@ -1840,7 +1840,7 @@ Return a new ``uint128`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:200
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:200
 
 ***
 
@@ -1860,7 +1860,7 @@ Return a new ``uint136`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:204
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:204
 
 ***
 
@@ -1880,7 +1880,7 @@ Return a new ``uint144`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:208
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:208
 
 ***
 
@@ -1900,7 +1900,7 @@ Return a new ``uint152`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:212
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:212
 
 ***
 
@@ -1920,7 +1920,7 @@ Return a new ``uint16`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:144
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:144
 
 ***
 
@@ -1940,7 +1940,7 @@ Return a new ``uint160`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:216
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:216
 
 ***
 
@@ -1960,7 +1960,7 @@ Return a new ``uint168`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:220
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:220
 
 ***
 
@@ -1980,7 +1980,7 @@ Return a new ``uint176`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:224
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:224
 
 ***
 
@@ -2000,7 +2000,7 @@ Return a new ``uint184`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:228
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:228
 
 ***
 
@@ -2020,7 +2020,7 @@ Return a new ``uint192`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:232
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:232
 
 ***
 
@@ -2040,7 +2040,7 @@ Return a new ``uint200`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:236
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:236
 
 ***
 
@@ -2060,7 +2060,7 @@ Return a new ``uint208`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:240
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:240
 
 ***
 
@@ -2080,7 +2080,7 @@ Return a new ``uint216`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:244
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:244
 
 ***
 
@@ -2100,7 +2100,7 @@ Return a new ``uint224`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:248
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:248
 
 ***
 
@@ -2120,7 +2120,7 @@ Return a new ``uint232`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:252
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:252
 
 ***
 
@@ -2140,7 +2140,7 @@ Return a new ``uint24`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:148
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:148
 
 ***
 
@@ -2160,7 +2160,7 @@ Return a new ``uint240`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:256
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:256
 
 ***
 
@@ -2180,7 +2180,7 @@ Return a new ``uint248`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:260
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:260
 
 ***
 
@@ -2200,7 +2200,7 @@ Return a new ``uint256`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:264
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:264
 
 ***
 
@@ -2220,7 +2220,7 @@ Return a new ``uint32`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:152
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:152
 
 ***
 
@@ -2240,7 +2240,7 @@ Return a new ``uint40`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:156
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:156
 
 ***
 
@@ -2260,7 +2260,7 @@ Return a new ``uint48`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:160
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:160
 
 ***
 
@@ -2280,7 +2280,7 @@ Return a new ``uint56`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:164
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:164
 
 ***
 
@@ -2300,7 +2300,7 @@ Return a new ``uint64`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:168
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:168
 
 ***
 
@@ -2320,7 +2320,7 @@ Return a new ``uint72`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:172
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:172
 
 ***
 
@@ -2340,7 +2340,7 @@ Return a new ``uint8`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:140
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:140
 
 ***
 
@@ -2360,7 +2360,7 @@ Return a new ``uint80`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:176
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:176
 
 ***
 
@@ -2380,7 +2380,7 @@ Return a new ``uint88`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:180
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:180
 
 ***
 
@@ -2400,4 +2400,4 @@ Return a new ``uint96`` type for %%v%%.
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/abi/typed.d.ts:184
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:184

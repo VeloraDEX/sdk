@@ -22,6 +22,22 @@
 
 Cancel an order on-chain and withdraw native ETH back to the owner
 
+### cancelTWAPAndWithdrawDeltaOrder
+
+> **cancelTWAPAndWithdrawDeltaOrder**: [`CancelTWAPAndWithdrawDeltaOrder`](../-internal-/type-aliases/CancelTWAPAndWithdrawDeltaOrder.md)\<`T`\>
+
+#### Description
+
+Cancel a TWAP sell order on-chain and withdraw native ETH back to the owner
+
+### cancelTWAPBuyAndWithdrawDeltaOrder
+
+> **cancelTWAPBuyAndWithdrawDeltaOrder**: [`CancelTWAPBuyAndWithdrawDeltaOrder`](../-internal-/type-aliases/CancelTWAPBuyAndWithdrawDeltaOrder.md)\<`T`\>
+
+#### Description
+
+Cancel a TWAP buy order on-chain and withdraw native ETH back to the owner
+
 ### depositNativeAndPreSign
 
 > **depositNativeAndPreSign**: [`DepositNativeAndPreSign`](../-internal-/type-aliases/DepositNativeAndPreSign.md)\<`T`\>
@@ -48,4 +64,4 @@ Withdraw Delta Wrapped Native tokens as native ETH
 
 ## Defined in
 
-[src/methods/delta/deltaTokenModule.ts:57](https://github.com/VeloraDEX/sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L57)
+[src/methods/delta/deltaTokenModule.ts:71](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L71)

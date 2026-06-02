@@ -8,13 +8,13 @@
 
 ## Extends
 
-- [`Web3APIRequest`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)\<`API`, `Method`\>
+- [`Web3APIRequest`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)\<`API`, `Method`\>
 
 ## Type Parameters
 
 • **API** *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md)
 
-• **Method** *extends* [`Web3APIMethod`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
+• **Method** *extends* [`Web3APIMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
 
 ## Properties
 
@@ -24,17 +24,17 @@
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:29
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:29
 
 ***
 
 ### jsonrpc?
 
-> `readonly` `optional` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
+> `readonly` `optional` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:28
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:28
 
 ***
 
@@ -44,25 +44,25 @@ node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:28
 
 #### Inherited from
 
-[`Web3APIRequest`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`method`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#method)
+[`Web3APIRequest`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`method`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#method)
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:24
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:24
 
 ***
 
 ### params?
 
-> `optional` **params**: `object` \| readonly `unknown`[] \| [`Web3APIParams`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIParams.md)\<`API`, `Method`\>
+> `optional` **params**: `object` \| readonly `unknown`[] \| [`Web3APIParams`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIParams.md)\<`API`, `Method`\>
 
 #### Inherited from
 
-[`Web3APIRequest`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`params`](../namespaces/Users_nazariikyselevych_Projects_paraswap_sdk_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#params)
+[`Web3APIRequest`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`params`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#params)
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:25
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:25
 
 ***
 
@@ -72,4 +72,4 @@ node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:25
 
 #### Defined in
 
-node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:30
+node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:30

@@ -23,4 +23,4 @@ When [walking asynchronously](ParamType-walkAsync) a [[ParamType]],
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:104
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:104

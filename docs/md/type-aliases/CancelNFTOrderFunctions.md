@@ -28,4 +28,4 @@ NFT Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/nftOrders/cancelOrder.ts:9](https://github.com/VeloraDEX/sdk/blob/master/src/methods/nftOrders/cancelOrder.ts#L9)
+[src/methods/nftOrders/cancelOrder.ts:9](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/cancelOrder.ts#L9)

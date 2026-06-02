@@ -25,7 +25,7 @@ A KZG Library with the necessary functions to compute
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:116
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:116
 
 ***
 
@@ -45,4 +45,4 @@ node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:116
 
 #### Defined in
 
-node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:117
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:117

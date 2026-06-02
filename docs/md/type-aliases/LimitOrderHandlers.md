@@ -18,4 +18,4 @@ Limit Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/methods/limitOrders/index.ts:112](https://github.com/VeloraDEX/sdk/blob/master/src/methods/limitOrders/index.ts#L112)
+[src/methods/limitOrders/index.ts:112](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/index.ts#L112)

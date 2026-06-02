@@ -107,4 +107,4 @@ v15.4.0
 
 ## Defined in
 
-node\_modules/@types/node/stream.d.ts:1395
+node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream.d.ts:1395

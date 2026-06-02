@@ -30,4 +30,4 @@ construct composable SDK with methods you choose yourself
 
 ## Defined in
 
-[src/sdk/partial.ts:90](https://github.com/VeloraDEX/sdk/blob/master/src/sdk/partial.ts#L90)
+[src/sdk/partial.ts:92](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L92)

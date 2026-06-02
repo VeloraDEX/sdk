@@ -30,7 +30,7 @@
 
 #### Defined in
 
-node\_modules/@ethersproject/properties/lib/index.d.ts:13
+node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
 
 ## Properties
 
@@ -40,7 +40,7 @@ node\_modules/@ethersproject/properties/lib/index.d.ts:13
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:103
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:103
 
 ***
 
@@ -50,7 +50,7 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:103
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:102
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:102
 
 ## Methods
 
@@ -68,4 +68,4 @@ node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:102
 
 #### Defined in
 
-node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:104
+node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:104

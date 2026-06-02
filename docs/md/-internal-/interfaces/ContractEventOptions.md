@@ -16,7 +16,7 @@ Let you filter events by indexed parameters, e.g. `{filter: {myNumber: [12,13]}}
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:13
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:13
 
 ***
 
@@ -28,7 +28,7 @@ The block number (greater than or equal to) from which to get events on. Pre-def
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:17
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:17
 
 ***
 
@@ -40,4 +40,4 @@ This allows to manually set the topics for the event filter. If given the filter
 
 #### Defined in
 
-node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:21
+node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:21

@@ -25,4 +25,4 @@ The format to serialize the output as.
 
 ## Defined in
 
-node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:94
+node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:94
