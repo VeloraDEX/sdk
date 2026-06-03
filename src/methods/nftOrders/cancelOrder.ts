@@ -2,7 +2,7 @@ import type { ConstructProviderFetchInput } from '../../types';
 import {
   CancelOrder,
   CancelOrderBulk,
-  constructCancelLimitOrder,
+  constructCancelOTCOrder,
 } from '../otcOrders/cancelOrder';
 
 /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
@@ -17,7 +17,7 @@ export const constructCancelNFTOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
 ): CancelNFTOrderFunctions<T> => {
   const { cancelLimitOrder, cancelLimitOrderBulk } =
-    constructCancelLimitOrder(options);
+    constructCancelOTCOrder(options);
   return {
     cancelNFTOrder: cancelLimitOrder,
     cancelNFTOrderBulk: cancelLimitOrderBulk,

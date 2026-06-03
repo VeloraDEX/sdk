@@ -27,43 +27,43 @@ import { constructGetTokens, GetTokensFunctions } from './methods/swap/token';
 import { BuildTxFunctions, constructBuildTx } from './methods/swap/transaction';
 
 import {
-  BuildLimitOrderFunctions,
-  BuildLimitOrderInput,
+  BuildOTCOrderFunctions,
+  BuildOTCOrderInput,
   BuildOrderDataInput,
-  constructBuildLimitOrder,
+  constructBuildOTCOrder,
 } from './methods/otcOrders/buildOrder';
 import {
-  SignLimitOrderFunctions,
-  constructSignLimitOrder,
+  SignOTCOrderFunctions,
+  constructSignOTCOrder,
 } from './methods/otcOrders/signOrder';
 import {
-  CancelLimitOrderFunctions,
-  constructCancelLimitOrder,
+  CancelOTCOrderFunctions,
+  constructCancelOTCOrder,
 } from './methods/otcOrders/cancelOrder';
 import {
-  FillOrderDirectlyFunctions,
-  constructFillOrderDirectly,
+  FillOTCOrderFunctions,
+  constructFillOTCOrder,
 } from './methods/otcOrders/fillOrderDirectly';
 import {
-  GetLimitOrdersFunctions,
-  constructGetLimitOrders,
-  LimitOrdersUserParams,
+  GetOTCOrdersFunctions,
+  constructGetOTCOrders,
+  OTCOrdersUserParams,
 } from './methods/otcOrders/getOrders';
 import {
-  PostLimitOrderFunctions,
-  constructPostLimitOrder,
+  PostOTCOrderFunctions,
+  constructPostOTCOrder,
 } from './methods/otcOrders/postOrder';
 import {
-  ApproveTokenForLimitOrderFunctions,
-  constructApproveTokenForLimitOrder,
+  ApproveTokenForOTCOrderFunctions,
+  constructApproveTokenForOTCOrder,
 } from './methods/otcOrders/approveForOrder';
 import {
-  GetLimitOrdersContractFunctions,
-  constructGetLimitOrdersContract,
+  GetOTCOrdersContractFunctions,
+  constructGetOTCOrdersContract,
 } from './methods/otcOrders/getOrdersContract';
 import {
-  BuildLimitOrdersTxFunctions,
-  constructBuildLimitOrderTx,
+  BuildOTCOrdersTxFunctions,
+  constructBuildOTCOrderTx,
 } from './methods/otcOrders/transaction';
 
 import {
@@ -300,9 +300,9 @@ import { SignableDeltaOrderData } from './methods/delta/helpers/buildDeltaOrderD
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
 
 export {
-  constructAllLimitOrdersHandlers,
-  constructSubmitLimitOrder,
-  LimitOrderHandlers,
+  constructAllOTCOrdersHandlers,
+  constructSubmitOTCOrder,
+  OTCOrderHandlers,
 } from './methods/otcOrders';
 
 export {
@@ -324,9 +324,9 @@ export type {
   BuildOptionsWithGasPrice,
   BuildTxInput,
   BuildSwapTxInput,
-  BuildLimitOrderTxInput,
+  BuildOTCOrderTxInput,
   BuildNFTOrderTxInput,
-  BuildSwapAndLimitOrderTxInput,
+  BuildSwapAndOTCOrderTxInput,
   BuildSwapAndNFTOrderTxInput,
   SwappableOrder,
   SwappableNFTOrder,
@@ -356,16 +356,16 @@ export {
   constructGetAdapters,
   constructGetRate,
   constructSwapTx,
-  // limitOrders methods:
-  constructBuildLimitOrder,
-  constructSignLimitOrder,
-  constructCancelLimitOrder,
-  constructFillOrderDirectly,
-  constructGetLimitOrders,
-  constructPostLimitOrder,
-  constructApproveTokenForLimitOrder,
-  constructGetLimitOrdersContract,
-  constructBuildLimitOrderTx,
+  // OTCOrders methods:
+  constructBuildOTCOrder,
+  constructSignOTCOrder,
+  constructCancelOTCOrder,
+  constructFillOTCOrder,
+  constructGetOTCOrders,
+  constructPostOTCOrder,
+  constructApproveTokenForOTCOrder,
+  constructGetOTCOrdersContract,
+  constructBuildOTCOrderTx,
   // nftOrders methods
   constructBuildNFTOrder,
   constructSignNFTOrder,
@@ -435,19 +435,19 @@ export type {
   GetRateInput,
   BuildTxFunctions,
   GetSwapTxFunctions,
-  // types for limitOrders methods:
-  BuildLimitOrderFunctions,
-  SignLimitOrderFunctions,
-  CancelLimitOrderFunctions,
-  FillOrderDirectlyFunctions,
-  GetLimitOrdersContractFunctions,
-  BuildLimitOrdersTxFunctions,
-  BuildLimitOrderInput,
+  // types for OTCOrders methods:
+  BuildOTCOrderFunctions,
+  SignOTCOrderFunctions,
+  CancelOTCOrderFunctions,
+  FillOTCOrderFunctions,
+  GetOTCOrdersContractFunctions,
+  BuildOTCOrdersTxFunctions,
+  BuildOTCOrderInput,
   BuildOrderDataInput,
-  PostLimitOrderFunctions,
-  ApproveTokenForLimitOrderFunctions,
-  GetLimitOrdersFunctions,
-  LimitOrdersUserParams,
+  PostOTCOrderFunctions,
+  ApproveTokenForOTCOrderFunctions,
+  GetOTCOrdersFunctions,
+  OTCOrdersUserParams,
   // types for nftOrders methods:
   SignNFTOrderFunctions,
   CancelNFTOrderFunctions,
@@ -573,7 +573,7 @@ export {
   ProviderOptions as SimpleSDKProviderOptions,
 } from './sdk/simple';
 
-// bundled methods for limitOrders
+// bundled methods for OTCOrders
 export * from './methods/otcOrders';
 export * from './methods/otcOrders/helpers/types';
 // bundled methods for nftOrders

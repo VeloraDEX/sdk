@@ -1,5 +1,3 @@
-// @TODO getOrder, getOrders from API
-// onchain from contract can't distinguish between filled or cancelled
 import { API_URL } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type {
@@ -14,9 +12,9 @@ import {
   GetRequiredAllowanceURL as GetRequiredBalanceURL,
 } from './helpers/misc';
 import type {
-  LimitOrderFromApi,
-  LimitOrdersApiResponse,
-  LimitOrderType,
+  OTCOrderFromApi,
+  OTCOrdersApiResponse,
+  OTCOrderType,
 } from './helpers/types';
 
 type PaginationParams = {
@@ -27,9 +25,9 @@ type PaginationParams = {
 };
 
 //                     get orders by `maker` or `taker`
-export type LimitOrdersUserParams = (
-  | { maker: Address; type: LimitOrderType }
-  | { taker: Address; type: LimitOrderType }
+export type OTCOrdersUserParams = (
+  | { maker: Address; }
+  | { taker: Address; }
 ) &
   PaginationParams;
 
@@ -38,24 +36,23 @@ export type GetRequiredAllowanceParams = {
   token?: Address;
 };
 
-type GetLimitOrderByHash = (
+type GetOTCOrderByHash = (
   orderHash: string,
   requestParams?: RequestParameters
-) => Promise<LimitOrderFromApi>;
-type GetLimitOrders = (
-  userParams: LimitOrdersUserParams,
+) => Promise<OTCOrderFromApi>;
+type GetOTCOrders = (
+  userParams: OTCOrdersUserParams,
   requestParams?: RequestParameters
-) => Promise<LimitOrdersApiResponse>;
+) => Promise<OTCOrdersApiResponse>;
 
 type GetRequiredBalance = (
   userParams: GetRequiredAllowanceParams,
   requestParams?: RequestParameters
 ) => Promise<Record<string, string>>;
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type GetLimitOrdersFunctions = {
-  getLimitOrders: GetLimitOrders;
-  getLimitOrderByHash: GetLimitOrderByHash;
+export type GetOTCOrdersFunctions = {
+  getOTCOrders: GetOTCOrders;
+  getOTCOrderByHash: GetOTCOrderByHash;
   /**
    * Gets fillableBalance for tokens from user's active orders.
    * User needs to have enough balance & allowance to cover active orders before creating new orders.
@@ -68,19 +65,18 @@ export type GetLimitOrdersFunctions = {
   getRequiredBalance: GetRequiredBalance;
 };
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export const constructGetLimitOrders = ({
+export const constructGetOTCOrders = ({
   apiURL = API_URL,
   chainId,
   fetcher,
-}: ConstructFetchInput): GetLimitOrdersFunctions => {
+}: ConstructFetchInput): GetOTCOrdersFunctions => {
   const getBaseFetchURLByEntityType = constructBaseFetchUrlGetter({
     apiURL,
     chainId,
   });
 
-  const getLimitOrders: GetLimitOrders = async (userParams, requestParams) => {
-    const baseFetchURL = getBaseFetchURLByEntityType(userParams.type);
+  const getOTCOrders: GetOTCOrders = async (userParams, requestParams) => {
+    const baseFetchURL = getBaseFetchURLByEntityType("P2P");
     const userURL =
       'maker' in userParams
         ? (`maker/${userParams.maker}` as const)
@@ -96,7 +92,7 @@ export const constructGetLimitOrders = ({
 
     const fetchURL = `${baseFetchURL}/${userURL}${search}` as const;
 
-    const response = await fetcher<LimitOrdersApiResponse, GetOrdersURLs>({
+    const response = await fetcher<OTCOrdersApiResponse, GetOrdersURLs>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -129,14 +125,14 @@ export const constructGetLimitOrders = ({
     return response;
   };
 
-  const getLimitOrderByHash: GetLimitOrderByHash = async (
+  const getOTCOrderByHash: GetOTCOrderByHash = async (
     orderHash,
     requestParams
   ) => {
     const baseFetchURL = getBaseFetchURLByEntityType();
     const fetchURL = `${baseFetchURL}/${orderHash}` as const;
 
-    const order = await fetcher<LimitOrderFromApi, GetOrderURL>({
+    const order = await fetcher<OTCOrderFromApi, GetOrderURL>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -146,8 +142,8 @@ export const constructGetLimitOrders = ({
   };
 
   return {
-    getLimitOrders,
-    getLimitOrderByHash,
+    getOTCOrders,
+    getOTCOrderByHash,
     getRequiredBalance,
   };
 };

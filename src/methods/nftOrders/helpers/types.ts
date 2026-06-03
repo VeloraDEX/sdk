@@ -1,9 +1,7 @@
 import type { Address } from '../../../types';
-import { OrderTransaction } from '../../common/orders/types';
 import type { NFTOrderData } from './buildOrderData';
 import type { AssetType } from './misc';
 
-export type NFTOrderTransaction = OrderTransaction;
 
 export type NFTOrderType = 'LIMIT' | 'P2P';
 
@@ -34,8 +32,6 @@ export type NFTOrderFromAPI = NFTOrderToSend & {
   type: NFTOrderType;
   /** @description transaction with the last event pertaining to the order: OrderFilled or OrderCancelled */
   transactionHash: null | string;
-  // not yet returned
-  // transactions: NftOrderTransaction[];
 };
 
 export type NFTOrdersApiResponse = {

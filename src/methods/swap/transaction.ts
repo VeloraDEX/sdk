@@ -12,7 +12,7 @@ import { assert } from 'ts-essentials';
 import { API_URL, SwapSide } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type { OrderData } from '../otcOrders/buildOrder';
-import { sanitizeOrderData as sanitizeLimitOrderData } from '../otcOrders/helpers/misc';
+import { sanitizeOrderData as sanitizeOTCOrderData } from '../otcOrders/helpers/misc';
 import { sanitizeOrderData as sanitizeNFTOrderData } from '../nftOrders/helpers/misc';
 import { AssetTypeVariant } from '../nftOrders/helpers/types';
 
@@ -98,7 +98,7 @@ export type BuildSwapTxInput = BuildTxInputBase & {
     | TxInputAmountsPartBuyOrSell
   ); // this union doesn't allow to mix srcAmount & destAmount & slippage together
 
-// building block for LimitOrders and NFT Orders swaps
+// building block for OTCOrders and NFT Orders swaps
 // can only use priceRoute.side=BUY and related TxInputAmountsPart*
 type BuildTxInputBaseBUYForOrders<
   // to Omit extra keys
@@ -110,8 +110,8 @@ type BuildTxInputBaseBUYForOrders<
     | Omit<TxInputAmountsPartBuyOrSell, 'destAmount' | K>
   );
 
-// for LimitOrder Fill, without swap
-export type BuildLimitOrderTxInput = BuildTxInputBaseBUYForOrders & {
+// for OTCOrder Fill, without swap
+export type BuildOTCOrderTxInput = BuildTxInputBaseBUYForOrders & {
   orders: SwappableOrder[];
   srcDecimals: number;
   destDecimals: number;
@@ -126,15 +126,8 @@ export type BuildNFTOrderTxInput =
     srcDecimals: number;
   };
 
-export interface BuildSwapAndLimitOrderTxInput0
-  // destAmount is sum(orders[].makerAmount)
-  extends Omit<BuildTxInputBase, 'destAmount'> {
-  priceRoute: OptimalRate; // priceRoute.side=BUY
-  orders: SwappableOrder[];
-  destDecimals: number;
-}
-// for Swap + LimitOrder, priceRoute must have side=BUY
-export type BuildSwapAndLimitOrderTxInput =
+// for Swap + OTCOrder, priceRoute must have side=BUY
+export type BuildSwapAndOTCOrderTxInput =
   // destAmount is sum(orders[].makerAmount)
   BuildTxInputBaseBUYForOrders & {
     priceRoute: OptimalRate; // priceRoute.side=BUY & priceRoute.contractMethod=simpleBuy
@@ -154,9 +147,9 @@ export type BuildSwapAndNFTOrderTxInput =
 
 export type BuildTxInput =
   | BuildSwapTxInput
-  | BuildLimitOrderTxInput
+  | BuildOTCOrderTxInput
   | BuildNFTOrderTxInput
-  | BuildSwapAndLimitOrderTxInput
+  | BuildSwapAndOTCOrderTxInput
   | BuildSwapAndNFTOrderTxInput;
 
 export type BuildOptionsBase = {
@@ -236,7 +229,7 @@ export const constructBuildTx = ({
               'makerAssetId' in order
                 ? sanitizeNFTOrderData(order) // assetType is provided here, because Order.*Asset may be address
                 : // if Order received from API by hash
-                sanitizeLimitOrderData(order);
+                sanitizeOTCOrderData(order);
 
             const sanitizedOrder: SwappableOrder = {
               ...sanitizedOrderData,

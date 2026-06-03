@@ -44,28 +44,28 @@ import type Web3 from 'web3';
 
 import type { SwapSDKMethods } from '../methods/swap';
 import {
-  BuildLimitOrderFunctions,
-  constructBuildLimitOrder,
+  BuildOTCOrderFunctions,
+  constructBuildOTCOrder,
 } from '../methods/otcOrders/buildOrder';
 import {
-  constructPostLimitOrder,
-  PostLimitOrderFunctions,
+  constructPostOTCOrder,
+  PostOTCOrderFunctions,
 } from '../methods/otcOrders/postOrder';
 import {
-  constructGetLimitOrders,
-  GetLimitOrdersFunctions,
+  constructGetOTCOrders,
+  GetOTCOrdersFunctions,
 } from '../methods/otcOrders/getOrders';
 import {
-  constructGetLimitOrdersContract,
-  GetLimitOrdersContractFunctions,
+  constructGetOTCOrdersContract,
+  GetOTCOrdersContractFunctions,
 } from '../methods/otcOrders/getOrdersContract';
 import {
-  constructBuildLimitOrderTx,
-  BuildLimitOrdersTxFunctions,
+  constructBuildOTCOrderTx,
+  BuildOTCOrdersTxFunctions,
 } from '../methods/otcOrders/transaction';
 import {
-  constructAllLimitOrdersHandlers,
-  LimitOrderHandlers,
+  constructAllOTCOrdersHandlers,
+  OTCOrderHandlers,
 } from '../methods/otcOrders';
 
 import {
@@ -145,12 +145,11 @@ export type SwapFetchMethods = GetBalancesFunctions &
   GetRateFunctions &
   GetSwapTxFunctions;
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type LimitOrdersFetchMethods = GetLimitOrdersContractFunctions &
-  GetLimitOrdersFunctions &
-  BuildLimitOrderFunctions &
-  PostLimitOrderFunctions &
-  BuildLimitOrdersTxFunctions;
+export type OTCOrdersFetchMethods = GetOTCOrdersContractFunctions &
+  GetOTCOrdersFunctions &
+  BuildOTCOrderFunctions &
+  PostOTCOrderFunctions &
+  BuildOTCOrdersTxFunctions;
 
 /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type NFTOrdersFetchMethods = GetNFTOrdersContractFunctions &
@@ -170,8 +169,7 @@ export type DeltaFetchMethods = BuildDeltaOrderFunctions &
 
 export type SimpleFetchSDK = {
   swap: SwapFetchMethods;
-  /** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-  limitOrders: LimitOrdersFetchMethods;
+  otcOrders: OTCOrdersFetchMethods;
   /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrdersFetchMethods;
   delta: DeltaFetchMethods;
@@ -182,8 +180,7 @@ export type QuoteFetchMethods = GetQuoteFunctions;
 
 export type SimpleSDK = {
   swap: SwapSDKMethods<TxHash>;
-  /** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-  limitOrders: LimitOrderHandlers<TxHash>;
+  otcOrders: OTCOrderHandlers<TxHash>;
   /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrderHandlers<TxHash>;
   delta: DeltaOrderHandlers<TxHash>;
@@ -268,13 +265,13 @@ export function constructSimpleSDK(
       constructSwapTx
     );
 
-    const limitOrders = constructPartialSDK(
+    const otcOrders = constructPartialSDK(
       config,
-      constructBuildLimitOrder,
-      constructPostLimitOrder,
-      constructGetLimitOrders,
-      constructGetLimitOrdersContract,
-      constructBuildLimitOrderTx
+      constructBuildOTCOrder,
+      constructPostOTCOrder,
+      constructGetOTCOrders,
+      constructGetOTCOrdersContract,
+      constructBuildOTCOrderTx
     );
 
     const nftOrders = constructPartialSDK(
@@ -302,7 +299,7 @@ export function constructSimpleSDK(
 
     return {
       swap,
-      limitOrders,
+      otcOrders,
       nftOrders,
       delta,
       quote,
@@ -324,8 +321,8 @@ export function constructSimpleSDK(
 
   const swap: SwapSDKMethods<TxHash> = constructSwapSDK(config);
 
-  const limitOrders: LimitOrderHandlers<TxHash> =
-    constructAllLimitOrdersHandlers<TxHash>(config);
+  const otcOrders: OTCOrderHandlers<TxHash> =
+    constructAllOTCOrdersHandlers<TxHash>(config);
 
   const nftOrders: NFTOrderHandlers<TxHash> =
     constructAllNFTOrdersHandlers<TxHash>(config);
@@ -337,7 +334,7 @@ export function constructSimpleSDK(
 
   return {
     swap,
-    limitOrders,
+    otcOrders,
     nftOrders,
     delta,
     quote,

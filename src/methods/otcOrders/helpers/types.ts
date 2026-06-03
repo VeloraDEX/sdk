@@ -1,33 +1,32 @@
-import { OrderTransaction } from '../../common/orders/types';
 import type { OrderData } from './buildOrderData';
 
-export type LimitOrderType = 'LIMIT' | 'P2P';
+export type OTCOrderType = 'P2P';
 
-export type LimitOrder = LimitOrderFromApi;
+export type OTCOrder = OTCOrderFromApi;
 
-export type LimitOrderToSend = OrderData & {
+export type OTCOrderToSend = OrderData & {
   permitMakerAsset?: string;
   signature: string;
 };
 
-export type LimitOrdersApiResponse = {
+export type OTCOrdersApiResponse = {
   limit: number;
   offset: number;
   total: number;
   hasMore: boolean;
-  orders: LimitOrderFromApi[];
+  orders: OTCOrderFromApi[];
 };
-export type LimitOrderApiResponse = {
-  order: LimitOrderFromApi;
+export type OTCOrderApiResponse = {
+  order: OTCOrderFromApi;
 };
 
 // display states such as EXPIRED and PARTIALLY_FILLLED derived on client side
 // returned by API but can be calculated too, EXPIRED == order.expiry < Date.now()/1000
 // PARTIALLY_FILLED == order.fillableBalance < order.makerAmount && order.fillableBalance !== '0'
-// SUSPENDED status was introduced for Limit orders to indicate that orders where makers lacked sufficient funds
+// SUSPENDED status was introduced for OTC orders to indicate that orders where makers lacked sufficient funds
 // to fulfill them would no longer be tracked. This status is similar to CANCELLED, but it reduces any ambiguity that might
 // arise when debugging or when users view their CANCELLED orders.
-export type LimitOrderState =
+export type OTCOrderState =
   | 'DRAFT'
   | 'PENDING'
   | 'FULFILLED'
@@ -35,11 +34,8 @@ export type LimitOrderState =
   | 'SUSPENDED'
   | 'EXPIRED';
 
-export type LimitOrderEvent = '';
 
-export type LimitOrderTransaction = OrderTransaction;
-
-export type LimitOrderFromApi = {
+export type OTCOrderFromApi = {
   chainId: number;
   nonceAndMeta: string; // uiint
   expiry: number; // timestamp
@@ -55,12 +51,10 @@ export type LimitOrderFromApi = {
   orderHash: string; // hex string
   createdAt: number; // timestamp
   updatedAt: number; // timestamp
-  state: LimitOrderState;
+  state: OTCOrderState;
   /** @description transaction with the last event pertaining to the order: OrderFilled or OrderCancelled */
   transactionHash: null | string;
-  // not yet returned
-  // transactions: LimitOrderTransaction[];
-  type: LimitOrderType;
+  type: OTCOrderType;
   takerFromMeta: string; // the intended receiver, eg receiving address of p2p order where `taker` would be augustus
   fillableBalance: string; // amount that remains to be filled
   reservedBalance: string; // amount that is currently reserved in this order

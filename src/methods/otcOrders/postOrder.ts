@@ -2,75 +2,61 @@ import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
 import { constructBaseFetchUrlGetter, PostOrderURLs } from './helpers/misc';
 import type {
-  LimitOrderApiResponse,
-  LimitOrderToSend,
-  LimitOrderFromApi,
-  LimitOrderType,
+  OTCOrderApiResponse,
+  OTCOrderToSend,
+  OTCOrderFromApi,
+  OTCOrderType,
 } from './helpers/types';
 
-type PostLimitOrder = (
-  limitOrderWithSignatureAndPermit: LimitOrderToSend,
+type PostOTCOrder = (
+  OTCOrderWithSignatureAndPermit: OTCOrderToSend,
   requestParams?: RequestParameters
-) => Promise<LimitOrderFromApi>;
+) => Promise<OTCOrderFromApi>;
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type PostLimitOrderFunctions = {
-  postLimitOrder: PostLimitOrder;
-  postP2POrder: PostLimitOrder;
+export type PostOTCOrderFunctions = {
+  postOTCOrder: PostOTCOrder;
 };
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export const constructPostLimitOrder = ({
+export const constructPostOTCOrder = ({
   apiURL = API_URL,
   chainId,
   fetcher,
-}: ConstructFetchInput): PostLimitOrderFunctions => {
+}: ConstructFetchInput): PostOTCOrderFunctions => {
   const getBaseFetchURLByOrderType = constructBaseFetchUrlGetter({
     apiURL,
     chainId,
   });
 
   const postTypedOrder = async (
-    limitOrderWithSignatureAndPermit: LimitOrderToSend,
-    type: LimitOrderType,
+    OTCOrderWithSignatureAndPermit: OTCOrderToSend,
+    type: OTCOrderType,
     requestParams?: RequestParameters
-  ): Promise<LimitOrderFromApi> => {
+  ): Promise<OTCOrderFromApi> => {
     const fetchURL = getBaseFetchURLByOrderType(type);
 
     const { order: newOrder } = await fetcher<
-      LimitOrderApiResponse,
+      OTCOrderApiResponse,
       PostOrderURLs
     >({
       url: fetchURL,
       method: 'POST',
-      data: limitOrderWithSignatureAndPermit,
+      data: OTCOrderWithSignatureAndPermit,
       requestParams,
     });
 
     return newOrder;
   };
 
-  const postLimitOrder: PostLimitOrder = (
-    limitOrderWithSignatureAndPermit,
+  const postP2POrder: PostOTCOrder = (
+    OTCOrderWithSignatureAndPermit,
     requestParams
   ) => {
     return postTypedOrder(
-      limitOrderWithSignatureAndPermit,
-      'LIMIT',
-      requestParams
-    );
-  };
-
-  const postP2POrder: PostLimitOrder = (
-    limitOrderWithSignatureAndPermit,
-    requestParams
-  ) => {
-    return postTypedOrder(
-      limitOrderWithSignatureAndPermit,
+      OTCOrderWithSignatureAndPermit,
       'P2P',
       requestParams
     );
   };
 
-  return { postLimitOrder, postP2POrder };
+  return { postOTCOrder: postP2POrder };
 };

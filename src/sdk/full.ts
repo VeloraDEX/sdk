@@ -1,8 +1,8 @@
 import type { SDKConfig } from './partial';
 import { constructSwapSDK, SwapSDKMethods } from '../methods/swap';
 import {
-  constructAllLimitOrdersHandlers,
-  LimitOrderHandlers,
+  constructAllOTCOrdersHandlers,
+  OTCOrderHandlers,
 } from '../methods/otcOrders';
 import {
   constructAllNFTOrdersHandlers,
@@ -21,22 +21,21 @@ import { API_URL, DEFAULT_VERSION } from '../constants';
 
 export type AllSDKMethods<TxResponse> = {
   swap: SwapSDKMethods<TxResponse>;
-  /** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-  limitOrders: LimitOrderHandlers<TxResponse>;
+  otcOrders: OTCOrderHandlers<TxResponse>;
   /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
   nftOrders: NFTOrderHandlers<TxResponse>;
   delta: DeltaOrderHandlers<TxResponse>;
   quote: GetQuoteFunctions;
 } & Required<ConstructBaseInput>;
 
-/** @description construct SDK with every method, for swap and limitOrders */
+/** @description construct SDK with every method, for swap and otcOrders */
 export const constructFullSDK = <TxResponse = any>(
   config: SDKConfig<TxResponse>
 ): AllSDKMethods<TxResponse> => {
   // include all available functions
   const swap: SwapSDKMethods<TxResponse> = constructSwapSDK(config);
-  const limitOrders: LimitOrderHandlers<TxResponse> =
-    constructAllLimitOrdersHandlers(config);
+  const otcOrders: OTCOrderHandlers<TxResponse> =
+    constructAllOTCOrdersHandlers(config);
   const nftOrders: NFTOrderHandlers<TxResponse> =
     constructAllNFTOrdersHandlers(config);
   const delta: DeltaOrderHandlers<TxResponse> =
@@ -45,7 +44,7 @@ export const constructFullSDK = <TxResponse = any>(
 
   return {
     swap,
-    limitOrders,
+    otcOrders,
     nftOrders,
     delta,
     quote,

@@ -2,71 +2,62 @@ import type {
   ConstructProviderFetchInput,
   RequestParameters,
 } from '../../types';
-import type { LimitOrderToSend, LimitOrderFromApi } from './helpers/types';
+import type { OTCOrderToSend, OTCOrderFromApi } from './helpers/types';
 import {
-  BuildLimitOrderFunctions,
-  BuildLimitOrderInput,
-  constructBuildLimitOrder,
+  BuildOTCOrderFunctions,
+  BuildOTCOrderInput,
+  constructBuildOTCOrder,
 } from './buildOrder';
 import {
-  CancelLimitOrderFunctions,
-  constructCancelLimitOrder,
+  CancelOTCOrderFunctions,
+  constructCancelOTCOrder,
 } from './cancelOrder';
-import { constructGetLimitOrders, GetLimitOrdersFunctions } from './getOrders';
-import { constructPostLimitOrder, PostLimitOrderFunctions } from './postOrder';
-import { constructSignLimitOrder, SignLimitOrderFunctions } from './signOrder';
+import { constructGetOTCOrders, GetOTCOrdersFunctions } from './getOrders';
+import { constructPostOTCOrder, PostOTCOrderFunctions } from './postOrder';
+import { constructSignOTCOrder, SignOTCOrderFunctions } from './signOrder';
 import {
-  constructApproveTokenForLimitOrder,
-  ApproveTokenForLimitOrderFunctions,
+  constructApproveTokenForOTCOrder,
+  ApproveTokenForOTCOrderFunctions,
 } from './approveForOrder';
 import {
-  GetLimitOrdersContractFunctions,
-  constructGetLimitOrdersContract,
+  GetOTCOrdersContractFunctions,
+  constructGetOTCOrdersContract,
 } from './getOrdersContract';
 import {
-  BuildLimitOrdersTxFunctions,
-  constructBuildLimitOrderTx,
+  BuildOTCOrdersTxFunctions,
+  constructBuildOTCOrderTx,
 } from './transaction';
 import type { Address } from '@paraswap/core';
 import {
-  FillOrderDirectlyFunctions,
-  constructFillOrderDirectly,
+  FillOTCOrderFunctions,
+  constructFillOTCOrder,
 } from './fillOrderDirectly';
 
-type SubmitLimitOrder = (
-  buildLimitOrderParams: BuildLimitOrderInput,
+type SubmitOTCOrder = (
+  buildOTCOrderParams: BuildOTCOrderInput & { taker: Address },
   extra?: { permitMakerAsset?: string },
   requestParams?: RequestParameters
-) => Promise<LimitOrderFromApi>;
+) => Promise<OTCOrderFromApi>;
 
-type SubmitP2POrder = (
-  buildLimitOrderParams: BuildLimitOrderInput & { taker: Address },
-  extra?: { permitMakerAsset?: string },
-  requestParams?: RequestParameters
-) => Promise<LimitOrderFromApi>;
-
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type SubmitLimitOrderFuncs = {
-  submitLimitOrder: SubmitLimitOrder;
-  submitP2POrder: SubmitP2POrder;
+export type SubmitOTCOrderFuncs = {
+  submitOTCOrder: SubmitOTCOrder;
 };
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export const constructSubmitLimitOrder = (
+export const constructSubmitOTCOrder = (
   options: ConstructProviderFetchInput<any, 'signTypedDataCall'>
-): SubmitLimitOrderFuncs => {
-  const { buildLimitOrder } = constructBuildLimitOrder(options);
-  const { signLimitOrder } = constructSignLimitOrder(options);
-  const { postLimitOrder, postP2POrder } = constructPostLimitOrder(options);
+): SubmitOTCOrderFuncs => {
+  const { buildOTCOrder } = constructBuildOTCOrder(options);
+  const { signOTCOrder } = constructSignOTCOrder(options);
+  const { postOTCOrder } = constructPostOTCOrder(options);
 
-  const prepareLimitOrder = async (
-    buildLimitOrderParams: BuildLimitOrderInput,
+  const prepareOTCOrder = async (
+    buildOTCOrderParams: BuildOTCOrderInput,
     extra?: { permitMakerAsset?: string }
-  ): Promise<LimitOrderToSend> => {
-    const orderData = await buildLimitOrder(buildLimitOrderParams);
-    const signature = await signLimitOrder(orderData);
+  ): Promise<OTCOrderToSend> => {
+    const orderData = await buildOTCOrder(buildOTCOrderParams);
+    const signature = await signOTCOrder(orderData);
 
-    const orderWithSignature: LimitOrderToSend = {
+    const orderWithSignature: OTCOrderToSend = {
       ...orderData.data,
       ...extra,
       signature,
@@ -75,86 +66,70 @@ export const constructSubmitLimitOrder = (
     return orderWithSignature;
   };
 
-  const submitLimitOrder: SubmitLimitOrder = async (
-    buildLimitOrderParams,
+
+  const submitOTCOrder: SubmitOTCOrder = async (
+    buildOTCOrderParams,
     extra = {},
     requestParams
   ) => {
-    const orderWithSignature: LimitOrderToSend = await prepareLimitOrder(
-      buildLimitOrderParams,
+    const orderWithSignature: OTCOrderToSend = await prepareOTCOrder(
+      buildOTCOrderParams,
       extra
     );
 
-    const newOrder = await postLimitOrder(orderWithSignature, requestParams);
+    const newOrder = await postOTCOrder(orderWithSignature, requestParams);
 
     return newOrder;
   };
 
-  const submitP2POrder: SubmitP2POrder = async (
-    buildLimitOrderParams,
-    extra = {},
-    requestParams
-  ) => {
-    const orderWithSignature: LimitOrderToSend = await prepareLimitOrder(
-      buildLimitOrderParams,
-      extra
-    );
-
-    const newOrder = await postP2POrder(orderWithSignature, requestParams);
-
-    return newOrder;
-  };
-
-  return { submitLimitOrder, submitP2POrder };
+  return { submitOTCOrder };
 };
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type LimitOrderHandlers<T> = SubmitLimitOrderFuncs &
-  BuildLimitOrderFunctions &
-  SignLimitOrderFunctions &
-  PostLimitOrderFunctions &
-  GetLimitOrdersFunctions &
-  GetLimitOrdersContractFunctions &
-  BuildLimitOrdersTxFunctions &
-  CancelLimitOrderFunctions<T> &
-  ApproveTokenForLimitOrderFunctions<T> &
-  FillOrderDirectlyFunctions<T>;
+export type OTCOrderHandlers<T> = SubmitOTCOrderFuncs &
+  BuildOTCOrderFunctions &
+  SignOTCOrderFunctions &
+  PostOTCOrderFunctions &
+  GetOTCOrdersFunctions &
+  GetOTCOrdersContractFunctions &
+  BuildOTCOrdersTxFunctions &
+  CancelOTCOrderFunctions<T> &
+  ApproveTokenForOTCOrderFunctions<T> &
+  FillOTCOrderFunctions<T>;
 
 /**
- * @description construct SDK with every LimitOrders-related method, fetching from API and contract calls
- * @deprecated Limit Orders are deprecated and will be removed in a future version.
+ * @description construct SDK with every OTCOrders-related method, fetching from API and contract calls
  */
-export const constructAllLimitOrdersHandlers = <TxResponse>(
+export const constructAllOTCOrdersHandlers = <TxResponse>(
   options: ConstructProviderFetchInput<
     TxResponse,
     'signTypedDataCall' | 'transactCall' | 'staticCall'
   >
-): LimitOrderHandlers<TxResponse> => {
-  const limitOrdersGetters = constructGetLimitOrders(options);
-  const limitOrdersContractGetter = constructGetLimitOrdersContract(options);
+): OTCOrderHandlers<TxResponse> => {
+  const OTCOrdersGetters = constructGetOTCOrders(options);
+  const OTCOrdersContractGetter = constructGetOTCOrdersContract(options);
 
-  const limitOrdersSubmit = constructSubmitLimitOrder(options);
-  const limitOrdersBuild = constructBuildLimitOrder(options);
-  const limitOrdersSign = constructSignLimitOrder(options);
-  const limitOrdersPost = constructPostLimitOrder(options);
+  const OTCOrdersSubmit = constructSubmitOTCOrder(options);
+  const OTCOrdersBuild = constructBuildOTCOrder(options);
+  const OTCOrdersSign = constructSignOTCOrder(options);
+  const OTCOrdersPost = constructPostOTCOrder(options);
 
-  const limitOrdersCancel = constructCancelLimitOrder(options);
-  const limitOrdersApproveToken = constructApproveTokenForLimitOrder(options);
+  const OTCOrdersCancel = constructCancelOTCOrder(options);
+  const OTCOrdersApproveToken = constructApproveTokenForOTCOrder(options);
 
-  const limitOrdersFillOrderDirectly = constructFillOrderDirectly(options);
+  const OTCOrdersFillOrderDirectly = constructFillOTCOrder(options);
 
-  const limitOrdersBuildTx = constructBuildLimitOrderTx(options);
+  const OTCOrdersBuildTx = constructBuildOTCOrderTx(options);
 
   return {
-    ...limitOrdersGetters,
-    ...limitOrdersContractGetter,
-    ...limitOrdersSubmit,
-    ...limitOrdersBuild,
-    ...limitOrdersSign,
-    ...limitOrdersPost,
-    ...limitOrdersCancel,
-    ...limitOrdersApproveToken,
-    ...limitOrdersFillOrderDirectly,
-    ...limitOrdersBuildTx,
+    ...OTCOrdersGetters,
+    ...OTCOrdersContractGetter,
+    ...OTCOrdersSubmit,
+    ...OTCOrdersBuild,
+    ...OTCOrdersSign,
+    ...OTCOrdersPost,
+    ...OTCOrdersCancel,
+    ...OTCOrdersApproveToken,
+    ...OTCOrdersFillOrderDirectly,
+    ...OTCOrdersBuildTx,
   };
 };
