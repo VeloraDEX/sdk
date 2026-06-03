@@ -58,7 +58,7 @@ Every feature module exports a `constructXxx(options) => XxxFunctions` factory:
 - `D` selects required caller methods: `'transactCall'` | `'signTypedDataCall'` | both
 - Generic `<T>` = transaction response type (e.g., `TxHash`, `ethers.ContractTransaction`)
 - Non-generic constructors use `any` (for API-only flows that don't return tx responses)
-- All Delta constructors are combined in `constructAllDeltaOrdersHandlers` in `src/methods/delta/index.ts`. **Convention:** bind each `constructXxx(options)` call to a named local (`const deltaPrice = constructGetDeltaPrice(options)`), then spread those locals into the returned object — don't spread the constructor calls inline. (Matches `constructAllLimitOrdersHandlers`.)
+- All Delta constructors are combined in `constructAllDeltaOrdersHandlers` in `src/methods/delta/index.ts`. **Convention:** bind each `constructXxx(options)` call to a named local (`const deltaPrice = constructGetDeltaPrice(options)`), then spread those locals into the returned object — don't spread the constructor calls inline.
 
 ## Key Patterns
 
