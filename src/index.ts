@@ -31,40 +31,40 @@ import {
   BuildLimitOrderInput,
   BuildOrderDataInput,
   constructBuildLimitOrder,
-} from './methods/limitOrders/buildOrder';
+} from './methods/otcOrders/buildOrder';
 import {
   SignLimitOrderFunctions,
   constructSignLimitOrder,
-} from './methods/limitOrders/signOrder';
+} from './methods/otcOrders/signOrder';
 import {
   CancelLimitOrderFunctions,
   constructCancelLimitOrder,
-} from './methods/limitOrders/cancelOrder';
+} from './methods/otcOrders/cancelOrder';
 import {
   FillOrderDirectlyFunctions,
   constructFillOrderDirectly,
-} from './methods/limitOrders/fillOrderDirectly';
+} from './methods/otcOrders/fillOrderDirectly';
 import {
   GetLimitOrdersFunctions,
   constructGetLimitOrders,
   LimitOrdersUserParams,
-} from './methods/limitOrders/getOrders';
+} from './methods/otcOrders/getOrders';
 import {
   PostLimitOrderFunctions,
   constructPostLimitOrder,
-} from './methods/limitOrders/postOrder';
+} from './methods/otcOrders/postOrder';
 import {
   ApproveTokenForLimitOrderFunctions,
   constructApproveTokenForLimitOrder,
-} from './methods/limitOrders/approveForOrder';
+} from './methods/otcOrders/approveForOrder';
 import {
   GetLimitOrdersContractFunctions,
   constructGetLimitOrdersContract,
-} from './methods/limitOrders/getOrdersContract';
+} from './methods/otcOrders/getOrdersContract';
 import {
   BuildLimitOrdersTxFunctions,
   constructBuildLimitOrderTx,
-} from './methods/limitOrders/transaction';
+} from './methods/otcOrders/transaction';
 
 import {
   BuildNFTOrderFunctions,
@@ -303,7 +303,7 @@ export {
   constructAllLimitOrdersHandlers,
   constructSubmitLimitOrder,
   LimitOrderHandlers,
-} from './methods/limitOrders';
+} from './methods/otcOrders';
 
 export {
   constructAllDeltaOrdersHandlers,
@@ -336,7 +336,7 @@ export * from './constants';
 export type {
   SignableOrderData,
   OrderData,
-} from './methods/limitOrders/helpers/buildOrderData';
+} from './methods/otcOrders/helpers/buildOrderData';
 export type {
   SignableNFTOrderData,
   NFTOrderData,
@@ -574,8 +574,8 @@ export {
 } from './sdk/simple';
 
 // bundled methods for limitOrders
-export * from './methods/limitOrders';
-export * from './methods/limitOrders/helpers/types';
+export * from './methods/otcOrders';
+export * from './methods/otcOrders/helpers/types';
 // bundled methods for nftOrders
 export * from './methods/nftOrders';
 export * from './methods/nftOrders/helpers/types';

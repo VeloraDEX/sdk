@@ -1,4 +1,4 @@
-import type { LimitOrderFromApi } from '../../limitOrders/helpers/types';
+import type { LimitOrderFromApi } from '../../otcOrders/helpers/types';
 import { ZERO_ADDRESS } from './buildOrderData';
 import type { OrderType } from './types';
 

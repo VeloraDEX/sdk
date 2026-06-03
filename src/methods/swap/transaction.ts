@@ -11,8 +11,8 @@ import type {
 import { assert } from 'ts-essentials';
 import { API_URL, SwapSide } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
-import type { OrderData } from '../limitOrders/buildOrder';
-import { sanitizeOrderData as sanitizeLimitOrderData } from '../limitOrders/helpers/misc';
+import type { OrderData } from '../otcOrders/buildOrder';
+import { sanitizeOrderData as sanitizeLimitOrderData } from '../otcOrders/helpers/misc';
 import { sanitizeOrderData as sanitizeNFTOrderData } from '../nftOrders/helpers/misc';
 import { AssetTypeVariant } from '../nftOrders/helpers/types';
 
@@ -229,27 +229,27 @@ export const constructBuildTx = ({
     const sanitizedParams =
       'orders' in params && params.orders.length > 0
         ? {
-            ...params,
-            //  make sure we don't pass more with orders than API expects
-            orders: params.orders.map((order) => {
-              const sanitizedOrderData =
-                'makerAssetId' in order
-                  ? sanitizeNFTOrderData(order) // assetType is provided here, because Order.*Asset may be address
-                  : // if Order received from API by hash
-                    sanitizeLimitOrderData(order);
+          ...params,
+          //  make sure we don't pass more with orders than API expects
+          orders: params.orders.map((order) => {
+            const sanitizedOrderData =
+              'makerAssetId' in order
+                ? sanitizeNFTOrderData(order) // assetType is provided here, because Order.*Asset may be address
+                : // if Order received from API by hash
+                sanitizeLimitOrderData(order);
 
-              const sanitizedOrder: SwappableOrder = {
-                ...sanitizedOrderData,
-                signature: order.signature,
-              };
+            const sanitizedOrder: SwappableOrder = {
+              ...sanitizedOrderData,
+              signature: order.signature,
+            };
 
-              if (order.permitMakerAsset) {
-                sanitizedOrder.permitMakerAsset = order.permitMakerAsset;
-              }
+            if (order.permitMakerAsset) {
+              sanitizedOrder.permitMakerAsset = order.permitMakerAsset;
+            }
 
-              return sanitizedOrder;
-            }),
-          }
+            return sanitizedOrder;
+          }),
+        }
         : params;
 
     const takeSurplus =

@@ -46,27 +46,27 @@ import type { SwapSDKMethods } from '../methods/swap';
 import {
   BuildLimitOrderFunctions,
   constructBuildLimitOrder,
-} from '../methods/limitOrders/buildOrder';
+} from '../methods/otcOrders/buildOrder';
 import {
   constructPostLimitOrder,
   PostLimitOrderFunctions,
-} from '../methods/limitOrders/postOrder';
+} from '../methods/otcOrders/postOrder';
 import {
   constructGetLimitOrders,
   GetLimitOrdersFunctions,
-} from '../methods/limitOrders/getOrders';
+} from '../methods/otcOrders/getOrders';
 import {
   constructGetLimitOrdersContract,
   GetLimitOrdersContractFunctions,
-} from '../methods/limitOrders/getOrdersContract';
+} from '../methods/otcOrders/getOrdersContract';
 import {
   constructBuildLimitOrderTx,
   BuildLimitOrdersTxFunctions,
-} from '../methods/limitOrders/transaction';
+} from '../methods/otcOrders/transaction';
 import {
   constructAllLimitOrdersHandlers,
   LimitOrderHandlers,
-} from '../methods/limitOrders';
+} from '../methods/otcOrders';
 
 import {
   constructGetNFTOrdersContract,
@@ -192,8 +192,8 @@ export type SimpleSDK = {
 
 export type FetcherOptions = (
   | {
-      axios: AxiosRequirement;
-    }
+    axios: AxiosRequirement;
+  }
   | { fetch: typeof fetch }
   | { fetcher: FetcherFunction }
 ) &
@@ -220,16 +220,16 @@ const constructFetcher = (options: FetcherOptions): FetcherFunction => {
     // adding apiKey to headers if it's provided
     const headers = options?.apiKey
       ? {
-          ...options.headers,
-          'X-API-KEY': options.apiKey,
-          ...params.headers,
-          ...params.requestParams?.headers,
-        }
+        ...options.headers,
+        'X-API-KEY': options.apiKey,
+        ...params.headers,
+        ...params.requestParams?.headers,
+      }
       : {
-          ...options.headers,
-          ...params.headers,
-          ...params.requestParams?.headers,
-        };
+        ...options.headers,
+        ...params.headers,
+        ...params.requestParams?.headers,
+      };
 
     return options.fetcher({ ...params, headers });
   };

@@ -3,7 +3,7 @@ import { constructSwapSDK, SwapSDKMethods } from '../methods/swap';
 import {
   constructAllLimitOrdersHandlers,
   LimitOrderHandlers,
-} from '../methods/limitOrders';
+} from '../methods/otcOrders';
 import {
   constructAllNFTOrdersHandlers,
   NFTOrderHandlers,

@@ -3,7 +3,7 @@ import {
   CancelOrder,
   CancelOrderBulk,
   constructCancelLimitOrder,
-} from '../limitOrders/cancelOrder';
+} from '../otcOrders/cancelOrder';
 
 /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export type CancelNFTOrderFunctions<T> = {

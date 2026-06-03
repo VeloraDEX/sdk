@@ -6,11 +6,11 @@ import type {
 } from '../types';
 import type { Merge, UnionToIntersection } from 'ts-essentials';
 import type { ApproveTokenFunctions } from '../methods/swap/approve';
-import type { CancelLimitOrderFunctions } from '../methods/limitOrders/cancelOrder';
-import type { ApproveTokenForLimitOrderFunctions } from '../methods/limitOrders/approveForOrder';
+import type { CancelLimitOrderFunctions } from '../methods/otcOrders/cancelOrder';
+import type { ApproveTokenForLimitOrderFunctions } from '../methods/otcOrders/approveForOrder';
 import type { CancelNFTOrderFunctions } from '../methods/nftOrders/cancelOrder';
 import type { ApproveTokenForNFTOrderFunctions } from '../methods/nftOrders/approveForOrder';
-import type { FillOrderDirectlyFunctions } from '../methods/limitOrders/fillOrderDirectly';
+import type { FillOrderDirectlyFunctions } from '../methods/otcOrders/fillOrderDirectly';
 import type { ApproveTokenForDeltaFunctions } from '../methods/delta/approveForDelta';
 import type { PreSignDeltaOrderFunctions } from '../methods/delta/preSignDeltaOrder';
 import type { PreSignExternalDeltaOrderFunctions } from '../methods/delta/preSignExternalDeltaOrder';
@@ -42,27 +42,27 @@ type InferWithTxResponse<
   Funcs extends [SDKFunction<Config>, ...SDKFunction<Config>[]]
 > = Config extends SDKConfig<infer TxResponse> // if can infer TxResponse inside Config
   ? // and if returns can be successfully intersected
-    IntersectionOfReturns<Funcs> extends Record<string, any>
-    ? MergeExtendableRecursively<
-        IntersectionOfReturns<Funcs>,
-        [
-          // if there are ApproveTokenFunctions or CancelLimitOrderFunctions in the intersection
-          // which means constructApproveToken or constructCancelLimitOrder was passed in Funcs
-          ApproveTokenFunctions<TxResponse>,
-          CancelLimitOrderFunctions<TxResponse>,
-          FillOrderDirectlyFunctions<TxResponse>,
-          ApproveTokenForLimitOrderFunctions<TxResponse>,
-          CancelNFTOrderFunctions<TxResponse>,
-          ApproveTokenForNFTOrderFunctions<TxResponse>,
-          ApproveTokenForDeltaFunctions<TxResponse>,
-          PreSignDeltaOrderFunctions<TxResponse>,
-          PreSignExternalDeltaOrderFunctions<TxResponse>,
-          DeltaTokenModuleFunctions<TxResponse>,
-          PreSignTWAPDeltaOrderFunctions<TxResponse>
-        ]
-        // then merge IntersectionOfReturns<Funcs> with them recursively
-      >
-    : IntersectionOfReturns<Funcs>
+  IntersectionOfReturns<Funcs> extends Record<string, any>
+  ? MergeExtendableRecursively<
+    IntersectionOfReturns<Funcs>,
+    [
+      // if there are ApproveTokenFunctions or CancelLimitOrderFunctions in the intersection
+      // which means constructApproveToken or constructCancelLimitOrder was passed in Funcs
+      ApproveTokenFunctions<TxResponse>,
+      CancelLimitOrderFunctions<TxResponse>,
+      FillOrderDirectlyFunctions<TxResponse>,
+      ApproveTokenForLimitOrderFunctions<TxResponse>,
+      CancelNFTOrderFunctions<TxResponse>,
+      ApproveTokenForNFTOrderFunctions<TxResponse>,
+      ApproveTokenForDeltaFunctions<TxResponse>,
+      PreSignDeltaOrderFunctions<TxResponse>,
+      PreSignExternalDeltaOrderFunctions<TxResponse>,
+      DeltaTokenModuleFunctions<TxResponse>,
+      PreSignTWAPDeltaOrderFunctions<TxResponse>
+    ]
+  // then merge IntersectionOfReturns<Funcs> with them recursively
+  >
+  : IntersectionOfReturns<Funcs>
   : IntersectionOfReturns<Funcs>;
 
 // merges Accum with Replacement
@@ -84,8 +84,8 @@ type MergeExtendableRecursively<
   ...tail: infer Tail
 ]
   ? Tail extends Record<string, any>[]
-    ? MergeExtendableRecursively<MergeExtendableOnce<Accum, Head>, Tail>
-    : MergeExtendableOnce<Accum, Head>
+  ? MergeExtendableRecursively<MergeExtendableOnce<Accum, Head>, Tail>
+  : MergeExtendableOnce<Accum, Head>
   : Accum;
 
 /** @description construct composable SDK with methods you choose yourself */
