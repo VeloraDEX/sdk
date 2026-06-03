@@ -12,6 +12,7 @@ export type BaseFetchUrlInputConstructor<Kind extends OrderKind> = (
 ) => UrlByTypeFunction<Kind>;
 
 type OrderType2URLPart = {
+  LIMIT: 'orders';
   P2P: 'p2p';
 };
 
@@ -28,6 +29,7 @@ export type OrderFillableBalanceFetchUrl<Kind extends OrderKind> =
 
 interface UrlByTypeFunction<Kind extends OrderKind> {
   (): MinFetchUrl<Kind>;
+  (type: 'LIMIT'): BaseFetchUrl<Kind, 'LIMIT'>;
   (type: 'P2P'): BaseFetchUrl<Kind, 'P2P'>;
   (type: OrderType): BaseFetchUrl<Kind>;
   (type: 'fillablebalance'): OrderFillableBalanceFetchUrl<Kind>;
@@ -44,6 +46,7 @@ export function baseFetchUrlGetterFactory<Kind extends OrderKind>(
     chainId,
     apiURL,
   }: GetBaseFetchUrlInput): UrlByTypeFunction<Kind> {
+    function urlGetter(type: 'LIMIT'): BaseFetchUrl<Kind, 'LIMIT'>;
     function urlGetter(type: 'P2P'): BaseFetchUrl<Kind, 'P2P'>;
     function urlGetter(type: OrderType): BaseFetchUrl<Kind>;
     function urlGetter(
@@ -61,7 +64,7 @@ export function baseFetchUrlGetterFactory<Kind extends OrderKind>(
       if (type === 'fillablebalance')
         return `${apiURL}/${orderKind}/fillablebalance/${chainId}` as const;
 
-      const orderURLpart = 'p2p';
+      const orderURLpart = type === 'LIMIT' ? 'orders' : 'p2p';
       return `${apiURL}/${orderKind}/${orderURLpart}/${chainId}` as const;
     }
 

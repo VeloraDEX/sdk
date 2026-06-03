@@ -11,15 +11,15 @@ export type CancelNFTOrderFunctions<T> = {
   cancelNFTOrderBulk: CancelOrderBulk<T>;
 };
 
-// should work the same as for LimitOrders
+// should work the same as for OTC Orders
 /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const constructCancelNFTOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
 ): CancelNFTOrderFunctions<T> => {
-  const { cancelLimitOrder, cancelLimitOrderBulk } =
+  const { cancelOTCOrder, cancelOTCOrdersBulk } =
     constructCancelOTCOrder(options);
   return {
-    cancelNFTOrder: cancelLimitOrder,
-    cancelNFTOrderBulk: cancelLimitOrderBulk,
+    cancelNFTOrder: cancelOTCOrder,
+    cancelNFTOrderBulk: cancelOTCOrdersBulk,
   };
 };

@@ -1,1 +1,1 @@
-export type OrderType = 'P2P';
+export type OrderType = 'LIMIT' | 'P2P';
