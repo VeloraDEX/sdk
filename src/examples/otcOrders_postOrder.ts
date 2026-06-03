@@ -7,13 +7,13 @@ import {
   constructPartialSDK,
   constructEthersContractCaller,
   constructAxiosFetcher,
-  // limitOrders methods
-  constructBuildLimitOrder,
-  constructSignLimitOrder,
-  constructPostLimitOrder,
+  // OTCOrders methods
+  constructBuildOTCOrder,
+  constructSignOTCOrder,
+  constructPostOTCOrder,
   // extra types
   SignableOrderData,
-  LimitOrderToSend,
+  OTCOrderToSend,
 } from '..';
 
 const wallet = ethers.Wallet.createRandom();
@@ -29,19 +29,19 @@ const contractCaller = constructEthersContractCaller(
   wallet.address
 );
 
-// type BuildLimitOrderFunctions
-// & SignLimitOrderFunctions
-// & PostLimitOrderFunctions
+// type BuildOTCOrderFunctions
+// & SignOTCOrderFunctions
+// & PostOTCOrderFunctions
 
-const limitOrderSDK = constructPartialSDK(
+const OTCOrderSDK = constructPartialSDK(
   {
     chainId: 1,
     fetcher,
     contractCaller,
   },
-  constructBuildLimitOrder,
-  constructSignLimitOrder,
-  constructPostLimitOrder
+  constructBuildOTCOrder,
+  constructSignOTCOrder,
+  constructPostOTCOrder
 );
 
 const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
@@ -59,18 +59,18 @@ const orderInput = {
 
 async function run() {
   const signableOrderData: SignableOrderData =
-    await limitOrderSDK.buildLimitOrder(orderInput);
+    await OTCOrderSDK.buildOTCOrder(orderInput);
 
-  const signature: string = await limitOrderSDK.signLimitOrder(
+  const signature: string = await OTCOrderSDK.signOTCOrder(
     signableOrderData
   );
 
-  const orderToPostToApi: LimitOrderToSend = {
+  const orderToPostToApi: OTCOrderToSend = {
     ...signableOrderData.data,
     signature,
   };
 
-  const newOrder = await limitOrderSDK.postLimitOrder(orderToPostToApi);
+  const newOrder = await OTCOrderSDK.postOTCOrder(orderToPostToApi);
   console.log(newOrder);
 }
 

@@ -8,17 +8,17 @@ import {
   constructPartialSDK,
   constructEthersContractCaller,
   constructAxiosFetcher,
-  // limitOrders methods
-  constructBuildLimitOrder,
-  constructCancelLimitOrder,
-  constructSignLimitOrder,
-  constructGetLimitOrders,
-  constructPostLimitOrder,
-  constructApproveTokenForLimitOrder,
+  // OTCOrders methods
+  constructBuildOTCOrder,
+  constructCancelOTCOrder,
+  constructSignOTCOrder,
+  constructGetOTCOrders,
+  constructPostOTCOrder,
+  constructApproveTokenForOTCOrder,
   // extra types
   SignableOrderData,
-  LimitOrderToSend,
-  constructBuildLimitOrderTx,
+  OTCOrderToSend,
+  constructBuildOTCOrderTx,
 } from '..';
 
 const account = '0x1234...';
@@ -36,22 +36,22 @@ const contractCaller = constructEthersContractCaller(
   account
 );
 
-// type BuildLimitOrderFunctions
-// & SignLimitOrderFunctions
-// & CancelLimitOrderFunctions<ethers.ContractTransaction>
+// type BuildOTCOrderFunctions
+// & SignOTCOrderFunctions
+// & CancelOTCOrderFunctions<ethers.ContractTransaction>
 // & ApproveTokenFunctions<ethers.ContractTransaction>
-const limitOrderSDK = constructPartialSDK(
+const OTCOrderSDK = constructPartialSDK(
   {
     chainId: 1,
     fetcher,
     contractCaller,
   },
-  constructBuildLimitOrder,
-  constructCancelLimitOrder,
-  constructSignLimitOrder,
-  constructPostLimitOrder,
-  constructGetLimitOrders,
-  constructApproveTokenForLimitOrder
+  constructBuildOTCOrder,
+  constructCancelOTCOrder,
+  constructSignOTCOrder,
+  constructPostOTCOrder,
+  constructGetOTCOrders,
+  constructApproveTokenForOTCOrder
 );
 
 const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
@@ -69,14 +69,13 @@ const orderInput = {
 
 async function run() {
   /// cancelling current orders
-  const { orders: currentOrders } = await limitOrderSDK.getLimitOrders({
+  const { orders: currentOrders } = await OTCOrderSDK.getOTCOrders({
     maker: account,
-    type: 'LIMIT',
   });
 
   if (currentOrders[0]?.orderHash) {
     const tx1: ethers.ContractTransaction =
-      await limitOrderSDK.cancelLimitOrder(currentOrders[0].orderHash);
+      await OTCOrderSDK.cancelOTCOrder(currentOrders[0].orderHash);
   }
 
   const moreOrderHashes = currentOrders
@@ -84,36 +83,36 @@ async function run() {
     .map((order) => order.orderHash);
 
   const tx2: ethers.ContractTransaction =
-    await limitOrderSDK.cancelLimitOrderBulk(moreOrderHashes);
+    await OTCOrderSDK.cancelOTCOrdersBulk(moreOrderHashes);
 
   /// creating a new order
 
   const tx3: ethers.ContractTransaction =
-    await limitOrderSDK.approveMakerTokenForLimitOrder(
+    await OTCOrderSDK.approveMakerTokenForOTCOrder(
       orderInput.makerAmount,
       orderInput.makerAsset
     );
 
   const signableOrderData: SignableOrderData =
-    await limitOrderSDK.buildLimitOrder(orderInput);
+    await OTCOrderSDK.buildOTCOrder(orderInput);
 
-  const signature: string = await limitOrderSDK.signLimitOrder(
+  const signature: string = await OTCOrderSDK.signOTCOrder(
     signableOrderData
   );
 
-  const orderToPostToApi: LimitOrderToSend = {
+  const orderToPostToApi: OTCOrderToSend = {
     ...signableOrderData.data,
     signature,
   };
 
-  const newOrder = await limitOrderSDK.postLimitOrder(orderToPostToApi);
+  const newOrder = await OTCOrderSDK.postOTCOrder(orderToPostToApi);
 
   /// filling an order
 
   // to act as order taker
   const anotherAccount = '0x5678...';
 
-  const limitOrderSDKForTaker = constructPartialSDK(
+  const OTCOrderSDKForTaker = constructPartialSDK(
     {
       chainId: 1,
       fetcher,
@@ -125,18 +124,18 @@ async function run() {
         anotherAccount
       ),
     },
-    constructBuildLimitOrderTx,
-    constructApproveTokenForLimitOrder
+    constructBuildOTCOrderTx,
+    constructApproveTokenForOTCOrder
   );
 
   const tx4: ethers.ContractTransaction =
-    await limitOrderSDKForTaker.approveTakerTokenForLimitOrder(
+    await OTCOrderSDKForTaker.approveTakerTokenForOTCOrder(
       orderInput.takerAmount,
       orderInput.takerAsset
     );
 
   const { gas: payloadGas, ...LOPayloadTxParams } =
-    await limitOrderSDKForTaker.buildLimitOrderTx({
+    await OTCOrderSDKForTaker.buildOTCOrderTx({
       srcDecimals: 18,
       destDecimals: 18,
       userAddress: anotherAccount, // taker

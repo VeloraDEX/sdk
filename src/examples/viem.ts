@@ -10,8 +10,8 @@ import {
   constructAxiosFetcher,
   constructPartialSDK,
   constructSimpleSDK,
-  constructSubmitLimitOrder,
-  type BuildLimitOrderInput,
+  constructSubmitOTCOrder,
+  type BuildOTCOrderInput,
 } from '../';
 import { assert } from 'ts-essentials';
 import { txParamsToViemTxParams } from '../helpers/providers/viem';
@@ -29,8 +29,10 @@ const walletClient = createWalletClient({
   transport: custom(window.ethereum!),
 });
 
-// example of a minimal SDK for submitting Limit Orders only
-async function limitOrderSDKExample() {
+const takerAccount = '0x1234...';
+
+// example of a minimal SDK for submitting OTC Orders only
+async function OTCOrderSDKExample() {
   const [account] = await walletClient.getAddresses();
   assert(account, 'account is necessary for Order signing');
 
@@ -39,31 +41,31 @@ async function limitOrderSDKExample() {
     account // pass account to enable write methods (tx signing, signTypedData)
   );
   const fetcher = constructAxiosFetcher(axios);
-  // SDK with `submitLimitOrder` and `submitP2POrder` methods only
+  // SDK with `submitOTCOrder` and `submitP2POrder` methods only
   const LOrderSDK = constructPartialSDK(
     {
       contractCaller,
       fetcher,
       chainId: 1, // same chain as for walletClient
     },
-    constructSubmitLimitOrder
+    constructSubmitOTCOrder
   );
 
   /*
-  // alternatively, SDK with all Order methods: `submitLimitOrder`,  `cancelLimitOrder`, `fillLimitOrder`, `getLimitOrders`, etc. methods
+  // alternatively, SDK with all Order methods: `submitOTCOrder`,  `cancelOTCOrder`, `fillOTCOrder`, `getOTCOrders`, etc. methods
   const LOrderSDK = constructPartialSDK(
     {
       contractCaller,
       fetcher,
       chainId: 1, // same chain as for walletClient
     },
-    constructAllLimitOrdersHandlers
+    constructAllOTCOrdersHandlers
   ); */
 
   const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
   const HEX = '0x2b591e99afe9f32eaa6214f7b7629768c40eeb39';
 
-  const orderInput: BuildLimitOrderInput = {
+  const orderInput = {
     nonce: 1,
     expiry: Math.floor(Date.now() / 1000) + 60 * 60 * 24 * 7, // week from now, in sec
     makerAsset: DAI,
@@ -71,10 +73,11 @@ async function limitOrderSDKExample() {
     makerAmount: (1e18).toString(10),
     takerAmount: (8e18).toString(10),
     maker: account,
-  };
+    taker: takerAccount,
+  } as const satisfies BuildOTCOrderInput;
 
   // submitted Order if successful
-  const orderFromAPI = LOrderSDK.submitLimitOrder(orderInput);
+  const orderFromAPI = LOrderSDK.submitOTCOrder(orderInput);
 }
 
 async function simpleSDKExample() {
