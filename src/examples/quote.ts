@@ -10,7 +10,6 @@ import {
   constructSwapSDK,
   OptimalRate,
   DeltaPrice,
-  isFetcherError,
 } from '..';
 import { startStatusCheck } from './helpers/delta';
 
