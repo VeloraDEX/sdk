@@ -506,7 +506,7 @@ function getExecutedAmount(side: DeltaTokenSide, fallback: string): string {
 }
 
 /**
- * @description Returns expected amounts and, once the auction is completed,
+ * @description Returns expected and minimal amounts and, once the auction is completed,
  * executed amounts. Executed amounts prefer the `executedAmount` baked onto the
  * token sides and fall back to summing transactions.
  */
@@ -521,8 +521,24 @@ function getAuctionAmounts(
     destAmount: getTokenSideAmount(auction.output, 'expected'),
   };
 
+  const order = auction.order;
+
+  let minimal = !isTWAPOrder(order)
+    ? { srcAmount: order.srcAmount, destAmount: order.destAmount }
+    : expected; // TWAP doesn't carry explicit min amounts
+
+  if (isOrderCrosschain(order)) {
+    minimal = {
+      srcAmount: minimal.srcAmount,
+      destAmount: scaleByFactor(
+        BigInt(minimal.destAmount),
+        order.bridge.scalingFactor
+      ).toString(),
+    };
+  }
+
   if (!isCompletedAuction(auction)) {
-    return { expected };
+    return { expected, minimal };
   }
 
   const txAmounts = getTransactionAmounts(auction.transactions);
@@ -532,7 +548,7 @@ function getAuctionAmounts(
     destAmount: getExecutedAmount(auction.output, txAmounts.destAmount),
   };
 
-  return { expected, executed };
+  return { expected, executed, minimal };
 }
 
 /**
@@ -543,7 +559,7 @@ function getUnifiedDeltaOrderData(
   auction: DeltaAuction
 ): UnifiedDeltaOrderData {
   const { srcToken, destToken } = getAuctionTokenAddresses(auction);
-  const { expected, executed } = getAuctionAmounts(auction);
+  const { expected, executed, minimal } = getAuctionAmounts(auction);
 
   const srcChainId = getAuctionSrcChainId(auction);
   const destChainId = getAuctionDestChainId(auction);
@@ -556,9 +572,8 @@ function getUnifiedDeltaOrderData(
     srcAmount: executed?.srcAmount || expected.srcAmount,
     destAmount: executed?.destAmount || expected.destAmount,
     amounts: {
+      minimal,
       expected,
-      // No separate "minimal" amount in the v2 envelope; mirrors expected.
-      minimal: expected,
       final: executed,
     },
     srcToken,
