@@ -13,6 +13,8 @@ import { API_URL, SwapSide } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type { OrderData } from '../otcOrders/buildOrder';
 import { sanitizeOrderData as sanitizeOTCOrderData } from '../otcOrders/helpers/misc';
+import { sanitizeOrderData as sanitizeNFTOrderData } from '../nftOrders/helpers/misc';
+import { AssetTypeVariant } from '../nftOrders/helpers/types';
 
 export interface TransactionParams {
   to: string;
@@ -30,6 +32,13 @@ export interface TransactionParams {
 export type SwappableOrder = OrderData & {
   permitMakerAsset?: string;
   signature: string;
+};
+
+export type SwappableNFTOrder = SwappableOrder & {
+  makerAssetId: string;
+  takerAssetId: string;
+  makerAssetType: AssetTypeVariant;
+  takerAssetType: AssetTypeVariant;
 };
 
 // when priceRoute with side=SELL, slippage can replace destAmount
@@ -89,7 +98,7 @@ export type BuildSwapTxInput = BuildTxInputBase & {
     | TxInputAmountsPartBuyOrSell
   ); // this union doesn't allow to mix srcAmount & destAmount & slippage together
 
-// building block for OTCOrders swaps
+// building block for OTC Orders and NFT Orders swaps
 // can only use priceRoute.side=BUY and related TxInputAmountsPart*
 type BuildTxInputBaseBUYForOrders<
   // to Omit extra keys
@@ -101,12 +110,21 @@ type BuildTxInputBaseBUYForOrders<
     | Omit<TxInputAmountsPartBuyOrSell, 'destAmount' | K>
   );
 
-// for OTCOrder Fill, without swap
+// for OTC Order Fill, without swap
 export type BuildOTCOrderTxInput = BuildTxInputBaseBUYForOrders & {
   orders: SwappableOrder[];
   srcDecimals: number;
   destDecimals: number;
 };
+
+// for NFT Order Fill, without swap
+export type BuildNFTOrderTxInput =
+  // @TODO if NFT can ever be srcToken, change logic
+  //                           for NFT token destDecimals = 0 is acceptable
+  BuildTxInputBaseBUYForOrders<'destDecimals'> & {
+    orders: SwappableNFTOrder[];
+    srcDecimals: number;
+  };
 
 // for Swap + OTCOrder, priceRoute must have side=BUY
 export type BuildSwapAndOTCOrderTxInput =
@@ -119,10 +137,20 @@ export type BuildSwapAndOTCOrderTxInput =
 
 // with slippage for a swap and fill - p2p - order, without to fill a p2p order directly with the intended taker asset
 
+// for Swap + NFT Order, priceRoute must have side=BUY
+export type BuildSwapAndNFTOrderTxInput =
+  // destAmount is sum(orders[].makerAmount)
+  BuildTxInputBaseBUYForOrders & {
+    priceRoute: OptimalRate; // priceRoute.side=BUY & priceRoute.contractMethod=simpleBuy
+    orders: SwappableNFTOrder[];
+  };
+
 export type BuildTxInput =
   | BuildSwapTxInput
   | BuildOTCOrderTxInput
-  | BuildSwapAndOTCOrderTxInput;
+  | BuildNFTOrderTxInput
+  | BuildSwapAndOTCOrderTxInput
+  | BuildSwapAndNFTOrderTxInput;
 
 export type BuildOptionsBase = {
   /** @description Allows the API to skip performing onchain checks such as balances, allowances, as well as transaction simulations. The response does not contain `gas` parameter when set to `true` */
@@ -194,22 +222,27 @@ export const constructBuildTx = ({
     const sanitizedParams =
       'orders' in params && params.orders.length > 0
         ? {
-            ...params,
-            //  make sure we don't pass more with orders than API expects
-            orders: params.orders.map((order) => {
-              const sanitizedOrderData = sanitizeOTCOrderData(order);
-              const sanitizedOrder: SwappableOrder = {
-                ...sanitizedOrderData,
-                signature: order.signature,
-              };
+          ...params,
+          //  make sure we don't pass more with orders than API expects
+          orders: params.orders.map((order) => {
+            const sanitizedOrderData =
+              'makerAssetId' in order
+                ? sanitizeNFTOrderData(order) // assetType is provided here, because Order.*Asset may be address
+                : // if Order received from API by hash
+                sanitizeOTCOrderData(order);
 
-              if (order.permitMakerAsset) {
-                sanitizedOrder.permitMakerAsset = order.permitMakerAsset;
-              }
+            const sanitizedOrder: SwappableOrder = {
+              ...sanitizedOrderData,
+              signature: order.signature,
+            };
 
-              return sanitizedOrder;
-            }),
-          }
+            if (order.permitMakerAsset) {
+              sanitizedOrder.permitMakerAsset = order.permitMakerAsset;
+            }
+
+            return sanitizedOrder;
+          }),
+        }
         : params;
 
     const takeSurplus =
