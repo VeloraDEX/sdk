@@ -19,15 +19,11 @@ export const constructApproveTokenForOTCOrder = <T>(
   // so should persist across same apiUrl & network
   const { getAugustusRFQ } = constructGetSpender(options);
 
-  const approveMakerTokenForOTCOrder: ApproveToken<T> =
+  const approveTokenForOTCOrder: ApproveToken<T> =
     approveTokenMethodFactory<T>(options.contractCaller, getAugustusRFQ);
 
-  // approving TokenTransaferProxy as for the swap
-  const { approveToken: approveTakerTokenForOTCOrder } =
-    constructApproveToken(options);
-
   return {
-    approveMakerTokenForOTCOrder,
-    approveTakerTokenForOTCOrder,
+    approveMakerTokenForOTCOrder: approveTokenForOTCOrder,
+    approveTakerTokenForOTCOrder: approveTokenForOTCOrder,
   };
 };
