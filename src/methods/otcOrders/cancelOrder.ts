@@ -84,7 +84,7 @@ export const constructCancelOTCOrder = <T>(
     return res;
   };
 
-  const cancelOTCOrderBulk: CancelOrderBulk<T> = async (
+  const cancelOTCOrdersBulk: CancelOrderBulk<T> = async (
     orderHashes,
     overrides = {},
     requestParams
@@ -106,6 +106,6 @@ export const constructCancelOTCOrder = <T>(
 
   return {
     cancelOTCOrder,
-    cancelOTCOrdersBulk: cancelOTCOrderBulk,
+    cancelOTCOrdersBulk,
   };
 };

@@ -3,13 +3,13 @@ import type { ConstructFetchInput, RequestParameters } from '../../types';
 import { constructBaseFetchUrlGetter, PostOrderURLs } from './helpers/misc';
 import type {
   OTCOrderApiResponse,
-  OTCOrderToSend,
+  OTCOrderToPost,
   OTCOrderFromApi,
   OTCOrderType,
 } from './helpers/types';
 
 type PostOTCOrder = (
-  OTCOrderWithSignatureAndPermit: OTCOrderToSend,
+  OTCOrderWithSignatureAndPermit: OTCOrderToPost,
   requestParams?: RequestParameters
 ) => Promise<OTCOrderFromApi>;
 
@@ -28,7 +28,7 @@ export const constructPostOTCOrder = ({
   });
 
   const postTypedOrder = async (
-    OTCOrderWithSignatureAndPermit: OTCOrderToSend,
+    OTCOrderWithSignatureAndPermit: OTCOrderToPost,
     type: OTCOrderType,
     requestParams?: RequestParameters
   ): Promise<OTCOrderFromApi> => {
@@ -47,7 +47,7 @@ export const constructPostOTCOrder = ({
     return newOrder;
   };
 
-  const postP2POrder: PostOTCOrder = (
+  const postOTCOrder: PostOTCOrder = (
     OTCOrderWithSignatureAndPermit,
     requestParams
   ) => {
@@ -58,5 +58,5 @@ export const constructPostOTCOrder = ({
     );
   };
 
-  return { postOTCOrder: postP2POrder };
+  return { postOTCOrder };
 };

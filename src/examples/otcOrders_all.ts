@@ -11,7 +11,7 @@ import {
   // OTCOrders methods
   constructAllOTCOrdersHandlers,
   // extra types
-  OTCOrderFromApi,
+  OTCOrder,
   SwappableOrder,
 } from '..';
 
@@ -68,7 +68,7 @@ async function run() {
 
   // builds + signs + posts order to API
   // new OTC order returned from API
-  const newOTCOrder: OTCOrderFromApi = await OTCOrderSDK.submitOTCOrder(
+  const newOTCOrder: OTCOrder = await OTCOrderSDK.submitOTCOrder(
     orderInput
   );
 

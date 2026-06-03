@@ -13,7 +13,7 @@ import {
   constructPostOTCOrder,
   // extra types
   SignableOrderData,
-  OTCOrderToSend,
+  OTCOrderToPost,
 } from '..';
 
 const wallet = ethers.Wallet.createRandom();
@@ -65,7 +65,7 @@ async function run() {
     signableOrderData
   );
 
-  const orderToPostToApi: OTCOrderToSend = {
+  const orderToPostToApi: OTCOrderToPost = {
     ...signableOrderData.data,
     signature,
   };

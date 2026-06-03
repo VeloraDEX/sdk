@@ -17,7 +17,7 @@ import {
   constructApproveTokenForOTCOrder,
   // extra types
   SignableOrderData,
-  OTCOrderToSend,
+  OTCOrderToPost,
   constructBuildOTCOrderTx,
 } from '..';
 
@@ -100,7 +100,7 @@ async function run() {
     signableOrderData
   );
 
-  const orderToPostToApi: OTCOrderToSend = {
+  const orderToPostToApi: OTCOrderToPost = {
     ...signableOrderData.data,
     signature,
   };

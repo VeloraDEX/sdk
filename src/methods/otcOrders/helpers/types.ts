@@ -4,7 +4,7 @@ export type OTCOrderType = 'P2P';
 
 export type OTCOrder = OTCOrderFromApi;
 
-export type OTCOrderToSend = OrderData & {
+export type OTCOrderToPost = OrderData & {
   permitMakerAsset?: string;
   signature: string;
 };

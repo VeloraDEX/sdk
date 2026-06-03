@@ -2,7 +2,7 @@ import type {
   ConstructProviderFetchInput,
   RequestParameters,
 } from '../../types';
-import type { OTCOrderToSend, OTCOrderFromApi } from './helpers/types';
+import type { OTCOrderToPost, OTCOrderFromApi } from './helpers/types';
 import {
   BuildOTCOrderFunctions,
   BuildOTCOrderInput,
@@ -53,11 +53,11 @@ export const constructSubmitOTCOrder = (
   const prepareOTCOrder = async (
     buildOTCOrderParams: BuildOTCOrderInput,
     extra?: { permitMakerAsset?: string }
-  ): Promise<OTCOrderToSend> => {
+  ): Promise<OTCOrderToPost> => {
     const orderData = await buildOTCOrder(buildOTCOrderParams);
     const signature = await signOTCOrder(orderData);
 
-    const orderWithSignature: OTCOrderToSend = {
+    const orderWithSignature: OTCOrderToPost = {
       ...orderData.data,
       ...extra,
       signature,
@@ -72,7 +72,7 @@ export const constructSubmitOTCOrder = (
     extra = {},
     requestParams
   ) => {
-    const orderWithSignature: OTCOrderToSend = await prepareOTCOrder(
+    const orderWithSignature: OTCOrderToPost = await prepareOTCOrder(
       buildOTCOrderParams,
       extra
     );
