@@ -8,8 +8,6 @@ import type { Merge, UnionToIntersection } from 'ts-essentials';
 import type { ApproveTokenFunctions } from '../methods/swap/approve';
 import type { CancelOTCOrderFunctions } from '../methods/otcOrders/cancelOrder';
 import type { ApproveTokenForOTCOrderFunctions } from '../methods/otcOrders/approveForOrder';
-import type { CancelNFTOrderFunctions } from '../methods/nftOrders/cancelOrder';
-import type { ApproveTokenForNFTOrderFunctions } from '../methods/nftOrders/approveForOrder';
 import type { FillOTCOrderFunctions } from '../methods/otcOrders/fillOrderDirectly';
 import type { ApproveTokenForDeltaFunctions } from '../methods/delta/approveForDelta';
 import type { PreSignDeltaOrderFunctions } from '../methods/delta/preSignDeltaOrder';
@@ -52,8 +50,6 @@ type InferWithTxResponse<
       CancelOTCOrderFunctions<TxResponse>,
       FillOTCOrderFunctions<TxResponse>,
       ApproveTokenForOTCOrderFunctions<TxResponse>,
-      CancelNFTOrderFunctions<TxResponse>,
-      ApproveTokenForNFTOrderFunctions<TxResponse>,
       ApproveTokenForDeltaFunctions<TxResponse>,
       PreSignDeltaOrderFunctions<TxResponse>,
       PreSignExternalDeltaOrderFunctions<TxResponse>,
