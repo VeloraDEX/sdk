@@ -30,7 +30,7 @@ export interface BuildOrderDataInput {
   maker: Address;
   // OrderData.taker must be Augustus (or other Executor) for p2p OTCOrders to involve swap through Augustus
   /** @description actual user taker which will go into nonceAndMeta */
-  taker?: Address;
+  taker: Address;
   /** @description contract executor (Augustus or similar) that is allowed to execute the order, goes in Order.taker */
   contractTaker?: Address;
 

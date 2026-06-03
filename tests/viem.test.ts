@@ -33,6 +33,7 @@ const ethersProvider = new ethers.providers.Web3Provider(
 
 const signer = wallet.connect(ethersProvider);
 const senderAddress = signer.address as Hex;
+const takerAddress = '0x5678...' as Hex;
 
 const viemTestClient = createTestClient({
   chain: { ...hardhat, id: chainId }, // may need to override chainId
@@ -71,6 +72,7 @@ describe('SDK with viem: contract calling methods', () => {
     makerAmount: (1e18).toString(10),
     takerAmount: (8e18).toString(10),
     maker: senderAddress,
+    taker: takerAddress,
   };
 
   let spender: Hex;

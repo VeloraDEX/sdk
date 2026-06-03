@@ -17,6 +17,7 @@ import {
 } from '..';
 
 const wallet = ethers.Wallet.createRandom();
+const takerAccount = '0x5678...';
 
 const fetcher = constructAxiosFetcher(axios);
 
@@ -55,6 +56,7 @@ const orderInput = {
   makerAmount: (1e18).toString(10),
   takerAmount: (8e18).toString(10),
   maker: wallet.address,
+  taker: takerAccount,
 };
 
 async function run() {

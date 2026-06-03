@@ -22,6 +22,7 @@ import {
 } from '..';
 
 const account = '0x1234...';
+const takerAccount = '0x5678...';
 
 const fetcher = constructAxiosFetcher(axios);
 
@@ -65,6 +66,7 @@ const orderInput = {
   makerAmount: (1e18).toString(10),
   takerAmount: (8e18).toString(10),
   maker: account,
+  taker: takerAccount,
 };
 
 async function run() {
