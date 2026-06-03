@@ -200,8 +200,6 @@ export const constructBuildTx = ({
           //  make sure we don't pass more with orders than API expects
           orders: params.orders.map((order) => {
             const sanitizedOrderData = sanitizeOTCOrderData(order);
-
-
             const sanitizedOrder: SwappableOrder = {
               ...sanitizedOrderData,
               signature: order.signature,

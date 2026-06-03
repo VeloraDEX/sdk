@@ -41,7 +41,7 @@ async function OTCOrderSDKExample() {
     account // pass account to enable write methods (tx signing, signTypedData)
   );
   const fetcher = constructAxiosFetcher(axios);
-  // SDK with `submitOTCOrder` and `submitP2POrder` methods only
+  // SDK with `submitOTCOrder` methods only
   const LOrderSDK = constructPartialSDK(
     {
       contractCaller,
