@@ -67,42 +67,6 @@ import {
 } from './methods/otcOrders/transaction';
 
 import {
-  BuildNFTOrderFunctions,
-  BuildNFTOrderInput,
-  BuildNFTOrderDataInput,
-  constructBuildNFTOrder,
-} from './methods/nftOrders/buildOrder';
-import {
-  SignNFTOrderFunctions,
-  constructSignNFTOrder,
-} from './methods/nftOrders/signOrder';
-import {
-  CancelNFTOrderFunctions,
-  constructCancelNFTOrder,
-} from './methods/nftOrders/cancelOrder';
-import {
-  GetNFTOrdersFunctions,
-  constructGetNFTOrders,
-  NFTOrdersUserParams,
-} from './methods/nftOrders/getOrders';
-import {
-  PostNFTOrderFunctions,
-  constructPostNFTOrder,
-} from './methods/nftOrders/postOrder';
-import {
-  ApproveTokenForNFTOrderFunctions,
-  constructApproveTokenForNFTOrder,
-} from './methods/nftOrders/approveForOrder';
-import {
-  GetNFTOrdersContractFunctions,
-  constructGetNFTOrdersContract,
-} from './methods/nftOrders/getOrdersContract';
-import {
-  BuildNFTOrdersTxFunctions,
-  constructBuildNFTOrderTx,
-} from './methods/nftOrders/transaction';
-
-import {
   constructEthersContractCaller,
   constructEthersV5ContractCaller,
   constructEthersV6ContractCaller,
@@ -325,11 +289,8 @@ export type {
   BuildTxInput,
   BuildSwapTxInput,
   BuildOTCOrderTxInput,
-  BuildNFTOrderTxInput,
   BuildSwapAndOTCOrderTxInput,
-  BuildSwapAndNFTOrderTxInput,
   SwappableOrder,
-  SwappableNFTOrder,
 } from './methods/swap/transaction';
 export type { Web3UnpromiEvent } from './helpers';
 export * from './constants';
@@ -337,10 +298,6 @@ export type {
   SignableOrderData,
   OrderData,
 } from './methods/otcOrders/helpers/buildOrderData';
-export type {
-  SignableNFTOrderData,
-  NFTOrderData,
-} from './methods/nftOrders/helpers/buildOrderData';
 export type { SignableTypedData } from './methods/common/orders/buildOrderData';
 
 // can import these individually
@@ -366,15 +323,6 @@ export {
   constructApproveTokenForOTCOrder,
   constructGetOTCOrdersContract,
   constructBuildOTCOrderTx,
-  // nftOrders methods
-  constructBuildNFTOrder,
-  constructSignNFTOrder,
-  constructCancelNFTOrder,
-  constructGetNFTOrders,
-  constructPostNFTOrder,
-  constructApproveTokenForNFTOrder,
-  constructGetNFTOrdersContract,
-  constructBuildNFTOrderTx,
   // Delta methods
   constructBuildDeltaOrder,
   constructPostDeltaOrder,
@@ -448,18 +396,6 @@ export type {
   ApproveTokenForOTCOrderFunctions,
   GetOTCOrdersFunctions,
   OTCOrdersUserParams,
-  // types for nftOrders methods:
-  SignNFTOrderFunctions,
-  CancelNFTOrderFunctions,
-  GetNFTOrdersFunctions,
-  PostNFTOrderFunctions,
-  ApproveTokenForNFTOrderFunctions,
-  GetNFTOrdersContractFunctions,
-  BuildNFTOrdersTxFunctions,
-  BuildNFTOrderFunctions,
-  BuildNFTOrderInput,
-  BuildNFTOrderDataInput,
-  NFTOrdersUserParams,
   // types for Delta methods
   DeltaPrice,
   DeltaPriceParams,
@@ -576,10 +512,6 @@ export {
 // bundled methods for OTCOrders
 export * from './methods/otcOrders';
 export * from './methods/otcOrders/helpers/types';
-// bundled methods for nftOrders
-export * from './methods/nftOrders';
-export * from './methods/nftOrders/helpers/types';
-export { AssetType } from './methods/nftOrders/helpers/misc';
 
 // helpers for Delta Orders
 export { OrderHelpers } from './methods/delta/helpers/orders';

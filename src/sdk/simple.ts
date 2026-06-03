@@ -68,31 +68,6 @@ import {
   OTCOrderHandlers,
 } from '../methods/otcOrders';
 
-import {
-  constructGetNFTOrdersContract,
-  GetNFTOrdersContractFunctions,
-} from '../methods/nftOrders/getOrdersContract';
-import {
-  constructGetNFTOrders,
-  GetNFTOrdersFunctions,
-} from '../methods/nftOrders/getOrders';
-import {
-  BuildNFTOrderFunctions,
-  constructBuildNFTOrder,
-} from '../methods/nftOrders/buildOrder';
-import {
-  constructPostNFTOrder,
-  PostNFTOrderFunctions,
-} from '../methods/nftOrders/postOrder';
-import {
-  constructBuildNFTOrderTx,
-  BuildNFTOrdersTxFunctions,
-} from '../methods/nftOrders/transaction';
-import {
-  constructAllNFTOrdersHandlers,
-  NFTOrderHandlers,
-} from '../methods/nftOrders';
-
 import { constructSwapSDK } from '../methods/swap';
 import type { AxiosRequirement } from '../helpers/fetchers/axios';
 import { API_URL, DEFAULT_VERSION } from '../constants';
@@ -151,13 +126,6 @@ export type OTCOrdersFetchMethods = GetOTCOrdersContractFunctions &
   PostOTCOrderFunctions &
   BuildOTCOrdersTxFunctions;
 
-/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
-export type NFTOrdersFetchMethods = GetNFTOrdersContractFunctions &
-  GetNFTOrdersFunctions &
-  BuildNFTOrderFunctions &
-  PostNFTOrderFunctions &
-  BuildNFTOrdersTxFunctions;
-
 export type DeltaFetchMethods = BuildDeltaOrderFunctions &
   GetDeltaOrdersFunctions &
   GetDeltaPriceFunctions &
@@ -170,8 +138,6 @@ export type DeltaFetchMethods = BuildDeltaOrderFunctions &
 export type SimpleFetchSDK = {
   swap: SwapFetchMethods;
   otcOrders: OTCOrdersFetchMethods;
-  /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
-  nftOrders: NFTOrdersFetchMethods;
   delta: DeltaFetchMethods;
   quote: QuoteFetchMethods;
 } & Required<ConstructBaseInput>;
@@ -181,8 +147,6 @@ export type QuoteFetchMethods = GetQuoteFunctions;
 export type SimpleSDK = {
   swap: SwapSDKMethods<TxHash>;
   otcOrders: OTCOrderHandlers<TxHash>;
-  /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
-  nftOrders: NFTOrderHandlers<TxHash>;
   delta: DeltaOrderHandlers<TxHash>;
   quote: QuoteFetchMethods;
 } & Required<ConstructBaseInput>;
@@ -274,15 +238,6 @@ export function constructSimpleSDK(
       constructBuildOTCOrderTx
     );
 
-    const nftOrders = constructPartialSDK(
-      config,
-      constructBuildNFTOrder,
-      constructPostNFTOrder,
-      constructGetNFTOrders,
-      constructGetNFTOrdersContract,
-      constructBuildNFTOrderTx
-    );
-
     const delta = constructPartialSDK(
       config,
       constructBuildDeltaOrder,
@@ -300,7 +255,6 @@ export function constructSimpleSDK(
     return {
       swap,
       otcOrders,
-      nftOrders,
       delta,
       quote,
       apiURL: options.apiURL ?? API_URL,
@@ -324,9 +278,6 @@ export function constructSimpleSDK(
   const otcOrders: OTCOrderHandlers<TxHash> =
     constructAllOTCOrdersHandlers<TxHash>(config);
 
-  const nftOrders: NFTOrderHandlers<TxHash> =
-    constructAllNFTOrdersHandlers<TxHash>(config);
-
   const delta: DeltaOrderHandlers<TxHash> =
     constructAllDeltaOrdersHandlers<TxHash>(config);
 
@@ -335,7 +286,6 @@ export function constructSimpleSDK(
   return {
     swap,
     otcOrders,
-    nftOrders,
     delta,
     quote,
     apiURL: options.apiURL ?? API_URL,
