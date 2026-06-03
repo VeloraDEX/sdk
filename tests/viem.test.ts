@@ -186,17 +186,17 @@ describe('SDK with viem: contract calling methods', () => {
   }, 120000);
 
   test('signOrder', async () => {
-    const signableOrderData = await SDKwithEthers.limitOrders.buildLimitOrder(
+    const signableOrderData = await SDKwithEthers.otcOrders.buildOTCOrder(
       orderInput
     );
 
-    expect(signableOrderData).toMatchSnapshot('LimitOrder to sign');
+    expect(signableOrderData).toMatchSnapshot('OTCOrder to sign');
 
-    const ethersSignature = await SDKwithEthers.limitOrders.signLimitOrder(
+    const ethersSignature = await SDKwithEthers.otcOrders.signOTCOrder(
       signableOrderData
     );
 
-    const viemSignature = await SDKwithViem.limitOrders.signLimitOrder(
+    const viemSignature = await SDKwithViem.otcOrders.signOTCOrder(
       signableOrderData
     );
 
