@@ -239,7 +239,7 @@ function isPendingAuction<T extends Pick<DeltaAuction, 'status'>>(
  * between 0 and 100.
  */
 function isPartiallyExecutedAuction<
-  T extends Pick<DeltaAuction, 'order' | 'transactions'>
+  T extends Pick<DeltaAuction, 'order' | 'transactions'>,
 >(
   auction: T
 ): auction is T & { transactions: NonEmptyArray<DeltaTransaction> } {
@@ -523,17 +523,21 @@ function getAuctionAmounts(
 
   const order = auction.order;
 
-  let minimal = !isTWAPOrder(order)
-    ? { srcAmount: order.srcAmount, destAmount: order.destAmount }
-    : expected; // TWAP doesn't carry explicit min amounts
-
-  if (isOrderCrosschain(order)) {
+  let minimal;
+  if (isTWAPOrder(order)) {
+    minimal = expected; // TWAP doesn't carry explicit min amounts
+  } else if (isOrderCrosschain(order)) {
     minimal = {
-      srcAmount: minimal.srcAmount,
+      srcAmount: order.srcAmount,
       destAmount: scaleByFactor(
-        BigInt(minimal.destAmount),
+        BigInt(order.destAmount),
         order.bridge.scalingFactor
       ).toString(),
+    };
+  } else {
+    minimal = {
+      srcAmount: order.srcAmount,
+      destAmount: order.destAmount,
     };
   }
 
