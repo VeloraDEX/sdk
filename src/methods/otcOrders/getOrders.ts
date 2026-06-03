@@ -14,7 +14,6 @@ import {
 import type {
   OTCOrderFromApi,
   OTCOrdersApiResponse,
-  OTCOrderType,
 } from './helpers/types';
 
 type PaginationParams = {
