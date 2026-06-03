@@ -25,10 +25,7 @@ type PaginationParams = {
 };
 
 //                     get orders by `maker` or `taker`
-export type OTCOrdersUserParams = (
-  | { maker: Address; }
-  | { taker: Address; }
-) &
+export type OTCOrdersUserParams = ({ maker: Address } | { taker: Address }) &
   PaginationParams;
 
 export type GetRequiredAllowanceParams = {
@@ -76,7 +73,7 @@ export const constructGetOTCOrders = ({
   });
 
   const getOTCOrders: GetOTCOrders = async (userParams, requestParams) => {
-    const baseFetchURL = getBaseFetchURLByEntityType("P2P");
+    const baseFetchURL = getBaseFetchURLByEntityType('P2P');
     const userURL =
       'maker' in userParams
         ? (`maker/${userParams.maker}` as const)

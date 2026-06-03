@@ -58,12 +58,11 @@ const orderInput = {
 };
 
 async function run() {
-  const signableOrderData: SignableOrderData =
-    await OTCOrderSDK.buildOTCOrder(orderInput);
-
-  const signature: string = await OTCOrderSDK.signOTCOrder(
-    signableOrderData
+  const signableOrderData: SignableOrderData = await OTCOrderSDK.buildOTCOrder(
+    orderInput
   );
+
+  const signature: string = await OTCOrderSDK.signOTCOrder(signableOrderData);
 
   const orderToPostToApi: OTCOrderToPost = {
     ...signableOrderData.data,

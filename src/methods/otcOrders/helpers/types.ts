@@ -34,7 +34,6 @@ export type OTCOrderState =
   | 'SUSPENDED'
   | 'EXPIRED';
 
-
 export type OTCOrderFromApi = {
   chainId: number;
   nonceAndMeta: string; // uiint

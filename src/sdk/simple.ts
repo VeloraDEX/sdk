@@ -153,8 +153,8 @@ export type SimpleSDK = {
 
 export type FetcherOptions = (
   | {
-    axios: AxiosRequirement;
-  }
+      axios: AxiosRequirement;
+    }
   | { fetch: typeof fetch }
   | { fetcher: FetcherFunction }
 ) &
@@ -181,16 +181,16 @@ const constructFetcher = (options: FetcherOptions): FetcherFunction => {
     // adding apiKey to headers if it's provided
     const headers = options?.apiKey
       ? {
-        ...options.headers,
-        'X-API-KEY': options.apiKey,
-        ...params.headers,
-        ...params.requestParams?.headers,
-      }
+          ...options.headers,
+          'X-API-KEY': options.apiKey,
+          ...params.headers,
+          ...params.requestParams?.headers,
+        }
       : {
-        ...options.headers,
-        ...params.headers,
-        ...params.requestParams?.headers,
-      };
+          ...options.headers,
+          ...params.headers,
+          ...params.requestParams?.headers,
+        };
 
     return options.fetcher({ ...params, headers });
   };

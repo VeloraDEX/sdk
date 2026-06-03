@@ -89,7 +89,6 @@ export type BuildSwapTxInput = BuildTxInputBase & {
     | TxInputAmountsPartBuyOrSell
   ); // this union doesn't allow to mix srcAmount & destAmount & slippage together
 
-
 // building block for OTCOrders swaps
 // can only use priceRoute.side=BUY and related TxInputAmountsPart*
 type BuildTxInputBaseBUYForOrders<
@@ -120,11 +119,10 @@ export type BuildSwapAndOTCOrderTxInput =
 
 // with slippage for a swap and fill - p2p - order, without to fill a p2p order directly with the intended taker asset
 
-
 export type BuildTxInput =
   | BuildSwapTxInput
   | BuildOTCOrderTxInput
-  | BuildSwapAndOTCOrderTxInput
+  | BuildSwapAndOTCOrderTxInput;
 
 export type BuildOptionsBase = {
   /** @description Allows the API to skip performing onchain checks such as balances, allowances, as well as transaction simulations. The response does not contain `gas` parameter when set to `true` */
@@ -196,22 +194,22 @@ export const constructBuildTx = ({
     const sanitizedParams =
       'orders' in params && params.orders.length > 0
         ? {
-          ...params,
-          //  make sure we don't pass more with orders than API expects
-          orders: params.orders.map((order) => {
-            const sanitizedOrderData = sanitizeOTCOrderData(order);
-            const sanitizedOrder: SwappableOrder = {
-              ...sanitizedOrderData,
-              signature: order.signature,
-            };
+            ...params,
+            //  make sure we don't pass more with orders than API expects
+            orders: params.orders.map((order) => {
+              const sanitizedOrderData = sanitizeOTCOrderData(order);
+              const sanitizedOrder: SwappableOrder = {
+                ...sanitizedOrderData,
+                signature: order.signature,
+              };
 
-            if (order.permitMakerAsset) {
-              sanitizedOrder.permitMakerAsset = order.permitMakerAsset;
-            }
+              if (order.permitMakerAsset) {
+                sanitizedOrder.permitMakerAsset = order.permitMakerAsset;
+              }
 
-            return sanitizedOrder;
-          }),
-        }
+              return sanitizedOrder;
+            }),
+          }
         : params;
 
     const takeSurplus =

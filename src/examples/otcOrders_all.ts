@@ -68,9 +68,7 @@ async function run() {
 
   // builds + signs + posts order to API
   // new OTC order returned from API
-  const newOTCOrder: OTCOrder = await OTCOrderSDK.submitOTCOrder(
-    orderInput
-  );
+  const newOTCOrder: OTCOrder = await OTCOrderSDK.submitOTCOrder(orderInput);
 
   // to act as order taker
   const anotherAccount = '0x5678...';

@@ -74,16 +74,18 @@ async function run() {
   });
 
   if (currentOrders[0]?.orderHash) {
-    const tx1: ethers.ContractTransaction =
-      await OTCOrderSDK.cancelOTCOrder(currentOrders[0].orderHash);
+    const tx1: ethers.ContractTransaction = await OTCOrderSDK.cancelOTCOrder(
+      currentOrders[0].orderHash
+    );
   }
 
   const moreOrderHashes = currentOrders
     .slice(1, 2)
     .map((order) => order.orderHash);
 
-  const tx2: ethers.ContractTransaction =
-    await OTCOrderSDK.cancelOTCOrdersBulk(moreOrderHashes);
+  const tx2: ethers.ContractTransaction = await OTCOrderSDK.cancelOTCOrdersBulk(
+    moreOrderHashes
+  );
 
   /// creating a new order
 
@@ -93,12 +95,11 @@ async function run() {
       orderInput.makerAsset
     );
 
-  const signableOrderData: SignableOrderData =
-    await OTCOrderSDK.buildOTCOrder(orderInput);
-
-  const signature: string = await OTCOrderSDK.signOTCOrder(
-    signableOrderData
+  const signableOrderData: SignableOrderData = await OTCOrderSDK.buildOTCOrder(
+    orderInput
   );
+
+  const signature: string = await OTCOrderSDK.signOTCOrder(signableOrderData);
 
   const orderToPostToApi: OTCOrderToPost = {
     ...signableOrderData.data,

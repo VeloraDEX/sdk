@@ -14,9 +14,7 @@ export const constructSignOTCOrder = (
     'contractCaller'
   >
 ): SignOTCOrderFunctions => {
-  const signOTCOrder: SignOTCOrderFunctions['signOTCOrder'] = (
-    typedData
-  ) => {
+  const signOTCOrder: SignOTCOrderFunctions['signOTCOrder'] = (typedData) => {
     // types allow to pass OrderData & extra_stuff, but tx will break like that
     const typedDataOnly: SignableOrderData = {
       ...typedData,

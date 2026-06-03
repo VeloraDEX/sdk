@@ -40,25 +40,25 @@ type InferWithTxResponse<
   Funcs extends [SDKFunction<Config>, ...SDKFunction<Config>[]]
 > = Config extends SDKConfig<infer TxResponse> // if can infer TxResponse inside Config
   ? // and if returns can be successfully intersected
-  IntersectionOfReturns<Funcs> extends Record<string, any>
-  ? MergeExtendableRecursively<
-    IntersectionOfReturns<Funcs>,
-    [
-      // if there are ApproveTokenFunctions or CancelOTCOrderFunctions in the intersection
-      // which means constructApproveToken or constructCancelOTCOrder was passed in Funcs
-      ApproveTokenFunctions<TxResponse>,
-      CancelOTCOrderFunctions<TxResponse>,
-      FillOTCOrderFunctions<TxResponse>,
-      ApproveTokenForOTCOrderFunctions<TxResponse>,
-      ApproveTokenForDeltaFunctions<TxResponse>,
-      PreSignDeltaOrderFunctions<TxResponse>,
-      PreSignExternalDeltaOrderFunctions<TxResponse>,
-      DeltaTokenModuleFunctions<TxResponse>,
-      PreSignTWAPDeltaOrderFunctions<TxResponse>
-    ]
-  // then merge IntersectionOfReturns<Funcs> with them recursively
-  >
-  : IntersectionOfReturns<Funcs>
+    IntersectionOfReturns<Funcs> extends Record<string, any>
+    ? MergeExtendableRecursively<
+        IntersectionOfReturns<Funcs>,
+        [
+          // if there are ApproveTokenFunctions or CancelOTCOrderFunctions in the intersection
+          // which means constructApproveToken or constructCancelOTCOrder was passed in Funcs
+          ApproveTokenFunctions<TxResponse>,
+          CancelOTCOrderFunctions<TxResponse>,
+          FillOTCOrderFunctions<TxResponse>,
+          ApproveTokenForOTCOrderFunctions<TxResponse>,
+          ApproveTokenForDeltaFunctions<TxResponse>,
+          PreSignDeltaOrderFunctions<TxResponse>,
+          PreSignExternalDeltaOrderFunctions<TxResponse>,
+          DeltaTokenModuleFunctions<TxResponse>,
+          PreSignTWAPDeltaOrderFunctions<TxResponse>
+        ]
+        // then merge IntersectionOfReturns<Funcs> with them recursively
+      >
+    : IntersectionOfReturns<Funcs>
   : IntersectionOfReturns<Funcs>;
 
 // merges Accum with Replacement
@@ -80,8 +80,8 @@ type MergeExtendableRecursively<
   ...tail: infer Tail
 ]
   ? Tail extends Record<string, any>[]
-  ? MergeExtendableRecursively<MergeExtendableOnce<Accum, Head>, Tail>
-  : MergeExtendableOnce<Accum, Head>
+    ? MergeExtendableRecursively<MergeExtendableOnce<Accum, Head>, Tail>
+    : MergeExtendableOnce<Accum, Head>
   : Accum;
 
 /** @description construct composable SDK with methods you choose yourself */

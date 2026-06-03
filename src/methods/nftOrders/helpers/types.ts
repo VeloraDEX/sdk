@@ -2,7 +2,6 @@ import type { Address } from '../../../types';
 import type { NFTOrderData } from './buildOrderData';
 import type { AssetType } from './misc';
 
-
 export type NFTOrderType = 'LIMIT' | 'P2P';
 
 export type NFTOrderToSend = NFTOrderData & {

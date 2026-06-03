@@ -35,7 +35,7 @@ type MinBuildOTCOrderTxInput = Omit<
   BuildOTCOrderTxInput,
   // these are derived from `orders`
   'srcToken' | 'srcAmount' | 'destToken' | 'slippage'
-// `slippage` doesn't participate as we derive `srcAmount` already
+  // `slippage` doesn't participate as we derive `srcAmount` already
 >;
 
 type BuildOTCOrdersTx = (
@@ -118,10 +118,7 @@ export const constructBuildOTCOrderTx = ({
     };
 
     // priceRoute
-    const optimalRate = await getSwapAndOTCOrderRate(
-      rateInput,
-      requestParams
-    );
+    const optimalRate = await getSwapAndOTCOrderRate(rateInput, requestParams);
     return optimalRate;
   };
 
@@ -166,7 +163,7 @@ export const constructBuildOTCOrderTx = ({
       ...(params.slippage
         ? { slippage: params.slippage }
         : //                                        may sneak in as part of `params`
-        { srcAmount: params.priceRoute.srcAmount, slippage: undefined }),
+          { srcAmount: params.priceRoute.srcAmount, slippage: undefined }),
     };
 
     return buildSwapTx(fillParams, options, requestParams);

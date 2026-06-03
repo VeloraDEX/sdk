@@ -66,7 +66,6 @@ export const constructSubmitOTCOrder = (
     return orderWithSignature;
   };
 
-
   const submitOTCOrder: SubmitOTCOrder = async (
     buildOTCOrderParams,
     extra = {},

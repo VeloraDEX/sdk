@@ -51,11 +51,7 @@ export const constructPostOTCOrder = ({
     OTCOrderWithSignatureAndPermit,
     requestParams
   ) => {
-    return postTypedOrder(
-      OTCOrderWithSignatureAndPermit,
-      'P2P',
-      requestParams
-    );
+    return postTypedOrder(OTCOrderWithSignatureAndPermit, 'P2P', requestParams);
   };
 
   return { postOTCOrder };
