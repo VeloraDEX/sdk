@@ -47,7 +47,7 @@ Each file exports `constructContractCaller(provider, account)` → `ContractCall
 
 - `delta/` — Core feature: Delta auction orders (server-side order building, route-based pricing, paginated orders; see detail below)
 - `swap/` — Token swap: rates, transaction building, approvals, balances
-- `limitOrders/` — **Deprecated.** EIP-712 signed limit orders
+- `otcOrders/` — EIP-712 signed OTC orders
 - `nftOrders/` — **Deprecated.** EIP-712 signed NFT orders
 - `quote/` — Unified `/v2/quote` endpoint (mode-selectable Delta v2 price / market / fallback)
 
