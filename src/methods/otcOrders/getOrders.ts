@@ -11,10 +11,7 @@ import {
   GetOrderURL,
   GetRequiredAllowanceURL as GetRequiredBalanceURL,
 } from './helpers/misc';
-import type {
-  OTCOrderFromApi,
-  OTCOrdersApiResponse,
-} from './helpers/types';
+import type { OTCOrderFromApi, OTCOrdersApiResponse } from './helpers/types';
 
 type PaginationParams = {
   limit?: number;

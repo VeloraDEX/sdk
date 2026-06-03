@@ -222,27 +222,27 @@ export const constructBuildTx = ({
     const sanitizedParams =
       'orders' in params && params.orders.length > 0
         ? {
-          ...params,
-          //  make sure we don't pass more with orders than API expects
-          orders: params.orders.map((order) => {
-            const sanitizedOrderData =
-              'makerAssetId' in order
-                ? sanitizeNFTOrderData(order) // assetType is provided here, because Order.*Asset may be address
-                : // if Order received from API by hash
-                sanitizeOTCOrderData(order);
+            ...params,
+            //  make sure we don't pass more with orders than API expects
+            orders: params.orders.map((order) => {
+              const sanitizedOrderData =
+                'makerAssetId' in order
+                  ? sanitizeNFTOrderData(order) // assetType is provided here, because Order.*Asset may be address
+                  : // if Order received from API by hash
+                    sanitizeOTCOrderData(order);
 
-            const sanitizedOrder: SwappableOrder = {
-              ...sanitizedOrderData,
-              signature: order.signature,
-            };
+              const sanitizedOrder: SwappableOrder = {
+                ...sanitizedOrderData,
+                signature: order.signature,
+              };
 
-            if (order.permitMakerAsset) {
-              sanitizedOrder.permitMakerAsset = order.permitMakerAsset;
-            }
+              if (order.permitMakerAsset) {
+                sanitizedOrder.permitMakerAsset = order.permitMakerAsset;
+              }
 
-            return sanitizedOrder;
-          }),
-        }
+              return sanitizedOrder;
+            }),
+          }
         : params;
 
     const takeSurplus =

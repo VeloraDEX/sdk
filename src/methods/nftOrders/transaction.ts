@@ -35,7 +35,7 @@ type MinBuildNFTOrderTxInput = Omit<
   BuildNFTOrderTxInput,
   // these are derived from `orders`
   'srcToken' | 'srcAmount' | 'destToken' | 'slippage'
-// `slippage` doesn't participate as we derive `srcAmount` already
+  // `slippage` doesn't participate as we derive `srcAmount` already
 >;
 
 type BuildNFTOrdersTx = (
@@ -159,7 +159,7 @@ export const constructBuildNFTOrderTx = ({
       ...(params.slippage
         ? { slippage: params.slippage }
         : //                                        may sneak in as part of `params`
-        { srcAmount: params.priceRoute.srcAmount, slippage: undefined }),
+          { srcAmount: params.priceRoute.srcAmount, slippage: undefined }),
       destToken: 'NFT', // support any NFT,
       destDecimals: params.priceRoute.destDecimals,
     };
