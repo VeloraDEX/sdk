@@ -1,11 +1,8 @@
 import { API_URL } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type {
-  DeltaAuction,
-  DeltaOrderType,
-  OnChainOrderMap,
-} from './helpers/types';
+import type { DeltaOrderType, OnChainOrderMap } from './helpers/types';
+import type { DeltaAuction } from './types';
 
 export type DeltaOrderToPost<T extends keyof OnChainOrderMap = 'Order'> = {
   /** @description Partner string */
@@ -16,12 +13,10 @@ export type DeltaOrderToPost<T extends keyof OnChainOrderMap = 'Order'> = {
   /** @description Signature of the order from order.owner address. EOA signatures must be submitted in ERC-2098 Compact Representation. */
   signature: string;
   chainId: number;
-  /** @description designates the Order as being able to partially filled, as opposed to fill-or-kill */
+  /** @description Designates the Order as being able to be partially filled, as opposed to fill-or-kill */
   partiallyFillable?: boolean;
-
   /** @description Type of the order. MARKET or LIMIT. Default is MARKET */
   type?: DeltaOrderType;
-
   includeAgents?: string[];
   excludeAgents?: string[];
 };
@@ -44,7 +39,7 @@ export const constructPostDeltaOrder = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): PostDeltaOrderFunctions => {
-  const postOrderUrl = `${apiURL}/delta/orders` as const;
+  const postOrderUrl = `${apiURL}/delta/v2/orders` as const;
 
   const postDeltaOrder: PostDeltaOrder = (_postData, requestParams) => {
     const { degenMode, ...postData } = _postData;

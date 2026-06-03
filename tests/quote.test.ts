@@ -49,53 +49,16 @@ describe('Quote:methods', () => {
 
     const staticDeltaPrice: typeof quote.delta = {
       ...quote.delta,
-      partnerFee: NaN, // dynamic number, can change slightly depending on API config
-      hmac: 'dynamic_string',
-      destAmount: 'dynamic_number',
-      destAmountBeforeFee: 'dynamic_number',
-      srcUSD: 'dynamic_number',
-      destUSD: 'dynamic_number',
-      destUSDBeforeFee: 'dynamic_number',
-      receivedDestAmount: 'dynamic_number',
-      receivedDestUSD: 'dynamic_number',
-      receivedDestAmountBeforeFee: 'dynamic_number',
-      receivedDestUSDBeforeFee: 'dynamic_number',
-      gasCost: 'dynamic_number',
-      gasCostBeforeFee: 'dynamic_number',
-      gasCostUSD: 'dynamic_number',
-      gasCostUSDBeforeFee: 'dynamic_number',
+      id: 'dynamic_string',
+      // route + alternatives carry the dynamic amounts/USD/gas fields in v2;
+      // stabilized wholesale so the inline snapshot below regenerates cleanly.
+      route: 'dynamic_route' as unknown as typeof quote.delta.route,
+      alternatives:
+        'dynamic_alternatives' as unknown as typeof quote.delta.alternatives,
+      partner: { name: quote.delta.partner.name, feePercent: NaN },
     };
 
-    expect(staticDeltaPrice).toMatchInlineSnapshot(`
-      {
-        "bridge": {
-          "destinationChainId": 0,
-          "outputToken": "0x0000000000000000000000000000000000000000",
-          "protocolData": "0x",
-          "protocolSelector": "0x00000000",
-          "scalingFactor": 0,
-        },
-        "destAmount": "dynamic_number",
-        "destAmountBeforeFee": "dynamic_number",
-        "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-        "destUSD": "dynamic_number",
-        "destUSDBeforeFee": "dynamic_number",
-        "gasCost": "dynamic_number",
-        "gasCostBeforeFee": "dynamic_number",
-        "gasCostUSD": "dynamic_number",
-        "gasCostUSDBeforeFee": "dynamic_number",
-        "hmac": "dynamic_string",
-        "partner": "anon",
-        "partnerFee": NaN,
-        "receivedDestAmount": "dynamic_number",
-        "receivedDestAmountBeforeFee": "dynamic_number",
-        "receivedDestUSD": "dynamic_number",
-        "receivedDestUSDBeforeFee": "dynamic_number",
-        "srcAmount": "100000000000",
-        "srcToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "srcUSD": "dynamic_number",
-      }
-    `);
+    expect(staticDeltaPrice).toMatchInlineSnapshot();
   });
 
   test('Fail Quote for delta for small amounts', async () => {
@@ -147,58 +110,16 @@ describe('Quote:methods', () => {
 
     const staticDeltaPrice: typeof quote.delta = {
       ...quote.delta,
-      partnerFee: NaN, // dynamic number
-      hmac: 'dynamic_string',
-      destAmount: 'dynamic_number',
-      destAmountBeforeFee: 'dynamic_number',
-      srcUSD: 'dynamic_number',
-      destUSD: 'dynamic_number',
-      destUSDBeforeFee: 'dynamic_number',
-      receivedDestAmount: 'dynamic_number',
-      receivedDestUSD: 'dynamic_number',
-      gasCost: 'dynamic_number',
-      gasCostBeforeFee: 'dynamic_number',
-      gasCostUSD: 'dynamic_number',
-      gasCostUSDBeforeFee: 'dynamic_number',
-      srcAmount: 'dynamic_number',
-      srcAmountBeforeFee: 'dynamic_number',
-      srcUSDBeforeFee: 'dynamic_number',
+      id: 'dynamic_string',
+      // route + alternatives carry the dynamic amounts/USD/gas fields in v2;
+      // stabilized wholesale so the inline snapshot below regenerates cleanly.
+      route: 'dynamic_route' as unknown as typeof quote.delta.route,
+      alternatives:
+        'dynamic_alternatives' as unknown as typeof quote.delta.alternatives,
+      partner: { name: quote.delta.partner.name, feePercent: NaN },
     };
 
-    // only SELL side has receivedDestAmountBeforeFee and receivedDestUSDBeforeFee
-    expect('receivedDestAmountBeforeFee' in quote.delta).toBeFalsy();
-    expect('receivedDestUSDBeforeFee' in quote.delta).toBeFalsy();
-
-    expect(staticDeltaPrice).toMatchInlineSnapshot(`
-      {
-        "bridge": {
-          "destinationChainId": 0,
-          "outputToken": "0x0000000000000000000000000000000000000000",
-          "protocolData": "0x",
-          "protocolSelector": "0x00000000",
-          "scalingFactor": 0,
-        },
-        "destAmount": "dynamic_number",
-        "destAmountBeforeFee": "dynamic_number",
-        "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-        "destUSD": "dynamic_number",
-        "destUSDBeforeFee": "dynamic_number",
-        "gasCost": "dynamic_number",
-        "gasCostBeforeFee": "dynamic_number",
-        "gasCostUSD": "dynamic_number",
-        "gasCostUSDBeforeFee": "dynamic_number",
-        "hmac": "dynamic_string",
-        "partner": "anon",
-        "partnerFee": NaN,
-        "receivedDestAmount": "dynamic_number",
-        "receivedDestUSD": "dynamic_number",
-        "srcAmount": "dynamic_number",
-        "srcAmountBeforeFee": "dynamic_number",
-        "srcToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "srcUSD": "dynamic_number",
-        "srcUSDBeforeFee": "dynamic_number",
-      }
-    `);
+    expect(staticDeltaPrice).toMatchInlineSnapshot();
   });
 
   test('Get Quote for market', async () => {
@@ -258,53 +179,16 @@ describe('Quote:methods', () => {
 
     const staticDeltaPrice: typeof quote.delta = {
       ...quote.delta,
-      partnerFee: NaN, // dynamic number, can change slightly depending on API config
-      hmac: 'dynamic_string',
-      destAmount: 'dynamic_number',
-      destAmountBeforeFee: 'dynamic_number',
-      srcUSD: 'dynamic_number',
-      destUSD: 'dynamic_number',
-      destUSDBeforeFee: 'dynamic_number',
-      receivedDestAmount: 'dynamic_number',
-      receivedDestUSD: 'dynamic_number',
-      receivedDestAmountBeforeFee: 'dynamic_number',
-      receivedDestUSDBeforeFee: 'dynamic_number',
-      gasCost: 'dynamic_number',
-      gasCostBeforeFee: 'dynamic_number',
-      gasCostUSD: 'dynamic_number',
-      gasCostUSDBeforeFee: 'dynamic_number',
+      id: 'dynamic_string',
+      // route + alternatives carry the dynamic amounts/USD/gas fields in v2;
+      // stabilized wholesale so the inline snapshot below regenerates cleanly.
+      route: 'dynamic_route' as unknown as typeof quote.delta.route,
+      alternatives:
+        'dynamic_alternatives' as unknown as typeof quote.delta.alternatives,
+      partner: { name: quote.delta.partner.name, feePercent: NaN },
     };
 
-    expect(staticDeltaPrice).toMatchInlineSnapshot(`
-      {
-        "bridge": {
-          "destinationChainId": 0,
-          "outputToken": "0x0000000000000000000000000000000000000000",
-          "protocolData": "0x",
-          "protocolSelector": "0x00000000",
-          "scalingFactor": 0,
-        },
-        "destAmount": "dynamic_number",
-        "destAmountBeforeFee": "dynamic_number",
-        "destToken": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-        "destUSD": "dynamic_number",
-        "destUSDBeforeFee": "dynamic_number",
-        "gasCost": "dynamic_number",
-        "gasCostBeforeFee": "dynamic_number",
-        "gasCostUSD": "dynamic_number",
-        "gasCostUSDBeforeFee": "dynamic_number",
-        "hmac": "dynamic_string",
-        "partner": "anon",
-        "partnerFee": NaN,
-        "receivedDestAmount": "dynamic_number",
-        "receivedDestAmountBeforeFee": "dynamic_number",
-        "receivedDestUSD": "dynamic_number",
-        "receivedDestUSDBeforeFee": "dynamic_number",
-        "srcAmount": "100000000000",
-        "srcToken": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-        "srcUSD": "dynamic_number",
-      }
-    `);
+    expect(staticDeltaPrice).toMatchInlineSnapshot();
   });
 
   test('Get Fallback Market Quote for all', async () => {

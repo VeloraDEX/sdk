@@ -1,133 +1,86 @@
+import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import { constructGetDeltaContract } from './getDeltaContract';
-import type { BridgePrice } from './getDeltaPrice';
-import { constructGetPartnerFee } from './getPartnerFee';
-import {
-  buildDeltaSignableOrderData,
-  type BuildDeltaOrderDataInput,
-  type SignableDeltaOrderData,
-} from './helpers/buildDeltaOrderData';
-import type { DeltaAmountsWithSlippage } from './helpers/types';
-import { SwapSideToOrderKind } from './helpers/types';
-import { resolvePartnerFee, resolveAmounts } from './helpers/misc';
-import type { MarkOptional } from 'ts-essentials';
-export type { SignableDeltaOrderData } from './helpers/buildDeltaOrderData';
+import type { DeltaAuctionOrder } from './helpers/types';
+import type { BuiltDeltaOrder, DeltaRoute } from './types';
+export type { BuiltDeltaOrder } from './types';
 
-type BuildDeltaOrderDataParamsBase = {
+export type BuildDeltaOrderParams = {
   /** @description The address of the order owner */
   owner: string;
-  /** @description The address of the order beneficiary */
-  beneficiary?: string; // beneficiary==owner if no transferTo
-  /** @description The address of the src token */
-  srcToken: string; // lowercase
-  /** @description The address of the dest token. For Crosschain Order - destination token on the destination chain */
-  destToken: string; // lowercase
-  /** @description The deadline for the order */
-  deadline?: number; // seconds
-  /** @description The nonce of the order */
-  nonce?: number | string; // can be random, can even be Date.now()
-  /** @description Optional permit signature for the src token https://developers.velora.xyz/api/velora-api/velora-delta-api/build-a-delta-order-to-sign#supported-permits-order#supported-permits */
-  permit?: string; //can be "0x"
-  /** @description Partner string. */
+  /** @description The address of the order beneficiary. Defaults to owner. */
+  beneficiary?: string;
+  /** @description The deadline for the order (unix seconds) */
+  deadline?: number;
+  /** @description The nonce of the order. Random if omitted. */
+  nonce?: string;
+  /** @description Optional permit signature for the src token. Defaults to "0x". */
+  permit?: string;
+  /** @description Partner string. Passed to the server to resolve partner fee details. */
   partner?: string;
-
-  /** @description Destination Chain ID for Crosschain Orders */
-  destChainId?: number;
-
-  /** @description price response received from /delta/prices (getDeltaPrice method) */
-  deltaPrice: MarkOptional<
-    Pick<
-      BridgePrice,
-      | 'destAmount'
-      | 'partner'
-      | 'partnerFee'
-      | 'destToken'
-      | 'srcAmount'
-      | 'bridge'
-    >,
-    'partner' | 'partnerFee'
-  >;
-
-  /** @description partner fee in basis points (bps), 50bps=0.5% */
+  /** @description Partner fee in basis points (bps), 50bps=0.5% */
   partnerFeeBps?: number;
-  /** @description partner address */
+  /** @description Partner address */
   partnerAddress?: string;
-  /** @description take surplus */
+  /** @description Take surplus flag */
   partnerTakesSurplus?: boolean;
-
-  /** @description A boolean indicating whether the surplus should be capped. True by default */
+  /** @description Whether the surplus should be capped. True by default. */
   capSurplus?: boolean;
-
   /** @description Metadata for the order, hex string */
   metadata?: string;
+  /** @description Designates the Order as partially fillable instead of fill-or-kill. Default false. */
+  partiallyFillable?: boolean;
+
+  /** @description DeltaRoute from getDeltaPrice — either price.route or any price.alternatives[i] */
+  route: DeltaRoute;
+  /** @description Order side. SELL or BUY. */
+  side: 'SELL' | 'BUY';
+  /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5%. Default 0. */
+  slippage?: number;
+  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount */
+  limitAmount?: string;
 };
 
-export type BuildDeltaOrderDataParams = BuildDeltaOrderDataParamsBase &
-  DeltaAmountsWithSlippage;
-
 type BuildDeltaOrder = (
-  buildOrderParams: BuildDeltaOrderDataParams,
+  buildOrderParams: BuildDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<SignableDeltaOrderData>;
+) => Promise<BuiltDeltaOrder<DeltaAuctionOrder>>;
 
 export type BuildDeltaOrderFunctions = {
-  /** @description Build Orders to be posted to Delta API for execution */
+  /** @description Build a Delta v2 order from a DeltaRoute via the server endpoint, ready to sign and post. */
   buildDeltaOrder: BuildDeltaOrder;
 };
 
 export const constructBuildDeltaOrder = (
   options: ConstructFetchInput
 ): BuildDeltaOrderFunctions => {
-  const { chainId } = options;
+  const { apiURL = API_URL, fetcher } = options;
+  const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
 
-  // cached internally
-  const { getDeltaContract } = constructGetDeltaContract(options);
-  // cached internally for `partner`
-  const { getPartnerFee } = constructGetPartnerFee(options);
+  const buildDeltaOrder: BuildDeltaOrder = async (params, requestParams) =>
+    fetcher<BuiltDeltaOrder<DeltaAuctionOrder>>({
+      url: buildUrl,
+      method: 'POST',
+      data: {
+        side: params.side,
+        route: params.route,
+        owner: params.owner,
+        beneficiary: params.beneficiary,
+        deadline: params.deadline,
+        nonce: params.nonce,
+        permit: params.permit,
+        slippage: params.slippage,
+        limitAmount: params.limitAmount,
+        metadata: params.metadata,
+        partiallyFillable: params.partiallyFillable,
+        partner: params.partner,
+        partnerAddress: params.partnerAddress,
+        partnerFeeBps: params.partnerFeeBps,
+        partnerTakesSurplus: params.partnerTakesSurplus,
+        capSurplus: params.capSurplus,
+        orderType: 'Order',
+      },
+      requestParams,
+    });
 
-  const buildDeltaOrder: BuildDeltaOrder = async (options, requestParams) => {
-    const ParaswapDelta = await getDeltaContract(requestParams);
-    if (!ParaswapDelta) {
-      throw new Error(`Delta is not available on chain ${chainId}`);
-    }
-
-    const { partnerAddress, partnerFeeBps, partnerTakesSurplus } =
-      await resolvePartnerFee(options, getPartnerFee, requestParams);
-
-    const { srcAmount, destAmount, expectedAmount, swapSide } =
-      resolveAmounts(options);
-
-    const input: BuildDeltaOrderDataInput = {
-      owner: options.owner,
-      beneficiary: options.beneficiary,
-      srcToken: options.srcToken,
-      // for some cases of WETH->ETH crosschain swaps, the destToken is changed to WETH or ETH,
-      // this is already reflected in deltaPrice
-      destToken: options.deltaPrice.destToken,
-      srcAmount,
-      destAmount,
-      expectedAmount,
-      deadline: options.deadline,
-      nonce: options.nonce?.toString(10),
-      permit: options.permit,
-      kind: SwapSideToOrderKind[swapSide],
-      metadata: options.metadata,
-
-      chainId,
-      paraswapDeltaAddress: ParaswapDelta,
-      partnerAddress,
-      partnerTakesSurplus,
-      partnerFeeBps,
-
-      capSurplus: options.capSurplus,
-
-      bridge: options.deltaPrice.bridge, // ZERO_BRIDGE for same-chain Orders
-    };
-
-    return buildDeltaSignableOrderData(input);
-  };
-
-  return {
-    buildDeltaOrder,
-  };
+  return { buildDeltaOrder };
 };

@@ -33,7 +33,7 @@ Three ways to construct the SDK:
 
 `constructSimpleSDK` accepts `{ axios }`, `{ fetch }`, or `{ fetcher }` for the network layer, and optionally `{ ethersProviderOrSigner | ethersV6ProviderOrSigner | viemClient | web3, account }` for signing/transacting.
 
-`constructFullSDK` exposes namespaced methods: `sdk.delta.*` (v1), `sdk.deltaV2.*` (v2), `sdk.swap.*`, etc.
+`constructFullSDK` exposes namespaced methods: `sdk.delta.*`, `sdk.swap.*`, `sdk.quote.*`, etc.
 
 ## Provider Adapters (`src/helpers/providers/`)
 
@@ -45,12 +45,11 @@ Each file exports `constructContractCaller(provider, account)` → `ContractCall
 
 ## Module Structure (`src/methods/`)
 
-- `delta/` — Core feature: Delta auction orders v1 (see detail below)
-- `deltaV2/` — Delta v2: server-side order building, route-based pricing, paginated orders (see detail below)
+- `delta/` — Core feature: Delta auction orders (server-side order building, route-based pricing, paginated orders; see detail below)
 - `swap/` — Token swap: rates, transaction building, approvals, balances
 - `limitOrders/` — **Deprecated.** EIP-712 signed limit orders
 - `nftOrders/` — **Deprecated.** EIP-712 signed NFT orders
-- `quote/` — Unified quote endpoint
+- `quote/` — Unified `/v2/quote` endpoint (mode-selectable Delta v2 price / market / fallback)
 
 ## Composable Constructor Pattern
 
@@ -59,7 +58,7 @@ Every feature module exports a `constructXxx(options) => XxxFunctions` factory:
 - `D` selects required caller methods: `'transactCall'` | `'signTypedDataCall'` | both
 - Generic `<T>` = transaction response type (e.g., `TxHash`, `ethers.ContractTransaction`)
 - Non-generic constructors use `any` (for API-only flows that don't return tx responses)
-- All Delta constructors are combined in `constructAllDeltaOrdersHandlers` in `src/methods/delta/index.ts`
+- All Delta constructors are combined in `constructAllDeltaOrdersHandlers` in `src/methods/delta/index.ts`. **Convention:** bind each `constructXxx(options)` call to a named local (`const deltaPrice = constructGetDeltaPrice(options)`), then spread those locals into the returned object — don't spread the constructor calls inline. (Matches `constructAllLimitOrdersHandlers`.)
 
 ## Key Patterns
 
@@ -76,155 +75,81 @@ Every feature module exports a `constructXxx(options) => XxxFunctions` factory:
 
 ## Delta Module (`src/methods/delta/`)
 
-Four order families with build/sign/post/preSign constructors, plus a read-only Productive family:
+Delta is the SDK's core feature: server-built, on-chain auction orders. Exposed as `sdk.delta.*` and via bare top-level exports.
 
-| Family | `onChainOrderType` | Order type | Build input key |
-|--------|-------------------|-----------|-----------------|
-| Standard | `'Order'` | `DeltaAuctionOrder` | `buildDeltaOrder` |
-| External | `'ExternalOrder'` | `ExternalDeltaOrder` | `buildExternalDeltaOrder` (has `handler` field instead of `bridge`) |
-| TWAP Sell | `'TWAPOrder'` | `TWAPDeltaOrder` | `buildTWAPDeltaOrder` |
-| TWAP Buy | `'TWAPBuyOrder'` | `TWAPBuyDeltaOrder` | `buildTWAPDeltaOrder` |
-| Productive | `'ProductiveOrder'` | `ProductiveDeltaOrder` | _read-only_ — no SDK builder (server-produced) |
+> **History.** Delta was once a **v1** with local EIP-712 order building and per-family sign functions. It was replaced (breaking) by the server-built **v2** described here — `sdk.delta.*` *is* v2, with a single set of bare top-level exports. All Delta URLs use the `/delta/v2/...` prefix.
 
-`'FillableOrder'` is also a key in `OnChainOrderMap`/`OnChainOrderType`, mapping to the same `DeltaAuctionOrder` shape as `'Order'`. It is not a separate buildable family — it's the `onChainOrderType` the server reports when a Standard order is `partiallyFillable`. Built/signed/posted exactly as a Standard `Order`; only surfaces (read-only) on the way back through the read paths.
+Order building is **server-side**: `POST /delta/v2/orders/build` returns a `BuiltDeltaOrder { toSign, orderHash }`; a single `signDeltaOrder(builtOrder)` signs every family; `post*` submits the signed order. Partner fee is passed as raw params (`partner`, `partnerFeeBps`) to the server rather than resolved locally. Reads are paginated (`PaginatedResponse<DeltaAuction>`), price is route-based.
 
-The first four families have four files each: `build*`, `sign*`, `post*`, `preSign*`. High-level orchestrators (`constructSubmitDeltaOrder`, `constructSubmitExternalDeltaOrder`, `constructSubmitTWAPDeltaOrder`) in `index.ts` wrap build→sign→post. Productive orders surface only through the read paths (`getDeltaOrders*` / `getDeltaOrderById*` / `DeltaAuctionUnion`).
+### Order families
+
+All built via `POST /delta/v2/orders/build` with an `orderType` field:
+
+| Family | `orderType` / `onChainOrderType` | Build params | Build fn |
+|--------|-------------------|-----------|----------|
+| Standard | `'Order'` | `BuildDeltaOrderParams` | `buildDeltaOrder` |
+| External | `'ExternalOrder'` | `BuildExternalDeltaOrderParams` (adds `handler`, `data`) | `buildExternalDeltaOrder` |
+| TWAP Sell | `'TWAPOrder'` | `BuildTWAPSellDeltaOrderParams` | `buildTWAPDeltaOrder` |
+| TWAP Buy | `'TWAPBuyOrder'` | `BuildTWAPBuyDeltaOrderParams` | `buildTWAPDeltaOrder` |
+| Productive | `'ProductiveOrder'` | _read-only_ — no SDK builder (server-produced) | — |
+
+`'FillableOrder'` is also a key in `OnChainOrderMap`/`OnChainOrderType`, mapping to the same `DeltaAuctionOrder` shape as `'Order'`. It is not a separate buildable family — it's the `onChainOrderType` the server reports when a Standard order is `partiallyFillable`. Only surfaces (read-only) on the way back through the read paths.
+
+Submit orchestrators (`constructSubmitDeltaOrder`, `constructSubmitExternalDeltaOrder`, `constructSubmitTWAPDeltaOrder`) in `index.ts` wrap build→sign→post. Productive orders surface only through the read paths (`getDeltaOrders*` / `getDeltaOrderById*`).
 
 ### Key Files
 
-| File | Constructor | Purpose | Generic? | Pattern |
-|------|-------------|---------|----------|---------|
-| `index.ts` | `constructSubmitDeltaOrder`, `constructAllDeltaOrdersHandlers` | Composite: orchestrates all modules, defines `DeltaOrderHandlers<T>` | `submitDelta`: No, `allHandlers`: `<T>` | Composite |
-| `buildDeltaOrder.ts` | `constructBuildDeltaOrder` | Build `SignableDeltaOrderData` from params (fetches contract + partner fee, then local computation) | No | API fetch + local |
-| `signDeltaOrder.ts` | `constructSignDeltaOrder` | EIP-712 sign order via `signTypedDataCall` → returns signature `string` | No (`any`) | `signTypedDataCall` |
-| `postDeltaOrder.ts` | `constructPostDeltaOrder` | POST signed order to API → `DeltaOrderApiResponse` | No | `fetcher` POST |
-| `getDeltaPrice.ts` | `constructGetDeltaPrice` | Fetch quote/price from API. Overloaded: returns `DeltaPrice` (same-chain) or `BridgePrice` (cross-chain when `destChainId` present) | No | `fetcher` GET |
-| `getDeltaOrders.ts` | `constructGetDeltaOrders` | Query orders from API: `getDeltaOrderById`, `getDeltaOrderByHash`, `getDeltaOrders` (list), `getRequiredBalanceForDeltaLimitOrders` | No | `fetcher` GET |
-| `getDeltaContract.ts` | `constructGetDeltaContract` | Resolve ParaswapDelta contract address from contracts endpoint | No | `fetcher` GET |
-| `approveForDelta.ts` | `constructApproveTokenForDelta` | ERC-20 `approve` with ParaswapDelta as spender (delegates to `approveTokenMethodFactory`) | `<T>` | `transactCall` |
-| `preSignDeltaOrder.ts` | `constructPreSignDeltaOrder` | On-chain `setPreSignature` + order hashing helpers (`hashDeltaOrderTypedData`, `hashDeltaOrder`, `preSignDeltaOrder`) | `<T>` | `transactCall` |
-| `cancelDeltaOrder.ts` | `constructCancelDeltaOrder` | API cancel: `signCancelLimitDeltaOrderRequest` → `postCancelLimitDeltaOrderRequest` → `cancelLimitDeltaOrders` (orchestrator) | No (`any`) | `signTypedDataCall` + `fetcher` POST |
-| `deltaTokenModule.ts` | `constructDeltaTokenModule` | On-chain `cancelAndWithdrawDeltaOrder`, `withdrawDeltaNative`, `depositNativeAndPreSign`, `depositNativeAndPreSignDeltaOrder` | `<T>` | `transactCall` |
-| `getPartnerFee.ts` | `constructGetPartnerFee` | Fetch partner fee info (internally cached per partner in a `Map`) | No | `fetcher` GET |
-| `getBridgeInfo.ts` | `constructGetBridgeInfo` | `getBridgeInfo` (supported routes) + `getBridgeProtocols` | No | `fetcher` GET |
-| `isTokenSupportedInDelta.ts` | `constructIsTokenSupportedInDelta` | Check if a token is supported → `boolean` | No | `fetcher` GET |
-| `constants.ts` | — | `DEFAULT_BRIDGE` constant (all-zero values for same-chain orders) | — | — |
+| File | Constructor | Purpose | Generic? |
+|------|-------------|---------|----------|
+| `index.ts` | `constructAllDeltaOrdersHandlers`, `constructSubmit{Delta,External,TWAP}Order`, `constructSignDeltaOrder` | Composite: orchestrates all modules, defines `DeltaOrderHandlers<T>`, hosts the single `signDeltaOrder` (signs any `BuiltDeltaOrder`), re-exports every leaf module | `allHandlers`: `<T>` |
+| `buildDeltaOrder.ts` | `constructBuildDeltaOrder` | POST `/v2/orders/build` → `BuiltDeltaOrder` | No |
+| `buildExternalDeltaOrder.ts` | `constructBuildExternalDeltaOrder` | Same, `orderType: 'ExternalOrder'` | No |
+| `buildTWAPDeltaOrder.ts` | `constructBuildTWAPDeltaOrder` | Same, `orderType: 'TWAPOrder'` / `'TWAPBuyOrder'` | No |
+| `postDeltaOrder.ts` / `postExternalDeltaOrder.ts` / `postTWAPDeltaOrder.ts` | `constructPost*DeltaOrder` | POST `/v2/orders` → `DeltaAuction` | No |
+| `getDeltaPrice.ts` | `constructGetDeltaPrice` | GET `/delta/v2/prices` → `DeltaPrice` (route-based: `route` + `alternatives`; cross-chain handled in-route via `destChainId`) | No |
+| `getDeltaOrders.ts` | `constructGetDeltaOrders` | `getDeltaOrders` (paginated list), `getDeltaOrderById`, `getDeltaOrderByHash`, `getRequiredBalanceForDeltaOrders`. Reads return `DeltaAuction`. | No |
+| `cancelDeltaOrder.ts` | `constructCancelDeltaOrder` | `signCancelDeltaOrderRequest` → `postCancelDeltaOrderRequest` → `cancelDeltaOrders` (orchestrator). POST `/v2/orders/cancel`. | No (`any`) |
+| `getBridgeRoutes.ts` | `constructGetBridgeRoutes` | `getBridgeRoutes` (flat `BridgeRoute[]`) + `getBridgeProtocols` | No |
+| `isTokenSupportedInDelta.ts` | `constructIsTokenSupportedInDelta` | GET `/v2/prices/is-token-supported` → `boolean` | No |
+| `getAgentsList.ts` | `constructGetAgentsList` | GET `/v2/agents/list/:chainId` → `string[]` | No |
+| `getDeltaContract.ts` | `constructGetDeltaContract` | Resolve ParaswapDelta contract address | No |
+| `getPartnerFee.ts` | `constructGetPartnerFee` | Fetch partner fee info (cached per partner in a `Map`) | No |
+| `approveForDelta.ts` | `constructApproveTokenForDelta` | ERC-20 `approve` with ParaswapDelta as spender | `<T>` |
+| `preSignDeltaOrder.ts` / `preSignExternalDeltaOrder.ts` / `preSignTWAPDeltaOrder.ts` | `constructPreSign*DeltaOrder` | On-chain `setPreSignature` + order hashing helpers (`produceDeltaOrderHash`, etc.) | `<T>` |
+| `deltaTokenModule.ts` | `constructDeltaTokenModule` | On-chain `cancelAndWithdrawDeltaOrder`, `withdrawDeltaNative`, `depositNativeAndPreSign`, `depositNativeAndPreSignDeltaOrder` | `<T>` |
+
+The on-chain modules (`preSign*`, `deltaTokenModule`, `approveForDelta`) and the local EIP-712 hashing helpers (`helpers/build*OrderData`, `helpers/misc`) are retained from the original delta module — they back the on-chain flows (pre-signing, native deposit, cancel-and-withdraw) that complement server-side building.
+
+### Types
+
+- **`src/methods/delta/types.ts`** (v2 surface) — `BuiltDeltaOrder`, `DeltaPrice` (+ `DeltaRoute` / `DeltaRouteStep` / `DeltaRouteBridge` / `DeltaRouteBridgeContractParams`, `DeltaPriceToken`, `DeltaTokenAmount`, `BridgeTag`, `BridgeRoute`), `DeltaAuction<T>` (the envelope returned by **every** read/post — `status: DeltaOrderStatus`, `input`/`output: DeltaTokenSide`, flat `transactions: DeltaTransaction`, explicit `side`; generic over `onChainOrderType`, narrowing `order` to `OnChainOrderMap[T]`), `DeltaOrderStatus`, `DeltaTokenSide`, `DeltaTransaction`.
+- **`src/methods/delta/helpers/types.ts`** (shared on-chain order structs) — `DeltaAuctionOrder`, `ExternalDeltaOrder`, `TWAPDeltaOrder`, `TWAPBuyDeltaOrder`, `ProductiveDeltaOrder`, `Bridge`, `OnChainOrderMap` (Standard/Fillable/External/TWAP Sell/TWAP Buy/Productive), `OnChainOrderType`, `TWAPOnChainOrderType`, `DeltaOrderUnion`, `DeltaOrderType` (`'MARKET' | 'LIMIT'`), `DeltaAmounts*`, `UnifiedDeltaOrderData`, `OrderKind` / `SwapSideToOrderKind`.
+- `PaginatedResponse<T>` lives in `src/types.ts`.
 
 ### Delta Helpers (`src/methods/delta/helpers/`)
-- `types.ts` — `DeltaAuctionOrder`, `ExternalDeltaOrder`, `ProductiveDeltaOrder`, `TWAPDeltaOrder`, `TWAPBuyDeltaOrder`, `Bridge`, `DeltaAuction<T>`, `OnChainOrderMap` (Standard/External/TWAP Sell/TWAP Buy/Productive families, plus the `FillableOrder` variant of Standard), `DeltaAuctionStatus`, `BridgeMetadata`, `BridgeStatus`, `OnChainOrderType`, `DeltaOrderType` (`'MARKET' | 'LIMIT'`, shared by v1 & v2), `DeltaAuctionUnion` (= `DeltaAuctionDelta | DeltaAuctionFillable | DeltaAuctionExternal | DeltaAuctionTWAP | DeltaAuctionTWAPBuy | DeltaAuctionProductive`)
-- `buildDeltaOrderData.ts` — `buildDeltaSignableOrderData`, `produceDeltaOrderTypedData`, `SignableDeltaOrderData`, `BuildDeltaOrderDataInput`, `DELTA_DEFAULT_EXPIRY`
-- `buildCancelDeltaOrderData.ts` — `buildCancelDeltaOrderSignableData`, `SignableCancelDeltaOrderData`, `CancelDeltaOrderData`
-- `buildTWAPOrderData.ts` — `buildTWAPSignableOrderData`, `SignableTWAPOrderData`, `BuildTWAPOrderDataInput`
-- `buildExternalOrderData.ts` — `buildExternalSignableOrderData`, `SignableExternalOrderData`
-- `misc.ts` — `sanitizeDeltaOrderData` (strips extra fields before signing/hashing), `applySlippage`, `resolvePartnerFee`
-- `orders.ts` — `OrderHelpers` namespace with `.checks` (type guards: `isDeltaOrder`, `isTWAPOrder`, `isExternalOrder`, `isOrderCrosschain`, `isExecutedAuction`, etc.) and `.getters` (`getUnifiedDeltaOrderData`, `getAuctionAmounts`, `getTwapAuctionAmounts`, `getFilledPercent`, etc.)
-- `abi.ts` — shared ABI fragments
+- `types.ts` — shared order-struct types (above).
+- `buildDeltaOrderData.ts` / `buildExternalOrderData.ts` / `buildTWAPOrderData.ts` — local EIP-712 typed-data builders + `produceDeltaOrderTypedData`, `SignableDeltaOrderData` / `SignableExternalOrderData` / `SignableTWAPOrderData`, `DELTA_DEFAULT_EXPIRY` (consumed by `preSign*` / `deltaTokenModule`).
+- `buildCancelDeltaOrderData.ts` — `SignableCancelDeltaOrderData`, `CancelDeltaOrderData`.
+- `misc.ts` — `sanitizeDeltaOrderData` (strips extra fields before signing/hashing), `applySlippage`, `resolvePartnerFee`, `producePartnerAndFee`.
+- `orders.ts` — single `OrderHelpers` object `{ checks, getters }` (no v1/v2 split):
+  - `checks`: order-struct guards (`isDeltaOrder`, `isExternalOrder`, `isTWAPOrder` / `isTWAPSellOrder` / `isTWAPBuyOrder`, `isProductiveOrder`, `isOrderCrosschain`); auction discriminants (`isDeltaAuction`, `isExternalAuction`, `isTWAPAuction` / `isTWAPSellAuction` / `isTWAPBuyAuction`, `isProductiveAuction`, `isFillableAuction`); status guards over the v2 envelope (`isCompletedAuction`, `isFailedAuction`, `isCanceledAuction`, `isExpiredAuction`, `isPendingAuction`, `isPartiallyExecutedAuction`).
+  - `getters`: `getUnifiedDeltaOrderData`, `getAuctionAmounts` (`{ expected, executed }`), `getAuctionTokenAddresses`, `getAuctionSrcChainId` / `getAuctionDestChainId`, `getAuctionSwapSide` (reads `auction.side`), `getTransactionAmounts`, `getFilledPercent`; plus order-level `getOrderTokenAddresses`, `getSwapSideFromDeltaOrder`, `getSwapSideFromTwapOrderType`, `getExpectedTwapSrcAmount` / `getExpectedTwapDestAmount` / `getExpectedTwapOrderAmounts`.
+- `abi.ts` — shared ABI fragments.
 
 ### Core Types (`src/`)
 - `types.ts` — `ConstructProviderFetchInput`, `ContractCallerFunctions`, `TxSendOverrides`, `PaginatedResponse<T>`
 - `helpers/misc.ts` — `ExtractAbiMethodNames<T>`
 - `sdk/partial.ts` — `constructPartialSDK`, `InferWithTxResponse` type tuple
 
-## Delta V2 Module (`src/methods/deltaV2/`)
-
-Exposed as `sdk.deltaV2.*` on the full/simple SDK, and as the **`DeltaV2` namespace** at the top of the package. Ships alongside v1 (non-breaking). All URLs use the `/delta/v2/...` prefix.
-
-### Public access pattern — the `DeltaV2` namespace
-
-`src/index.ts` re-exports the v2 surface as `export * as DeltaV2 from './methods/deltaV2'`. Inside the v2 folder, symbols use unsuffixed names (`constructBuildDeltaOrder`, `BuiltDeltaOrder`, `DeltaPrice`, …); consumers reach them as `DeltaV2.X`. This avoids top-level collisions with v1 (which also exports `DeltaPrice`, `constructBuildDeltaOrder`, etc.) while letting the v2 source live under the canonical names it will eventually inherit.
-
-```ts
-import { DeltaV2 } from '@velora-dex/sdk';
-
-// runtime: DeltaV2.constructBuildDeltaOrder, DeltaV2.constructAllDeltaOrdersHandlers, ...
-// types:   DeltaV2.DeltaPrice, DeltaV2.BuiltDeltaOrder, DeltaV2.DeltaRoute, ...
-```
-
-`import type { DeltaV2 } from '@velora-dex/sdk'` works the same way for type-only consumers (no runtime cost). Types live *inside* the namespace — destructuring at the import site (`const { DeltaPrice } = DeltaV2`) does not bring the type; alias via `type DeltaPrice = DeltaV2.DeltaPrice;` instead.
-
-The migration story (1) v1 bare + DeltaV2 namespace, (2) flip to v2 bare + DeltaV1 backcompat, (3) drop v1 — is documented inline in [src/index.ts](src/index.ts) above the `export * as DeltaV2` line.
-
-### Key differences from v1
-
-| Concern | v1 | v2 |
-|---------|----|----|
-| Order building | Local EIP-712 computation | `POST /delta/v2/orders/build` → returns `DeltaV2.BuiltDeltaOrder { toSign, orderHash }` |
-| Signing | Family-specific sign functions | Single `signDeltaOrder(builtOrder)` for all order types |
-| Price response | `DeltaPrice` / `BridgePrice` overload | `DeltaV2.DeltaPrice` with `route: DeltaRoute` and `alternatives: DeltaRoute[]` |
-| Order list | Flat array | `PaginatedResponse<DeltaV2.DeltaAuction>` envelope |
-| Partner fee | Resolved locally via `getPartnerFee` | Passed as raw params to server (`partner`, `partnerAddress`, `partnerFeeBps`) |
-
-### Order families
-
-Same three families as v1, all built via `POST /delta/v2/orders/build` with an `orderType` field:
-
-| Family | `orderType` | Build params type (under `DeltaV2.*`) |
-|--------|-------------|-------------------|
-| Standard | `'Order'` | `BuildDeltaOrderParams` |
-| External | `'ExternalOrder'` | `BuildExternalDeltaOrderParams` (adds `handler`, `data`) |
-| TWAP Sell | `'TWAPOrder'` | `BuildTWAPSellDeltaOrderParams` |
-| TWAP Buy | `'TWAPBuyOrder'` | `BuildTWAPBuyDeltaOrderParams` |
-
-### Key files
-
-Symbol names below are as they appear **inside** the v2 folder (no V2 suffix). Through the namespace they are `DeltaV2.constructBuildDeltaOrder`, etc.
-
-| File | Constructor | Purpose |
-|------|-------------|---------|
-| `index.ts` | `constructAllDeltaOrdersHandlers`, `constructSubmitDeltaOrder` etc. | Composite: orchestrates all v2 modules, defines `DeltaOrderHandlers<T>`. Submit orchestrators wrap build→sign→post. Re-exports every leaf module so `import * as DeltaV2` carries the full surface. |
-| `buildDeltaOrder.ts` | `constructBuildDeltaOrder` | POST to `/v2/orders/build` → `BuiltDeltaOrder` |
-| `buildExternalDeltaOrder.ts` | `constructBuildExternalDeltaOrder` | Same, `orderType: 'ExternalOrder'` |
-| `buildTWAPDeltaOrder.ts` | `constructBuildTWAPDeltaOrder` | Same, `orderType: 'TWAPOrder'` or `'TWAPBuyOrder'` |
-| `getDeltaPrice.ts` | `constructGetDeltaPrice` | GET `/v2/prices` → `DeltaPrice` |
-| `getDeltaOrders.ts` | `constructGetDeltaOrders` | `getDeltaOrders` (paginated list), `getDeltaOrderById`, `getDeltaOrderByHash`, `getRequiredBalanceForDeltaOrders` (mirrors v1's `getRequiredBalanceForDeltaLimitOrders` under `/delta/v2/orders/fillablebalance/...`). Read endpoints return the v2 `DeltaAuction` (= `DeltaV2.DeltaAuction`). |
-| `postDeltaOrder.ts` | `constructPostDeltaOrder` | POST `/v2/orders` → `DeltaAuction<'Order'>` (the v2 `DeltaV2.DeltaAuction`) |
-| `cancelDeltaOrder.ts` | `constructCancelDeltaOrder` | `signCancelDeltaOrderRequest` → `postCancelDeltaOrderRequest` → `cancelDeltaOrders` (orchestrator). POSTs to `/v2/orders/cancel`. |
-| `getBridgeRoutes.ts` | `constructGetBridgeRoutes` | `getBridgeRoutes` (flat `BridgeRoute[]`) + `getBridgeProtocols` |
-| `isTokenSupportedInDelta.ts` | `constructIsTokenSupportedInDelta` | GET `/v2/prices/is-token-supported` → `boolean` |
-| `getAgentsList.ts` | `constructGetAgentsList` | GET `/v2/agents/list/:chainId` → `string[]` |
-| `helpers/orders.ts` | — (exports `OrderHelpers`) | v2 order/auction guards + getters. Reached as `DeltaV2.OrderHelpers`. See "V2 Helpers" below. |
-
-On-chain methods (preSign, approve, deltaTokenModule) and `getPartnerFee`/`getDeltaContract` are **reused from v1** — no duplication. Inside the v2 folder they're imported from `../delta/*`.
-
-### SDK wiring (`sdk/full.ts`, `sdk/simple.ts`)
-
-Because v1 and v2 share unsuffixed names, the SDK assembly files import v2 either as a namespace (`import * as DeltaV2 from '../methods/deltaV2'`, used in `simple.ts`) or with local aliases that re-add the `V2` suffix (e.g., `constructAllDeltaOrdersHandlers as constructAllDeltaV2OrdersHandlers`, used in `full.ts`). Either form keeps the v1/v2 distinction visible in the wiring code. The pre-bound bag on `sdk.deltaV2.*` exposes methods under their unsuffixed names — `sdk.deltaV2.buildDeltaOrder()`, `sdk.deltaV2.postDeltaOrder()`, etc.
-
-### V2 Types (`src/methods/deltaV2/types.ts`)
-
-(Access via `DeltaV2.X` at the package boundary.)
-
-- `BuiltDeltaOrder` — server build response: `{ toSign: { domain, types, value }, orderHash }`
-- `DeltaPrice` — v2 price response with `route: DeltaRoute` and `alternatives: DeltaRoute[]`
-- `DeltaRoute` / `DeltaRouteStep` / `DeltaRouteBridge` / `DeltaRouteBridgeContractParams` — route shape
-- `DeltaPriceToken` / `DeltaTokenAmount` — token identity and amount with USD value
-- `BridgeTag` — `'recommended' | 'fastest' | 'best-return'`
-- `BridgeRoute` — flat bridge route entry `{ srcChainId, destChainId, tokens }`
-- `DeltaAuction<T>` — the order shape returned by **every** v2 order method, both reads (`getDeltaOrders*` / `getDeltaOrderById*`) and posts (`postDeltaOrder` / `postExternalDeltaOrder` / `postTWAPDeltaOrder`). Generic over `onChainOrderType` exactly like v1's `DeltaAuction<T>` (distributes over `OnChainOrderType`, narrowing `order` to `OnChainOrderMap[T]`), but with the v2 base fields (`status: DeltaOrderStatus`, `input`/`output: DeltaTokenSide`, flat `transactions`, etc.) instead of v1's. Reached as `DeltaV2.DeltaAuction` — a distinct type from the top-level v1 `DeltaAuction`; v2 method files import it from `./types`, never from `../delta`.
-- `DeltaOrderStatus` — integrator-facing status enum values
-- `DeltaTokenSide` / `DeltaTransaction` — order input/output and transaction entry types
-
-`PaginatedResponse<T>` lives in `src/types.ts` (shared, still exported bare from the top of the package).
-
-### V2 Helpers (`src/methods/deltaV2/helpers/orders.ts`)
-
-Exposed as `DeltaV2.OrderHelpers` — the v2 counterpart of v1's top-level `OrderHelpers`, with the same `{ checks, getters }` shape. Two distinct objects: top-level `OrderHelpers` (v1) and `DeltaV2.OrderHelpers` (v2).
-
-Because the on-chain order structs (`auction.order`) and the `onChainOrderType` union are **shared** between v1 and v2, the v2 file reuses v1's implementations directly for:
-- **order-struct guards** — `isTWAPOrder`, `isTWAPSellOrder`, `isTWAPBuyOrder`, `isExternalOrder`, `isDeltaOrder`, `isProductiveOrder`, `isOrderCrosschain`
-- **auction discriminant guards** — `isTWAPAuction`, `isTWAPSellAuction`, `isTWAPBuyAuction`, `isDeltaAuction`, `isExternalAuction`, `isProductiveAuction`
-- **order-level getters** — `getOrderTokenAddresses`, `getSwapSideFromDeltaOrder`, `getSwapSideFromTwapOrderType`, `getExpectedTwapSrcAmount`, `getExpectedTwapDestAmount`, `getExpectedTwapOrderAmounts`
-
-What's **reimplemented for the v2 auction envelope** (v2's `status: DeltaOrderStatus`, `input`/`output: DeltaTokenSide`, flat `transactions: DeltaTransaction`, explicit `side`):
-- **status / execution guards** — `isCompletedAuction` (v2's `COMPLETED`, replaces v1's `isExecutedAuction`/`EXECUTED`), `isFailedAuction` (`FAILED`/`EXPIRED`/`CANCELLED`/`REFUNDED`), `isCanceledAuction`, `isExpiredAuction`, `isPendingAuction` (`PENDING`/`AWAITING_SIGNATURE`/`ACTIVE`/`BRIDGING`), `isPartiallyExecutedAuction`
-- **`isFillableAuction`** — new guard for `onChainOrderType === 'FillableOrder'` (treat alongside `isDeltaAuction`)
-- **auction-level getters** — `getAuctionSwapSide` (just `auction.side`), `getAuctionSrcChainId`/`getAuctionDestChainId` (from `input`/`output.chainId`), `getAuctionTokenAddresses`, `getTransactionAmounts`, `getFilledPercent`, `getAuctionAmounts` (returns `{ expected, executed }` — note `executed`, matching the API, vs v1's `final`), and `getUnifiedDeltaOrderData` (returns the shared `UnifiedDeltaOrderData` shape).
-
 ### `OnChainOrderType` note
 
-`'ProductiveOrder'` is part of `OnChainOrderType` and `OnChainOrderMap` — `DeltaAuction<'ProductiveOrder'>` (also exported as `DeltaAuctionProductive`) resolves to `ProductiveDeltaOrder`. The type is wired through the public surface, but **no build/sign/post helpers** exist for productive orders yet (`constructSubmit*` / `construct(Build|Sign|Post)*` cover only `Order`, `ExternalOrder`, `TWAPOrder`, `TWAPBuyOrder`). Productive orders are read-only from the SDK's perspective — produced and managed by the server. Sides are inferred as `SELL` (productive orders carry no `OrderKind`).
+`'ProductiveOrder'` is part of `OnChainOrderType` and `OnChainOrderMap` — `DeltaAuction<'ProductiveOrder'>` resolves to `ProductiveDeltaOrder`. The type is wired through the public surface, but **no build/sign/post helpers** exist for productive orders (`constructSubmit*` / `construct(Build|Post)*` cover only `Order`, `ExternalOrder`, `TWAPOrder`, `TWAPBuyOrder`). Productive orders are read-only from the SDK's perspective. Sides are inferred as `SELL` (productive orders carry no `OrderKind`).
 
-`'FillableOrder'` is likewise a member of `OnChainOrderType`/`OnChainOrderMap`, resolving (via `DeltaAuction<'FillableOrder'>`, also exported as `DeltaAuctionFillable` and included in `DeltaAuctionUnion`) to the same `DeltaAuctionOrder` shape as `'Order'`. It's the `onChainOrderType` the server reports for a `partiallyFillable` Standard order — there is no separate builder. Consumers narrowing a `DeltaAuction` (v1 or v2) should treat `onChainOrderType === 'FillableOrder'` the same as `'Order'`.
+`'FillableOrder'` is likewise a member of `OnChainOrderType`/`OnChainOrderMap`, resolving (via `DeltaAuction<'FillableOrder'>`) to the same `DeltaAuctionOrder` shape as `'Order'`. It's the `onChainOrderType` the server reports for a `partiallyFillable` Standard order — there is no separate builder. Consumers narrowing a `DeltaAuction` should treat `onChainOrderType === 'FillableOrder'` the same as `'Order'` (`isDeltaAuction(a) || isFillableAuction(a)`).
+
+## Quote Module (`src/methods/quote/`)
+
+`constructGetQuote` → `getQuote` hits **`GET /v2/quote`**. Same overloaded, `mode`-based shape as before (`mode: 'delta' | 'market' | 'all'`, with `'all'` returning Delta pricing or a market `fallbackReason`) — the only v2 change is that the delta side is the v2 `DeltaPrice` (route-based) from `methods/delta/types`, not the old v1 `DeltaPrice`/`BridgePrice`. Return types (`QuoteWithDeltaPrice`, `QuoteWithBridgePrice`, `QuoteWithDeltaPriceAndBridgePrice`, `QuoteWithMarketPrice`, `QuoteWithMarketPriceAsFallback`) and all function overloads are preserved. Exposed as `sdk.quote.getQuote`.
 
 ## Checklist: Adding a New On-Chain Method
 
@@ -275,4 +200,5 @@ OrderWithSig tuple:
 - EIP-712 domain: `{ name: 'Portikus', version: '2.0.0', chainId, verifyingContract }`
 - Order hash: computed via viem's `hashTypedData` in `produceDeltaOrderHash()`
 - ABI style: always inline `const ... as const`, never imported from external ABI files
-- Cross-chain detection: `isOrderCrosschain(order)` checks `bridge.destinationChainId !== 0`; `DEFAULT_BRIDGE` has all-zero values for same-chain orders
+- Cross-chain detection: `isOrderCrosschain(order)` checks `bridge.destinationChainId !== 0`
+- **Commit messages**: `prefix/what was done` — `prefix` is the file, function, or component that was changed. Examples: `OrderDetails/added button`, `useDeltaPrice/migrate to v2 route fields`. Do NOT add a `Co-Authored-By: Claude` trailer.

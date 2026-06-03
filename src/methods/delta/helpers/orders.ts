@@ -1,13 +1,7 @@
 import type { NonEmptyArray, Prettify } from 'ts-essentials';
 import {
   Bridge,
-  DeltaAuction,
   DeltaAuctionOrder,
-  DeltaAuctionStatus,
-  DeltaAuctionTransaction,
-  DeltaAuctionTWAP,
-  DeltaAuctionTWAPBuy,
-  DeltaOrderUnion,
   ExternalDeltaOrder,
   OnChainOrderType,
   OrderKind,
@@ -15,10 +9,32 @@ import {
   SwapSideUnion,
   TWAPBuyDeltaOrder,
   TWAPDeltaOrder,
+  DeltaOrderUnion,
   UnifiedDeltaOrderData,
 } from './types';
+import type {
+  DeltaAuction,
+  DeltaOrderStatus,
+  DeltaTokenSide,
+  DeltaTransaction,
+} from '../types';
 
-///// CHECKS //////
+/**
+ * Delta order helpers.
+ *
+ * The on-chain order structs (`auction.order`) and the `onChainOrderType` union
+ * are shared across all order families, so the order-struct guards, auction
+ * discriminant guards, and order-level getters operate purely on those shapes.
+ *
+ * The *auction* envelope is the integrator-facing v2 shape:
+ *  - `status` is the integrator-facing `DeltaOrderStatus`
+ *    (PENDING/ACTIVE/COMPLETED/…),
+ *  - amounts live on `input`/`output` (`DeltaTokenSide`) and `transactions`
+ *    (`DeltaTransaction`),
+ *  - `side` is carried explicitly on the auction.
+ */
+
+///// CHECKS — order structs //////
 
 /**
  * @description Checks whether an order is a TWAP Sell or TWAP Buy order.
@@ -39,6 +55,7 @@ function isTWAPSellOrder(order: DeltaOrderUnion): order is TWAPDeltaOrder {
     typeof order.totalSrcAmount === 'string'
   );
 }
+
 /**
  * @description Checks whether an order is a TWAP Buy order.
  */
@@ -75,6 +92,8 @@ function isProductiveOrder(
 ): order is ProductiveDeltaOrder {
   return 'strategy' in order && typeof order.strategy === 'string';
 }
+
+///// CHECKS — auction discriminants //////
 
 /**
  * @description Checks whether an auction is a TWAP auction.
@@ -130,29 +149,189 @@ function isProductiveAuction<T extends OnChainOrderType>(auction: {
   return auction.onChainOrderType === 'ProductiveOrder';
 }
 
+/**
+ * @description Checks whether an auction is a Fillable auction.
+ * `FillableOrder` is the `onChainOrderType` the server reports for a
+ * `partiallyFillable` Standard order; it carries the same order struct as
+ * `Order`. Consumers that don't distinguish the two should treat
+ * `isDeltaAuction(a) || isFillableAuction(a)` as "is a standard order".
+ */
+function isFillableAuction<T extends Pick<DeltaAuction, 'onChainOrderType'>>(
+  auction: T
+): auction is T & { onChainOrderType: 'FillableOrder' } {
+  return auction.onChainOrderType === 'FillableOrder';
+}
+
+///// CHECKS — status / execution (v2 envelope) //////
+
+/**
+ * @description Checks whether an auction is fully executed (settled on every chain).
+ */
+function isCompletedAuction<T extends Pick<DeltaAuction, 'status'>>(
+  auction: T
+): auction is T & { status: 'COMPLETED' } {
+  return auction.status === 'COMPLETED';
+}
+
+const failedAuctionStatuses = [
+  'FAILED',
+  'EXPIRED',
+  'CANCELLED',
+  'REFUNDED',
+] as const;
+
+const failedAuctionStatusesSet = new Set<DeltaOrderStatus>(
+  failedAuctionStatuses
+);
+
+/**
+ * @description Checks whether an auction is in a terminal failure state
+ * (failed, expired, cancelled, or refunded).
+ */
+function isFailedAuction<T extends Pick<DeltaAuction, 'status'>>(
+  auction: T
+): auction is T & { status: (typeof failedAuctionStatuses)[number] } {
+  return failedAuctionStatusesSet.has(auction.status);
+}
+
+/**
+ * @description Checks whether an auction status is cancelled.
+ */
+function isCanceledAuction<T extends Pick<DeltaAuction, 'status'>>(
+  auction: T
+): auction is T & { status: 'CANCELLED' } {
+  return auction.status === 'CANCELLED';
+}
+
+/**
+ * @description Checks whether an auction status is expired.
+ */
+function isExpiredAuction<T extends Pick<DeltaAuction, 'status'>>(
+  auction: T
+): auction is T & { status: 'EXPIRED' } {
+  return auction.status === 'EXPIRED';
+}
+
+const pendingAuctionStatuses = [
+  'PENDING',
+  'AWAITING_SIGNATURE',
+  'ACTIVE',
+  'BRIDGING',
+] as const;
+
+const pendingAuctionStatusesSet = new Set<DeltaOrderStatus>(
+  pendingAuctionStatuses
+);
+
+/**
+ * @description Checks whether an auction is still in flight (not yet settled
+ * and not failed): awaiting signature, pending, actively executing, or bridging.
+ */
+function isPendingAuction<T extends Pick<DeltaAuction, 'status'>>(
+  auction: T
+): auction is T & { status: (typeof pendingAuctionStatuses)[number] } {
+  return pendingAuctionStatusesSet.has(auction.status);
+}
+
+/**
+ * @description Checks whether an auction has been partially executed:
+ * it has at least one transaction and an overall filled percent strictly
+ * between 0 and 100.
+ */
+function isPartiallyExecutedAuction<
+  T extends Pick<DeltaAuction, 'order' | 'transactions'>
+>(
+  auction: T
+): auction is T & { transactions: NonEmptyArray<DeltaTransaction> } {
+  if (auction.transactions.length === 0) return false;
+
+  const filledPercent = getFilledPercent(auction);
+
+  return filledPercent > 0 && filledPercent < 100;
+}
+
+/**
+ * @description Checks whether an order includes valid cross-chain bridge details.
+ */
+function isOrderCrosschain<T extends { bridge?: Bridge } | object>(
+  order: T
+): order is Prettify<Extract<T, { bridge?: Bridge }> & { bridge: Bridge }> {
+  return (
+    'bridge' in order && !!order.bridge && order.bridge.destinationChainId !== 0
+  );
+}
+
 const checks = {
+  // order-struct guards
   isTWAPOrder,
   isTWAPSellOrder,
   isTWAPBuyOrder,
   isExternalOrder,
   isDeltaOrder,
   isProductiveOrder,
+  isOrderCrosschain,
+
+  // auction discriminant guards
   isTWAPAuction,
   isTWAPSellAuction,
   isTWAPBuyAuction,
   isDeltaAuction,
   isExternalAuction,
   isProductiveAuction,
-  isOrderCrosschain,
-  isExecutedAuction,
-  isPartiallyExecutedAuction,
+  isFillableAuction,
+
+  // status / execution guards (v2 envelope)
+  isCompletedAuction,
   isFailedAuction,
   isCanceledAuction,
   isExpiredAuction,
   isPendingAuction,
+  isPartiallyExecutedAuction,
 };
 
-///// GETTERS //////
+///// GETTERS — order structs //////
+
+const OrderKindToSwapSide = {
+  [OrderKind.Sell]: 'SELL',
+  [OrderKind.Buy]: 'BUY',
+} as const;
+
+/**
+ * @description Returns swap side from a Delta or External order kind.
+ */
+function getSwapSideFromDeltaOrder(
+  order: DeltaAuctionOrder | ExternalDeltaOrder
+): SwapSideUnion {
+  return OrderKindToSwapSide[order.kind];
+}
+
+const TwapTypeToSwapSide = {
+  TWAPOrder: 'SELL',
+  TWAPBuyOrder: 'BUY',
+} as const;
+
+/**
+ * @description Returns swap side from TWAP on-chain order type.
+ */
+function getSwapSideFromTwapOrderType(
+  onChainOrderType: 'TWAPOrder' | 'TWAPBuyOrder'
+): SwapSideUnion {
+  return TwapTypeToSwapSide[onChainOrderType];
+}
+
+/**
+ * @description Returns source and destination token addresses for an order.
+ */
+function getOrderTokenAddresses(order: DeltaAuction['order']) {
+  const srcToken = order.srcToken;
+  const destToken = isOrderCrosschain(order)
+    ? order.bridge.outputToken
+    : order.destToken;
+  return {
+    srcToken,
+    destToken,
+  };
+}
 
 /**
  * @description Returns the expected source amount for a TWAP order.
@@ -201,252 +380,6 @@ function getExpectedTwapOrderAmounts(
   return { srcAmount, destAmount };
 }
 
-/**
- * @description Returns expected and, when available, final amounts for a TWAP auction.
- */
-function getTwapAuctionAmounts(
-  twapAuction:
-    | Pick<DeltaAuctionTWAP, 'status' | 'transactions' | 'order'>
-    | Pick<DeltaAuctionTWAPBuy, 'status' | 'transactions' | 'order'>
-) {
-  const isExecuted = isExecutedAuction(twapAuction);
-
-  const expected = getExpectedTwapOrderAmounts(twapAuction.order);
-  if (isExecuted) {
-    const final = getTransactionAmounts(twapAuction.transactions);
-    return {
-      final,
-      expected,
-      minimal: expected, // TWAP orders don't have more detailed amounts
-    };
-  }
-  return {
-    expected,
-    minimal: expected, // TWAP orders don't have more detailed amounts
-  };
-}
-
-const getters = {
-  getUnifiedDeltaOrderData,
-  getExpectedTwapSrcAmount,
-  getExpectedTwapDestAmount,
-  getExpectedTwapOrderAmounts,
-  getTwapAuctionAmounts,
-  getAuctionDestChainId,
-  getSwapSideFromDeltaOrder,
-  getSwapSideFromTwapOrderType,
-  getAuctionSwapSide,
-  getOrderTokenAddresses,
-  getTransactionAmounts,
-  getAuctionAmounts,
-  getFilledPercent,
-};
-
-export const OrderHelpers = {
-  checks,
-  getters,
-};
-
-// -------------------- Auction Unified Data --------------------
-
-/**
- * @description Returns the destination chain id for the auction.
- */
-function getAuctionDestChainId({
-  order,
-  chainId,
-}: Pick<DeltaAuction, 'order' | 'chainId'>) {
-  return isOrderCrosschain(order) ? order.bridge.destinationChainId : chainId;
-}
-
-const OrderKindToSwapSide = {
-  [OrderKind.Sell]: 'SELL',
-  [OrderKind.Buy]: 'BUY',
-} as const;
-
-/**
- * @description Returns swap side from a Delta or External order kind.
- */
-function getSwapSideFromDeltaOrder(
-  order: DeltaAuctionOrder | ExternalDeltaOrder
-): SwapSideUnion {
-  return OrderKindToSwapSide[order.kind];
-}
-
-const TwapTypeToSwapSide = {
-  TWAPOrder: 'SELL',
-  TWAPBuyOrder: 'BUY',
-} as const;
-
-/**
- * @description Returns swap side from TWAP on-chain order type.
- */
-function getSwapSideFromTwapOrderType(
-  onChainOrderType: 'TWAPOrder' | 'TWAPBuyOrder'
-): SwapSideUnion {
-  return TwapTypeToSwapSide[onChainOrderType];
-}
-
-/**
- * @description Returns swap side for any auction type.
- */
-function getAuctionSwapSide(auction: DeltaAuction): SwapSideUnion {
-  if (isTWAPAuction(auction)) {
-    // TWAP orders have onChainOrderType instead of kind
-    return getSwapSideFromTwapOrderType(auction.onChainOrderType);
-  }
-  if (isProductiveAuction(auction)) {
-    // ProductiveOrders don't carry an explicit OrderKind; treated as SELL.
-    return 'SELL';
-  }
-  return getSwapSideFromDeltaOrder(auction.order);
-}
-
-/**
- * @description Returns unified order data with normalized amounts, tokens, and side.
- */
-function getUnifiedDeltaOrderData(
-  auction: DeltaAuction
-): UnifiedDeltaOrderData {
-  const { order, chainId } = auction;
-
-  const { srcToken, destToken } = getOrderTokenAddresses(order);
-  const { expected, final, minimal } = getAuctionAmounts(auction);
-
-  const srcChainId = chainId;
-  const destChainId = getAuctionDestChainId({ order, chainId });
-
-  const swapSide = getAuctionSwapSide(auction);
-
-  const filledPercent = getFilledPercent(auction);
-
-  return {
-    srcChainId,
-    destChainId,
-    srcAmount: final?.srcAmount || expected.srcAmount,
-    destAmount: final?.destAmount || expected.destAmount,
-    amounts: {
-      expected,
-      final,
-      minimal,
-    },
-    srcToken,
-    destToken,
-    swapSide,
-    filledPercent,
-  };
-}
-
-/**
- * @description Returns source and destination token addresses for an order.
- */
-function getOrderTokenAddresses(order: DeltaAuction['order']) {
-  const srcToken = order.srcToken;
-  const destToken = isOrderCrosschain(order)
-    ? order.bridge.outputToken
-    : order.destToken;
-  return {
-    srcToken,
-    destToken,
-  };
-}
-
-/**
- * @description Aggregates transaction amounts into total source and destination values.
- */
-function getTransactionAmounts(transactions: DeltaAuctionTransaction[]) {
-  const { srcAmount, destAmount } = transactions.reduce(
-    (acc, { spentAmount, receivedAmount, bridgeMetadata }) => {
-      return {
-        srcAmount: acc.srcAmount + BigInt(spentAmount),
-        destAmount:
-          acc.destAmount +
-          BigInt(
-            bridgeMetadata?.outputAmount
-              ? bridgeMetadata.outputAmount
-              : receivedAmount
-          ),
-      };
-    },
-    {
-      srcAmount: 0n,
-      destAmount: 0n,
-    }
-  );
-
-  return {
-    srcAmount: srcAmount.toString(),
-    destAmount: destAmount.toString(),
-  };
-}
-
-/**
- * @description Returns expected and, when available, final amounts for an auction.
- */
-function getAuctionAmounts(auction: DeltaAuction) {
-  const isTwap = checks.isTWAPAuction(auction);
-  if (isTwap) {
-    return getTwapAuctionAmounts(auction);
-  }
-
-  let expected = {
-    srcAmount: auction.order.srcAmount,
-    // defensive fallback in case Order shape changes or legacy Orders don't have all fields
-    destAmount: auction.order.expectedAmount || auction.order.destAmount,
-  };
-
-  let minimal = {
-    srcAmount: auction.order.srcAmount,
-    destAmount: auction.order.destAmount,
-  };
-
-  const order = auction.order;
-
-  if (isOrderCrosschain(order)) {
-    expected = {
-      srcAmount: expected.srcAmount,
-      destAmount: scaleByFactor(
-        BigInt(expected.destAmount),
-        order.bridge.scalingFactor
-      ).toString(),
-    };
-
-    minimal = {
-      srcAmount: minimal.srcAmount,
-      destAmount: scaleByFactor(
-        BigInt(minimal.destAmount),
-        order.bridge.scalingFactor
-      ).toString(),
-    };
-  }
-
-  const isExecuted = isExecutedAuction(auction);
-  if (isExecuted) {
-    const final = getTransactionAmounts(auction.transactions);
-    return {
-      final,
-      expected,
-      minimal,
-    };
-  }
-  return {
-    expected,
-    minimal,
-  };
-}
-
-/**
- * @description Checks whether an order includes valid cross-chain bridge details.
- */
-function isOrderCrosschain<T extends { bridge?: Bridge } | object>(
-  order: T
-  // Extract<ExternalOrder, { bridge?: Bridge }> == never
-): order is Prettify<Extract<T, { bridge?: Bridge }> & { bridge: Bridge }> {
-  return (
-    'bridge' in order && !!order.bridge && order.bridge.destinationChainId !== 0
-  );
-}
-
 function scaleByFactor(amount: bigint, scalingFactor: number): bigint {
   if (!amount) return 0n;
 
@@ -459,146 +392,204 @@ function scaleByFactor(amount: bigint, scalingFactor: number): bigint {
     : amount * base ** BigInt(scalingFactor);
 }
 
-type ExecutedDeltaAuctionProps = {
-  status: 'EXECUTED';
-  transactions: NonEmptyArray<DeltaAuctionTransaction>;
-};
+///// GETTERS — auction envelope (v2) //////
 
 /**
- * @description Checks whether an auction is fully executed.
+ * @description Reads an amount off a v2 token side. A SELL input / BUY output
+ * carries an explicit `amount`; the opposite side carries
+ * `expectedAmount`/`executedAmount`. `prefer` chooses which to read on the
+ * expected/executed variant.
  */
-function isExecutedAuction<
-  T extends Pick<DeltaAuction, 'order' | 'status' | 'transactions'>
->(auction: T): auction is T & ExecutedDeltaAuctionProps {
-  if (auction.status !== 'EXECUTED') return false;
+function getTokenSideAmount(
+  side: DeltaTokenSide,
+  prefer: 'expected' | 'executed'
+): string {
+  if ('amount' in side) return side.amount;
 
-  if (isOrderCrosschain(auction.order)) {
-    const filledPercent = getFilledPercent(auction);
-    return filledPercent === 100;
-  }
+  const value =
+    prefer === 'executed' ? side.executedAmount : side.expectedAmount;
 
-  return true;
-}
-
-const failedAuctionStatuses = [
-  'FAILED',
-  'EXPIRED',
-  'CANCELLED',
-  'REFUNDED',
-] as const;
-
-const failedAuctionStatusesSet = new Set<DeltaAuctionStatus>(
-  failedAuctionStatuses
-);
-
-type FailedDeltaAuctionProps =
-  | {
-      status: (typeof failedAuctionStatuses)[number];
-    }
-  | {
-      status: 'EXECUTED'; // srcChain tx succeeded
-      bridgeStatus: 'expired' | 'refunded'; // destChain tx failed or relayer didn't deliver
-    };
-
-/**
- * @description Checks whether an auction is failed on source or destination chain.
- */
-function isFailedAuction<
-  T extends Pick<DeltaAuction, 'status' | 'order' | 'bridgeStatus'>
->(auction: T): auction is T & FailedDeltaAuctionProps {
-  // already failed on srcChain, whether Order is crosschain or not
-  if (failedAuctionStatusesSet.has(auction.status)) return true;
-
-  // crosschain Order is executed on srcChain, but failed on destChain
-  if (auction.status === 'EXECUTED' && isOrderCrosschain(auction.order)) {
-    return (
-      auction.bridgeStatus === 'expired' || auction.bridgeStatus === 'refunded'
-    );
-  }
-
-  return false;
+  return value ?? '0';
 }
 
 /**
- * @description Checks whether an auction status is cancelled.
+ * @description Returns the source chain id for the auction (the input side's chain).
  */
-function isCanceledAuction<T extends Pick<DeltaAuction, 'status'>>(
-  auction: T
-): auction is T & {
-  status: 'CANCELLED';
-} {
-  return auction.status === 'CANCELLED';
+function getAuctionSrcChainId(auction: Pick<DeltaAuction, 'input'>): number {
+  return auction.input.chainId;
 }
 
 /**
- * @description Checks whether an auction status is expired.
+ * @description Returns the destination chain id for the auction (the output side's chain).
+ * Equals the source chain id for same-chain orders.
  */
-function isExpiredAuction<T extends Pick<DeltaAuction, 'status'>>(
-  auction: T
-): auction is T & {
-  status: 'EXPIRED';
-} {
-  return auction.status === 'EXPIRED';
-}
-
-const pendingAuctionStatuses = [
-  'NOT_STARTED',
-  'AWAITING_PRE_SIGNATURE',
-  'RUNNING',
-  'EXECUTING',
-] as const;
-
-const pendingAuctionStatusesSet = new Set<DeltaAuctionStatus>(
-  pendingAuctionStatuses
-);
-/**
- * @description Checks whether an auction status is in pending execution states.
- */
-function isPendingAuction<T extends Pick<DeltaAuction, 'status'>>(
-  auction: T
-): auction is T & {
-  status: (typeof pendingAuctionStatuses)[number];
-} {
-  return pendingAuctionStatusesSet.has(auction.status);
+function getAuctionDestChainId(auction: Pick<DeltaAuction, 'output'>): number {
+  return auction.output.chainId;
 }
 
 /**
- * @description Auction can be cancelled in the middle of execution,
- * or crosschain-TWAP slices may not all be bridged,
- * or order can be suspended if it runs out of user balance/allowance.
- * Orders in the middle of normal execution can also be considered partially executed if they have any transactions.
+ * @description Returns the swap side for any auction. The auction carries `side`
+ * directly, so no order introspection is needed.
  */
-function isPartiallyExecutedAuction<
-  T extends Pick<DeltaAuction, 'order' | 'transactions'>
->(
-  auction: T
-): auction is T & { transactions: NonEmptyArray<DeltaAuctionTransaction> } {
-  if (auction.transactions.length === 0) return false;
-
-  const filledPercent = getFilledPercent(auction);
-
-  return filledPercent > 0 && filledPercent < 100;
+function getAuctionSwapSide(
+  auction: Pick<DeltaAuction, 'side'>
+): SwapSideUnion {
+  return auction.side;
 }
 
 /**
- * @description Calculates filled percentage from auction transaction filled bps values.
+ * @description Returns source and destination token addresses for the auction,
+ * read from the input/output sides (already resolved to the dest-chain token
+ * for cross-chain orders).
+ */
+function getAuctionTokenAddresses(
+  auction: Pick<DeltaAuction, 'input' | 'output'>
+) {
+  return {
+    srcToken: auction.input.token,
+    destToken: auction.output.token,
+  };
+}
+
+/**
+ * @description Aggregates transaction amounts into total spent (src) and
+ * received (dest) values.
+ */
+function getTransactionAmounts(transactions: DeltaTransaction[]) {
+  const { srcAmount, destAmount } = transactions.reduce(
+    (acc, { spentAmount, receivedAmount }) => ({
+      srcAmount: acc.srcAmount + BigInt(spentAmount ?? 0),
+      destAmount: acc.destAmount + BigInt(receivedAmount ?? 0),
+    }),
+    { srcAmount: 0n, destAmount: 0n }
+  );
+
+  return {
+    srcAmount: srcAmount.toString(),
+    destAmount: destAmount.toString(),
+  };
+}
+
+/**
+ * @description Calculates the overall filled percent (0–100) from the
+ * per-transaction `filledPercent` values. For TWAP orders each transaction is
+ * a slice (0–100 of that slice), so the slice values are averaged across
+ * `numSlices`; for single-fill orders the values sum directly.
  */
 function getFilledPercent(
   auction: Pick<DeltaAuction, 'order' | 'transactions'>
 ): number {
-  const completeTransactions = !isOrderCrosschain(auction.order)
-    ? auction.transactions
-    : auction.transactions.filter(
-        (transaction) => transaction.bridgeStatus === 'filled'
-      );
+  if (auction.transactions.length === 0) return 0;
 
-  const filledPercentBps = completeTransactions.reduce(
-    (acc, { filledPercent }) => {
-      return acc + filledPercent;
-    },
+  const total = auction.transactions.reduce(
+    (acc, { filledPercent }) => acc + filledPercent,
     0
   );
 
-  const filledPercent = filledPercentBps / 100;
-  return filledPercent;
+  if (isTWAPOrder(auction.order) && auction.order.numSlices > 0) {
+    return total / auction.order.numSlices;
+  }
+
+  return total;
 }
+
+/**
+ * @description Returns the executed amount of a token side when present,
+ * otherwise the provided fallback (typically summed from transactions).
+ */
+function getExecutedAmount(side: DeltaTokenSide, fallback: string): string {
+  if ('executedAmount' in side && side.executedAmount != null) {
+    return side.executedAmount;
+  }
+
+  return fallback;
+}
+
+/**
+ * @description Returns expected amounts and, once the auction is completed,
+ * executed amounts. Executed amounts prefer the `executedAmount` baked onto the
+ * token sides and fall back to summing transactions.
+ */
+function getAuctionAmounts(
+  auction: Pick<
+    DeltaAuction,
+    'status' | 'order' | 'input' | 'output' | 'transactions'
+  >
+) {
+  const expected = {
+    srcAmount: getTokenSideAmount(auction.input, 'expected'),
+    destAmount: getTokenSideAmount(auction.output, 'expected'),
+  };
+
+  if (!isCompletedAuction(auction)) {
+    return { expected };
+  }
+
+  const txAmounts = getTransactionAmounts(auction.transactions);
+
+  const executed = {
+    srcAmount: getExecutedAmount(auction.input, txAmounts.srcAmount),
+    destAmount: getExecutedAmount(auction.output, txAmounts.destAmount),
+  };
+
+  return { expected, executed };
+}
+
+/**
+ * @description Returns unified order data with normalized amounts, tokens,
+ * chain ids, and side, built from the auction envelope.
+ */
+function getUnifiedDeltaOrderData(
+  auction: DeltaAuction
+): UnifiedDeltaOrderData {
+  const { srcToken, destToken } = getAuctionTokenAddresses(auction);
+  const { expected, executed } = getAuctionAmounts(auction);
+
+  const srcChainId = getAuctionSrcChainId(auction);
+  const destChainId = getAuctionDestChainId(auction);
+  const swapSide = getAuctionSwapSide(auction);
+  const filledPercent = getFilledPercent(auction);
+
+  return {
+    srcChainId,
+    destChainId,
+    srcAmount: executed?.srcAmount || expected.srcAmount,
+    destAmount: executed?.destAmount || expected.destAmount,
+    amounts: {
+      expected,
+      // No separate "minimal" amount in the v2 envelope; mirrors expected.
+      minimal: expected,
+      final: executed,
+    },
+    srcToken,
+    destToken,
+    swapSide,
+    filledPercent,
+  };
+}
+
+const getters = {
+  getUnifiedDeltaOrderData,
+
+  // auction-level getters — v2 envelope shape.
+  getAuctionTokenAddresses,
+  getAuctionSrcChainId,
+  getAuctionDestChainId,
+  getAuctionSwapSide,
+  getTransactionAmounts,
+  getAuctionAmounts,
+  getFilledPercent,
+
+  // order-level getters — order structs shared across families.
+  getOrderTokenAddresses,
+  getSwapSideFromDeltaOrder,
+  getSwapSideFromTwapOrderType,
+  getExpectedTwapSrcAmount,
+  getExpectedTwapDestAmount,
+  getExpectedTwapOrderAmounts,
+};
+
+export const OrderHelpers = {
+  checks,
+  getters,
+};

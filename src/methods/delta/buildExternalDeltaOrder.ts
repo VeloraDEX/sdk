@@ -1,124 +1,95 @@
+import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import { constructGetDeltaContract } from './getDeltaContract';
-import type { DeltaPrice } from './getDeltaPrice';
-import { constructGetPartnerFee } from './getPartnerFee';
-import {
-  buildExternalOrderSignableData,
-  type BuildExternalOrderDataInput,
-  type SignableExternalOrderData,
-} from './helpers/buildExternalOrderData';
-import type { DeltaAmountsWithSlippage } from './helpers/types';
-import { SwapSideToOrderKind } from './helpers/types';
-import type { MarkOptional } from 'ts-essentials';
-import { resolvePartnerFee, resolveAmounts } from './helpers/misc';
-export type { SignableExternalOrderData } from './helpers/buildExternalOrderData';
+import type { ExternalDeltaOrder } from './helpers/types';
+import type { BuiltDeltaOrder, DeltaRoute } from './types';
+export type { BuiltDeltaOrder } from './types';
 
-type BuildExternalDeltaOrderParamsBase = {
+export type BuildExternalDeltaOrderParams = {
   /** @description The address of the order owner */
   owner: string;
   /** @description The address of the external handler contract */
   handler: string;
   /** @description Protocol-specific encoded bytes for the external handler */
   data: string;
-  /** @description The address of the src token */
-  srcToken: string;
-  /** @description The address of the dest token */
-  destToken: string;
-  /** @description The deadline for the order */
+  /** @description The address of the order beneficiary. Defaults to owner. */
+  beneficiary?: string;
+  /** @description The deadline for the order (unix seconds) */
   deadline?: number;
-  /** @description The nonce of the order */
-  nonce?: number | string;
-  /** @description Optional permit signature for the src token */
+  /** @description The nonce of the order. Random if omitted. */
+  nonce?: string;
+  /** @description Optional permit signature for the src token. Defaults to "0x". */
   permit?: string;
-  /** @description Partner string */
+  /** @description Partner string. Passed to the server to resolve partner fee details. */
   partner?: string;
-  /** @description partner fee in basis points (bps), 50bps=0.5% */
+  /** @description Partner fee in basis points (bps), 50bps=0.5% */
   partnerFeeBps?: number;
-  /** @description partner address */
+  /** @description Partner address */
   partnerAddress?: string;
-  /** @description take surplus */
+  /** @description Take surplus flag */
   partnerTakesSurplus?: boolean;
-  /** @description A boolean indicating whether the surplus should be capped. True by default */
+  /** @description Whether the surplus should be capped. True by default. */
   capSurplus?: boolean;
   /** @description Metadata for the order, hex string */
   metadata?: string;
+  /** @description Designates the Order as partially fillable. Default false. */
+  partiallyFillable?: boolean;
 
-  /** @description price response received from /delta/prices (getDeltaPrice method) */
-  deltaPrice: MarkOptional<
-    Pick<
-      DeltaPrice,
-      'destAmount' | 'partner' | 'partnerFee' | 'destToken' | 'srcAmount'
-    >,
-    'partner' | 'partnerFee'
-  >;
+  /** @description DeltaRoute from getDeltaPrice */
+  route: DeltaRoute;
+  /** @description Order side. SELL or BUY. */
+  side: 'SELL' | 'BUY';
+  /** @description Slippage in basis points (bps). Default 0. */
+  slippage?: number;
+  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount */
+  limitAmount?: string;
 };
-
-export type BuildExternalDeltaOrderParams = BuildExternalDeltaOrderParamsBase &
-  DeltaAmountsWithSlippage;
 
 type BuildExternalDeltaOrder = (
   buildOrderParams: BuildExternalDeltaOrderParams,
   requestParams?: RequestParameters
-) => Promise<SignableExternalOrderData>;
+) => Promise<BuiltDeltaOrder<ExternalDeltaOrder>>;
 
 export type BuildExternalDeltaOrderFunctions = {
-  /** @description Build External Orders to be posted to Delta API for execution */
+  /** @description Build a Delta v2 External Order from a DeltaRoute via the server endpoint, ready to sign and post. */
   buildExternalDeltaOrder: BuildExternalDeltaOrder;
 };
 
 export const constructBuildExternalDeltaOrder = (
   options: ConstructFetchInput
 ): BuildExternalDeltaOrderFunctions => {
-  const { chainId } = options;
-
-  // cached internally
-  const { getDeltaContract } = constructGetDeltaContract(options);
-  // cached internally for `partner`
-  const { getPartnerFee } = constructGetPartnerFee(options);
+  const { apiURL = API_URL, fetcher } = options;
+  const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
 
   const buildExternalDeltaOrder: BuildExternalDeltaOrder = async (
-    options,
+    params,
     requestParams
-  ) => {
-    const ParaswapDelta = await getDeltaContract(requestParams);
-    if (!ParaswapDelta) {
-      throw new Error(`Delta is not available on chain ${chainId}`);
-    }
+  ) =>
+    fetcher<BuiltDeltaOrder<ExternalDeltaOrder>>({
+      url: buildUrl,
+      method: 'POST',
+      data: {
+        side: params.side,
+        route: params.route,
+        owner: params.owner,
+        handler: params.handler,
+        data: params.data,
+        beneficiary: params.beneficiary,
+        deadline: params.deadline,
+        nonce: params.nonce,
+        permit: params.permit,
+        slippage: params.slippage,
+        limitAmount: params.limitAmount,
+        metadata: params.metadata,
+        partiallyFillable: params.partiallyFillable,
+        partner: params.partner,
+        partnerAddress: params.partnerAddress,
+        partnerFeeBps: params.partnerFeeBps,
+        partnerTakesSurplus: params.partnerTakesSurplus,
+        capSurplus: params.capSurplus,
+        orderType: 'ExternalOrder',
+      },
+      requestParams,
+    });
 
-    const { partnerAddress, partnerFeeBps, partnerTakesSurplus } =
-      await resolvePartnerFee(options, getPartnerFee, requestParams);
-
-    const { srcAmount, destAmount, expectedAmount, swapSide } =
-      resolveAmounts(options);
-
-    const input: BuildExternalOrderDataInput = {
-      owner: options.owner,
-      handler: options.handler,
-      srcToken: options.srcToken,
-      destToken: options.deltaPrice.destToken,
-      srcAmount,
-      destAmount,
-      expectedAmount,
-      deadline: options.deadline,
-      nonce: options.nonce?.toString(10),
-      permit: options.permit,
-      kind: SwapSideToOrderKind[swapSide],
-      metadata: options.metadata,
-      data: options.data,
-
-      chainId,
-      paraswapDeltaAddress: ParaswapDelta,
-      partnerAddress,
-      partnerTakesSurplus,
-      partnerFeeBps,
-
-      capSurplus: options.capSurplus,
-    };
-
-    return buildExternalOrderSignableData(input);
-  };
-
-  return {
-    buildExternalDeltaOrder,
-  };
+  return { buildExternalDeltaOrder };
 };

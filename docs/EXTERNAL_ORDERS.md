@@ -2,6 +2,8 @@
 
 External orders delegate token handling to an external **handler** contract, enabling complex DeFi strategies that go beyond simple token swaps. The handler manages the actual token logic (e.g. Aave flash loan + collateral/debt swap), while the Delta protocol handles the auction, settlement, and signature verification.
 
+As with all Delta v2 orders, the Order is **built by the server** from the route returned by `getDeltaPrice` — you sign the returned typed data and post it.
+
 ### Handler Contract
 
 The handler contract must be deployed by the integrator and implement the `IExternalProtocolHandler` interface:
@@ -25,11 +27,12 @@ The `data` field carries protocol-specific parameters (e.g. an Aave operation ty
 
 | Feature | Standard Order | External Order |
 |---|---|---|
-| `beneficiary` field | yes | no (output goes to owner) |
-| `bridge` field | yes | no |
 | `handler` field | no | yes (required) |
 | `data` field | no | yes (required) |
+| `bridge` field | yes | no |
 | Cross-chain support | yes | no |
+
+`beneficiary` is supported by both (defaults to `owner`).
 
 
 ---
@@ -64,7 +67,7 @@ const deltaPrice = await deltaSDK.getDeltaPrice({
   userAddress: account,
   srcDecimals: 6,
   destDecimals: 18,
-  side: SwapSide.SELL,
+  side: 'SELL',
 });
 ```
 
@@ -83,41 +86,37 @@ await aUSDC.approve(AAVE_HANDLER, amount);
 
 #### Using `submitExternalDeltaOrder` (recommended)
 
-The simplest approach — builds, signs, and posts the order in one call:
+The simplest approach — builds, signs, and posts the order in one call. Pass the quoted `route` + `side` and your `slippage`; the server computes the amounts.
 
 ```ts
 const deltaAuction = await deltaSDK.submitExternalDeltaOrder({
-  deltaPrice,
+  route: deltaPrice.route, // or any deltaPrice.alternatives[i]
+  side: deltaPrice.side,
   owner: account,
   handler: AAVE_HANDLER, // your deployed handler contract
   data: '0x0000000000000000000000000000000000000000000000000000000000000000', // protocol-specific bytes
-  srcToken: USDC,
-  destToken: WETH,
-  srcAmount: amount,
   slippage: 50, // 0.5% in bps
 });
 ```
 
 #### Using individual steps
 
-For more control, you can build, sign, and post separately:
+For more control, you can build, sign, and post separately. A single `signDeltaOrder` signs every order family.
 
 ```ts
-const signableOrderData = await deltaSDK.buildExternalDeltaOrder({
-  deltaPrice,
+const built = await deltaSDK.buildExternalDeltaOrder({
+  route: deltaPrice.route,
+  side: deltaPrice.side,
   owner: account,
   handler: AAVE_HANDLER,
   data: '0x0000000000000000000000000000000000000000000000000000000000000000',
-  srcToken: USDC,
-  destToken: WETH,
-  srcAmount: amount,
   slippage: 50, // 0.5% in bps
 });
 
-const signature = await deltaSDK.signExternalDeltaOrder(signableOrderData);
+const signature = await deltaSDK.signDeltaOrder(built);
 
 const deltaAuction = await deltaSDK.postExternalDeltaOrder({
-  order: signableOrderData.data,
+  order: built.toSign.value,
   signature,
 });
 ```
@@ -129,7 +128,7 @@ const intervalId = setInterval(async () => {
   const auction = await deltaSDK.getDeltaOrderById(deltaAuction.id);
   console.log('Status:', auction.status);
 
-  if (auction.status === 'EXECUTED' || auction.status === 'FAILED') {
+  if (auction.status === 'COMPLETED' || auction.status === 'FAILED') {
     clearInterval(intervalId);
   }
 }, 3000);
@@ -141,9 +140,9 @@ const intervalId = setInterval(async () => {
 // fetch a specific external order
 const order = await deltaSDK.getDeltaOrderById(orderId);
 
-// list external orders only
-const orders = await deltaSDK.getDeltaOrders({
-  owner: account,
+// list external orders only (paginated — `data` holds the orders)
+const { data: externalOrders } = await deltaSDK.getDeltaOrders({
+  userAddress: account,
   onChainOrderType: 'ExternalOrder',
 });
 ```
@@ -152,34 +151,27 @@ const orders = await deltaSDK.getDeltaOrders({
 
 ## Specifying Amounts
 
-There are two ways to specify amounts:
+Amounts are derived server-side from the quoted `route`. Two ways to control them:
 
-**With `slippage` (recommended)** — the SDK computes the slippage-adjusted amount from `deltaPrice` automatically:
+**With `slippage` (recommended)** — the server computes the slippage-adjusted amount from the route:
 
 ```ts
-// SELL: provide srcAmount + slippage → destAmount auto-computed
 await deltaSDK.buildExternalDeltaOrder({
+  route: deltaPrice.route,
+  side: deltaPrice.side, // 'SELL' or 'BUY'
   // ...
-  srcAmount: amount,
   slippage: 50, // 0.5% in bps
-});
-
-// BUY: provide destAmount + slippage → srcAmount auto-computed
-await deltaSDK.buildExternalDeltaOrder({
-  // ...
-  destAmount: amount,
-  slippage: 50,
 });
 ```
 
-**With explicit amounts** — you compute both amounts yourself:
+**With an explicit `limitAmount`** — pin the limit yourself; the server uses it as the SELL `destAmount` (or BUY `srcAmount`) and `expectedAmount`:
 
 ```ts
 await deltaSDK.buildExternalDeltaOrder({
+  route: deltaPrice.route,
+  side: deltaPrice.side,
   // ...
-  srcAmount: amount,
-  destAmount: destAmountAfterSlippage,
-  side: SwapSide.SELL, // or SwapSide.BUY
+  limitAmount: destAmountLimit,
 });
 ```
 
@@ -187,31 +179,29 @@ await deltaSDK.buildExternalDeltaOrder({
 
 ## Pre-signing External Orders
 
-For smart contract wallets or other cases where EIP-712 signatures are not available, you can pre-sign an external order on-chain:
+For smart contract wallets or other cases where EIP-712 signatures are not available, you can pre-sign an external order on-chain using the `orderHash` returned by the server build:
 
 ```ts
-const signableOrderData = await deltaSDK.buildExternalDeltaOrder({
-  deltaPrice,
+const built = await deltaSDK.buildExternalDeltaOrder({
+  route: deltaPrice.route,
+  side: deltaPrice.side,
   owner: account,
   handler: AAVE_HANDLER,
   data: '0x0000000000000000000000000000000000000000000000000000000000000000',
-  srcToken: USDC,
-  destToken: WETH,
-  srcAmount: amount,
   slippage: 50,
 });
 
-// on-chain pre-sign transaction
-const tx = await deltaSDK.preSignExternalDeltaOrder(signableOrderData);
+// on-chain pre-sign transaction (setPreSignature for the built order hash)
+const tx = await deltaSDK.setExternalDeltaOrderPreSignature(built.orderHash);
 await tx.wait();
 
 // post with empty signature
 const deltaAuction = await deltaSDK.postExternalDeltaOrder({
-  order: signableOrderData.data,
+  order: built.toSign.value,
   signature: '0x',
 });
 ```
 
 ---
 
-#### A more detailed example can be found in [examples/externalDelta](../src/examples/externalDelta.ts)
+#### A more detailed example can be found in [examples/delta](../src/examples/delta.ts)

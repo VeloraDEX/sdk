@@ -1,8 +1,13 @@
 import { API_URL } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
-import type { BridgeProtocolResponse } from '../delta/getBridgeInfo';
 import type { BridgeRoute } from './types';
+
+export type BridgeProtocolResponse = {
+  protocol: string;
+  displayName: string;
+  icon: string;
+};
 
 type GetBridgeRoutesParams = {
   /** @description Include tokens that can be swapped on destChain after bridge. Default is true. */

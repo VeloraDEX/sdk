@@ -6,8 +6,8 @@ import type {
   RequestParameters,
 } from '../../types';
 
-type TokenSupportedInDeltaResponse = { supported: boolean };
-type IsTokenSupportedInDeltaQueryOptions = {
+type TokenSupportedResponse = { supported: boolean };
+type IsTokenSupportedQuery = {
   token: Address;
   chainId: number;
 };
@@ -26,20 +26,20 @@ export const constructIsTokenSupportedInDelta = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): IsTokenSupportedInDeltaFunctions => {
-  const bridgeInfoUrl = `${apiURL}/delta/prices/is-token-supported` as const;
+  const baseUrl = `${apiURL}/delta/v2/prices/is-token-supported` as const;
 
   const isTokenSupportedInDelta: IsTokenSupportedInDelta = async (
     token,
     requestParams
   ) => {
-    const search = constructSearchString<IsTokenSupportedInDeltaQueryOptions>({
+    const search = constructSearchString<IsTokenSupportedQuery>({
       token,
       chainId,
     });
 
-    const fetchURL = `${bridgeInfoUrl}/${search}` as const;
+    const fetchURL = `${baseUrl}/${search}` as const;
 
-    const data = await fetcher<TokenSupportedInDeltaResponse>({
+    const data = await fetcher<TokenSupportedResponse>({
       url: fetchURL,
       method: 'GET',
       requestParams,
@@ -48,7 +48,5 @@ export const constructIsTokenSupportedInDelta = ({
     return data.supported;
   };
 
-  return {
-    isTokenSupportedInDelta,
-  };
+  return { isTokenSupportedInDelta };
 };

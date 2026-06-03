@@ -6,7 +6,7 @@ import type {
 import { constructGetDeltaContract } from './getDeltaContract';
 import {
   buildCancelDeltaOrderSignableData,
-  CancelDeltaOrderData,
+  type CancelDeltaOrderData,
 } from './helpers/buildCancelDeltaOrderData';
 
 type SuccessResponse = { success: true };
@@ -32,10 +32,10 @@ export type CancelDeltaOrder = (
 ) => Promise<SuccessResponse>;
 
 export type CancelDeltaOrderFunctions = {
-  signCancelLimitDeltaOrderRequest: SignCancelDeltaOrderRequest;
-  postCancelLimitDeltaOrderRequest: PostCancelDeltaOrderRequest;
-  /** @description Cancel a Limit Delta order */
-  cancelLimitDeltaOrders: CancelDeltaOrder;
+  signCancelDeltaOrderRequest: SignCancelDeltaOrderRequest;
+  postCancelDeltaOrderRequest: PostCancelDeltaOrderRequest;
+  /** @description Cancel one or more Delta orders via the v2 endpoint */
+  cancelDeltaOrders: CancelDeltaOrder;
 };
 
 export const constructCancelDeltaOrder = (
@@ -46,10 +46,9 @@ export const constructCancelDeltaOrder = (
 ): CancelDeltaOrderFunctions => {
   const apiURL = options.apiURL ?? API_URL;
 
-  // cached internally
   const { getDeltaContract } = constructGetDeltaContract(options);
 
-  const signCancelLimitDeltaOrderRequest: SignCancelDeltaOrderRequest = async (
+  const signCancelDeltaOrderRequest: SignCancelDeltaOrderRequest = async (
     params,
     requestParams
   ) => {
@@ -63,50 +62,39 @@ export const constructCancelDeltaOrder = (
       paraswapDeltaAddress: ParaswapDelta,
       chainId: options.chainId,
     });
-    const signature = await options.contractCaller.signTypedDataCall(typedData);
 
-    return signature;
+    return options.contractCaller.signTypedDataCall(typedData);
   };
 
-  const postCancelLimitDeltaOrderRequest: PostCancelDeltaOrderRequest = async (
+  const postCancelDeltaOrderRequest: PostCancelDeltaOrderRequest = async (
     params,
     requestParams
   ) => {
-    const cancelUrl = `${apiURL}/delta/orders/cancel` as const;
+    const cancelUrl = `${apiURL}/delta/v2/orders/cancel` as const;
 
-    const res = await options.fetcher<SuccessResponse>({
+    return options.fetcher<SuccessResponse>({
       url: cancelUrl,
       method: 'POST',
       data: params,
       requestParams,
     });
-
-    return res;
   };
 
-  const cancelLimitDeltaOrders: CancelDeltaOrder = async (
+  const cancelDeltaOrders: CancelDeltaOrder = async (
     { orderIds },
     requestParams
   ) => {
-    const signature = await signCancelLimitDeltaOrderRequest(
+    const signature = await signCancelDeltaOrderRequest(
       { orderIds },
       requestParams
     );
 
-    const res = await postCancelLimitDeltaOrderRequest(
-      {
-        orderIds,
-        signature,
-      },
-      requestParams
-    );
-
-    return res;
+    return postCancelDeltaOrderRequest({ orderIds, signature }, requestParams);
   };
 
   return {
-    signCancelLimitDeltaOrderRequest,
-    postCancelLimitDeltaOrderRequest,
-    cancelLimitDeltaOrders,
+    signCancelDeltaOrderRequest,
+    postCancelDeltaOrderRequest,
+    cancelDeltaOrders,
   };
 };
