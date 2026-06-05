@@ -19,8 +19,10 @@ export const constructApproveTokenForOTCOrder = <T>(
   // so should persist across same apiUrl & network
   const { getAugustusRFQ } = constructGetSpender(options);
 
-  const approveTokenForOTCOrder: ApproveToken<T> =
-    approveTokenMethodFactory<T>(options.contractCaller, getAugustusRFQ);
+  const approveTokenForOTCOrder: ApproveToken<T> = approveTokenMethodFactory<T>(
+    options.contractCaller,
+    getAugustusRFQ
+  );
 
   return {
     approveMakerTokenForOTCOrder: approveTokenForOTCOrder,
