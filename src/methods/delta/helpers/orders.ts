@@ -472,23 +472,23 @@ function getTransactionAmounts(transactions: DeltaTransaction[]) {
 
 /**
  * @description Calculates the overall filled percent (0–100) from the
- * per-transaction `filledPercent` values. For TWAP orders each transaction is
- * a slice (0–100 of that slice), so the slice values are averaged across
- * `numSlices`; for single-fill orders the values sum directly.
+ * per-transaction `filledPercent` values. For cross-chain orders,
+ * only transactions with a `destinationTx` are counted towards the filled percent.
  */
-function getFilledPercent(
-  auction: Pick<DeltaAuction, 'order' | 'transactions'>
-): number {
-  if (auction.transactions.length === 0) return 0;
+function getFilledPercent({
+  order,
+  transactions,
+}: Pick<DeltaAuction, 'order' | 'transactions'>): number {
+  if (transactions.length === 0) return 0;
 
-  const total = auction.transactions.reduce(
+  const completedTransactions = !isOrderCrosschain(order)
+    ? transactions
+    : transactions.filter((transaction) => !!transaction.destinationTx);
+
+  const total = completedTransactions.reduce(
     (acc, { filledPercent }) => acc + filledPercent,
     0
   );
-
-  if (isTWAPOrder(auction.order) && auction.order.numSlices > 0) {
-    return total / auction.order.numSlices;
-  }
 
   return total;
 }
