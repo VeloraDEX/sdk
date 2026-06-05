@@ -162,7 +162,7 @@ const allowance = await sdk.getAllowance(userAddress, tokenAddress);
 
 ### Basic usage
 
-The easiest way to make a trade is to rely on Quote method that communicates with [/quote API endpoint](https://developers.velora.xyz/api/velora-api/velora-delta-api/retrieve-delta-price-with-fallback-to-market)
+The easiest way to make a trade is to rely on the Quote method that communicates with the `/v2/quote` API endpoint. With `mode: 'all'` it returns Delta v2 pricing when possible, falling back to the current market price (use `mode: 'delta'` or `mode: 'market'` to request a single source).
 
 ```typescript
 import axios from 'axios';
@@ -196,11 +196,12 @@ const quote = await simpleSDK.quote.getQuote({
   srcDecimals: 18,
   destDecimals: 18,
   mode: 'all', // Delta quote if possible, with fallback to Market price
-  side: 'SELL', // Delta mode only supports side: SELL currenly
+  side: 'SELL', // Delta mode only supports side: SELL currently
   // partner: "..." // if available
 });
 
 if ('delta' in quote) {
+  // quote.delta is the v2 DeltaPrice (route-based)
   const deltaPrice = quote.delta;
 
   const DeltaContract = await simpleSDK.delta.getDeltaContract();
@@ -208,58 +209,26 @@ if ('delta' in quote) {
   // or sign a Permit1 or Permit2 TransferFrom for DeltaContract
   await simpleSDK.delta.approveTokenForDelta(amount, Token1);
 
-  const slippagePercent = 0.5;
-  const destAmountAfterSlippage = BigInt(
-    // get rid of exponential notation
-
-    +(+deltaPrice.destAmount * (1 - slippagePercent / 100)).toFixed(0)
-    // get rid of decimals
-  ).toString(10);
-
+  // order building is server-side: pass the quoted route + side, no local amounts
   const deltaAuction = await simpleSDK.delta.submitDeltaOrder({
-    deltaPrice,
+    route: deltaPrice.route, // or any deltaPrice.alternatives[i]
+    side: deltaPrice.side,
     owner: account,
     // beneficiary: anotherAccount, // if need to send the output destToken to another account
     // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-    srcToken: Token1,
-    destToken: Token2,
-    srcAmount: amount,
-    destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
+    slippage: 50, // 50 bps = 0.5%
   });
 
-  // poll if necessary
-  function isExecutedDeltaAuction(
-      auction: Omit<DeltaAuction, 'signature'>,
-      waitForCrosschain = true // only consider executed when destChain work is done
-    ) {
-      if (auction.status !== 'EXECUTED') return false;
-
-      // crosschain Order is executed on destChain if bridgeStatus is filled
-      if (waitForCrosschain && auction.order.bridge.destinationChainId !== 0) {
-        return auction.bridgeStatus === 'filled';
-      }
-
-      return true;
-    }
-
-  function fetchOrderPeriodically(auctionId: string) {
+  // poll if necessary — v2 status COMPLETED already accounts for any dest-chain bridge
+  function startStatusCheck(auctionId: string) {
     const intervalId = setInterval(async () => {
       const auction = await simpleSDK.delta.getDeltaOrderById(auctionId);
-      console.log('checks: ', auction); // Handle or log the fetched auction as needed
-
-      if (isExecutedDeltaAuction(auction)) {
-        clearInterval(intervalId); // Stop interval if completed
+      if (auction.status === 'COMPLETED') {
+        clearInterval(intervalId);
         console.log('Order completed');
       }
     }, 3000);
-    console.log('Order Pending');
-    // Return intervalId to enable clearing the interval if needed externally
-    return intervalId;
-  }
-
-  function startStatusCheck(auctionId: string) {
-    const intervalId = fetchOrderPeriodically(auctionId);
-    setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
+    setTimeout(() => clearInterval(intervalId), 60000 * 5); // stop after 5 minutes
   }
 
   startStatusCheck(deltaAuction.id);
@@ -297,33 +266,39 @@ This way the user doesn't need to make a transaction themselve but only to sign 
 
 (For **Crosschain Delta Orders** refer to a separate documentation page [DELTA.md](./docs/DELTA.md#crosschain-delta-orders) )
 
-After getting **deltaPrice** from **/quote** endpoint, there are additional steps to sign the Order and wait for its execution.
+In v2 the Order is **built by the server** from the quoted route — you sign the returned typed data and post it. After getting **deltaPrice**, there are a few steps to sign the Order and wait for its execution.
 
-### 1. Get deltaPrice from /quote
+### 1. Get deltaPrice
 
 ```ts
 const amount = '1000000000000'; // wei
 const Token1 = '0x1234...'
 const Token2 = '0xabcde...'
 
+// ... from the quote endpoint (mode: 'delta' or 'all')
 const quote = await simpleSDK.quote.getQuote({
-  srcToken: Token1, // Native token (ETH) is only supported in mode: 'market'
+  srcToken: Token1,
   destToken: Token2,
   amount,
   userAddress: account,
   srcDecimals: 18,
   destDecimals: 18,
-  mode: 'delta' // or mode: 'all'
+  mode: 'delta',
+  side: 'SELL',
   // partner: "..." // if available
-})
-
-// if used mode: 'all'
-if ('delta' in quote) {
-  const deltaPrice = quote.delta;
-}
-
-// if used mode: 'delta'
+});
 const deltaPrice = quote.delta;
+
+// ... or straight from the Delta price endpoint
+const deltaPriceDirect = await simpleSDK.delta.getDeltaPrice({
+  srcToken: Token1,
+  destToken: Token2,
+  amount,
+  srcDecimals: 18,
+  destDecimals: 18,
+  userAddress: account,
+  // destChainId: 42161, // for cross-chain — bridge details land in deltaPrice.route.bridge
+});
 ```
 
 
@@ -345,35 +320,28 @@ const signature = await signer._signTypedData(domain, types, message);
 See more on accepted Permit variants in [Velora documentation](https://developers.velora.xyz/api/velora-api/velora-delta-api/build-a-delta-order-to-sign#supported-permits)
 
 
-### 3. Sign and submit a Delta Order
+### 3. Build, sign and post a Delta Order
 
 ```ts
-// calculate acceptable destAmount
-const slippagePercent = 0.5;
-  const destAmountAfterSlippage = (
-    +deltaPrice.destAmount *
-    (1 - slippagePercent / 100)
-  ).toString(10);
-
-const signableOrderData = await simpleSDK.delta.buildDeltaOrder({
-  deltaPrice,
+// build is server-side — pass the quoted route + side and your slippage
+const built = await simpleSDK.delta.buildDeltaOrder({
+  route: deltaPrice.route, // or any deltaPrice.alternatives[i]
+  side: deltaPrice.side,
   owner: account,
   // beneficiary: anotherAccount, // if need to send the output destToken to another account
   // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-  srcToken: Token1,
-  destToken: Token2,
-  srcAmount: amount,
-  destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
-  // partner: "..." // if available
+  slippage: 50, // 50 bps = 0.5%
+  // partner, partnerFeeBps — forwarded to the server
 });
 
-const signature = await simpleSDK.delta.signDeltaOrder(signableOrderData);
+// one signer for every order family (Order / ExternalOrder / TWAPOrder / TWAPBuyOrder)
+const signature = await simpleSDK.delta.signDeltaOrder(built);
 
 const deltaAuction = await simpleSDK.delta.postDeltaOrder({
-  // partner: "..." // if available
-  // partiallyFillabel: true, // allow the Order to be partially filled as opposed to fill-or-kill
-  order: signableOrderData.data,
+  order: built.toSign.value,
   signature,
+  // partner: "...",
+  // partiallyFillable: true, // allow the Order to be partially filled as opposed to fill-or-kill
 });
 ```
 
@@ -383,15 +351,13 @@ As an option the `buildDeltaOrder + signDeltaOrder + postDeltaOrder` can be comb
 
 ```ts
 const deltaAuction = await simpleSDK.delta.submitDeltaOrder({
-  deltaPrice,
+  route: deltaPrice.route,
+  side: deltaPrice.side,
   owner: account,
   // beneficiary: anotherAccount, // if need to send output destToken to another account
   // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-  // partiallyFillabel: true, // allow the Order to be partially filled as opposed to fill-or-kill
-  srcToken: Token1,
-  destToken: Token2,
-  srcAmount: amount,
-  destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
+  // partiallyFillable: true, // allow the Order to be partially filled as opposed to fill-or-kill
+  slippage: 50,
 });
 ```
 
@@ -399,69 +365,26 @@ This allows to simplify the flow at the expense of control over the Order signin
 
 #### 3.b adding partner fee
 
-A portion of destToken will be collected as a partner fee if `partner` parameter is provided to `buildDeltaOrder` (and `submitDeltaOrder`). The `partnerFee` itself is `deltaPrice.partnerFee`
-
-To examine the default partnerFee parameters (`{partnerAddress: Address, partnerFee: number, takeSurplus: boolean}`), you can call `getPartnerFee` method. These parameters are then encoded in Order.partnerAndFee field.
+A portion of destToken is collected as a partner fee when `partner` (and optionally `partnerFeeBps`) is provided to `buildDeltaOrder` / `submitDeltaOrder`. In v2 these are forwarded to the server, which encodes them into `Order.partnerAndFee`. You can inspect the default partner-fee parameters with `getPartnerFee`:
 
 ```ts
 const partnerFeeResponse = await simpleSDK.delta.getPartnerFee({ partner });
 ```
 
-Alternatively, you can supply your own partnerFee parameters that will be encoded in Order.partnerAndFee field
-
-```ts
-const signableOrderData = await simpleSDK.delta.buildDeltaOrder({
-  deltaPrice,
-  owner: account,
-  // beneficiary: anotherAccount, // if need to send the output destToken to another account
-  // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-  // partiallyFillabel: true, // allow the Order to be partially filled as opposed to fill-or-kill
-  srcToken: Token1,
-  destToken: Token2,
-  srcAmount: amount,
-  destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
-  partnerAddress: '0x1234...',
-  partnerFee: 0.12,
-  takeSurplus: true,
-});
-```
-
 ### 4. Wait for Delta Order execution
 
 ```ts
-// poll if necessary
-function isExecutedDeltaAuction(
-  auction: Omit<DeltaAuction, 'signature'>,
-  waitForCrosschain = true // only consider executed when destChain work is done
-) {
-  if (auction.status !== 'EXECUTED') return false;
-
-  // crosschain Order is executed on destChain if bridgeStatus is filled
-  if (waitForCrosschain && auction.order.bridge.destinationChainId !== 0) {
-    return auction.bridgeStatus === 'filled';
-  }
-
-  return true;
-}
-
-function fetchOrderPeriodically(auctionId: string) {
+// poll if necessary — v2 status COMPLETED already accounts for any dest-chain bridge
+function startStatusCheck(auctionId: string) {
   const intervalId = setInterval(async () => {
     const auction = await simpleSDK.delta.getDeltaOrderById(auctionId);
-    console.log('checks: ', auction); // Handle or log the fetched auction as needed
-
-    if (isExecutedDeltaAuction(auction)) {
-      clearInterval(intervalId); // Stop interval if completed
+    if (auction.status === 'COMPLETED') {
+      clearInterval(intervalId); // stop interval once completed
       console.log('Order completed');
     }
   }, 3000);
-  console.log('Order Pending');
-  // Return intervalId to enable clearing the interval if needed externally
-  return intervalId;
-}
-
-function startStatusCheck(auctionId: string) {
-  const intervalId = fetchOrderPeriodically(auctionId);
-  setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
+  // stop polling after 5 minutes
+  setTimeout(() => clearInterval(intervalId), 60000 * 5);
 }
 
 startStatusCheck(deltaAuction.id);
@@ -475,13 +398,102 @@ For **External Delta Orders** (orders that delegate token handling to an externa
 
 ------------
 
+### Advanced Delta usage
+
+#### TWAP order
+
+A TWAP sell splits `totalSrcAmount` into `numSlices` equal slices executed `interval` seconds apart. Price is quoted for a single slice — the server multiplies amounts internally.
+
+```ts
+const perSliceAmount = (BigInt(totalSrcAmount) / BigInt(numSlices)).toString();
+
+const slicePrice = await simpleSDK.delta.getDeltaPrice({
+  srcToken: Token1,
+  destToken: Token2,
+  amount: perSliceAmount,
+  srcDecimals: 18,
+  destDecimals: 18,
+  userAddress: account,
+});
+
+await simpleSDK.delta.approveTokenForDelta(totalSrcAmount, Token1);
+
+const twapAuction = await simpleSDK.delta.submitTWAPDeltaOrder({
+  onChainOrderType: 'TWAPOrder', // or 'TWAPBuyOrder'
+  route: slicePrice.route,
+  owner: account,
+  totalSrcAmount,
+  numSlices,
+  interval: 300, // seconds (min 60)
+  slippage: 50,
+});
+```
+
+#### Partial SDK
+
+For bundle-savvy code, pull only the Delta constructors you need — they tree-shake cleanly.
+
+```ts
+import {
+  constructPartialSDK,
+  constructFetchFetcher,
+  constructGetDeltaPrice,
+  constructGetDeltaOrders,
+  constructGetBridgeRoutes,
+} from '@velora-dex/sdk';
+
+const sdk = constructPartialSDK(
+  { chainId: 1, fetcher: constructFetchFetcher(fetch) },
+  constructGetDeltaPrice,
+  constructGetDeltaOrders,
+  constructGetBridgeRoutes,
+);
+
+const price = await sdk.getDeltaPrice({ /* ... */ });
+const orders = await sdk.getDeltaOrders({ userAddress: account, page: 1, limit: 50 });
+```
+
+A complete example (standard, external handler, TWAP, and order listing) is in [examples/delta](./src/examples/delta.ts).
+
+#### Productive Orders (read-only)
+
+Alongside the four buildable families (`Order`, `ExternalOrder`, `TWAPOrder`, `TWAPBuyOrder`), the SDK surfaces a fifth `onChainOrderType` — **`ProductiveOrder`** — through the read endpoints (`sdk.delta.getDeltaOrderById`, `sdk.delta.getDeltaOrders`, etc.). Productive orders are produced and managed entirely by the server: there are deliberately **no `buildProductiveOrder`, `signProductiveOrder`, or `submitProductiveOrder` helpers**. The shape is wired through `OnChainOrderType` and `OnChainOrderMap` so that consumers iterating over an order list can type-narrow on `onChainOrderType === 'ProductiveOrder'` and read the order safely — productive orders carry no `OrderKind`, so the side is always `SELL`.
+
+`OnChainOrderType` additionally includes **`'FillableOrder'`**, which maps to the same shape as a Standard `'Order'` (`DeltaAuctionOrder`). It is not a separate buildable family — it's the `onChainOrderType` the server reports for a `partiallyFillable` Standard order, so treat it the same as `'Order'` when narrowing.
+
+#### Order helpers
+
+`OrderHelpers` exposes `{ checks, getters }` for auctions returned by `sdk.delta.*` read/post methods (`status: DeltaOrderStatus`, `input`/`output`, flat `transactions`, explicit `side`):
+
+```ts
+import { OrderHelpers } from '@velora-dex/sdk';
+
+const { checks, getters } = OrderHelpers;
+
+if (checks.isProductiveAuction(auction)) {
+  // read-only, no SDK builder
+} else if (checks.isFillableAuction(auction) || checks.isDeltaAuction(auction)) {
+  // treat FillableOrder the same as a standard Order
+}
+
+if (checks.isCompletedAuction(auction)) {
+  const { expected, executed } = getters.getAuctionAmounts(auction);
+  // `executed` — matches the API convention
+}
+
+const unified = getters.getUnifiedDeltaOrderData(auction);
+// { srcChainId, destChainId, srcToken, destToken, swapSide, filledPercent, amounts, ... }
+```
+
+------------
+
 ### Market Swap handling
 
 #### A more detailed overview of the Trade Flow, Market variant.
 
 Unlike the Delta Order, a Market swap  requires the user themselves to submit a Swap transaction
 
-### 1. Get Market priceRoute from /quote
+### 1. Get Market priceRoute from /v2/quote
 
 ```ts
 const amount = '1000000000000'; // wei
@@ -489,22 +501,17 @@ const Token1 = '0x1234...'
 const Token2 = '0xabcde...'
 
 const quote = await simpleSDK.quote.getQuote({
-  srcToken: Token1, // Native token (ETH) is only supported in mode: 'market'
+  srcToken: Token1,
   destToken: Token2,
   amount,
   userAddress: account,
   srcDecimals: 18,
   destDecimals: 18,
-  mode: 'market'
+  mode: 'market',
+  side: 'SELL', // or 'BUY'
   // partner: "..." // if available
 })
 
-// if used mode: 'all'
-if ('market' in quote) {
-  const priceRoute = quote.market;
-}
-
-// if used mode: 'market'
 const priceRoute = quote.market;
 ```
 

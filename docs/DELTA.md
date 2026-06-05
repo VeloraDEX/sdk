@@ -1,6 +1,7 @@
 **Velora Delta** is an intent-based protocol that enables a Velora user to make gasless swaps where multiple agents compete to execute the trade at the best price possible.
 This way the user doesn't need to make a transaction themselves but only to sign a Delta Order.
-The easiest way to make use of the Delta Order is to use the SDK following these steps:
+
+In Delta v2 the Order is **built by the server** from the route returned in the price response — you sign the returned typed data and post it. The easiest way to make use of the Delta Order is to use the SDK following these steps:
 
 ### 1. Construct an SDK object
 
@@ -32,6 +33,8 @@ const deltaPrice = await deltaSDK.getDeltaPrice({
   destDecimals: 6,
   // partner: "..." // if available
 });
+
+// deltaPrice.route is the recommended route; deltaPrice.alternatives holds the rest
 ```
 
 
@@ -56,68 +59,42 @@ See more on accepted Permit variants in [Velora documentation](https://developer
 
 ### 4. Sign and submit a Delta Order
 
-```ts
-// calculate acceptable destAmount
-const slippagePercent = 0.5;
-  const destAmountAfterSlippage = (
-    +deltaPrice.destAmount *
-    (1 - slippagePercent / 100)
-  ).toString(10);
+Order building is server-side: pass the quoted `route` + `side` and your acceptable `slippage` — the server computes the amounts. `submitDeltaOrder` bundles build → sign → post.
 
+```ts
 const deltaAuction = await deltaSDK.submitDeltaOrder({
-  deltaPrice,
+  route: deltaPrice.route, // or any deltaPrice.alternatives[i]
+  side: deltaPrice.side,
   owner: account,
   // beneficiary: anotherAccount, // if need to send destToken to another account
   // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-  srcToken: DAI_TOKEN,
-  destToken: USDC_TOKEN,
-  srcAmount: amount,
-  destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
+  slippage: 50, // 50 bps = 0.5%
+  // partner, partnerFeeBps — forwarded to the server
 });
 ```
+
+For full control over signing, use `buildDeltaOrder` → `signDeltaOrder` → `postDeltaOrder` separately (see the main [README](../README.md)).
 
 ### 5. Wait for Delta Order execution
 
 ```ts
-// poll if necessary
-function isExecutedDeltaAuction(
-  auction: Omit<DeltaAuction, 'signature'>,
-  waitForCrosschain = true // only consider executed when destChain work is done
-) {
-  if (auction.status !== 'EXECUTED') return false;
-
-  // crosschain Order is executed on destChain if bridgeStatus is filled
-  if (waitForCrosschain && auction.order.bridge.destinationChainId !== 0) {
-    return auction.bridgeStatus === 'filled';
-  }
-
-  return true;
-}
-
-function fetchOrderPeriodically(auctionId: string) {
+// poll if necessary — v2 status COMPLETED already accounts for any dest-chain bridge
+function startStatusCheck(auctionId: string) {
   const intervalId = setInterval(async () => {
-    const auction = await simpleSDK.delta.getDeltaOrderById(auctionId);
-    console.log('checks: ', auction); // Handle or log the fetched auction as needed
-
-    if (isExecutedDeltaAuction(auction)) {
-      clearInterval(intervalId); // Stop interval if completed
+    const auction = await deltaSDK.getDeltaOrderById(auctionId);
+    if (auction.status === 'COMPLETED') {
+      clearInterval(intervalId); // stop interval once completed
       console.log('Order completed');
     }
   }, 3000);
-  console.log('Order Pending');
-  // Return intervalId to enable clearing the interval if needed externally
-  return intervalId;
-}
-
-function startStatusCheck(auctionId: string) {
-  const intervalId = fetchOrderPeriodically(auctionId);
-  setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
+  // stop polling after 5 minutes
+  setTimeout(() => clearInterval(intervalId), 60000 * 5);
 }
 
 startStatusCheck(deltaAuction.id);
 ```
 
-#### A more detailed example of Delta Order usage can be found in [examples/delta](./src/examples/delta.ts)
+#### A more detailed example of Delta Order usage can be found in [examples/delta](../src/examples/delta.ts)
 
 
 
@@ -147,12 +124,15 @@ const deltaSDK = constructSimpleSDK(
 
 ### 2. Check which tokens are available on the destination chain.
 
-A limited list of tokens are available in Across, the service facilitating crosschain bridging
+A limited list of tokens are available in Across, the service facilitating crosschain bridging.
 
 ```ts
-const bridgeInfo = await deltaSDK.getBridgeInfo();
+const bridgeRoutes = await deltaSDK.getBridgeRoutes();
 
-const tokensAvailableForBridging = bridgeInfo[SRC_CHAIN_ID]?.[DEST_CHAIN_ID]
+const tokensAvailableForBridging = bridgeRoutes.find(
+  (route) =>
+    route.srcChainId === SRC_CHAIN_ID && route.destChainId === DEST_CHAIN_ID
+)?.tokens;
 ```
 
 
@@ -174,6 +154,8 @@ const deltaPrice = await deltaSDK.getDeltaPrice({
   destDecimals: 6,
   // partner: "..." // if available
 });
+
+// the returned deltaPrice.route already encodes the bridge step for the crosschain swap
 ```
 
 
@@ -198,71 +180,35 @@ See more on accepted Permit variants in [Velora documentation](https://developer
 
 ### 5. Sign and submit a Delta Order
 
-```ts
-// calculate acceptable destAmount
-const slippagePercent = 0.5;
-const destAmountAfterSlippage = (
-  +deltaPrice.destAmount *
-  (1 - slippagePercent / 100)
-).toString(10);
+The crosschain `route` (from a `getDeltaPrice` call with `destChainId`) already carries the bridge details, so submitting is the same as a same-chain order — the server builds the cross-chain Order from the route.
 
+```ts
 const deltaAuction = await deltaSDK.submitDeltaOrder({
-  deltaPrice,
+  route: deltaPrice.route, // crosschain route, includes the bridge step
+  side: deltaPrice.side,
   owner: account,
+  // beneficiary: anotherAccount, // if need to send destToken to another account on destChain
   // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-  srcToken: DAI_TOKEN,
-  destToken: USDC_TOKEN_ON_DEST_CHAIN,
-  srcAmount: amount,
-  destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
-  destChainId: DEST_CHAIN_ID, // required to construct a Crosschain Order
-  beneficiary: anotherAccount, // if need to send destToken to another account on destChain
-  beneficiaryType: 'EOA', // whether the beneficiary on destChain is a smart contract
-  // bridge, // user-constructed Bridge object for Crosschain Orders
+  slippage: 50, // 50 bps = 0.5%
 });
 ```
 
-To construct a Crosschain Delta Order it is required to either:
-* provide both `beneficiary` address and `beneficiaryType` value, so that the `Order.bridge` can be constructed automatically by the SDK.
-* construct Bridge object. Refer to [documentation](https://developers.velora.xyz/api/velora-api/velora-delta-api/build-a-delta-order-to-sign#sign-an-order-cross-chain) for how to do that.
+Across, the service facilitating crosschain bridging, has [special logic when it comes to transferring ETH and WETH](https://docs.across.to/introduction/technical-faq#what-is-the-behavior-of-eth-weth-in-transfers). Refer to the [Velora documentation](https://developers.velora.xyz/api/velora-api/velora-delta-api/build-a-delta-order-to-sign#sign-an-order-cross-chain) for more on cross-chain orders.
 
-This is necessary because Across, the service facilitating crosschain bridging, has [special logic when it comes to transferring ETH and WETH](https://docs.across.to/introduction/technical-faq#what-is-the-behavior-of-eth-weth-in-transfers).
-
-### 5. Wait for Delta Order execution
+### 6. Wait for Delta Order execution
 
 ```ts
-// poll if necessary
-function isExecutedDeltaAuction(
-  auction: Omit<DeltaAuction, 'signature'>,
-  waitForCrosschain = true // only consider executed when destChain work is done
-) {
-  if (auction.status !== 'EXECUTED') return false;
-
-  // crosschain Order is executed on destChain if bridgeStatus is filled
-  if (waitForCrosschain && auction.order.bridge.destinationChainId !== 0) {
-    return auction.bridgeStatus === 'filled';
-  }
-
-  return true;
-}
-
-function fetchOrderPeriodically(auctionId: string) {
+// poll if necessary — v2 status COMPLETED already accounts for the dest-chain bridge
+function startStatusCheck(auctionId: string) {
   const intervalId = setInterval(async () => {
-    const auction = await simpleSDK.delta.getDeltaOrderById(auctionId);
-    console.log('checks: ', auction); // Handle or log the fetched auction as needed
-
-    if (isExecutedDeltaAuction(auction)) {
-      clearInterval(intervalId); // Stop interval if completed
+    const auction = await deltaSDK.getDeltaOrderById(auctionId);
+    if (auction.status === 'COMPLETED') {
+      clearInterval(intervalId); // stop interval once completed
       console.log('Order completed');
     }
   }, 3000);
-  console.log('Order Pending');
-  // Return intervalId to enable clearing the interval if needed externally
-  return intervalId;
-}
-
-function startStatusCheck(auctionId: string) {
-  const intervalId = fetchOrderPeriodically(auctionId);
-  setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
+  // stop polling after 5 minutes
+  setTimeout(() => clearInterval(intervalId), 60000 * 5);
 }
 
 startStatusCheck(deltaAuction.id);

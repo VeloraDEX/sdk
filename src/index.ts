@@ -135,39 +135,54 @@ import type {
   OptionalRate,
   APIVersion,
   ExtraFetchParams,
+  PaginatedResponse,
 } from './types';
 
+// ── Delta ─────────────────────────────────────────────────────────────────
+// Delta is v2 (server-built orders). The previous local-build v1 surface was
+// removed; every Delta symbol below refers to the v2 implementation.
+
+// Shared on-chain order-struct types
 import type {
   DeltaAuctionOrder,
-  DeltaAuction,
-  DeltaAuctionStatus,
-  DeltaAuctionTransaction,
-  BridgeMetadata,
-  BridgeStatus,
   Bridge,
   ExternalDeltaOrder,
+  ProductiveDeltaOrder,
   TWAPDeltaOrder,
   TWAPBuyDeltaOrder,
   TWAPOnChainOrderType,
   OnChainOrderType,
+  DeltaOrderType,
   SwapSideUnion,
   DeltaAmountsWithSlippage,
   DeltaAmountsSellSlippage,
   DeltaAmountsBuySlippage,
   DeltaAmountsExplicit,
-  DeltaAuctionDelta,
-  DeltaAuctionTWAP,
-  DeltaAuctionTWAPBuy,
-  DeltaAuctionExternal,
   DeltaOrderUnion,
-  DeltaAuctionUnion,
   UnifiedDeltaOrderData,
 } from './methods/delta/helpers/types';
+// v2 auction, price & route types
+import type {
+  BuiltDeltaOrder,
+  DeltaAuction,
+  DeltaOrderStatus,
+  DeltaTokenSide,
+  DeltaTransaction,
+  DeltaPrice,
+  DeltaPriceToken,
+  DeltaTokenAmount,
+  BridgeTag,
+  DeltaRoute,
+  DeltaRouteStep,
+  DeltaRouteBridge,
+  DeltaRouteBridgeContractParams,
+  BridgeRoute,
+} from './methods/delta/types';
+
 import {
-  BuildDeltaOrderDataParams,
   BuildDeltaOrderFunctions,
+  BuildDeltaOrderParams,
   constructBuildDeltaOrder,
-  SignableDeltaOrderData,
 } from './methods/delta/buildDeltaOrder';
 import {
   constructPostDeltaOrder,
@@ -178,7 +193,7 @@ import {
 import {
   constructSignDeltaOrder,
   SignDeltaOrderFunctions,
-} from './methods/delta/signDeltaOrder';
+} from './methods/delta';
 import {
   constructPreSignDeltaOrder,
   PreSignDeltaOrderFunctions,
@@ -190,16 +205,11 @@ import {
 import {
   constructGetDeltaPrice,
   GetDeltaPriceFunctions,
-  DeltaPrice,
-  BridgePrice,
-  AvailableBridge,
   DeltaPriceParams,
 } from './methods/delta/getDeltaPrice';
 import {
   constructGetDeltaOrders,
   GetDeltaOrdersFunctions,
-  DeltaOrderFilterByStatus,
-  DeltaOrderFromAPI,
 } from './methods/delta/getDeltaOrders';
 import {
   ApproveTokenForDeltaFunctions,
@@ -210,15 +220,19 @@ import {
   GetPartnerFeeFunctions,
 } from './methods/delta/getPartnerFee';
 import {
-  constructGetBridgeInfo,
-  GetBridgeInfoFunctions,
-  BridgeInfo,
+  constructGetBridgeRoutes,
+  GetBridgeRoutesFunctions,
   BridgeProtocolResponse,
-} from './methods/delta/getBridgeInfo';
+} from './methods/delta/getBridgeRoutes';
 import {
   constructIsTokenSupportedInDelta,
   IsTokenSupportedInDeltaFunctions,
 } from './methods/delta/isTokenSupportedInDelta';
+import {
+  constructGetAgentsList,
+  GetAgentsListFunctions,
+  AgentList,
+} from './methods/delta/getAgentsList';
 
 import {
   constructBuildExternalDeltaOrder,
@@ -226,10 +240,6 @@ import {
   BuildExternalDeltaOrderParams,
 } from './methods/delta/buildExternalDeltaOrder';
 import type { SignableExternalOrderData } from './methods/delta/helpers/buildExternalOrderData';
-import {
-  constructSignExternalDeltaOrder,
-  SignExternalDeltaOrderFunctions,
-} from './methods/delta/signExternalDeltaOrder';
 import {
   constructPostExternalDeltaOrder,
   PostExternalDeltaOrderFunctions,
@@ -242,16 +252,12 @@ import {
 
 import {
   BuildTWAPDeltaOrderParams,
-  BuildTWAPSellOrderParams,
-  BuildTWAPBuyOrderParams,
+  BuildTWAPSellDeltaOrderParams,
+  BuildTWAPBuyDeltaOrderParams,
   BuildTWAPDeltaOrderFunctions,
   constructBuildTWAPDeltaOrder,
 } from './methods/delta/buildTWAPDeltaOrder';
 import type { SignableTWAPOrderData } from './methods/delta/helpers/buildTWAPOrderData';
-import {
-  constructSignTWAPDeltaOrder,
-  SignTWAPDeltaOrderFunctions,
-} from './methods/delta/signTWAPDeltaOrder';
 import {
   constructPostTWAPDeltaOrder,
   PostTWAPDeltaOrderFunctions,
@@ -273,6 +279,9 @@ import {
 } from './methods/quote/getQuote';
 import {
   CancelDeltaOrderFunctions,
+  CancelDeltaOrder,
+  SignCancelDeltaOrderRequest,
+  PostCancelDeltaOrderRequest,
   constructCancelDeltaOrder,
 } from './methods/delta/cancelDeltaOrder';
 import {
@@ -286,6 +295,7 @@ import {
   CancelDeltaOrderData,
   SignableCancelDeltaOrderData,
 } from './methods/delta/helpers/buildCancelDeltaOrderData';
+import { SignableDeltaOrderData } from './methods/delta/helpers/buildDeltaOrderData';
 
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
 
@@ -376,21 +386,20 @@ export {
   constructCancelDeltaOrder,
   constructDeltaTokenModule,
   constructApproveTokenForDelta,
+  constructGetAgentsList,
   // External Delta methods
   constructBuildExternalDeltaOrder,
-  constructSignExternalDeltaOrder,
   constructPostExternalDeltaOrder,
   constructPreSignExternalDeltaOrder,
   // TWAP Delta methods
   constructBuildTWAPDeltaOrder,
-  constructSignTWAPDeltaOrder,
   constructPostTWAPDeltaOrder,
   constructPreSignTWAPDeltaOrder,
   // Quote methods
   constructGetQuote,
   // different helpers
   constructGetPartnerFee,
-  constructGetBridgeInfo,
+  constructGetBridgeRoutes,
   constructIsTokenSupportedInDelta,
   constructEthersContractCaller, // same as constructEthersV5ContractCaller for backwards compatibility
   constructEthersV5ContractCaller,
@@ -451,35 +460,33 @@ export type {
   BuildNFTOrderInput,
   BuildNFTOrderDataInput,
   NFTOrdersUserParams,
-  //types for Delta methods
+  // types for Delta methods
   DeltaPrice,
-  BridgePrice,
   DeltaPriceParams,
+  DeltaPriceToken,
+  DeltaTokenAmount,
+  DeltaRoute,
+  DeltaRouteStep,
+  DeltaRouteBridge,
+  DeltaRouteBridgeContractParams,
+  BridgeTag,
+  BridgeRoute,
+  BuiltDeltaOrder,
   DeltaAuctionOrder,
   DeltaAuction,
-  DeltaAuctionDelta,
-  DeltaAuctionTWAP,
-  DeltaAuctionTWAPBuy,
-  DeltaAuctionExternal,
+  DeltaOrderStatus,
+  DeltaTokenSide,
+  DeltaTransaction,
   DeltaOrderUnion,
-  DeltaAuctionUnion,
   UnifiedDeltaOrderData,
-  DeltaAuctionStatus,
-  DeltaAuctionTransaction,
-  DeltaOrderFilterByStatus,
-  DeltaOrderFromAPI,
   CancelDeltaOrderData,
   SignableCancelDeltaOrderData,
-  // bridge part of DeltaOrder
-  BridgeMetadata,
-  BridgeStatus,
-  Bridge,
-  BridgeInfo,
-  AvailableBridge,
-  BridgeProtocolResponse,
-  BuildDeltaOrderDataParams,
-  BuildDeltaOrderFunctions,
   SignableDeltaOrderData,
+  // bridge part of DeltaOrder
+  Bridge,
+  BridgeProtocolResponse,
+  BuildDeltaOrderFunctions,
+  BuildDeltaOrderParams,
   DeltaOrderToPost,
   PostDeltaOrderFunctions,
   PostDeltaOrderParams,
@@ -488,18 +495,27 @@ export type {
   GetDeltaContractFunctions,
   GetDeltaPriceFunctions,
   GetDeltaOrdersFunctions,
+  GetBridgeRoutesFunctions,
+  GetAgentsListFunctions,
+  AgentList,
   ApproveTokenForDeltaFunctions,
   CancelDeltaOrderFunctions,
+  CancelDeltaOrder,
+  SignCancelDeltaOrderRequest,
+  PostCancelDeltaOrderRequest,
   DeltaTokenModuleFunctions,
   CancelAndWithdrawDeltaOrderParams,
   DepositNativeAndPreSignParams,
   DepositNativeAndPreSignDeltaOrderParams,
   // External Delta types
   ExternalDeltaOrder,
+  // Productive Delta types
+  ProductiveDeltaOrder,
   TWAPDeltaOrder,
   TWAPBuyDeltaOrder,
   TWAPOnChainOrderType,
   OnChainOrderType,
+  DeltaOrderType,
   DeltaAmountsWithSlippage,
   DeltaAmountsSellSlippage,
   DeltaAmountsBuySlippage,
@@ -507,17 +523,15 @@ export type {
   SignableExternalOrderData,
   BuildExternalDeltaOrderParams,
   BuildExternalDeltaOrderFunctions,
-  SignExternalDeltaOrderFunctions,
   PostExternalDeltaOrderFunctions,
   PostExternalDeltaOrderParams,
   PreSignExternalDeltaOrderFunctions,
   // TWAP Delta types
   BuildTWAPDeltaOrderParams,
-  BuildTWAPSellOrderParams,
-  BuildTWAPBuyOrderParams,
+  BuildTWAPSellDeltaOrderParams,
+  BuildTWAPBuyDeltaOrderParams,
   BuildTWAPDeltaOrderFunctions,
   SignableTWAPOrderData,
-  SignTWAPDeltaOrderFunctions,
   PostTWAPDeltaOrderFunctions,
   PostTWAPDeltaOrderParams,
   PreSignTWAPDeltaOrderFunctions,
@@ -534,7 +548,6 @@ export type {
   ConstructProviderFetchInput,
   // other types
   GetPartnerFeeFunctions,
-  GetBridgeInfoFunctions,
   IsTokenSupportedInDeltaFunctions,
   Token,
   Address,
@@ -548,6 +561,7 @@ export type {
   APIVersion,
   SwapSideUnion,
   ExtraFetchParams,
+  PaginatedResponse,
 };
 
 export { SDKConfig, constructPartialSDK } from './sdk/partial';

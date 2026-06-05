@@ -1,12 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import axios from 'axios';
 import { ethers, Wallet } from 'ethersV5';
-import {
-  constructSimpleSDK,
-  ContractMethod,
-  SwapSide,
-  SimpleSDKProviderOptions,
-} from '..';
+import { constructSimpleSDK, SwapSide, SimpleSDKProviderOptions } from '..';
 
 const provider = ethers.getDefaultProvider(1);
 const signer = Wallet.createRandom().connect(provider);

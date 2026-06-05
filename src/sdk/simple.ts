@@ -129,9 +129,9 @@ import {
   GetQuoteFunctions,
 } from '../methods/quote/getQuote';
 import {
-  constructGetBridgeInfo,
-  GetBridgeInfoFunctions,
-} from '../methods/delta/getBridgeInfo';
+  constructGetBridgeRoutes,
+  GetBridgeRoutesFunctions,
+} from '../methods/delta/getBridgeRoutes';
 import {
   constructIsTokenSupportedInDelta,
   IsTokenSupportedInDeltaFunctions,
@@ -164,7 +164,7 @@ export type DeltaFetchMethods = BuildDeltaOrderFunctions &
   GetDeltaPriceFunctions &
   GetDeltaContractFunctions &
   GetPartnerFeeFunctions &
-  GetBridgeInfoFunctions &
+  GetBridgeRoutesFunctions &
   IsTokenSupportedInDeltaFunctions &
   PostDeltaOrderFunctions;
 
@@ -294,7 +294,7 @@ export function constructSimpleSDK(
       constructGetDeltaPrice,
       constructGetDeltaContract,
       constructGetPartnerFee,
-      constructGetBridgeInfo,
+      constructGetBridgeRoutes,
       constructIsTokenSupportedInDelta
     );
 

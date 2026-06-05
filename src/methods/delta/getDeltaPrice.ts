@@ -1,5 +1,3 @@
-import { Prettify } from 'viem';
-import { Bridge } from '../..';
 import { API_URL, SwapSide } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
 import type {
@@ -7,14 +5,14 @@ import type {
   EnumerateLiteral,
   RequestParameters,
 } from '../../types';
-import { BridgePriceInfo } from './helpers/types';
+import type { DeltaPrice } from './types';
 
 type SwapSideUnion = EnumerateLiteral<typeof SwapSide>;
 
 export type DeltaPriceParams = {
-  /** @description Source Token Address. Not Native Token */
+  /** @description Source Token Address */
   srcToken: string;
-  /** @description Destination Token Address */
+  /** @description Destination Token Address. For Crosschain Orders, the destination token on the destination chain */
   destToken: string;
   /** @description srcToken amount in wei */
   amount: string;
@@ -25,16 +23,16 @@ export type DeltaPriceParams = {
   /** @description User's Wallet Address */
   userAddress?: string;
   /** @description Beneficiary Address */
-  beneficiary?: string; // beneficiary==owner if no transferTo
+  beneficiary?: string;
   /** @description Partner string. */
   partner?: string;
-  /** @description Used together with `partner` if provided. Represented in basis points, 50bps=0.5% */
+  /** @description Partner fee in basis points (bps), 50bps=0.5% */
   partnerFeeBps?: number;
   /** @description Destination Chain ID for Crosschain Orders */
   destChainId?: number;
   /** @description SELL or BUY, default is SELL */
   side?: SwapSideUnion;
-  /** @description In %. It's a way to bypass the API price impact check (default = 15%) */
+  /** @description In %. Bypasses the API price impact check (default = 15%) */
   maxImpact?: number;
   maxUSDImpact?: number;
 
@@ -52,101 +50,20 @@ type DeltaPriceQueryOptions = Omit<
   DeltaPriceParams,
   'includeAgents' | 'excludeAgents' | 'includeBridges' | 'excludeBridges'
 > & {
-  chainId: number; // will return error from API on unsupported chains
+  chainId: number;
   includeAgents?: string;
   excludeAgents?: string;
   includeBridges?: string;
   excludeBridges?: string;
 };
 
-export type DeltaPrice = {
-  srcToken: string;
-  destToken: string;
-  srcAmount: string;
-  /** @description Available for BUY side */
-  srcAmountBeforeFee?: string;
-  destAmount: string;
-  /** @description Available for SELL side */
-  destAmountBeforeFee?: string;
-  /** @description amount of the final outcome token */
-  receivedDestAmount: string;
-  receivedDestUSD: string;
-  /** @description Available for SELL side */
-  receivedDestAmountBeforeFee?: string;
-  /** @description Available for SELL side */
-  receivedDestUSDBeforeFee?: string;
-  gasCost: string;
-  gasCostBeforeFee: string;
-  gasCostUSD: string;
-  gasCostUSDBeforeFee: string;
-  srcUSD: string;
-  /** @description Available for BUY side */
-  srcUSDBeforeFee?: string;
-  destUSD: string;
-  /** @description Available for SELL side */
-  destUSDBeforeFee?: string;
-  partner: string;
-  partnerFee: number; // in %
-  hmac: string;
-  bridge: Bridge; // for single-chain DeltaPrice, it's DEFAULT_BRIDGE
-};
-
-type AvailableBridgePrice = Pick<
-  DeltaPrice,
-  | 'srcAmount'
-  | 'srcAmountBeforeFee' // Available for BUY side
-  | 'srcUSD'
-  | 'srcUSDBeforeFee' // Available for BUY side
-  | 'destToken'
-  | 'destAmount'
-  | 'destAmountBeforeFee' // Available for SELL side
-  | 'destUSD'
-  | 'destUSDBeforeFee' // Available for SELL side
-  | 'gasCostUSD'
-  | 'gasCost'
-  | 'gasCostUSDBeforeFee'
-  | 'gasCostBeforeFee'
-  | 'receivedDestAmount'
-  | 'receivedDestAmountBeforeFee'
-  | 'receivedDestUSD'
-  | 'receivedDestUSDBeforeFee'
->;
-
-export type AvailableBridge = Prettify<
-  AvailableBridgePrice & Pick<BridgePrice, 'bridge' | 'bridgeInfo'>
->;
-
-export type BridgePrice = Omit<DeltaPrice, 'bridge'> & {
-  // destAmountAfterBridge: string; // became bridgeInfo.destAmountAfterBridge
-  // destUSDAfterBridge: string; // became bridgeInfo.destUSDAfterBridge
-  // bridgeFee: string; // became bridgeInfo.fees[0].amount
-  // bridgeFeeUSD: string; // became bridgeInfo.fees[0].amountInUSD
-  // poolAddress: string;
-  bridge: Bridge;
-  bridgeInfo: BridgePriceInfo;
-  availableBridges: AvailableBridge[];
-};
-
-type DeltaPriceResponse = {
-  price: DeltaPrice | BridgePrice;
-  deltaAddress: string;
-};
-
-interface GetDeltaPrice {
-  (
-    options: DeltaPriceParams & { destChainId: number },
-    requestParams?: RequestParameters
-  ): Promise<BridgePrice>;
-  (
-    options: DeltaPriceParams & { destChainId?: undefined },
-    requestParams?: RequestParameters
-  ): Promise<DeltaPrice>;
-  (options: DeltaPriceParams, requestParams?: RequestParameters): Promise<
-    DeltaPrice | BridgePrice
-  >;
-}
+type GetDeltaPrice = (
+  options: DeltaPriceParams,
+  requestParams?: RequestParameters
+) => Promise<DeltaPrice>;
 
 export type GetDeltaPriceFunctions = {
+  /** @description Fetch a v2 price quote (route-based response). */
   getDeltaPrice: GetDeltaPrice;
 };
 
@@ -155,24 +72,9 @@ export const constructGetDeltaPrice = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): GetDeltaPriceFunctions => {
-  const pricesUrl = `${apiURL}/delta/prices` as const;
+  const pricesUrl = `${apiURL}/delta/v2/prices` as const;
 
-  async function getDeltaPrice(
-    options: DeltaPriceParams & { destChainId: number },
-    requestParams?: RequestParameters
-  ): Promise<BridgePrice>;
-  async function getDeltaPrice(
-    options: DeltaPriceParams & { destChainId?: undefined },
-    requestParams?: RequestParameters
-  ): Promise<DeltaPrice>;
-  async function getDeltaPrice(
-    options: DeltaPriceParams,
-    requestParams?: RequestParameters
-  ): Promise<DeltaPrice | BridgePrice>;
-  async function getDeltaPrice(
-    options: DeltaPriceParams,
-    requestParams?: RequestParameters
-  ): Promise<DeltaPrice | BridgePrice> {
+  const getDeltaPrice: GetDeltaPrice = async (options, requestParams) => {
     const {
       includeAgents,
       excludeAgents,
@@ -180,41 +82,27 @@ export const constructGetDeltaPrice = ({
       excludeBridges,
       ...rest
     } = options;
-    const includeAgentsString = includeAgents
-      ? includeAgents.join(',')
-      : undefined;
-    const excludeAgentsString = excludeAgents
-      ? excludeAgents.join(',')
-      : undefined;
-    const includeBridgesString = includeBridges
-      ? includeBridges.join(',')
-      : undefined;
-    const excludeBridgesString = excludeBridges
-      ? excludeBridges.join(',')
-      : undefined;
 
     const search = constructSearchString<DeltaPriceQueryOptions>({
       ...rest,
       chainId,
       side: options.side ?? SwapSide.SELL,
-      includeAgents: includeAgentsString,
-      excludeAgents: excludeAgentsString,
-      includeBridges: includeBridgesString,
-      excludeBridges: excludeBridgesString,
+      includeAgents: includeAgents?.join(','),
+      excludeAgents: excludeAgents?.join(','),
+      includeBridges: includeBridges?.join(','),
+      excludeBridges: excludeBridges?.join(','),
     });
 
     const fetchURL = `${pricesUrl}${search}` as const;
 
-    const data = await fetcher<DeltaPriceResponse>({
+    const data = await fetcher<DeltaPrice>({
       url: fetchURL,
       method: 'GET',
       requestParams,
     });
 
-    return data.price;
-  }
-
-  return {
-    getDeltaPrice,
+    return data;
   };
+
+  return { getDeltaPrice };
 };

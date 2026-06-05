@@ -22,7 +22,6 @@ const contractCaller = constructEthersContractCaller(
   account
 );
 
-// type AdaptersFunctions & ApproveTokenFunctions<ethers.ContractTransaction>
 const deltaSDK = constructPartialSDK(
   {
     chainId: 1,
@@ -55,19 +54,18 @@ async function simpleDeltaFlow() {
   await tx.wait();
 
   const deltaAuction = await deltaSDK.submitDeltaOrder({
-    deltaPrice,
+    route: deltaPrice.route, // or pick from deltaPrice.alternatives
+    side: deltaPrice.side,
     owner: account,
     // beneficiary: anotherAccount, // if need to send destToken to another account
     // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-    srcToken: DAI_TOKEN,
-    destToken: USDC_TOKEN,
-    srcAmount: amount,
-    slippage: 50, // 50 bps = 0.5% slippage, destAmount auto-computed from deltaPrice
+    slippage: 50, // 50 bps = 0.5% slippage
   });
 
   // poll if necessary
   startStatusCheck(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
 }
+
 async function manualDeltaFlow() {
   const amount = '1000000000000'; // wei
 
@@ -87,25 +85,112 @@ async function manualDeltaFlow() {
   const tx = await deltaSDK.approveTokenForDelta(amount, DAI_TOKEN);
   await tx.wait();
 
-  const signableOrderData = await deltaSDK.buildDeltaOrder({
-    deltaPrice,
+  // server-side build (returns EIP-712 typed data + orderHash)
+  const builtOrder = await deltaSDK.buildDeltaOrder({
+    route: deltaPrice.route, // or pick from deltaPrice.alternatives
+    side: deltaPrice.side,
     owner: account,
     // beneficiary: anotherAccount, // if need to send destToken to another account
     // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-    srcToken: DAI_TOKEN,
-    destToken: USDC_TOKEN,
-    srcAmount: amount,
-    slippage: 50, // 50 bps = 0.5% slippage, destAmount auto-computed from deltaPrice
+    slippage: 50, // 50 bps = 0.5% slippage
   });
 
-  const signature = await deltaSDK.signDeltaOrder(signableOrderData);
+  // one signer for every v2 order type (Order / ExternalOrder / TWAPOrder / TWAPBuyOrder)
+  const signature = await deltaSDK.signDeltaOrder(builtOrder);
 
   const deltaAuction = await deltaSDK.postDeltaOrder({
     // partner: "..." // if available
-    order: signableOrderData.data,
+    order: builtOrder.toSign.value,
     signature,
   });
 
   // poll if necessary
   startStatusCheck(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
+}
+
+// External orders forward execution to an integrator-provided handler contract.
+// Same build/sign/post shape as standard orders, plus { handler, data }.
+// See docs/EXTERNAL_ORDERS.md for handler-specific details (Aave collateral swap, etc.).
+async function externalDeltaFlow() {
+  const amount = ethers.utils.parseUnits('1', 6).toString(); // 1 USDC
+
+  const deltaPrice = await deltaSDK.getDeltaPrice({
+    srcToken: USDC_TOKEN,
+    destToken: DAI_TOKEN,
+    amount,
+    userAddress: account,
+    srcDecimals: 6,
+    destDecimals: 18,
+  });
+
+  const HANDLER = '0xb4a2c36668cf8b19fe08f263e3685a5e16e82912'; // handler contract
+  const HANDLER_DATA =
+    '0x0000000000000000000000000000000000000000000000000000000000000000'; // handler-specific encoded bytes
+
+  const builtOrder = await deltaSDK.buildExternalDeltaOrder({
+    route: deltaPrice.route,
+    side: deltaPrice.side,
+    owner: account,
+    handler: HANDLER,
+    data: HANDLER_DATA,
+    slippage: 50,
+  });
+
+  const signature = await deltaSDK.signDeltaOrder(builtOrder);
+
+  const deltaAuction = await deltaSDK.postExternalDeltaOrder({
+    order: builtOrder.toSign.value,
+    signature,
+  });
+
+  startStatusCheck(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
+}
+
+// TWAP sell splits a total srcAmount into N equal slices executed `interval` seconds apart.
+// The price quote is fetched for a single slice; the server multiplies amounts by numSlices.
+async function twapSellDeltaFlow() {
+  const numSlices = 4;
+  const totalSrcAmount = ethers.utils.parseUnits('100', 18).toString(); // 100 DAI total
+  const perSliceAmount = (
+    BigInt(totalSrcAmount) / BigInt(numSlices)
+  ).toString();
+
+  // quote a single slice — route amounts must match floor(totalSrcAmount / numSlices)
+  const deltaPrice = await deltaSDK.getDeltaPrice({
+    srcToken: DAI_TOKEN,
+    destToken: USDC_TOKEN,
+    amount: perSliceAmount,
+    userAddress: account,
+    srcDecimals: 18,
+    destDecimals: 6,
+  });
+
+  const tx = await deltaSDK.approveTokenForDelta(totalSrcAmount, DAI_TOKEN);
+  await tx.wait();
+
+  const deltaAuction = await deltaSDK.submitTWAPDeltaOrder({
+    onChainOrderType: 'TWAPOrder',
+    route: deltaPrice.route,
+    owner: account,
+    totalSrcAmount,
+    numSlices,
+    interval: 300, // 5 minutes between slices (min 60)
+    slippage: 50,
+  });
+
+  startStatusCheck(() => deltaSDK.getDeltaOrderById(deltaAuction.id));
+}
+
+// Paginated list of a user's orders (returns a { data, total, page, limit, hasMore } envelope).
+async function listUserOrders() {
+  const page1 = await deltaSDK.getDeltaOrders({
+    userAddress: account,
+    page: 1,
+    limit: 50,
+    // status: ['ACTIVE', 'BRIDGING'],
+    // type: 'MARKET',
+  });
+
+  console.log('orders:', page1.data);
+  console.log('total:', page1.total, 'hasMore:', page1.hasMore);
 }
