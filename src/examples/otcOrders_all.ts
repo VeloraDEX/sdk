@@ -8,20 +8,15 @@ import {
   constructPartialSDK,
   constructEthersContractCaller,
   constructAxiosFetcher,
-  // limitOrders methods
-  constructBuildLimitOrder,
-  constructCancelLimitOrder,
-  constructSignLimitOrder,
-  constructGetLimitOrders,
-  constructPostLimitOrder,
-  constructApproveTokenForLimitOrder,
+  // OTCOrders methods
+  constructAllOTCOrdersHandlers,
   // extra types
-  SignableOrderData,
-  LimitOrderToSend,
-  constructBuildLimitOrderTx,
+  OTCOrder,
+  SwappableOrder,
 } from '..';
 
 const account = '0x1234...';
+const takerAccount = '0x5678...';
 
 const fetcher = constructAxiosFetcher(axios);
 
@@ -36,22 +31,17 @@ const contractCaller = constructEthersContractCaller(
   account
 );
 
-// type BuildLimitOrderFunctions
-// & SignLimitOrderFunctions
-// & CancelLimitOrderFunctions<ethers.ContractTransaction>
+// type BuildOTCOrderFunctions
+// & SignOTCOrderFunctions
+// & CancelOTCOrderFunctions<ethers.ContractTransaction>
 // & ApproveTokenFunctions<ethers.ContractTransaction>
-const limitOrderSDK = constructPartialSDK(
+const OTCOrderSDK = constructPartialSDK(
   {
     chainId: 1,
     fetcher,
     contractCaller,
   },
-  constructBuildLimitOrder,
-  constructCancelLimitOrder,
-  constructSignLimitOrder,
-  constructPostLimitOrder,
-  constructGetLimitOrders,
-  constructApproveTokenForLimitOrder
+  constructAllOTCOrdersHandlers
 );
 
 const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
@@ -65,55 +55,25 @@ const orderInput = {
   makerAmount: (1e18).toString(10),
   takerAmount: (8e18).toString(10),
   maker: account,
+  taker: takerAccount,
 };
 
 async function run() {
-  /// cancelling current orders
-  const { orders: currentOrders } = await limitOrderSDK.getLimitOrders({
-    maker: account,
-    type: 'LIMIT',
-  });
-
-  if (currentOrders[0]?.orderHash) {
-    const tx1: ethers.ContractTransaction =
-      await limitOrderSDK.cancelLimitOrder(currentOrders[0].orderHash);
-  }
-
-  const moreOrderHashes = currentOrders
-    .slice(1, 2)
-    .map((order) => order.orderHash);
-
-  const tx2: ethers.ContractTransaction =
-    await limitOrderSDK.cancelLimitOrderBulk(moreOrderHashes);
-
-  /// creating a new order
-
-  const tx3: ethers.ContractTransaction =
-    await limitOrderSDK.approveMakerTokenForLimitOrder(
+  // approve token for the OTC order
+  const tx1: ethers.ContractTransaction =
+    await OTCOrderSDK.approveMakerTokenForOTCOrder(
       orderInput.makerAmount,
       orderInput.makerAsset
     );
 
-  const signableOrderData: SignableOrderData =
-    await limitOrderSDK.buildLimitOrder(orderInput);
-
-  const signature: string = await limitOrderSDK.signLimitOrder(
-    signableOrderData
-  );
-
-  const orderToPostToApi: LimitOrderToSend = {
-    ...signableOrderData.data,
-    signature,
-  };
-
-  const newOrder = await limitOrderSDK.postLimitOrder(orderToPostToApi);
-
-  /// filling an order
+  // builds + signs + posts order to API
+  // new OTC order returned from API
+  const newOTCOrder: OTCOrder = await OTCOrderSDK.submitOTCOrder(orderInput);
 
   // to act as order taker
   const anotherAccount = '0x5678...';
 
-  const limitOrderSDKForTaker = constructPartialSDK(
+  const OTCOrdersSDKForTaker = constructPartialSDK(
     {
       chainId: 1,
       fetcher,
@@ -125,22 +85,26 @@ async function run() {
         anotherAccount
       ),
     },
-    constructBuildLimitOrderTx,
-    constructApproveTokenForLimitOrder
+    constructAllOTCOrdersHandlers
   );
 
-  const tx4: ethers.ContractTransaction =
-    await limitOrderSDKForTaker.approveTakerTokenForLimitOrder(
+  const tx2: ethers.ContractTransaction =
+    await OTCOrdersSDKForTaker.approveTakerTokenForOTCOrder(
       orderInput.takerAmount,
       orderInput.takerAsset
     );
 
+  const executingOrder: SwappableOrder = {
+    ...newOTCOrder,
+    permitMakerAsset: newOTCOrder.permitMakerAsset || undefined,
+  };
+
   const { gas: payloadGas, ...LOPayloadTxParams } =
-    await limitOrderSDKForTaker.buildLimitOrderTx({
+    await OTCOrdersSDKForTaker.buildOTCOrderTx({
       srcDecimals: 18,
       destDecimals: 18,
       userAddress: anotherAccount, // taker
-      orders: [orderToPostToApi],
+      orders: [executingOrder],
     });
 
   const tx5Params = {
@@ -165,7 +129,7 @@ async function run() {
     'provider has signer (JsonRpcProvider)'
   );
 
-  const tx5 = await provider
+  const tx3 = await provider
     .getSigner(anotherAccount)
     .sendTransaction(tx5Params);
 }

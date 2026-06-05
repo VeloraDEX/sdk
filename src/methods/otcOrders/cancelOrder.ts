@@ -18,10 +18,9 @@ export type CancelOrderBulk<T> = (
   requestParams?: RequestParameters
 ) => Promise<T>;
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type CancelLimitOrderFunctions<T> = {
-  cancelLimitOrder: CancelOrder<T>;
-  cancelLimitOrderBulk: CancelOrderBulk<T>;
+export type CancelOTCOrderFunctions<T> = {
+  cancelOTCOrder: CancelOrder<T>;
+  cancelOTCOrdersBulk: CancelOrderBulk<T>;
 };
 
 // much smaller than the whole AugustusRFQ_ABI
@@ -58,15 +57,14 @@ type AvailableMethods = ExtractAbiMethodNames<typeof MinAugustusRFQAbi>;
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export const constructCancelLimitOrder = <T>(
+export const constructCancelOTCOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
-): CancelLimitOrderFunctions<T> => {
+): CancelOTCOrderFunctions<T> => {
   // getAugustusRFQ is cached internally for the same instance of SDK
   // so should persist across same apiUrl & network
   const { getAugustusRFQ } = constructGetSpender(options);
 
-  const cancelLimitOrder: CancelOrder<T> = async (
+  const cancelOTCOrder: CancelOrder<T> = async (
     orderHash,
     overrides = {},
     requestParams
@@ -86,7 +84,7 @@ export const constructCancelLimitOrder = <T>(
     return res;
   };
 
-  const cancelLimitOrderBulk: CancelOrderBulk<T> = async (
+  const cancelOTCOrdersBulk: CancelOrderBulk<T> = async (
     orderHashes,
     overrides = {},
     requestParams
@@ -107,7 +105,7 @@ export const constructCancelLimitOrder = <T>(
   };
 
   return {
-    cancelLimitOrder,
-    cancelLimitOrderBulk,
+    cancelOTCOrder,
+    cancelOTCOrdersBulk,
   };
 };

@@ -27,80 +27,44 @@ import { constructGetTokens, GetTokensFunctions } from './methods/swap/token';
 import { BuildTxFunctions, constructBuildTx } from './methods/swap/transaction';
 
 import {
-  BuildLimitOrderFunctions,
-  BuildLimitOrderInput,
+  BuildOTCOrderFunctions,
+  BuildOTCOrderInput,
   BuildOrderDataInput,
-  constructBuildLimitOrder,
-} from './methods/limitOrders/buildOrder';
+  constructBuildOTCOrder,
+} from './methods/otcOrders/buildOrder';
 import {
-  SignLimitOrderFunctions,
-  constructSignLimitOrder,
-} from './methods/limitOrders/signOrder';
+  SignOTCOrderFunctions,
+  constructSignOTCOrder,
+} from './methods/otcOrders/signOrder';
 import {
-  CancelLimitOrderFunctions,
-  constructCancelLimitOrder,
-} from './methods/limitOrders/cancelOrder';
+  CancelOTCOrderFunctions,
+  constructCancelOTCOrder,
+} from './methods/otcOrders/cancelOrder';
 import {
-  FillOrderDirectlyFunctions,
-  constructFillOrderDirectly,
-} from './methods/limitOrders/fillOrderDirectly';
+  FillOTCOrderFunctions,
+  constructFillOTCOrder,
+} from './methods/otcOrders/fillOrderDirectly';
 import {
-  GetLimitOrdersFunctions,
-  constructGetLimitOrders,
-  LimitOrdersUserParams,
-} from './methods/limitOrders/getOrders';
+  GetOTCOrdersFunctions,
+  constructGetOTCOrders,
+  OTCOrdersUserParams,
+} from './methods/otcOrders/getOrders';
 import {
-  PostLimitOrderFunctions,
-  constructPostLimitOrder,
-} from './methods/limitOrders/postOrder';
+  PostOTCOrderFunctions,
+  constructPostOTCOrder,
+} from './methods/otcOrders/postOrder';
 import {
-  ApproveTokenForLimitOrderFunctions,
-  constructApproveTokenForLimitOrder,
-} from './methods/limitOrders/approveForOrder';
+  ApproveTokenForOTCOrderFunctions,
+  constructApproveTokenForOTCOrder,
+} from './methods/otcOrders/approveForOrder';
 import {
-  GetLimitOrdersContractFunctions,
-  constructGetLimitOrdersContract,
-} from './methods/limitOrders/getOrdersContract';
+  GetOTCOrdersContractFunctions,
+  constructGetOTCOrdersContract,
+} from './methods/otcOrders/getOrdersContract';
 import {
-  BuildLimitOrdersTxFunctions,
-  constructBuildLimitOrderTx,
-} from './methods/limitOrders/transaction';
-
-import {
-  BuildNFTOrderFunctions,
-  BuildNFTOrderInput,
-  BuildNFTOrderDataInput,
-  constructBuildNFTOrder,
-} from './methods/nftOrders/buildOrder';
-import {
-  SignNFTOrderFunctions,
-  constructSignNFTOrder,
-} from './methods/nftOrders/signOrder';
-import {
-  CancelNFTOrderFunctions,
-  constructCancelNFTOrder,
-} from './methods/nftOrders/cancelOrder';
-import {
-  GetNFTOrdersFunctions,
-  constructGetNFTOrders,
-  NFTOrdersUserParams,
-} from './methods/nftOrders/getOrders';
-import {
-  PostNFTOrderFunctions,
-  constructPostNFTOrder,
-} from './methods/nftOrders/postOrder';
-import {
-  ApproveTokenForNFTOrderFunctions,
-  constructApproveTokenForNFTOrder,
-} from './methods/nftOrders/approveForOrder';
-import {
-  GetNFTOrdersContractFunctions,
-  constructGetNFTOrdersContract,
-} from './methods/nftOrders/getOrdersContract';
-import {
-  BuildNFTOrdersTxFunctions,
-  constructBuildNFTOrderTx,
-} from './methods/nftOrders/transaction';
+  BuildOTCOrdersTxFunctions,
+  constructBuildOTCOrderTx,
+} from './methods/otcOrders/transaction';
 
 import {
   constructEthersContractCaller,
@@ -300,10 +264,10 @@ import { SignableDeltaOrderData } from './methods/delta/helpers/buildDeltaOrderD
 export { constructSwapSDK, SwapSDKMethods } from './methods/swap';
 
 export {
-  constructAllLimitOrdersHandlers,
-  constructSubmitLimitOrder,
-  LimitOrderHandlers,
-} from './methods/limitOrders';
+  constructAllOTCOrdersHandlers,
+  constructSubmitOTCOrder,
+  OTCOrderHandlers,
+} from './methods/otcOrders';
 
 export {
   constructAllDeltaOrdersHandlers,
@@ -324,23 +288,16 @@ export type {
   BuildOptionsWithGasPrice,
   BuildTxInput,
   BuildSwapTxInput,
-  BuildLimitOrderTxInput,
-  BuildNFTOrderTxInput,
-  BuildSwapAndLimitOrderTxInput,
-  BuildSwapAndNFTOrderTxInput,
+  BuildOTCOrderTxInput,
+  BuildSwapAndOTCOrderTxInput,
   SwappableOrder,
-  SwappableNFTOrder,
 } from './methods/swap/transaction';
 export type { Web3UnpromiEvent } from './helpers';
 export * from './constants';
 export type {
   SignableOrderData,
   OrderData,
-} from './methods/limitOrders/helpers/buildOrderData';
-export type {
-  SignableNFTOrderData,
-  NFTOrderData,
-} from './methods/nftOrders/helpers/buildOrderData';
+} from './methods/otcOrders/helpers/buildOrderData';
 export type { SignableTypedData } from './methods/common/orders/buildOrderData';
 
 // can import these individually
@@ -356,25 +313,16 @@ export {
   constructGetAdapters,
   constructGetRate,
   constructSwapTx,
-  // limitOrders methods:
-  constructBuildLimitOrder,
-  constructSignLimitOrder,
-  constructCancelLimitOrder,
-  constructFillOrderDirectly,
-  constructGetLimitOrders,
-  constructPostLimitOrder,
-  constructApproveTokenForLimitOrder,
-  constructGetLimitOrdersContract,
-  constructBuildLimitOrderTx,
-  // nftOrders methods
-  constructBuildNFTOrder,
-  constructSignNFTOrder,
-  constructCancelNFTOrder,
-  constructGetNFTOrders,
-  constructPostNFTOrder,
-  constructApproveTokenForNFTOrder,
-  constructGetNFTOrdersContract,
-  constructBuildNFTOrderTx,
+  // OTCOrders methods:
+  constructBuildOTCOrder,
+  constructSignOTCOrder,
+  constructCancelOTCOrder,
+  constructFillOTCOrder,
+  constructGetOTCOrders,
+  constructPostOTCOrder,
+  constructApproveTokenForOTCOrder,
+  constructGetOTCOrdersContract,
+  constructBuildOTCOrderTx,
   // Delta methods
   constructBuildDeltaOrder,
   constructPostDeltaOrder,
@@ -435,31 +383,19 @@ export type {
   GetRateInput,
   BuildTxFunctions,
   GetSwapTxFunctions,
-  // types for limitOrders methods:
-  BuildLimitOrderFunctions,
-  SignLimitOrderFunctions,
-  CancelLimitOrderFunctions,
-  FillOrderDirectlyFunctions,
-  GetLimitOrdersContractFunctions,
-  BuildLimitOrdersTxFunctions,
-  BuildLimitOrderInput,
+  // types for OTCOrders methods:
+  BuildOTCOrderFunctions,
+  SignOTCOrderFunctions,
+  CancelOTCOrderFunctions,
+  FillOTCOrderFunctions,
+  GetOTCOrdersContractFunctions,
+  BuildOTCOrdersTxFunctions,
+  BuildOTCOrderInput,
   BuildOrderDataInput,
-  PostLimitOrderFunctions,
-  ApproveTokenForLimitOrderFunctions,
-  GetLimitOrdersFunctions,
-  LimitOrdersUserParams,
-  // types for nftOrders methods:
-  SignNFTOrderFunctions,
-  CancelNFTOrderFunctions,
-  GetNFTOrdersFunctions,
-  PostNFTOrderFunctions,
-  ApproveTokenForNFTOrderFunctions,
-  GetNFTOrdersContractFunctions,
-  BuildNFTOrdersTxFunctions,
-  BuildNFTOrderFunctions,
-  BuildNFTOrderInput,
-  BuildNFTOrderDataInput,
-  NFTOrdersUserParams,
+  PostOTCOrderFunctions,
+  ApproveTokenForOTCOrderFunctions,
+  GetOTCOrdersFunctions,
+  OTCOrdersUserParams,
   // types for Delta methods
   DeltaPrice,
   DeltaPriceParams,
@@ -573,13 +509,9 @@ export {
   ProviderOptions as SimpleSDKProviderOptions,
 } from './sdk/simple';
 
-// bundled methods for limitOrders
-export * from './methods/limitOrders';
-export * from './methods/limitOrders/helpers/types';
-// bundled methods for nftOrders
-export * from './methods/nftOrders';
-export * from './methods/nftOrders/helpers/types';
-export { AssetType } from './methods/nftOrders/helpers/misc';
+// bundled methods for OTCOrders
+export * from './methods/otcOrders';
+export * from './methods/otcOrders/helpers/types';
 
 // helpers for Delta Orders
 export { OrderHelpers } from './methods/delta/helpers/orders';

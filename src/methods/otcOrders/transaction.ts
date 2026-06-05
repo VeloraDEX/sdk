@@ -8,9 +8,9 @@ import {
   DEFAULT_VERSION,
 } from '../../constants';
 import {
-  BuildLimitOrderTxInput,
+  BuildOTCOrderTxInput,
   BuildOptions,
-  BuildSwapAndLimitOrderTxInput,
+  BuildSwapAndOTCOrderTxInput,
   TransactionParams,
   constructBuildTx,
 } from '../swap/transaction';
@@ -19,52 +19,50 @@ import type { OrderData } from './buildOrder';
 import { isFilledArray } from '../../helpers/misc';
 import type { RequestParameters } from '../../types';
 
-type MinBuildSwapAndLimitOrderTxInput = Omit<
+type MinBuildSwapAndOTCOrderTxInput = Omit<
   // these are derived from `orders`
-  BuildSwapAndLimitOrderTxInput,
+  BuildSwapAndOTCOrderTxInput,
   'srcToken' | 'srcAmount' | 'destToken' | 'destDecimals'
 >;
 
-type BuildSwapAndLimitOrdersTx = (
-  params: MinBuildSwapAndLimitOrderTxInput,
+type BuildSwapAndOTCOrdersTx = (
+  params: MinBuildSwapAndOTCOrderTxInput,
   options?: BuildOptions,
   requestParams?: RequestParameters
 ) => Promise<TransactionParams>;
 
-type MinBuildLimitOrderTxInput = Omit<
-  BuildLimitOrderTxInput,
+type MinBuildOTCOrderTxInput = Omit<
+  BuildOTCOrderTxInput,
   // these are derived from `orders`
   'srcToken' | 'srcAmount' | 'destToken' | 'slippage'
   // `slippage` doesn't participate as we derive `srcAmount` already
 >;
 
-type BuildLimitOrdersTx = (
-  params: MinBuildLimitOrderTxInput,
+type BuildOTCOrdersTx = (
+  params: MinBuildOTCOrderTxInput,
   options?: BuildOptions,
   requestParams?: RequestParameters
 ) => Promise<TransactionParams>;
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type BuildLimitOrdersTxFunctions = {
-  getLimitOrdersRate: GetLimitOrdersRate;
-  buildLimitOrderTx: BuildLimitOrdersTx;
-  buildSwapAndLimitOrderTx: BuildSwapAndLimitOrdersTx;
+export type BuildOTCOrdersTxFunctions = {
+  getOTCOrdersRate: GetOTCOrdersRate;
+  buildOTCOrderTx: BuildOTCOrdersTx;
+  buildSwapAndOTCOrderTx: BuildSwapAndOTCOrdersTx;
 };
 
-type GetLimitOrdersRate = (
+type GetOTCOrdersRate = (
   // `amount`, if given, must equal the total of the orders' `takerAmounts`
   options: Omit<GetRateInput, 'amount' | 'side'> & { amount?: string },
   orders: CheckableOrderData[],
   requestParams?: RequestParameters
 ) => Promise<OptimalRate>;
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export const constructBuildLimitOrderTx = ({
+export const constructBuildOTCOrderTx = ({
   apiURL = API_URL,
   version = DEFAULT_VERSION,
   chainId,
   fetcher,
-}: ConstructFetchInput): BuildLimitOrdersTxFunctions => {
+}: ConstructFetchInput): BuildOTCOrdersTxFunctions => {
   const { buildTx: buildSwapTx } = constructBuildTx({
     apiURL,
     chainId,
@@ -72,15 +70,15 @@ export const constructBuildLimitOrderTx = ({
     version,
   });
 
-  const { getRate: getSwapAndLimitOrderRate } = constructGetRate({
+  const { getRate: getSwapAndOTCOrderRate } = constructGetRate({
     apiURL,
     version,
     chainId,
     fetcher,
   });
 
-  //  returns priceRoute that would allow to swap from srcToken to destToken(=order.takerAsset) followed by filling limit orders
-  const getLimitOrdersRate: GetLimitOrdersRate = async (
+  //  returns priceRoute that would allow to swap from srcToken to destToken(=order.takerAsset) followed by filling OTC orders
+  const getOTCOrdersRate: GetOTCOrdersRate = async (
     { srcToken, destToken, amount, options: _options = {}, ...rest },
     orders,
     requestParams
@@ -120,15 +118,12 @@ export const constructBuildLimitOrderTx = ({
     };
 
     // priceRoute
-    const optimalRate = await getSwapAndLimitOrderRate(
-      rateInput,
-      requestParams
-    );
+    const optimalRate = await getSwapAndOTCOrderRate(rateInput, requestParams);
     return optimalRate;
   };
 
   // derive srcToken, destToken and srcAmount from orders[]
-  const buildLimitOrderTx: BuildLimitOrdersTx = (
+  const buildOTCOrderTx: BuildOTCOrdersTx = (
     params,
     options,
     requestParams
@@ -137,7 +132,7 @@ export const constructBuildLimitOrderTx = ({
       params.orders
     );
 
-    const fillParams: BuildLimitOrderTxInput = {
+    const fillParams: BuildOTCOrderTxInput = {
       ...params,
       // taker supplies takerAsset
       srcToken: takerAsset,
@@ -150,14 +145,14 @@ export const constructBuildLimitOrderTx = ({
     return buildSwapTx(fillParams, options, requestParams);
   };
 
-  const buildSwapAndLimitOrderTx: BuildSwapAndLimitOrdersTx = (
+  const buildSwapAndOTCOrderTx: BuildSwapAndOTCOrdersTx = (
     params,
     options,
     requestParams
   ) => {
     const { makerAsset } = checkAndParseOrders(params.orders);
 
-    const fillParams: BuildSwapAndLimitOrderTxInput = {
+    const fillParams: BuildSwapAndOTCOrderTxInput = {
       ...params,
       // taker supplies srcToken
       srcToken: params.priceRoute.srcToken,
@@ -175,9 +170,9 @@ export const constructBuildLimitOrderTx = ({
   };
 
   return {
-    getLimitOrdersRate,
-    buildLimitOrderTx,
-    buildSwapAndLimitOrderTx,
+    getOTCOrdersRate,
+    buildOTCOrderTx,
+    buildSwapAndOTCOrderTx,
   };
 };
 

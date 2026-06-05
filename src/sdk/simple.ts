@@ -44,54 +44,29 @@ import type Web3 from 'web3';
 
 import type { SwapSDKMethods } from '../methods/swap';
 import {
-  BuildLimitOrderFunctions,
-  constructBuildLimitOrder,
-} from '../methods/limitOrders/buildOrder';
+  BuildOTCOrderFunctions,
+  constructBuildOTCOrder,
+} from '../methods/otcOrders/buildOrder';
 import {
-  constructPostLimitOrder,
-  PostLimitOrderFunctions,
-} from '../methods/limitOrders/postOrder';
+  constructPostOTCOrder,
+  PostOTCOrderFunctions,
+} from '../methods/otcOrders/postOrder';
 import {
-  constructGetLimitOrders,
-  GetLimitOrdersFunctions,
-} from '../methods/limitOrders/getOrders';
+  constructGetOTCOrders,
+  GetOTCOrdersFunctions,
+} from '../methods/otcOrders/getOrders';
 import {
-  constructGetLimitOrdersContract,
-  GetLimitOrdersContractFunctions,
-} from '../methods/limitOrders/getOrdersContract';
+  constructGetOTCOrdersContract,
+  GetOTCOrdersContractFunctions,
+} from '../methods/otcOrders/getOrdersContract';
 import {
-  constructBuildLimitOrderTx,
-  BuildLimitOrdersTxFunctions,
-} from '../methods/limitOrders/transaction';
+  constructBuildOTCOrderTx,
+  BuildOTCOrdersTxFunctions,
+} from '../methods/otcOrders/transaction';
 import {
-  constructAllLimitOrdersHandlers,
-  LimitOrderHandlers,
-} from '../methods/limitOrders';
-
-import {
-  constructGetNFTOrdersContract,
-  GetNFTOrdersContractFunctions,
-} from '../methods/nftOrders/getOrdersContract';
-import {
-  constructGetNFTOrders,
-  GetNFTOrdersFunctions,
-} from '../methods/nftOrders/getOrders';
-import {
-  BuildNFTOrderFunctions,
-  constructBuildNFTOrder,
-} from '../methods/nftOrders/buildOrder';
-import {
-  constructPostNFTOrder,
-  PostNFTOrderFunctions,
-} from '../methods/nftOrders/postOrder';
-import {
-  constructBuildNFTOrderTx,
-  BuildNFTOrdersTxFunctions,
-} from '../methods/nftOrders/transaction';
-import {
-  constructAllNFTOrdersHandlers,
-  NFTOrderHandlers,
-} from '../methods/nftOrders';
+  constructAllOTCOrdersHandlers,
+  OTCOrderHandlers,
+} from '../methods/otcOrders';
 
 import { constructSwapSDK } from '../methods/swap';
 import type { AxiosRequirement } from '../helpers/fetchers/axios';
@@ -145,19 +120,11 @@ export type SwapFetchMethods = GetBalancesFunctions &
   GetRateFunctions &
   GetSwapTxFunctions;
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type LimitOrdersFetchMethods = GetLimitOrdersContractFunctions &
-  GetLimitOrdersFunctions &
-  BuildLimitOrderFunctions &
-  PostLimitOrderFunctions &
-  BuildLimitOrdersTxFunctions;
-
-/** @deprecated NFT Orders are deprecated and will be removed in a future version. */
-export type NFTOrdersFetchMethods = GetNFTOrdersContractFunctions &
-  GetNFTOrdersFunctions &
-  BuildNFTOrderFunctions &
-  PostNFTOrderFunctions &
-  BuildNFTOrdersTxFunctions;
+export type OTCOrdersFetchMethods = GetOTCOrdersContractFunctions &
+  GetOTCOrdersFunctions &
+  BuildOTCOrderFunctions &
+  PostOTCOrderFunctions &
+  BuildOTCOrdersTxFunctions;
 
 export type DeltaFetchMethods = BuildDeltaOrderFunctions &
   GetDeltaOrdersFunctions &
@@ -170,10 +137,7 @@ export type DeltaFetchMethods = BuildDeltaOrderFunctions &
 
 export type SimpleFetchSDK = {
   swap: SwapFetchMethods;
-  /** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-  limitOrders: LimitOrdersFetchMethods;
-  /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
-  nftOrders: NFTOrdersFetchMethods;
+  otcOrders: OTCOrdersFetchMethods;
   delta: DeltaFetchMethods;
   quote: QuoteFetchMethods;
 } & Required<ConstructBaseInput>;
@@ -182,10 +146,7 @@ export type QuoteFetchMethods = GetQuoteFunctions;
 
 export type SimpleSDK = {
   swap: SwapSDKMethods<TxHash>;
-  /** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-  limitOrders: LimitOrderHandlers<TxHash>;
-  /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
-  nftOrders: NFTOrderHandlers<TxHash>;
+  otcOrders: OTCOrderHandlers<TxHash>;
   delta: DeltaOrderHandlers<TxHash>;
   quote: QuoteFetchMethods;
 } & Required<ConstructBaseInput>;
@@ -268,22 +229,13 @@ export function constructSimpleSDK(
       constructSwapTx
     );
 
-    const limitOrders = constructPartialSDK(
+    const otcOrders = constructPartialSDK(
       config,
-      constructBuildLimitOrder,
-      constructPostLimitOrder,
-      constructGetLimitOrders,
-      constructGetLimitOrdersContract,
-      constructBuildLimitOrderTx
-    );
-
-    const nftOrders = constructPartialSDK(
-      config,
-      constructBuildNFTOrder,
-      constructPostNFTOrder,
-      constructGetNFTOrders,
-      constructGetNFTOrdersContract,
-      constructBuildNFTOrderTx
+      constructBuildOTCOrder,
+      constructPostOTCOrder,
+      constructGetOTCOrders,
+      constructGetOTCOrdersContract,
+      constructBuildOTCOrderTx
     );
 
     const delta = constructPartialSDK(
@@ -302,8 +254,7 @@ export function constructSimpleSDK(
 
     return {
       swap,
-      limitOrders,
-      nftOrders,
+      otcOrders,
       delta,
       quote,
       apiURL: options.apiURL ?? API_URL,
@@ -324,11 +275,8 @@ export function constructSimpleSDK(
 
   const swap: SwapSDKMethods<TxHash> = constructSwapSDK(config);
 
-  const limitOrders: LimitOrderHandlers<TxHash> =
-    constructAllLimitOrdersHandlers<TxHash>(config);
-
-  const nftOrders: NFTOrderHandlers<TxHash> =
-    constructAllNFTOrdersHandlers<TxHash>(config);
+  const otcOrders: OTCOrderHandlers<TxHash> =
+    constructAllOTCOrdersHandlers<TxHash>(config);
 
   const delta: DeltaOrderHandlers<TxHash> =
     constructAllDeltaOrdersHandlers<TxHash>(config);
@@ -337,8 +285,7 @@ export function constructSimpleSDK(
 
   return {
     swap,
-    limitOrders,
-    nftOrders,
+    otcOrders,
     delta,
     quote,
     apiURL: options.apiURL ?? API_URL,

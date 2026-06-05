@@ -7,16 +7,17 @@ import {
   constructPartialSDK,
   constructEthersContractCaller,
   constructAxiosFetcher,
-  // limitOrders methods
-  constructBuildLimitOrder,
-  constructSignLimitOrder,
-  constructPostLimitOrder,
+  // OTCOrders methods
+  constructBuildOTCOrder,
+  constructSignOTCOrder,
+  constructPostOTCOrder,
   // extra types
   SignableOrderData,
-  LimitOrderToSend,
+  OTCOrderToPost,
 } from '..';
 
 const wallet = ethers.Wallet.createRandom();
+const takerAccount = '0x5678...';
 
 const fetcher = constructAxiosFetcher(axios);
 
@@ -29,19 +30,19 @@ const contractCaller = constructEthersContractCaller(
   wallet.address
 );
 
-// type BuildLimitOrderFunctions
-// & SignLimitOrderFunctions
-// & PostLimitOrderFunctions
+// type BuildOTCOrderFunctions
+// & SignOTCOrderFunctions
+// & PostOTCOrderFunctions
 
-const limitOrderSDK = constructPartialSDK(
+const OTCOrderSDK = constructPartialSDK(
   {
     chainId: 1,
     fetcher,
     contractCaller,
   },
-  constructBuildLimitOrder,
-  constructSignLimitOrder,
-  constructPostLimitOrder
+  constructBuildOTCOrder,
+  constructSignOTCOrder,
+  constructPostOTCOrder
 );
 
 const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
@@ -55,22 +56,22 @@ const orderInput = {
   makerAmount: (1e18).toString(10),
   takerAmount: (8e18).toString(10),
   maker: wallet.address,
+  taker: takerAccount,
 };
 
 async function run() {
-  const signableOrderData: SignableOrderData =
-    await limitOrderSDK.buildLimitOrder(orderInput);
-
-  const signature: string = await limitOrderSDK.signLimitOrder(
-    signableOrderData
+  const signableOrderData: SignableOrderData = await OTCOrderSDK.buildOTCOrder(
+    orderInput
   );
 
-  const orderToPostToApi: LimitOrderToSend = {
+  const signature: string = await OTCOrderSDK.signOTCOrder(signableOrderData);
+
+  const orderToPostToApi: OTCOrderToPost = {
     ...signableOrderData.data,
     signature,
   };
 
-  const newOrder = await limitOrderSDK.postLimitOrder(orderToPostToApi);
+  const newOrder = await OTCOrderSDK.postOTCOrder(orderToPostToApi);
   console.log(newOrder);
 }
 

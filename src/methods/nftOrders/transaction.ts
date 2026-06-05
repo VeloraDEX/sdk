@@ -18,6 +18,7 @@ import { constructGetRate, GetRateInput, RateOptions } from '../swap/rates';
 import type { BigIntAsString, NFTOrderData } from './buildOrder';
 import { isFilledArray } from '../../helpers/misc';
 import type { RequestParameters } from '../../types';
+
 type MinBuildSwapAndNFTOrderTxInput = Omit<
   // these are derived from `orders`
   BuildSwapAndNFTOrderTxInput,
