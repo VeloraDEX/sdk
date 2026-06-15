@@ -58,7 +58,27 @@ describe('Quote:methods', () => {
       partner: { name: quote.delta.partner.name, feePercent: NaN },
     };
 
-    expect(staticDeltaPrice).toMatchInlineSnapshot();
+    expect(staticDeltaPrice).toMatchInlineSnapshot(`
+      {
+        "alternatives": "dynamic_alternatives",
+        "id": "dynamic_string",
+        "inputToken": {
+          "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "chainId": 1,
+        },
+        "outputToken": {
+          "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "chainId": 1,
+        },
+        "partner": {
+          "feePercent": NaN,
+          "name": "anon",
+        },
+        "route": "dynamic_route",
+        "side": "SELL",
+        "spender": "0x0000000000bbf5c5fd284e657f01bd000933c96d",
+      }
+    `);
   });
 
   test('Fail Quote for delta for small amounts', async () => {
@@ -119,7 +139,27 @@ describe('Quote:methods', () => {
       partner: { name: quote.delta.partner.name, feePercent: NaN },
     };
 
-    expect(staticDeltaPrice).toMatchInlineSnapshot();
+    expect(staticDeltaPrice).toMatchInlineSnapshot(`
+      {
+        "alternatives": "dynamic_alternatives",
+        "id": "dynamic_string",
+        "inputToken": {
+          "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "chainId": 1,
+        },
+        "outputToken": {
+          "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "chainId": 1,
+        },
+        "partner": {
+          "feePercent": NaN,
+          "name": "anon",
+        },
+        "route": "dynamic_route",
+        "side": "BUY",
+        "spender": "0x0000000000bbf5c5fd284e657f01bd000933c96d",
+      }
+    `);
   });
 
   test('Get Quote for market', async () => {
@@ -188,7 +228,27 @@ describe('Quote:methods', () => {
       partner: { name: quote.delta.partner.name, feePercent: NaN },
     };
 
-    expect(staticDeltaPrice).toMatchInlineSnapshot();
+    expect(staticDeltaPrice).toMatchInlineSnapshot(`
+      {
+        "alternatives": "dynamic_alternatives",
+        "id": "dynamic_string",
+        "inputToken": {
+          "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+          "chainId": 1,
+        },
+        "outputToken": {
+          "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "chainId": 1,
+        },
+        "partner": {
+          "feePercent": NaN,
+          "name": "anon",
+        },
+        "route": "dynamic_route",
+        "side": "SELL",
+        "spender": "0x0000000000bbf5c5fd284e657f01bd000933c96d",
+      }
+    `);
   });
 
   test('Get Fallback Market Quote for all', async () => {
