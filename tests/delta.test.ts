@@ -226,11 +226,11 @@ function makeFetcher(handler: (params: any) => any): FetchSpy {
 }
 
 describe('Delta: fetch methods', () => {
-  test('getDeltaPrice hits /delta/v2/prices and returns DeltaPrice', async () => {
+  test('getDeltaPrice hits /v2/delta/prices and returns DeltaPrice', async () => {
     const fixture = buildPriceFixture();
     const fetcher = makeFetcher(({ url, method }) => {
       expect(method).toBe('GET');
-      expect(url.startsWith(`${API_URL}/delta/v2/prices?`)).toBe(true);
+      expect(url.startsWith(`${API_URL}/v2/delta/prices?`)).toBe(true);
       expect(url).toContain(`srcToken=${WETH}`);
       expect(url).toContain(`destToken=${DAI}`);
       expect(url).toContain('amount=1000000000000000000');
@@ -288,14 +288,14 @@ describe('Delta: fetch methods', () => {
     expect(price.route.destination.input.token.chainId).toBe(42161);
   });
 
-  test('getBridgeRoutes hits /delta/v2/prices/bridge-routes and unwraps `routes`', async () => {
+  test('getBridgeRoutes hits /v2/delta/prices/bridge-routes and unwraps `routes`', async () => {
     const routes: BridgeRoute[] = [
       { srcChainId: 1, destChainId: 42161, tokens: [USDC_ARB] },
       { srcChainId: 1, destChainId: 10, tokens: [DAI] },
     ];
     const fetcher = makeFetcher(({ url, method }) => {
       expect(method).toBe('GET');
-      expect(url).toBe(`${API_URL}/delta/v2/prices/bridge-routes`);
+      expect(url).toBe(`${API_URL}/v2/delta/prices/bridge-routes`);
       return { routes };
     });
 
@@ -333,7 +333,7 @@ describe('Delta: fetch methods', () => {
     const fetcher = makeFetcher(({ url, method }) => {
       expect(method).toBe('GET');
       expect(
-        url.startsWith(`${API_URL}/delta/v2/prices/is-token-supported/?`)
+        url.startsWith(`${API_URL}/v2/delta/prices/is-token-supported/?`)
       ).toBe(true);
       expect(url).toContain(`token=${WETH}`);
       expect(url).toContain('chainId=1');
@@ -361,7 +361,7 @@ describe('Delta: fetch methods', () => {
 
     const fetcher = makeFetcher(({ url, method }) => {
       expect(method).toBe('GET');
-      expect(url.startsWith(`${API_URL}/delta/v2/orders?`)).toBe(true);
+      expect(url.startsWith(`${API_URL}/v2/delta/orders?`)).toBe(true);
       expect(url).toContain(`userAddress=${OWNER}`);
       expect(url).toContain('page=2');
       expect(url).toContain('limit=10');
@@ -388,8 +388,8 @@ describe('Delta: fetch methods', () => {
   test('getDeltaOrders by id / by hash use the v2 path', async () => {
     const order = { id: 'auction-1' } as unknown as DeltaAuction;
     const fetcher = makeFetcher(({ url }) => {
-      if (url === `${API_URL}/delta/v2/orders/auction-1`) return order;
-      if (url === `${API_URL}/delta/v2/orders/hash/0xhash`) return order;
+      if (url === `${API_URL}/v2/delta/orders/auction-1`) return order;
+      if (url === `${API_URL}/v2/delta/orders/hash/0xhash`) return order;
       throw new Error(`unexpected URL ${url}`);
     });
 
@@ -400,7 +400,7 @@ describe('Delta: fetch methods', () => {
     expect(await getDeltaOrderByHash('0xhash')).toBe(order);
   });
 
-  test('getRequiredBalanceForDeltaOrders hits /delta/v2/orders/fillablebalance/:chainId/:userAddress', async () => {
+  test('getRequiredBalanceForDeltaOrders hits /v2/delta/orders/fillablebalance/:chainId/:userAddress', async () => {
     const required = {
       [WETH]: '500000000000000000',
       [DAI]: '1500000000000000000000',
@@ -408,7 +408,7 @@ describe('Delta: fetch methods', () => {
     const fetcher = makeFetcher(({ url, method }) => {
       expect(method).toBe('GET');
       expect(url).toBe(
-        `${API_URL}/delta/v2/orders/fillablebalance/1/${OWNER}`
+        `${API_URL}/v2/delta/orders/fillablebalance/1/${OWNER}`
       );
       return required;
     });
@@ -424,7 +424,7 @@ describe('Delta: fetch methods', () => {
   test('getRequiredBalanceForDeltaOrders narrows the URL when tokenAddress is passed', async () => {
     const fetcher = makeFetcher(({ url }) => {
       expect(url).toBe(
-        `${API_URL}/delta/v2/orders/fillablebalance/1/${OWNER}/${WETH}`
+        `${API_URL}/v2/delta/orders/fillablebalance/1/${OWNER}/${WETH}`
       );
       return { [WETH]: '500000000000000000' };
     });
@@ -439,11 +439,11 @@ describe('Delta: fetch methods', () => {
     expect(balance[WETH]).toBe('500000000000000000');
   });
 
-  test('getAgentsList hits /delta/v2/agents/list/:chainId and returns agent names', async () => {
+  test('getAgentsList hits /v2/delta/agents/list/:chainId and returns agent names', async () => {
     const agents = ['agent-a', 'agent-b'];
     const fetcher = makeFetcher(({ url, method }) => {
       expect(method).toBe('GET');
-      expect(url).toBe(`${API_URL}/delta/v2/agents/list/42161`);
+      expect(url).toBe(`${API_URL}/v2/delta/agents/list/42161`);
       return agents; // server returns string[] directly
     });
 
@@ -458,13 +458,13 @@ describe('Delta: fetch methods', () => {
 });
 
 describe('Delta: build (server-side via POST /v2/orders/build)', () => {
-  test('buildDeltaOrder POSTs to /delta/v2/orders/build with correct body', async () => {
+  test('buildDeltaOrder POSTs to /v2/delta/orders/build with correct body', async () => {
     const builtFixture = buildBuiltOrderFixture();
     let postedBody: any;
 
     const fetcher = makeFetcher(({ url, method, data }) => {
       expect(method).toBe('POST');
-      expect(url).toBe(`${API_URL}/delta/v2/orders/build`);
+      expect(url).toBe(`${API_URL}/v2/delta/orders/build`);
       postedBody = data;
       return builtFixture;
     });
@@ -498,7 +498,7 @@ describe('Delta: build (server-side via POST /v2/orders/build)', () => {
     let postedBody: any;
 
     const fetcher = makeFetcher(({ url, data }) => {
-      if (url === `${API_URL}/delta/v2/orders/build`) {
+      if (url === `${API_URL}/v2/delta/orders/build`) {
         postedBody = data;
         return builtFixture;
       }
@@ -529,7 +529,7 @@ describe('Delta: build (server-side via POST /v2/orders/build)', () => {
     let postedBody: any;
 
     const fetcher = makeFetcher(({ url, data }) => {
-      if (url === `${API_URL}/delta/v2/orders/build`) {
+      if (url === `${API_URL}/v2/delta/orders/build`) {
         postedBody = data;
         return builtFixture;
       }
@@ -570,7 +570,7 @@ describe('Delta: build (server-side via POST /v2/orders/build)', () => {
     let postedBody: any;
 
     const fetcher = makeFetcher(({ url, data }) => {
-      if (url === `${API_URL}/delta/v2/orders/build`) {
+      if (url === `${API_URL}/v2/delta/orders/build`) {
         postedBody = data;
         return builtFixture;
       }
@@ -604,7 +604,7 @@ describe('Delta: build (server-side via POST /v2/orders/build)', () => {
     let postedBody: any;
 
     const fetcher = makeFetcher(({ url, data }) => {
-      if (url === `${API_URL}/delta/v2/orders/build`) {
+      if (url === `${API_URL}/v2/delta/orders/build`) {
         postedBody = data;
         return builtFixture;
       }
@@ -640,7 +640,7 @@ describe('Delta: build (server-side via POST /v2/orders/build)', () => {
     let postedBody: any;
 
     const fetcher = makeFetcher(({ url, data }) => {
-      if (url === `${API_URL}/delta/v2/orders/build`) {
+      if (url === `${API_URL}/v2/delta/orders/build`) {
         postedBody = data;
         return builtFixture;
       }
@@ -678,7 +678,7 @@ describe('Delta: build (server-side via POST /v2/orders/build)', () => {
     let postedBody: any;
 
     const fetcher = makeFetcher(({ url, data }) => {
-      if (url === `${API_URL}/delta/v2/orders/build`) {
+      if (url === `${API_URL}/v2/delta/orders/build`) {
         postedBody = data;
         return builtFixture;
       }
@@ -712,16 +712,16 @@ describe('Delta: build (server-side via POST /v2/orders/build)', () => {
 });
 
 describe('Delta: submit (build → sign → post)', () => {
-  test('submitDeltaOrder posts to /delta/v2/orders with signed order', async () => {
+  test('submitDeltaOrder posts to /v2/delta/orders with signed order', async () => {
     const builtFixture = buildBuiltOrderFixture();
     let posted: any;
     let postUrl = '';
 
     const fetcher = makeFetcher(({ url, method, data }) => {
-      if (method === 'POST' && url === `${API_URL}/delta/v2/orders/build`) {
+      if (method === 'POST' && url === `${API_URL}/v2/delta/orders/build`) {
         return builtFixture;
       }
-      if (method === 'POST' && url.startsWith(`${API_URL}/delta/v2/orders`)) {
+      if (method === 'POST' && url.startsWith(`${API_URL}/v2/delta/orders`)) {
         postUrl = url;
         posted = data;
         return {
@@ -747,7 +747,7 @@ describe('Delta: submit (build → sign → post)', () => {
       partnerAddress: '0x0000000000000000000000000000000000000000',
     });
 
-    expect(postUrl.startsWith(`${API_URL}/delta/v2/orders`)).toBe(true);
+    expect(postUrl.startsWith(`${API_URL}/v2/delta/orders`)).toBe(true);
     expect(posted.signature).toBe(FAKE_SIGNATURE);
     expect(posted.chainId).toBe(1);
     // order comes from builtFixture.toSign.value
@@ -779,10 +779,10 @@ describe('Delta: submit (build → sign → post)', () => {
     ).toEqual({ id: 'x' });
   });
 
-  test('postExternalDeltaOrder sends to /delta/v2/orders', async () => {
+  test('postExternalDeltaOrder sends to /v2/delta/orders', async () => {
     const fetcher = makeFetcher(({ url, method }) => {
       expect(method).toBe('POST');
-      expect(url).toBe(`${API_URL}/delta/v2/orders`);
+      expect(url).toBe(`${API_URL}/v2/delta/orders`);
       return { id: 'ext-1' } as unknown as DeltaAuction<'ExternalOrder'>;
     });
 
@@ -800,10 +800,10 @@ describe('Delta: submit (build → sign → post)', () => {
     ).toEqual({ id: 'ext-1' });
   });
 
-  test('postTWAPDeltaOrder sends to /delta/v2/orders with onChainOrderType', async () => {
+  test('postTWAPDeltaOrder sends to /v2/delta/orders with onChainOrderType', async () => {
     const fetcher = makeFetcher(({ url, method, data }) => {
       expect(method).toBe('POST');
-      expect(url.startsWith(`${API_URL}/delta/v2/orders`)).toBe(true);
+      expect(url.startsWith(`${API_URL}/v2/delta/orders`)).toBe(true);
       expect(data.onChainOrderType).toBe('TWAPOrder');
       return { id: 'twap-1' } as unknown as DeltaAuction<'TWAPOrder'>;
     });
@@ -825,19 +825,19 @@ describe('Delta: submit (build → sign → post)', () => {
 });
 
 describe('Delta: cancel', () => {
-  test('cancelDeltaOrders signs then posts to /delta/v2/orders/cancel', async () => {
+  test('cancelDeltaOrders signs then posts to /v2/delta/orders/cancel', async () => {
     let postedTo = '';
     let postedBody: any;
 
     const fetcher = makeFetcher(({ url, method, data }) => {
       const adapter = url.includes('/adapters/contracts')
         ? {
-            AugustusSwapper: '0x',
-            TokenTransferProxy: '0x',
-            AugustusRFQ: '0x',
-            Executors: {},
-            ParaswapDelta: '0x1111111111111111111111111111111111111111',
-          }
+          AugustusSwapper: '0x',
+          TokenTransferProxy: '0x',
+          AugustusRFQ: '0x',
+          Executors: {},
+          ParaswapDelta: '0x1111111111111111111111111111111111111111',
+        }
         : undefined;
       if (adapter) return adapter;
       if (method === 'POST') {
@@ -860,7 +860,7 @@ describe('Delta: cancel', () => {
     });
 
     expect(result).toEqual({ success: true });
-    expect(postedTo).toBe(`${API_URL}/delta/v2/orders/cancel`);
+    expect(postedTo).toBe(`${API_URL}/v2/delta/orders/cancel`);
     expect(postedBody.orderIds).toEqual(['a', 'b']);
     expect(postedBody.signature).toBe(FAKE_SIGNATURE);
   });
@@ -872,7 +872,7 @@ describe('Delta: live API contract', () => {
   const LIVE_API = process.env.API_URL;
   const fetchFetcher = constructFetchFetcher(fetch);
 
-  test('GET /delta/v2/prices (same-chain) matches DeltaPrice shape', async () => {
+  test('GET /v2/delta/prices (same-chain) matches DeltaPrice shape', async () => {
     const { getDeltaPrice } = constructGetDeltaPrice({
       apiURL: LIVE_API,
       chainId: 1,
@@ -903,7 +903,7 @@ describe('Delta: live API contract', () => {
     expect(Array.isArray(price.route.fees.bridge)).toBe(true);
   });
 
-  test('GET /delta/v2/prices (cross-chain) returns DeltaRoute with bridge.contractParams (no destinationChainId)', async () => {
+  test('GET /v2/delta/prices (cross-chain) returns DeltaRoute with bridge.contractParams (no destinationChainId)', async () => {
     const { getDeltaPrice } = constructGetDeltaPrice({
       apiURL: LIVE_API,
       chainId: 1,
@@ -939,7 +939,7 @@ describe('Delta: live API contract', () => {
     }
   });
 
-  test('GET /delta/v2/prices/bridge-routes returns flat array', async () => {
+  test('GET /v2/delta/prices/bridge-routes returns flat array', async () => {
     const { getBridgeRoutes } = constructGetBridgeRoutes({
       apiURL: LIVE_API,
       chainId: 1,
@@ -955,7 +955,7 @@ describe('Delta: live API contract', () => {
     expect(Array.isArray(first.tokens)).toBe(true);
   });
 
-  test('GET /delta/v2/prices/bridge-protocols returns protocols', async () => {
+  test('GET /v2/delta/prices/bridge-protocols returns protocols', async () => {
     const { getBridgeProtocols } = constructGetBridgeRoutes({
       apiURL: LIVE_API,
       chainId: 1,

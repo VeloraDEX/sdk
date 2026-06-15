@@ -72,7 +72,7 @@ export const constructGetDeltaOrders = ({
   fetcher,
   chainId,
 }: ConstructFetchInput): GetDeltaOrdersFunctions => {
-  const baseUrl = `${apiURL}/delta/v2/orders` as const;
+  const baseUrl = `${apiURL}/v2/delta/orders` as const;
 
   const getDeltaOrderById: GetDeltaOrderById = async (
     orderId,

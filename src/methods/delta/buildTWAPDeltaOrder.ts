@@ -73,7 +73,7 @@ export const constructBuildTWAPDeltaOrder = (
   options: ConstructFetchInput
 ): BuildTWAPDeltaOrderFunctions => {
   const { apiURL = API_URL, fetcher } = options;
-  const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
+  const buildUrl = `${apiURL}/v2/delta/orders/build` as const;
 
   const buildTWAPDeltaOrder: BuildTWAPDeltaOrder = async (
     params,

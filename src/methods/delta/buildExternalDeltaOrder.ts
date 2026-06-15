@@ -58,7 +58,7 @@ export const constructBuildExternalDeltaOrder = (
   options: ConstructFetchInput
 ): BuildExternalDeltaOrderFunctions => {
   const { apiURL = API_URL, fetcher } = options;
-  const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
+  const buildUrl = `${apiURL}/v2/delta/orders/build` as const;
 
   const buildExternalDeltaOrder: BuildExternalDeltaOrder = async (
     params,
