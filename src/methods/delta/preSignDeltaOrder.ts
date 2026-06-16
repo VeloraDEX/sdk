@@ -37,16 +37,24 @@ export type PreSignDeltaOrder<T> = (
 ) => Promise<T>;
 
 export type PreSignDeltaOrderFunctions<T> = {
+  /** @description Compute the EIP-712 order hash from already-built signable order data. Strips any extra fields off `data` before hashing; synchronous, no network call. */
   hashDeltaOrderTypedData: HashDeltaOrderTypedData;
+  /** @description Resolve the Delta contract, build the EIP-712 typed data for the order, and return its order hash. */
   hashDeltaOrder: HashDeltaOrder;
+  /** @description On-chain `setPreSignature(orderHash, true)` on the Delta contract — pre-approves an order hash so it can be filled without an EIP-712 signature. Returns whatever the `contractCaller` returns. */
   setDeltaOrderPreSignature: SetDeltaOrderPreSignature<T>;
+  /** @description Hash the signable order data and pre-sign it on-chain in one call (`hashDeltaOrderTypedData` → `setDeltaOrderPreSignature`). */
   preSignDeltaOrder: PreSignDeltaOrder<T>;
 };
 
 type AvailableMethods = ExtractAbiMethodNames<typeof PreSignatureModuleAbi>;
 
-// returns whatever `contractCaller` returns
-// to allow for better versatility
+/**
+ * @description Construct on-chain pre-signing helpers for standard Delta orders:
+ * order hashing (`hashDeltaOrder` / `hashDeltaOrderTypedData`) and `setPreSignature`
+ * transactions (`setDeltaOrderPreSignature` / `preSignDeltaOrder`). The transact
+ * methods return whatever the configured `contractCaller` returns, for versatility.
+ */
 export const constructPreSignDeltaOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
 ): PreSignDeltaOrderFunctions<T> => {

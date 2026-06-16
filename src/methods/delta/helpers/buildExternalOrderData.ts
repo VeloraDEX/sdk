@@ -1,7 +1,5 @@
-import { MarkOptional } from 'ts-essentials';
 import { Domain } from '../../common/orders/buildOrderData';
 import { ExternalDeltaOrder } from './types';
-import { DELTA_DEFAULT_EXPIRY, producePartnerAndFee } from './misc';
 
 const EXTERNAL_ORDER_EIP_712_TYPES = {
   ExternalOrder: [
@@ -53,77 +51,4 @@ export function produceExternalOrderTypedData({
     },
     data: orderInput,
   };
-}
-
-export type ExternalOrderDataInput = MarkOptional<
-  Omit<ExternalDeltaOrder, 'partnerAndFee'>,
-  'deadline' | 'nonce' | 'permit'
->;
-
-export type BuildExternalOrderDataInput = MarkOptional<
-  ExternalOrderDataInput,
-  'metadata'
-> & {
-  partnerAddress: string;
-  paraswapDeltaAddress: string;
-  partnerFeeBps: number;
-  partnerTakesSurplus?: boolean;
-  capSurplus?: boolean;
-  chainId: number;
-};
-
-export function buildExternalOrderSignableData({
-  owner,
-  handler,
-
-  srcToken,
-  destToken,
-  srcAmount,
-  destAmount,
-  expectedAmount,
-
-  deadline = Math.floor(Date.now() / 1000 + DELTA_DEFAULT_EXPIRY),
-  nonce = Date.now().toString(10),
-
-  permit = '0x',
-
-  kind,
-  metadata = '0x',
-  data,
-
-  partnerAddress,
-  partnerFeeBps,
-  partnerTakesSurplus = false,
-  capSurplus = true,
-
-  chainId,
-  paraswapDeltaAddress,
-}: BuildExternalOrderDataInput): SignableExternalOrderData {
-  const orderInput: ExternalDeltaOrder = {
-    owner,
-    handler,
-    srcToken,
-    destToken,
-    srcAmount,
-    destAmount,
-    expectedAmount,
-    deadline,
-    nonce,
-    permit,
-    partnerAndFee: producePartnerAndFee({
-      partnerFeeBps,
-      partnerAddress,
-      partnerTakesSurplus,
-      capSurplus,
-    }),
-    kind,
-    metadata,
-    data,
-  };
-
-  return produceExternalOrderTypedData({
-    orderInput,
-    chainId,
-    paraswapDeltaAddress,
-  });
 }

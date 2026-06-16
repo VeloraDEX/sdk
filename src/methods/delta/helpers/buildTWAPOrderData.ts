@@ -1,12 +1,10 @@
 import { Domain } from '../../common/orders/buildOrderData';
 import {
-  Bridge,
   TWAPDeltaOrder,
   TWAPBuyDeltaOrder,
   TWAPOnChainOrderType,
   OnChainOrderMap,
 } from './types';
-import { DELTA_DEFAULT_EXPIRY, producePartnerAndFee } from './misc';
 
 const BRIDGE_EIP_712_TYPE = [
   { name: 'protocolSelector', type: 'bytes4' },
@@ -111,123 +109,4 @@ export function produceTWAPOrderTypedData({
     domain,
     data: orderInput,
   };
-}
-
-export type TWAPOrderCommonInput = {
-  owner: string;
-  beneficiary?: string;
-  srcToken: string;
-  destToken: string;
-  nonce?: string;
-  deadline?: number;
-  permit?: string;
-  metadata?: string;
-  interval: number;
-  numSlices: number;
-  bridge: Bridge;
-
-  partnerAddress: string;
-  paraswapDeltaAddress: string;
-  partnerFeeBps: number;
-  partnerTakesSurplus?: boolean;
-  capSurplus?: boolean;
-  chainId: number;
-};
-
-export type BuildTWAPSellOrderDataInput = TWAPOrderCommonInput & {
-  onChainOrderType: 'TWAPOrder';
-  destAmountPerSlice: string;
-  totalSrcAmount: string;
-};
-
-export type BuildTWAPBuyOrderDataInput = TWAPOrderCommonInput & {
-  onChainOrderType: 'TWAPBuyOrder';
-  totalDestAmount: string;
-  maxSrcAmount: string;
-};
-
-export type BuildTWAPOrderDataInput =
-  | BuildTWAPSellOrderDataInput
-  | BuildTWAPBuyOrderDataInput;
-
-export function buildTWAPSignableOrderData(
-  input: BuildTWAPOrderDataInput
-): SignableTWAPOrderData {
-  const {
-    owner,
-    beneficiary = owner,
-    srcToken,
-    destToken,
-    nonce = Date.now().toString(10),
-    permit = '0x',
-    metadata = '0x',
-    interval,
-    numSlices,
-    bridge,
-
-    partnerAddress,
-    partnerFeeBps,
-    partnerTakesSurplus = false,
-    capSurplus = true,
-    chainId,
-    paraswapDeltaAddress,
-    onChainOrderType,
-  } = input;
-
-  const deadline =
-    input.deadline ??
-    // all slices must execute before the deadline,
-    // so we add the total duration of the TWAP (interval * numSlices) to the current time,
-    // plus a buffer defined by DELTA_DEFAULT_EXPIRY
-    Math.floor(Date.now() / 1000 + interval * numSlices + DELTA_DEFAULT_EXPIRY);
-
-  const partnerAndFee = producePartnerAndFee({
-    partnerFeeBps,
-    partnerAddress,
-    partnerTakesSurplus,
-    capSurplus,
-  });
-
-  const commonFields = {
-    owner,
-    beneficiary,
-    srcToken,
-    destToken,
-    nonce,
-    partnerAndFee,
-    deadline,
-    interval,
-    numSlices,
-    permit,
-    metadata,
-    bridge,
-  };
-
-  if (onChainOrderType === 'TWAPOrder') {
-    const orderInput: TWAPDeltaOrder = {
-      ...commonFields,
-      destAmountPerSlice: input.destAmountPerSlice,
-      totalSrcAmount: input.totalSrcAmount,
-    };
-
-    return produceTWAPOrderTypedData({
-      orderInput,
-      chainId,
-      paraswapDeltaAddress,
-      onChainOrderType: 'TWAPOrder',
-    });
-  }
-
-  const orderInput: TWAPBuyDeltaOrder = {
-    ...commonFields,
-    totalDestAmount: input.totalDestAmount,
-    maxSrcAmount: input.maxSrcAmount,
-  };
-
-  return produceTWAPOrderTypedData({
-    orderInput,
-    chainId,
-    paraswapDeltaAddress,
-    onChainOrderType: 'TWAPBuyOrder',
-  });
 }

@@ -240,7 +240,7 @@ function isPendingAuction<T extends Pick<DeltaAuction, 'status'>>(
  * between 0 and 100.
  */
 function isPartiallyExecutedAuction<
-  T extends Pick<DeltaAuction, 'order' | 'transactions'>
+  T extends Pick<DeltaAuction, 'order' | 'transactions'>,
 >(
   auction: T
 ): auction is T & { transactions: NonEmptyArray<DeltaTransaction> } {
@@ -473,23 +473,23 @@ function getTransactionAmounts(transactions: DeltaTransaction[]) {
 
 /**
  * @description Calculates the overall filled percent (0–100) from the
- * per-transaction `filledPercent` values. For TWAP orders each transaction is
- * a slice (0–100 of that slice), so the slice values are averaged across
- * `numSlices`; for single-fill orders the values sum directly.
+ * per-transaction `filledPercent` values. For cross-chain orders,
+ * only transactions with a `destinationTx` are counted towards the filled percent.
  */
-function getFilledPercent(
-  auction: Pick<DeltaAuction, 'order' | 'transactions'>
-): number {
-  if (auction.transactions.length === 0) return 0;
+function getFilledPercent({
+  order,
+  transactions,
+}: Pick<DeltaAuction, 'order' | 'transactions'>): number {
+  if (transactions.length === 0) return 0;
 
-  const total = auction.transactions.reduce(
+  const completedTransactions = !isOrderCrosschain(order)
+    ? transactions
+    : transactions.filter((transaction) => !!transaction.destinationTx);
+
+  const total = completedTransactions.reduce(
     (acc, { filledPercent }) => acc + filledPercent,
     0
   );
-
-  if (isTWAPOrder(auction.order) && auction.order.numSlices > 0) {
-    return total / auction.order.numSlices;
-  }
 
   return total;
 }
@@ -507,7 +507,7 @@ function getExecutedAmount(side: DeltaTokenSide, fallback: string): string {
 }
 
 /**
- * @description Returns expected amounts and, once the auction is completed,
+ * @description Returns expected and minimal amounts and, once the auction is completed,
  * executed amounts. Executed amounts prefer the `executedAmount` baked onto the
  * token sides and fall back to summing transactions.
  */
@@ -522,8 +522,28 @@ function getAuctionAmounts(
     destAmount: getTokenSideAmount(auction.output, 'expected'),
   };
 
+  const order = auction.order;
+
+  let minimal;
+  if (isTWAPOrder(order)) {
+    minimal = expected; // TWAP doesn't carry explicit min amounts
+  } else if (isOrderCrosschain(order)) {
+    minimal = {
+      srcAmount: order.srcAmount,
+      destAmount: scaleByFactor(
+        BigInt(order.destAmount),
+        order.bridge.scalingFactor
+      ).toString(),
+    };
+  } else {
+    minimal = {
+      srcAmount: order.srcAmount,
+      destAmount: order.destAmount,
+    };
+  }
+
   if (!isCompletedAuction(auction)) {
-    return { expected };
+    return { expected, minimal };
   }
 
   const txAmounts = getTransactionAmounts(auction.transactions);
@@ -533,7 +553,7 @@ function getAuctionAmounts(
     destAmount: getExecutedAmount(auction.output, txAmounts.destAmount),
   };
 
-  return { expected, executed };
+  return { expected, executed, minimal };
 }
 
 /**
@@ -544,7 +564,7 @@ function getUnifiedDeltaOrderData(
   auction: DeltaAuction
 ): UnifiedDeltaOrderData {
   const { srcToken, destToken } = getAuctionTokenAddresses(auction);
-  const { expected, executed } = getAuctionAmounts(auction);
+  const { expected, executed, minimal } = getAuctionAmounts(auction);
 
   const srcChainId = getAuctionSrcChainId(auction);
   const destChainId = getAuctionDestChainId(auction);
@@ -557,9 +577,8 @@ function getUnifiedDeltaOrderData(
     srcAmount: executed?.srcAmount || expected.srcAmount,
     destAmount: executed?.destAmount || expected.destAmount,
     amounts: {
+      minimal,
       expected,
-      // No separate "minimal" amount in the v2 envelope; mirrors expected.
-      minimal: expected,
       final: executed,
     },
     srcToken,

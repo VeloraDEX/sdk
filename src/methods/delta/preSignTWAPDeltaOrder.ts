@@ -47,14 +47,25 @@ export type PreSignTWAPDeltaOrder<T> = (
 ) => Promise<T>;
 
 export type PreSignTWAPDeltaOrderFunctions<T> = {
+  /** @description Compute the EIP-712 order hash from already-built signable TWAP order data. Strips any extra fields off `data` before hashing; synchronous, no network call. */
   hashTWAPDeltaOrderTypedData: HashTWAPDeltaOrderTypedData;
+  /** @description Resolve the Delta contract, build the EIP-712 typed data for the TWAP order (`'TWAPOrder'` sell or `'TWAPBuyOrder'` buy), and return its order hash. */
   hashTWAPDeltaOrder: HashTWAPDeltaOrder;
+  /** @description On-chain `setPreSignature(orderHash, true)` on the Delta contract — pre-approves a TWAP order hash so it can be filled without an EIP-712 signature. Returns whatever the `contractCaller` returns. */
   setTWAPDeltaOrderPreSignature: SetTWAPDeltaOrderPreSignature<T>;
+  /** @description Hash the signable TWAP order data and pre-sign it on-chain in one call (`hashTWAPDeltaOrderTypedData` → `setTWAPDeltaOrderPreSignature`). */
   preSignTWAPDeltaOrder: PreSignTWAPDeltaOrder<T>;
 };
 
 type AvailableMethods = ExtractAbiMethodNames<typeof PreSignatureModuleAbi>;
 
+/**
+ * @description Construct on-chain pre-signing helpers for TWAP Delta orders (sell
+ * and buy): order hashing (`hashTWAPDeltaOrder` / `hashTWAPDeltaOrderTypedData`) and
+ * `setPreSignature` transactions (`setTWAPDeltaOrderPreSignature` /
+ * `preSignTWAPDeltaOrder`). The transact methods return whatever the configured
+ * `contractCaller` returns, for versatility.
+ */
 export const constructPreSignTWAPDeltaOrder = <T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
 ): PreSignTWAPDeltaOrderFunctions<T> => {

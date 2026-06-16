@@ -19,7 +19,7 @@ type GetDeltaOrderByHash = (
   requestParams?: RequestParameters
 ) => Promise<DeltaAuction>;
 
-type OrdersFilter = {
+type OrdersFilter<T extends OnChainOrderType = OnChainOrderType> = {
   /** @description `order.owner` to fetch Delta Orders for. */
   userAddress: Address;
   /** @description Pagination option. Default 1. */
@@ -32,8 +32,8 @@ type OrdersFilter = {
   status?: DeltaOrderStatus[];
   /** @description Filter by order type. MARKET or LIMIT. */
   type?: DeltaOrderType;
-  /** @description Filter by on-chain order type. */
-  onChainOrderType?: OnChainOrderType;
+  /** @description Filter by on-chain order type. Narrows the returned `DeltaAuction<T>`. */
+  onChainOrderType?: T;
 };
 
 type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
@@ -41,10 +41,10 @@ type OrderFiltersQuery = Omit<OrdersFilter, 'chainId' | 'status'> & {
   status?: string;
 };
 
-type GetDeltaOrders = (
-  options: OrdersFilter,
+type GetDeltaOrders = <T extends OnChainOrderType = OnChainOrderType>(
+  options: OrdersFilter<T>,
   requestParams?: RequestParameters
-) => Promise<PaginatedResponse<DeltaAuction>>;
+) => Promise<PaginatedResponse<DeltaAuction<T>>>;
 
 type GetRequiredBalanceParams = {
   userAddress: Address;
@@ -98,7 +98,12 @@ export const constructGetDeltaOrders = ({
     });
   };
 
-  const getDeltaOrders: GetDeltaOrders = async (options, requestParams) => {
+  const getDeltaOrders: GetDeltaOrders = async <
+    T extends OnChainOrderType = OnChainOrderType
+  >(
+    options: OrdersFilter<T>,
+    requestParams?: RequestParameters
+  ): Promise<PaginatedResponse<DeltaAuction<T>>> => {
     const chainIdString = options.chainId?.join(',');
     const statusString = options.status?.join(',');
 
@@ -114,7 +119,7 @@ export const constructGetDeltaOrders = ({
 
     const fetchURL = `${baseUrl}${search}` as const;
 
-    return fetcher<PaginatedResponse<DeltaAuction>>({
+    return fetcher<PaginatedResponse<DeltaAuction<T>>>({
       url: fetchURL,
       method: 'GET',
       requestParams,

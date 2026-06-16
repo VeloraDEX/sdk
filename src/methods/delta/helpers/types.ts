@@ -44,11 +44,6 @@ export enum OrderKind {
   Buy = 1,
 }
 
-export const SwapSideToOrderKind = {
-  [SwapSide.SELL]: OrderKind.Sell,
-  [SwapSide.BUY]: OrderKind.Buy,
-} as const;
-
 export type DeltaAuctionOrder = {
   /** @description The address of the order owner */
   owner: string;
