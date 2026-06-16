@@ -8,35 +8,32 @@ import {
 } from './helpers/buildOrderData';
 export * from './helpers/buildOrderData';
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type BuildLimitOrderInput = Omit<
+export type BuildOTCOrderInput = Omit<
   BuildOrderDataInput,
   'chainId' | 'verifyingContract' | 'AugustusAddress' | 'AppVersion'
 >;
 
-type BuildLimitOrder = (
-  buildLimitOrderParams: BuildLimitOrderInput,
+type BuildOTCOrder = (
+  buildOTCOrderParams: BuildOTCOrderInput,
   requestParams?: RequestParameters
 ) => Promise<SignableOrderData>;
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type BuildLimitOrderFunctions = {
+export type BuildOTCOrderFunctions = {
   /** @description Build Orders that will be excuted through AugustusSwapper */
-  buildLimitOrder: BuildLimitOrder;
+  buildOTCOrder: BuildOTCOrder;
 };
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export const constructBuildLimitOrder = (
+export const constructBuildOTCOrder = (
   options: ConstructFetchInput
-): BuildLimitOrderFunctions => {
+): BuildOTCOrderFunctions => {
   const { chainId } = options;
 
   // getContracts is cached internally for the same instance of SDK
   // so should persist across same apiUrl & network
   const { getContracts } = constructGetSpender(options);
 
-  const buildLimitOrder: BuildLimitOrder = async (
-    buildLimitOrderParams,
+  const buildOTCOrder: BuildOTCOrder = async (
+    buildOTCOrderParams,
     requestParams
   ) => {
     const { AugustusSwapper: AugustusAddress, AugustusRFQ: verifyingContract } =
@@ -45,7 +42,7 @@ export const constructBuildLimitOrder = (
     const AppVersion = options.version ?? DEFAULT_VERSION;
 
     return buildOrderData({
-      ...buildLimitOrderParams,
+      ...buildOTCOrderParams,
       chainId,
       verifyingContract,
       AugustusAddress,
@@ -54,6 +51,6 @@ export const constructBuildLimitOrder = (
   };
 
   return {
-    buildLimitOrder,
+    buildOTCOrder,
   };
 };

@@ -2,23 +2,19 @@ import type { ConstructProviderFetchInput } from '../../types';
 import type { SignableOrderData } from './buildOrder';
 import { sanitizeOrderData } from './helpers/misc';
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type SignLimitOrderFunctions = {
-  signLimitOrder: (signableOrderData: SignableOrderData) => Promise<string>;
+export type SignOTCOrderFunctions = {
+  signOTCOrder: (signableOrderData: SignableOrderData) => Promise<string>;
 };
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export const constructSignLimitOrder = (
+export const constructSignOTCOrder = (
   options: Pick<
     ConstructProviderFetchInput<any, 'signTypedDataCall'>,
     'contractCaller'
   >
-): SignLimitOrderFunctions => {
-  const signLimitOrder: SignLimitOrderFunctions['signLimitOrder'] = (
-    typedData
-  ) => {
+): SignOTCOrderFunctions => {
+  const signOTCOrder: SignOTCOrderFunctions['signOTCOrder'] = (typedData) => {
     // types allow to pass OrderData & extra_stuff, but tx will break like that
     const typedDataOnly: SignableOrderData = {
       ...typedData,
@@ -27,5 +23,5 @@ export const constructSignLimitOrder = (
     return options.contractCaller.signTypedDataCall(typedDataOnly);
   };
 
-  return { signLimitOrder };
+  return { signOTCOrder };
 };
