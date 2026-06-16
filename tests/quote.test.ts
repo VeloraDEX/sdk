@@ -76,7 +76,7 @@ describe('Quote:methods', () => {
         },
         "route": "dynamic_route",
         "side": "SELL",
-        "spender": "0x76e0ebb8d4c6dccb3fdedab7a3e1c87036719a42",
+        "spender": "0x0000000000bbf5c5fd284e657f01bd000933c96d",
       }
     `);
   });
@@ -157,7 +157,7 @@ describe('Quote:methods', () => {
         },
         "route": "dynamic_route",
         "side": "BUY",
-        "spender": "0x76e0ebb8d4c6dccb3fdedab7a3e1c87036719a42",
+        "spender": "0x0000000000bbf5c5fd284e657f01bd000933c96d",
       }
     `);
   });
@@ -246,7 +246,7 @@ describe('Quote:methods', () => {
         },
         "route": "dynamic_route",
         "side": "SELL",
-        "spender": "0x76e0ebb8d4c6dccb3fdedab7a3e1c87036719a42",
+        "spender": "0x0000000000bbf5c5fd284e657f01bd000933c96d",
       }
     `);
   });

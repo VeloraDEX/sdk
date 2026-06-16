@@ -77,13 +77,13 @@ Every feature module exports a `constructXxx(options) => XxxFunctions` factory:
 
 Delta is the SDK's core feature: server-built, on-chain auction orders. Exposed as `sdk.delta.*` and via bare top-level exports.
 
-> **History.** Delta was once a **v1** with local EIP-712 order building and per-family sign functions. It was replaced (breaking) by the server-built **v2** described here — `sdk.delta.*` *is* v2, with a single set of bare top-level exports. All Delta URLs use the `/delta/v2/...` prefix.
+> **History.** Delta was once a **v1** with local EIP-712 order building and per-family sign functions. It was replaced (breaking) by the server-built **v2** described here — `sdk.delta.*` *is* v2, with a single set of bare top-level exports. All Delta URLs use the `/v2/delta/...` prefix.
 
-Order building is **server-side**: `POST /delta/v2/orders/build` returns a `BuiltDeltaOrder { toSign, orderHash }`; a single `signDeltaOrder(builtOrder)` signs every family; `post*` submits the signed order. Partner fee is passed as raw params (`partner`, `partnerFeeBps`) to the server rather than resolved locally. Reads are paginated (`PaginatedResponse<DeltaAuction>`), price is route-based.
+Order building is **server-side**: `POST /v2/delta/orders/build` returns a `BuiltDeltaOrder { toSign, orderHash }`; a single `signDeltaOrder(builtOrder)` signs every family; `post*` submits the signed order. Partner fee is passed as raw params (`partner`, `partnerFeeBps`) to the server rather than resolved locally. Reads are paginated (`PaginatedResponse<DeltaAuction>`), price is route-based.
 
 ### Order families
 
-All built via `POST /delta/v2/orders/build` with an `orderType` field:
+All built via `POST /v2/delta/orders/build` with an `orderType` field:
 
 | Family | `orderType` / `onChainOrderType` | Build params | Build fn |
 |--------|-------------------|-----------|----------|
@@ -105,12 +105,12 @@ Submit orchestrators (`constructSubmitDeltaOrder`, `constructSubmitExternalDelta
 | `buildDeltaOrder.ts` | `constructBuildDeltaOrder` | POST `/v2/orders/build` → `BuiltDeltaOrder` | No |
 | `buildExternalDeltaOrder.ts` | `constructBuildExternalDeltaOrder` | Same, `orderType: 'ExternalOrder'` | No |
 | `buildTWAPDeltaOrder.ts` | `constructBuildTWAPDeltaOrder` | Same, `orderType: 'TWAPOrder'` / `'TWAPBuyOrder'` | No |
-| `postDeltaOrder.ts` / `postExternalDeltaOrder.ts` / `postTWAPDeltaOrder.ts` | `constructPost*DeltaOrder` | POST `/v2/orders` → `DeltaAuction` | No |
-| `getDeltaPrice.ts` | `constructGetDeltaPrice` | GET `/delta/v2/prices` → `DeltaPrice` (route-based: `route` + `alternatives`; cross-chain handled in-route via `destChainId`) | No |
+| `postDeltaOrder.ts` / `postExternalDeltaOrder.ts` / `postTWAPDeltaOrder.ts` | `constructPostDeltaOrder` | POST `/v2/delta/orders` → `DeltaAuction` | No |
+| `getDeltaPrice.ts` | `constructGetDeltaPrice` | GET `/v2/delta/prices` → `DeltaPrice` (route-based: `route` + `alternatives`; cross-chain handled in-route via `destChainId`) | No |
 | `getDeltaOrders.ts` | `constructGetDeltaOrders` | `getDeltaOrders` (paginated list), `getDeltaOrderById`, `getDeltaOrderByHash`, `getRequiredBalanceForDeltaOrders`. Reads return `DeltaAuction`. | No |
 | `cancelDeltaOrder.ts` | `constructCancelDeltaOrder` | `signCancelDeltaOrderRequest` → `postCancelDeltaOrderRequest` → `cancelDeltaOrders` (orchestrator). POST `/v2/orders/cancel`. | No (`any`) |
 | `getBridgeRoutes.ts` | `constructGetBridgeRoutes` | `getBridgeRoutes` (flat `BridgeRoute[]`) + `getBridgeProtocols` | No |
-| `isTokenSupportedInDelta.ts` | `constructIsTokenSupportedInDelta` | GET `/v2/prices/is-token-supported` → `boolean` | No |
+| `isTokenSupportedInDelta.ts` | `constructIsTokenSupportedInDelta` | GET `/v2/delta/prices/is-token-supported` → `boolean` | No |
 | `getAgentsList.ts` | `constructGetAgentsList` | GET `/v2/agents/list/:chainId` → `string[]` | No |
 | `getDeltaContract.ts` | `constructGetDeltaContract` | Resolve ParaswapDelta contract address | No |
 | `getPartnerFee.ts` | `constructGetPartnerFee` | Fetch partner fee info (cached per partner in a `Map`) | No |

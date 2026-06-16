@@ -178,6 +178,7 @@ const failedAuctionStatuses = [
   'EXPIRED',
   'CANCELLED',
   'REFUNDED',
+  'REFUNDING',
 ] as const;
 
 const failedAuctionStatusesSet = new Set<DeltaOrderStatus>(

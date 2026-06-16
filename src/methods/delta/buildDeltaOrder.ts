@@ -54,7 +54,7 @@ export const constructBuildDeltaOrder = (
   options: ConstructFetchInput
 ): BuildDeltaOrderFunctions => {
   const { apiURL = API_URL, fetcher } = options;
-  const buildUrl = `${apiURL}/delta/v2/orders/build` as const;
+  const buildUrl = `${apiURL}/v2/delta/orders/build` as const;
 
   const buildDeltaOrder: BuildDeltaOrder = async (params, requestParams) =>
     fetcher<BuiltDeltaOrder<DeltaAuctionOrder>>({

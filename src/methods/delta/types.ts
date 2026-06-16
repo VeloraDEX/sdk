@@ -9,7 +9,7 @@ import type {
   OnChainOrderType,
 } from './helpers/types';
 
-/** @description Response from POST /delta/v2/orders/build — EIP-712 typed data ready to sign. */
+/** @description Response from POST /v2/delta/orders/build — EIP-712 typed data ready to sign. */
 export type BuiltDeltaOrder<T extends DeltaOrderUnion = DeltaOrderUnion> = {
   toSign: {
     domain: {
@@ -111,8 +111,8 @@ export type DeltaPrice = {
 };
 
 /** @description
- * A flat bridge-routes entry returned by GET /delta/v2/prices/bridge-routes (better version of v1 prices/bridge-info).
- * Can be used to populate bridge selection UIs and to validate that bridge is possible for a given src/dest pair before calling GET /delta/v2/prices.
+ * A flat bridge-routes entry returned by GET /v2/delta/prices/bridge-routes (better version of v1 prices/bridge-info).
+ * Can be used to populate bridge selection UIs and to validate that bridge is possible for a given src/dest pair before calling GET /v2/delta/prices.
  * */
 export type BridgeRoute = {
   srcChainId: number;
@@ -139,6 +139,7 @@ const DeltaOrderStatusMap = {
   Expired: 'EXPIRED',
   Cancelled: 'CANCELLED',
   Refunded: 'REFUNDED',
+  Refunding: 'REFUNDING',
 } as const;
 
 export type DeltaOrderStatus =
@@ -168,6 +169,13 @@ export type DeltaTransaction = {
   receivedAmount: string | null;
 };
 
+export type BridgeRefundMetadata = {
+  tx: string;
+  chainId: number;
+  token: Address;
+  amount: string;
+};
+
 type DeltaAuctionBase = {
   id: string;
   status: DeltaOrderStatus;
@@ -180,6 +188,7 @@ type DeltaAuctionBase = {
   orderHash: string;
   partner: string;
   transactions: DeltaTransaction[];
+  refunds: BridgeRefundMetadata[];
   /** @description ISO datetime string. */
   createdAt: string;
   /** @description ISO datetime string. */

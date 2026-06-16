@@ -17,7 +17,7 @@ export const constructGetAgentsList = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): GetAgentsListFunctions => {
-  const baseUrl = `${apiURL}/delta/v2/agents/list/${chainId}` as const;
+  const baseUrl = `${apiURL}/v2/delta/agents/list/${chainId}` as const;
 
   const getAgentsList: GetAgentsList = async (requestParams) => {
     const data = await fetcher<AgentsListResponse>({

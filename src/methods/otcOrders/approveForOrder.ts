@@ -1,6 +1,5 @@
 import type { ConstructProviderFetchInput } from '../../types';
 import { ApproveToken, approveTokenMethodFactory } from '../../helpers/approve';
-import { constructApproveToken } from '../swap/approve';
 import { constructGetSpender } from '../swap/spender';
 
 export type ApproveTokenForOTCOrderFunctions<T> = {

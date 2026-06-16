@@ -26,7 +26,7 @@ export const constructIsTokenSupportedInDelta = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): IsTokenSupportedInDeltaFunctions => {
-  const baseUrl = `${apiURL}/delta/v2/prices/is-token-supported` as const;
+  const baseUrl = `${apiURL}/v2/delta/prices/is-token-supported` as const;
 
   const isTokenSupportedInDelta: IsTokenSupportedInDelta = async (
     token,

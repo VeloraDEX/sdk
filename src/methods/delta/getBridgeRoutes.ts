@@ -47,7 +47,7 @@ export const constructGetBridgeRoutes = ({
   apiURL = API_URL,
   fetcher,
 }: ConstructFetchInput): GetBridgeRoutesFunctions => {
-  const deltaPricesUrl = `${apiURL}/delta/v2/prices` as const;
+  const deltaPricesUrl = `${apiURL}/v2/delta/prices` as const;
 
   const getBridgeRoutes: GetBridgeRoutes = async (
     params = {},

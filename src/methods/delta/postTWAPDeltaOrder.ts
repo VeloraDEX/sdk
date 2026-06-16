@@ -31,7 +31,7 @@ export const constructPostTWAPDeltaOrder = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): PostTWAPDeltaOrderFunctions => {
-  const postOrderUrl = `${apiURL}/delta/v2/orders` as const;
+  const postOrderUrl = `${apiURL}/v2/delta/orders` as const;
 
   const postTWAPDeltaOrder: PostTWAPDeltaOrder = (_postData, requestParams) => {
     const { degenMode, ...postData } = _postData;

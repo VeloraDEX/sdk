@@ -72,7 +72,7 @@ export const constructGetDeltaPrice = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): GetDeltaPriceFunctions => {
-  const pricesUrl = `${apiURL}/delta/v2/prices` as const;
+  const pricesUrl = `${apiURL}/v2/delta/prices` as const;
 
   const getDeltaPrice: GetDeltaPrice = async (options, requestParams) => {
     const {

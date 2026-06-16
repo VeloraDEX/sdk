@@ -39,7 +39,7 @@ export const constructPostDeltaOrder = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): PostDeltaOrderFunctions => {
-  const postOrderUrl = `${apiURL}/delta/v2/orders` as const;
+  const postOrderUrl = `${apiURL}/v2/delta/orders` as const;
 
   const postDeltaOrder: PostDeltaOrder = (_postData, requestParams) => {
     const { degenMode, ...postData } = _postData;
