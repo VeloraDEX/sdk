@@ -110,7 +110,7 @@ Submit orchestrators (`constructSubmitDeltaOrder`, `constructSubmitExternalDelta
 | `getDeltaOrders.ts` | `constructGetDeltaOrders` | `getDeltaOrders` (paginated list), `getDeltaOrderById`, `getDeltaOrderByHash`, `getRequiredBalanceForDeltaOrders`. Reads return `DeltaAuction`. | No |
 | `cancelDeltaOrder.ts` | `constructCancelDeltaOrder` | `signCancelDeltaOrderRequest` → `postCancelDeltaOrderRequest` → `cancelDeltaOrders` (orchestrator). POST `/v2/orders/cancel`. | No (`any`) |
 | `getBridgeRoutes.ts` | `constructGetBridgeRoutes` | `getBridgeRoutes` (flat `BridgeRoute[]`) + `getBridgeProtocols` | No |
-| `isTokenSupportedInDelta.ts` | `constructIsTokenSupportedInDelta` | GET `/v2/prices/is-token-supported` → `boolean` | No |
+| `isTokenSupportedInDelta.ts` | `constructIsTokenSupportedInDelta` | GET `/v2/delta/prices/is-token-supported` → `boolean` | No |
 | `getAgentsList.ts` | `constructGetAgentsList` | GET `/v2/agents/list/:chainId` → `string[]` | No |
 | `getDeltaContract.ts` | `constructGetDeltaContract` | Resolve ParaswapDelta contract address | No |
 | `getPartnerFee.ts` | `constructGetPartnerFee` | Fetch partner fee info (cached per partner in a `Map`) | No |
