@@ -105,7 +105,7 @@ Submit orchestrators (`constructSubmitDeltaOrder`, `constructSubmitExternalDelta
 | `buildDeltaOrder.ts` | `constructBuildDeltaOrder` | POST `/v2/orders/build` → `BuiltDeltaOrder` | No |
 | `buildExternalDeltaOrder.ts` | `constructBuildExternalDeltaOrder` | Same, `orderType: 'ExternalOrder'` | No |
 | `buildTWAPDeltaOrder.ts` | `constructBuildTWAPDeltaOrder` | Same, `orderType: 'TWAPOrder'` / `'TWAPBuyOrder'` | No |
-| `postDeltaOrder.ts` / `postExternalDeltaOrder.ts` / `postTWAPDeltaOrder.ts` | `constructPost*DeltaOrder` | POST `/v2/orders` → `DeltaAuction` | No |
+| `postDeltaOrder.ts` / `postExternalDeltaOrder.ts` / `postTWAPDeltaOrder.ts` | `constructPostDeltaOrder` | POST `/v2/delta/orders` → `DeltaAuction` | No |
 | `getDeltaPrice.ts` | `constructGetDeltaPrice` | GET `/v2/delta/prices` → `DeltaPrice` (route-based: `route` + `alternatives`; cross-chain handled in-route via `destChainId`) | No |
 | `getDeltaOrders.ts` | `constructGetDeltaOrders` | `getDeltaOrders` (paginated list), `getDeltaOrderById`, `getDeltaOrderByHash`, `getRequiredBalanceForDeltaOrders`. Reads return `DeltaAuction`. | No |
 | `cancelDeltaOrder.ts` | `constructCancelDeltaOrder` | `signCancelDeltaOrderRequest` → `postCancelDeltaOrderRequest` → `cancelDeltaOrders` (orchestrator). POST `/v2/orders/cancel`. | No (`any`) |

@@ -457,7 +457,7 @@ describe('Delta: fetch methods', () => {
   });
 });
 
-describe('Delta: build (server-side via POST /v2/orders/build)', () => {
+describe('Delta: build (server-side via POST /v2/delta/orders/build)', () => {
   test('buildDeltaOrder POSTs to /v2/delta/orders/build with correct body', async () => {
     const builtFixture = buildBuiltOrderFixture();
     let postedBody: any;
