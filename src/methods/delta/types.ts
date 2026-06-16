@@ -148,16 +148,16 @@ export type DeltaOrderStatus =
 /** @description Token side on an order. SELL provides an explicit `amount`; BUY provides expected/executed amounts. */
 export type DeltaTokenSide =
   | {
-    chainId: number;
-    token: Address;
-    amount: string;
-  }
+      chainId: number;
+      token: Address;
+      amount: string;
+    }
   | {
-    chainId: number;
-    token: Address;
-    expectedAmount: string | null;
-    executedAmount: string | null;
-  };
+      chainId: number;
+      token: Address;
+      expectedAmount: string | null;
+      executedAmount: string | null;
+    };
 
 /** @description A single transaction entry on a v2 order. */
 export type DeltaTransaction = {
@@ -202,10 +202,10 @@ type DeltaAuctionBase = {
  *  union so that `order` narrows to the matching family (`OnChainOrderMap[T]`). */
 export type DeltaAuction<T extends OnChainOrderType = OnChainOrderType> =
   T extends T
-  ? Prettify<
-    DeltaAuctionBase & {
-      onChainOrderType: T;
-      order: OnChainOrderMap[T];
-    }
-  >
-  : never;
+    ? Prettify<
+        DeltaAuctionBase & {
+          onChainOrderType: T;
+          order: OnChainOrderMap[T];
+        }
+      >
+    : never;
