@@ -12,7 +12,7 @@
 Refer to the documentation of the Velora API: https://developers.velora.xyz/
 
 ## Features
-**Versatility**: works with [web3](https://www.npmjs.com/package/web3) or [ethers](https://www.npmjs.com/package/ethers) without a direct dependency — or with locally-sourced, all-organic, free-range [viem](https://viem.sh/) (which ships with the SDK)
+**Versatility**: works with [web3](https://www.npmjs.com/package/web3) or [ethers](https://www.npmjs.com/package/ethers) without a direct dependency — or with [viem](https://viem.sh/) (also used internally for its utils)
 
 **Canonical**: bring only the functions you actually need
 
