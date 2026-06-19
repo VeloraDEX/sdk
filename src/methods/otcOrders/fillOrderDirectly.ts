@@ -12,9 +12,8 @@ import {
   encodeEIP_2612PermitFunctionInput,
 } from '../common/orders/encoding';
 
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export type FillOrderDirectlyFunctions<T> = {
-  fillOrderDirectly: FillOrderDirectly<T>;
+export type FillOTCOrderFunctions<T> = {
+  fillOTCOrder: FillOTCOrcer<T>;
 };
 
 type TakerPermitEncodedInputParams = {
@@ -40,7 +39,7 @@ type TakerPermitObject =
   | TakerPermit1Data
   | TakerDaiPermitData;
 
-export type FillOrderDirectly<T> = (
+export type FillOTCOrcer<T> = (
   orderFillData: {
     order: OrderData;
     signature: string;
@@ -205,15 +204,14 @@ type FillOrderMethods = ExtractAbiMethodNames<typeof MinAugustusRFQAbi>;
 
 // returns whatever `contractCaller` returns
 // to allow for better versatility
-/** @deprecated Limit Orders are deprecated and will be removed in a future version. */
-export function constructFillOrderDirectly<T>(
+export function constructFillOTCOrder<T>(
   options: ConstructProviderFetchInput<T, 'transactCall'>
-): FillOrderDirectlyFunctions<T> {
+): FillOTCOrderFunctions<T> {
   // getAugustusRFQ is cached internally for the same instance of SDK
   // so should persist across same apiUrl & network
   const { getAugustusRFQ } = constructGetSpender(options);
 
-  const fillOrderDirectly: FillOrderDirectly<T> = async (
+  const fillOTCOrder: FillOTCOrcer<T> = async (
     { order, signature, takerPermit },
     overrides = {},
     requestParams
@@ -275,5 +273,5 @@ export function constructFillOrderDirectly<T>(
     return res;
   };
 
-  return { fillOrderDirectly };
+  return { fillOTCOrder };
 }

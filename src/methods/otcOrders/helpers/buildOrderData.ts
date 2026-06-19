@@ -28,10 +28,10 @@ export interface BuildOrderDataInput {
   makerAmount: string;
   takerAmount: string;
   maker: Address;
-  // OrderData.taker must be Augustus (or other Executor) for p2p limitOrders to involve swap through Augustus
+  // OrderData.taker must be Augustus (or other Executor) for p2p OTCOrders to involve swap through Augustus
   /** @description actual user taker which will go into nonceAndMeta */
-  taker?: Address;
-  /** @description contract executor (Augustus or similar) that is allowed to execute the order, gois in Order.taker */
+  taker: Address;
+  /** @description contract executor (Augustus or similar) that is allowed to execute the order, goes in Order.taker */
   contractTaker?: Address;
 
   AugustusAddress: Address;
@@ -67,7 +67,7 @@ export function buildOrderData({
   maker,
   AugustusAddress,
   // if taker is specified -- p2p order for that taker only to fill through Augustus (v5) or directly (v6)-- taker = Augustus | _taker, takerInNonce = _taker
-  // if taker is not specified -- limitOrder for anyone to fill through Augustus or not -- taker = Zero, takerInNonce = Zero
+  // if taker is not specified -- OTC Order for anyone to fill through Augustus or not -- taker = Zero, takerInNonce = Zero
   taker: takerInNonce = ZERO_ADDRESS,
   // if given, overrides the above choices made based on `taker`
   contractTaker,
@@ -75,7 +75,7 @@ export function buildOrderData({
   AppVersion,
 }: BuildOrderDataInput): SignableOrderData {
   // first 160 bits is taker address (for p2p orders),
-  // or 0 for limitOrders, so that anyone can be the taker of the Order
+  // or 0 for OTC Orders, so that anyone can be the taker of the Order
   const nonceAndMeta = (
     BigInt(takerInNonce) +
     (BigInt(nonce) << BigInt(160))

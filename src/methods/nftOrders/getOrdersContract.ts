@@ -7,7 +7,7 @@ export type GetNFTOrdersContractFunctions = {
   getTokenTransferProxy: GetSpender;
 };
 
-// should work the same as LimitOrders
+// should work the same as OTCOrders
 /** @deprecated NFT Orders are deprecated and will be removed in a future version. */
 export const constructGetNFTOrdersContract = (
   options: ConstructFetchInput

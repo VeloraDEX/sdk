@@ -39,6 +39,7 @@ async function allQuote() {
   });
 
   if ('delta' in quote) {
+    // Delta path — quote.delta is the v2 DeltaPrice (route-based)
     const deltaPrice = quote.delta;
 
     const DeltaContract = await simpleSDK.delta.getDeltaContract();
@@ -49,23 +50,14 @@ async function allQuote() {
       DAI_TOKEN
     );
 
-    const slippagePercent = 0.5;
-    const destAmountAfterSlippage = BigInt(
-      // get rid of exponential notation
-
-      +(+deltaPrice.destAmount * (1 - slippagePercent / 100)).toFixed(0)
-      // get rid of decimals
-    ).toString(10);
-
+    // v2 order building is server-side: pass the quoted route/side, no deltaPrice
     const deltaAuction = await simpleSDK.delta.submitDeltaOrder({
-      deltaPrice,
+      route: deltaPrice.route, // or pick from deltaPrice.alternatives
+      side: deltaPrice.side,
       owner: account,
       // beneficiary: anotherAccount, // if need to send destToken to another account
       // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
-      srcToken: DAI_TOKEN,
-      destToken: USDC_TOKEN,
-      srcAmount: amount,
-      destAmount: destAmountAfterSlippage, // minimum acceptable destAmount
+      slippage: 50, // 50 bps = 0.5% slippage
     });
 
     // poll if necessary

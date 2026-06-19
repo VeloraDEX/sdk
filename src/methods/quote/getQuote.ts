@@ -1,6 +1,6 @@
 import { API_URL, SwapSide } from '../../constants';
 import { constructSearchString } from '../../helpers/misc';
-import type { BridgePrice, DeltaPrice } from '../delta/getDeltaPrice';
+import type { DeltaPrice } from '../delta/types';
 import type {
   ConstructFetchInput,
   EnumerateLiteral,
@@ -58,12 +58,12 @@ export type QuoteWithDeltaPrice = {
 };
 
 export type QuoteWithBridgePrice = {
-  delta: BridgePrice;
+  delta: DeltaPrice;
   deltaAddress: string;
 };
 
 export type QuoteWithDeltaPriceAndBridgePrice = {
-  delta: DeltaPrice | BridgePrice;
+  delta: DeltaPrice;
   deltaAddress: string;
 };
 
@@ -123,7 +123,7 @@ export const constructGetQuote = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): GetQuoteFunctions => {
-  const pricesUrl = `${apiURL}/quote` as const;
+  const pricesUrl = `${apiURL}/v2/quote` as const;
 
   function getQuote(
     options: QuoteParams<'delta'> & { destChainId?: undefined },

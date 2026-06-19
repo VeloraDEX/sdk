@@ -241,3 +241,12 @@ export interface JsonFragment {
    */
   readonly gas?: string;
 }
+
+/** @description Standard pagination envelope returned by paginated API endpoints. */
+export type PaginatedResponse<T> = {
+  data: T[];
+  total: number;
+  page: number;
+  limit: number;
+  hasMore: boolean;
+};

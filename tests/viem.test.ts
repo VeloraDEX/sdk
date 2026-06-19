@@ -33,6 +33,7 @@ const ethersProvider = new ethers.providers.Web3Provider(
 
 const signer = wallet.connect(ethersProvider);
 const senderAddress = signer.address as Hex;
+const takerAddress: Hex = '0xc6daaec7e58c1689cb0117933f862d9d3df08daa';
 
 const viemTestClient = createTestClient({
   chain: { ...hardhat, id: chainId }, // may need to override chainId
@@ -71,6 +72,7 @@ describe('SDK with viem: contract calling methods', () => {
     makerAmount: (1e18).toString(10),
     takerAmount: (8e18).toString(10),
     maker: senderAddress,
+    taker: takerAddress,
   };
 
   let spender: Hex;
@@ -186,22 +188,22 @@ describe('SDK with viem: contract calling methods', () => {
   }, 120000);
 
   test('signOrder', async () => {
-    const signableOrderData = await SDKwithEthers.limitOrders.buildLimitOrder(
+    const signableOrderData = await SDKwithEthers.otcOrders.buildOTCOrder(
       orderInput
     );
 
-    expect(signableOrderData).toMatchSnapshot('LimitOrder to sign');
+    expect(signableOrderData).toMatchSnapshot('OTCOrder to sign');
 
-    const ethersSignature = await SDKwithEthers.limitOrders.signLimitOrder(
+    const ethersSignature = await SDKwithEthers.otcOrders.signOTCOrder(
       signableOrderData
     );
 
-    const viemSignature = await SDKwithViem.limitOrders.signLimitOrder(
+    const viemSignature = await SDKwithViem.otcOrders.signOTCOrder(
       signableOrderData
     );
 
     expect(viemSignature).toMatchInlineSnapshot(
-      `"0x18b022691daab1d8a3486aab5a006f2e98932b1c2fe4f04726c766e7a4e6d4935cbbf6d03ef945f23bef5cf4e250086f14581b1b8097f6c3ffd62653c8b2454b1b"`
+      `"0xa7db0debfa744bab5aec8c99365cacf2858ac32b72e717cf3bad38cd7a53aa51338f406ad8cd42e81cce0714bbdde2e25424654c384a5264afcdff0e347c187a1b"`
     );
     expect(ethersSignature).toEqual(viemSignature);
   });

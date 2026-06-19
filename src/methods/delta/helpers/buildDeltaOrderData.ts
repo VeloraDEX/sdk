@@ -1,7 +1,5 @@
-import { MarkOptional } from 'ts-essentials';
 import { Domain } from '../../common/orders/buildOrderData';
-import { Bridge, DeltaAuctionOrder } from './types';
-import { DELTA_DEFAULT_EXPIRY, producePartnerAndFee } from './misc';
+import { DeltaAuctionOrder } from './types';
 
 // Order(address owner,address beneficiary,address srcToken,address destToken,uint256 srcAmount,uint256 destAmount,uint256 deadline,uint256 nonce,bytes permit, bridge Bridge)";
 const SWAP_ORDER_EIP_712_TYPES = {
@@ -78,78 +76,4 @@ export function produceDeltaOrderTypedData({
     },
     data: orderInput,
   };
-}
-
-export type DeltaOrderDataInput = MarkOptional<
-  Omit<DeltaAuctionOrder, 'partnerAndFee'>,
-  'beneficiary' | 'deadline' | 'nonce' | 'permit'
->;
-
-export type BuildDeltaOrderDataInput = MarkOptional<
-  DeltaOrderDataInput,
-  'metadata'
-> & {
-  partnerAddress: string;
-  paraswapDeltaAddress: string;
-  partnerFeeBps: number;
-  partnerTakesSurplus?: boolean;
-  capSurplus?: boolean;
-  chainId: number;
-  bridge: Bridge;
-};
-
-export function buildDeltaSignableOrderData({
-  owner,
-  beneficiary = owner,
-
-  srcToken,
-  destToken,
-  srcAmount,
-  destAmount,
-  expectedAmount,
-
-  deadline = Math.floor(Date.now() / 1000 + DELTA_DEFAULT_EXPIRY),
-  nonce = Date.now().toString(10), // random enough to not cause collisions
-
-  permit = '0x',
-
-  kind,
-  metadata = '0x',
-
-  partnerAddress,
-  partnerFeeBps,
-  partnerTakesSurplus = false,
-  capSurplus = true,
-
-  chainId,
-  paraswapDeltaAddress,
-  bridge,
-}: BuildDeltaOrderDataInput): SignableDeltaOrderData {
-  const orderInput: DeltaAuctionOrder = {
-    owner,
-    beneficiary,
-    srcToken,
-    destToken,
-    srcAmount,
-    destAmount,
-    expectedAmount,
-    deadline,
-    nonce,
-    permit,
-    partnerAndFee: producePartnerAndFee({
-      partnerFeeBps,
-      partnerAddress,
-      partnerTakesSurplus,
-      capSurplus,
-    }),
-    bridge,
-    kind,
-    metadata,
-  };
-
-  return produceDeltaOrderTypedData({
-    orderInput,
-    chainId,
-    paraswapDeltaAddress,
-  });
 }

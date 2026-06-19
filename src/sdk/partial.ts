@@ -6,11 +6,9 @@ import type {
 } from '../types';
 import type { Merge, UnionToIntersection } from 'ts-essentials';
 import type { ApproveTokenFunctions } from '../methods/swap/approve';
-import type { CancelLimitOrderFunctions } from '../methods/limitOrders/cancelOrder';
-import type { ApproveTokenForLimitOrderFunctions } from '../methods/limitOrders/approveForOrder';
-import type { CancelNFTOrderFunctions } from '../methods/nftOrders/cancelOrder';
-import type { ApproveTokenForNFTOrderFunctions } from '../methods/nftOrders/approveForOrder';
-import type { FillOrderDirectlyFunctions } from '../methods/limitOrders/fillOrderDirectly';
+import type { CancelOTCOrderFunctions } from '../methods/otcOrders/cancelOrder';
+import type { ApproveTokenForOTCOrderFunctions } from '../methods/otcOrders/approveForOrder';
+import type { FillOTCOrderFunctions } from '../methods/otcOrders/fillOrderDirectly';
 import type { ApproveTokenForDeltaFunctions } from '../methods/delta/approveForDelta';
 import type { PreSignDeltaOrderFunctions } from '../methods/delta/preSignDeltaOrder';
 import type { PreSignExternalDeltaOrderFunctions } from '../methods/delta/preSignExternalDeltaOrder';
@@ -46,14 +44,12 @@ type InferWithTxResponse<
     ? MergeExtendableRecursively<
         IntersectionOfReturns<Funcs>,
         [
-          // if there are ApproveTokenFunctions or CancelLimitOrderFunctions in the intersection
-          // which means constructApproveToken or constructCancelLimitOrder was passed in Funcs
+          // if there are ApproveTokenFunctions or CancelOTCOrderFunctions in the intersection
+          // which means constructApproveToken or constructCancelOTCOrder was passed in Funcs
           ApproveTokenFunctions<TxResponse>,
-          CancelLimitOrderFunctions<TxResponse>,
-          FillOrderDirectlyFunctions<TxResponse>,
-          ApproveTokenForLimitOrderFunctions<TxResponse>,
-          CancelNFTOrderFunctions<TxResponse>,
-          ApproveTokenForNFTOrderFunctions<TxResponse>,
+          CancelOTCOrderFunctions<TxResponse>,
+          FillOTCOrderFunctions<TxResponse>,
+          ApproveTokenForOTCOrderFunctions<TxResponse>,
           ApproveTokenForDeltaFunctions<TxResponse>,
           PreSignDeltaOrderFunctions<TxResponse>,
           PreSignExternalDeltaOrderFunctions<TxResponse>,

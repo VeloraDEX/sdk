@@ -1,33 +1,30 @@
-import { DeltaAuction } from '../..';
+import { DeltaAuction, DeltaOrderStatus } from '../..';
 
-function isExecutedDeltaAuction(
-  auction: DeltaAuction,
-  waitForCrosschain = true // only consider executed when destChain work is done
-) {
-  if (auction.status !== 'EXECUTED') return false;
+// Terminal statuses — once an order reaches any of these it won't change again,
+// so polling should stop. COMPLETED already accounts for destChain bridge
+// settlement (crosschain orders sit in BRIDGING until the destChain leg is done).
+const SETTLED_STATUSES: DeltaOrderStatus[] = [
+  'COMPLETED',
+  'FAILED',
+  'CANCELLED',
+  'EXPIRED',
+  'REFUNDED',
+];
 
-  // crosschain Order is executed on destChain if bridgeStatus is filled
-  if (
-    waitForCrosschain &&
-    auction.onChainOrderType === 'Order' &&
-    auction.order.bridge.destinationChainId !== 0
-  ) {
-    return auction.bridgeStatus === 'filled';
-  }
-
-  return true;
+function isSettledDeltaOrder(order: DeltaAuction) {
+  return SETTLED_STATUSES.includes(order.status);
 }
 
 type GetDeltaOrderFn = () => Promise<DeltaAuction>;
 
 function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrderFn) {
   const intervalId = setInterval(async () => {
-    const auction = await getDeltaOrder();
-    console.log('checks: ', auction); // Handle or log the fetched auction as needed
+    const order = await getDeltaOrder();
+    console.log('checks: ', order); // Handle or log the fetched order as needed
 
-    if (isExecutedDeltaAuction(auction)) {
-      clearInterval(intervalId); // Stop interval if completed
-      console.log('Order completed');
+    if (isSettledDeltaOrder(order)) {
+      clearInterval(intervalId); // Stop interval once the order is settled
+      console.log(`Order settled: ${order.status}`);
     }
   }, 3000);
   console.log('Order Pending');
@@ -37,5 +34,10 @@ function fetchOrderPeriodically(getDeltaOrder: GetDeltaOrderFn) {
 
 export function startStatusCheck(getDeltaOrder: GetDeltaOrderFn) {
   const intervalId = fetchOrderPeriodically(getDeltaOrder);
-  setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
+  const timeoutId = setTimeout(() => clearInterval(intervalId), 60000 * 5); // Stop after 5 minutes
+
+  return () => {
+    clearInterval(intervalId);
+    clearTimeout(timeoutId);
+  };
 }
