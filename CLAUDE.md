@@ -201,4 +201,5 @@ OrderWithSig tuple:
 - Order hash: computed via viem's `hashTypedData` in `produceDeltaOrderHash()`
 - ABI style: always inline `const ... as const`, never imported from external ABI files
 - Cross-chain detection: `isOrderCrosschain(order)` checks `bridge.destinationChainId !== 0`
+- **Committing**: do NOT commit unless explicitly asked. Make the edits and leave them in the working tree; the user commits (or asks you to) when ready.
 - **Commit messages**: `prefix/what was done` — `prefix` is the file, function, or component that was changed. Examples: `OrderDetails/added button`, `useDeltaPrice/migrate to v2 route fields`. Do NOT add a `Co-Authored-By: Claude` trailer.
