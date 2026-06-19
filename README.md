@@ -244,13 +244,14 @@ if ('delta' in quote) {
     slippage: 50, // 50 bps = 0.5%
   });
 
-  // poll if necessary — v2 status COMPLETED already accounts for any dest-chain bridge
+  // stop polling on any terminal status — COMPLETED already accounts for any dest-chain bridge
+  const SETTLED = ['COMPLETED', 'FAILED', 'CANCELLED', 'EXPIRED', 'REFUNDED'];
   function startStatusCheck(auctionId: string) {
     const intervalId = setInterval(async () => {
       const auction = await simpleSDK.delta.getDeltaOrderById(auctionId);
-      if (auction.status === 'COMPLETED') {
+      if (SETTLED.includes(auction.status)) {
         clearInterval(intervalId);
-        console.log('Order completed');
+        console.log(`Order settled: ${auction.status}`);
       }
     }, 3000);
     setTimeout(() => clearInterval(intervalId), 60000 * 5); // stop after 5 minutes
@@ -399,13 +400,14 @@ const partnerFeeResponse = await simpleSDK.delta.getPartnerFee({ partner });
 ### 4. Wait for Delta Order execution
 
 ```ts
-// poll if necessary — v2 status COMPLETED already accounts for any dest-chain bridge
+// stop polling on any terminal status — COMPLETED already accounts for any dest-chain bridge
+const SETTLED = ['COMPLETED', 'FAILED', 'CANCELLED', 'EXPIRED', 'REFUNDED'];
 function startStatusCheck(auctionId: string) {
   const intervalId = setInterval(async () => {
     const auction = await simpleSDK.delta.getDeltaOrderById(auctionId);
-    if (auction.status === 'COMPLETED') {
-      clearInterval(intervalId); // stop interval once completed
-      console.log('Order completed');
+    if (SETTLED.includes(auction.status)) {
+      clearInterval(intervalId); // stop interval once the order is settled
+      console.log(`Order settled: ${auction.status}`);
     }
   }, 3000);
   // stop polling after 5 minutes

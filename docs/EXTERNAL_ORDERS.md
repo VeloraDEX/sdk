@@ -124,11 +124,13 @@ const deltaAuction = await deltaSDK.postExternalDeltaOrder({
 ### 5. Wait for execution
 
 ```ts
+// stop polling on any terminal status
+const SETTLED = ['COMPLETED', 'FAILED', 'CANCELLED', 'EXPIRED', 'REFUNDED'];
 const intervalId = setInterval(async () => {
   const auction = await deltaSDK.getDeltaOrderById(deltaAuction.id);
   console.log('Status:', auction.status);
 
-  if (auction.status === 'COMPLETED' || auction.status === 'FAILED') {
+  if (SETTLED.includes(auction.status)) {
     clearInterval(intervalId);
   }
 }, 3000);

@@ -78,13 +78,14 @@ For full control over signing, use `buildDeltaOrder` → `signDeltaOrder` → `p
 ### 5. Wait for Delta Order execution
 
 ```ts
-// poll if necessary — v2 status COMPLETED already accounts for any dest-chain bridge
+// stop polling on any terminal status — COMPLETED already accounts for any dest-chain bridge
+const SETTLED = ['COMPLETED', 'FAILED', 'CANCELLED', 'EXPIRED', 'REFUNDED'];
 function startStatusCheck(auctionId: string) {
   const intervalId = setInterval(async () => {
     const auction = await deltaSDK.getDeltaOrderById(auctionId);
-    if (auction.status === 'COMPLETED') {
-      clearInterval(intervalId); // stop interval once completed
-      console.log('Order completed');
+    if (SETTLED.includes(auction.status)) {
+      clearInterval(intervalId); // stop interval once the order is settled
+      console.log(`Order settled: ${auction.status}`);
     }
   }, 3000);
   // stop polling after 5 minutes
@@ -198,13 +199,14 @@ Across, the service facilitating crosschain bridging, has [special logic when it
 ### 6. Wait for Delta Order execution
 
 ```ts
-// poll if necessary — v2 status COMPLETED already accounts for the dest-chain bridge
+// stop polling on any terminal status — COMPLETED already accounts for the dest-chain bridge
+const SETTLED = ['COMPLETED', 'FAILED', 'CANCELLED', 'EXPIRED', 'REFUNDED'];
 function startStatusCheck(auctionId: string) {
   const intervalId = setInterval(async () => {
     const auction = await deltaSDK.getDeltaOrderById(auctionId);
-    if (auction.status === 'COMPLETED') {
-      clearInterval(intervalId); // stop interval once completed
-      console.log('Order completed');
+    if (SETTLED.includes(auction.status)) {
+      clearInterval(intervalId); // stop interval once the order is settled
+      console.log(`Order settled: ${auction.status}`);
     }
   }, 3000);
   // stop polling after 5 minutes
