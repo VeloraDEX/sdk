@@ -106,15 +106,3 @@ export function sanitizeTWAPOrderData(
     maxSrcAmount: orderData.maxSrcAmount,
   };
 }
-
-// export function sanitizeArbitraryOrderData<T extends DeltaOrderUnion>(
-//   orderData: T
-// ): T {
-//   if ('handler' in orderData) {
-//     return sanitizeExternalOrderData(orderData) as T;
-//   } else if ('interval' in orderData) {
-//     return sanitizeTWAPOrderData(orderData) as T;
-//   } else {
-//     return sanitizeDeltaOrderData(orderData) as T;
-//   }
-// }
