@@ -32,12 +32,12 @@ v10 is a breaking update over the v9.x line. The key consumer-facing changes:
 - **New read-only order types** surface through the read paths: `ProductiveOrder` (server-managed, no builder) and `FillableOrder` (a `partiallyFillable` Standard order — treat the same as `Order`).
 - All Delta endpoints now use the `/v2/delta/...` prefix.
 
-### `limitOrders` → `otcOrders`
+### Legacy limit orders removed — OTC orders remain
 
-The limit-orders module was renamed to OTC orders. Update both the namespace and the constructors:
+The deprecated legacy (non-Delta) limit-order methods are gone. The OTC order functionality that lived alongside them is kept, now exposed under its own `otcOrders` name:
 
 - `sdk.limitOrders.*` → `sdk.otcOrders.*`
-- `constructBuildLimitOrder` → `constructBuildOTCOrder`, `constructSignLimitOrder` → `constructSignOTCOrder`, `constructPostLimitOrder` → `constructPostOTCOrder`, `constructCancelLimitOrder` → `constructCancelOTCOrder`, `constructGetLimitOrders` → `constructGetOTCOrders`, `constructApproveTokenForLimitOrder` → `constructApproveTokenForOTCOrder`, `constructFillOrderDirectly` → `constructFillOTCOrder`, `constructSubmitLimitOrder` → `constructSubmitOTCOrder`, etc.
+- the constructors are OTC-named: `constructBuildOTCOrder`, `constructSignOTCOrder`, `constructPostOTCOrder`, `constructCancelOTCOrder`, `constructGetOTCOrders`, `constructApproveTokenForOTCOrder`, `constructFillOTCOrder`, `constructSubmitOTCOrder`, etc.
 
 ### NFT orders removed
 
