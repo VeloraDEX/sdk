@@ -12,11 +12,36 @@
 Refer to the documentation of the Velora API: https://developers.velora.xyz/
 
 ## Features
-**Versatility**: works with [web3](https://www.npmjs.com/package/web3), [ethers](https://www.npmjs.com/package/ethers) or [viem](https://viem.sh/) without direct dependency
+**Versatility**: works with [web3](https://www.npmjs.com/package/web3) or [ethers](https://www.npmjs.com/package/ethers) without direct dependency
 
 **Canonical**: bring only the functions you actually need
 
 **Lightweight**: 10KB Gzipped for the minimal variant
+
+## What's changed in v10
+
+v10 is a breaking update over the v9.x line. The key consumer-facing changes:
+
+### Delta is now v2 — orders are built server-side
+
+- **You no longer build the order locally.** Pass the quoted `route` + `side` (from `getDeltaPrice` / `quote.delta`) to `buildDeltaOrder` / `submitDeltaOrder`; the server returns the typed data to sign. You no longer pass local amounts.
+- **One signer for every family.** `signDeltaOrder(builtOrder)` signs Standard, External, TWAP Sell and TWAP Buy orders. The old per-family signers **`signExternalDeltaOrder`** and **`signTWAPDeltaOrder`** are removed.
+- **`getDeltaPrice` returns a route-based `DeltaPrice`** (`route` + `alternatives`). The old `BridgePrice` type is gone — cross-chain is handled in-route via `destChainId`.
+- **`getBridgeInfo` → `getBridgeRoutes`** (now returns a flat `BridgeRoute[]`), plus a new `getBridgeProtocols`.
+- **New `getAgentsList`** (`sdk.delta.getAgentsList`).
+- **New read-only order types** surface through the read paths: `ProductiveOrder` (server-managed, no builder) and `FillableOrder` (a `partiallyFillable` Standard order — treat the same as `Order`).
+- All Delta endpoints now use the `/v2/delta/...` prefix.
+
+### `limitOrders` → `otcOrders`
+
+The limit-orders module was renamed to OTC orders. Update both the namespace and the constructors:
+
+- `sdk.limitOrders.*` → `sdk.otcOrders.*`
+- `constructBuildLimitOrder` → `constructBuildOTCOrder`, `constructSignLimitOrder` → `constructSignOTCOrder`, `constructPostLimitOrder` → `constructPostOTCOrder`, `constructCancelLimitOrder` → `constructCancelOTCOrder`, `constructGetLimitOrders` → `constructGetOTCOrders`, `constructApproveTokenForLimitOrder` → `constructApproveTokenForOTCOrder`, `constructFillOrderDirectly` → `constructFillOTCOrder`, `constructSubmitLimitOrder` → `constructSubmitOTCOrder`, etc.
+
+### NFT orders removed
+
+The deprecated NFT-orders feature is gone: `sdk.nftOrders.*` and all `construct*NFTOrder*` exports no longer exist.
 
 ## Installing Velora SDK
 
