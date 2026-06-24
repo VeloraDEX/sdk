@@ -12,5 +12,5 @@ export {
 // allows to pass by name instead of importing enum first
 export type ContractMethodByName = EnumerateLiteral<typeof ContractMethod>;
 
-export const API_URL = 'https://api.paraswap.io';
+export const API_URL = 'https://api.velora.xyz';
 export const DEFAULT_VERSION = '6.2' satisfies APIVersion;

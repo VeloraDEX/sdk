@@ -52,7 +52,7 @@ type RateQueryParams = {
   otherExchangePrices?: boolean;
 
   /**
-   * @description Comma Separated List of DEXs to include. **Supported DEXs:** UniswapV2, UniswapV3, Kyber, Bancor, AugustusRFQ, Oasis, Compound, Fulcrum, Balancer, MakerDAO, Chai, Aave, Aave2 and more. You can view all currently supported dexes filtered by chain [here](https://api.paraswap.io/adapters/list/1) eg: `UniswapV3,MakerDAO`.
+   * @description Comma Separated List of DEXs to include. **Supported DEXs:** UniswapV2, UniswapV3, Kyber, Bancor, AugustusRFQ, Oasis, Compound, Fulcrum, Balancer, MakerDAO, Chai, Aave, Aave2 and more. You can view all currently supported dexes filtered by chain [here](https://api.velora.xyz/adapters/list/1) eg: `UniswapV3,MakerDAO`.
    */
   includeDEXS?: string;
 
