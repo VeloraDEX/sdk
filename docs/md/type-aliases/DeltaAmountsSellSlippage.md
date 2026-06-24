@@ -44,4 +44,4 @@ SELL with slippage: srcAmount provided, destAmount auto-computed from deltaPrice
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L8)
+[src/methods/delta/helpers/types.ts:7](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L7)

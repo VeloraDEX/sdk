@@ -10,78 +10,78 @@
 
 ## Type declaration
 
-### bridgeMetadata
+### beneficiary
 
-> **bridgeMetadata**: [`BridgeMetadata`](../../type-aliases/BridgeMetadata.md) \| `null`
-
-### bridgeStatus
-
-> **bridgeStatus**: [`BridgeStatus`](../../type-aliases/BridgeStatus.md) \| `null`
-
-### chainId
-
-> **chainId**: `number`
+> **beneficiary**: [`Address`](../../type-aliases/Address.md)
 
 ### createdAt
 
 > **createdAt**: `string`
 
-### deltaVersion
+#### Description
 
-> **deltaVersion**: `string`
-
-### excludeAgents
-
-> **excludeAgents**: `string`[] \| `null`
+ISO datetime string.
 
 ### expiresAt
 
 > **expiresAt**: `string`
 
+#### Description
+
+ISO datetime string.
+
 ### id
 
 > **id**: `string`
 
-### includeAgents
+### input
 
-> **includeAgents**: `string`[] \| `null`
+> **input**: [`DeltaTokenSide`](../../type-aliases/DeltaTokenSide.md)
 
 ### orderHash
 
-> **orderHash**: `string` \| `null`
+> **orderHash**: `string`
 
-### partiallyFillable
+### output
 
-> **partiallyFillable**: `boolean`
+> **output**: [`DeltaTokenSide`](../../type-aliases/DeltaTokenSide.md)
+
+### owner
+
+> **owner**: [`Address`](../../type-aliases/Address.md)
 
 ### partner
 
 > **partner**: `string`
 
-### referrerAddress
+### refunds
 
-> **referrerAddress**: `string` \| `null`
+> **refunds**: [`BridgeRefundMetadata`](../../type-aliases/BridgeRefundMetadata.md)[]
+
+### side
+
+> **side**: `"SELL"` \| `"BUY"`
 
 ### status
 
-> **status**: [`DeltaAuctionStatus`](../../type-aliases/DeltaAuctionStatus.md)
+> **status**: [`DeltaOrderStatus`](../../type-aliases/DeltaOrderStatus.md)
 
 ### transactions
 
-> **transactions**: [`DeltaAuctionTransaction`](../../type-aliases/DeltaAuctionTransaction.md)[]
+> **transactions**: [`DeltaTransaction`](../../type-aliases/DeltaTransaction.md)[]
 
 ### type
 
-> **type**: `"MARKET"` \| `"LIMIT"`
+> **type**: [`DeltaOrderType`](../../type-aliases/DeltaOrderType.md)
 
 ### updatedAt
 
 > **updatedAt**: `string`
 
-### user
+#### Description
 
-> **user**: `string`
+ISO datetime string.
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:233](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L233)
+[src/methods/delta/types.ts:179](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L179)

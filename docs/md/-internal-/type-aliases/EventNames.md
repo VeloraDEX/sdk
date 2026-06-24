@@ -6,7 +6,7 @@
 
 # Type Alias: EventNames\<Events\>
 
-> **EventNames**\<`Events`\>: `object` *extends* `Events` ? `string` \| `symbol` : keyof `Events` \| keyof [`EventEmitterBuiltInEventMap`](../interfaces/EventEmitterBuiltInEventMap.md)
+> **EventNames**\<`Events`\>: `object` *extends* `Events` ? `string` \| `symbol` : keyof `Events` \| keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md)
 
 ## Type Parameters
 

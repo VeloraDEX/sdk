@@ -6,18 +6,18 @@
 
 # Type Alias: BuildDeltaOrder()
 
-> **BuildDeltaOrder**: (`buildOrderParams`, `requestParams`?) => `Promise`\<[`SignableDeltaOrderData`](../../type-aliases/SignableDeltaOrderData.md)\>
+> **BuildDeltaOrder**: (`buildOrderParams`, `requestParams`?) => `Promise`\<[`BuiltDeltaOrder`](../../type-aliases/BuiltDeltaOrder.md)\<[`DeltaAuctionOrder`](../../type-aliases/DeltaAuctionOrder.md)\>\>
 
 ## Parameters
 
-• **buildOrderParams**: [`BuildDeltaOrderDataParams`](../../type-aliases/BuildDeltaOrderDataParams.md)
+• **buildOrderParams**: [`BuildDeltaOrderParams`](../../type-aliases/BuildDeltaOrderParams.md)
 
 • **requestParams?**: [`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
-`Promise`\<[`SignableDeltaOrderData`](../../type-aliases/SignableDeltaOrderData.md)\>
+`Promise`\<[`BuiltDeltaOrder`](../../type-aliases/BuiltDeltaOrder.md)\<[`DeltaAuctionOrder`](../../type-aliases/DeltaAuctionOrder.md)\>\>
 
 ## Defined in
 
-[src/methods/delta/buildDeltaOrder.ts:68](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L68)
+[src/methods/delta/buildDeltaOrder.ts:43](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L43)

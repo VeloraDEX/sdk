@@ -28,4 +28,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/fillOrderDirectly.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/fillOrderDirectly.ts#L31)
+[src/methods/otcOrders/fillOrderDirectly.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/fillOrderDirectly.ts#L30)

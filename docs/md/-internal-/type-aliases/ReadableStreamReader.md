@@ -14,4 +14,4 @@
 
 ## Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:197
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:200

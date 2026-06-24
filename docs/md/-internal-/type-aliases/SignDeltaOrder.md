@@ -6,11 +6,11 @@
 
 # Type Alias: SignDeltaOrder()
 
-> **SignDeltaOrder**: (`signableOrderData`) => `Promise`\<`string`\>
+> **SignDeltaOrder**: (`builtOrder`) => `Promise`\<`string`\>
 
 ## Parameters
 
-• **signableOrderData**: [`SignableDeltaOrderData`](../../type-aliases/SignableDeltaOrderData.md)
+• **builtOrder**: [`BuiltDeltaOrder`](../../type-aliases/BuiltDeltaOrder.md)
 
 ## Returns
 
@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/signDeltaOrder.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/signDeltaOrder.ts#L5)
+[src/methods/delta/index.ts:107](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L107)

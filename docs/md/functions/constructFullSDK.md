@@ -22,8 +22,8 @@
 
 ## Description
 
-construct SDK with every method, for swap and limitOrders
+construct SDK with every method, for swap and otcOrders
 
 ## Defined in
 
-[src/sdk/full.ts:33](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/full.ts#L33)
+[src/sdk/full.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/full.ts#L26)

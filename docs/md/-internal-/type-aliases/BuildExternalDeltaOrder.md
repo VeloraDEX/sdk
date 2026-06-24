@@ -6,7 +6,7 @@
 
 # Type Alias: BuildExternalDeltaOrder()
 
-> **BuildExternalDeltaOrder**: (`buildOrderParams`, `requestParams`?) => `Promise`\<[`SignableExternalOrderData`](../../type-aliases/SignableExternalOrderData.md)\>
+> **BuildExternalDeltaOrder**: (`buildOrderParams`, `requestParams`?) => `Promise`\<[`BuiltDeltaOrder`](../../type-aliases/BuiltDeltaOrder.md)\<[`ExternalDeltaOrder`](../../type-aliases/ExternalDeltaOrder.md)\>\>
 
 ## Parameters
 
@@ -16,8 +16,8 @@
 
 ## Returns
 
-`Promise`\<[`SignableExternalOrderData`](../../type-aliases/SignableExternalOrderData.md)\>
+`Promise`\<[`BuiltDeltaOrder`](../../type-aliases/BuiltDeltaOrder.md)\<[`ExternalDeltaOrder`](../../type-aliases/ExternalDeltaOrder.md)\>\>
 
 ## Defined in
 
-[src/methods/delta/buildExternalDeltaOrder.ts:59](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildExternalDeltaOrder.ts#L59)
+[src/methods/delta/buildExternalDeltaOrder.ts:47](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildExternalDeltaOrder.ts#L47)

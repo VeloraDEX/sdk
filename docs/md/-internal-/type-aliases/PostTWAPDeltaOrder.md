@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/delta/postTWAPDeltaOrder.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postTWAPDeltaOrder.ts#L19)
+[src/methods/delta/postTWAPDeltaOrder.ts:20](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postTWAPDeltaOrder.ts#L20)

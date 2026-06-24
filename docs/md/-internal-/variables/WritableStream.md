@@ -10,9 +10,9 @@
 
 ## Parameters
 
-• **underlyingSink?**: `UnderlyingSink`\<`W`\>
+• **underlyingSink?**: [`UnderlyingSink`](../interfaces/UnderlyingSink.md)\<`W`\>
 
-• **strategy?**: `QueuingStrategy`\<`W`\>
+• **strategy?**: [`QueuingStrategy`](../interfaces/QueuingStrategy.md)\<`W`\>
 
 ## Returns
 
@@ -26,4 +26,4 @@
 
 ## Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/stream/web.d.ts:285
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:288

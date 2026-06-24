@@ -16,4 +16,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/fillOrderDirectly.ts:20](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/fillOrderDirectly.ts#L20)
+[src/methods/otcOrders/fillOrderDirectly.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/fillOrderDirectly.ts#L19)

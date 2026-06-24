@@ -132,4 +132,4 @@ swap side of the order
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:325](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L325)
+[src/methods/delta/helpers/types.ts:215](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L215)

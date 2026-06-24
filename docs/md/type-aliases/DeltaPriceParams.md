@@ -60,7 +60,7 @@ Destination Token Decimals
 
 #### Description
 
-Destination Token Address
+Destination Token Address. For Crosschain Orders, the destination token on the destination chain
 
 ### excludeAgents?
 
@@ -84,7 +84,7 @@ Destination Token Address
 
 #### Description
 
-In %. It's a way to bypass the API price impact check (default = 15%)
+In %. Bypasses the API price impact check (default = 15%)
 
 ### maxUSDImpact?
 
@@ -104,7 +104,7 @@ Partner string.
 
 #### Description
 
-Used together with `partner` if provided. Represented in basis points, 50bps=0.5%
+Partner fee in basis points (bps), 50bps=0.5%
 
 ### side?
 
@@ -128,7 +128,7 @@ Source Token Decimals
 
 #### Description
 
-Source Token Address. Not Native Token
+Source Token Address
 
 ### userAddress?
 
@@ -140,4 +140,4 @@ User's Wallet Address
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:14](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L14)
+[src/methods/delta/getDeltaPrice.ts:12](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L12)

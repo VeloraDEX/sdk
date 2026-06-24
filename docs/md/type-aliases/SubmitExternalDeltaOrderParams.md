@@ -10,22 +10,10 @@
 
 ## Type declaration
 
-### partiallyFillable?
-
-> `optional` **partiallyFillable**: `boolean`
-
-#### Description
-
-designates the Order as being able to be partially filled, as opposed to fill-or-kill
-
 ### referrerAddress?
 
 > `optional` **referrerAddress**: `string`
 
-#### Description
-
-Referrer address
-
 ## Defined in
 
-[src/methods/delta/index.ts:138](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L138)
+[src/methods/delta/index.ts:173](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L173)

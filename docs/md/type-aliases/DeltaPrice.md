@@ -10,122 +10,86 @@
 
 ## Type declaration
 
-### bridge
+### alternatives
 
-> **bridge**: [`Bridge`](Bridge.md)
-
-### destAmount
-
-> **destAmount**: `string`
-
-### destAmountBeforeFee?
-
-> `optional` **destAmountBeforeFee**: `string`
+> **alternatives**: [`DeltaRoute`](DeltaRoute.md)[]
 
 #### Description
 
-Available for SELL side
+Alternative routes (other bridges). Each is a full DeltaRoute.
 
-### destToken
+### id
 
-> **destToken**: `string`
-
-### destUSD
-
-> **destUSD**: `string`
-
-### destUSDBeforeFee?
-
-> `optional` **destUSDBeforeFee**: `string`
+> **id**: `string`
 
 #### Description
 
-Available for SELL side
+Unique request ID for tracing.
 
-### gasCost
+### inputToken
 
-> **gasCost**: `string`
+> **inputToken**: [`DeltaPriceToken`](DeltaPriceToken.md)
 
-### gasCostBeforeFee
+#### Description
 
-> **gasCostBeforeFee**: `string`
+Token the user trades (identity only — amounts live in route.origin.input).
 
-### gasCostUSD
+### outputToken
 
-> **gasCostUSD**: `string`
+> **outputToken**: [`DeltaPriceToken`](DeltaPriceToken.md)
 
-### gasCostUSDBeforeFee
+#### Description
 
-> **gasCostUSDBeforeFee**: `string`
-
-### hmac
-
-> **hmac**: `string`
+Token the user receives (identity only — amounts live in route.destination.output).
 
 ### partner
 
-> **partner**: `string`
-
-### partnerFee
-
-> **partnerFee**: `number`
-
-### receivedDestAmount
-
-> **receivedDestAmount**: `string`
+> **partner**: `object`
 
 #### Description
 
-amount of the final outcome token
+Partner info attached to this price.
 
-### receivedDestAmountBeforeFee?
+### partner.feePercent
 
-> `optional` **receivedDestAmountBeforeFee**: `string`
-
-#### Description
-
-Available for SELL side
-
-### receivedDestUSD
-
-> **receivedDestUSD**: `string`
-
-### receivedDestUSDBeforeFee?
-
-> `optional` **receivedDestUSDBeforeFee**: `string`
+> **feePercent**: `number`
 
 #### Description
 
-Available for SELL side
+Partner fee in percent (e.g. 0.12 = 0.12%).
 
-### srcAmount
+### partner.name
 
-> **srcAmount**: `string`
+> **name**: `string`
 
-### srcAmountBeforeFee?
+### route
 
-> `optional` **srcAmountBeforeFee**: `string`
-
-#### Description
-
-Available for BUY side
-
-### srcToken
-
-> **srcToken**: `string`
-
-### srcUSD
-
-> **srcUSD**: `string`
-
-### srcUSDBeforeFee?
-
-> `optional` **srcUSDBeforeFee**: `string`
+> **route**: [`DeltaRoute`](DeltaRoute.md)
 
 #### Description
 
-Available for BUY side
+Recommended route with full amounts and bridge details.
+
+### side
+
+> **side**: `"SELL"` \| `"BUY"`
+
+#### Description
+
+Order side.
+
+### spender
+
+> **spender**: [`Address`](Address.md)
+
+#### Description
+
+Address to approve for spending the input token.
+
+## Description
+
+v2 price response: route-based, cross-chain first.
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:62](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L62)
+[src/methods/delta/types.ts:90](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L90)

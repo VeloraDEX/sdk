@@ -12,7 +12,7 @@
 
 ### delta
 
-> **delta**: [`DeltaPrice`](../../type-aliases/DeltaPrice.md) \| [`BridgePrice`](../../type-aliases/BridgePrice.md)
+> **delta**: [`DeltaPrice`](../../type-aliases/DeltaPrice.md)
 
 ### deltaAddress
 

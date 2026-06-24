@@ -16,8 +16,8 @@
 
 #### Description
 
-Build Orders to be posted to Delta API for execution
+Build a Delta v2 order from a DeltaRoute via the server endpoint, ready to sign and post.
 
 ## Defined in
 
-[src/methods/delta/buildDeltaOrder.ts:73](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L73)
+[src/methods/delta/buildDeltaOrder.ts:48](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L48)

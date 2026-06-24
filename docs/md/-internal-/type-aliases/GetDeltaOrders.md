@@ -6,32 +6,22 @@
 
 # Type Alias: GetDeltaOrders()
 
-> **GetDeltaOrders**: \<`T`\>(`options`, `requestParams`?) => `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\<`T`\>[]\>(`options`, `requestParams`?) => `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)[]\>
+> **GetDeltaOrders**: \<`T`\>(`options`, `requestParams`?) => `Promise`\<[`PaginatedResponse`](../../type-aliases/PaginatedResponse.md)\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\<`T`\>\>\>
 
 ## Type Parameters
 
-• **T** *extends* [`OnChainOrderType`](../../type-aliases/OnChainOrderType.md)
+• **T** *extends* [`OnChainOrderType`](../../type-aliases/OnChainOrderType.md) = [`OnChainOrderType`](../../type-aliases/OnChainOrderType.md)
 
 ## Parameters
 
-• **options**: [`OrdersFilter`](OrdersFilter.md)\<`T`\> & `object`
+• **options**: [`OrdersFilter`](OrdersFilter.md)\<`T`\>
 
 • **requestParams?**: [`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
-`Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\<`T`\>[]\>
-
-## Parameters
-
-• **options**: [`OrdersFilter`](OrdersFilter.md)\<[`OnChainOrderType`](../../type-aliases/OnChainOrderType.md)\>
-
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
-
-## Returns
-
-`Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)[]\>
+`Promise`\<[`PaginatedResponse`](../../type-aliases/PaginatedResponse.md)\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\<`T`\>\>\>
 
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:64](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L64)
+[src/methods/delta/getDeltaOrders.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L44)

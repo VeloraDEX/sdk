@@ -54,22 +54,6 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.dis
 
 node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:15
 
-#### \[asyncDispose\]()
-
-> **\[asyncDispose\]**(): [`PromiseLike`](PromiseLike.md)\<`void`\>
-
-##### Returns
-
-[`PromiseLike`](PromiseLike.md)\<`void`\>
-
-##### Inherited from
-
-`AsyncIteratorObject.[asyncDispose]`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:286
-
 ***
 
 ### \[asyncIterator\]()

@@ -24,4 +24,4 @@
 
 ## Defined in
 
-[src/methods/delta/getBridgeInfo.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getBridgeInfo.ts#L31)
+[src/methods/delta/getBridgeRoutes.ts:6](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getBridgeRoutes.ts#L6)

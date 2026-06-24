@@ -50,22 +50,6 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.dis
 
 node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:11
 
-#### \[dispose\]()
-
-> **\[dispose\]**(): `void`
-
-##### Returns
-
-`void`
-
-##### Inherited from
-
-`IteratorObject.[dispose]`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:282
-
 ***
 
 ### \[iterator\]()

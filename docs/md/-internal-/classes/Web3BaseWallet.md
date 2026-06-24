@@ -284,49 +284,23 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ### at()
 
-#### at(index)
-
 > **at**(`index`): `undefined` \| `T`
 
-##### Parameters
+#### Parameters
 
 • **index**: `number`
 
-##### Returns
+#### Returns
 
 `undefined` \| `T`
 
-##### Inherited from
+#### Inherited from
 
 `Array.at`
 
-##### Defined in
+#### Defined in
 
 node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/indexable.d.ts:7
-
-#### at(index)
-
-> **at**(`index`): `undefined` \| `T`
-
-Takes an integer value and returns the item at that index,
-allowing for positive and negative integers.
-Negative integers count back from the last item in the array.
-
-##### Parameters
-
-• **index**: `number`
-
-##### Returns
-
-`undefined` \| `T`
-
-##### Inherited from
-
-`Array.at`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:297
 
 ***
 

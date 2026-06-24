@@ -14,6 +14,7 @@
 - [`AxiosError`](../classes/AxiosError.md)
 - [`EthersError`](EthersError.md)
 - [`BaseWeb3Error`](../classes/BaseWeb3Error.md)
+- [`ErrnoException`](ErrnoException.md)
 
 ## Properties
 

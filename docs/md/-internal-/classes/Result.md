@@ -236,49 +236,23 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 
 ### at()
 
-#### at(index)
-
 > **at**(`index`): `any`
 
-##### Parameters
+#### Parameters
 
 • **index**: `number`
 
-##### Returns
+#### Returns
 
 `any`
 
-##### Inherited from
+#### Inherited from
 
 `Array.at`
 
-##### Defined in
+#### Defined in
 
 node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/indexable.d.ts:7
-
-#### at(index)
-
-> **at**(`index`): `any`
-
-Takes an integer value and returns the item at that index,
-allowing for positive and negative integers.
-Negative integers count back from the last item in the array.
-
-##### Parameters
-
-• **index**: `number`
-
-##### Returns
-
-`any`
-
-##### Inherited from
-
-`Array.at`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:297
 
 ***
 

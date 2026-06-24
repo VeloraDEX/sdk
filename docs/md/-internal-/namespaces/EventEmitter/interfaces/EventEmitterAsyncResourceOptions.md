@@ -8,7 +8,7 @@
 
 ## Extends
 
-- `AsyncResourceOptions`.[`EventEmitterOptions`](../../../interfaces/EventEmitterOptions.md)
+- [`AsyncResourceOptions`](../../../interfaces/AsyncResourceOptions.md).[`EventEmitterOptions`](../../../interfaces/EventEmitterOptions.md)
 
 ## Properties
 
@@ -24,7 +24,7 @@ Enables automatic capturing of promise rejection.
 
 #### Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:76
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:77
 
 ***
 
@@ -43,7 +43,7 @@ new.target.name if instantiated as a child class.
 
 #### Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:521
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:574
 
 ***
 
@@ -64,11 +64,11 @@ false
 
 #### Inherited from
 
-`AsyncResourceOptions.requireManualDestroy`
+[`AsyncResourceOptions`](../../../interfaces/AsyncResourceOptions.md).[`requireManualDestroy`](../../../interfaces/AsyncResourceOptions.md#requiremanualdestroy)
 
 #### Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/async\_hooks.d.ts:224
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:224
 
 ***
 
@@ -86,8 +86,8 @@ executionAsyncId()
 
 #### Inherited from
 
-`AsyncResourceOptions.triggerAsyncId`
+[`AsyncResourceOptions`](../../../interfaces/AsyncResourceOptions.md).[`triggerAsyncId`](../../../interfaces/AsyncResourceOptions.md#triggerasyncid)
 
 #### Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/async\_hooks.d.ts:216
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:216

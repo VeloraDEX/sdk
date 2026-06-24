@@ -14,9 +14,17 @@
 
 > **ExternalOrder**: [`ExternalDeltaOrder`](../../type-aliases/ExternalDeltaOrder.md)
 
+### FillableOrder
+
+> **FillableOrder**: [`DeltaAuctionOrder`](../../type-aliases/DeltaAuctionOrder.md)
+
 ### Order
 
 > **Order**: [`DeltaAuctionOrder`](../../type-aliases/DeltaAuctionOrder.md)
+
+### ProductiveOrder
+
+> **ProductiveOrder**: [`ProductiveDeltaOrder`](../../type-aliases/ProductiveDeltaOrder.md)
 
 ### TWAPBuyOrder
 
@@ -28,4 +36,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:214](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L214)
+[src/methods/delta/helpers/types.ts:197](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L197)

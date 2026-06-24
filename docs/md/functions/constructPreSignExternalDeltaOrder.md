@@ -20,6 +20,14 @@
 
 [`PreSignExternalDeltaOrderFunctions`](../type-aliases/PreSignExternalDeltaOrderFunctions.md)\<`T`\>
 
+## Description
+
+Construct on-chain pre-signing helpers for External Delta orders:
+order hashing (`hashExternalDeltaOrder` / `hashExternalDeltaOrderTypedData`) and
+`setPreSignature` transactions (`setExternalDeltaOrderPreSignature` /
+`preSignExternalDeltaOrder`). The transact methods return whatever the configured
+`contractCaller` returns, for versatility.
+
 ## Defined in
 
-[src/methods/delta/preSignExternalDeltaOrder.ts:50](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignExternalDeltaOrder.ts#L50)
+[src/methods/delta/preSignExternalDeltaOrder.ts:59](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignExternalDeltaOrder.ts#L59)

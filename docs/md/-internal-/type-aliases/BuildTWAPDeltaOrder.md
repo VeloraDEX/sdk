@@ -6,7 +6,7 @@
 
 # Type Alias: BuildTWAPDeltaOrder()
 
-> **BuildTWAPDeltaOrder**: (`buildOrderParams`, `requestParams`?) => `Promise`\<[`SignableTWAPOrderData`](../../type-aliases/SignableTWAPOrderData.md)\>
+> **BuildTWAPDeltaOrder**: (`buildOrderParams`, `requestParams`?) => `Promise`\<[`BuiltDeltaOrder`](../../type-aliases/BuiltDeltaOrder.md)\<[`TWAPDeltaOrder`](../../type-aliases/TWAPDeltaOrder.md) \| [`TWAPBuyDeltaOrder`](../../type-aliases/TWAPBuyDeltaOrder.md)\>\>
 
 ## Parameters
 
@@ -16,8 +16,8 @@
 
 ## Returns
 
-`Promise`\<[`SignableTWAPOrderData`](../../type-aliases/SignableTWAPOrderData.md)\>
+`Promise`\<[`BuiltDeltaOrder`](../../type-aliases/BuiltDeltaOrder.md)\<[`TWAPDeltaOrder`](../../type-aliases/TWAPDeltaOrder.md) \| [`TWAPBuyDeltaOrder`](../../type-aliases/TWAPBuyDeltaOrder.md)\>\>
 
 ## Defined in
 
-[src/methods/delta/buildTWAPDeltaOrder.ts:88](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildTWAPDeltaOrder.ts#L88)
+[src/methods/delta/buildTWAPDeltaOrder.ts:62](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildTWAPDeltaOrder.ts#L62)

@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/limitOrders/getOrders.ts:36](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/limitOrders/getOrders.ts#L36)
+[src/methods/otcOrders/getOrders.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/getOrders.ts#L27)

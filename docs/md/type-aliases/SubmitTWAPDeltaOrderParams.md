@@ -14,22 +14,10 @@
 
 > `optional` **degenMode**: `boolean`
 
-### partiallyFillable?
-
-> `optional` **partiallyFillable**: `boolean`
-
-#### Description
-
-designates the Order as being able to be partially filled, as opposed to fill-or-kill
-
 ### referrerAddress?
 
 > `optional` **referrerAddress**: `string`
 
-#### Description
-
-Referrer address
-
 ## Defined in
 
-[src/methods/delta/index.ts:183](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L183)
+[src/methods/delta/index.ts:213](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L213)

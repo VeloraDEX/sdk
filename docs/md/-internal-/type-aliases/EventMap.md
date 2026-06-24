@@ -4,14 +4,14 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / EventMap
 
-# Type Alias: EventMap\<T\>
+# Type Alias: EventMap\<Events\>
 
-> **EventMap**\<`T`\>: [`Record`](Record.md)\<keyof `T`, `any`[]\> \| [`DefaultEventMap`](DefaultEventMap.md)
+> **EventMap**\<`Events`\>: [`Record`](Record.md)\<keyof `Events`, `unknown`[]\>
 
 ## Type Parameters
 
-• **T**
+• **Events**
 
 ## Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:103
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:104

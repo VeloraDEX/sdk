@@ -108,4 +108,4 @@ The address of the src token
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:126](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L126)
+[src/methods/delta/helpers/types.ts:155](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L155)

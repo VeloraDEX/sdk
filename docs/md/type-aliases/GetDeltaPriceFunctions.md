@@ -12,8 +12,12 @@
 
 ### getDeltaPrice
 
-> **getDeltaPrice**: [`GetDeltaPrice`](../-internal-/interfaces/GetDeltaPrice.md)
+> **getDeltaPrice**: [`GetDeltaPrice`](../-internal-/type-aliases/GetDeltaPrice.md)
+
+#### Description
+
+Fetch a v2 price quote (route-based response).
 
 ## Defined in
 
-[src/methods/delta/getDeltaPrice.ts:149](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L149)
+[src/methods/delta/getDeltaPrice.ts:65](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L65)

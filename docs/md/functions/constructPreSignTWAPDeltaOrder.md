@@ -20,6 +20,14 @@
 
 [`PreSignTWAPDeltaOrderFunctions`](../type-aliases/PreSignTWAPDeltaOrderFunctions.md)\<`T`\>
 
+## Description
+
+Construct on-chain pre-signing helpers for TWAP Delta orders (sell
+and buy): order hashing (`hashTWAPDeltaOrder` / `hashTWAPDeltaOrderTypedData`) and
+`setPreSignature` transactions (`setTWAPDeltaOrderPreSignature` /
+`preSignTWAPDeltaOrder`). The transact methods return whatever the configured
+`contractCaller` returns, for versatility.
+
 ## Defined in
 
-[src/methods/delta/preSignTWAPDeltaOrder.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignTWAPDeltaOrder.ts#L58)
+[src/methods/delta/preSignTWAPDeltaOrder.ts:69](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignTWAPDeltaOrder.ts#L69)

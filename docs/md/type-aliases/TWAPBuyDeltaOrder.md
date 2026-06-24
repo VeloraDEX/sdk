@@ -28,4 +28,4 @@ The total amount of dest token to buy across all slices
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:161](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L161)
+[src/methods/delta/helpers/types.ts:190](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L190)

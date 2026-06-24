@@ -10,22 +10,22 @@
 
 ## Type declaration
 
-### cancelLimitDeltaOrders
+### cancelDeltaOrders
 
-> **cancelLimitDeltaOrders**: [`CancelDeltaOrder`](../-internal-/type-aliases/CancelDeltaOrder.md)
+> **cancelDeltaOrders**: [`CancelDeltaOrder`](CancelDeltaOrder.md)
 
 #### Description
 
-Cancel a Limit Delta order
+Cancel one or more Delta orders via the v2 endpoint
 
-### postCancelLimitDeltaOrderRequest
+### postCancelDeltaOrderRequest
 
-> **postCancelLimitDeltaOrderRequest**: [`PostCancelDeltaOrderRequest`](../-internal-/type-aliases/PostCancelDeltaOrderRequest.md)
+> **postCancelDeltaOrderRequest**: [`PostCancelDeltaOrderRequest`](PostCancelDeltaOrderRequest.md)
 
-### signCancelLimitDeltaOrderRequest
+### signCancelDeltaOrderRequest
 
-> **signCancelLimitDeltaOrderRequest**: [`SignCancelDeltaOrderRequest`](../-internal-/type-aliases/SignCancelDeltaOrderRequest.md)
+> **signCancelDeltaOrderRequest**: [`SignCancelDeltaOrderRequest`](SignCancelDeltaOrderRequest.md)
 
 ## Defined in
 
-[src/methods/delta/cancelDeltaOrder.ts:33](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L33)
+[src/methods/delta/cancelDeltaOrder.ts:34](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L34)

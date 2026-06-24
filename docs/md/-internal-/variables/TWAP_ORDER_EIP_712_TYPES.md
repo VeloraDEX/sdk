@@ -20,4 +20,4 @@
 
 ## Defined in
 
-[src/methods/delta/helpers/buildTWAPOrderData.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildTWAPOrderData.ts#L19)
+[src/methods/delta/helpers/buildTWAPOrderData.ts:17](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildTWAPOrderData.ts#L17)

@@ -10,7 +10,7 @@
 
 ## Type Parameters
 
-• **T** *extends* [`OnChainOrderType`](OnChainOrderType.md) = `"Order"`
+• **T** *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md) = `"Order"`
 
 ## Type declaration
 
@@ -36,7 +36,7 @@
 
 #### Description
 
-designates the Order as being able to partially filled, as opposed to fill-or-kill
+Designates the Order as being able to be partially filled, as opposed to fill-or-kill
 
 ### partner?
 
@@ -64,7 +64,7 @@ Signature of the order from order.owner address. EOA signatures must be submitte
 
 ### type?
 
-> `optional` **type**: `"MARKET"` \| `"LIMIT"`
+> `optional` **type**: [`DeltaOrderType`](DeltaOrderType.md)
 
 #### Description
 
@@ -72,4 +72,4 @@ Type of the order. MARKET or LIMIT. Default is MARKET
 
 ## Defined in
 
-[src/methods/delta/postDeltaOrder.ts:10](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L10)
+[src/methods/delta/postDeltaOrder.ts:7](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L7)

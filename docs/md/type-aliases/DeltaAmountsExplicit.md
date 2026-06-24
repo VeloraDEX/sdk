@@ -44,4 +44,4 @@ Explicit amounts, no slippage (backward-compatible)
 
 ## Defined in
 
-[src/methods/delta/helpers/types.ts:28](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L28)
+[src/methods/delta/helpers/types.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L27)

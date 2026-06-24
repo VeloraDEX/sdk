@@ -164,7 +164,7 @@ Optional override for formatting stack traces
 
 • **err**: [`Error`](../-internal-/interfaces/Error.md)
 
-• **stackTraces**: `CallSite`[]
+• **stackTraces**: [`CallSite`](../-internal-/interfaces/CallSite.md)[]
 
 #### Returns
 
@@ -180,7 +180,7 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 #### Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:143
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
 
 ***
 
@@ -194,56 +194,30 @@ node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:14
 
 #### Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:145
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
 
 ## Methods
 
 ### captureStackTrace()
 
-#### captureStackTrace(targetObject, constructorOpt)
-
 > `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
 
 Create .stack property on a target object
 
-##### Parameters
+#### Parameters
 
 • **targetObject**: `object`
 
 • **constructorOpt?**: `Function`
 
-##### Returns
+#### Returns
 
 `void`
 
-##### Inherited from
+#### Inherited from
 
 `Error.captureStackTrace`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/globals.d.ts:136
-
-#### captureStackTrace(targetObject, constructorOpt)
-
-> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
-
-Create .stack property on a target object
-
-##### Parameters
-
-• **targetObject**: `object`
-
-• **constructorOpt?**: `Function`
-
-##### Returns
-
-`void`
-
-##### Inherited from
-
-`Error.captureStackTrace`
-
-##### Defined in
+#### Defined in
 
 node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136

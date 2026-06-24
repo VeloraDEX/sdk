@@ -6,14 +6,14 @@
 
 # Type Alias: CheckableOrderData
 
-> **CheckableOrderData**: [`Pick`](Pick.md)\<[`NFTOrderData`](../../type-aliases/NFTOrderData.md), `"takerAsset"` \| `"makerAsset"` \| `"takerAmount"` \| `"maker"`\> & `object`
+> **CheckableOrderData**: [`Pick`](Pick.md)\<[`OrderData`](../../type-aliases/OrderData.md), `"takerAsset"` \| `"makerAsset"` \| `"takerAmount"` \| `"maker"`\> & `object`
 
 ## Type declaration
 
 ### taker?
 
-> `optional` **taker**: [`NFTOrderData`](../../type-aliases/NFTOrderData.md)\[`"taker"`\]
+> `optional` **taker**: [`OrderData`](../../type-aliases/OrderData.md)\[`"taker"`\]
 
 ## Defined in
 
-[src/methods/nftOrders/transaction.ts:179](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/transaction.ts#L179)
+[src/methods/otcOrders/transaction.ts:183](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/transaction.ts#L183)

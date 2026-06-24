@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/index.ts:145](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L145)
+[src/methods/delta/index.ts:177](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L177)

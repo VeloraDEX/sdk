@@ -20,7 +20,7 @@
 
 #### Description
 
-Filter by chainId, without this filter, orders from all chains are returned
+Filter by chainId. Omitted = orders across all chains.
 
 ### limit?
 
@@ -28,7 +28,7 @@ Filter by chainId, without this filter, orders from all chains are returned
 
 #### Description
 
-Pagination option, limit. Default 100
+Pagination option. Default 100, max 1000.
 
 ### onChainOrderType?
 
@@ -36,7 +36,7 @@ Pagination option, limit. Default 100
 
 #### Description
 
-Filter by on-chain order type. Order, ExternalOrder. Orders of all types are returned if not specified
+Filter by on-chain order type. Narrows the returned `DeltaAuction<T>`.
 
 ### page?
 
@@ -44,28 +44,23 @@ Filter by on-chain order type. Order, ExternalOrder. Orders of all types are ret
 
 #### Description
 
-Pagination option, page. Default 1
+Pagination option. Default 1.
 
 ### status?
 
-> `optional` **status**: [`DeltaOrderFilterByStatus`](../../type-aliases/DeltaOrderFilterByStatus.md)[]
+> `optional` **status**: [`DeltaOrderStatus`](../../type-aliases/DeltaOrderStatus.md)[]
 
 #### Description
 
-Filter by any known DeltaAuctionStatus and some custom statuses:
-- **INSUFFICIENT_BALANCE** —  returned as SUSPENDED from API
-- **INSUFFICIENT_ALLOWANCE** —  returned as SUSPENDED from API
-- **INVALIDATED** —  returned as FAILED from API
-- **ACTIVE** —  All orders with NOT_STARTED, RUNNING, EXECUTING, CANCELLING or SUSPENDED statuses.
-- **INACTIVE** —  All orders with EXECUTED, FAILED, EXPIRED, CANCELLED or INVALIDATED statuses.
+Filter by integrator-facing status.
 
 ### type?
 
-> `optional` **type**: `"MARKET"` \| `"LIMIT"`
+> `optional` **type**: [`DeltaOrderType`](../../type-aliases/DeltaOrderType.md)
 
 #### Description
 
-Filter by type. MARKET, LIMIT. Orders with both types are returned if not specified
+Filter by order type. MARKET or LIMIT.
 
 ### userAddress
 
@@ -73,8 +68,8 @@ Filter by type. MARKET, LIMIT. Orders with both types are returned if not specif
 
 #### Description
 
-Order.owner to fetch Delta Order for
+`order.owner` to fetch Delta Orders for.
 
 ## Defined in
 
-[src/methods/delta/getDeltaOrders.ts:35](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L35)
+[src/methods/delta/getDeltaOrders.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L22)

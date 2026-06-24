@@ -47,7 +47,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 ### \_bootstrapPoll
 
-> **\_bootstrapPoll**: `Timer`
+> **\_bootstrapPoll**: [`Timer`](../interfaces/Timer.md)
 
 #### Defined in
 
@@ -199,7 +199,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 ### \_poller
 
-> **\_poller**: `Timer`
+> **\_poller**: [`Timer`](../interfaces/Timer.md)
 
 #### Defined in
 

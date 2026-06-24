@@ -16,8 +16,8 @@
 
 #### Description
 
-Build TWAP Orders (sell or buy) to be posted to Delta API for execution
+Build a Delta v2 TWAP Order (sell or buy) from a DeltaRoute via the server endpoint, ready to sign and post.
 
 ## Defined in
 
-[src/methods/delta/buildTWAPDeltaOrder.ts:93](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildTWAPDeltaOrder.ts#L93)
+[src/methods/delta/buildTWAPDeltaOrder.ts:67](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildTWAPDeltaOrder.ts#L67)

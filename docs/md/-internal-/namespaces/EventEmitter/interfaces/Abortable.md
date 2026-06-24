@@ -21,4 +21,4 @@ When provided the corresponding `AbortController` can be used to cancel an async
 
 #### Defined in
 
-node\_modules/.pnpm/@types+node@22.7.5/node\_modules/@types/node/events.d.ts:508
+node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561

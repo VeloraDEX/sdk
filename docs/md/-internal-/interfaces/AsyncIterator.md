@@ -6,10 +6,6 @@
 
 # Interface: AsyncIterator\<T, TReturn, TNext\>
 
-## Extended by
-
-- [`AsyncIterableIterator`](AsyncIterableIterator.md)
-
 ## Type Parameters
 
 • **T**

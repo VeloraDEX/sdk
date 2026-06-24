@@ -14,21 +14,9 @@
 
 > **delta**: [`DeltaFetchMethods`](../-internal-/type-aliases/DeltaFetchMethods.md)
 
-### ~~limitOrders~~
+### otcOrders
 
-> **limitOrders**: [`LimitOrdersFetchMethods`](../-internal-/type-aliases/LimitOrdersFetchMethods.md)
-
-#### Deprecated
-
-Limit Orders are deprecated and will be removed in a future version.
-
-### ~~nftOrders~~
-
-> **nftOrders**: [`NFTOrdersFetchMethods`](../-internal-/type-aliases/NFTOrdersFetchMethods.md)
-
-#### Deprecated
-
-NFT Orders are deprecated and will be removed in a future version.
+> **otcOrders**: [`OTCOrdersFetchMethods`](../-internal-/type-aliases/OTCOrdersFetchMethods.md)
 
 ### quote
 
@@ -40,4 +28,4 @@ NFT Orders are deprecated and will be removed in a future version.
 
 ## Defined in
 
-[src/sdk/simple.ts:171](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L171)
+[src/sdk/simple.ts:138](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L138)
