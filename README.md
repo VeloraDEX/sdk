@@ -157,7 +157,7 @@ import {
   constructEthersContractCaller,
 } from '@velora-dex/sdk';
 
-const signer = ethers.Wallet.fromMnmemonic('__your_mnemonic__'); // or any other signer/provider
+const signer = ethers.Wallet.fromMnemonic('__your_mnemonic__'); // or any other signer/provider
 const account = '__signer_address__';
 
 const contractCaller = constructEthersContractCaller(
