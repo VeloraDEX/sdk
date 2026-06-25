@@ -7,6 +7,7 @@ import { constructGetDeltaContract } from './getDeltaContract';
 import {
   buildCancelDeltaOrderSignableData,
   type CancelDeltaOrderData,
+  type SignableCancelDeltaOrderData,
 } from './helpers/buildCancelDeltaOrderData';
 
 type SuccessResponse = { success: true };
@@ -15,6 +16,11 @@ type CancelDeltaOrderRequestParams = {
   orderIds: string[];
   signature: string;
 };
+
+export type BuildCancelDeltaOrder = (
+  params: CancelDeltaOrderData,
+  requestParams?: RequestParameters
+) => Promise<SignableCancelDeltaOrderData>;
 
 export type SignCancelDeltaOrderRequest = (
   params: CancelDeltaOrderData,
@@ -32,6 +38,8 @@ export type CancelDeltaOrder = (
 ) => Promise<SuccessResponse>;
 
 export type CancelDeltaOrderFunctions = {
+  /** @description Build the EIP-712 signable data for cancelling one or more Delta orders */
+  buildCancelDeltaOrder: BuildCancelDeltaOrder;
   signCancelDeltaOrderRequest: SignCancelDeltaOrderRequest;
   postCancelDeltaOrderRequest: PostCancelDeltaOrderRequest;
   /** @description Cancel one or more Delta orders via the v2 endpoint */
@@ -48,7 +56,7 @@ export const constructCancelDeltaOrder = (
 
   const { getDeltaContract } = constructGetDeltaContract(options);
 
-  const signCancelDeltaOrderRequest: SignCancelDeltaOrderRequest = async (
+  const buildCancelDeltaOrder: BuildCancelDeltaOrder = async (
     params,
     requestParams
   ) => {
@@ -57,11 +65,18 @@ export const constructCancelDeltaOrder = (
       throw new Error(`Delta is not available on chain ${options.chainId}`);
     }
 
-    const typedData = buildCancelDeltaOrderSignableData({
+    return buildCancelDeltaOrderSignableData({
       orderInput: params,
       paraswapDeltaAddress: ParaswapDelta,
       chainId: options.chainId,
     });
+  };
+
+  const signCancelDeltaOrderRequest: SignCancelDeltaOrderRequest = async (
+    params,
+    requestParams
+  ) => {
+    const typedData = await buildCancelDeltaOrder(params, requestParams);
 
     return options.contractCaller.signTypedDataCall(typedData);
   };
@@ -93,6 +108,7 @@ export const constructCancelDeltaOrder = (
   };
 
   return {
+    buildCancelDeltaOrder,
     signCancelDeltaOrderRequest,
     postCancelDeltaOrderRequest,
     cancelDeltaOrders,
