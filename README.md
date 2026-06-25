@@ -12,6 +12,7 @@
 Refer to the documentation of the Velora API: https://developers.velora.xyz/
 
 ## Features
+
 **Versatility**: works with [web3](https://www.npmjs.com/package/web3) or [ethers](https://www.npmjs.com/package/ethers) without a direct dependency — or with [viem](https://viem.sh/) (also used internally for its utils)
 
 **Canonical**: bring only the functions you actually need
@@ -60,102 +61,112 @@ You can see some examples in [/src/examples](src/examples) directory.
 Can be created by providing `chainId` and either `axios` or `window.fetch` (or alternative `fetch` implementation), and an optional `version` (`'5'` or `'6.2'`) parameter that corresponds to the API version SDK will be making requests to. The resulting SDK will be able to use all methods that query the API.
 
 ```ts
-  import { constructSimpleSDK } from '@velora-dex/sdk';
-  import axios from 'axios';
+import { constructSimpleSDK } from '@velora-dex/sdk';
+import axios from 'axios';
 
-  // construct minimal SDK with fetcher only
-  const minSDK = constructSimpleSDK({chainId: 1, axios});
-  // or
-  const minSDK = constructSimpleSDK({chainId: 1, fetch: window.fetch, version: '5'});
+// construct minimal SDK with fetcher only
+const minSDK = constructSimpleSDK({ chainId: 1, axios });
+// or
+const minSDK = constructSimpleSDK({
+  chainId: 1,
+  fetch: window.fetch,
+  version: '5',
+});
 
-  const ETH = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee';
-  const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
+const ETH = '0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee';
+const DAI = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
 
-  async function swapExample() {
-    //                                     or any other signer/provider
-    const signer: JsonRpcSigner = ethers.Wallet.fromMnemonic('__your_mnemonic__');
-    const senderAddress = signer.address;
+async function swapExample() {
+  //                                     or any other signer/provider
+  const signer: JsonRpcSigner = ethers.Wallet.fromMnemonic('__your_mnemonic__');
+  const senderAddress = signer.address;
 
-    const priceRoute = await minSDK.swap.getRate({
-      srcToken: ETH,
-      destToken: DAI,
-      amount: srcAmount,
-      userAddress: senderAddress,
-      side: SwapSide.SELL,
-    });
+  const priceRoute = await minSDK.swap.getRate({
+    srcToken: ETH,
+    destToken: DAI,
+    amount: srcAmount,
+    userAddress: senderAddress,
+    side: SwapSide.SELL,
+  });
 
-    const txParams = await minSDK.swap.buildTx(
-      {
-        srcToken,
-        destToken,
-        srcAmount,
-        destAmount,
-        priceRoute,
-        userAddress: senderAddress,
-        partner: referrer,
-      }
-    );
+  const txParams = await minSDK.swap.buildTx({
+    srcToken,
+    destToken,
+    srcAmount,
+    destAmount,
+    priceRoute,
+    userAddress: senderAddress,
+    partner: referrer,
+  });
 
-    const transaction = {
-      ...txParams,
-      gasPrice: '0x' + new BigNumber(txParams.gasPrice).toString(16),
-      gasLimit: '0x' + new BigNumber(5000000).toString(16),
-      value: '0x' + new BigNumber(txParams.value).toString(16),
-    };
+  const transaction = {
+    ...txParams,
+    gasPrice: '0x' + new BigNumber(txParams.gasPrice).toString(16),
+    gasLimit: '0x' + new BigNumber(5000000).toString(16),
+    value: '0x' + new BigNumber(txParams.value).toString(16),
+  };
 
-    const txr = await signer.sendTransaction(transaction);
-  }
+  const txr = await signer.sendTransaction(transaction);
+}
 ```
 
 If optional `providerOptions` is provided as the second parameter, then the resulting SDK will also be able to approve Tokens for swap, sign Orders, etc.
 
 ```ts
-  // with ethers@5
-  const providerOptionsEtherV5 = {
-    ethersProviderOrSigner: provider, // JsonRpcProvider
-    EthersContract: ethers.Contract,
-    account: senderAddress,
-  };
+// with ethers@5
+const providerOptionsEtherV5 = {
+  ethersProviderOrSigner: provider, // JsonRpcProvider
+  EthersContract: ethers.Contract,
+  account: senderAddress,
+};
 
-  // with ethers@6
-  const providerOptionsEtherV6 = {
-    ethersV6ProviderOrSigner: provider, // JsonRpcProvider
-    EthersV6Contract: ethers.Contract,
-    account: senderAddress,
-  };
+// with ethers@6
+const providerOptionsEtherV6 = {
+  ethersV6ProviderOrSigner: provider, // JsonRpcProvider
+  EthersV6Contract: ethers.Contract,
+  account: senderAddress,
+};
 
-  // or with viem (from wagmi or standalone)
-    const providerOptionsViem = {
-    viemClient, // made with createWalletClient()
-    account: senderAddress,
-  };
+// or with viem (from wagmi or standalone)
+const providerOptionsViem = {
+  viemClient, // made with createWalletClient()
+  account: senderAddress,
+};
 
-  // or with web3.js
-  const providerOptionsWeb3 = {
-    web3, // new Web3(...) instance
-    account: senderAddress,
-  };
+// or with web3.js
+const providerOptionsWeb3 = {
+  web3, // new Web3(...) instance
+  account: senderAddress,
+};
 
-  const sdk = constructSimpleSDK({chainId: 1, axios}, providerOptionsEtherV5);
+const sdk = constructSimpleSDK({ chainId: 1, axios }, providerOptionsEtherV5);
 
-  // approve token through sdk
-  const txHash = await sdk.approveToken(amountInWei, DAI);
+// approve token through sdk
+const txHash = await sdk.approveToken(amountInWei, DAI);
 
-  // await tx somehow
-  await provider.waitForTransaction(txHash);
+// await tx somehow
+await provider.waitForTransaction(txHash);
 ```
 
 ### Full SDK
+
 ```typescript
-import { constructFullSDK, constructAxiosFetcher, constructEthersContractCaller } from '@velora-dex/sdk';
+import {
+  constructFullSDK,
+  constructAxiosFetcher,
+  constructEthersContractCaller,
+} from '@velora-dex/sdk';
 
 const signer = ethers.Wallet.fromMnmemonic('__your_mnemonic__'); // or any other signer/provider
 const account = '__signer_address__';
 
-const contractCaller = constructEthersContractCaller({
-  ethersProviderOrSigner: signer,
-  EthersContract: ethers.Contract,
-}, account); // alternatively constructViemContractCaller or constructWeb3ContractCaller
+const contractCaller = constructEthersContractCaller(
+  {
+    ethersProviderOrSigner: signer,
+    EthersContract: ethers.Contract,
+  },
+  account
+); // alternatively constructViemContractCaller or constructWeb3ContractCaller
 const fetcher = constructAxiosFetcher(axios); // alternatively constructFetchFetcher
 
 const sdk = constructFullSDK({
@@ -166,24 +177,35 @@ const sdk = constructFullSDK({
 ```
 
 ### Partial SDK
+
 For bundle-size savvy developers, you can construct a lightweight version of the SDK and bring only the functions you need.
 
 e.g. for only getting rates and allowances:
 
 ```typescript
-import { constructPartialSDK, constructFetchFetcher, constructGetRate, constructGetBalances } from '@velora-dex/sdk';
+import {
+  constructPartialSDK,
+  constructFetchFetcher,
+  constructGetRate,
+  constructGetBalances,
+} from '@velora-dex/sdk';
 
 const fetcher = constructFetchFetcher(window.fetch);
 
-const sdk = constructPartialSDK({
-  chainId: 1,
-  fetcher,
-}, constructGetRate, constructGetBalances);
+const sdk = constructPartialSDK(
+  {
+    chainId: 1,
+    fetcher,
+  },
+  constructGetRate,
+  constructGetBalances
+);
 
 const priceRoute = await sdk.getRate(params);
 const allowance = await sdk.getAllowance(userAddress, tokenAddress);
 ```
---------------
+
+---
 
 ### Basic usage
 
@@ -210,8 +232,8 @@ const simpleSDK = constructSimpleSDK(
 );
 
 const amount = '1000000000000'; // wei
-const Token1 = '0x1234...'
-const Token2 = '0xabcde...'
+const Token1 = '0x1234...';
+const Token2 = '0xabcde...';
 
 const quote = await simpleSDK.quote.getQuote({
   srcToken: Token1, // Native token (ETH) is only supported in mode: 'market'
@@ -298,8 +320,8 @@ In v2 the Order is **built by the server** from the quoted route — you sign th
 
 ```ts
 const amount = '1000000000000'; // wei
-const Token1 = '0x1234...'
-const Token2 = '0xabcde...'
+const Token1 = '0x1234...';
+const Token2 = '0xabcde...';
 
 // ... from the quote endpoint (mode: 'delta' or 'all')
 const quote = await simpleSDK.quote.getQuote({
@@ -327,11 +349,13 @@ const deltaPriceDirect = await simpleSDK.delta.getDeltaPrice({
 });
 ```
 
-
 ### 2. Approve srcToken for DeltaContract
 
 ```ts
-const approveTxHash = await simpleSDK.delta.approveTokenForDelta(amount, Token1);
+const approveTxHash = await simpleSDK.delta.approveTokenForDelta(
+  amount,
+  Token1
+);
 ```
 
 Alternatively sign Permit (DAI or Permit1) or Permit2 TransferFrom with DeltaContract as the verifyingContract
@@ -344,7 +368,6 @@ const signature = await signer._signTypedData(domain, types, message);
 ```
 
 See more on accepted Permit variants in [Velora documentation](https://developers.velora.xyz/api/velora-api/velora-delta-api/build-a-delta-order-to-sign#supported-permits)
-
 
 ### 3. Build, sign and post a Delta Order
 
@@ -423,7 +446,7 @@ For more Delta protocol usage, and **Crosschain Delta Orders**, refer to [DELTA.
 
 For **External Delta Orders** (orders that delegate token handling to an external handler contract, enabling complex DeFi strategies like Aave collateral/debt swaps), refer to [EXTERNAL_ORDERS.md](./docs/EXTERNAL_ORDERS.md)
 
-------------
+---
 
 ### Advanced Delta usage
 
@@ -473,11 +496,17 @@ const sdk = constructPartialSDK(
   { chainId: 1, fetcher: constructFetchFetcher(fetch) },
   constructGetDeltaPrice,
   constructGetDeltaOrders,
-  constructGetBridgeRoutes,
+  constructGetBridgeRoutes
 );
 
-const price = await sdk.getDeltaPrice({ /* ... */ });
-const orders = await sdk.getDeltaOrders({ userAddress: account, page: 1, limit: 50 });
+const price = await sdk.getDeltaPrice({
+  /* ... */
+});
+const orders = await sdk.getDeltaOrders({
+  userAddress: account,
+  page: 1,
+  limit: 50,
+});
 ```
 
 A complete example (standard, external handler, TWAP, and order listing) is in [examples/delta](./src/examples/delta.ts).
@@ -499,7 +528,10 @@ const { checks, getters } = OrderHelpers;
 
 if (checks.isProductiveAuction(auction)) {
   // read-only, no SDK builder
-} else if (checks.isFillableAuction(auction) || checks.isDeltaAuction(auction)) {
+} else if (
+  checks.isFillableAuction(auction) ||
+  checks.isDeltaAuction(auction)
+) {
   // treat FillableOrder the same as a standard Order
 }
 
@@ -512,20 +544,20 @@ const unified = getters.getUnifiedDeltaOrderData(auction);
 // { srcChainId, destChainId, srcToken, destToken, swapSide, filledPercent, amounts, ... }
 ```
 
-------------
+---
 
 ### Market Swap handling
 
 #### A more detailed overview of the Trade Flow, Market variant.
 
-Unlike the Delta Order, a Market swap  requires the user themselves to submit a Swap transaction
+Unlike the Delta Order, a Market swap requires the user themselves to submit a Swap transaction
 
 ### 1. Get Market priceRoute from /v2/quote
 
 ```ts
 const amount = '1000000000000'; // wei
-const Token1 = '0x1234...'
-const Token2 = '0xabcde...'
+const Token1 = '0x1234...';
+const Token2 = '0xabcde...';
 
 const quote = await simpleSDK.quote.getQuote({
   srcToken: Token1,
@@ -537,11 +569,10 @@ const quote = await simpleSDK.quote.getQuote({
   mode: 'market',
   side: 'SELL', // or 'BUY'
   // partner: "..." // if available
-})
+});
 
 const priceRoute = quote.market;
 ```
-
 
 ### 2. Approve srcToken for TokenTransferProxy
 
@@ -559,7 +590,6 @@ const signature = await signer._signTypedData(domain, types, message);
 ```
 
 See more on accepted Permit variants in [Velora documentation](https://developers.velora.xyz/api/velora-api/velora-market-api/build-parameters-for-transaction)
-
 
 ### 3. Send Swap transaction
 
@@ -581,8 +611,7 @@ const swapTxHash = await signer.sendTransaction(txParams);
 
 #### See more details on `buildTx` parameters in [Velora documentation](https://developers.velora.xyz/api/velora-api/velora-market-api/build-parameters-for-transaction)
 
-------------------------
-
+---
 
 Refer to [SDK API documentation](docs/md/modules.md) for detailed documentation on the methods provided in this SDK.
 
