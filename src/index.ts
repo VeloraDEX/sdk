@@ -245,6 +245,7 @@ import {
 import {
   CancelDeltaOrderFunctions,
   CancelDeltaOrder,
+  BuildCancelDeltaOrder,
   SignCancelDeltaOrderRequest,
   PostCancelDeltaOrderRequest,
   constructCancelDeltaOrder,
@@ -439,6 +440,7 @@ export type {
   ApproveTokenForDeltaFunctions,
   CancelDeltaOrderFunctions,
   CancelDeltaOrder,
+  BuildCancelDeltaOrder,
   SignCancelDeltaOrderRequest,
   PostCancelDeltaOrderRequest,
   DeltaTokenModuleFunctions,

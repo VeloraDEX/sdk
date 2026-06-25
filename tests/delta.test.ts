@@ -864,6 +864,47 @@ describe('Delta: cancel', () => {
     expect(postedBody.orderIds).toEqual(['a', 'b']);
     expect(postedBody.signature).toBe(FAKE_SIGNATURE);
   });
+
+  test('buildCancelDeltaOrder returns the EIP-712 signable data', async () => {
+    const fetcher = makeFetcher(({ url }) => {
+      if (url.includes('/adapters/contracts')) {
+        return {
+          AugustusSwapper: '0x',
+          TokenTransferProxy: '0x',
+          AugustusRFQ: '0x',
+          Executors: {},
+          ParaswapDelta: '0x1111111111111111111111111111111111111111',
+        };
+      }
+      throw new Error('unexpected');
+    });
+
+    const { buildCancelDeltaOrder } = constructCancelDeltaOrder({
+      apiURL: API_URL,
+      chainId: 1,
+      fetcher,
+      contractCaller: makeMockContractCaller(),
+    });
+
+    const signableData = await buildCancelDeltaOrder({
+      orderIds: ['a', 'b'],
+    });
+
+    expect(signableData).toEqual({
+      types: {
+        OrderCancellations: [{ name: 'orderIds', type: 'string[]' }],
+      },
+      domain: {
+        name: 'Portikus',
+        version: '2.0.0',
+        chainId: 1,
+        verifyingContract: '0x1111111111111111111111111111111111111111',
+      },
+      data: {
+        orderIds: ['a', 'b'],
+      },
+    });
+  });
 });
 
 describe('Delta: live API contract', () => {
@@ -987,6 +1028,7 @@ describe('Delta: SDK wiring', () => {
     expect(typeof sdk.submitExternalDeltaOrder).toBe('function');
     expect(typeof sdk.submitTWAPDeltaOrder).toBe('function');
     expect(typeof sdk.cancelDeltaOrders).toBe('function');
+    expect(typeof sdk.buildCancelDeltaOrder).toBe('function');
     expect(typeof sdk.isTokenSupportedInDelta).toBe('function');
     expect(typeof sdk.getAgentsList).toBe('function');
     // reused v1 utilities
