@@ -9,16 +9,16 @@ TypeScript SDK for the Paraswap/Velora Delta protocol (on-chain order-based DEX)
 ## Commands
 
 ```bash
-yarn build          # compile to dist/
-yarn test           # run Jest tests (testEnvironment: node)
-yarn lint           # dts lint
-yarn start          # watch mode (dts watch)
+pnpm build          # compile to dist/
+pnpm test           # run Jest tests (testEnvironment: node)
+pnpm lint           # dts lint
+pnpm start          # watch mode (dts watch)
 npx tsc --noEmit    # type-check without emitting
 ```
 
 Run a single test file:
 ```bash
-yarn test --testPathPattern=src/path/to/file.test.ts
+pnpm test --testPathPattern=src/path/to/file.test.ts
 ```
 
 ## SDK Entry Points (`src/sdk/`)
