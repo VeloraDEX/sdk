@@ -38,6 +38,9 @@ export type Token = {
   address: string;
   decimals: number;
   symbol?: string | undefined;
+  tags?: string[] | undefined;
+  sources?: string[] | undefined;
+  categories?: string[] | undefined;
   tokenType: LendingToken | TokenType;
   mainConnector: string;
   connectors: string[];
@@ -53,7 +56,11 @@ type ConstructTokenInput = MarkOptional<
   'tokenType' | 'mainConnector' | 'connectors' | 'network'
 >;
 
-export const constructToken = (tokenProps: ConstructTokenInput): Token => {
+type DefaultedKeys = 'tokenType' | 'mainConnector' | 'connectors' | 'network';
+
+export const constructToken = <T extends ConstructTokenInput>(
+  tokenProps: T
+): Omit<T, DefaultedKeys> & Required<Pick<Token, DefaultedKeys>> => {
   const {
     tokenType = 'ERC20',
     mainConnector = 'ETH',

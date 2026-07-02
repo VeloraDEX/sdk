@@ -1,16 +1,35 @@
 import { API_URL } from '../../constants';
 import { constructToken } from '../../helpers/token';
+import { constructSearchString } from '../../helpers/misc';
 import type {
   RequestParameters,
   ConstructFetchInput,
-  Token,
-  TokensApiResponse,
+  Token as SDKToken,
+  TokenListApiResponse,
 } from '../../types';
+import { MarkRequired, Prettify } from 'ts-essentials';
 
-type GetTokens = (extra?: RequestParameters) => Promise<Token[]>;
+type GetTokensParams = { category?: string };
+
+type Token = Prettify<
+  MarkRequired<
+    Omit<SDKToken, 'allowance' | 'balance'>,
+    'sources' | 'categories'
+  > & { name: string }
+>;
+
+type GetTokens = (
+  options?: GetTokensParams,
+  requestParams?: RequestParameters
+) => Promise<Token[]>;
+type GetAllTokens = (
+  options?: GetTokensParams,
+  requestParams?: RequestParameters
+) => Promise<Token[]>;
 
 export type GetTokensFunctions = {
   getTokens: GetTokens;
+  getAllTokens: GetAllTokens;
 };
 
 export const constructGetTokens = ({
@@ -18,18 +37,38 @@ export const constructGetTokens = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): GetTokensFunctions => {
-  const fetchURL = `${apiURL}/tokens/${chainId}` as const;
+  const getTokens: GetTokens = async ({ category } = {}, requestParams) => {
+    // always pass explicit type to make sure UrlSearchParams are correct
+    const query = constructSearchString<GetTokensParams>({ category });
 
-  const getTokens: GetTokens = async (requestParams) => {
-    const data = await fetcher<TokensApiResponse>({
+    const fetchURL = `${apiURL}/fiat/tokens/${chainId}${query}` as const;
+
+    const data = await fetcher<TokenListApiResponse>({
       url: fetchURL,
       method: 'GET',
       requestParams,
     });
 
-    const tokens = data.tokens.map(constructToken);
-    return tokens;
+    return data.tokens.map(constructToken);
   };
 
-  return { getTokens };
+  const getAllTokens: GetAllTokens = async (
+    { category } = {},
+    requestParams
+  ) => {
+    // always pass explicit type to make sure UrlSearchParams are correct
+    const query = constructSearchString<GetTokensParams>({ category });
+
+    const fetchURL = `${apiURL}/fiat/tokens/all${query}` as const;
+
+    const data = await fetcher<TokenListApiResponse>({
+      url: fetchURL,
+      method: 'GET',
+      requestParams,
+    });
+
+    return data.tokens.map(constructToken);
+  };
+
+  return { getTokens, getAllTokens };
 };
