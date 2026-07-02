@@ -6,8 +6,10 @@ import type {
   ConstructFetchInput,
   Token as SDKToken,
   TokenListApiResponse,
+  TokenListItem,
 } from '../../types';
 import { MarkRequired, Prettify } from 'ts-essentials';
+import { uriToHttpURL } from '../../helpers/providers/uri';
 
 type GetTokensParams = { category?: string };
 
@@ -32,6 +34,20 @@ export type GetTokensFunctions = {
   getAllTokens: GetAllTokens;
 };
 
+function makeTokenFromApiToken(t: TokenListItem): Token {
+  return constructToken({
+    address: t.address,
+    decimals: t.decimals,
+    symbol: t.symbol,
+    name: t.name,
+    network: t.chainId,
+    sources: t.sources,
+    categories: t.categories,
+    img: t.logoURI ? uriToHttpURL(t.logoURI) : undefined,
+    tags: t.tags,
+  });
+}
+
 export const constructGetTokens = ({
   apiURL = API_URL,
   chainId,
@@ -49,7 +65,7 @@ export const constructGetTokens = ({
       requestParams,
     });
 
-    return data.tokens.map(constructToken);
+    return data.tokens.map(makeTokenFromApiToken);
   };
 
   const getAllTokens: GetAllTokens = async (
@@ -67,7 +83,7 @@ export const constructGetTokens = ({
       requestParams,
     });
 
-    return data.tokens.map(constructToken);
+    return data.tokens.map(makeTokenFromApiToken);
   };
 
   return { getTokens, getAllTokens };

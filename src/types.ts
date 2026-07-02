@@ -146,13 +146,13 @@ export interface TokenApiResponse {
   token?: TokenFromApi;
 }
 
-type TokenListItem = {
-  network: number;
+export type TokenListItem = {
+  chainId: number;
   address: string;
   name: string;
   decimals: number;
   symbol: string;
-  img?: string;
+  logoURI?: string;
   tags?: string[];
   sources: string[];
   categories: string[];
