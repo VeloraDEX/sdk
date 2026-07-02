@@ -90,8 +90,21 @@ describe.each([
         symbol: expect.any(String),
         address: expect.any(String),
         decimals: expect.any(Number),
+        name: expect.any(String),
+        network: expect.any(Number),
+        sources: expect.any(Array),
+        categories: expect.any(Array),
       })
     );
+
+    // API fields are mapped to the SDK Token shape, not passed through
+    expect(tokens[0]).not.toHaveProperty('chainId');
+    expect(tokens[0]).not.toHaveProperty('logoURI');
+
+    // ipfs:// and ipns:// logo URIs are converted to http gateway URLs
+    for (const { img } of tokens) {
+      if (img) expect(img).not.toMatch(/^ip[fn]s:\/\//i);
+    }
   });
 
   test('Get_Rates', async () => {
