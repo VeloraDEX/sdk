@@ -23,7 +23,13 @@ import {
   GetRateInput,
 } from './methods/swap/rates';
 import { constructSwapTx, GetSwapTxFunctions } from './methods/swap/swapTx';
-import { constructGetTokens, GetTokensFunctions } from './methods/swap/token';
+import {
+  constructGetTokens,
+  GetTokensFunctions,
+  GetAllTokens,
+  GetTokens,
+  GetTokensParams,
+} from './methods/swap/token';
 import { BuildTxFunctions, constructBuildTx } from './methods/swap/transaction';
 
 import {
@@ -379,7 +385,6 @@ export type {
   GetBalancesFunctions,
   GetSpenderFunctions,
   AdaptersContractsResult,
-  GetTokensFunctions,
   GetAdaptersFunctions,
   GetRateFunctions,
   GetRateInput,
@@ -482,6 +487,11 @@ export type {
   QuoteWithDeltaPrice,
   QuoteWithMarketPrice,
   QuoteWithMarketPriceAsFallback,
+  // types for GetToken methods
+  GetTokensFunctions,
+  GetTokens,
+  GetAllTokens,
+  GetTokensParams,
   //common
   ConstructFetchInput,
   ContractCallerFunctions,

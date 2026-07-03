@@ -12,6 +12,7 @@ import type {
 } from './helpers/token';
 import type { SignableTypedData } from './methods/common/orders/buildOrderData';
 import { TransactionParams } from './methods/swap/transaction';
+import { MarkRequired, Prettify } from 'ts-essentials';
 
 export type {
   Address,
@@ -161,6 +162,10 @@ export type TokenListItem = {
 export interface TokenListApiResponse {
   tokens: TokenListItem[];
 }
+
+export type ApiToken = Prettify<
+  MarkRequired<Omit<Token, 'allowance' | 'balance'>, 'symbol' | 'name'>
+>;
 
 // if no extra keys in Checking, return Checking, otherwise never
 export type NoExtraKeysCheck<Checking, CheckAgainst> =

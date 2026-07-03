@@ -1,4 +1,6 @@
 import type { MarkOptional } from 'ts-essentials';
+import { uriToHttpURL } from './providers/uri';
+import { ApiToken, TokenListItem } from '../types';
 
 /**
  * @type hex token or account address
@@ -38,9 +40,10 @@ export type Token = {
   address: string;
   decimals: number;
   symbol?: string | undefined;
-  tags?: string[] | undefined;
-  sources?: string[] | undefined;
-  categories?: string[] | undefined;
+  name?: string | undefined;
+  tags: string[];
+  sources: string[];
+  categories: string[];
   tokenType: LendingToken | TokenType;
   mainConnector: string;
   connectors: string[];
@@ -50,13 +53,16 @@ export type Token = {
   balance?: string | undefined;
 };
 
-type ConstructTokenInput = MarkOptional<
-  Token,
-  // these props are constructed from other, required props
-  'tokenType' | 'mainConnector' | 'connectors' | 'network'
->;
+type DefaultedKeys =
+  | 'tokenType'
+  | 'mainConnector'
+  | 'connectors'
+  | 'network'
+  | 'sources'
+  | 'categories'
+  | 'tags';
 
-type DefaultedKeys = 'tokenType' | 'mainConnector' | 'connectors' | 'network';
+type ConstructTokenInput = MarkOptional<Token, DefaultedKeys>;
 
 export const constructToken = <T extends ConstructTokenInput>(
   tokenProps: T
@@ -66,6 +72,9 @@ export const constructToken = <T extends ConstructTokenInput>(
     mainConnector = 'ETH',
     connectors: connectorsInput = [],
     network = 1,
+    sources = [],
+    categories = [],
+    tags = [],
     ...rest
   } = tokenProps;
 
@@ -77,6 +86,23 @@ export const constructToken = <T extends ConstructTokenInput>(
     connectors,
     mainConnector,
     network,
+    sources,
+    categories,
+    tags,
     ...rest,
   };
 };
+
+export function constructApiToken(t: TokenListItem): ApiToken {
+  return constructToken({
+    address: t.address,
+    decimals: t.decimals,
+    symbol: t.symbol,
+    name: t.name,
+    network: t.chainId,
+    sources: t.sources,
+    categories: t.categories,
+    img: t.logoURI ? uriToHttpURL(t.logoURI) : undefined,
+    tags: t.tags,
+  });
+}
