@@ -167,10 +167,13 @@ describe.each([
         decimals: expect.any(Number),
         name: expect.any(String),
         network: expect.any(Number),
-        sources: expect.any(Array),
-        categories: expect.any(Array),
       })
     );
+    // Array.isArray instead of expect.any(Array): with the native fetch
+    // fetcher these arrays come from the host realm, so `instanceof Array`
+    // (which expect.any relies on) is false inside jest's sandbox
+    expect(Array.isArray(tokens[0]?.sources)).toBe(true);
+    expect(Array.isArray(tokens[0]?.categories)).toBe(true);
 
     // API fields are mapped to the SDK Token shape, not passed through
     expect(tokens[0]).not.toHaveProperty('chainId');
