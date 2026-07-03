@@ -44,6 +44,7 @@ export const isAllowance = (
   return 'allowance' in arg;
 };
 
+/** @deprecated Will be removed in the next major version. */
 export type GetBalancesFunctions = {
   getBalance: GetBalance;
   getBalances: GetBalances;
@@ -53,6 +54,7 @@ export type GetBalancesFunctions = {
 
 const NOT_FOUND_RESPONSE = { message: 'Not Found' } as const;
 
+/** @deprecated Will be removed in the next major version. */
 export const constructGetBalances = ({
   apiURL = API_URL,
   chainId,
