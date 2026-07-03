@@ -29,6 +29,7 @@ import {
   GetAllTokens,
   GetTokens,
   GetTokensParams,
+  GetTokenCategories,
 } from './methods/swap/token';
 import { BuildTxFunctions, constructBuildTx } from './methods/swap/transaction';
 
@@ -106,6 +107,7 @@ import type {
   APIVersion,
   ExtraFetchParams,
   PaginatedResponse,
+  TokenCategory,
 } from './types';
 
 // ── Delta ─────────────────────────────────────────────────────────────────
@@ -492,6 +494,8 @@ export type {
   GetTokens,
   GetAllTokens,
   GetTokensParams,
+  GetTokenCategories,
+  TokenCategory,
   //common
   ConstructFetchInput,
   ContractCallerFunctions,

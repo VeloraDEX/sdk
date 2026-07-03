@@ -159,6 +159,15 @@ export interface TokenListApiResponse {
   tokens: TokenListItem[];
 }
 
+export type TokenCategory = {
+  id: string;
+  name: string;
+};
+
+export interface TokenCategoriesApiResponse {
+  categories: TokenCategory[];
+}
+
 export type ApiToken = Prettify<
   MarkRequired<Omit<Token, 'allowance' | 'balance'>, 'symbol' | 'name'>
 >;

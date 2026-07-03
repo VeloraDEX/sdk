@@ -144,6 +144,19 @@ describe.each([
     }
   });
 
+  test('Get_TokenCategories', async () => {
+    const categories = await sdk.swap.getTokenCategories();
+
+    expect(Array.isArray(categories)).toBe(true);
+    expect(categories.length).toBeGreaterThan(0);
+    expect(categories[0]).toEqual(
+      expect.objectContaining({
+        id: expect.any(String),
+        name: expect.any(String),
+      })
+    );
+  });
+
   test('Get_Rates', async () => {
     const priceRoute = await sdk.swap.getRate({
       srcToken: ETH,

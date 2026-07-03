@@ -6,15 +6,16 @@ import type {
   RequestParameters,
   ConstructFetchInput,
   TokenListApiResponse,
+  TokenCategory,
+  TokenCategoriesApiResponse,
 } from '../../types';
 
 export type GetTokensParams = { category?: string };
 
 export type GetTokens = {
-  (
-    options?: GetTokensParams,
-    requestParams?: RequestParameters
-  ): Promise<ApiToken[]>;
+  (options?: GetTokensParams, requestParams?: RequestParameters): Promise<
+    ApiToken[]
+  >;
   /**
    * @deprecated Passing RequestParameters as the first argument is deprecated.
    * Pass it as the second argument instead: `getTokens({}, requestParams)`
@@ -25,10 +26,14 @@ export type GetAllTokens = (
   options?: GetTokensParams,
   requestParams?: RequestParameters
 ) => Promise<ApiToken[]>;
+export type GetTokenCategories = (
+  requestParams?: RequestParameters
+) => Promise<TokenCategory[]>;
 
 export type GetTokensFunctions = {
   getTokens: GetTokens;
   getAllTokens: GetAllTokens;
+  getTokenCategories: GetTokenCategories;
 };
 
 export const constructGetTokens = ({
@@ -75,5 +80,17 @@ export const constructGetTokens = ({
     return data.tokens.map(constructApiToken);
   };
 
-  return { getTokens, getAllTokens };
+  const getTokenCategories: GetTokenCategories = async (requestParams) => {
+    const fetchURL = `${apiURL}/fiat/tokens/categories` as const;
+
+    const data = await fetcher<TokenCategoriesApiResponse>({
+      url: fetchURL,
+      method: 'GET',
+      requestParams,
+    });
+
+    return data.categories;
+  };
+
+  return { getTokens, getAllTokens, getTokenCategories };
 };
