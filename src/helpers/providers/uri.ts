@@ -8,7 +8,10 @@ const IPFStransformer: TransformURI = (uri) => {
   const [, protocol, hash] = match;
   if (!protocol || !hash) return null;
 
-  return `https://ipfs.io/${protocol}/${hash}/`;
+  // only append `/` to a bare root; a path segment (`.../logo.png`)
+  // must keep its exact ending or gateways may resolve it differently
+  const suffix = hash.includes('/') ? '' : '/';
+  return `https://ipfs.io/${protocol}/${hash}${suffix}`;
 };
 
 // takes URI, returns string if applicable or null
