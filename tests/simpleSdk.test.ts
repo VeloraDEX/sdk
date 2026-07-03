@@ -134,7 +134,7 @@ describe.each([
     expect(tokens[0]).not.toHaveProperty('chainId');
     expect(tokens[0]).not.toHaveProperty('logoURI');
 
-    // /tokens/all is not scoped to the SDK chainId, tokens span networks
+    // /fiat/tokens/all is not scoped to the SDK chainId, tokens span networks
     const networks = new Set(tokens.map((t) => t.network));
     expect(networks.size).toBeGreaterThan(1);
 
