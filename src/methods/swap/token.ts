@@ -10,10 +10,17 @@ import type {
 
 export type GetTokensParams = { category?: string };
 
-export type GetTokens = (
-  options?: GetTokensParams,
-  requestParams?: RequestParameters
-) => Promise<ApiToken[]>;
+export type GetTokens = {
+  (
+    options?: GetTokensParams,
+    requestParams?: RequestParameters
+  ): Promise<ApiToken[]>;
+  /**
+   * @deprecated Passing RequestParameters as the first argument is deprecated.
+   * Pass it as the second argument instead: `getTokens({}, requestParams)`
+   */
+  (requestParams?: RequestParameters): Promise<ApiToken[]>;
+};
 export type GetAllTokens = (
   options?: GetTokensParams,
   requestParams?: RequestParameters
@@ -29,7 +36,10 @@ export const constructGetTokens = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): GetTokensFunctions => {
-  const getTokens: GetTokens = async ({ category } = {}, requestParams) => {
+  const getTokens: GetTokens = async (
+    { category, ..._requestParams }: GetTokensParams | RequestParameters = {},
+    requestParams?: RequestParameters
+  ) => {
     // always pass explicit type to make sure UrlSearchParams are correct
     const query = constructSearchString<GetTokensParams>({ category });
 
@@ -38,7 +48,10 @@ export const constructGetTokens = ({
     const data = await fetcher<TokenListApiResponse>({
       url: fetchURL,
       method: 'GET',
-      requestParams,
+      requestParams: {
+        ..._requestParams,
+        ...requestParams,
+      },
     });
 
     return data.tokens.map(constructApiToken);
