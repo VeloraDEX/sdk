@@ -12,7 +12,7 @@ import type {
 } from './helpers/token';
 import type { SignableTypedData } from './methods/common/orders/buildOrderData';
 import { TransactionParams } from './methods/swap/transaction';
-import { MarkRequired, Prettify } from 'ts-essentials';
+import type { MarkRequired, Prettify } from 'ts-essentials';
 
 export type {
   Address,

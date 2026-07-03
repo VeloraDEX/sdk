@@ -1,6 +1,6 @@
 import type { MarkOptional } from 'ts-essentials';
 import { uriToHttpURL } from './providers/uri';
-import { ApiToken, TokenListItem } from '../types';
+import type { ApiToken, TokenListItem } from '../types';
 
 /**
  * @type hex token or account address
