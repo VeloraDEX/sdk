@@ -11,7 +11,8 @@ const IPFStransformer: TransformURI = (uri) => {
   // only append `/` to a bare root; a path segment (`.../logo.png`)
   // must keep its exact ending or gateways may resolve it differently
   const suffix = hash.includes('/') ? '' : '/';
-  return `https://ipfs.io/${protocol}/${hash}${suffix}`.toLowerCase();
+  // hash stays as-is: base58 CIDs (Qm…) are case-sensitive
+  return `https://ipfs.io/${protocol.toLowerCase()}/${hash}${suffix}`;
 };
 
 // takes URI, returns string if applicable or null
