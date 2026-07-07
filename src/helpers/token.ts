@@ -1,4 +1,6 @@
 import type { MarkOptional } from 'ts-essentials';
+import { uriToHttpURL } from './providers/uri';
+import type { ApiToken, TokenListItem } from '../types';
 
 /**
  * @type hex token or account address
@@ -38,6 +40,10 @@ export type Token = {
   address: string;
   decimals: number;
   symbol?: string | undefined;
+  name?: string | undefined;
+  tags: string[];
+  sources: string[];
+  categories: string[];
   tokenType: LendingToken | TokenType;
   mainConnector: string;
   connectors: string[];
@@ -47,18 +53,28 @@ export type Token = {
   balance?: string | undefined;
 };
 
-type ConstructTokenInput = MarkOptional<
-  Token,
-  // these props are constructed from other, required props
-  'tokenType' | 'mainConnector' | 'connectors' | 'network'
->;
+type DefaultedKeys =
+  | 'tokenType'
+  | 'mainConnector'
+  | 'connectors'
+  | 'network'
+  | 'sources'
+  | 'categories'
+  | 'tags';
 
-export const constructToken = (tokenProps: ConstructTokenInput): Token => {
+type ConstructTokenInput = MarkOptional<Token, DefaultedKeys>;
+
+export const constructToken = <T extends ConstructTokenInput>(
+  tokenProps: T
+): Omit<T, DefaultedKeys> & Required<Pick<Token, DefaultedKeys>> => {
   const {
     tokenType = 'ERC20',
     mainConnector = 'ETH',
     connectors: connectorsInput = [],
     network = 1,
+    sources = [],
+    categories = [],
+    tags = [],
     ...rest
   } = tokenProps;
 
@@ -70,6 +86,23 @@ export const constructToken = (tokenProps: ConstructTokenInput): Token => {
     connectors,
     mainConnector,
     network,
+    sources,
+    categories,
+    tags,
     ...rest,
   };
 };
+
+export function constructApiToken(t: TokenListItem): ApiToken {
+  return constructToken({
+    address: t.address,
+    decimals: t.decimals,
+    symbol: t.symbol,
+    name: t.name,
+    network: t.chainId,
+    sources: t.sources,
+    categories: t.categories,
+    img: t.logoURI ? uriToHttpURL(t.logoURI) : undefined,
+    tags: t.tags,
+  });
+}

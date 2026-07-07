@@ -6,9 +6,9 @@ import type {
   RequestParameters,
 } from '../../types';
 
-export type GetSpender = (
+export type GetSpender<T = Address> = (
   requestParams?: RequestParameters
-) => Promise<Address>;
+) => Promise<T>;
 type GetContracts = (
   requestParams?: RequestParameters
 ) => Promise<AdaptersContractsResult>;
@@ -17,6 +17,7 @@ export type GetSpenderFunctions = {
   getSpender: GetSpender;
   getAugustusSwapper: GetSpender;
   getAugustusRFQ: GetSpender;
+  getDelta: GetSpender<Address | null>;
   getContracts: GetContracts;
 };
 
@@ -72,5 +73,16 @@ export const constructGetSpender = ({
     return AugustusRFQ;
   };
 
-  return { getContracts, getSpender, getAugustusSwapper, getAugustusRFQ };
+  const getDelta: GetSpender<Address | null> = async (requestParams) => {
+    const { ParaswapDelta } = await getContracts(requestParams);
+    return ParaswapDelta || null;
+  };
+
+  return {
+    getContracts,
+    getSpender,
+    getAugustusSwapper,
+    getAugustusRFQ,
+    getDelta,
+  };
 };

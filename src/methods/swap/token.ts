@@ -1,16 +1,39 @@
 import { API_URL } from '../../constants';
-import { constructToken } from '../../helpers/token';
+import { constructApiToken } from '../../helpers/token';
+import { constructSearchString } from '../../helpers/misc';
 import type {
+  ApiToken,
   RequestParameters,
   ConstructFetchInput,
-  Token,
-  TokensApiResponse,
+  TokenListApiResponse,
+  TokenCategory,
+  TokenCategoriesApiResponse,
 } from '../../types';
 
-type GetTokens = (extra?: RequestParameters) => Promise<Token[]>;
+export type GetTokensParams = { category?: string };
+
+export type GetTokens = {
+  (options?: GetTokensParams, requestParams?: RequestParameters): Promise<
+    ApiToken[]
+  >;
+  /**
+   * @deprecated Passing RequestParameters as the first argument is deprecated.
+   * Pass it as the second argument instead: `getTokens({}, requestParams)`
+   */
+  (requestParams?: RequestParameters): Promise<ApiToken[]>;
+};
+export type GetAllTokens = (
+  options?: GetTokensParams,
+  requestParams?: RequestParameters
+) => Promise<ApiToken[]>;
+export type GetTokenCategories = (
+  requestParams?: RequestParameters
+) => Promise<TokenCategory[]>;
 
 export type GetTokensFunctions = {
   getTokens: GetTokens;
+  getAllTokens: GetAllTokens;
+  getTokenCategories: GetTokenCategories;
 };
 
 export const constructGetTokens = ({
@@ -18,18 +41,56 @@ export const constructGetTokens = ({
   chainId,
   fetcher,
 }: ConstructFetchInput): GetTokensFunctions => {
-  const fetchURL = `${apiURL}/tokens/${chainId}` as const;
+  const getTokens: GetTokens = async (
+    { category, ..._requestParams }: GetTokensParams | RequestParameters = {},
+    requestParams?: RequestParameters
+  ) => {
+    // always pass explicit type to make sure UrlSearchParams are correct
+    const query = constructSearchString<GetTokensParams>({ category });
 
-  const getTokens: GetTokens = async (requestParams) => {
-    const data = await fetcher<TokensApiResponse>({
+    const fetchURL = `${apiURL}/fiat/tokens/${chainId}${query}` as const;
+
+    const data = await fetcher<TokenListApiResponse>({
+      url: fetchURL,
+      method: 'GET',
+      requestParams: {
+        ..._requestParams,
+        ...requestParams,
+      },
+    });
+
+    return data.tokens.map(constructApiToken);
+  };
+
+  const getAllTokens: GetAllTokens = async (
+    { category } = {},
+    requestParams
+  ) => {
+    // always pass explicit type to make sure UrlSearchParams are correct
+    const query = constructSearchString<GetTokensParams>({ category });
+
+    const fetchURL = `${apiURL}/fiat/tokens/all${query}` as const;
+
+    const data = await fetcher<TokenListApiResponse>({
       url: fetchURL,
       method: 'GET',
       requestParams,
     });
 
-    const tokens = data.tokens.map(constructToken);
-    return tokens;
+    return data.tokens.map(constructApiToken);
   };
 
-  return { getTokens };
+  const getTokenCategories: GetTokenCategories = async (requestParams) => {
+    const fetchURL = `${apiURL}/fiat/tokens/categories` as const;
+
+    const data = await fetcher<TokenCategoriesApiResponse>({
+      url: fetchURL,
+      method: 'GET',
+      requestParams,
+    });
+
+    return data.categories;
+  };
+
+  return { getTokens, getAllTokens, getTokenCategories };
 };

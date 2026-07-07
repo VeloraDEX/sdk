@@ -90,6 +90,69 @@ describe.each([
         symbol: expect.any(String),
         address: expect.any(String),
         decimals: expect.any(Number),
+        name: expect.any(String),
+        network: expect.any(Number),
+      })
+    );
+    // Array.isArray instead of expect.any(Array): with the native fetch
+    // fetcher these arrays come from the host realm, so `instanceof Array`
+    // (which expect.any relies on) is false inside jest's sandbox
+    expect(Array.isArray(tokens[0]?.sources)).toBe(true);
+    expect(Array.isArray(tokens[0]?.categories)).toBe(true);
+
+    // API fields are mapped to the SDK Token shape, not passed through
+    expect(tokens[0]).not.toHaveProperty('chainId');
+    expect(tokens[0]).not.toHaveProperty('logoURI');
+
+    // ipfs:// and ipns:// logo URIs are converted to http gateway URLs
+    for (const { img } of tokens) {
+      if (img) expect(img).not.toMatch(/^ip[fn]s:\/\//i);
+    }
+  });
+
+  test('Get_AllTokens', async () => {
+    const tokens = await sdk.swap.getAllTokens();
+
+    expect(Array.isArray(tokens)).toBe(true);
+    expect(tokens.length).toBeGreaterThan(0);
+    expect(tokens[0]).toEqual(
+      expect.objectContaining({
+        symbol: expect.any(String),
+        address: expect.any(String),
+        decimals: expect.any(Number),
+        name: expect.any(String),
+        network: expect.any(Number),
+      })
+    );
+    // Array.isArray instead of expect.any(Array): with the native fetch
+    // fetcher these arrays come from the host realm, so `instanceof Array`
+    // (which expect.any relies on) is false inside jest's sandbox
+    expect(Array.isArray(tokens[0]?.sources)).toBe(true);
+    expect(Array.isArray(tokens[0]?.categories)).toBe(true);
+
+    // API fields are mapped to the SDK Token shape, not passed through
+    expect(tokens[0]).not.toHaveProperty('chainId');
+    expect(tokens[0]).not.toHaveProperty('logoURI');
+
+    // /fiat/tokens/all is not scoped to the SDK chainId, tokens span networks
+    const networks = new Set(tokens.map((t) => t.network));
+    expect(networks.size).toBeGreaterThan(1);
+
+    // ipfs:// and ipns:// logo URIs are converted to http gateway URLs
+    for (const { img } of tokens) {
+      if (img) expect(img).not.toMatch(/^ip[fn]s:\/\//i);
+    }
+  });
+
+  test('Get_TokenCategories', async () => {
+    const categories = await sdk.swap.getTokenCategories();
+
+    expect(Array.isArray(categories)).toBe(true);
+    expect(categories.length).toBeGreaterThan(0);
+    expect(categories[0]).toEqual(
+      expect.objectContaining({
+        id: expect.any(String),
+        name: expect.any(String),
       })
     );
   });
