@@ -381,7 +381,7 @@ function getExpectedTwapOrderAmounts(
   return { srcAmount, destAmount };
 }
 
-function scaleByFactor(amount: bigint, scalingFactor: number): bigint {
+function scaleByFactor(amount: bigint, scalingFactor = 0): bigint {
   if (!amount) return 0n;
 
   if (scalingFactor === 0) return amount;
