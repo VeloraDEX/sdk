@@ -352,7 +352,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:409
 
 ### httpVersion?
 
-> `optional` **httpVersion**: `1` \| `2`
+> `optional` **httpVersion**: `2` \| `1`
 
 #### Inherited from
 

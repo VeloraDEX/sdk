@@ -40,4 +40,4 @@ Standard pagination envelope returned by paginated API endpoints.
 
 ## Defined in
 
-[src/types.ts:246](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L246)
+[src/types.ts:276](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L276)

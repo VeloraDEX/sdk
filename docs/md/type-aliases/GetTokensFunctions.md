@@ -10,10 +10,18 @@
 
 ## Type declaration
 
+### getAllTokens
+
+> **getAllTokens**: [`GetAllTokens`](GetAllTokens.md)
+
+### getTokenCategories
+
+> **getTokenCategories**: [`GetTokenCategories`](GetTokenCategories.md)
+
 ### getTokens
 
-> **getTokens**: [`GetTokens`](../-internal-/type-aliases/GetTokens.md)
+> **getTokens**: [`GetTokens`](GetTokens.md)
 
 ## Defined in
 
-[src/methods/swap/token.ts:12](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/token.ts#L12)
+[src/methods/swap/token.ts:33](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/token.ts#L33)

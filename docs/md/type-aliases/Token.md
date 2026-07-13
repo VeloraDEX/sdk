@@ -22,6 +22,10 @@
 
 > `optional` **balance**: `string`
 
+### categories
+
+> **categories**: `string`[]
+
 ### connectors
 
 > **connectors**: `string`[]
@@ -38,13 +42,25 @@
 
 > **mainConnector**: `string`
 
+### name?
+
+> `optional` **name**: `string`
+
 ### network
 
 > **network**: `number`
 
+### sources
+
+> **sources**: `string`[]
+
 ### symbol?
 
 > `optional` **symbol**: `string`
+
+### tags
+
+> **tags**: `string`[]
 
 ### tokenType
 
@@ -52,4 +68,4 @@
 
 ## Defined in
 
-[src/helpers/token.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L37)
+[src/helpers/token.ts:39](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L39)

@@ -4,28 +4,32 @@
 
 [@velora-dex/sdk](../globals.md) / GetBalancesFunctions
 
-# Type Alias: GetBalancesFunctions
+# Type Alias: ~~GetBalancesFunctions~~
 
 > **GetBalancesFunctions**: `object`
 
 ## Type declaration
 
-### getAllowance
+### ~~getAllowance~~
 
 > **getAllowance**: [`GetAllowance`](../-internal-/type-aliases/GetAllowance.md)
 
-### getAllowances
+### ~~getAllowances~~
 
 > **getAllowances**: [`GetAllowances`](../-internal-/type-aliases/GetAllowances.md)
 
-### getBalance
+### ~~getBalance~~
 
 > **getBalance**: [`GetBalance`](../-internal-/type-aliases/GetBalance.md)
 
-### getBalances
+### ~~getBalances~~
 
 > **getBalances**: [`GetBalances`](../-internal-/type-aliases/GetBalances.md)
 
+## Deprecated
+
+Will be removed in the next major version.
+
 ## Defined in
 
-[src/methods/swap/balance.ts:47](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L47)
+[src/methods/swap/balance.ts:48](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L48)

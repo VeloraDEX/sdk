@@ -4,7 +4,7 @@
 
 [@velora-dex/sdk](../globals.md) / constructGetBalances
 
-# Function: constructGetBalances()
+# Function: ~~constructGetBalances()~~
 
 > **constructGetBalances**(`__namedParameters`): [`GetBalancesFunctions`](../type-aliases/GetBalancesFunctions.md)
 
@@ -16,6 +16,10 @@
 
 [`GetBalancesFunctions`](../type-aliases/GetBalancesFunctions.md)
 
+## Deprecated
+
+Will be removed in the next major version.
+
 ## Defined in
 
-[src/methods/swap/balance.ts:56](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L56)
+[src/methods/swap/balance.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L58)

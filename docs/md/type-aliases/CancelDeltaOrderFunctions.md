@@ -10,6 +10,14 @@
 
 ## Type declaration
 
+### buildCancelDeltaOrder
+
+> **buildCancelDeltaOrder**: [`BuildCancelDeltaOrder`](BuildCancelDeltaOrder.md)
+
+#### Description
+
+Build the EIP-712 signable data for cancelling one or more Delta orders
+
 ### cancelDeltaOrders
 
 > **cancelDeltaOrders**: [`CancelDeltaOrder`](CancelDeltaOrder.md)
@@ -28,4 +36,4 @@ Cancel one or more Delta orders via the v2 endpoint
 
 ## Defined in
 
-[src/methods/delta/cancelDeltaOrder.ts:34](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L34)
+[src/methods/delta/cancelDeltaOrder.ts:40](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L40)

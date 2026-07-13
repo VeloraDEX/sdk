@@ -4,9 +4,13 @@
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / GetSpender
 
-# Type Alias: GetSpender()
+# Type Alias: GetSpender()\<T\>
 
-> **GetSpender**: (`requestParams`?) => `Promise`\<[`Address`](../../type-aliases/Address.md)\>
+> **GetSpender**\<`T`\>: (`requestParams`?) => `Promise`\<`T`\>
+
+## Type Parameters
+
+• **T** = [`Address`](../../type-aliases/Address.md)
 
 ## Parameters
 
@@ -14,7 +18,7 @@
 
 ## Returns
 
-`Promise`\<[`Address`](../../type-aliases/Address.md)\>
+`Promise`\<`T`\>
 
 ## Defined in
 

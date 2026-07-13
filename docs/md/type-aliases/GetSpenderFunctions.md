@@ -22,6 +22,10 @@
 
 > **getContracts**: [`GetContracts`](../-internal-/type-aliases/GetContracts.md)
 
+### getDelta
+
+> **getDelta**: [`GetSpender`](../-internal-/type-aliases/GetSpender.md)\<[`Address`](Address.md) \| `null`\>
+
 ### getSpender
 
 > **getSpender**: [`GetSpender`](../-internal-/type-aliases/GetSpender.md)

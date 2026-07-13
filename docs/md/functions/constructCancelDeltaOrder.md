@@ -18,4 +18,4 @@
 
 ## Defined in
 
-[src/methods/delta/cancelDeltaOrder.ts:41](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L41)
+[src/methods/delta/cancelDeltaOrder.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L49)

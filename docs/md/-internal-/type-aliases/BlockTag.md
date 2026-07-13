@@ -10,4 +10,4 @@
 
 ## Defined in
 
-[src/types.ts:83](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L83)
+[src/types.ts:84](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L84)
