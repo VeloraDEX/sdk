@@ -223,7 +223,13 @@ export type UnifiedDeltaOrderData = {
     /** @description  minimal amounts that user should receive if the order is filled, known at the start of Order execution */
     minimal: {
       srcAmount: string;
-      destAmount: string;
+      /** @description  `undefined` when no minimum can be derived. This happens on
+       * cross-chain **bridge-and-swap** routes, where the order's `destAmount` is
+       * denominated in a different asset than the token the user is paid in and
+       * `bridge.scalingFactor` cannot convert between the two — the floor for those routes
+       * lives in the bridge protocol's own `minAmountOut` inside `bridge.protocolData`.
+       * Fall back to `amounts.expected.destAmount` when absent. */
+      destAmount: string | undefined;
     };
     /** @description  final amounts after Order execution. May be less than expected if there is slippage or only partial execution was achieved */
     final?: {

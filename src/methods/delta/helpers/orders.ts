@@ -352,6 +352,13 @@ function getExpectedTwapSrcAmount(
 
 /**
  * @description Returns the expected destination amount for a TWAP order.
+ *
+ * Note: on cross-chain **bridge-and-swap** routes the returned value is not
+ * denominated in the token the user is paid in — `bridge.scalingFactor` only
+ * converts decimals for same-asset bridge routes (see
+ * {@link getCrosschainMinimalDestAmount}). Unlike `getAuctionAmounts`, this
+ * getter reads the order struct alone and so has no expected output to validate
+ * against; prefer the auction envelope's `output` amounts where available.
  */
 function getExpectedTwapDestAmount(
   order:
@@ -391,6 +398,61 @@ function scaleByFactor(amount: bigint, scalingFactor = 0): bigint {
   return scalingFactor < 0
     ? amount / base ** BigInt(-scalingFactor)
     : amount * base ** BigInt(scalingFactor);
+}
+
+/**
+ * @description How far a genuine cross-chain minimum may deviate from the
+ * expected output before we stop trusting it. A same-asset bridge minimum and
+ * the expected output describe the *same asset*, so they differ only by
+ * slippage and bridge fees — well inside this band in either direction.
+ * A mismatch beyond it means the two values are denominated in different
+ * assets, which is off by at least the gap between their decimals (>= 100x in
+ * practice, and typically 1e10–1e12).
+ */
+const MAX_PLAUSIBLE_MINIMUM_DEVIATION = 100n;
+
+/**
+ * @description Returns the minimal dest amount for a cross-chain order, or
+ * `undefined` when it cannot be derived from the order struct.
+ *
+ * `order.destAmount` is denominated in `order.destToken` — the token received
+ * on the *source* chain — while the user is ultimately paid in
+ * `bridge.outputToken` on the destination chain. `bridge.scalingFactor`
+ * (`destDecimals - srcDecimals`) converts between the two, but only on
+ * **same-asset** bridge routes, where they are the same asset differing only in
+ * decimals.
+ *
+ * On **bridge-and-swap** routes (e.g. Mayan or Relay quoting USDC on Optimism
+ * to native BNB on BSC) they are entirely different assets, so no decimal
+ * factor can convert one into the other. The backend sets `scalingFactor: 0`
+ * there to mark it inapplicable, and the real floor is the bridge protocol's
+ * own `minAmountOut`, encoded inside `bridge.protocolData` — which this SDK
+ * does not decode.
+ *
+ * The auction envelope carries no flag separating the two route kinds, so
+ * instead of trusting the scaling blindly we validate its result against the
+ * expected output and report no minimum when the assumption clearly does not
+ * hold. Reporting `undefined` lets callers fall back to the expected amount,
+ * rather than rendering a figure that is wrong by orders of magnitude.
+ */
+function getCrosschainMinimalDestAmount(
+  order: Pick<DeltaAuctionOrder, 'destAmount'> & { bridge: Bridge },
+  expectedDestAmount: string
+): string | undefined {
+  const scaled = scaleByFactor(
+    BigInt(order.destAmount),
+    order.bridge.scalingFactor
+  );
+  const expected = BigInt(expectedDestAmount);
+
+  // No expected output to validate against (e.g. a not-yet-priced order).
+  if (expected === 0n) return scaled.toString();
+
+  const plausible =
+    scaled * MAX_PLAUSIBLE_MINIMUM_DEVIATION >= expected &&
+    scaled <= expected * MAX_PLAUSIBLE_MINIMUM_DEVIATION;
+
+  return plausible ? scaled.toString() : undefined;
 }
 
 ///// GETTERS — auction envelope (v2) //////
@@ -510,6 +572,9 @@ function getExecutedAmount(side: DeltaTokenSide, fallback: string): string {
  * @description Returns expected and minimal amounts and, once the auction is completed,
  * executed amounts. Executed amounts prefer the `executedAmount` baked onto the
  * token sides and fall back to summing transactions.
+ *
+ * `minimal.destAmount` is `undefined` when no minimum can be derived — see
+ * {@link getCrosschainMinimalDestAmount}.
  */
 function getAuctionAmounts(
   auction: Pick<
@@ -530,10 +595,7 @@ function getAuctionAmounts(
   } else if (isOrderCrosschain(order)) {
     minimal = {
       srcAmount: order.srcAmount,
-      destAmount: scaleByFactor(
-        BigInt(order.destAmount),
-        order.bridge.scalingFactor
-      ).toString(),
+      destAmount: getCrosschainMinimalDestAmount(order, expected.destAmount),
     };
   } else {
     minimal = {
