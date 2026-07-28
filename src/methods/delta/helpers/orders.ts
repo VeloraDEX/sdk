@@ -355,17 +355,13 @@ function getExpectedTwapSrcAmount(
  */
 function getExpectedTwapDestAmount(
   order:
-    | Pick<TWAPDeltaOrder, 'destAmountPerSlice' | 'numSlices' | 'bridge'>
-    | Pick<TWAPBuyDeltaOrder, 'totalDestAmount' | 'bridge'>
+    | Pick<TWAPDeltaOrder, 'destAmountPerSlice' | 'numSlices'>
+    | Pick<TWAPBuyDeltaOrder, 'totalDestAmount'>
 ) {
   const destAmount =
     'destAmountPerSlice' in order
       ? BigInt(order.destAmountPerSlice) * BigInt(order.numSlices) // SELL
       : BigInt(order.totalDestAmount); // BUY
-
-  if (isOrderCrosschain(order)) {
-    return scaleByFactor(destAmount, order.bridge.scalingFactor).toString();
-  }
 
   return destAmount.toString();
 }
@@ -379,18 +375,6 @@ function getExpectedTwapOrderAmounts(
   const srcAmount = getExpectedTwapSrcAmount(order);
   const destAmount = getExpectedTwapDestAmount(order);
   return { srcAmount, destAmount };
-}
-
-function scaleByFactor(amount: bigint, scalingFactor = 0): bigint {
-  if (!amount) return 0n;
-
-  if (scalingFactor === 0) return amount;
-
-  const base = 10n;
-
-  return scalingFactor < 0
-    ? amount / base ** BigInt(-scalingFactor)
-    : amount * base ** BigInt(scalingFactor);
 }
 
 ///// GETTERS — auction envelope (v2) //////
@@ -524,23 +508,14 @@ function getAuctionAmounts(
 
   const order = auction.order;
 
-  let minimal;
-  if (isTWAPOrder(order)) {
-    minimal = expected; // TWAP doesn't carry explicit min amounts
-  } else if (isOrderCrosschain(order)) {
-    minimal = {
-      srcAmount: order.srcAmount,
-      destAmount: scaleByFactor(
-        BigInt(order.destAmount),
-        order.bridge.scalingFactor
-      ).toString(),
-    };
-  } else {
-    minimal = {
-      srcAmount: order.srcAmount,
-      destAmount: order.destAmount,
-    };
-  }
+  const minimal =
+    isTWAPOrder(order) || isOrderCrosschain(order)
+      ? // TWAP and crosschain orders don't carry explicit min amounts
+        expected
+      : {
+          srcAmount: order.srcAmount,
+          destAmount: order.destAmount,
+        };
 
   if (!isCompletedAuction(auction)) {
     return { expected, minimal };
