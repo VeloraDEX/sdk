@@ -240,7 +240,7 @@ function isPendingAuction<T extends Pick<DeltaAuction, 'status'>>(
  * between 0 and 100.
  */
 function isPartiallyExecutedAuction<
-  T extends Pick<DeltaAuction, 'order' | 'transactions'>,
+  T extends Pick<DeltaAuction, 'order' | 'transactions'>
 >(
   auction: T
 ): auction is T & { transactions: NonEmptyArray<DeltaTransaction> } {
