@@ -145,8 +145,8 @@ const DeltaOrderStatusMap = {
 export type DeltaOrderStatus =
   (typeof DeltaOrderStatusMap)[keyof typeof DeltaOrderStatusMap];
 
-/** @description Token side on an order. SELL provides an explicit `amount`; BUY provides expected/executed amounts. */
-export type DeltaTokenSide =
+/** @description Input token side. SELL provides an explicit `amount`; BUY provides expected/executed amounts plus the signed spend cap `maxAmount`. */
+export type DeltaTokenSideInput =
   | {
       chainId: number;
       token: Address;
@@ -156,8 +156,29 @@ export type DeltaTokenSide =
       chainId: number;
       token: Address;
       expectedAmount: string | null;
+      /** @description Signed spend cap (order.srcAmount / maxSrcAmount). */
+      maxAmount: string;
       executedAmount: string | null;
     };
+
+/** @description Output token side. BUY provides an explicit `amount`; SELL provides expected/executed amounts plus the signed receive floor `minAmount`. */
+export type DeltaTokenSideOutput =
+  | {
+      chainId: number;
+      token: Address;
+      amount: string;
+    }
+  | {
+      chainId: number;
+      token: Address;
+      expectedAmount: string | null;
+      /** @description Signed receive floor. For bridge outputs it's a reporting value (enforcement is per-bridge); `null` when unknown (legacy bridge rows). */
+      minAmount: string | null;
+      executedAmount: string | null;
+    };
+
+/** @description Token side on an order. SELL provides an explicit `amount` on input; BUY on output; the opposite side carries expected/executed amounts and its signed bound. */
+export type DeltaTokenSide = DeltaTokenSideInput | DeltaTokenSideOutput;
 
 /** @description A single transaction entry on a v2 order. */
 export type DeltaTransaction = {
@@ -181,8 +202,8 @@ type DeltaAuctionBase = {
   status: DeltaOrderStatus;
   side: 'SELL' | 'BUY';
   type: DeltaOrderType;
-  input: DeltaTokenSide;
-  output: DeltaTokenSide;
+  input: DeltaTokenSideInput;
+  output: DeltaTokenSideOutput;
   owner: Address;
   beneficiary: Address;
   orderHash: string;

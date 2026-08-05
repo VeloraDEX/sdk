@@ -381,15 +381,32 @@ function getExpectedTwapOrderAmounts(
 
 /**
  * @description Reads an amount off a v2 token side. A SELL input / BUY output
- * carries an explicit `amount`; the opposite side carries
- * `expectedAmount`/`executedAmount`. `prefer` chooses which to read on the
- * expected/executed variant.
+ * carries an explicit `amount`, always returned; the opposite side carries
+ * `expectedAmount`/`executedAmount` plus its signed bound (`maxAmount` spend
+ * cap on input, `minAmount` receive floor on output). `prefer` chooses which
+ * to read on that variant. `'bound'` is nullable — `null` when the server
+ * reports no bound (legacy bridge rows) or the payload predates the bound
+ * fields; the other modes default to `'0'`.
  */
 function getTokenSideAmount(
   side: DeltaTokenSide,
   prefer: 'expected' | 'executed'
-): string {
+): string;
+function getTokenSideAmount(
+  side: DeltaTokenSide,
+  prefer: 'bound'
+): string | null;
+function getTokenSideAmount(
+  side: DeltaTokenSide,
+  prefer: 'expected' | 'executed' | 'bound'
+): string | null {
   if ('amount' in side) return side.amount;
+
+  if (prefer === 'bound') {
+    if ('maxAmount' in side) return side.maxAmount;
+    if ('minAmount' in side) return side.minAmount;
+    return null;
+  }
 
   const value =
     prefer === 'executed' ? side.executedAmount : side.expectedAmount;
@@ -492,7 +509,9 @@ function getExecutedAmount(side: DeltaTokenSide, fallback: string): string {
 
 /**
  * @description Returns expected and minimal amounts and, once the auction is completed,
- * executed amounts. Executed amounts prefer the `executedAmount` baked onto the
+ * executed amounts. Minimal amounts read the signed bounds baked onto the token
+ * sides (`maxAmount` spend cap on input, `minAmount` receive floor on output).
+ * Executed amounts prefer the `executedAmount` baked onto the
  * token sides and fall back to summing transactions.
  */
 function getAuctionAmounts(
@@ -508,14 +527,23 @@ function getAuctionAmounts(
 
   const order = auction.order;
 
-  const minimal =
+  // for payloads without the side bounds (older API responses, legacy bridge
+  // rows reporting `minAmount: null`) reproduce the pre-bounds behavior:
+  // TWAP and crosschain orders don't carry explicit min amounts on the order
+  const fallbackMinimal =
     isTWAPOrder(order) || isOrderCrosschain(order)
-      ? // TWAP and crosschain orders don't carry explicit min amounts
-        expected
+      ? expected
       : {
           srcAmount: order.srcAmount,
           destAmount: order.destAmount,
         };
+
+  const minimal = {
+    srcAmount:
+      getTokenSideAmount(auction.input, 'bound') ?? fallbackMinimal.srcAmount,
+    destAmount:
+      getTokenSideAmount(auction.output, 'bound') ?? fallbackMinimal.destAmount,
+  };
 
   if (!isCompletedAuction(auction)) {
     return { expected, minimal };
