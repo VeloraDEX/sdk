@@ -156,7 +156,7 @@ export type DeltaTokenSideInput =
       chainId: number;
       token: Address;
       expectedAmount: string | null;
-      /** @description Signed spend cap (order.srcAmount / maxSrcAmount). */
+      /** @description Signed spend cap (order.srcAmount or order.maxSrcAmount for TWAP orders). */
       maxAmount: string;
       executedAmount: string | null;
     };
