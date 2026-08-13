@@ -537,3 +537,6 @@ export * from './methods/otcOrders/helpers/types';
 
 // helpers for Delta Orders
 export { OrderHelpers } from './methods/delta/helpers/orders';
+
+// runtime value backing the DeltaOrderStatus type
+export { DeltaOrderStatusMap } from './methods/delta/types';
