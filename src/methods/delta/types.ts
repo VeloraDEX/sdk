@@ -127,7 +127,7 @@ export type BridgeRoute = {
 /* ------------------------------------------------------------------ */
 
 /** @description Integrator-facing order status returned by v2 order endpoints. */
-const DeltaOrderStatusMap = {
+export const DeltaOrderStatusMap = {
   Pending: 'PENDING',
   AwaitingSignature: 'AWAITING_SIGNATURE',
   Active: 'ACTIVE',
