@@ -37,7 +37,14 @@ export type BuildDeltaOrderParams = {
   side: 'SELL' | 'BUY';
   /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5%. Default 0. */
   slippage?: number;
-  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount */
+  /**
+   * @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount.
+   *
+   * In destination-token wei — the same units as `route.destination.output.amount`. On a SELL
+   * over a bridge route the on-chain Order carries destAmount scaled by
+   * `route.bridge.contractParams.scalingFactor`, and the SDK applies that scaling for you
+   * (rounding up, so the minimum you receive never lands below what you asked for).
+   */
   limitAmount?: string;
 };
 

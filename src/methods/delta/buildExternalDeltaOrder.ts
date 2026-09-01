@@ -40,7 +40,8 @@ export type BuildExternalDeltaOrderParams = {
   side: 'SELL' | 'BUY';
   /** @description Slippage in basis points (bps). Default 0. */
   slippage?: number;
-  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount */
+  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount.
+   * In on-chain Order units. External orders carry no bridge, so no scaling applies. */
   limitAmount?: string;
 };
 
