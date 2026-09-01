@@ -2,6 +2,7 @@ import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
 import type { DeltaAuctionOrder } from './helpers/types';
 import type { BuiltDeltaOrder, DeltaRoute } from './types';
+import { toOrderLimitAmount } from './helpers/limitAmount';
 export type { BuiltDeltaOrder } from './types';
 
 export type BuildDeltaOrderParams = {
@@ -69,7 +70,7 @@ export const constructBuildDeltaOrder = (
         nonce: params.nonce,
         permit: params.permit,
         slippage: params.slippage,
-        limitAmount: params.limitAmount,
+        limitAmount: toOrderLimitAmount(params),
         metadata: params.metadata,
         partiallyFillable: params.partiallyFillable,
         partner: params.partner,
