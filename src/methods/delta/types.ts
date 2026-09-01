@@ -188,6 +188,8 @@ export type DeltaTransaction = {
   filledPercent: number;
   spentAmount: string | null;
   receivedAmount: string | null;
+  /** @description ISO datetime string. */
+  timestamp: string | null;
 };
 
 export type BridgeRefundMetadata = {
@@ -195,6 +197,8 @@ export type BridgeRefundMetadata = {
   chainId: number;
   token: Address;
   amount: string;
+  /** @description ISO datetime string. */
+  timestamp: string | null;
 };
 
 type DeltaAuctionBase = {
