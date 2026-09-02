@@ -1,16 +1,20 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
 [@velora-dex/sdk](../globals.md) / constructGetBalances
 
-# Function: ~~constructGetBalances()~~
+# ~~Function: constructGetBalances()~~
 
 > **constructGetBalances**(`__namedParameters`): [`GetBalancesFunctions`](../type-aliases/GetBalancesFunctions.md)
 
+Defined in: [src/methods/swap/balance.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L58)
+
 ## Parameters
 
-• **\_\_namedParameters**: [`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
+### \_\_namedParameters
+
+[`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
 
 ## Returns
 
@@ -19,7 +23,3 @@
 ## Deprecated
 
 Will be removed in the next major version.
-
-## Defined in
-
-[src/methods/swap/balance.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L58)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,17 @@
 
 # Interface: ReadableStreamDefaultReader\<R\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:201
+
 ## Extends
 
 - [`ReadableStreamGenericReader`](ReadableStreamGenericReader.md)
 
 ## Type Parameters
 
-• **R** = `any`
+### R
+
+`R` = `any`
 
 ## Properties
 
@@ -20,23 +24,25 @@
 
 > `readonly` **closed**: `Promise`\<`undefined`\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:100
+
 #### Inherited from
 
 [`ReadableStreamGenericReader`](ReadableStreamGenericReader.md).[`closed`](ReadableStreamGenericReader.md#closed)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:100
 
 ## Methods
 
 ### cancel()
 
-> **cancel**(`reason`?): `Promise`\<`void`\>
+> **cancel**(`reason?`): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:101
 
 #### Parameters
 
-• **reason?**: `any`
+##### reason?
+
+`any`
 
 #### Returns
 
@@ -46,23 +52,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 [`ReadableStreamGenericReader`](ReadableStreamGenericReader.md).[`cancel`](ReadableStreamGenericReader.md#cancel)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:101
-
 ***
 
 ### read()
 
 > **read**(): `Promise`\<[`ReadableStreamReadResult`](../type-aliases/ReadableStreamReadResult.md)\<`R`\>\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:202
+
 #### Returns
 
 `Promise`\<[`ReadableStreamReadResult`](../type-aliases/ReadableStreamReadResult.md)\<`R`\>\>
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:202
 
 ***
 
@@ -70,10 +70,8 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > **releaseLock**(): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:203
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:203

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,16 @@
 
 # Type Alias: AccessList
 
-> **AccessList**: [`AccessListItem`](AccessListItem.md)[]
+> **AccessList** = `object`[]
 
-## Defined in
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:3
 
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:70
+## Type Declaration
+
+### address
+
+> **address**: `string`
+
+### storageKeys
+
+> **storageKeys**: `string`[]

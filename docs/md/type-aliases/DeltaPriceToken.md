@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,22 +6,26 @@
 
 # Type Alias: DeltaPriceToken
 
-> **DeltaPriceToken**: `object`
+> **DeltaPriceToken** = `object`
 
-## Type declaration
-
-### address
-
-> **address**: [`Address`](Address.md)
-
-### chainId
-
-> **chainId**: `number`
+Defined in: [src/methods/delta/types.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L31)
 
 ## Description
 
 Token identity used across v2 endpoints.
 
-## Defined in
+## Properties
 
-[src/methods/delta/types.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L31)
+### address
+
+> **address**: [`Address`](Address.md)
+
+Defined in: [src/methods/delta/types.ts:33](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L33)
+
+***
+
+### chainId
+
+> **chainId**: `number`
+
+Defined in: [src/methods/delta/types.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L32)

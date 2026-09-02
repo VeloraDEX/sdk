@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Wallet
 
 # Class: Wallet\<T\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:28
 
 Wallet is an in memory `wallet` that can hold multiple accounts.
 These accounts can be used when using web3.eth.sendTransaction() or web3.eth.contract.methods.contractfunction().send();
@@ -36,29 +38,35 @@ const receipt = await web3.eth.sendTransaction({ // internally sign transaction 
 
 ## Type Parameters
 
-• **T** *extends* [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md) = [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)
+### T
+
+`T` *extends* [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md) = [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)
+
+## Indexable
+
+> \[`n`: `number`\]: `T`
 
 ## Constructors
 
-### new Wallet()
+### Constructor
 
-> **new Wallet**\<`T`\>(`accountProvider`): [`Wallet`](Wallet.md)\<`T`\>
+> **new Wallet**\<`T`\>(`accountProvider`): `Wallet`\<`T`\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:71
 
 #### Parameters
 
-• **accountProvider**: [`Web3AccountProvider`](../interfaces/Web3AccountProvider.md)\<`T`\>
+##### accountProvider
+
+[`Web3AccountProvider`](../interfaces/Web3AccountProvider.md)\<`T`\>
 
 #### Returns
 
-[`Wallet`](Wallet.md)\<`T`\>
+`Wallet`\<`T`\>
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`constructor`](Web3BaseWallet.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:71
+[`Web3BaseWallet`](Web3BaseWallet.md).[`constructor`](Web3BaseWallet.md#constructor)
 
 ## Properties
 
@@ -66,13 +74,11 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `protected` `readonly` **\_accountProvider**: [`Web3AccountProvider`](../interfaces/Web3AccountProvider.md)\<`T`\>
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:70
+
 #### Inherited from
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`_accountProvider`](Web3BaseWallet.md#_accountprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:70
 
 ***
 
@@ -80,161 +86,163 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `readonly` **\[unscopables\]**: `object`
 
-Is an object whose properties have the value 'true'
-when they will be absent when used in a 'with' statement.
-
-#### \[unscopables\]?
-
-> `readonly` `optional` **\[unscopables\]**: `boolean`
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:97
 
 Is an object whose properties have the value 'true'
 when they will be absent when used in a 'with' statement.
 
-#### length?
+#### Index Signature
 
-> `optional` **length**: `boolean`
-
-Gets or sets the length of the array. This is a number one higher than the highest index in the array.
+\[`key`: `number`\]: `boolean` \| `undefined`
 
 #### \[iterator\]?
 
-> `optional` **\[iterator\]**
+> `optional` **\[iterator\]?**: `boolean`
+
+#### \[unscopables\]?
+
+> `readonly` `optional` **\[unscopables\]?**: `boolean`
+
+Is an object whose properties have the value 'true'
+when they will be absent when used in a 'with' statement.
 
 #### at?
 
-> `optional` **at**
+> `optional` **at?**: `boolean`
 
 #### concat?
 
-> `optional` **concat**
+> `optional` **concat?**: `boolean`
 
 #### copyWithin?
 
-> `optional` **copyWithin**
+> `optional` **copyWithin?**: `boolean`
 
 #### entries?
 
-> `optional` **entries**
+> `optional` **entries?**: `boolean`
 
 #### every?
 
-> `optional` **every**
+> `optional` **every?**: `boolean`
 
 #### fill?
 
-> `optional` **fill**
+> `optional` **fill?**: `boolean`
 
 #### filter?
 
-> `optional` **filter**
+> `optional` **filter?**: `boolean`
 
 #### find?
 
-> `optional` **find**
+> `optional` **find?**: `boolean`
 
 #### findIndex?
 
-> `optional` **findIndex**
+> `optional` **findIndex?**: `boolean`
 
 #### flat?
 
-> `optional` **flat**
+> `optional` **flat?**: `boolean`
 
 #### flatMap?
 
-> `optional` **flatMap**
+> `optional` **flatMap?**: `boolean`
 
 #### forEach?
 
-> `optional` **forEach**
+> `optional` **forEach?**: `boolean`
 
 #### includes?
 
-> `optional` **includes**
+> `optional` **includes?**: `boolean`
 
 #### indexOf?
 
-> `optional` **indexOf**
+> `optional` **indexOf?**: `boolean`
 
 #### join?
 
-> `optional` **join**
+> `optional` **join?**: `boolean`
 
 #### keys?
 
-> `optional` **keys**
+> `optional` **keys?**: `boolean`
 
 #### lastIndexOf?
 
-> `optional` **lastIndexOf**
+> `optional` **lastIndexOf?**: `boolean`
+
+#### length?
+
+> `optional` **length?**: `boolean`
+
+Gets or sets the length of the array. This is a number one higher than the highest index in the array.
 
 #### map?
 
-> `optional` **map**
+> `optional` **map?**: `boolean`
 
 #### pop?
 
-> `optional` **pop**
+> `optional` **pop?**: `boolean`
 
 #### push?
 
-> `optional` **push**
+> `optional` **push?**: `boolean`
 
 #### reduce?
 
-> `optional` **reduce**
+> `optional` **reduce?**: `boolean`
 
 #### reduceRight?
 
-> `optional` **reduceRight**
+> `optional` **reduceRight?**: `boolean`
 
 #### reverse?
 
-> `optional` **reverse**
+> `optional` **reverse?**: `boolean`
 
 #### shift?
 
-> `optional` **shift**
+> `optional` **shift?**: `boolean`
 
 #### slice?
 
-> `optional` **slice**
+> `optional` **slice?**: `boolean`
 
 #### some?
 
-> `optional` **some**
+> `optional` **some?**: `boolean`
 
 #### sort?
 
-> `optional` **sort**
+> `optional` **sort?**: `boolean`
 
 #### splice?
 
-> `optional` **splice**
+> `optional` **splice?**: `boolean`
 
 #### toLocaleString?
 
-> `optional` **toLocaleString**
+> `optional` **toLocaleString?**: `boolean`
 
 #### toString?
 
-> `optional` **toString**
+> `optional` **toString?**: `boolean`
 
 #### unshift?
 
-> `optional` **unshift**
+> `optional` **unshift?**: `boolean`
 
 #### values?
 
-> `optional` **values**
+> `optional` **values?**: `boolean`
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`[unscopables]`](Web3BaseWallet.md#%5Bunscopables%5D)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:97
+[`Web3BaseWallet`](Web3BaseWallet.md).[`[unscopables]`](Web3BaseWallet.md#unscopables)
 
 ***
 
@@ -242,15 +250,13 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.sym
 
 > **length**: `number`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1329
+
 Gets or sets the length of the array. This is a number one higher than the highest index in the array.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`length`](Web3BaseWallet.md#length-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1326
+[`Web3BaseWallet`](Web3BaseWallet.md).[`length`](Web3BaseWallet.md#length)
 
 ***
 
@@ -258,19 +264,19 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > `readonly` `static` **\[species\]**: `ArrayConstructor`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:316
+
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`[species]`](Web3BaseWallet.md#%5Bspecies%5D)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:316
+[`Web3BaseWallet`](Web3BaseWallet.md).[`[species]`](Web3BaseWallet.md#species)
 
 ## Methods
 
 ### \[iterator\]()
 
 > **\[iterator\]**(): [`ArrayIterator`](../interfaces/ArrayIterator.md)\<`T`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:78
 
 Iterator
 
@@ -280,11 +286,7 @@ Iterator
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`[iterator]`](Web3BaseWallet.md#%5Biterator%5D-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:78
+[`Web3BaseWallet`](Web3BaseWallet.md).[`[iterator]`](Web3BaseWallet.md#iterator)
 
 ***
 
@@ -292,11 +294,15 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 
 > **add**(`account`): `this`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:100
+
 Adds an account using a private key or account object to the wallet.
 
 #### Parameters
 
-• **account**: `string` \| `T`
+##### account
+
+`string` \| `T`
 
 A private key or account object
 
@@ -330,37 +336,39 @@ web3.eth.accounts.wallet.add('0xbce9b59981303e76c4878b1a6d7b088ec6b9dd5c966b7d5f
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`add`](Web3BaseWallet.md#add)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:100
-
 ***
 
 ### at()
 
-> **at**(`index`): `undefined` \| `T`
+> **at**(`index`): `T` \| `undefined`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2022.array.d.ts:24
+
+Returns the item located at the specified index.
 
 #### Parameters
 
-• **index**: `number`
+##### index
+
+`number`
+
+The zero-based index of the desired code unit. A negative index will count back from the last item.
 
 #### Returns
 
-`undefined` \| `T`
+`T` \| `undefined`
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`at`](Web3BaseWallet.md#at-1)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/indexable.d.ts:7
+[`Web3BaseWallet`](Web3BaseWallet.md).[`at`](Web3BaseWallet.md#at)
 
 ***
 
 ### clear()
 
 > **clear**(): `this`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:150
 
 Securely empties the wallet and removes all its accounts.
 Use this with *caution as it will remove all accounts stored in local wallet.
@@ -388,24 +396,24 @@ _defaultKeyName: 'web3js_wallet'
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`clear`](Web3BaseWallet.md#clear)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:150
-
 ***
 
 ### concat()
 
-#### concat(items)
+#### Call Signature
 
 > **concat**(...`items`): `T`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1353
 
 Combines two or more arrays.
 This method returns a new array without modifying any existing arrays.
 
 ##### Parameters
 
-• ...**items**: [`ConcatArray`](../interfaces/ConcatArray.md)\<`T`\>[]
+###### items
+
+...[`ConcatArray`](../interfaces/ConcatArray.md)\<`T`\>[]
 
 Additional arrays and/or items to add to the end of the array.
 
@@ -415,22 +423,22 @@ Additional arrays and/or items to add to the end of the array.
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`concat`](Web3BaseWallet.md#concat-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`concat`](Web3BaseWallet.md#concat)
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1350
-
-#### concat(items)
+#### Call Signature
 
 > **concat**(...`items`): `T`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1359
 
 Combines two or more arrays.
 This method returns a new array without modifying any existing arrays.
 
 ##### Parameters
 
-• ...**items**: (`T` \| [`ConcatArray`](../interfaces/ConcatArray.md)\<`T`\>)[]
+###### items
+
+...(`T` \| [`ConcatArray`](../interfaces/ConcatArray.md)\<`T`\>)[]
 
 Additional arrays and/or items to add to the end of the array.
 
@@ -440,34 +448,38 @@ Additional arrays and/or items to add to the end of the array.
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`concat`](Web3BaseWallet.md#concat-1)
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1356
+[`Web3BaseWallet`](Web3BaseWallet.md).[`concat`](Web3BaseWallet.md#concat)
 
 ***
 
 ### copyWithin()
 
-> **copyWithin**(`target`, `start`, `end`?): `this`
+> **copyWithin**(`target`, `start`, `end?`): `this`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:62
 
 Returns the this object after copying a section of the array identified by start and end
 to the same array starting at position target
 
 #### Parameters
 
-• **target**: `number`
+##### target
+
+`number`
 
 If target is negative, it is treated as length+target where length is the
 length of the array.
 
-• **start**: `number`
+##### start
+
+`number`
 
 If start is negative, it is treated as length+start. If end is negative, it
 is treated as length+end.
 
-• **end?**: `number`
+##### end?
+
+`number`
 
 If not specified, length of the this object is used as its default value.
 
@@ -477,11 +489,7 @@ If not specified, length of the this object is used as its default value.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`copyWithin`](Web3BaseWallet.md#copywithin-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:62
+[`Web3BaseWallet`](Web3BaseWallet.md).[`copyWithin`](Web3BaseWallet.md#copywithin)
 
 ***
 
@@ -489,11 +497,15 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.cor
 
 > **create**(`numberOfAccounts`): `this`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:73
+
 Generates one or more accounts in the wallet. If wallets already exist they will not be overridden.
 
 #### Parameters
 
-• **numberOfAccounts**: `number`
+##### numberOfAccounts
+
+`number`
 
 Number of accounts to create. Leave empty to create an empty wallet.
 
@@ -537,35 +549,39 @@ web3.eth.accounts.wallet.create(2)
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`create`](Web3BaseWallet.md#create)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:73
-
 ***
 
 ### decrypt()
 
-> **decrypt**(`encryptedWallets`, `password`, `options`?): `Promise`\<[`Wallet`](Wallet.md)\<`T`\>\>
+> **decrypt**(`encryptedWallets`, `password`, `options?`): `Promise`\<`Wallet`\<`T`\>\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:246
 
 Decrypts keystore v3 objects.
 
 #### Parameters
 
-• **encryptedWallets**: [`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]
+##### encryptedWallets
+
+[`KeyStore`](../type-aliases/KeyStore.md)[]
 
 An array of encrypted keystore v3 objects to decrypt
 
-• **password**: `string`
+##### password
+
+`string`
 
 The password to encrypt with
 
-• **options?**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+##### options?
+
+[`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
 
 decrypt options for the wallets
 
 #### Returns
 
-`Promise`\<[`Wallet`](Wallet.md)\<`T`\>\>
+`Promise`\<`Wallet`\<`T`\>\>
 
 The decrypted wallet object
 
@@ -639,31 +655,33 @@ crypto:
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`decrypt`](Web3BaseWallet.md#decrypt)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:246
-
 ***
 
 ### encrypt()
 
-> **encrypt**(`password`, `options`?): `Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
+> **encrypt**(`password`, `options?`): `Promise`\<[`KeyStore`](../type-aliases/KeyStore.md)[]\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:171
 
 Encrypts all wallet accounts to an array of encrypted keystore v3 objects.
 
 #### Parameters
 
-• **password**: `string`
+##### password
+
+`string`
 
 The password which will be used for encryption
 
-• **options?**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+##### options?
+
+[`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
 
 encryption options
 
 #### Returns
 
-`Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)[]\>
+`Promise`\<[`KeyStore`](../type-aliases/KeyStore.md)[]\>
 
 An array of the encrypted keystore v3.
 
@@ -684,53 +702,55 @@ web3.eth.accounts.wallet.encrypt("abc").then(console.log);
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`encrypt`](Web3BaseWallet.md#encrypt)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:171
-
 ***
 
 ### entries()
 
-> **entries**(): [`ArrayIterator`](../interfaces/ArrayIterator.md)\<[`number`, `T`]\>
+> **entries**(): [`ArrayIterator`](../interfaces/ArrayIterator.md)\<\[`number`, `T`\]\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:83
 
 Returns an iterable of key, value pairs for every entry in the array
 
 #### Returns
 
-[`ArrayIterator`](../interfaces/ArrayIterator.md)\<[`number`, `T`]\>
+[`ArrayIterator`](../interfaces/ArrayIterator.md)\<\[`number`, `T`\]\>
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`entries`](Web3BaseWallet.md#entries-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:83
+[`Web3BaseWallet`](Web3BaseWallet.md).[`entries`](Web3BaseWallet.md#entries)
 
 ***
 
 ### every()
 
-#### every(predicate, thisArg)
+#### Call Signature
 
-> **every**\<`S`\>(`predicate`, `thisArg`?): `this is S[]`
+> **every**\<`S`\>(`predicate`, `thisArg?`): `this is S[]`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1440
 
 Determines whether all the members of an array satisfy the specified test.
 
 ##### Type Parameters
 
-• **S** *extends* [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)
+###### S
+
+`S` *extends* [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `array`) => `value is S`
 
 A function that accepts up to three arguments. The every method calls
 the predicate function for each element in the array until the predicate returns a value
 which is coercible to the Boolean value false, or until the end of the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function.
 If thisArg is omitted, undefined is used as the this value.
@@ -741,27 +761,29 @@ If thisArg is omitted, undefined is used as the this value.
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`every`](Web3BaseWallet.md#every-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`every`](Web3BaseWallet.md#every)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1433
+> **every**(`predicate`, `thisArg?`): `boolean`
 
-#### every(predicate, thisArg)
-
-> **every**(`predicate`, `thisArg`?): `boolean`
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1449
 
 Determines whether all the members of an array satisfy the specified test.
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `array`) => `unknown`
 
 A function that accepts up to three arguments. The every method calls
 the predicate function for each element in the array until the predicate returns a value
 which is coercible to the Boolean value false, or until the end of the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function.
 If thisArg is omitted, undefined is used as the this value.
@@ -772,32 +794,36 @@ If thisArg is omitted, undefined is used as the this value.
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`every`](Web3BaseWallet.md#every-1)
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1442
+[`Web3BaseWallet`](Web3BaseWallet.md).[`every`](Web3BaseWallet.md#every)
 
 ***
 
 ### fill()
 
-> **fill**(`value`, `start`?, `end`?): `this`
+> **fill**(`value`, `start?`, `end?`): `this`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:51
 
 Changes all array elements from `start` to `end` index to a static `value` and returns the modified array
 
 #### Parameters
 
-• **value**: `T`
+##### value
+
+`T`
 
 value to fill array section with
 
-• **start?**: `number`
+##### start?
+
+`number`
 
 index to start filling the array at. If start is negative, it is treated as
 length+start where length is the length of the array.
 
-• **end?**: `number`
+##### end?
+
+`number`
 
 index to stop filling the array at. If end is negative, it is treated as
 length+end.
@@ -808,33 +834,37 @@ length+end.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`fill`](Web3BaseWallet.md#fill-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:51
+[`Web3BaseWallet`](Web3BaseWallet.md).[`fill`](Web3BaseWallet.md#fill)
 
 ***
 
 ### filter()
 
-#### filter(predicate, thisArg)
+#### Call Signature
 
-> **filter**\<`S`\>(`predicate`, `thisArg`?): `S`[]
+> **filter**\<`S`\>(`predicate`, `thisArg?`): `S`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1476
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
 ##### Type Parameters
 
-• **S** *extends* [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)
+###### S
+
+`S` *extends* [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `array`) => `value is S`
 
 A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
 
@@ -844,25 +874,27 @@ An object to which the this keyword can refer in the predicate function. If this
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`filter`](Web3BaseWallet.md#filter-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`filter`](Web3BaseWallet.md#filter)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1469
+> **filter**(`predicate`, `thisArg?`): `T`[]
 
-#### filter(predicate, thisArg)
-
-> **filter**(`predicate`, `thisArg`?): `T`[]
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1482
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `array`) => `unknown`
 
 A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
 
@@ -872,92 +904,100 @@ An object to which the this keyword can refer in the predicate function. If this
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`filter`](Web3BaseWallet.md#filter-1)
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1475
+[`Web3BaseWallet`](Web3BaseWallet.md).[`filter`](Web3BaseWallet.md#filter)
 
 ***
 
 ### find()
 
-#### find(predicate, thisArg)
+#### Call Signature
 
-> **find**\<`S`\>(`predicate`, `thisArg`?): `undefined` \| `S`
+> **find**\<`S`\>(`predicate`, `thisArg?`): `S` \| `undefined`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:29
 
 Returns the value of the first element in the array where predicate is true, and undefined
 otherwise.
 
 ##### Type Parameters
 
-• **S** *extends* [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)
+###### S
+
+`S` *extends* [`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `obj`) => `value is S`
 
 find calls predicate once for each element of the array, in ascending
 order, until it finds one where predicate returns true. If such an element is found, find
 immediately returns that element value. Otherwise, find returns undefined.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 If provided, it will be used as the this value for each invocation of
 predicate. If it is not provided, undefined is used instead.
 
 ##### Returns
 
-`undefined` \| `S`
+`S` \| `undefined`
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`find`](Web3BaseWallet.md#find-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`find`](Web3BaseWallet.md#find)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:29
+> **find**(`predicate`, `thisArg?`): `T` \| `undefined`
 
-#### find(predicate, thisArg)
-
-> **find**(`predicate`, `thisArg`?): `undefined` \| `T`
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:30
 
 ##### Parameters
 
-• **predicate**
+###### predicate
 
-• **thisArg?**: `any`
+(`value`, `index`, `obj`) => `unknown`
+
+###### thisArg?
+
+`any`
 
 ##### Returns
 
-`undefined` \| `T`
+`T` \| `undefined`
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`find`](Web3BaseWallet.md#find-1)
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:30
+[`Web3BaseWallet`](Web3BaseWallet.md).[`find`](Web3BaseWallet.md#find)
 
 ***
 
 ### findIndex()
 
-> **findIndex**(`predicate`, `thisArg`?): `number`
+> **findIndex**(`predicate`, `thisArg?`): `number`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:41
 
 Returns the index of the first element in the array where predicate is true, and -1
 otherwise.
 
 #### Parameters
 
-• **predicate**
+##### predicate
+
+(`value`, `index`, `obj`) => `unknown`
 
 find calls predicate once for each element of the array, in ascending
 order, until it finds one where predicate returns true. If such an element is found,
 findIndex immediately returns that element index. Otherwise, findIndex returns -1.
 
-• **thisArg?**: `any`
+##### thisArg?
+
+`any`
 
 If provided, it will be used as the this value for each invocation of
 predicate. If it is not provided, undefined is used instead.
@@ -968,32 +1008,38 @@ predicate. If it is not provided, undefined is used instead.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`findIndex`](Web3BaseWallet.md#findindex-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:41
+[`Web3BaseWallet`](Web3BaseWallet.md).[`findIndex`](Web3BaseWallet.md#findindex)
 
 ***
 
 ### flat()
 
-> **flat**\<`A`, `D`\>(`this`, `depth`?): [`FlatArray`](../type-aliases/FlatArray.md)\<`A`, `D`\>[]
+> **flat**\<`A`, `D`\>(`this`, `depth?`): [`FlatArray`](../type-aliases/FlatArray.md)\<`A`, `D`\>[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:75
 
 Returns a new array with all sub-array elements concatenated into it recursively up to the
 specified depth.
 
 #### Type Parameters
 
-• **A**
+##### A
 
-• **D** *extends* `number` = `1`
+`A`
+
+##### D
+
+`D` *extends* `number` = `1`
 
 #### Parameters
 
-• **this**: `A`
+##### this
 
-• **depth?**: `D`
+`A`
+
+##### depth?
+
+`D`
 
 The maximum recursion depth
 
@@ -1003,17 +1049,15 @@ The maximum recursion depth
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`flat`](Web3BaseWallet.md#flat-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:75
+[`Web3BaseWallet`](Web3BaseWallet.md).[`flat`](Web3BaseWallet.md#flat)
 
 ***
 
 ### flatMap()
 
-> **flatMap**\<`U`, `This`\>(`callback`, `thisArg`?): `U`[]
+> **flatMap**\<`U`, `This`\>(`callback`, `thisArg?`): `U`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:64
 
 Calls a defined callback function on each element of an array. Then, flattens the result into
 a new array.
@@ -1021,18 +1065,26 @@ This is identical to a map followed by flat with depth 1.
 
 #### Type Parameters
 
-• **U**
+##### U
 
-• **This** = `undefined`
+`U`
+
+##### This
+
+`This` = `undefined`
 
 #### Parameters
 
-• **callback**
+##### callback
+
+(`this`, `value`, `index`, `array`) => `U` \| readonly `U`[]
 
 A function that accepts up to three arguments. The flatMap method calls the
 callback function one time for each element in the array.
 
-• **thisArg?**: `This`
+##### thisArg?
+
+`This`
 
 An object to which the this keyword can refer in the callback function. If
 thisArg is omitted, undefined is used as the this value.
@@ -1043,27 +1095,29 @@ thisArg is omitted, undefined is used as the this value.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`flatMap`](Web3BaseWallet.md#flatmap-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:64
+[`Web3BaseWallet`](Web3BaseWallet.md).[`flatMap`](Web3BaseWallet.md#flatmap)
 
 ***
 
 ### forEach()
 
-> **forEach**(`callbackfn`, `thisArg`?): `void`
+> **forEach**(`callbackfn`, `thisArg?`): `void`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1464
 
 Performs the specified action for each element in an array.
 
 #### Parameters
 
-• **callbackfn**
+##### callbackfn
+
+(`value`, `index`, `array`) => `void`
 
 A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
 
-• **thisArg?**: `any`
+##### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
 
@@ -1073,29 +1127,29 @@ An object to which the this keyword can refer in the callbackfn function. If thi
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`forEach`](Web3BaseWallet.md#foreach-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1457
+[`Web3BaseWallet`](Web3BaseWallet.md).[`forEach`](Web3BaseWallet.md#foreach)
 
 ***
 
 ### get()
 
-> **get**(`addressOrIndex`): `undefined` \| `T`
+> **get**(`addressOrIndex`): `T` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:107
 
 Get the account of the wallet with either the index or public address.
 
 #### Parameters
 
-• **addressOrIndex**: `string` \| `number`
+##### addressOrIndex
+
+`string` \| `number`
 
 A string of the address or number index within the wallet.
 
 #### Returns
 
-`undefined` \| `T`
+`T` \| `undefined`
 
 The account object or undefined if the account doesn't exist
 
@@ -1103,25 +1157,27 @@ The account object or undefined if the account doesn't exist
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`get`](Web3BaseWallet.md#get)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:107
-
 ***
 
 ### includes()
 
-> **includes**(`searchElement`, `fromIndex`?): `boolean`
+> **includes**(`searchElement`, `fromIndex?`): `boolean`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2016.array.include.d.ts:25
 
 Determines whether an array includes a certain element, returning true or false as appropriate.
 
 #### Parameters
 
-• **searchElement**: `T`
+##### searchElement
+
+`T`
 
 The element to search for.
 
-• **fromIndex?**: `number`
+##### fromIndex?
+
+`number`
 
 The position in this array at which to begin searching for searchElement.
 
@@ -1131,27 +1187,29 @@ The position in this array at which to begin searching for searchElement.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`includes`](Web3BaseWallet.md#includes-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2016.array.include.d.ts:25
+[`Web3BaseWallet`](Web3BaseWallet.md).[`includes`](Web3BaseWallet.md#includes)
 
 ***
 
 ### indexOf()
 
-> **indexOf**(`searchElement`, `fromIndex`?): `number`
+> **indexOf**(`searchElement`, `fromIndex?`): `number`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1425
 
 Returns the index of the first occurrence of a value in an array, or -1 if it is not present.
 
 #### Parameters
 
-• **searchElement**: `T`
+##### searchElement
+
+`T`
 
 The value to locate in the array.
 
-• **fromIndex?**: `number`
+##### fromIndex?
+
+`number`
 
 The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
 
@@ -1161,23 +1219,23 @@ The array index at which to begin the search. If fromIndex is omitted, the searc
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`indexOf`](Web3BaseWallet.md#indexof-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1418
+[`Web3BaseWallet`](Web3BaseWallet.md).[`indexOf`](Web3BaseWallet.md#indexof)
 
 ***
 
 ### join()
 
-> **join**(`separator`?): `string`
+> **join**(`separator?`): `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1364
 
 Adds all the elements of an array into a string, separated by the specified separator string.
 
 #### Parameters
 
-• **separator?**: `string`
+##### separator?
+
+`string`
 
 A string used to separate one element of the array from the next in the resulting string. If omitted, the array elements are separated with a comma.
 
@@ -1187,17 +1245,15 @@ A string used to separate one element of the array from the next in the resultin
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`join`](Web3BaseWallet.md#join-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1361
+[`Web3BaseWallet`](Web3BaseWallet.md).[`join`](Web3BaseWallet.md#join)
 
 ***
 
 ### keys()
 
 > **keys**(): [`ArrayIterator`](../interfaces/ArrayIterator.md)\<`number`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:88
 
 Returns an iterable of keys in the array
 
@@ -1207,27 +1263,29 @@ Returns an iterable of keys in the array
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`keys`](Web3BaseWallet.md#keys-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:88
+[`Web3BaseWallet`](Web3BaseWallet.md).[`keys`](Web3BaseWallet.md#keys)
 
 ***
 
 ### lastIndexOf()
 
-> **lastIndexOf**(`searchElement`, `fromIndex`?): `number`
+> **lastIndexOf**(`searchElement`, `fromIndex?`): `number`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1431
 
 Returns the index of the last occurrence of a specified value in an array, or -1 if it is not present.
 
 #### Parameters
 
-• **searchElement**: `T`
+##### searchElement
+
+`T`
 
 The value to locate in the array.
 
-• **fromIndex?**: `number`
+##### fromIndex?
+
+`number`
 
 The array index at which to begin searching backward. If fromIndex is omitted, the search starts at the last index in the array.
 
@@ -1237,34 +1295,36 @@ The array index at which to begin searching backward. If fromIndex is omitted, t
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`lastIndexOf`](Web3BaseWallet.md#lastindexof-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1424
+[`Web3BaseWallet`](Web3BaseWallet.md).[`lastIndexOf`](Web3BaseWallet.md#lastindexof)
 
 ***
 
 ### load()
 
-> **load**(`password`, `keyName`?): `Promise`\<[`Wallet`](Wallet.md)\<`T`\>\>
+> **load**(`password`, `keyName?`): `Promise`\<`Wallet`\<`T`\>\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:279
 
 Loads a wallet from local storage and decrypts it.
 **__NOTE:__** Browser only
 
 #### Parameters
 
-• **password**: `string`
+##### password
+
+`string`
 
 The password to decrypt the wallet.
 
-• **keyName?**: `string`
+##### keyName?
+
+`string`
 
 (optional)The key used for local storage position, defaults to `web3js_wallet"`
 
 #### Returns
 
-`Promise`\<[`Wallet`](Wallet.md)\<`T`\>\>
+`Promise`\<`Wallet`\<`T`\>\>
 
 Returns the wallet object
 
@@ -1283,29 +1343,33 @@ web3.eth.accounts.wallet.load('test#!$');
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`load`](Web3BaseWallet.md#load)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:279
-
 ***
 
 ### map()
 
-> **map**\<`U`\>(`callbackfn`, `thisArg`?): `U`[]
+> **map**\<`U`\>(`callbackfn`, `thisArg?`): `U`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1470
 
 Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
 #### Type Parameters
 
-• **U**
+##### U
+
+`U`
 
 #### Parameters
 
-• **callbackfn**
+##### callbackfn
+
+(`value`, `index`, `array`) => `U`
 
 A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
 
-• **thisArg?**: `any`
+##### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
 
@@ -1315,32 +1379,26 @@ An object to which the this keyword can refer in the callbackfn function. If thi
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`map`](Web3BaseWallet.md#map-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1463
+[`Web3BaseWallet`](Web3BaseWallet.md).[`map`](Web3BaseWallet.md#map)
 
 ***
 
 ### pop()
 
-> **pop**(): `undefined` \| `T`
+> **pop**(): `T` \| `undefined`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1342
 
 Removes the last element from an array and returns it.
 If the array is empty, undefined is returned and the array is not modified.
 
 #### Returns
 
-`undefined` \| `T`
+`T` \| `undefined`
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`pop`](Web3BaseWallet.md#pop-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1339
+[`Web3BaseWallet`](Web3BaseWallet.md).[`pop`](Web3BaseWallet.md#pop)
 
 ***
 
@@ -1348,11 +1406,15 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **push**(...`items`): `number`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1347
+
 Appends new elements to the end of an array, and returns the new length of the array.
 
 #### Parameters
 
-• ...**items**: `T`[]
+##### items
+
+...`T`[]
 
 New elements to add to the array.
 
@@ -1362,25 +1424,25 @@ New elements to add to the array.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`push`](Web3BaseWallet.md#push-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1344
+[`Web3BaseWallet`](Web3BaseWallet.md).[`push`](Web3BaseWallet.md#push)
 
 ***
 
 ### reduce()
 
-#### reduce(callbackfn)
+#### Call Signature
 
 > **reduce**(`callbackfn`): `T`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1488
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
+
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `T`
 
 A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
 
@@ -1390,21 +1452,23 @@ A function that accepts up to four arguments. The reduce method calls the callba
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`reduce`](Web3BaseWallet.md#reduce-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`reduce`](Web3BaseWallet.md#reduce)
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1481
-
-#### reduce(callbackfn, initialValue)
+#### Call Signature
 
 > **reduce**(`callbackfn`, `initialValue`): `T`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1489
+
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
 
-• **initialValue**: `T`
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `T`
+
+###### initialValue
+
+`T`
 
 ##### Returns
 
@@ -1412,29 +1476,33 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`reduce`](Web3BaseWallet.md#reduce-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`reduce`](Web3BaseWallet.md#reduce)
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1482
-
-#### reduce(callbackfn, initialValue)
+#### Call Signature
 
 > **reduce**\<`U`\>(`callbackfn`, `initialValue`): `U`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1495
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 ##### Type Parameters
 
-• **U**
+###### U
+
+`U`
 
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
+
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `U`
 
 A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
 
-• **initialValue**: `U`
+###### initialValue
+
+`U`
 
 If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
 
@@ -1444,25 +1512,25 @@ If initialValue is specified, it is used as the initial value to start the accum
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`reduce`](Web3BaseWallet.md#reduce-1)
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1488
+[`Web3BaseWallet`](Web3BaseWallet.md).[`reduce`](Web3BaseWallet.md#reduce)
 
 ***
 
 ### reduceRight()
 
-#### reduceRight(callbackfn)
+#### Call Signature
 
 > **reduceRight**(`callbackfn`): `T`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1501
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
+
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `T`
 
 A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
 
@@ -1472,21 +1540,23 @@ A function that accepts up to four arguments. The reduceRight method calls the c
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`reduceRight`](Web3BaseWallet.md#reduceright-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`reduceRight`](Web3BaseWallet.md#reduceright)
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1494
-
-#### reduceRight(callbackfn, initialValue)
+#### Call Signature
 
 > **reduceRight**(`callbackfn`, `initialValue`): `T`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1502
+
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
 
-• **initialValue**: `T`
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `T`
+
+###### initialValue
+
+`T`
 
 ##### Returns
 
@@ -1494,29 +1564,33 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`reduceRight`](Web3BaseWallet.md#reduceright-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`reduceRight`](Web3BaseWallet.md#reduceright)
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1495
-
-#### reduceRight(callbackfn, initialValue)
+#### Call Signature
 
 > **reduceRight**\<`U`\>(`callbackfn`, `initialValue`): `U`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1508
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 ##### Type Parameters
 
-• **U**
+###### U
+
+`U`
 
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
+
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `U`
 
 A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
 
-• **initialValue**: `U`
+###### initialValue
+
+`U`
 
 If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
 
@@ -1526,11 +1600,7 @@ If initialValue is specified, it is used as the initial value to start the accum
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`reduceRight`](Web3BaseWallet.md#reduceright-1)
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1501
+[`Web3BaseWallet`](Web3BaseWallet.md).[`reduceRight`](Web3BaseWallet.md#reduceright)
 
 ***
 
@@ -1538,11 +1608,15 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **remove**(`addressOrIndex`): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:130
+
 Removes an account from the wallet.
 
 #### Parameters
 
-• **addressOrIndex**: `string` \| `number`
+##### addressOrIndex
+
+`string` \| `number`
 
 The account address, or index in the wallet.
 
@@ -1572,15 +1646,13 @@ _defaultKeyName: 'web3js_wallet'
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`remove`](Web3BaseWallet.md#remove)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:130
-
 ***
 
 ### reverse()
 
 > **reverse**(): `T`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1369
 
 Reverses the elements in an array in place.
 This method mutates the array and returns a reference to the same array.
@@ -1591,28 +1663,30 @@ This method mutates the array and returns a reference to the same array.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`reverse`](Web3BaseWallet.md#reverse-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1366
+[`Web3BaseWallet`](Web3BaseWallet.md).[`reverse`](Web3BaseWallet.md#reverse)
 
 ***
 
 ### save()
 
-> **save**(`password`, `keyName`?): `Promise`\<`boolean`\>
+> **save**(`password`, `keyName?`): `Promise`\<`boolean`\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:259
 
 Stores the wallet encrypted and as string in local storage.
 **__NOTE:__** Browser only
 
 #### Parameters
 
-• **password**: `string`
+##### password
+
+`string`
 
 The password to encrypt the wallet
 
-• **keyName?**: `string`
+##### keyName?
+
+`string`
 
 (optional) The key used for the local storage position, defaults to `"web3js_wallet"`.
 
@@ -1630,36 +1704,32 @@ web3.eth.accounts.wallet.save('test#!$');
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`save`](Web3BaseWallet.md#save)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:259
-
 ***
 
 ### shift()
 
-> **shift**(): `undefined` \| `T`
+> **shift**(): `T` \| `undefined`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1374
 
 Removes the first element from an array and returns it.
 If the array is empty, undefined is returned and the array is not modified.
 
 #### Returns
 
-`undefined` \| `T`
+`T` \| `undefined`
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`shift`](Web3BaseWallet.md#shift-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1371
+[`Web3BaseWallet`](Web3BaseWallet.md).[`shift`](Web3BaseWallet.md#shift)
 
 ***
 
 ### slice()
 
-> **slice**(`start`?, `end`?): `T`[]
+> **slice**(`start?`, `end?`): `T`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1384
 
 Returns a copy of a section of an array.
 For both start and end, a negative index can be used to indicate an offset from the end of the array.
@@ -1667,12 +1737,16 @@ For example, -2 refers to the second to last element of the array.
 
 #### Parameters
 
-• **start?**: `number`
+##### start?
+
+`number`
 
 The beginning index of the specified portion of the array.
 If start is undefined, then the slice begins at index 0.
 
-• **end?**: `number`
+##### end?
+
+`number`
 
 The end index of the specified portion of the array. This is exclusive of the element at the index 'end'.
 If end is undefined, then the slice extends to the end of the array.
@@ -1683,29 +1757,31 @@ If end is undefined, then the slice extends to the end of the array.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`slice`](Web3BaseWallet.md#slice-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1381
+[`Web3BaseWallet`](Web3BaseWallet.md).[`slice`](Web3BaseWallet.md#slice)
 
 ***
 
 ### some()
 
-> **some**(`predicate`, `thisArg`?): `boolean`
+> **some**(`predicate`, `thisArg?`): `boolean`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1458
 
 Determines whether the specified callback function returns true for any element of an array.
 
 #### Parameters
 
-• **predicate**
+##### predicate
+
+(`value`, `index`, `array`) => `unknown`
 
 A function that accepts up to three arguments. The some method calls
 the predicate function for each element in the array until the predicate returns a value
 which is coercible to the Boolean value true, or until the end of the array.
 
-• **thisArg?**: `any`
+##### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function.
 If thisArg is omitted, undefined is used as the this value.
@@ -1716,28 +1792,28 @@ If thisArg is omitted, undefined is used as the this value.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`some`](Web3BaseWallet.md#some-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1451
+[`Web3BaseWallet`](Web3BaseWallet.md).[`some`](Web3BaseWallet.md#some)
 
 ***
 
 ### sort()
 
-> **sort**(`compareFn`?): `this`
+> **sort**(`compareFn?`): `this`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1395
 
 Sorts an array in place.
 This method mutates the array and returns a reference to the same array.
 
 #### Parameters
 
-• **compareFn?**
+##### compareFn?
+
+(`a`, `b`) => `number`
 
 Function used to determine the order of the elements. It is expected to return
 a negative value if the first argument is less than the second argument, zero if they're equal, and a positive
-value otherwise. If omitted, the elements are sorted in ascending, ASCII character order.
+value otherwise. If omitted, the elements are sorted in ascending, UTF-16 code unit order.
 ```ts
 [11,2,22,1].sort((a, b) => a - b)
 ```
@@ -1748,31 +1824,35 @@ value otherwise. If omitted, the elements are sorted in ascending, ASCII charact
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`sort`](Web3BaseWallet.md#sort-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1392
+[`Web3BaseWallet`](Web3BaseWallet.md).[`sort`](Web3BaseWallet.md#sort)
 
 ***
 
 ### splice()
 
-#### splice(start, deleteCount)
+#### Call Signature
 
-> **splice**(`start`, `deleteCount`?): `T`[]
+> **splice**(`start`, `deleteCount?`): `T`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1404
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 
 ##### Parameters
 
-• **start**: `number`
+###### start
+
+`number`
 
 The zero-based location in the array from which to start removing elements.
 
-• **deleteCount?**: `number`
+###### deleteCount?
 
-The number of elements to remove.
+`number`
+
+The number of elements to remove. Omitting this argument will remove all elements from the start
+paramater location to end of the array. If value of this argument is either a negative number, zero, undefined, or a type
+that cannot be converted to an integer, the function will evaluate the argument as zero and not remove any elements.
 
 ##### Returns
 
@@ -1782,29 +1862,35 @@ An array containing the elements that were deleted.
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`splice`](Web3BaseWallet.md#splice-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`splice`](Web3BaseWallet.md#splice)
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1399
-
-#### splice(start, deleteCount, items)
+#### Call Signature
 
 > **splice**(`start`, `deleteCount`, ...`items`): `T`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1414
 
 Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
 
 ##### Parameters
 
-• **start**: `number`
+###### start
+
+`number`
 
 The zero-based location in the array from which to start removing elements.
 
-• **deleteCount**: `number`
+###### deleteCount
 
-The number of elements to remove.
+`number`
 
-• ...**items**: `T`[]
+The number of elements to remove. If value of this argument is either a negative number, zero,
+undefined, or a type that cannot be converted to an integer, the function will evaluate the argument as zero and
+not remove any elements.
+
+###### items
+
+...`T`[]
 
 Elements to insert into the array in place of the deleted elements.
 
@@ -1816,19 +1902,17 @@ An array containing the elements that were deleted.
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`splice`](Web3BaseWallet.md#splice-1)
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1407
+[`Web3BaseWallet`](Web3BaseWallet.md).[`splice`](Web3BaseWallet.md#splice)
 
 ***
 
 ### toLocaleString()
 
-#### toLocaleString()
+#### Call Signature
 
 > **toLocaleString**(): `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1337
 
 Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
 
@@ -1838,21 +1922,23 @@ Returns a string representation of an array. The elements are converted to strin
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`toLocaleString`](Web3BaseWallet.md#tolocalestring-1)
+[`Web3BaseWallet`](Web3BaseWallet.md).[`toLocaleString`](Web3BaseWallet.md#tolocalestring)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1334
+> **toLocaleString**(`locales`, `options?`): `string`
 
-#### toLocaleString(locales, options)
-
-> **toLocaleString**(`locales`, `options`?): `string`
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:64
 
 ##### Parameters
 
-• **locales**: `string` \| `string`[]
+###### locales
 
-• **options?**: `NumberFormatOptions` & `DateTimeFormatOptions`
+`string` \| `string`[]
+
+###### options?
+
+`NumberFormatOptions` & `DateTimeFormatOptions`
 
 ##### Returns
 
@@ -1860,17 +1946,15 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 ##### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`toLocaleString`](Web3BaseWallet.md#tolocalestring-1)
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:64
+[`Web3BaseWallet`](Web3BaseWallet.md).[`toLocaleString`](Web3BaseWallet.md#tolocalestring)
 
 ***
 
 ### toString()
 
 > **toString**(): `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1333
 
 Returns a string representation of an array.
 
@@ -1880,11 +1964,7 @@ Returns a string representation of an array.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`toString`](Web3BaseWallet.md#tostring-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1330
+[`Web3BaseWallet`](Web3BaseWallet.md).[`toString`](Web3BaseWallet.md#tostring)
 
 ***
 
@@ -1892,11 +1972,15 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **unshift**(...`items`): `number`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1419
+
 Inserts new elements at the start of an array, and returns the new length of the array.
 
 #### Parameters
 
-• ...**items**: `T`[]
+##### items
+
+...`T`[]
 
 Elements to insert at the start of the array.
 
@@ -1906,17 +1990,15 @@ Elements to insert at the start of the array.
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`unshift`](Web3BaseWallet.md#unshift-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1412
+[`Web3BaseWallet`](Web3BaseWallet.md).[`unshift`](Web3BaseWallet.md#unshift)
 
 ***
 
 ### values()
 
 > **values**(): [`ArrayIterator`](../interfaces/ArrayIterator.md)\<`T`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:93
 
 Returns an iterable of values in the array
 
@@ -1926,29 +2008,31 @@ Returns an iterable of values in the array
 
 #### Inherited from
 
-[`Web3BaseWallet`](Web3BaseWallet.md).[`values`](Web3BaseWallet.md#values-1)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:93
+[`Web3BaseWallet`](Web3BaseWallet.md).[`values`](Web3BaseWallet.md#values)
 
 ***
 
 ### from()
 
-#### from(arrayLike)
+#### Call Signature
 
 > `static` **from**\<`T`\>(`arrayLike`): `T`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:72
 
 Creates an array from an array-like object.
 
 ##### Type Parameters
 
-• **T**
+###### T
+
+`T`
 
 ##### Parameters
 
-• **arrayLike**: [`ArrayLike`](../interfaces/ArrayLike.md)\<`T`\>
+###### arrayLike
+
+[`ArrayLike`](../interfaces/ArrayLike.md)\<`T`\>
 
 An array-like object to convert to an array.
 
@@ -1960,33 +2044,41 @@ An array-like object to convert to an array.
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`from`](Web3BaseWallet.md#from)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:72
+> `static` **from**\<`T`, `U`\>(`arrayLike`, `mapfn`, `thisArg?`): `U`[]
 
-#### from(arrayLike, mapfn, thisArg)
-
-> `static` **from**\<`T`, `U`\>(`arrayLike`, `mapfn`, `thisArg`?): `U`[]
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:80
 
 Creates an array from an iterable object.
 
 ##### Type Parameters
 
-• **T**
+###### T
 
-• **U**
+`T`
+
+###### U
+
+`U`
 
 ##### Parameters
 
-• **arrayLike**: [`ArrayLike`](../interfaces/ArrayLike.md)\<`T`\>
+###### arrayLike
+
+[`ArrayLike`](../interfaces/ArrayLike.md)\<`T`\>
 
 An array-like object to convert to an array.
 
-• **mapfn**
+###### mapfn
+
+(`v`, `k`) => `U`
 
 A mapping function to call on every element of the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 Value of 'this' used to invoke the mapfn.
 
@@ -1998,23 +2090,25 @@ Value of 'this' used to invoke the mapfn.
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`from`](Web3BaseWallet.md#from)
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:80
-
-#### from(iterable)
+#### Call Signature
 
 > `static` **from**\<`T`\>(`iterable`): `T`[]
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:101
+
 Creates an array from an iterable object.
 
 ##### Type Parameters
 
-• **T**
+###### T
+
+`T`
 
 ##### Parameters
 
-• **iterable**: [`Iterable`](../interfaces/Iterable.md)\<`T`, `any`, `any`\> \| [`ArrayLike`](../interfaces/ArrayLike.md)\<`T`\>
+###### iterable
+
+[`Iterable`](../interfaces/Iterable.md)\<`T`, `any`, `any`\> \| [`ArrayLike`](../interfaces/ArrayLike.md)\<`T`\>
 
 An iterable object to convert to an array.
 
@@ -2026,33 +2120,41 @@ An iterable object to convert to an array.
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`from`](Web3BaseWallet.md#from)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:101
+> `static` **from**\<`T`, `U`\>(`iterable`, `mapfn`, `thisArg?`): `U`[]
 
-#### from(iterable, mapfn, thisArg)
-
-> `static` **from**\<`T`, `U`\>(`iterable`, `mapfn`, `thisArg`?): `U`[]
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:109
 
 Creates an array from an iterable object.
 
 ##### Type Parameters
 
-• **T**
+###### T
 
-• **U**
+`T`
+
+###### U
+
+`U`
 
 ##### Parameters
 
-• **iterable**: [`Iterable`](../interfaces/Iterable.md)\<`T`, `any`, `any`\> \| [`ArrayLike`](../interfaces/ArrayLike.md)\<`T`\>
+###### iterable
+
+[`Iterable`](../interfaces/Iterable.md)\<`T`, `any`, `any`\> \| [`ArrayLike`](../interfaces/ArrayLike.md)\<`T`\>
 
 An iterable object to convert to an array.
 
-• **mapfn**
+###### mapfn
+
+(`v`, `k`) => `U`
 
 A mapping function to call on every element of the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 Value of 'this' used to invoke the mapfn.
 
@@ -2063,28 +2165,22 @@ Value of 'this' used to invoke the mapfn.
 ##### Inherited from
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`from`](Web3BaseWallet.md#from)
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:109
 
 ***
 
 ### getStorage()
 
-> `static` **getStorage**(): `undefined` \| [`WebStorage`](../interfaces/WebStorage.md)
+> `static` **getStorage**(): [`WebStorage`](../interfaces/WebStorage.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:36
 
 Get the storage object of the browser
 
 #### Returns
 
-`undefined` \| [`WebStorage`](../interfaces/WebStorage.md)
+[`WebStorage`](../interfaces/WebStorage.md) \| `undefined`
 
 the storage
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/wallet.d.ts:36
 
 ***
 
@@ -2092,9 +2188,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `static` **isArray**(`arg`): `arg is any[]`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1520
+
 #### Parameters
 
-• **arg**: `any`
+##### arg
+
+`any`
 
 #### Returns
 
@@ -2104,25 +2204,27 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`isArray`](Web3BaseWallet.md#isarray)
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1513
-
 ***
 
 ### of()
 
 > `static` **of**\<`T`\>(...`items`): `T`[]
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:86
+
 Returns a new array from a set of elements.
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
-• ...**items**: `T`[]
+##### items
+
+...`T`[]
 
 A set of elements to include in the new array object.
 
@@ -2133,7 +2235,3 @@ A set of elements to include in the new array object.
 #### Inherited from
 
 [`Web3BaseWallet`](Web3BaseWallet.md).[`of`](Web3BaseWallet.md#of)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:86

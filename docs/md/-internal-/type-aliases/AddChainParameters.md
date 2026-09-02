@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,16 @@
 
 # Type Alias: AddChainParameters
 
-> **AddChainParameters**: `object`
+> **AddChainParameters** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/addChain.d.ts:8
+
+## Properties
 
 ### chain
 
 > **chain**: [`Chain`](Chain.md)
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/addChain.d.ts:10
+
 The chain to add to the wallet.
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/addChain.d.ts:8

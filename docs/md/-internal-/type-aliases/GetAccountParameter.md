@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,24 +6,24 @@
 
 # Type Alias: GetAccountParameter\<account, accountOverride, required, nullish\>
 
-> **GetAccountParameter**\<`account`, `accountOverride`, `required`, `nullish`\>: [`MaybeRequired`](MaybeRequired.md)\<`object`, [`IsUndefined`](IsUndefined.md)\<`account`\> *extends* `true` ? `required` *extends* `true` ? `true` : `false` : `false`\>
+> **GetAccountParameter**\<`account`, `accountOverride`, `required`, `nullish`\> = [`MaybeRequired`](MaybeRequired.md)\<\{ `account?`: `accountOverride` \| [`Account`](Account.md) \| [`Address`](Address-1.md) \| `nullish` *extends* `true` ? `null` : `never`; \}, [`IsUndefined`](IsUndefined.md)\<`account`\> *extends* `true` ? `required` *extends* `true` ? `true` : `false` : `false`\>
 
-## Type declaration
-
-### account?
-
-> `optional` **account**: `accountOverride` \| [`Account`](Account.md) \| [`Address`](Address.md) \| `nullish` *extends* `true` ? `null` : `never`
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/account.d.ts:5
 
 ## Type Parameters
 
-• **account** *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+### account
 
-• **accountOverride** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined` = [`Account`](Account.md) \| [`Address`](Address.md)
+`account` *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
 
-• **required** *extends* `boolean` = `true`
+### accountOverride
 
-• **nullish** *extends* `boolean` = `false`
+`accountOverride` *extends* [`Account`](Account.md) \| [`Address`](Address-1.md) \| `undefined` = [`Account`](Account.md) \| [`Address`](Address-1.md)
 
-## Defined in
+### required
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/account.d.ts:5
+`required` *extends* `boolean` = `true`
+
+### nullish
+
+`nullish` *extends* `boolean` = `false`

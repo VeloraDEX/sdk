@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: GetTokensParams
 
-> **GetTokensParams**: `object`
+> **GetTokensParams** = `object`
 
-## Type declaration
+Defined in: [src/methods/swap/token.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/token.ts#L13)
+
+## Properties
 
 ### category?
 
-> `optional` **category**: `string`
+> `optional` **category?**: `string`
 
-## Defined in
-
-[src/methods/swap/token.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/token.ts#L13)
+Defined in: [src/methods/swap/token.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/token.ts#L13)

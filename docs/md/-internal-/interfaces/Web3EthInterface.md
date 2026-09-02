@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Interface: Web3EthInterface
 
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:15
+
 The Ethereum interface for main web3 object. It provides extra methods in addition to `web3-eth` interface.
 
-web3_eth.Web3Eth for details about the `Eth` interface.
+web3\_eth.Web3Eth for details about the `Eth` interface.
 
 ## Extends
 
@@ -18,15 +20,13 @@ web3_eth.Web3Eth for details about the `Eth` interface.
 
 ### \_accountProvider?
 
-> `protected` `optional` **\_accountProvider**: [`Web3AccountProvider`](Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\>
+> `protected` `optional` **\_accountProvider?**: [`Web3AccountProvider`](Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:51
 
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`_accountProvider`](../classes/Web3Eth.md#_accountprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:51
 
 ***
 
@@ -34,13 +34,11 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > `protected` **\_requestManager**: [`Web3RequestManager`](../classes/Web3RequestManager.md)\<[`Web3EthExecutionAPI`](../type-aliases/Web3EthExecutionAPI.md)\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:49
+
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`_requestManager`](../classes/Web3Eth.md#_requestmanager)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:49
 
 ***
 
@@ -48,27 +46,23 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > `protected` **\_subscriptionManager**: [`Web3SubscriptionManager`](../classes/Web3SubscriptionManager.md)\<[`Web3EthExecutionAPI`](../type-aliases/Web3EthExecutionAPI.md), [`RegisteredSubscription`](../type-aliases/RegisteredSubscription.md)\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:50
+
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`_subscriptionManager`](../classes/Web3Eth.md#_subscriptionmanager)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:50
 
 ***
 
 ### \_wallet?
 
-> `protected` `optional` **\_wallet**: [`Web3BaseWallet`](../classes/Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\>
+> `protected` `optional` **\_wallet?**: [`Web3BaseWallet`](../classes/Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:52
 
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`_wallet`](../classes/Web3Eth.md#_wallet)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:52
 
 ***
 
@@ -76,7 +70,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **abi**: `object`
 
-#### decodeLog()
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:30
+
+#### decodeLog
 
 > **decodeLog**: \<`ReturnType_1`\>(`inputs`, `data`, `topics`) => `ReturnType_1`
 
@@ -84,19 +80,27 @@ Decodes ABI-encoded log data and indexed topic data.
 
 ##### Type Parameters
 
-• **ReturnType_1** *extends* [`DecodedParams`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/DecodedParams.md)
+###### ReturnType_1
+
+`ReturnType_1` *extends* [`DecodedParams`](DecodedParams.md)
 
 ##### Parameters
 
-• **inputs**: readonly [`AbiParameter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)[] \| [`AbiParameter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)[]
+###### inputs
 
-A [AbiParameter](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md) input array. See the [Solidity documentation](https://docs.soliditylang.org/en/develop/types.html) for a list of types.
+readonly [`AbiParameter`](../type-aliases/AbiParameter.md)[] \| [`AbiParameter`](../type-aliases/AbiParameter.md)[]
 
-• **data**: `string`
+A [AbiParameter](../type-aliases/AbiParameter.md) input array. See the [Solidity documentation](https://docs.soliditylang.org/en/develop/types.html) for a list of types.
+
+###### data
+
+`string`
 
 The ABI byte code in the `data` field of a log.
 
-• **topics**: `string` \| `string`[]
+###### topics
+
+`string` \| `string`[]
 
 An array with the index parameter topics of the log, without the topic[0] if its a non-anonymous event, otherwise with topic[0]
 
@@ -143,7 +147,7 @@ let res = web3.eth.abi.decodeLog(
 }
 ```
 
-#### decodeParameter()
+#### decodeParameter
 
 > **decodeParameter**: (`abi`, `bytes`) => `unknown`
 
@@ -151,11 +155,15 @@ Decodes an ABI encoded parameter to its JavaScript type.
 
 ##### Parameters
 
-• **abi**: [`AbiInput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md)
+###### abi
+
+[`AbiInput`](../type-aliases/AbiInput.md)
 
 The type of the parameter. See the [Solidity documentation](https://docs.soliditylang.org/en/develop/types.html) for a list of types.
 
-• **bytes**: `string`
+###### bytes
+
+`string`
 
 The ABI byte code to decode
 
@@ -221,7 +229,7 @@ The ABI byte code to decode
 }
 ```
 
-#### decodeParameters()
+#### decodeParameters
 
 > **decodeParameters**: (`abi`, `bytes`) => `object`
 
@@ -229,11 +237,15 @@ Decodes ABI encoded parameters to its JavaScript types.
 
 ##### Parameters
 
-• **abi**: readonly [`AbiInput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md)[] \| [`AbiInput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md)[]
+###### abi
 
-An array of [AbiInput](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md). See the [Solidity documentation](https://docs.soliditylang.org/en/develop/types.html) for a list of types.
+readonly [`AbiInput`](../type-aliases/AbiInput.md)[] \| [`AbiInput`](../type-aliases/AbiInput.md)[]
 
-• **bytes**: `string`
+An array of [AbiInput](../type-aliases/AbiInput.md). See the [Solidity documentation](https://docs.soliditylang.org/en/develop/types.html) for a list of types.
+
+###### bytes
+
+`string`
 
 The ABI byte code to decode
 
@@ -344,7 +356,7 @@ const res = web3.eth.abi.decodeParameters(
 }
 ```
 
-#### encodeEventSignature()
+#### encodeEventSignature
 
 > **encodeEventSignature**: (`functionName`) => `string`
 
@@ -353,7 +365,9 @@ The JSON interface spec documentation https://docs.soliditylang.org/en/latest/ab
 
 ##### Parameters
 
-• **functionName**: `string` \| [`AbiFunctionFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
+###### functionName
+
+`string` \| [`AbiFunctionFragment`](../type-aliases/AbiFunctionFragment.md)
 
 The function name to encode or the `JSON interface` object of the function.
 If the passed parameter is a string, it has to be in the form of `functionName(param1Type,param2Type,...)`. eg: myFunction(uint256,uint32[],bytes10,bytes)
@@ -393,7 +407,7 @@ console.log(signature);
 > 0xb88d4fde
 ```
 
-#### encodeFunctionCall()
+#### encodeFunctionCall
 
 > **encodeFunctionCall**: (`jsonInterface`, `params`) => `string`
 
@@ -402,11 +416,15 @@ The JSON interface spec documentation https://docs.soliditylang.org/en/latest/ab
 
 ##### Parameters
 
-• **jsonInterface**: [`AbiFunctionFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
+###### jsonInterface
+
+[`AbiFunctionFragment`](../type-aliases/AbiFunctionFragment.md)
 
 The `JSON interface` object of the function.
 
-• **params**: `unknown`[]
+###### params
+
+`unknown`[]
 
 The parameters to encode
 
@@ -464,7 +482,7 @@ console.log(sig);
 > 0x70a082310000000000000000000000001234567890123456789012345678901234567890
 ```
 
-#### encodeFunctionSignature()
+#### encodeFunctionSignature
 
 > **encodeFunctionSignature**: (`functionName`) => `string`
 
@@ -473,7 +491,9 @@ The JSON interface spec documentation https://docs.soliditylang.org/en/latest/ab
 
 ##### Parameters
 
-• **functionName**: `string` \| [`AbiFunctionFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
+###### functionName
+
+`string` \| [`AbiFunctionFragment`](../type-aliases/AbiFunctionFragment.md)
 
 The function name to encode or the `JSON interface` object of the function.
 If the passed parameter is a string, it has to be in the form of `functionName(param1Type,param2Type,...)`. eg: myFunction(uint256,uint32[],bytes10,bytes)
@@ -513,7 +533,7 @@ console.log(signature);
 > 0xb88d4fde
 ```
 
-#### encodeParameter()
+#### encodeParameter
 
 > **encodeParameter**: (`abi`, `param`) => `string`
 
@@ -521,11 +541,15 @@ Encodes a parameter based on its type to its ABI representation.
 
 ##### Parameters
 
-• **abi**: [`AbiInput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md)
+###### abi
+
+[`AbiInput`](../type-aliases/AbiInput.md)
 
 The type of the parameter. See the [Solidity documentation](https://docs.soliditylang.org/en/develop/types.html) for a list of types.
 
-• **param**: `unknown`
+###### param
+
+`unknown`
 
 The actual parameter to encode.
 
@@ -587,7 +611,7 @@ The actual parameter to encode.
  > 0x000000000000000000000000000000000000000000000000000000000000002a0000000000000000000000000000000000000000000000000000000000000038000000000000000000000000000000000000000000000000000000000000002d000000000000000000000000000000000000000000000000000000000000004e
 ```
 
-#### encodeParameters()
+#### encodeParameters
 
 > **encodeParameters**: (`abi`, `params`) => `string`
 
@@ -595,11 +619,15 @@ Encodes a parameter based on its type to its ABI representation.
 
 ##### Parameters
 
-• **abi**: readonly [`AbiInput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md)[]
+###### abi
 
-An array of [AbiInput](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiInput.md). See [Solidity's documentation](https://solidity.readthedocs.io/en/v0.5.3/abi-spec.html#json) for more details.
+readonly [`AbiInput`](../type-aliases/AbiInput.md)[]
 
-• **params**: `unknown`[]
+An array of [AbiInput](../type-aliases/AbiInput.md). See [Solidity's documentation](https://solidity.readthedocs.io/en/v0.5.3/abi-spec.html#json) for more details.
+
+###### params
+
+`unknown`[]
 
 The actual parameters to encode.
 
@@ -621,17 +649,15 @@ const res = web3.eth.abi.encodeParameters(
  > 0x000000000000000000000000000000000000000000000000000000008bd02b7b0000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000000748656c6c6f212500000000000000000000000000000000000000000000000000
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:30
-
 ***
 
 ### accounts
 
 > **accounts**: `object`
 
-#### create()
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:40
+
+#### create
 
 > **create**: () => [`Web3Account`](Web3Account.md)
 
@@ -639,25 +665,31 @@ node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web
 
 [`Web3Account`](Web3Account.md)
 
-#### decrypt()
+#### decrypt
 
-> **decrypt**: (`keystore`, `password`, `options`?) => `Promise`\<[`Web3Account`](Web3Account.md)\>
+> **decrypt**: (`keystore`, `password`, `options?`) => `Promise`\<[`Web3Account`](Web3Account.md)\>
 
 ##### Parameters
 
-• **keystore**: `string`
+###### keystore
 
-• **password**: `string`
+`string`
 
-• **options?**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+###### password
+
+`string`
+
+###### options?
+
+[`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
 
 ##### Returns
 
 `Promise`\<[`Web3Account`](Web3Account.md)\>
 
-#### encrypt()
+#### encrypt
 
-> **encrypt**: (`privateKey`, `password`, `options`?) => `Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
+> **encrypt**: (`privateKey`, `password`, `options?`) => `Promise`\<[`KeyStore`](../type-aliases/KeyStore.md)\>
 
 encrypt a private key with a password, returns a V3 JSON Keystore
 
@@ -665,21 +697,27 @@ Read more: https://github.com/ethereum/wiki/wiki/Web3-Secret-Storage-Definition
 
 ##### Parameters
 
-• **privateKey**: [`Bytes`](../type-aliases/Bytes.md)
+###### privateKey
+
+[`Bytes`](../type-aliases/Bytes-1.md)
 
 The private key to encrypt, 32 bytes.
 
-• **password**: `string` \| `Uint8Array`
+###### password
+
+`string` \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
 
 The password used for encryption.
 
-• **options?**: [`CipherOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/CipherOptions.md)
+###### options?
+
+[`CipherOptions`](../type-aliases/CipherOptions.md)
 
 Options to configure to encrypt the keystore either scrypt or pbkdf2
 
 ##### Returns
 
-`Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
+`Promise`\<[`KeyStore`](../type-aliases/KeyStore.md)\>
 
 Returns a V3 JSON Keystore
 
@@ -748,7 +786,7 @@ web3.eth.accounts.encrypt('0x348ce564d427a3311b6536bbcff9390d69395b06ed6c486954e
 }
 ```
 
-#### hashMessage()
+#### hashMessage
 
 > **hashMessage**: (`message`) => `string`
 
@@ -757,7 +795,9 @@ Hashes the given message. The data will be `UTF-8 HEX` decoded and enveloped as 
 
 ##### Parameters
 
-• **message**: `string`
+###### message
+
+`string`
 
 A message to hash, if its HEX it will be UTF8 decoded.
 
@@ -777,83 +817,105 @@ web3.eth.accounts.hashMessage(web3.utils.utf8ToHex("Hello world")) // Will be he
 > "0x8144a6fa26be252b86456491fbcd43c1de7e022241845ffea1c3df066f7cfede"
 ```
 
-#### parseAndValidatePrivateKey()
+#### parseAndValidatePrivateKey
 
-> **parseAndValidatePrivateKey**: (`data`, `ignoreLength`?) => `Uint8Array`
+> **parseAndValidatePrivateKey**: (`data`, `ignoreLength?`) => `Uint8Array`
 
 ##### Parameters
 
-• **data**: [`Bytes`](../type-aliases/Bytes.md)
+###### data
 
-• **ignoreLength?**: `boolean`
+[`Bytes`](../type-aliases/Bytes-1.md)
+
+###### ignoreLength?
+
+`boolean`
 
 ##### Returns
 
 `Uint8Array`
 
-#### privateKeyToAccount()
+#### privateKeyToAccount
 
 > **privateKeyToAccount**: (`privateKey`) => [`Web3Account`](Web3Account.md)
 
 ##### Parameters
 
-• **privateKey**: `string` \| `Uint8Array`
+###### privateKey
+
+`string` \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
 
 ##### Returns
 
 [`Web3Account`](Web3Account.md)
 
-#### privateKeyToAddress()
+#### privateKeyToAddress
 
 > **privateKeyToAddress**: (`privateKey`) => `string`
 
 ##### Parameters
 
-• **privateKey**: [`Bytes`](../type-aliases/Bytes.md)
+###### privateKey
+
+[`Bytes`](../type-aliases/Bytes-1.md)
 
 ##### Returns
 
 `string`
 
-#### privateKeyToPublicKey()
+#### privateKeyToPublicKey
 
 > **privateKeyToPublicKey**: (`privateKey`, `isCompressed`) => `string`
 
 ##### Parameters
 
-• **privateKey**: [`Bytes`](../type-aliases/Bytes.md)
+###### privateKey
 
-• **isCompressed**: `boolean`
+[`Bytes`](../type-aliases/Bytes-1.md)
+
+###### isCompressed
+
+`boolean`
 
 ##### Returns
 
 `string`
 
-#### recover()
+#### recover
 
-> **recover**: (`data`, `signatureOrV`?, `prefixedOrR`?, `s`?, `prefixed`?) => `string`
+> **recover**: (`data`, `signatureOrV?`, `prefixedOrR?`, `s?`, `prefixed?`) => `string`
 
 Recovers the Ethereum address which was used to sign the given data
 
 ##### Parameters
 
-• **data**: `string` \| [`SignatureObject`](../type-aliases/SignatureObject.md)
+###### data
+
+`string` \| [`SignatureObject`](../type-aliases/SignatureObject.md)
 
 Either a signed message, hash, or the signatureObject
 
-• **signatureOrV?**: `string`
+###### signatureOrV?
+
+`string`
 
 signature or V
 
-• **prefixedOrR?**: `string` \| `boolean`
+###### prefixedOrR?
+
+`string` \| `boolean`
 
 prefixed or R
 
-• **s?**: `string`
+###### s?
+
+`string`
 
 S value in signature
 
-• **prefixed?**: `boolean`
+###### prefixed?
+
+`boolean`
 
 (default: false) If the last parameter is true, the given message will NOT automatically be prefixed with `"\\x19Ethereum Signed Message:\\n" + message.length + message`, and assumed to be already prefixed.
 
@@ -882,7 +944,7 @@ web3.eth.accounts.recover(data, sigObj.v, sigObj.r, sigObj.s)
 > 0xEB014f8c8B418Db6b45774c326A0E64C78914dC0
 ```
 
-#### recoverTransaction()
+#### recoverTransaction
 
 > **recoverTransaction**: (`rawTransaction`) => `string`
 
@@ -890,7 +952,9 @@ Recovers the Ethereum address which was used to sign the given RLP encoded trans
 
 ##### Parameters
 
-• **rawTransaction**: `string`
+###### rawTransaction
+
+`string`
 
 The hex string having RLP encoded transaction
 
@@ -904,7 +968,7 @@ web3.eth.accounts.recoverTransaction('0xf869808504e3b29200831e848094f0109fc8df28
 > "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23"
 ```
 
-#### sign()
+#### sign
 
 > **sign**: (`data`, `privateKey`) => [`SignResult`](../type-aliases/SignResult.md)
 
@@ -915,11 +979,15 @@ The value passed as the data parameter will be UTF-8 HEX decoded and wrapped as 
 
 ##### Parameters
 
-• **data**: `string`
+###### data
+
+`string`
 
 The data to sign
 
-• **privateKey**: [`Bytes`](../type-aliases/Bytes.md)
+###### privateKey
+
+[`Bytes`](../type-aliases/Bytes-1.md)
 
 The 32 byte private key to sign with
 
@@ -941,15 +1009,19 @@ signature: '0xb91467e570a6466aa9e9876cbcd013baba02900b8979d43fe208a4a4f339f5fd60
 }
 ```
 
-#### signTransaction()
+#### signTransaction
 
 > **signTransaction**: (`transaction`, `privateKey`) => `Promise`\<[`SignTransactionResult`](../type-aliases/SignTransactionResult.md)\>
 
 ##### Parameters
 
-• **transaction**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+###### transaction
 
-• **privateKey**: [`Bytes`](../type-aliases/Bytes.md)
+[`Transaction`](Transaction-1.md)
+
+###### privateKey
+
+[`Bytes`](../type-aliases/Bytes-1.md)
 
 ##### Returns
 
@@ -957,11 +1029,7 @@ signature: '0xb91467e570a6466aa9e9876cbcd013baba02900b8979d43fe208a4a4f339f5fd60
 
 #### wallet
 
-> **wallet**: [`Wallet`](../classes/Wallet.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:40
+> **wallet**: [`Wallet`](../classes/Wallet.md)
 
 ***
 
@@ -969,32 +1037,28 @@ node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web
 
 > **config**: [`Web3ConfigOptions`](Web3ConfigOptions.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:46
+
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`config`](../classes/Web3Eth.md#config)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:46
 
 ***
 
 ### Contract
 
-> **Contract**: *typeof* [`Contract`](../classes/Contract.md)
+> **Contract**: *typeof* [`Contract`](../classes/Contract-2.md)
+
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:26
 
 Extended [Contract](/api/web3-eth-contract/class/Contract) constructor for main `web3` object. See [Contract](/api/web3-eth-contract/class/Contract) for further details.
 
 You can use `.setProvider` on this constructor to set provider for **all the instances** of the contracts which were created by `web3.eth.Contract`.
-Please check the {@doclink guides/web3_upgrade_guide/providers_migration_guide | following guide} to understand more about setting provider.
+Please check the guides/web3\_upgrade\_guide/providers\_migration\_guide \| following guide to understand more about setting provider.
 
 ```ts
 web3.eth.Contract.setProvider(myProvider)
 ```
-
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:26
 
 ***
 
@@ -1002,33 +1066,33 @@ node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web
 
 > **ens**: [`ENS`](../classes/ENS.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:29
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:29
 
 ***
 
-### getFeeData()
+### getFeeData
 
-> **getFeeData**: (`baseFeePerGasFactor`?, `alternativeMaxPriorityFeePerGas`?) => `Promise`\<[`FeeData`](FeeData.md)\>
+> **getFeeData**: (`baseFeePerGasFactor?`, `alternativeMaxPriorityFeePerGas?`) => `Promise`\<[`FeeData`](FeeData-1.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:187
 
 #### Parameters
 
-• **baseFeePerGasFactor?**: `bigint`
+##### baseFeePerGasFactor?
 
-• **alternativeMaxPriorityFeePerGas?**: `bigint`
+`bigint`
+
+##### alternativeMaxPriorityFeePerGas?
+
+`bigint`
 
 #### Returns
 
-`Promise`\<[`FeeData`](FeeData.md)\>
+`Promise`\<[`FeeData`](FeeData-1.md)\>
 
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getFeeData`](../classes/Web3Eth.md#getfeedata)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:187
 
 ***
 
@@ -1036,9 +1100,7 @@ node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules
 
 > **Iban**: *typeof* [`Iban`](../classes/Iban.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:27
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:27
 
 ***
 
@@ -1046,9 +1108,7 @@ node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web
 
 > **net**: [`Net`](../classes/Net.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:28
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:28
 
 ***
 
@@ -1056,15 +1116,15 @@ node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web
 
 > **personal**: [`Personal`](../classes/Personal.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:55
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/types.d.ts:55
 
 ***
 
 ### providers
 
 > `readonly` **providers**: `object`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:45
 
 #### HttpProvider
 
@@ -1078,29 +1138,23 @@ node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web
 
 [`Web3Eth`](../classes/Web3Eth.md).[`providers`](../classes/Web3Eth.md#providers)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:45
-
 ## Accessors
 
 ### accountProvider
 
 #### Get Signature
 
-> **get** **accountProvider**(): `undefined` \| [`Web3AccountProvider`](Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\>
+> **get** **accountProvider**(): [`Web3AccountProvider`](Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:60
 
 ##### Returns
 
-`undefined` \| [`Web3AccountProvider`](Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\>
+[`Web3AccountProvider`](Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\> \| `undefined`
 
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`accountProvider`](../classes/Web3Eth.md#accountprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:60
 
 ***
 
@@ -1110,23 +1164,17 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **BatchRequest**(): () => [`Web3BatchRequest`](../classes/Web3BatchRequest.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:160
+
 Will return the [Web3BatchRequest](../classes/Web3BatchRequest.md) constructor.
 
 ##### Returns
 
-`Function`
-
-###### Returns
-
-[`Web3BatchRequest`](../classes/Web3BatchRequest.md)
+() => [`Web3BatchRequest`](../classes/Web3BatchRequest.md)
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`BatchRequest`](../classes/Web3Eth.md#batchrequest)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:160
+`Eth.BatchRequest`
 
 ***
 
@@ -1135,6 +1183,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **blockHeaderTimeout**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:169
 
 The blockHeaderTimeout is used over socket-based connections. This option defines the amount seconds it should wait for `'newBlockHeaders'` event before falling back to polling to fetch transaction receipt.
 Default is `10` seconds.
@@ -1147,11 +1197,15 @@ Default is `10` seconds.
 
 > **set** **blockHeaderTimeout**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:173
+
 Will set the blockHeaderTimeout
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -1159,11 +1213,7 @@ Will set the blockHeaderTimeout
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`blockHeaderTimeout`](../classes/Web3Eth.md#blockheadertimeout)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:169
+`Eth.blockHeaderTimeout`
 
 ***
 
@@ -1172,6 +1222,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **contractDataInputFill**(): `"data"` \| `"input"` \| `"both"`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:70
 
 The `contractDataInputFill` options property will allow you to set the hash of the method signature and encoded parameters to the property
 either `data`, `input` or both within your contract.
@@ -1186,11 +1238,15 @@ Default is `data`.
 
 > **set** **contractDataInputFill**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:74
+
 Will set the contractDataInputFill
 
 ##### Parameters
 
-• **val**: `"data"` \| `"input"` \| `"both"`
+###### val
+
+`"data"` \| `"input"` \| `"both"`
 
 ##### Returns
 
@@ -1198,11 +1254,7 @@ Will set the contractDataInputFill
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`contractDataInputFill`](../classes/Web3Eth.md#contractdatainputfill)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:70
+`Eth.contractDataInputFill`
 
 ***
 
@@ -1210,7 +1262,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **currentProvider**(): `undefined` \| [`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\>
+> **get** **currentProvider**(): [`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:123
 
 Will return the current provider. (The same as `provider`)
 
@@ -1227,13 +1281,15 @@ console.log(web3Context.provider);
 
 ##### Returns
 
-`undefined` \| [`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\>
+[`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\> \| `undefined`
 
 Returns the current provider
 
 #### Set Signature
 
 > **set** **currentProvider**(`provider`): `void`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:142
 
 Will set the current provider. (The same as `provider`)
 
@@ -1253,7 +1309,9 @@ _eventsCount: 0,
 
 ##### Parameters
 
-• **provider**: `undefined` \| `string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
+###### provider
+
+`string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`
 
 [SupportedProviders](../type-aliases/SupportedProviders.md) The provider to set
 
@@ -1263,11 +1321,7 @@ _eventsCount: 0,
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`currentProvider`](../classes/Web3Eth.md#currentprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:123
+`Eth.currentProvider`
 
 ***
 
@@ -1275,19 +1329,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **customTransactionSchema**(): `undefined` \| [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md)
+> **get** **customTransactionSchema**(): [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:255
 
 ##### Returns
 
-`undefined` \| [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md)
+[`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md) \| `undefined`
 
 #### Set Signature
 
 > **set** **customTransactionSchema**(`schema`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:256
+
 ##### Parameters
 
-• **schema**: `undefined` \| [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md)
+###### schema
+
+[`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md) \| `undefined`
 
 ##### Returns
 
@@ -1295,11 +1355,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`customTransactionSchema`](../classes/Web3Eth.md#customtransactionschema)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:255
+`Eth.customTransactionSchema`
 
 ***
 
@@ -1307,7 +1363,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **defaultAccount**(): `undefined` \| `string`
+> **get** **defaultAccount**(): `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:82
 
 This default address is used as the default `from` property, if no `from` property is specified in for the following methods:
 - web3.eth.sendTransaction()
@@ -1317,17 +1375,21 @@ This default address is used as the default `from` property, if no `from` proper
 
 ##### Returns
 
-`undefined` \| `string`
+`string` \| `undefined`
 
 #### Set Signature
 
 > **set** **defaultAccount**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:86
+
 Will set the default account.
 
 ##### Parameters
 
-• **val**: `undefined` \| `string`
+###### val
+
+`string` \| `undefined`
 
 ##### Returns
 
@@ -1335,11 +1397,7 @@ Will set the default account.
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`defaultAccount`](../classes/Web3Eth.md#defaultaccount)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:82
+`Eth.defaultAccount`
 
 ***
 
@@ -1348,6 +1406,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **defaultBlock**(): [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:96
 
 The default block is used for certain methods. You can override it by passing in the defaultBlock as last parameter. The default value is `"latest"`.
 - web3.eth.getBalance()
@@ -1365,6 +1425,8 @@ The default block is used for certain methods. You can override it by passing in
 
 > **set** **defaultBlock**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:107
+
 Will set the default block.
 
 - A block number
@@ -1376,7 +1438,9 @@ Will set the default block.
 
 ##### Parameters
 
-• **val**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+###### val
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ##### Returns
 
@@ -1384,11 +1448,7 @@ Will set the default block.
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`defaultBlock`](../classes/Web3Eth.md#defaultblock)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:96
+`Eth.defaultBlock`
 
 ***
 
@@ -1398,6 +1458,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **defaultChain**(): `string`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:195
+
 ##### Returns
 
 `string`
@@ -1406,9 +1468,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **defaultChain**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:196
+
 ##### Parameters
 
-• **val**: `string`
+###### val
+
+`string`
 
 ##### Returns
 
@@ -1416,11 +1482,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`defaultChain`](../classes/Web3Eth.md#defaultchain)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:195
+`Eth.defaultChain`
 
 ***
 
@@ -1428,7 +1490,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **defaultCommon**(): `undefined` \| [`Common`](Common.md)
+> **get** **defaultCommon**(): [`Common`](Common.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:235
 
 Will get the default common property
 The default common property does contain the following Common object:
@@ -1442,17 +1506,21 @@ Default is `undefined`.
 
 ##### Returns
 
-`undefined` \| [`Common`](Common.md)
+[`Common`](Common.md) \| `undefined`
 
 #### Set Signature
 
 > **set** **defaultCommon**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:240
+
 Will set the default common property
 
 ##### Parameters
 
-• **val**: `undefined` \| [`Common`](Common.md)
+###### val
+
+[`Common`](Common.md) \| `undefined`
 
 ##### Returns
 
@@ -1460,11 +1528,7 @@ Will set the default common property
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`defaultCommon`](../classes/Web3Eth.md#defaultcommon)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:235
+`Eth.defaultCommon`
 
 ***
 
@@ -1473,6 +1537,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **defaultHardfork**(): `string`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:216
 
 Will return the default hardfork. Default is `london`
 The default hardfork property can be one of the following:
@@ -1499,11 +1565,15 @@ The default hardfork property can be one of the following:
 
 > **set** **defaultHardfork**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:221
+
 Will set the default hardfork.
 
 ##### Parameters
 
-• **val**: `string`
+###### val
+
+`string`
 
 ##### Returns
 
@@ -1511,11 +1581,7 @@ Will set the default hardfork.
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`defaultHardfork`](../classes/Web3Eth.md#defaulthardfork)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:216
+`Eth.defaultHardfork`
 
 ***
 
@@ -1525,6 +1591,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **defaultMaxPriorityFeePerGas**(): [`Numbers`](../type-aliases/Numbers.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:249
+
 ##### Returns
 
 [`Numbers`](../type-aliases/Numbers.md)
@@ -1533,9 +1601,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **defaultMaxPriorityFeePerGas**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:250
+
 ##### Parameters
 
-• **val**: [`Numbers`](../type-aliases/Numbers.md)
+###### val
+
+[`Numbers`](../type-aliases/Numbers.md)
 
 ##### Returns
 
@@ -1543,11 +1615,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`defaultMaxPriorityFeePerGas`](../classes/Web3Eth.md#defaultmaxpriorityfeepergas)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:249
+`Eth.defaultMaxPriorityFeePerGas`
 
 ***
 
@@ -1555,19 +1623,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **defaultNetworkId**(): `undefined` \| [`Numbers`](../type-aliases/Numbers.md)
+> **get** **defaultNetworkId**(): [`Numbers`](../type-aliases/Numbers.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:193
 
 ##### Returns
 
-`undefined` \| [`Numbers`](../type-aliases/Numbers.md)
+[`Numbers`](../type-aliases/Numbers.md) \| `undefined`
 
 #### Set Signature
 
 > **set** **defaultNetworkId**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:194
+
 ##### Parameters
 
-• **val**: `undefined` \| [`Numbers`](../type-aliases/Numbers.md)
+###### val
+
+[`Numbers`](../type-aliases/Numbers.md) \| `undefined`
 
 ##### Returns
 
@@ -1575,11 +1649,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`defaultNetworkId`](../classes/Web3Eth.md#defaultnetworkid)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:193
+`Eth.defaultNetworkId`
 
 ***
 
@@ -1589,6 +1659,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **defaultReturnFormat**(): [`DataFormat`](../type-aliases/DataFormat.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:191
+
 ##### Returns
 
 [`DataFormat`](../type-aliases/DataFormat.md)
@@ -1597,9 +1669,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **defaultReturnFormat**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:192
+
 ##### Parameters
 
-• **val**: [`DataFormat`](../type-aliases/DataFormat.md)
+###### val
+
+[`DataFormat`](../type-aliases/DataFormat.md)
 
 ##### Returns
 
@@ -1607,11 +1683,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`defaultReturnFormat`](../classes/Web3Eth.md#defaultreturnformat)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:191
+`Eth.defaultReturnFormat`
 
 ***
 
@@ -1621,6 +1693,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **defaultTransactionType**(): [`Numbers`](../type-aliases/Numbers.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:247
+
 ##### Returns
 
 [`Numbers`](../type-aliases/Numbers.md)
@@ -1629,9 +1703,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **defaultTransactionType**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:248
+
 ##### Parameters
 
-• **val**: [`Numbers`](../type-aliases/Numbers.md)
+###### val
+
+[`Numbers`](../type-aliases/Numbers.md)
 
 ##### Returns
 
@@ -1639,11 +1717,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`defaultTransactionType`](../classes/Web3Eth.md#defaulttransactiontype)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:247
+`Eth.defaultTransactionType`
 
 ***
 
@@ -1652,6 +1726,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **enableExperimentalFeatures**(): `object`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:178
 
 The enableExperimentalFeatures is used to enable trying new experimental features that are still not fully implemented or not fully tested or still have some related issues.
 Default is `false` for every feature.
@@ -1672,15 +1748,21 @@ Default is `false` for every feature.
 
 > **set** **enableExperimentalFeatures**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:185
+
 Will set the enableExperimentalFeatures
 
 ##### Parameters
 
-• **val**
+###### val
 
-• **val.useRpcCallSpecification**: `boolean`
+###### useRpcCallSpecification
 
-• **val.useSubscriptionWhenCheckingBlockTimeout**: `boolean`
+`boolean`
+
+###### useSubscriptionWhenCheckingBlockTimeout
+
+`boolean`
 
 ##### Returns
 
@@ -1688,11 +1770,7 @@ Will set the enableExperimentalFeatures
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`enableExperimentalFeatures`](../classes/Web3Eth.md#enableexperimentalfeatures)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:178
+`Eth.enableExperimentalFeatures`
 
 ***
 
@@ -1700,7 +1778,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **givenProvider**(): `undefined` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\>
+> **get** **givenProvider**(): [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:148
 
 Will return the givenProvider if available.
 
@@ -1708,15 +1788,11 @@ When using web3.js in an Ethereum compatible browser, it will set with the curre
 
 ##### Returns
 
-`undefined` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\>
+[`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\> \| `undefined`
 
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`givenProvider`](../classes/Web3Eth.md#givenprovider-1)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:148
 
 ***
 
@@ -1725,6 +1801,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **handleRevert**(): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:59
 
 The `handleRevert` options property returns the revert reason string if enabled for the following methods:
 - web3.eth.sendTransaction()
@@ -1743,11 +1821,15 @@ Default is `false`.
 
 > **set** **handleRevert**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:63
+
 Will set the handleRevert
 
 ##### Parameters
 
-• **val**: `boolean`
+###### val
+
+`boolean`
 
 ##### Returns
 
@@ -1755,11 +1837,7 @@ Will set the handleRevert
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`handleRevert`](../classes/Web3Eth.md#handlerevert)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:59
+`Eth.handleRevert`
 
 ***
 
@@ -1768,6 +1846,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **ignoreGasPricing**(): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:245
 
 Will get the ignoreGasPricing property. When true, the gasPrice, maxPriorityFeePerGas, and maxFeePerGas will not be autofilled in the transaction object.
  Useful when you want wallets to handle gas pricing.
@@ -1780,9 +1860,13 @@ Will get the ignoreGasPricing property. When true, the gasPrice, maxPriorityFeeP
 
 > **set** **ignoreGasPricing**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:246
+
 ##### Parameters
 
-• **val**: `boolean`
+###### val
+
+`boolean`
 
 ##### Returns
 
@@ -1790,11 +1874,7 @@ Will get the ignoreGasPricing property. When true, the gasPrice, maxPriorityFeeP
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`ignoreGasPricing`](../classes/Web3Eth.md#ignoregaspricing)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:245
+`Eth.ignoreGasPricing`
 
 ***
 
@@ -1804,6 +1884,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **maxListenersWarningThreshold**(): `number`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:189
+
 ##### Returns
 
 `number`
@@ -1812,9 +1894,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **maxListenersWarningThreshold**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:190
+
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -1822,11 +1908,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`maxListenersWarningThreshold`](../classes/Web3Eth.md#maxlistenerswarningthreshold)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:189
+`Eth.maxListenersWarningThreshold`
 
 ***
 
@@ -1834,7 +1916,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **provider**(): `undefined` \| [`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\>
+> **get** **provider**(): [`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:88
 
 Will return the current provider.
 
@@ -1851,13 +1935,15 @@ console.log(web3.provider);
 
 ##### Returns
 
-`undefined` \| [`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\>
+[`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\> \| `undefined`
 
 Returns the current provider
 
 #### Set Signature
 
 > **set** **provider**(`provider`): `void`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:108
 
 Will set the current provider.
 
@@ -1877,7 +1963,9 @@ _eventsCount: 0,
 
 ##### Parameters
 
-• **provider**: `undefined` \| `string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
+###### provider
+
+`string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`
 
 The provider to set
 
@@ -1889,11 +1977,7 @@ Accepted providers are of type [SupportedProviders](../type-aliases/SupportedPro
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`provider`](../classes/Web3Eth.md#provider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:88
+`Eth.provider`
 
 ***
 
@@ -1903,17 +1987,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **requestManager**(): [`Web3RequestManager`](../classes/Web3RequestManager.md)\<`API`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:54
+
 ##### Returns
 
 [`Web3RequestManager`](../classes/Web3RequestManager.md)\<`API`\>
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`requestManager`](../classes/Web3Eth.md#requestmanager)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:54
+`Eth.requestManager`
 
 ***
 
@@ -1923,6 +2005,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **subscriptionManager**(): [`Web3SubscriptionManager`](../classes/Web3SubscriptionManager.md)\<`API`, `RegisteredSubs`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:58
+
 Will return the current subscriptionManager ([Web3SubscriptionManager](../classes/Web3SubscriptionManager.md))
 
 ##### Returns
@@ -1931,11 +2015,7 @@ Will return the current subscriptionManager ([Web3SubscriptionManager](../classe
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`subscriptionManager`](../classes/Web3Eth.md#subscriptionmanager)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:58
+`Eth.subscriptionManager`
 
 ***
 
@@ -1944,6 +2024,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionBlockTimeout**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:122
 
 The `transactionBlockTimeout` is used over socket-based connections. This option defines the amount of new blocks it should wait until the first confirmation happens, otherwise the PromiEvent rejects with a timeout error.
 Default is `50`.
@@ -1956,11 +2038,15 @@ Default is `50`.
 
 > **set** **transactionBlockTimeout**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:126
+
 Will set the transactionBlockTimeout.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -1968,11 +2054,7 @@ Will set the transactionBlockTimeout.
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`transactionBlockTimeout`](../classes/Web3Eth.md#transactionblocktimeout)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:122
+`Eth.transactionBlockTimeout`
 
 ***
 
@@ -1980,19 +2062,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **transactionBuilder**(): `undefined` \| [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\>
+> **get** **transactionBuilder**(): [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:251
 
 ##### Returns
 
-`undefined` \| [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\>
+[`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\> \| `undefined`
 
 #### Set Signature
 
 > **set** **transactionBuilder**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:252
+
 ##### Parameters
 
-• **val**: `undefined` \| [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\>
+###### val
+
+[`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\> \| `undefined`
 
 ##### Returns
 
@@ -2000,11 +2088,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`transactionBuilder`](../classes/Web3Eth.md#transactionbuilder)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:251
+`Eth.transactionBuilder`
 
 ***
 
@@ -2013,6 +2097,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionConfirmationBlocks**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:131
 
 This defines the number of blocks it requires until a transaction is considered confirmed.
 Default is `24`.
@@ -2025,11 +2111,15 @@ Default is `24`.
 
 > **set** **transactionConfirmationBlocks**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:135
+
 Will set the transactionConfirmationBlocks.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -2037,11 +2127,7 @@ Will set the transactionConfirmationBlocks.
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`transactionConfirmationBlocks`](../classes/Web3Eth.md#transactionconfirmationblocks)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:131
+`Eth.transactionConfirmationBlocks`
 
 ***
 
@@ -2049,19 +2135,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **transactionConfirmationPollingInterval**(): `undefined` \| `number`
+> **get** **transactionConfirmationPollingInterval**(): `number` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:163
 
 ##### Returns
 
-`undefined` \| `number`
+`number` \| `undefined`
 
 #### Set Signature
 
 > **set** **transactionConfirmationPollingInterval**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:164
+
 ##### Parameters
 
-• **val**: `undefined` \| `number`
+###### val
+
+`number` \| `undefined`
 
 ##### Returns
 
@@ -2069,11 +2161,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`transactionConfirmationPollingInterval`](../classes/Web3Eth.md#transactionconfirmationpollinginterval)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:163
+`Eth.transactionConfirmationPollingInterval`
 
 ***
 
@@ -2082,6 +2170,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionPollingInterval**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:140
 
 Used over HTTP connections. This option defines the number of seconds between Web3 calls for a receipt which confirms that a transaction was mined by the network.
 Default is `1000` ms.
@@ -2094,11 +2184,15 @@ Default is `1000` ms.
 
 > **set** **transactionPollingInterval**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:144
+
 Will set the transactionPollingInterval.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -2106,11 +2200,7 @@ Will set the transactionPollingInterval.
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`transactionPollingInterval`](../classes/Web3Eth.md#transactionpollinginterval)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:140
+`Eth.transactionPollingInterval`
 
 ***
 
@@ -2119,6 +2209,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionPollingTimeout**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:149
 
 Used over HTTP connections. This option defines the number of seconds Web3 will wait for a receipt which confirms that a transaction was mined by the network. Note: If this method times out, the transaction may still be pending.
 Default is `750` seconds (12.5 minutes).
@@ -2131,11 +2223,15 @@ Default is `750` seconds (12.5 minutes).
 
 > **set** **transactionPollingTimeout**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:153
+
 Will set the transactionPollingTimeout.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -2143,11 +2239,7 @@ Will set the transactionPollingTimeout.
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`transactionPollingTimeout`](../classes/Web3Eth.md#transactionpollingtimeout)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:149
+`Eth.transactionPollingTimeout`
 
 ***
 
@@ -2155,24 +2247,30 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **transactionReceiptPollingInterval**(): `undefined` \| `number`
+> **get** **transactionReceiptPollingInterval**(): `number` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:158
 
 The `transactionPollingInterval` is used over HTTP connections. This option defines the number of seconds between Web3 calls for a receipt which confirms that a transaction was mined by the network.
 Default is `undefined`
 
 ##### Returns
 
-`undefined` \| `number`
+`number` \| `undefined`
 
 #### Set Signature
 
 > **set** **transactionReceiptPollingInterval**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:162
+
 Will set the transactionReceiptPollingInterval
 
 ##### Parameters
 
-• **val**: `undefined` \| `number`
+###### val
+
+`number` \| `undefined`
 
 ##### Returns
 
@@ -2180,11 +2278,7 @@ Will set the transactionReceiptPollingInterval
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`transactionReceiptPollingInterval`](../classes/Web3Eth.md#transactionreceiptpollinginterval)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:158
+`Eth.transactionReceiptPollingInterval`
 
 ***
 
@@ -2193,6 +2287,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionSendTimeout**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:113
 
 The time used to wait for Ethereum Node to return the sent transaction result.
 Note: If the RPC call stuck at the Node and therefor timed-out, the transaction may still be pending or even mined by the Network. We recommend checking the pending transactions in such a case.
@@ -2206,11 +2302,15 @@ Default is `750` seconds (12.5 minutes).
 
 > **set** **transactionSendTimeout**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:117
+
 Will set the transactionSendTimeout.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -2218,11 +2318,7 @@ Will set the transactionSendTimeout.
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`transactionSendTimeout`](../classes/Web3Eth.md#transactionsendtimeout)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:113
+`Eth.transactionSendTimeout`
 
 ***
 
@@ -2230,19 +2326,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **transactionTypeParser**(): `undefined` \| [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md)
+> **get** **transactionTypeParser**(): [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:253
 
 ##### Returns
 
-`undefined` \| [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md)
+[`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md) \| `undefined`
 
 #### Set Signature
 
 > **set** **transactionTypeParser**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:254
+
 ##### Parameters
 
-• **val**: `undefined` \| [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md)
+###### val
+
+[`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md) \| `undefined`
 
 ##### Returns
 
@@ -2250,11 +2352,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Eth`](../classes/Web3Eth.md).[`transactionTypeParser`](../classes/Web3Eth.md#transactiontypeparser)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:253
+`Eth.transactionTypeParser`
 
 ***
 
@@ -2262,25 +2360,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **wallet**(): `undefined` \| [`Web3BaseWallet`](../classes/Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\>
+> **get** **wallet**(): [`Web3BaseWallet`](../classes/Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:59
 
 ##### Returns
 
-`undefined` \| [`Web3BaseWallet`](../classes/Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\>
+[`Web3BaseWallet`](../classes/Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](Web3BaseWalletAccount.md)\> \| `undefined`
 
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`wallet`](../classes/Web3Eth.md#wallet)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:59
-
 ## Methods
 
 ### calculateFeeData()
 
-> **calculateFeeData**(`baseFeePerGasFactor`?, `alternativeMaxPriorityFeePerGas`?): `Promise`\<[`FeeData`](FeeData.md)\>
+> **calculateFeeData**(`baseFeePerGasFactor?`, `alternativeMaxPriorityFeePerGas?`): `Promise`\<[`FeeData`](FeeData-1.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:186
 
 Calculates the current Fee Data.
 If the node supports EIP-1559, then `baseFeePerGas` and `maxPriorityFeePerGas` will be returned along with the calculated `maxFeePerGas` value.
@@ -2289,17 +2387,21 @@ If the node does not support EIP-1559, then the `gasPrice` will be returned and 
 
 #### Parameters
 
-• **baseFeePerGasFactor?**: `bigint`
+##### baseFeePerGasFactor?
+
+`bigint`
 
 (optional) The factor to multiply the `baseFeePerGas` with when calculating `maxFeePerGas`, if the node supports EIP-1559. The default value is 2.
 
-• **alternativeMaxPriorityFeePerGas?**: `bigint`
+##### alternativeMaxPriorityFeePerGas?
+
+`bigint`
 
 (optional) The alternative `maxPriorityFeePerGas` to use when calculating `maxFeePerGas`, if the node supports EIP-1559, but does not support the method `eth_maxPriorityFeePerGas`. The default value is 1 gwei.
 
 #### Returns
 
-`Promise`\<[`FeeData`](FeeData.md)\>
+`Promise`\<[`FeeData`](FeeData-1.md)\>
 
 The current fee data.
 
@@ -2333,36 +2435,42 @@ web3.eth.calculateFeeData(3n).then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`calculateFeeData`](../classes/Web3Eth.md#calculatefeedata)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:186
-
 ***
 
 ### call()
 
-> **call**\<`ReturnFormat`\>(`transaction`, `blockNumber`?, `returnFormat`?): `Promise`\<[`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
+> **call**\<`ReturnFormat`\>(`transaction`, `blockNumber?`, `returnFormat?`): `Promise`\<[`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1325
 
 Executes a message call within the EVM without creating a transaction.
 It does not publish anything to the blockchain and does not consume any gas.
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **transaction**: [`TransactionCall`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
+##### transaction
+
+[`TransactionCall`](TransactionCall.md)
 
 A transaction object where all properties are optional except `to`, however it's recommended to include the `from` property or it may default to `0x0000000000000000000000000000000000000000` depending on your node or provider.
 
-• **blockNumber?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### blockNumber?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ([BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) - Specifies what block to use as the current state of the blockchain while processing the transaction.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) - Specifies how the return data from the call should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) - Specifies how the return data from the call should be formatted.
 
 #### Returns
 
@@ -2374,27 +2482,27 @@ The returned data of the call, e.g. a smart contract function's return value.
 
 [`Web3Eth`](../classes/Web3Eth.md).[`call`](../classes/Web3Eth.md#call)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1325
-
 ***
 
 ### clearSubscriptions()
 
-> **clearSubscriptions**(`notClearSyncing`?): `undefined` \| `Promise`\<`string`[]\>
+> **clearSubscriptions**(`notClearSyncing?`): `Promise`\<`string`[]\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1824
 
 Resets subscriptions.
 
 #### Parameters
 
-• **notClearSyncing?**: `boolean`
+##### notClearSyncing?
+
+`boolean`
 
 If `true` it keeps the `syncing` subscription.
 
 #### Returns
 
-`undefined` \| `Promise`\<`string`[]\>
+`Promise`\<`string`[]\> \| `undefined`
 
 A promise to an array of subscription ids that were cleared.
 
@@ -2407,49 +2515,47 @@ web3.eth.clearSubscriptions().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`clearSubscriptions`](../classes/Web3Eth.md#clearsubscriptions)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1824
-
 ***
 
 ### createAccessList()
 
-> **createAccessList**\<`ReturnFormat`\>(`transaction`, `blockNumber`?, `returnFormat`?): `Promise`\<`object`\>
+> **createAccessList**\<`ReturnFormat`\>(`transaction`, `blockNumber?`, `returnFormat?`): `Promise`\<\{ `accessList?`: `object`[]; `gasUsed?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; \}\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1662
 
 This method generates an access list for a transaction.
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **transaction**: [`TransactionForAccessList`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionForAccessList.md)
+##### transaction
+
+[`TransactionForAccessList`](TransactionForAccessList.md)
 
 A transaction object where all properties are optional except `from`, however it's recommended to include the `to` property.
 
-• **blockNumber?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### blockNumber?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ([BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) - Specifies what block to use as the current state of the blockchain while processing the transaction.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) - Specifies how the return data from the createAccessList should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) - Specifies how the return data from the createAccessList should be formatted.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `accessList?`: `object`[]; `gasUsed?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; \}\>
 
 The returned data of the createAccessList,  e.g. The generated access list for transaction.
-
-##### accessList?
-
-> `readonly` `optional` **accessList**: `object`[]
-
-##### gasUsed?
-
-> `readonly` `optional` **gasUsed**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
 
 #### Example
 
@@ -2480,25 +2586,29 @@ to: '0x940b25304947ae863568B3804434EC77E2160b87'
 
 [`Web3Eth`](../classes/Web3Eth.md).[`createAccessList`](../classes/Web3Eth.md#createaccesslist)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1662
-
 ***
 
 ### emit()
 
 > **emit**\<`K`\>(`eventName`, `params`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **params**: `object`\[`K`\]
+`K`
+
+##### params
+
+`object`\[`K`\]
 
 #### Returns
 
@@ -2508,15 +2618,13 @@ node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules
 
 [`Web3Eth`](../classes/Web3Eth.md).[`emit`](../classes/Web3Eth.md#emit)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
-
 ***
 
 ### estimateGas()
 
-> **estimateGas**\<`ReturnFormat`\>(`transaction`, `blockNumber`?, `returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **estimateGas**\<`ReturnFormat`\>(`transaction`, `blockNumber?`, `returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1352
 
 Simulates the transaction within the EVM to estimate the amount of gas to be used by the transaction.
 The transaction will not be added to the blockchain, and actual gas usage can vary when interacting
@@ -2524,21 +2632,29 @@ with a contract as a result of updating the contract's state.
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **transaction**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+##### transaction
 
-The [Transaction](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md) object to estimate the gas for.
+[`Transaction`](Transaction-1.md)
 
-• **blockNumber?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+The [Transaction](Transaction-1.md) object to estimate the gas for.
+
+##### blockNumber?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ([BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) - Specifies what block to use as the current state of the blockchain while processing the gas estimation.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) - Specifies how the return data from the call should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) - Specifies how the return data from the call should be formatted.
 
 #### Returns
 
@@ -2566,15 +2682,13 @@ web3.eth.estimateGas(transaction, { number: FMT_NUMBER.NUMBER , bytes: FMT_BYTES
 
 [`Web3Eth`](../classes/Web3Eth.md).[`estimateGas`](../classes/Web3Eth.md#estimategas)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1352
-
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 #### Returns
 
@@ -2584,22 +2698,22 @@ node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules
 
 [`Web3Eth`](../classes/Web3Eth.md).[`eventNames`](../classes/Web3Eth.md#eventnames)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
-
 ***
 
 ### extend()
 
 > **extend**(`extendObj`): `this`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:165
+
 This method allows extending the web3 modules.
 Note: This method is only for backward compatibility, and It is recommended to use Web3 v4 Plugin feature for extending web3.js functionality if you are developing something new.
 
 #### Parameters
 
-• **extendObj**: [`ExtensionObject`](ExtensionObject.md)
+##### extendObj
+
+[`ExtensionObject`](ExtensionObject.md)
 
 #### Returns
 
@@ -2609,15 +2723,13 @@ Note: This method is only for backward compatibility, and It is recommended to u
 
 [`Web3Eth`](../classes/Web3Eth.md).[`extend`](../classes/Web3Eth.md#extend)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:165
-
 ***
 
 ### getAccounts()
 
 > **getAccounts**(): `Promise`\<`string`[]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:196
 
 #### Returns
 
@@ -2634,35 +2746,41 @@ web3.eth.getAccounts().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getAccounts`](../classes/Web3Eth.md#getaccounts)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:196
-
 ***
 
 ### getBalance()
 
-> **getBalance**\<`ReturnFormat`\>(`address`, `blockNumber`?, `returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getBalance**\<`ReturnFormat`\>(`address`, `blockNumber?`, `returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:226
 
 Get the balance of an address at a given block.
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 The address to get the balance of.
 
-• **blockNumber?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### blockNumber?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ([BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) Specifies what block to use as the current state for the balance query.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -2682,39 +2800,45 @@ web3.eth.getBalance("0x407d73d8a49eeb85d32cf465507dd71d507100c1").then(console.l
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getBalance`](../classes/Web3Eth.md#getbalance)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:226
-
 ***
 
 ### getBlock()
 
-> **getBlock**\<`ReturnFormat`\>(`block`?, `hydrated`?, `returnFormat`?): `Promise`\<`object`\>
+> **getBlock**\<`ReturnFormat`\>(`block?`, `hydrated?`, `returnFormat?`): `Promise`\<\{ `baseFeePerGas?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `difficulty?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `extraData`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `gasLimit`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `gasUsed`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `hash?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `logsBloom?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `miner`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `mixHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `nonce`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `number`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `parentHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `receiptsRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `sha3Uncles`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `size`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `stateRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `timestamp`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `totalDifficulty`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `transactions`: `string`[] \| `object`[]; `transactionsRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `uncles`: `string`[]; \}\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:346
 
 Retrieves a [Block](../classes/Block.md) matching the provided block number, block hash or block tag.
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **block?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### block?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 The [BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) (defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) or block hash of the desired block.
 
-• **hydrated?**: `boolean`
+##### hydrated?
+
+`boolean`
 
 If specified `true`, the returned block will contain all transactions as objects. If `false` it will only contain transaction hashes.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted (does not format transaction objects or hashes).
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted (does not format transaction objects or hashes).
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `baseFeePerGas?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `difficulty?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `extraData`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `gasLimit`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `gasUsed`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `hash?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `logsBloom?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `miner`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `mixHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `nonce`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `number`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `parentHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `receiptsRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `sha3Uncles`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `size`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `stateRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `timestamp`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `totalDifficulty`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `transactions`: `string`[] \| `object`[]; `transactionsRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `uncles`: `string`[]; \}\>
 
 A [Block](../classes/Block.md) object matching the provided block number or block hash.
 
@@ -2774,113 +2898,31 @@ web3.eth.getBlock(
  }
 ```
 
-##### baseFeePerGas?
-
-> `optional` **baseFeePerGas**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### difficulty?
-
-> `optional` **difficulty**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### extraData
-
-> **extraData**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### gasLimit
-
-> **gasLimit**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### gasUsed
-
-> **gasUsed**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### hash?
-
-> `optional` **hash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### logsBloom?
-
-> `optional` **logsBloom**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### miner
-
-> **miner**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### mixHash
-
-> **mixHash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### nonce
-
-> **nonce**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### number
-
-> **number**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### parentHash
-
-> **parentHash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### receiptsRoot
-
-> **receiptsRoot**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### sha3Uncles
-
-> **sha3Uncles**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### size
-
-> **size**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### stateRoot
-
-> **stateRoot**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### timestamp
-
-> **timestamp**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### totalDifficulty
-
-> **totalDifficulty**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### transactions
-
-> **transactions**: `string`[] \| `object`[]
-
-##### transactionsRoot
-
-> **transactionsRoot**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### uncles
-
-> **uncles**: `string`[]
-
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getBlock`](../classes/Web3Eth.md#getblock)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:346
 
 ***
 
 ### getBlockNumber()
 
-> **getBlockNumber**\<`ReturnFormat`\>(`returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getBlockNumber**\<`ReturnFormat`\>(`returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:209
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -2900,29 +2942,33 @@ web3.eth.getBlockNumber({ number: FMT_NUMBER.HEX , bytes: FMT_BYTES.HEX }).then(
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getBlockNumber`](../classes/Web3Eth.md#getblocknumber)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:209
-
 ***
 
 ### getBlockTransactionCount()
 
-> **getBlockTransactionCount**\<`ReturnFormat`\>(`block`?, `returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getBlockTransactionCount**\<`ReturnFormat`\>(`block?`, `returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:423
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **block?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### block?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 The [BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) (defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) or block hash of the desired block.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -2945,29 +2991,33 @@ web3.eth.getBlockTransactionCount(
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getBlockTransactionCount`](../classes/Web3Eth.md#getblocktransactioncount)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:423
-
 ***
 
 ### getBlockUncleCount()
 
-> **getBlockUncleCount**\<`ReturnFormat`\>(`block`?, `returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getBlockUncleCount**\<`ReturnFormat`\>(`block?`, `returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:440
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **block?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### block?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 The [BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) (defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) or block hash of the desired block.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -2990,25 +3040,27 @@ web3.eth.getBlockUncleCount(
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getBlockUncleCount`](../classes/Web3Eth.md#getblockunclecount)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:440
-
 ***
 
 ### getChainId()
 
-> **getChainId**\<`ReturnFormat`\>(`returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getChainId**\<`ReturnFormat`\>(`returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1472
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) - Specifies how the return data from the call should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) - Specifies how the return data from the call should be formatted.
 
 #### Returns
 
@@ -3028,35 +3080,41 @@ web3.eth.getChainId({ number: FMT_NUMBER.NUMBER , bytes: FMT_BYTES.HEX }).then(c
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getChainId`](../classes/Web3Eth.md#getchainid)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1472
-
 ***
 
 ### getCode()
 
-> **getCode**\<`ReturnFormat`\>(`address`, `blockNumber`?, `returnFormat`?): `Promise`\<[`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
+> **getCode**\<`ReturnFormat`\>(`address`, `blockNumber?`, `returnFormat?`): `Promise`\<[`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:281
 
 Get the code at a specific address.
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 The address to get the code from.
 
-• **blockNumber?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### blockNumber?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ([BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) Specifies what block to use as the current state for the code query.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -3086,15 +3144,13 @@ web3.eth.getCode(
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getCode`](../classes/Web3Eth.md#getcode)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:281
-
 ***
 
 ### getCoinbase()
 
 > **getCoinbase**(): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:84
 
 #### Returns
 
@@ -3111,15 +3167,13 @@ web3.eth.getCoinbase().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getCoinbase`](../classes/Web3Eth.md#getcoinbase)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:84
-
 ***
 
 ### getContextObject()
 
 > **getContextObject**(): [`Web3ContextObject`](../type-aliases/Web3ContextObject.md)\<[`Web3EthExecutionAPI`](../type-aliases/Web3EthExecutionAPI.md), [`RegisteredSubscription`](../type-aliases/RegisteredSubscription.md)\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:62
 
 #### Returns
 
@@ -3129,41 +3183,49 @@ node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getContextObject`](../classes/Web3Eth.md#getcontextobject)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:62
-
 ***
 
 ### getFeeHistory()
 
-> **getFeeHistory**\<`ReturnFormat`\>(`blockCount`, `newestBlock`, `rewardPercentiles`, `returnFormat`?): `Promise`\<`object`\>
+> **getFeeHistory**\<`ReturnFormat`\>(`blockCount`, `newestBlock`, `rewardPercentiles`, `returnFormat?`): `Promise`\<\{ `baseFeePerGas`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\][]; `gasUsedRatio`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\][]; `oldestBlock`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `reward`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\][][]; \}\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1625
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **blockCount**: [`Numbers`](../type-aliases/Numbers.md)
+##### blockCount
+
+[`Numbers`](../type-aliases/Numbers.md)
 
 Number of blocks in the requested range. Between `1` and `1024` blocks can be requested in a single query. Less than requested may be returned if not all blocks are available.
 
-• **newestBlock**: `undefined` \| [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### newestBlock
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md) \| `undefined`
 
 Highest number block of the requested range.
 
-• **rewardPercentiles**: [`Numbers`](../type-aliases/Numbers.md)[]
+##### rewardPercentiles
+
+[`Numbers`](../type-aliases/Numbers.md)[]
 
 A monotonically increasing list of percentile values to sample from each block’s effective priority fees per gas in ascending order, weighted by gas used. Example: `['0', '25', '50', '75', '100']` or `['0', '0.5', '1', '1.5', '3', '80']`
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) - Specifies how the return data from the call should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) - Specifies how the return data from the call should be formatted.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `baseFeePerGas`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\][]; `gasUsedRatio`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\][]; `oldestBlock`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `reward`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\][][]; \}\>
 
 `baseFeePerGas` and transaction effective `priorityFeePerGas` history for the requested block range if available.
 The range between `headBlock - 4` and `headBlock` is guaranteed to be available while retrieving data from the `pending` block and older history are optional to support.
@@ -3219,45 +3281,31 @@ web3.eth.getFeeHistory(4, BlockTags.LATEST, [0, 25, 75, 100], { number: FMT_NUMB
 }
 ```
 
-##### baseFeePerGas
-
-> `readonly` **baseFeePerGas**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\][]
-
-##### gasUsedRatio
-
-> `readonly` **gasUsedRatio**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\][]
-
-##### oldestBlock
-
-> `readonly` **oldestBlock**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### reward
-
-> `readonly` **reward**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\][][]
-
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getFeeHistory`](../classes/Web3Eth.md#getfeehistory)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1625
 
 ***
 
 ### getGasPrice()
 
-> **getGasPrice**\<`ReturnFormat`\>(`returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getGasPrice**\<`ReturnFormat`\>(`returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:136
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -3277,25 +3325,27 @@ web3.eth.getGasPrice({ number: FMT_NUMBER.HEX , bytes: FMT_BYTES.HEX }).then(con
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getGasPrice`](../classes/Web3Eth.md#getgasprice)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:136
-
 ***
 
 ### ~~getHashrate()~~
 
-> **getHashrate**\<`ReturnFormat`\>(`returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getHashrate**\<`ReturnFormat`\>(`returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:110
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -3319,25 +3369,27 @@ Will be removed in the future, please use [Web3Eth.getHashRate](../classes/Web3E
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getHashrate`](../classes/Web3Eth.md#gethashrate)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:110
-
 ***
 
 ### getHashRate()
 
-> **getHashRate**\<`ReturnFormat`\>(`returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getHashRate**\<`ReturnFormat`\>(`returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:123
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -3357,15 +3409,13 @@ web3.eth.getHashRate({ number: FMT_NUMBER.HEX , bytes: FMT_BYTES.HEX }).then(con
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getHashRate`](../classes/Web3Eth.md#gethashrate-1)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:123
-
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 #### Returns
 
@@ -3375,25 +3425,27 @@ node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getMaxListeners`](../classes/Web3Eth.md#getmaxlisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
-
 ***
 
 ### getMaxPriorityFeePerGas()
 
-> **getMaxPriorityFeePerGas**\<`ReturnFormat`\>(`returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getMaxPriorityFeePerGas**\<`ReturnFormat`\>(`returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:149
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -3413,15 +3465,13 @@ web3.eth.getMaxPriorityFeePerGas({ number: FMT_NUMBER.HEX , bytes: FMT_BYTES.HEX
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getMaxPriorityFeePerGas`](../classes/Web3Eth.md#getmaxpriorityfeepergas)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:149
-
 ***
 
 ### getNodeInfo()
 
 > **getNodeInfo**(): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1481
 
 #### Returns
 
@@ -3438,37 +3488,41 @@ web3.eth.getNodeInfo().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getNodeInfo`](../classes/Web3Eth.md#getnodeinfo)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1481
-
 ***
 
 ### getPastLogs()
 
-> **getPastLogs**\<`ReturnFormat`\>(`filter`, `returnFormat`?): `Promise`\<(`string` \| `object`)[]\>
+> **getPastLogs**\<`ReturnFormat`\>(`filter`, `returnFormat?`): `Promise`\<(`string` \| \{ `address?`: `string`; `blockHash?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `blockNumber?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `data?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `id?`: `string`; `logIndex?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `removed?`: `boolean`; `topics?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\][]; `transactionHash?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `transactionIndex?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; \})[]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1397
 
 Gets past logs, matching the provided `filter`.
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **filter**: [`Filter`](Filter.md)
+##### filter
 
-A [Filter](Filter.md) object containing the properties for the desired logs.
+[`Filter`](Filter-2.md)
 
-• **returnFormat?**: `ReturnFormat`
+A [Filter](Filter-2.md) object containing the properties for the desired logs.
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) - Specifies how the return data from the call should be formatted.
+##### returnFormat?
+
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) - Specifies how the return data from the call should be formatted.
 
 #### Returns
 
-`Promise`\<(`string` \| `object`)[]\>
+`Promise`\<(`string` \| \{ `address?`: `string`; `blockHash?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `blockNumber?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `data?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `id?`: `string`; `logIndex?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `removed?`: `boolean`; `topics?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\][]; `transactionHash?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `transactionIndex?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; \})[]\>
 
-[FilterResultsAPI](../type-aliases/FilterResultsAPI.md), an array of [Log](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md) objects.
+[FilterResultsAPI](../type-aliases/FilterResultsAPI.md), an array of [Log](../classes/Log.md) objects.
 
 ```ts
 web3.eth.getPastLogs({
@@ -3511,25 +3565,27 @@ web3.eth.getPastLogs(
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getPastLogs`](../classes/Web3Eth.md#getpastlogs)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1397
-
 ***
 
 ### getPendingTransactions()
 
-> **getPendingTransactions**\<`ReturnFormat`\>(`returnFormat`?): `Promise`\<`object`[]\>
+> **getPendingTransactions**\<`ReturnFormat`\>(`returnFormat?`): `Promise`\<`object`[]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:767
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -3619,41 +3675,49 @@ web3.eth.getPendingTransactions().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getPendingTransactions`](../classes/Web3Eth.md#getpendingtransactions)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:767
-
 ***
 
 ### getProof()
 
-> **getProof**\<`ReturnFormat`\>(`address`, `storageKeys`, `blockNumber`?, `returnFormat`?): `Promise`\<`object`\>
+> **getProof**\<`ReturnFormat`\>(`address`, `storageKeys`, `blockNumber?`, `returnFormat?`): `Promise`\<\{ `accountProof`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\][]; `balance`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `codeHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `nonce`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `storageHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `storageProof`: `object`[]; \}\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1554
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 The Address of the account or contract.
 
-• **storageKeys**: [`Bytes`](../type-aliases/Bytes.md)[]
+##### storageKeys
+
+[`Bytes`](../type-aliases/Bytes-1.md)[]
 
 Array of storage-keys which should be proofed and included. See web3.getStorageAt.
 
-• **blockNumber?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### blockNumber?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ([BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) - Specifies what block to use as the current state of the blockchain while processing the gas estimation.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) - Specifies how the return data from the call should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) - Specifies how the return data from the call should be formatted.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `accountProof`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\][]; `balance`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `codeHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `nonce`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `storageHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `storageProof`: `object`[]; \}\>
 
 The account and storage-values of the specified account including the Merkle-proof as described in [EIP-1186](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1186.md).
 
@@ -3722,43 +3786,17 @@ web3.eth.getProof(
 }
 ```
 
-##### accountProof
-
-> `readonly` **accountProof**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\][]
-
-##### balance
-
-> `readonly` **balance**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### codeHash
-
-> `readonly` **codeHash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### nonce
-
-> `readonly` **nonce**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### storageHash
-
-> `readonly` **storageHash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### storageProof
-
-> `readonly` **storageProof**: `object`[]
-
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getProof`](../classes/Web3Eth.md#getproof)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1554
 
 ***
 
 ### getProtocolVersion()
 
 > **getProtocolVersion**(): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:58
 
 #### Returns
 
@@ -3775,39 +3813,47 @@ web3.eth.getProtocolVersion().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getProtocolVersion`](../classes/Web3Eth.md#getprotocolversion)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:58
-
 ***
 
 ### getStorageAt()
 
-> **getStorageAt**\<`ReturnFormat`\>(`address`, `storageSlot`, `blockNumber`?, `returnFormat`?): `Promise`\<[`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
+> **getStorageAt**\<`ReturnFormat`\>(`address`, `storageSlot`, `blockNumber?`, `returnFormat?`): `Promise`\<[`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:254
 
 Get the storage at a specific position of an address.
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 The address to get the storage from.
 
-• **storageSlot**: [`Numbers`](../type-aliases/Numbers.md)
+##### storageSlot
+
+[`Numbers`](../type-aliases/Numbers.md)
 
 The index position of the storage.
 
-• **blockNumber?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### blockNumber?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ([BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) Specifies what block to use as the current state for the storage query.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -3837,33 +3883,37 @@ web3.eth.getStorageAt(
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getStorageAt`](../classes/Web3Eth.md#getstorageat)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:254
-
 ***
 
 ### getTransaction()
 
-> **getTransaction**\<`ReturnFormat`\>(`transactionHash`, `returnFormat`?): `Promise`\<`object` \| `object` \| `object`\>
+> **getTransaction**\<`ReturnFormat`\>(`transactionHash`, `returnFormat?`): `Promise`\<\{ `accessList`: `object`[]; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas`: `string`; `maxPriorityFeePerGas`: `string`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v?`: `undefined`; `value`: `string`; `yParity`: `string`; \} \| \{ `accessList`: `object`[]; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas?`: `undefined`; `maxPriorityFeePerGas?`: `undefined`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v?`: `undefined`; `value`: `string`; `yParity`: `string`; \} \| \{ `accessList?`: `undefined`; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas?`: `undefined`; `maxPriorityFeePerGas?`: `undefined`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v`: `string`; `value`: `string`; \}\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:613
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **transactionHash**: [`Bytes`](../type-aliases/Bytes.md)
+##### transactionHash
+
+[`Bytes`](../type-aliases/Bytes-1.md)
 
 The hash of the desired transaction.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
-`Promise`\<`object` \| `object` \| `object`\>
+`Promise`\<\{ `accessList`: `object`[]; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas`: `string`; `maxPriorityFeePerGas`: `string`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v?`: `undefined`; `value`: `string`; `yParity`: `string`; \} \| \{ `accessList`: `object`[]; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas?`: `undefined`; `maxPriorityFeePerGas?`: `undefined`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v?`: `undefined`; `value`: `string`; `yParity`: `string`; \} \| \{ `accessList?`: `undefined`; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas?`: `undefined`; `maxPriorityFeePerGas?`: `undefined`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v`: `string`; `value`: `string`; \}\>
 
 The desired transaction object.
 
@@ -3914,33 +3964,39 @@ web3.eth.getTransaction(
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getTransaction`](../classes/Web3Eth.md#gettransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:613
-
 ***
 
 ### getTransactionCount()
 
-> **getTransactionCount**\<`ReturnFormat`\>(`address`, `blockNumber`?, `returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **getTransactionCount**\<`ReturnFormat`\>(`address`, `blockNumber?`, `returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1036
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 The address to get the number of transactions for.
 
-• **blockNumber?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### blockNumber?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ([BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) Specifies what block to use as the current state for the query.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -3964,37 +4020,43 @@ web3.eth.getTransactionCount(
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getTransactionCount`](../classes/Web3Eth.md#gettransactioncount)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1036
-
 ***
 
 ### getTransactionFromBlock()
 
-> **getTransactionFromBlock**\<`ReturnFormat`\>(`block`, `transactionIndex`, `returnFormat`?): `Promise`\<`undefined` \| `object` \| `object` \| `object`\>
+> **getTransactionFromBlock**\<`ReturnFormat`\>(`block`, `transactionIndex`, `returnFormat?`): `Promise`\<\{ `accessList`: `object`[]; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas`: `string`; `maxPriorityFeePerGas`: `string`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v?`: `undefined`; `value`: `string`; `yParity`: `string`; \} \| \{ `accessList`: `object`[]; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas?`: `undefined`; `maxPriorityFeePerGas?`: `undefined`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v?`: `undefined`; `value`: `string`; `yParity`: `string`; \} \| \{ `accessList?`: `undefined`; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas?`: `undefined`; `maxPriorityFeePerGas?`: `undefined`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v`: `string`; `value`: `string`; \} \| `undefined`\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:852
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **block**: `undefined` \| [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### block
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md) \| `undefined`
 
 The [BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) (defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) or block hash of the desired block.
 
-• **transactionIndex**: [`Numbers`](../type-aliases/Numbers.md)
+##### transactionIndex
+
+[`Numbers`](../type-aliases/Numbers.md)
 
 The index position of the transaction.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
-`Promise`\<`undefined` \| `object` \| `object` \| `object`\>
+`Promise`\<\{ `accessList`: `object`[]; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas`: `string`; `maxPriorityFeePerGas`: `string`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v?`: `undefined`; `value`: `string`; `yParity`: `string`; \} \| \{ `accessList`: `object`[]; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas?`: `undefined`; `maxPriorityFeePerGas?`: `undefined`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v?`: `undefined`; `value`: `string`; `yParity`: `string`; \} \| \{ `accessList?`: `undefined`; `blockHash?`: `string`; `blockNumber?`: `string`; `chainId?`: `string`; `data?`: `string`; `from`: `string`; `gas`: `string`; `gasPrice`: `string`; `hash`: `string`; `input`: `string`; `maxFeePerGas?`: `undefined`; `maxPriorityFeePerGas?`: `undefined`; `nonce`: `string`; `r`: `string`; `s`: `string`; `to?`: `string` \| `null`; `transactionIndex?`: `string`; `type`: `string`; `v`: `string`; `value`: `string`; \} \| `undefined`\>
 
 The desired transaction object.
 
@@ -4046,53 +4108,55 @@ web3.eth.getTransactionFromBlock(
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getTransactionFromBlock`](../classes/Web3Eth.md#gettransactionfromblock)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:852
-
 ***
 
 ### getTransactionMiddleware()
 
-> **getTransactionMiddleware**(): `undefined` \| [`TransactionMiddleware`](TransactionMiddleware.md)
+> **getTransactionMiddleware**(): [`TransactionMiddleware`](TransactionMiddleware.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:49
 
 #### Returns
 
-`undefined` \| [`TransactionMiddleware`](TransactionMiddleware.md)
+[`TransactionMiddleware`](TransactionMiddleware.md) \| `undefined`
 
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getTransactionMiddleware`](../classes/Web3Eth.md#gettransactionmiddleware)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:49
-
 ***
 
 ### getTransactionReceipt()
 
-> **getTransactionReceipt**\<`ReturnFormat`\>(`transactionHash`, `returnFormat`?): `Promise`\<`object`\>
+> **getTransactionReceipt**\<`ReturnFormat`\>(`transactionHash`, `returnFormat?`): `Promise`\<\{ `blockHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `blockNumber`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `contractAddress?`: `string`; `cumulativeGasUsed`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `effectiveGasPrice?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `events?`: \{\[`x`: `string`\]: `object`; \}; `from`: `string`; `gasUsed`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `logs`: `object`[]; `logsBloom`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `root`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `status`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `to`: `string`; `transactionHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `transactionIndex`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `type?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; \}\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:968
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **transactionHash**: [`Bytes`](../type-aliases/Bytes.md)
+##### transactionHash
+
+[`Bytes`](../type-aliases/Bytes-1.md)
 
 Hash of the transaction to retrieve the receipt for.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `blockHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `blockNumber`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `contractAddress?`: `string`; `cumulativeGasUsed`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `effectiveGasPrice?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `events?`: \{\[`x`: `string`\]: `object`; \}; `from`: `string`; `gasUsed`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `logs`: `object`[]; `logsBloom`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `root`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `status`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `to`: `string`; `transactionHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `transactionIndex`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `type?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; \}\>
 
-The desired [TransactionReceipt](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md) object.
+The desired [TransactionReceipt](../classes/TransactionReceipt.md) object.
 
 ```ts
 web3.eth.getTransactionReceipt("0xdf7756865c2056ce34c4eabe4eff42ad251a9f920a1c620c00b4ea0988731d3f").then(console.log);
@@ -4133,109 +4197,47 @@ web3.eth.getTransactionReceipt(
  }
 ```
 
-##### blockHash
-
-> `readonly` **blockHash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### blockNumber
-
-> `readonly` **blockNumber**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### contractAddress?
-
-> `readonly` `optional` **contractAddress**: `string`
-
-##### cumulativeGasUsed
-
-> `readonly` **cumulativeGasUsed**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### effectiveGasPrice?
-
-> `readonly` `optional` **effectiveGasPrice**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### events?
-
-> `optional` **events**: `object`
-
-###### Index Signature
-
- \[`x`: `string`\]: `object`
-
-##### from
-
-> `readonly` **from**: `string`
-
-##### gasUsed
-
-> `readonly` **gasUsed**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### logs
-
-> `readonly` **logs**: `object`[]
-
-##### logsBloom
-
-> `readonly` **logsBloom**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### root
-
-> `readonly` **root**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### status
-
-> `readonly` **status**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### to
-
-> `readonly` **to**: `string`
-
-##### transactionHash
-
-> `readonly` **transactionHash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### transactionIndex
-
-> `readonly` **transactionIndex**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### type?
-
-> `readonly` `optional` **type**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getTransactionReceipt`](../classes/Web3Eth.md#gettransactionreceipt)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:968
 
 ***
 
 ### getUncle()
 
-> **getUncle**\<`ReturnFormat`\>(`block`, `uncleIndex`, `returnFormat`?): `Promise`\<`object`\>
+> **getUncle**\<`ReturnFormat`\>(`block`, `uncleIndex`, `returnFormat?`): `Promise`\<\{ `baseFeePerGas?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `difficulty?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `extraData`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `gasLimit`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `gasUsed`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `hash?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `logsBloom?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `miner`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `mixHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `nonce`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `number`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `parentHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `receiptsRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `sha3Uncles`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `size`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `stateRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `timestamp`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `totalDifficulty`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `transactions`: `string`[] \| `object`[]; `transactionsRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `uncles`: `string`[]; \}\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:504
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **block**: `undefined` \| [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### block
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md) \| `undefined`
 
 The [BlockNumberOrTag](../type-aliases/BlockNumberOrTag.md) (defaults to [Web3Eth.defaultBlock](../classes/Web3Eth.md#defaultblock)) or block hash of the desired block.
 
-• **uncleIndex**: [`Numbers`](../type-aliases/Numbers.md)
+##### uncleIndex
+
+[`Numbers`](../type-aliases/Numbers.md)
 
 The index position of the uncle.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
-`Promise`\<`object`\>
+`Promise`\<\{ `baseFeePerGas?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `difficulty?`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `extraData`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `gasLimit`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `gasUsed`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `hash?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `logsBloom?`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `miner`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `mixHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `nonce`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `number`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `parentHash`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `receiptsRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `sha3Uncles`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `size`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `stateRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `timestamp`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `totalDifficulty`: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]; `transactions`: `string`[] \| `object`[]; `transactionsRoot`: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]; `uncles`: `string`[]; \}\>
 
 A blocks [uncle](https://ethereum.org/en/glossary/#ommer) by a given uncle index position.
 
@@ -4295,109 +4297,23 @@ web3.eth.getUncle(
  }
 ```
 
-##### baseFeePerGas?
-
-> `readonly` `optional` **baseFeePerGas**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### difficulty?
-
-> `readonly` `optional` **difficulty**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### extraData
-
-> `readonly` **extraData**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### gasLimit
-
-> `readonly` **gasLimit**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### gasUsed
-
-> `readonly` **gasUsed**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### hash?
-
-> `readonly` `optional` **hash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### logsBloom?
-
-> `readonly` `optional` **logsBloom**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### miner
-
-> `readonly` **miner**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### mixHash
-
-> `readonly` **mixHash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### nonce
-
-> `readonly` **nonce**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### number
-
-> `readonly` **number**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### parentHash
-
-> `readonly` **parentHash**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### receiptsRoot
-
-> `readonly` **receiptsRoot**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### sha3Uncles
-
-> `readonly` **sha3Uncles**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### size
-
-> `readonly` **size**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### stateRoot
-
-> `readonly` **stateRoot**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### timestamp
-
-> `readonly` **timestamp**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### totalDifficulty
-
-> `readonly` **totalDifficulty**: [`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]
-
-##### transactions
-
-> `readonly` **transactions**: `string`[] \| `object`[]
-
-##### transactionsRoot
-
-> `readonly` **transactionsRoot**: [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]
-
-##### uncles
-
-> `readonly` **uncles**: `string`[]
-
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getUncle`](../classes/Web3Eth.md#getuncle)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:504
 
 ***
 
 ### getWork()
 
-> **getWork**(): `Promise`\<[`string`, `string`, `string`]\>
+> **getWork**(): `Promise`\<\[`string`, `string`, `string`\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1427
 
 Gets work for miners to mine on. Returns the hash of the current block, the seedHash, and the boundary condition to be met ('target').
 
 #### Returns
 
-`Promise`\<[`string`, `string`, `string`]\>
+`Promise`\<\[`string`, `string`, `string`\]\>
 
 The mining work as an array of strings with the following structure:
 
@@ -4418,15 +4334,13 @@ web3.eth.getWork().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`getWork`](../classes/Web3Eth.md#getwork)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1427
-
 ***
 
 ### isMining()
 
 > **isMining**(): `Promise`\<`boolean`\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:95
 
 Checks whether the node is mining or not.
 
@@ -4445,15 +4359,13 @@ web3.eth.isMining().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`isMining`](../classes/Web3Eth.md#ismining)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:95
-
 ***
 
 ### isSyncing()
 
 > **isSyncing**(): `Promise`\<[`SyncingStatusAPI`](../type-aliases/SyncingStatusAPI.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:75
 
 Checks if the node is currently syncing.
 
@@ -4478,25 +4390,27 @@ web3.eth.isSyncing().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`isSyncing`](../classes/Web3Eth.md#issyncing)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:75
-
 ***
 
 ### link()
 
 > **link**\<`T`\>(`parentContext`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:72
+
 Link current context to another context.
 
 #### Type Parameters
 
-• **T** *extends* [`Web3Context`](../classes/Web3Context.md)\<`unknown`, `any`\>
+##### T
+
+`T` *extends* [`Web3Context`](../classes/Web3Context.md)\<`unknown`, `any`\>
 
 #### Parameters
 
-• **parentContext**: `T`
+##### parentContext
+
+`T`
 
 #### Returns
 
@@ -4506,23 +4420,25 @@ Link current context to another context.
 
 [`Web3Eth`](../classes/Web3Eth.md).[`link`](../classes/Web3Eth.md#link)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:72
-
 ***
 
 ### listenerCount()
 
 > **listenerCount**\<`K`\>(`eventName`): `number`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -4532,23 +4448,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Eth`](../classes/Web3Eth.md).[`listenerCount`](../classes/Web3Eth.md#listenercount)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
-
 ***
 
 ### listeners()
 
 > **listeners**\<`K`\>(`eventName`): (...`args`) => `void`[]
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -4558,25 +4476,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Eth`](../classes/Web3Eth.md).[`listeners`](../classes/Web3Eth.md#listeners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
-
 ***
 
 ### off()
 
 > **off**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
 
 #### Returns
 
@@ -4586,25 +4508,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Eth`](../classes/Web3Eth.md).[`off`](../classes/Web3Eth.md#off)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
-
 ***
 
 ### on()
 
 > **on**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
 
 #### Returns
 
@@ -4614,25 +4540,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Eth`](../classes/Web3Eth.md).[`on`](../classes/Web3Eth.md#on)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
-
 ***
 
 ### once()
 
 > **once**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
 
 #### Returns
 
@@ -4642,19 +4572,19 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Eth`](../classes/Web3Eth.md).[`once`](../classes/Web3Eth.md#once)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
-
 ***
 
 ### registerPlugin()
 
 > **registerPlugin**(`plugin`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:73
+
 #### Parameters
 
-• **plugin**: [`Web3PluginBase`](../classes/Web3PluginBase.md)\<`unknown`\>
+##### plugin
+
+[`Web3PluginBase`](../classes/Web3PluginBase.md)
 
 #### Returns
 
@@ -4664,33 +4594,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Eth`](../classes/Web3Eth.md).[`registerPlugin`](../classes/Web3Eth.md#registerplugin)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:73
-
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 #### Returns
 
-[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
 
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`removeAllListeners`](../classes/Web3Eth.md#removealllisteners)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
 ### requestAccounts()
 
 > **requestAccounts**(): `Promise`\<`string`[]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1459
 
 This method will request/enable the accounts from the current environment and for supporting [EIP 1102](https://eips.ethereum.org/EIPS/eip-1102)
 This method will only work if you’re using the injected provider from a application like Metamask, Status or TrustWallet.
@@ -4712,37 +4638,43 @@ web3.eth.requestAccounts().then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`requestAccounts`](../classes/Web3Eth.md#requestaccounts)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1459
-
 ***
 
 ### sendSignedTransaction()
 
-> **sendSignedTransaction**\<`ReturnFormat`\>(`transaction`, `returnFormat`?, `options`?): [`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), [`SendSignedTransactionEvents`](../type-aliases/SendSignedTransactionEvents.md)\<`ReturnFormat`\>\>
+> **sendSignedTransaction**\<`ReturnFormat`\>(`transaction`, `returnFormat?`, `options?`): [`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`TransactionReceipt`](../type-aliases/TransactionReceipt.md), [`SendSignedTransactionEvents`](../type-aliases/SendSignedTransactionEvents.md)\<`ReturnFormat`\>\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1228
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **transaction**: [`Bytes`](../type-aliases/Bytes.md)
+##### transaction
 
-Signed transaction in one of the valid [Bytes](../type-aliases/Bytes.md) format.
+[`Bytes`](../type-aliases/Bytes-1.md)
 
-• **returnFormat?**: `ReturnFormat`
+Signed transaction in one of the valid [Bytes](../type-aliases/Bytes-1.md) format.
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+##### returnFormat?
 
-• **options?**: [`SendTransactionOptions`](SendTransactionOptions.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)\>
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
+
+##### options?
+
+[`SendTransactionOptions`](SendTransactionOptions.md)\<[`TransactionReceipt`](../type-aliases/TransactionReceipt.md)\>
 
 A configuration object used to change the behavior of the method
 
 #### Returns
 
-[`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), [`SendSignedTransactionEvents`](../type-aliases/SendSignedTransactionEvents.md)\<`ReturnFormat`\>\>
+[`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`TransactionReceipt`](../type-aliases/TransactionReceipt.md), [`SendSignedTransactionEvents`](../type-aliases/SendSignedTransactionEvents.md)\<`ReturnFormat`\>\>
 
 If `await`ed or `.then`d (i.e. the promise resolves), the transaction hash is returned.
 ```ts
@@ -4827,37 +4759,43 @@ web3.eth.sendSignedTransaction(signedTransaction).on('error', error => console.l
 
 [`Web3Eth`](../classes/Web3Eth.md).[`sendSignedTransaction`](../classes/Web3Eth.md#sendsignedtransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1228
-
 ***
 
 ### sendTransaction()
 
-> **sendTransaction**\<`ReturnFormat`\>(`transaction`, `returnFormat`?, `options`?): [`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), [`SendTransactionEvents`](../type-aliases/SendTransactionEvents.md)\<`ReturnFormat`\>\>
+> **sendTransaction**\<`ReturnFormat`\>(`transaction`, `returnFormat?`, `options?`): [`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`TransactionReceipt`](../type-aliases/TransactionReceipt.md), [`SendTransactionEvents`](../type-aliases/SendTransactionEvents.md)\<`ReturnFormat`\>\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1143
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **transaction**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md) \| [`TransactionWithFromLocalWalletIndex`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromLocalWalletIndex.md) \| [`TransactionWithToLocalWalletIndex`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithToLocalWalletIndex.md) \| [`TransactionWithFromAndToLocalWalletIndex`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromAndToLocalWalletIndex.md)
+##### transaction
 
-The [Transaction](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md), [TransactionWithFromLocalWalletIndex](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromLocalWalletIndex.md), [TransactionWithToLocalWalletIndex](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithToLocalWalletIndex.md) or [TransactionWithFromAndToLocalWalletIndex](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionWithFromAndToLocalWalletIndex.md) to send. __Note:__ In the `to` and `from` fields when hex strings are used, it is assumed they are addresses, for any other form (number, string number, etc.) it is assumed they are wallet indexes.
+[`Transaction`](Transaction-1.md) \| [`TransactionWithFromLocalWalletIndex`](TransactionWithFromLocalWalletIndex.md) \| [`TransactionWithToLocalWalletIndex`](TransactionWithToLocalWalletIndex.md) \| [`TransactionWithFromAndToLocalWalletIndex`](TransactionWithFromAndToLocalWalletIndex.md)
 
-• **returnFormat?**: `ReturnFormat`
+The [Transaction](Transaction-1.md), [TransactionWithFromLocalWalletIndex](TransactionWithFromLocalWalletIndex.md), [TransactionWithToLocalWalletIndex](TransactionWithToLocalWalletIndex.md) or [TransactionWithFromAndToLocalWalletIndex](TransactionWithFromAndToLocalWalletIndex.md) to send. __Note:__ In the `to` and `from` fields when hex strings are used, it is assumed they are addresses, for any other form (number, string number, etc.) it is assumed they are wallet indexes.
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+##### returnFormat?
 
-• **options?**: [`SendTransactionOptions`](SendTransactionOptions.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)\>
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
+
+##### options?
+
+[`SendTransactionOptions`](SendTransactionOptions.md)\<[`TransactionReceipt`](../type-aliases/TransactionReceipt.md)\>
 
 A configuration object used to change the behavior of the `sendTransaction` method.
 
 #### Returns
 
-[`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md), [`SendTransactionEvents`](../type-aliases/SendTransactionEvents.md)\<`ReturnFormat`\>\>
+[`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`TransactionReceipt`](../type-aliases/TransactionReceipt.md), [`SendTransactionEvents`](../type-aliases/SendTransactionEvents.md)\<`ReturnFormat`\>\>
 
 If `await`ed or `.then`d (i.e. the promise resolves), the transaction hash is returned.
 ```ts
@@ -4964,19 +4902,19 @@ web3.eth.sendTransaction(transaction).on('error', error => console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`sendTransaction`](../classes/Web3Eth.md#sendtransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1143
-
 ***
 
 ### setConfig()
 
 > **setConfig**(`options`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:48
+
 #### Parameters
 
-• **options**: [`Partial`](../type-aliases/Partial.md)\<[`Web3ConfigOptions`](Web3ConfigOptions.md)\>
+##### options
+
+[`Partial`](../type-aliases/Partial.md)\<[`Web3ConfigOptions`](Web3ConfigOptions.md)\>
 
 #### Returns
 
@@ -4986,19 +4924,19 @@ node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules
 
 [`Web3Eth`](../classes/Web3Eth.md).[`setConfig`](../classes/Web3Eth.md#setconfig)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:48
-
 ***
 
 ### setMaxListenerWarningThreshold()
 
 > **setMaxListenerWarningThreshold**(`maxListenersWarningThreshold`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+
 #### Parameters
 
-• **maxListenersWarningThreshold**: `number`
+##### maxListenersWarningThreshold
+
+`number`
 
 #### Returns
 
@@ -5008,21 +4946,21 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Eth`](../classes/Web3Eth.md).[`setMaxListenerWarningThreshold`](../classes/Web3Eth.md#setmaxlistenerwarningthreshold)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
-
 ***
 
 ### setProvider()
 
-> **setProvider**(`provider`?): `boolean`
+> **setProvider**(`provider?`): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:155
 
 Will set the provider.
 
 #### Parameters
 
-• **provider?**: `string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<[`Web3EthExecutionAPI`](../type-aliases/Web3EthExecutionAPI.md)\>
+##### provider?
+
+`string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<[`Web3EthExecutionAPI`](../type-aliases/Web3EthExecutionAPI.md)\>
 
 [SupportedProviders](../type-aliases/SupportedProviders.md) The provider to set
 
@@ -5036,19 +4974,19 @@ Returns true if the provider was set
 
 [`Web3Eth`](../classes/Web3Eth.md).[`setProvider`](../classes/Web3Eth.md#setprovider)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:155
-
 ***
 
 ### setRequestManagerMiddleware()
 
 > **setRequestManagerMiddleware**(`requestManagerMiddleware`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:156
+
 #### Parameters
 
-• **requestManagerMiddleware**: [`RequestManagerMiddleware`](RequestManagerMiddleware.md)\<[`Web3EthExecutionAPI`](../type-aliases/Web3EthExecutionAPI.md)\>
+##### requestManagerMiddleware
+
+[`RequestManagerMiddleware`](RequestManagerMiddleware.md)\<[`Web3EthExecutionAPI`](../type-aliases/Web3EthExecutionAPI.md)\>
 
 #### Returns
 
@@ -5058,19 +4996,19 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Eth`](../classes/Web3Eth.md).[`setRequestManagerMiddleware`](../classes/Web3Eth.md#setrequestmanagermiddleware)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:156
-
 ***
 
 ### setTransactionMiddleware()
 
 > **setTransactionMiddleware**(`transactionMiddleware`): `void`
 
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:48
+
 #### Parameters
 
-• **transactionMiddleware**: [`TransactionMiddleware`](TransactionMiddleware.md)
+##### transactionMiddleware
+
+[`TransactionMiddleware`](TransactionMiddleware.md)
 
 #### Returns
 
@@ -5080,35 +5018,41 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Eth`](../classes/Web3Eth.md).[`setTransactionMiddleware`](../classes/Web3Eth.md#settransactionmiddleware)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:48
-
 ***
 
 ### sign()
 
-> **sign**\<`ReturnFormat`\>(`message`, `addressOrIndex`, `returnFormat`?): `Promise`\<`object` \| [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
+> **sign**\<`ReturnFormat`\>(`message`, `addressOrIndex`, `returnFormat?`): `Promise`\<\{ `message?`: `string`; `messageHash`: `string`; `r`: `string`; `s`: `string`; `signature`: `string`; `v`: `string`; \} \| [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1256
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **message**: [`Bytes`](../type-aliases/Bytes.md)
+##### message
 
-Data to sign in one of the valid [Bytes](../type-aliases/Bytes.md) format.
+[`Bytes`](../type-aliases/Bytes-1.md)
 
-• **addressOrIndex**: `string` \| `number`
+Data to sign in one of the valid [Bytes](../type-aliases/Bytes-1.md) format.
 
-• **returnFormat?**: `ReturnFormat`
+##### addressOrIndex
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`string` \| `number`
+
+##### returnFormat?
+
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
-`Promise`\<`object` \| [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
+`Promise`\<\{ `message?`: `string`; `messageHash`: `string`; `r`: `string`; `s`: `string`; `signature`: `string`; `v`: `string`; \} \| [`ByteTypes`](../type-aliases/ByteTypes.md)\[`ReturnFormat`\[`"bytes"`\]\]\>
 
 The signed `message`.
 
@@ -5137,29 +5081,33 @@ web3.eth.sign("0x48656c6c6f20776f726c64", 0).then(console.log);
 
 [`Web3Eth`](../classes/Web3Eth.md).[`sign`](../classes/Web3Eth.md#sign)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1256
-
 ***
 
 ### signTransaction()
 
-> **signTransaction**\<`ReturnFormat`\>(`transaction`, `returnFormat`?): `Promise`\<[`SignedTransactionInfoAPI`](SignedTransactionInfoAPI.md)\>
+> **signTransaction**\<`ReturnFormat`\>(`transaction`, `returnFormat?`): `Promise`\<[`SignedTransactionInfoAPI`](SignedTransactionInfoAPI.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1315
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **transaction**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+##### transaction
+
+[`Transaction`](Transaction-1.md)
 
 The transaction object to sign.
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) Specifies how the return data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) Specifies how the return data should be formatted.
 
 #### Returns
 
@@ -5217,39 +5165,47 @@ web3.eth.signTransaction(transaction, { number: FMT_NUMBER.NUMBER , bytes: FMT_B
 
 [`Web3Eth`](../classes/Web3Eth.md).[`signTransaction`](../classes/Web3Eth.md#signtransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1315
-
 ***
 
 ### signTypedData()
 
-> **signTypedData**\<`ReturnFormat`\>(`address`, `typedData`, `useLegacy`?, `returnFormat`?): `Promise`\<`string`\>
+> **signTypedData**\<`ReturnFormat`\>(`address`, `typedData`, `useLegacy?`, `returnFormat?`): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1678
 
 This method sends EIP-712 typed data to the RPC provider to be signed.
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 The address that corresponds with the private key used to sign the typed data.
 
-• **typedData**: [`Eip712TypedData`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Eip712TypedData.md)
+##### typedData
+
+[`Eip712TypedData`](Eip712TypedData.md)
 
 The EIP-712 typed data object.
 
-• **useLegacy?**: `boolean`
+##### useLegacy?
+
+`boolean`
 
 A boolean flag determining whether the RPC call uses the legacy method `eth_signTypedData` or the newer method `eth_signTypedData_v4`
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
 
-([DataFormat](../type-aliases/DataFormat.md) defaults to [DEFAULT_RETURN_FORMAT](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/variables/DEFAULT_RETURN_FORMAT.md)) - Specifies how the signed typed data should be formatted.
+`ReturnFormat`
+
+([DataFormat](../type-aliases/DataFormat.md) defaults to DEFAULT\_RETURN\_FORMAT) - Specifies how the signed typed data should be formatted.
 
 #### Returns
 
@@ -5261,29 +5217,33 @@ The signed typed data.
 
 [`Web3Eth`](../classes/Web3Eth.md).[`signTypedData`](../classes/Web3Eth.md#signtypeddata)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1678
-
 ***
 
 ### submitWork()
 
 > **submitWork**(`nonce`, `hash`, `digest`): `Promise`\<`boolean`\>
 
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1445
+
 Used for submitting a proof-of-work solution.
 
 #### Parameters
 
-• **nonce**: `string`
+##### nonce
+
+`string`
 
 The nonce found (8 bytes).
 
-• **hash**: `string`
+##### hash
+
+`string`
 
 The header’s pow-hash (32 bytes).
 
-• **digest**: `string`
+##### digest
+
+`string`
 
 The mix digest (32 bytes).
 
@@ -5306,35 +5266,43 @@ web3.eth.submitWork([
 
 [`Web3Eth`](../classes/Web3Eth.md).[`submitWork`](../classes/Web3Eth.md#submitwork)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1445
-
 ***
 
 ### subscribe()
 
-> **subscribe**\<`T`, `ReturnType`\>(`name`, `args`?, `returnFormat`?): `Promise`\<[`InstanceType`](../type-aliases/InstanceType.md)\<[`RegisteredSubscription`](../type-aliases/RegisteredSubscription.md)\[`T`\]\>\>
+> **subscribe**\<`T`, `ReturnType`\>(`name`, `args?`, `returnFormat?`): `Promise`\<[`InstanceType`](../type-aliases/InstanceType.md)\<[`RegisteredSubscription`](../type-aliases/RegisteredSubscription.md)\[`T`\]\>\>
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1811
 
 Lets you subscribe to specific events in the blockchain.
 
 #### Type Parameters
 
-• **T** *extends* keyof [`RegisteredSubscription`](../type-aliases/RegisteredSubscription.md)
+##### T
 
-• **ReturnType** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = [`DataFormat`](../type-aliases/DataFormat.md)
+`T` *extends* keyof [`RegisteredSubscription`](../type-aliases/RegisteredSubscription.md)
+
+##### ReturnType
+
+`ReturnType` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = [`DataFormat`](../type-aliases/DataFormat.md)
 
 #### Parameters
 
-• **name**: `T`
+##### name
+
+`T`
 
 The subscription you want to subscribe to.
 
-• **args?**: [`ConstructorParameters`](../type-aliases/ConstructorParameters.md)\<[`RegisteredSubscription`](../type-aliases/RegisteredSubscription.md)\[`T`\]\>\[`0`\]
+##### args?
+
+[`ConstructorParameters`](../type-aliases/ConstructorParameters.md)\<[`RegisteredSubscription`](../type-aliases/RegisteredSubscription.md)\[`T`\]\>\[`0`\]
 
 Optional additional parameters, depending on the subscription type.
 
-• **returnFormat?**: `ReturnType`
+##### returnFormat?
+
+`ReturnType`
 
 #### Returns
 
@@ -5355,6 +5323,8 @@ You can use the subscription object to listen on:
 
 #### Examples
 
+**\*\*Subscribe to Smart Contract events\*\***
+
 ```ts
 // Subscribe to `logs`
 const logSubscription = web3.eth.subscribe('logs', {
@@ -5365,6 +5335,8 @@ logSubscription.on('data', (data: any) => console.log(data));
 logSubscription.on('error', (error: any) => console.log(error));
 
 ```
+
+**\*\*Subscribe to new block headers\*\***
 
 ```ts
 // Subscribe to `newBlockHeaders`
@@ -5395,7 +5367,7 @@ You can subscribe to pending transactions by calling web3.eth.subscribe('pending
 ( same as subscribe('newBlockHeaders'))
 Subscribes to incoming block headers. This can be used as timer to check for changes on the blockchain.
 
-The structure of a returned block header is [BlockHeaderOutput](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/BlockHeaderOutput.md):
+The structure of a returned block header is [BlockHeaderOutput](BlockHeaderOutput.md):
 
 ```ts
 (await web3.eth.subscribe('newHeads')).on( // 'newBlockHeaders' would work as well
@@ -5470,15 +5442,13 @@ topics: [
 
 [`Web3Eth`](../classes/Web3Eth.md).[`subscribe`](../classes/Web3Eth.md#subscribe)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_eth.d.ts:1811
-
 ***
 
 ### use()
 
 > **use**\<`T`, `T2`\>(`ContextRef`, ...`args`): `T`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:68
 
 Use to create new object of any type extended by `Web3Context`
 and link it to current context. This can be used to initiate a global context object
@@ -5486,15 +5456,23 @@ and then use it to create new objects of any type extended by `Web3Context`.
 
 #### Type Parameters
 
-• **T** *extends* [`Web3Context`](../classes/Web3Context.md)\<`unknown`, `any`\>
+##### T
 
-• **T2** *extends* `unknown`[]
+`T` *extends* [`Web3Context`](../classes/Web3Context.md)\<`unknown`, `any`\>
+
+##### T2
+
+`T2` *extends* `unknown`[]
 
 #### Parameters
 
-• **ContextRef**: [`Web3ContextConstructor`](../type-aliases/Web3ContextConstructor.md)\<`T`, `T2`\>
+##### ContextRef
 
-• ...**args**: [`...T2[]`]
+[`Web3ContextConstructor`](../type-aliases/Web3ContextConstructor.md)\<`T`, `T2`\>
+
+##### args
+
+...\[`...T2[]`\]
 
 #### Returns
 
@@ -5503,7 +5481,3 @@ and then use it to create new objects of any type extended by `Web3Context`.
 #### Inherited from
 
 [`Web3Eth`](../classes/Web3Eth.md).[`use`](../classes/Web3Eth.md#use)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:68

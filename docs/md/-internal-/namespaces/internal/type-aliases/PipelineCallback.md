@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: PipelineCallback\<S\>
 
-> **PipelineCallback**\<`S`\>: `S` *extends* [`PipelineDestinationPromiseFunction`](PipelineDestinationPromiseFunction.md)\<`any`, infer P\> ? (`err`, `value`) => `void` : (`err`) => `void`
+> **PipelineCallback**\<`S`\> = `S` *extends* [`PipelineDestinationPromiseFunction`](PipelineDestinationPromiseFunction.md)\<`any`, infer P\> ? (`err`, `value`) => `void` : (`err`) => `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1490
 
 ## Type Parameters
 
-• **S** *extends* [`PipelineDestination`](PipelineDestination.md)\<`any`, `any`\>
+### S
 
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1490
+`S` *extends* [`PipelineDestination`](PipelineDestination.md)\<`any`, `any`\>

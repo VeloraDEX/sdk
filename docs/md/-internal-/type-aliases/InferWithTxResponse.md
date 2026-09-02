@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: InferWithTxResponse\<Config, Funcs\>
 
-> **InferWithTxResponse**\<`Config`, `Funcs`\>: `Config` *extends* [`SDKConfig`](../../type-aliases/SDKConfig.md)\<infer TxResponse\> ? [`IntersectionOfReturns`](IntersectionOfReturns.md)\<`Funcs`\> *extends* [`Record`](Record.md)\<`string`, `any`\> ? [`MergeExtendableRecursively`](MergeExtendableRecursively.md)\<[`IntersectionOfReturns`](IntersectionOfReturns.md)\<`Funcs`\>, [[`ApproveTokenFunctions`](../../type-aliases/ApproveTokenFunctions.md)\<`TxResponse`\>, [`CancelOTCOrderFunctions`](../../type-aliases/CancelOTCOrderFunctions.md)\<`TxResponse`\>, [`FillOTCOrderFunctions`](../../type-aliases/FillOTCOrderFunctions.md)\<`TxResponse`\>, [`ApproveTokenForOTCOrderFunctions`](../../type-aliases/ApproveTokenForOTCOrderFunctions.md)\<`TxResponse`\>, [`ApproveTokenForDeltaFunctions`](../../type-aliases/ApproveTokenForDeltaFunctions.md)\<`TxResponse`\>, [`PreSignDeltaOrderFunctions`](../../type-aliases/PreSignDeltaOrderFunctions.md)\<`TxResponse`\>, [`PreSignExternalDeltaOrderFunctions`](../../type-aliases/PreSignExternalDeltaOrderFunctions.md)\<`TxResponse`\>, [`DeltaTokenModuleFunctions`](../../type-aliases/DeltaTokenModuleFunctions.md)\<`TxResponse`\>, [`PreSignTWAPDeltaOrderFunctions`](../../type-aliases/PreSignTWAPDeltaOrderFunctions.md)\<`TxResponse`\>]\> : [`IntersectionOfReturns`](IntersectionOfReturns.md)\<`Funcs`\> : [`IntersectionOfReturns`](IntersectionOfReturns.md)\<`Funcs`\>
+> **InferWithTxResponse**\<`Config`, `Funcs`\> = `Config` *extends* [`SDKConfig`](../../type-aliases/SDKConfig.md)\<infer TxResponse\> ? [`IntersectionOfReturns`](IntersectionOfReturns.md)\<`Funcs`\> *extends* [`Record`](Record.md)\<`string`, `any`\> ? [`MergeExtendableRecursively`](MergeExtendableRecursively.md)\<[`IntersectionOfReturns`](IntersectionOfReturns.md)\<`Funcs`\>, \[[`ApproveTokenFunctions`](../../type-aliases/ApproveTokenFunctions.md)\<`TxResponse`\>, [`CancelOTCOrderFunctions`](../../type-aliases/CancelOTCOrderFunctions.md)\<`TxResponse`\>, [`FillOTCOrderFunctions`](../../type-aliases/FillOTCOrderFunctions.md)\<`TxResponse`\>, [`ApproveTokenForOTCOrderFunctions`](../../type-aliases/ApproveTokenForOTCOrderFunctions.md)\<`TxResponse`\>, [`ApproveTokenForDeltaFunctions`](../../type-aliases/ApproveTokenForDeltaFunctions.md)\<`TxResponse`\>, [`PreSignDeltaOrderFunctions`](../../type-aliases/PreSignDeltaOrderFunctions.md)\<`TxResponse`\>, [`PreSignExternalDeltaOrderFunctions`](../../type-aliases/PreSignExternalDeltaOrderFunctions.md)\<`TxResponse`\>, [`DeltaTokenModuleFunctions`](../../type-aliases/DeltaTokenModuleFunctions.md)\<`TxResponse`\>, [`PreSignTWAPDeltaOrderFunctions`](../../type-aliases/PreSignTWAPDeltaOrderFunctions.md)\<`TxResponse`\>\]\> : [`IntersectionOfReturns`](IntersectionOfReturns.md)\<`Funcs`\> : [`IntersectionOfReturns`](IntersectionOfReturns.md)\<`Funcs`\>
+
+Defined in: [src/sdk/partial.ts:38](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L38)
 
 ## Type Parameters
 
-• **Config** *extends* [`ConstructBaseInput`](../interfaces/ConstructBaseInput.md)
+### Config
 
-• **Funcs** *extends* [[`SDKFunction`](SDKFunction.md)\<`Config`\>, `...SDKFunction<Config>[]`]
+`Config` *extends* [`ConstructBaseInput`](../interfaces/ConstructBaseInput.md)
 
-## Defined in
+### Funcs
 
-[src/sdk/partial.ts:38](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L38)
+`Funcs` *extends* \[[`SDKFunction`](SDKFunction.md)\<`Config`\>, `...SDKFunction<Config>[]`\]

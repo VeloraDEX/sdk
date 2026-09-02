@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,21 +6,21 @@
 
 # Interface: CallSite
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:304
+
 ## Methods
 
 ### getColumnNumber()
 
-> **getColumnNumber**(): `null` \| `number`
+> **getColumnNumber**(): `number` \| `null`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:349
 
 Current column number [if this function was defined in a script]
 
 #### Returns
 
-`null` \| `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:349
+`number` \| `null`
 
 ***
 
@@ -28,13 +28,11 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:34
 
 > **getEnclosingColumnNumber**(): `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:397
+
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:397
 
 ***
 
@@ -42,68 +40,62 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:39
 
 > **getEnclosingLineNumber**(): `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:398
+
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:398
 
 ***
 
 ### getEvalOrigin()
 
-> **getEvalOrigin**(): `undefined` \| `string`
+> **getEvalOrigin**(): `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:355
 
 A call site object representing the location where eval was called
 [if this function was created using a call to eval]
 
 #### Returns
 
-`undefined` \| `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:355
+`string` \| `undefined`
 
 ***
 
 ### getFileName()
 
-> **getFileName**(): `undefined` \| `string`
+> **getFileName**(): `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:339
 
 Name of the script [if this function was defined in a script]
 
 #### Returns
 
-`undefined` \| `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:339
+`string` \| `undefined`
 
 ***
 
 ### getFunction()
 
-> **getFunction**(): `undefined` \| `Function`
+> **getFunction**(): `Function` \| `undefined`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:321
 
 Current function
 
 #### Returns
 
-`undefined` \| `Function`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:321
+`Function` \| `undefined`
 
 ***
 
 ### getFunctionName()
 
-> **getFunctionName**(): `null` \| `string`
+> **getFunctionName**(): `string` \| `null`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:328
 
 Name of the current function, typically its name property.
 If a name property is not available an attempt will be made to try
@@ -111,44 +103,36 @@ to infer a name from the function's context.
 
 #### Returns
 
-`null` \| `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:328
+`string` \| `null`
 
 ***
 
 ### getLineNumber()
 
-> **getLineNumber**(): `null` \| `number`
+> **getLineNumber**(): `number` \| `null`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:344
 
 Current line number [if this function was defined in a script]
 
 #### Returns
 
-`null` \| `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:344
+`number` \| `null`
 
 ***
 
 ### getMethodName()
 
-> **getMethodName**(): `null` \| `string`
+> **getMethodName**(): `string` \| `null`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:334
 
 Name of the property [of "this" or one of its prototypes] that holds
 the current function
 
 #### Returns
 
-`null` \| `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:334
+`string` \| `null`
 
 ***
 
@@ -156,19 +140,19 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:33
 
 > **getPosition**(): `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:399
+
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:399
 
 ***
 
 ### getPromiseIndex()
 
-> **getPromiseIndex**(): `null` \| `number`
+> **getPromiseIndex**(): `number` \| `null`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:392
 
 returns the index of the promise element that was followed in
 Promise.all() or Promise.any() for async stack traces, or null
@@ -176,11 +160,7 @@ if the CallSite is not an async
 
 #### Returns
 
-`null` \| `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:392
+`number` \| `null`
 
 ***
 
@@ -188,13 +168,11 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:39
 
 > **getScriptHash**(): `string`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:395
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:395
 
 ***
 
@@ -202,13 +180,11 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:39
 
 > **getScriptNameOrSourceURL**(): `string`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:394
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:394
 
 ***
 
@@ -216,21 +192,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:39
 
 > **getThis**(): `unknown`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:308
+
 Value of "this"
 
 #### Returns
 
 `unknown`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:308
-
 ***
 
 ### getTypeName()
 
-> **getTypeName**(): `null` \| `string`
+> **getTypeName**(): `string` \| `null`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:316
 
 Type of "this" as a string.
 This is the name of the function stored in the constructor field of
@@ -239,11 +215,7 @@ property.
 
 #### Returns
 
-`null` \| `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:316
+`string` \| `null`
 
 ***
 
@@ -251,15 +223,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:31
 
 > **isAsync**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:380
+
 is this an async call (i.e. await, Promise.all(), or Promise.any())?
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:380
 
 ***
 
@@ -267,15 +237,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:38
 
 > **isConstructor**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:375
+
 Is this a constructor call?
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:375
 
 ***
 
@@ -283,15 +251,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:37
 
 > **isEval**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:365
+
 Does this call take place in code defined by a call to eval?
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:365
 
 ***
 
@@ -299,15 +265,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:36
 
 > **isNative**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:370
+
 Is this call in native V8 code?
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:370
 
 ***
 
@@ -315,15 +279,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:37
 
 > **isPromiseAll**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:385
+
 is this an async call to Promise.all()?
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:385
 
 ***
 
@@ -331,15 +293,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:38
 
 > **isToplevel**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:360
+
 Is this a toplevel invocation, that is, is "this" the global object?
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:360
 
 ***
 
@@ -347,10 +307,8 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:36
 
 > **toString**(): `string`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:401
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:401

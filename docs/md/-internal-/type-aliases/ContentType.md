@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: ContentType
 
-> **ContentType**: [`AxiosHeaderValue`](AxiosHeaderValue.md) \| `"text/html"` \| `"text/plain"` \| `"multipart/form-data"` \| `"application/json"` \| `"application/x-www-form-urlencoded"` \| `"application/octet-stream"`
+> **ContentType** = [`AxiosHeaderValue`](AxiosHeaderValue.md) \| `"text/html"` \| `"text/plain"` \| `"multipart/form-data"` \| `"application/json"` \| `"application/x-www-form-urlencoded"` \| `"application/octet-stream"`
 
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:103
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:113

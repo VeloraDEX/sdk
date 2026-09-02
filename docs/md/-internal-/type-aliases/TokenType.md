@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: TokenType
 
-> **TokenType**: `"ETH"` \| `"ERC20"` \| `"SYNTH"`
+> **TokenType** = `"ETH"` \| `"ERC20"` \| `"SYNTH"`
 
-## Defined in
-
-[src/helpers/token.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L32)
+Defined in: [src/helpers/token.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L32)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,18 @@
 
 # Type Alias: Extract\<T, U\>
 
-> **Extract**\<`T`, `U`\>: `T` *extends* `U` ? `T` : `never`
+> **Extract**\<`T`, `U`\> = `T` *extends* `U` ? `T` : `never`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1625
 
 Extract from T those types that are assignable to U
 
 ## Type Parameters
 
-• **T**
+### T
 
-• **U**
+`T`
 
-## Defined in
+### U
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1618
+`U`

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: PartnerFeeQueryParams
 
-> **PartnerFeeQueryParams**: `object`
+> **PartnerFeeQueryParams** = `object`
 
-## Type declaration
+Defined in: [src/methods/delta/getPartnerFee.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getPartnerFee.ts#L11)
+
+## Properties
 
 ### partner
 
 > **partner**: `string`
 
-## Defined in
-
-[src/methods/delta/getPartnerFee.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getPartnerFee.ts#L11)
+Defined in: [src/methods/delta/getPartnerFee.ts:12](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getPartnerFee.ts#L12)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,22 @@
 
 # Type Alias: AbiEventParameterToPrimitiveType\<abiParameter, _options, _type\>
 
-> **AbiEventParameterToPrimitiveType**\<`abiParameter`, `_options`, `_type`\>: `_options`\[`"EnableUnion"`\] *extends* `true` ? [`LogTopicType`](LogTopicType.md)\<`_type`\> : `_type`
+> **AbiEventParameterToPrimitiveType**\<`abiParameter`, `_options`, `_type`\> = `_options`\[`"EnableUnion"`\] *extends* `true` ? [`LogTopicType`](LogTopicType.md)\<`_type`\> : `_type`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:117
 
 **`Internal`**
 
 ## Type Parameters
 
-• **abiParameter** *extends* [`AbiParameter`](AbiParameter.md)
+### abiParameter
 
-• **_options** *extends* [`EventParameterOptions`](EventParameterOptions.md) = [`DefaultEventParameterOptions`](DefaultEventParameterOptions.md)
+`abiParameter` *extends* [`AbiParameter`](AbiParameter-1.md)
 
-• **_type** = [`AbiParameterToPrimitiveType`](AbiParameterToPrimitiveType.md)\<`abiParameter`\>
+### _options
 
-## Defined in
+`_options` *extends* [`EventParameterOptions`](EventParameterOptions.md) = [`DefaultEventParameterOptions`](DefaultEventParameterOptions.md)
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:116
+### _type
+
+`_type` = [`AbiParameterToPrimitiveType`](AbiParameterToPrimitiveType.md)\<`abiParameter`\>

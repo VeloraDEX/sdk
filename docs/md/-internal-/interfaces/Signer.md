@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Signer
 
 # Interface: Signer
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:14
 
 A Signer represents an account on the Ethereum Blockchain, and is most often
  backed by a private key represented by a mnemonic or residing on a Hardware Wallet.
@@ -21,7 +23,9 @@ A Signer represents an account on the Ethereum Blockchain, and is most often
 
 ### provider
 
-> **provider**: `null` \| [`Provider`](Provider.md)
+> **provider**: [`Provider`](Provider.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:18
 
 The [[Provider]] attached to this Signer (if any).
 
@@ -29,21 +33,27 @@ The [[Provider]] attached to this Signer (if any).
 
 [`ContractRunner`](ContractRunner.md).[`provider`](ContractRunner.md#provider)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:18
-
 ## Methods
 
 ### call()
 
 > **call**(`tx`): `Promise`\<`string`\>
 
-Required for pure, view or static calls to contracts.
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:86
+
+Evaluates the //tx// by running it against the current Blockchain state. This
+ cannot change state and has no cost in ether, as it is effectively simulating
+ execution.
+
+ This can be used to have the Blockchain perform computations based on its state
+ (e.g. running a Contract's getters) or to simulate the effect of a transaction
+ before actually performing an operation.
 
 #### Parameters
 
-• **tx**: [`TransactionRequest`](TransactionRequest.md)
+##### tx
+
+[`TransactionRequest`](TransactionRequest.md)
 
 #### Returns
 
@@ -53,30 +63,26 @@ Required for pure, view or static calls to contracts.
 
 `ContractRunner.call`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:86
-
 ***
 
 ### connect()
 
-> **connect**(`provider`): [`Signer`](Signer.md)
+> **connect**(`provider`): `Signer`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:23
 
 Returns a new instance of this Signer connected to //provider// or detached
  from any Provider if null.
 
 #### Parameters
 
-• **provider**: `null` \| [`Provider`](Provider.md)
+##### provider
+
+[`Provider`](Provider.md) \| `null`
 
 #### Returns
 
-[`Signer`](Signer.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:23
+`Signer`
 
 ***
 
@@ -84,11 +90,21 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/si
 
 > **estimateGas**(`tx`): `Promise`\<`bigint`\>
 
-Required to estimate gas.
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:76
+
+Estimates the required gas required to execute //tx// on the Blockchain. This
+ will be the expected amount a transaction will require as its ``gasLimit``
+ to successfully run all the necessary computations and store the needed state
+ that the transaction intends.
+
+ Keep in mind that this is **best efforts**, since the state of the Blockchain
+ is in flux, which could affect transaction gas requirements.
 
 #### Parameters
 
-• **tx**: [`TransactionRequest`](TransactionRequest.md)
+##### tx
+
+[`TransactionRequest`](TransactionRequest.md)
 
 #### Returns
 
@@ -106,15 +122,13 @@ UNPREDICTABLE_GAS_LIMIT A transaction that is believed by the node to likely
 
 `ContractRunner.estimateGas`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:76
-
 ***
 
 ### getAddress()
 
 > **getAddress**(): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:27
 
 Get the address of the Signer.
 
@@ -126,21 +140,21 @@ Get the address of the Signer.
 
 [`Addressable`](Addressable.md).[`getAddress`](Addressable.md#getaddress)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:27
-
 ***
 
 ### getNonce()
 
-> **getNonce**(`blockTag`?): `Promise`\<`number`\>
+> **getNonce**(`blockTag?`): `Promise`\<`number`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:34
 
 Gets the next nonce required for this Signer to send a transaction.
 
 #### Parameters
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md)
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag-1.md)
 
 The blocktag to base the transaction count on, keep in mind
         many nodes do not honour this value and silently ignore it [default: ``"latest"``]
@@ -149,15 +163,13 @@ The blocktag to base the transaction count on, keep in mind
 
 `Promise`\<`number`\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:34
-
 ***
 
 ### populateCall()
 
 > **populateCall**(`tx`): `Promise`\<[`TransactionLike`](TransactionLike.md)\<`string`\>\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:42
 
 Prepares a [TransactionRequest](TransactionRequest.md) for calling:
  - resolves ``to`` and ``from`` addresses
@@ -165,7 +177,9 @@ Prepares a [TransactionRequest](TransactionRequest.md) for calling:
 
 #### Parameters
 
-• **tx**: [`TransactionRequest`](TransactionRequest.md)
+##### tx
+
+[`TransactionRequest`](TransactionRequest.md)
 
 The call to prepare
 
@@ -173,15 +187,13 @@ The call to prepare
 
 `Promise`\<[`TransactionLike`](TransactionLike.md)\<`string`\>\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:42
-
 ***
 
 ### populateTransaction()
 
 > **populateTransaction**(`tx`): `Promise`\<[`TransactionLike`](TransactionLike.md)\<`string`\>\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:60
 
 Prepares a [TransactionRequest](TransactionRequest.md) for sending to the network by
  populating any missing properties:
@@ -195,7 +207,9 @@ Prepares a [TransactionRequest](TransactionRequest.md) for sending to the networ
 
 #### Parameters
 
-• **tx**: [`TransactionRequest`](TransactionRequest.md)
+##### tx
+
+[`TransactionRequest`](TransactionRequest.md)
 
 The call to prepare
 
@@ -209,33 +223,29 @@ Some Signer implementations may skip populating properties that
        are populated downstream; for example JsonRpcSigner defers to the
        node to populate the nonce and fee data.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:60
-
 ***
 
 ### resolveName()
 
-> **resolveName**(`name`): `Promise`\<`null` \| `string`\>
+> **resolveName**(`name`): `Promise`\<`string` \| `null`\>
 
-Required to support ENS names
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:90
+
+Resolves an ENS Name to an address.
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
+`Promise`\<`string` \| `null`\>
 
 #### Overrides
 
 [`NameResolver`](NameResolver.md).[`resolveName`](NameResolver.md#resolvename)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:90
 
 ***
 
@@ -243,11 +253,17 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/si
 
 > **sendTransaction**(`tx`): `Promise`\<[`TransactionResponse`](../classes/TransactionResponse.md)\>
 
-Required for state mutating calls
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:101
+
+Sends %%tx%% to the Network. The ``signer.populateTransaction(tx)``
+ is called first to ensure all necessary properties for the
+ transaction to be valid have been popualted first.
 
 #### Parameters
 
-• **tx**: [`TransactionRequest`](TransactionRequest.md)
+##### tx
+
+[`TransactionRequest`](TransactionRequest.md)
 
 #### Returns
 
@@ -257,15 +273,13 @@ Required for state mutating calls
 
 `ContractRunner.sendTransaction`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:101
-
 ***
 
 ### signMessage()
 
 > **signMessage**(`message`): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:112
 
 Signs an [[link-eip-191]] prefixed personal message.
 
@@ -278,15 +292,13 @@ Signs an [[link-eip-191]] prefixed personal message.
 
 #### Parameters
 
-• **message**: `string` \| `Uint8Array`
+##### message
+
+`string` \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
 
 #### Returns
 
 `Promise`\<`string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:112
 
 ***
 
@@ -294,20 +306,20 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/si
 
 > **signTransaction**(`tx`): `Promise`\<`string`\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:95
+
 Signs %%tx%%, returning the fully signed transaction. This does not
  populate any additional properties within the transaction.
 
 #### Parameters
 
-• **tx**: [`TransactionRequest`](TransactionRequest.md)
+##### tx
+
+[`TransactionRequest`](TransactionRequest.md)
 
 #### Returns
 
 `Promise`\<`string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:95
 
 ***
 
@@ -315,20 +327,24 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/si
 
 > **signTypedData**(`domain`, `types`, `value`): `Promise`\<`string`\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:116
+
 Signs the [[link-eip-712]] typed data.
 
 #### Parameters
 
-• **domain**: [`TypedDataDomain`](TypedDataDomain.md)
+##### domain
 
-• **types**: [`Record`](../type-aliases/Record.md)\<`string`, [`TypedDataField`](TypedDataField.md)[]\>
+[`TypedDataDomain`](TypedDataDomain.md)
 
-• **value**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+##### types
+
+[`Record`](../type-aliases/Record.md)\<`string`, [`TypedDataField`](TypedDataField.md)[]\>
+
+##### value
+
+[`Record`](../type-aliases/Record.md)\<`string`, `any`\>
 
 #### Returns
 
 `Promise`\<`string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/signer.d.ts:116

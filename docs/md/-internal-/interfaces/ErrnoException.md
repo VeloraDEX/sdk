@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,29 +6,39 @@
 
 # Interface: ErrnoException
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:404
+
 ## Extends
 
-- [`Error`](Error.md)
+- `Error`
 
 ## Properties
 
+### cause?
+
+> `optional` **cause?**: `unknown`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+#### Inherited from
+
+`Error.cause`
+
+***
+
 ### code?
 
-> `optional` **code**: `string`
+> `optional` **code?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:406
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:406
 
 ***
 
 ### errno?
 
-> `optional` **errno**: `number`
+> `optional` **errno?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:405
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:405
 
 ***
 
@@ -36,13 +46,11 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:40
 
 > **message**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Inherited from
 
-[`Error`](Error.md).[`message`](Error.md#message)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+`Error.message`
 
 ***
 
@@ -50,44 +58,36 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **name**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
+
 #### Inherited from
 
-[`Error`](Error.md).[`name`](Error.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
+`Error.name`
 
 ***
 
 ### path?
 
-> `optional` **path**: `string`
+> `optional` **path?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:407
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:407
 
 ***
 
 ### stack?
 
-> `optional` **stack**: `string`
+> `optional` **stack?**: `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Inherited from
 
-[`Error`](Error.md).[`stack`](Error.md#stack)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
+`Error.stack`
 
 ***
 
 ### syscall?
 
-> `optional` **syscall**: `string`
+> `optional` **syscall?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:408
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:408

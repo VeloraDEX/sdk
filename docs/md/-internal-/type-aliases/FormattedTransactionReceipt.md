@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: FormattedTransactionReceipt\<chain\>
 
-> **FormattedTransactionReceipt**\<`chain`\>: [`ExtractChainFormatterReturnType`](ExtractChainFormatterReturnType.md)\<`chain`, `"transactionReceipt"`, [`TransactionReceipt`](TransactionReceipt.md)\>
+> **FormattedTransactionReceipt**\<`chain`\> = [`ExtractChainFormatterReturnType`](ExtractChainFormatterReturnType.md)\<`chain`, `"transactionReceipt"`, [`TransactionReceipt`](TransactionReceipt-1.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/formatters/transactionReceipt.d.ts:7
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+### chain
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/utils/formatters/transactionReceipt.d.ts:7
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`

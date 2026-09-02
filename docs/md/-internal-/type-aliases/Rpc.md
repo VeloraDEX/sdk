@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,10 +6,8 @@
 
 # Type Alias: Rpc
 
-> **Rpc**: [`BlockOverrides`](BlockOverrides.md)\<[`Hex`](Hex.md), [`Hex`](Hex.md)\>
+> **Rpc** = [`BlockOverrides`](BlockOverrides.md)\<[`Hex`](Hex-1.md), [`Hex`](Hex-1.md)\>
+
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/BlockOverrides.d.ts:28
 
 RPC block overrides.
-
-## Defined in
-
-node\_modules/.pnpm/ox@0.9.6\_typescript@5.6.3\_zod@3.25.76/node\_modules/ox/\_types/core/BlockOverrides.d.ts:28

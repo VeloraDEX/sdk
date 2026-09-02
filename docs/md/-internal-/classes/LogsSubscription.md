@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,198 +6,117 @@
 
 # Class: LogsSubscription
 
-LogSubscription to be used to subscribe to events logs.
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_subscriptions.d.ts:13
 
-Following events are supported and can be accessed with either [LogsSubscription.once](LogsSubscription.md#once-1) or $[LogsSubscription.on](LogsSubscription.md#on-1) methods.
+## subscribe('logs')
+Subscribes to incoming logs, filtered by the given options. If a valid numerical fromBlock options property is set, web3.js will retrieve logs beginning from this point, backfilling the response as necessary.
 
-- **connected**: Emitted when the subscription is connected.
-- **data**: Fires on each incoming event with the event object as argument.
-- **changed**: Fires on each event which was removed from the blockchain. The event will have the additional property `removed: true`.
-- **error**: Fires on each error.
-
-```ts
-const subscription = await myContract.events.MyEvent({
-  filter: {myIndexedParam: [20,23], myOtherIndexedParam: '0x123456789...'}, // Using an array means OR: e.g. 20 or 23
-  fromBlock: 0
-});
-
-subscription.on("connected", function(subscriptionId){
-  console.log(subscriptionId);
-});
-
-subscription.on('data', function(event){
-  console.log(event); // same results as the optional callback above
-});
-
-subscription.on('changed', function(event){
-  // remove event from local database
-})
-
-subscription.on('error', function(error, receipt) { // If the transaction was rejected by the network with a receipt, the second parameter will be the receipt.
-  ...
-});
-
-// event output example
-> {
-  returnValues: {
-      myIndexedParam: 20,
-      myOtherIndexedParam: '0x123456789...',
-      myNonIndexParam: 'My String'
-  },
-  raw: {
-      data: '0x7f9fade1c0d57a7af66ab4ead79fade1c0d57a7af66ab4ead7c2c2eb7b11a91385',
-      topics: ['0xfd43ade1c09fade1c0d57a7af66ab4ead7c2c2eb7b11a91ffdd57a7af66ab4ead7', '0x7f9fade1c0d57a7af66ab4ead79fade1c0d57a7af66ab4ead7c2c2eb7b11a91385']
-  },
-  event: 'MyEvent',
-  signature: '0xfd43ade1c09fade1c0d57a7af66ab4ead7c2c2eb7b11a91ffdd57a7af66ab4ead7',
-  logIndex: 0,
-  transactionIndex: 0,
-  transactionHash: '0x7f9fade1c0d57a7af66ab4ead79fade1c0d57a7af66ab4ead7c2c2eb7b11a91385',
-  blockHash: '0xfd43ade1c09fade1c0d57a7af66ab4ead7c2c2eb7b11a91ffdd57a7af66ab4ead7',
-  blockNumber: 1234,
-  address: '0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
-}
-```
+You can subscribe to logs matching a given filter object, which can take the following parameters:
+- `fromBlock`: (optional, default: 'latest') Integer block number, or `'latest'` for the last mined block or `'pending'`, `'earliest'` for not yet mined transactions.
+- `address`: (optional) Contract address or a list of addresses from which logs should originate.
+- `topics`: (optional) Array of 32 Bytes DATA topics. Topics are order-dependent. Each topic can also be an array of DATA with `or` options.
 
 ## Extends
 
-- [`Web3Subscription`](Web3Subscription.md)\<`object`, `object`\>
+- [`Web3Subscription`](Web3Subscription.md)\<\{ `data`: [`LogsOutput`](../interfaces/LogsOutput.md); \}, \{ `address?`: [`Address`](../type-aliases/Address-2.md) \| [`Address`](../type-aliases/Address-2.md)[]; `fromBlock?`: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md); `topics?`: [`Topic`](../type-aliases/Topic.md)[]; \}\>
 
 ## Constructors
 
-### new LogsSubscription()
+### Constructor
 
-> **new LogsSubscription**(`args`, `options`): [`LogsSubscription`](LogsSubscription.md)
+> **new LogsSubscription**(`args`, `options`): `LogsSubscription`
 
-#### Parameters
-
-• **args**
-
-• **args.abi**: [`AbiBaseFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiBaseFragment.md) & `object` & `object`
-
-• **args.address?**: `string`
-
-• **args.jsonInterface**: [`ContractAbiWithSignature`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractAbiWithSignature.md)
-
-• **args.topics?**: (`null` \| `string` \| `string`[])[]
-
-• **options**
-
-• **options.returnFormat?**: [`DataFormat`](../type-aliases/DataFormat.md)
-
-• **options.subscriptionManager**: [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`unknown`, `object`\>
-
-#### Returns
-
-[`LogsSubscription`](LogsSubscription.md)
-
-#### Overrides
-
-[`Web3Subscription`](Web3Subscription.md).[`constructor`](Web3Subscription.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/log\_subscription.d.ts:82
-
-### new LogsSubscription()
-
-> **new LogsSubscription**(`args`, `options`): [`LogsSubscription`](LogsSubscription.md)
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:16
 
 #### Parameters
 
-• **args**
+##### args
 
-• **args.abi**: [`AbiBaseFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiBaseFragment.md) & `object` & `object`
+###### address?
 
-• **args.address?**: `string`
+`string` \| `string`[]
 
-• **args.jsonInterface**: [`ContractAbiWithSignature`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractAbiWithSignature.md)
+###### fromBlock?
 
-• **args.topics?**: (`null` \| `string` \| `string`[])[]
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
-• **options**
+###### topics?
 
-• **options.requestManager**: [`Web3RequestManager`](Web3RequestManager.md)\<[`EthExecutionAPI`](../type-aliases/EthExecutionAPI.md)\>
+`string`[]
 
-• **options.returnFormat?**: [`DataFormat`](../type-aliases/DataFormat.md)
+##### options
+
+###### returnFormat?
+
+[`DataFormat`](../type-aliases/DataFormat.md)
+
+###### subscriptionManager
+
+[`Web3SubscriptionManager`](Web3SubscriptionManager.md)
 
 #### Returns
 
-[`LogsSubscription`](LogsSubscription.md)
+`LogsSubscription`
+
+#### Inherited from
+
+[`Web3Subscription`](Web3Subscription.md).[`constructor`](Web3Subscription.md#constructor)
+
+### Constructor
+
+> **new LogsSubscription**(`args`, `options`): `LogsSubscription`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:23
+
+#### Parameters
+
+##### args
+
+###### address?
+
+`string` \| `string`[]
+
+###### fromBlock?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+
+###### topics?
+
+`string`[]
+
+##### options
+
+###### requestManager
+
+[`Web3RequestManager`](Web3RequestManager.md)\<[`EthExecutionAPI`](../type-aliases/EthExecutionAPI.md)\>
+
+###### returnFormat?
+
+[`DataFormat`](../type-aliases/DataFormat.md)
+
+#### Returns
+
+`LogsSubscription`
 
 #### Deprecated
 
 This constructor overloading should not be used
 
-#### Overrides
+#### Inherited from
 
-[`Web3Subscription`](Web3Subscription.md).[`constructor`](Web3Subscription.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/log\_subscription.d.ts:96
+[`Web3Subscription`](Web3Subscription.md).[`constructor`](Web3Subscription.md#constructor)
 
 ## Properties
 
 ### \_id?
 
-> `protected` `optional` **\_id**: `string`
+> `protected` `optional` **\_id?**: `string`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:15
 
 #### Inherited from
 
 [`Web3Subscription`](Web3Subscription.md).[`_id`](Web3Subscription.md#_id)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:15
-
-***
-
-### abi
-
-> `readonly` **abi**: [`AbiBaseFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiBaseFragment.md) & `object` & `object`
-
-The {@doclink glossary#json-interface-abi | JSON Interface} of the event.
-
-#### Type declaration
-
-##### anonymous?
-
-> `readonly` `optional` **anonymous**: `boolean`
-
-##### inputs?
-
-> `readonly` `optional` **inputs**: readonly [`AbiParameter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiParameter.md)[]
-
-##### name
-
-> `readonly` **name**: `string`
-
-##### type
-
-> `readonly` **type**: `string`
-
-#### Type declaration
-
-##### signature
-
-> **signature**: `string`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/log\_subscription.d.ts:78
-
-***
-
-### address?
-
-> `readonly` `optional` **address**: `string`
-
-Address of tye contract
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/log\_subscription.d.ts:70
 
 ***
 
@@ -205,47 +124,23 @@ node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\
 
 > `readonly` **args**: `object`
 
-#### abi
-
-> **abi**: [`AbiEventFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiEventFragment.md)
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:11
 
 #### address?
 
-> `optional` **address**: `string`
+> `readonly` `optional` **address?**: `string` \| `string`[]
+
+#### fromBlock?
+
+> `readonly` `optional` **fromBlock?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 #### topics?
 
-> `optional` **topics**: (`null` \| `string` \| `string`[])[]
+> `readonly` `optional` **topics?**: `string`[]
 
 #### Inherited from
 
 [`Web3Subscription`](Web3Subscription.md).[`args`](Web3Subscription.md#args)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:11
-
-***
-
-### jsonInterface
-
-> `readonly` **jsonInterface**: [`ContractAbiWithSignature`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractAbiWithSignature.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/log\_subscription.d.ts:81
-
-***
-
-### topics?
-
-> `readonly` `optional` **topics**: (`null` \| `string` \| `string`[])[]
-
-The list of topics subscribed
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/log\_subscription.d.ts:74
 
 ## Accessors
 
@@ -253,19 +148,17 @@ node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\
 
 #### Get Signature
 
-> **get** **id**(): `undefined` \| `string`
+> **get** **id**(): `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:27
 
 ##### Returns
 
-`undefined` \| `string`
+`string` \| `undefined`
 
 #### Inherited from
 
 [`Web3Subscription`](Web3Subscription.md).[`id`](Web3Subscription.md#id)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:27
 
 ***
 
@@ -273,19 +166,17 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 #### Get Signature
 
-> **get** **lastBlock**(): `undefined` \| [`BlockOutput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
+> **get** **lastBlock**(): [`BlockOutput`](../interfaces/BlockOutput.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:28
 
 ##### Returns
 
-`undefined` \| [`BlockOutput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
+[`BlockOutput`](../interfaces/BlockOutput.md) \| `undefined`
 
 #### Inherited from
 
 [`Web3Subscription`](Web3Subscription.md).[`lastBlock`](Web3Subscription.md#lastblock)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:28
 
 ***
 
@@ -295,6 +186,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **get** `protected` **returnFormat**(): [`DataFormat`](../type-aliases/DataFormat.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:32
+
 ##### Returns
 
 [`DataFormat`](../type-aliases/DataFormat.md)
@@ -303,47 +196,39 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 [`Web3Subscription`](Web3Subscription.md).[`returnFormat`](Web3Subscription.md#returnformat)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:32
-
 ***
 
 ### subscriptionManager
 
 #### Get Signature
 
-> **get** `protected` **subscriptionManager**(): [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `object`\>
+> **get** `protected` **subscriptionManager**(): [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, \{\[`key`: `string`\]: [`Web3SubscriptionConstructor`](../type-aliases/Web3SubscriptionConstructor.md)\<`API`, [`Web3Subscription`](Web3Subscription.md)\<`any`, `any`, `API`, `any`\>\>; \}\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:33
 
 ##### Returns
 
-[`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `object`\>
+[`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, \{\[`key`: `string`\]: [`Web3SubscriptionConstructor`](../type-aliases/Web3SubscriptionConstructor.md)\<`API`, [`Web3Subscription`](Web3Subscription.md)\<`any`, `any`, `API`, `any`\>\>; \}\>
 
 #### Inherited from
 
-[`Web3Subscription`](Web3Subscription.md).[`subscriptionManager`](Web3Subscription.md#subscriptionmanager)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:33
+`Web3Subscription.subscriptionManager`
 
 ## Methods
 
 ### \_buildSubscriptionParams()
 
-> `protected` **\_buildSubscriptionParams**(): (`string` \| `object`)[]
+> `protected` **\_buildSubscriptionParams**(): (`string` \| \{ `address?`: `string` \| `string`[]; `fromBlock?`: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md); `topics?`: `string`[]; \})[]
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_subscriptions.d.ts:20
 
 #### Returns
 
-(`string` \| `object`)[]
+(`string` \| \{ `address?`: `string` \| `string`[]; `fromBlock?`: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md); `topics?`: `string`[]; \})[]
 
 #### Overrides
 
 [`Web3Subscription`](Web3Subscription.md).[`_buildSubscriptionParams`](Web3Subscription.md#_buildsubscriptionparams)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/log\_subscription.d.ts:107
 
 ***
 
@@ -351,9 +236,13 @@ node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\
 
 > **\_processSubscriptionError**(`error`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:41
+
 #### Parameters
 
-• **error**: [`Error`](../interfaces/Error.md)
+##### error
+
+`Error`
 
 #### Returns
 
@@ -363,19 +252,19 @@ node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\
 
 [`Web3Subscription`](Web3Subscription.md).[`_processSubscriptionError`](Web3Subscription.md#_processsubscriptionerror)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:41
-
 ***
 
 ### \_processSubscriptionResult()
 
 > **\_processSubscriptionResult**(`data`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:40
+
 #### Parameters
 
-• **data**: `unknown`
+##### data
+
+`unknown`
 
 #### Returns
 
@@ -385,25 +274,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 [`Web3Subscription`](Web3Subscription.md).[`_processSubscriptionResult`](Web3Subscription.md#_processsubscriptionresult)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:40
-
 ***
 
 ### emit()
 
 > **emit**\<`K`\>(`eventName`, `params`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **params**: `object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\[`K`\]
+`K`
+
+##### params
+
+`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\[`K`\]
 
 #### Returns
 
@@ -413,15 +306,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 [`Web3Subscription`](Web3Subscription.md).[`emit`](Web3Subscription.md#emit)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
-
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 #### Returns
 
@@ -431,37 +322,75 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Subscription`](Web3Subscription.md).[`eventNames`](Web3Subscription.md#eventnames)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
-
 ***
 
 ### formatSubscriptionResult()
 
-> `protected` **formatSubscriptionResult**(`data`): [`EventLog`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EventLog.md)
+> `protected` **formatSubscriptionResult**(`data`): `object`
+
+Defined in: node\_modules/.pnpm/web3-eth@4.10.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth/lib/commonjs/web3\_subscriptions.d.ts:25
 
 #### Parameters
 
-• **data**: [`EventLog`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EventLog.md)
+##### data
+
+[`LogsOutput`](../interfaces/LogsOutput.md)
 
 #### Returns
 
-[`EventLog`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EventLog.md)
+`object`
+
+##### address
+
+> `readonly` **address**: `string`
+
+##### blockHash?
+
+> `readonly` `optional` **blockHash?**: `string`
+
+##### blockNumber?
+
+> `readonly` `optional` **blockNumber?**: `string` \| `number` \| `bigint`
+
+##### data
+
+> `readonly` **data**: `string`
+
+##### id?
+
+> `readonly` `optional` **id?**: `string`
+
+##### logIndex?
+
+> `readonly` `optional` **logIndex?**: `string` \| `number` \| `bigint`
+
+##### removed
+
+> `readonly` **removed**: `boolean`
+
+##### topics
+
+> `readonly` **topics**: `string`[]
+
+##### transactionHash?
+
+> `readonly` `optional` **transactionHash?**: `string`
+
+##### transactionIndex?
+
+> `readonly` `optional` **transactionIndex?**: `string` \| `number` \| `bigint`
 
 #### Overrides
 
 [`Web3Subscription`](Web3Subscription.md).[`formatSubscriptionResult`](Web3Subscription.md#formatsubscriptionresult)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/log\_subscription.d.ts:111
 
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 #### Returns
 
@@ -471,23 +400,25 @@ node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\
 
 [`Web3Subscription`](Web3Subscription.md).[`getMaxListeners`](Web3Subscription.md#getmaxlisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
-
 ***
 
 ### listenerCount()
 
 > **listenerCount**\<`K`\>(`eventName`): `number`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -497,23 +428,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Subscription`](Web3Subscription.md).[`listenerCount`](Web3Subscription.md#listenercount)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
-
 ***
 
 ### listeners()
 
 > **listeners**\<`K`\>(`eventName`): (...`args`) => `void`[]
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -523,25 +456,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Subscription`](Web3Subscription.md).[`listeners`](Web3Subscription.md#listeners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
-
 ***
 
 ### off()
 
 > **off**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\[`K`\]\>
 
 #### Returns
 
@@ -551,25 +488,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Subscription`](Web3Subscription.md).[`off`](Web3Subscription.md#off)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
-
 ***
 
 ### on()
 
 > **on**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\[`K`\]\>
 
 #### Returns
 
@@ -579,25 +520,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Subscription`](Web3Subscription.md).[`on`](Web3Subscription.md#on)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
-
 ***
 
 ### once()
 
 > **once**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)\[`K`\]\>
 
 #### Returns
 
@@ -607,19 +552,19 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Subscription`](Web3Subscription.md).[`once`](Web3Subscription.md#once)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
-
 ***
 
 ### processSubscriptionData()
 
 > **processSubscriptionData**(`data`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:30
+
 #### Parameters
 
-• **data**: [`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\>
+##### data
+
+[`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../interfaces/Log-1.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../interfaces/Log-1.md)\>
 
 #### Returns
 
@@ -629,33 +574,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Subscription`](Web3Subscription.md).[`processSubscriptionData`](Web3Subscription.md#processsubscriptiondata)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:30
-
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 #### Returns
 
-[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
 
 #### Inherited from
 
 [`Web3Subscription`](Web3Subscription.md).[`removeAllListeners`](Web3Subscription.md#removealllisteners)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
 ### resubscribe()
 
 > **resubscribe**(): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:36
 
 #### Returns
 
@@ -665,15 +606,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Subscription`](Web3Subscription.md).[`resubscribe`](Web3Subscription.md#resubscribe)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:36
-
 ***
 
 ### sendSubscriptionRequest()
 
 > **sendSubscriptionRequest**(): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:31
 
 #### Returns
 
@@ -683,15 +622,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 [`Web3Subscription`](Web3Subscription.md).[`sendSubscriptionRequest`](Web3Subscription.md#sendsubscriptionrequest)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:31
-
 ***
 
 ### sendUnsubscribeRequest()
 
 > **sendUnsubscribeRequest**(): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:38
 
 #### Returns
 
@@ -701,19 +638,19 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 [`Web3Subscription`](Web3Subscription.md).[`sendUnsubscribeRequest`](Web3Subscription.md#sendunsubscriberequest)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:38
-
 ***
 
 ### setMaxListenerWarningThreshold()
 
 > **setMaxListenerWarningThreshold**(`maxListenersWarningThreshold`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+
 #### Parameters
 
-• **maxListenersWarningThreshold**: `number`
+##### maxListenersWarningThreshold
+
+`number`
 
 #### Returns
 
@@ -723,15 +660,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 [`Web3Subscription`](Web3Subscription.md).[`setMaxListenerWarningThreshold`](Web3Subscription.md#setmaxlistenerwarningthreshold)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
-
 ***
 
 ### subscribe()
 
 > **subscribe**(): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:29
 
 #### Returns
 
@@ -741,15 +676,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Subscription`](Web3Subscription.md).[`subscribe`](Web3Subscription.md#subscribe)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:29
-
 ***
 
 ### unsubscribe()
 
 > **unsubscribe**(): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:37
 
 #### Returns
 
@@ -758,7 +691,3 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 #### Inherited from
 
 [`Web3Subscription`](Web3Subscription.md).[`unsubscribe`](Web3Subscription.md#unsubscribe)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:37

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: OrderKind
 
+Defined in: [src/methods/delta/helpers/types.ts:42](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L42)
+
 ## Enumeration Members
 
 ### Buy
 
 > **Buy**: `1`
 
-#### Defined in
-
-[src/methods/delta/helpers/types.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L44)
+Defined in: [src/methods/delta/helpers/types.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L44)
 
 ***
 
@@ -22,6 +22,4 @@
 
 > **Sell**: `0`
 
-#### Defined in
-
-[src/methods/delta/helpers/types.ts:43](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L43)
+Defined in: [src/methods/delta/helpers/types.ts:43](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L43)

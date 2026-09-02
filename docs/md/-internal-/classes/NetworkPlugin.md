@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,27 +6,29 @@
 
 # Class: NetworkPlugin
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:6
+
 A **NetworkPlugin** provides additional functionality on a [[Network]].
 
 ## Constructors
 
-### new NetworkPlugin()
+### Constructor
 
-> **new NetworkPlugin**(`name`): [`NetworkPlugin`](NetworkPlugin.md)
+> **new NetworkPlugin**(`name`): `NetworkPlugin`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:17
 
 Creates a new **NetworkPlugin**.
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 #### Returns
 
-[`NetworkPlugin`](NetworkPlugin.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:17
+`NetworkPlugin`
 
 ## Properties
 
@@ -34,27 +36,23 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pl
 
 > `readonly` **name**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:13
+
 The name of the plugin.
 
  It is recommended to use reverse-domain-notation, which permits
  unique names with a known authority as well as hierarchal entries.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:13
-
 ## Methods
 
 ### clone()
 
-> **clone**(): [`NetworkPlugin`](NetworkPlugin.md)
+> **clone**(): `NetworkPlugin`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:21
 
 Creates a copy of this plugin.
 
 #### Returns
 
-[`NetworkPlugin`](NetworkPlugin.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/plugins-network.d.ts:21
+`NetworkPlugin`

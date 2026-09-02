@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,22 @@
 
 # Type Alias: GetRequiredBalanceParams
 
-> **GetRequiredBalanceParams**: `object`
+> **GetRequiredBalanceParams** = `object`
 
-## Type declaration
+Defined in: [src/methods/delta/getDeltaOrders.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L49)
+
+## Properties
 
 ### tokenAddress?
 
-> `optional` **tokenAddress**: [`Address`](../../type-aliases/Address.md)
+> `optional` **tokenAddress?**: [`Address`](../../type-aliases/Address.md)
+
+Defined in: [src/methods/delta/getDeltaOrders.ts:51](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L51)
+
+***
 
 ### userAddress
 
 > **userAddress**: [`Address`](../../type-aliases/Address.md)
 
-## Defined in
-
-[src/methods/delta/getDeltaOrders.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L49)
+Defined in: [src/methods/delta/getDeltaOrders.ts:50](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L50)

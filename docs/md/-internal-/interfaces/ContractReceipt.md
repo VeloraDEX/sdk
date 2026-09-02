@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ContractReceipt
 
 # Interface: ContractReceipt
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:57
 
 ## Extends
 
@@ -16,13 +18,11 @@
 
 > **blockHash**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:73
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`blockHash`](TransactionReceipt.md#blockhash)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:73
 
 ***
 
@@ -30,13 +30,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **blockNumber**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:76
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`blockNumber`](TransactionReceipt.md#blocknumber)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:76
 
 ***
 
@@ -44,13 +42,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **byzantium**: `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:80
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`byzantium`](TransactionReceipt.md#byzantium)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:80
 
 ***
 
@@ -58,13 +54,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **confirmations**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:77
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`confirmations`](TransactionReceipt.md#confirmations)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:77
 
 ***
 
@@ -72,13 +66,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **contractAddress**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:68
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`contractAddress`](TransactionReceipt.md#contractaddress)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:68
 
 ***
 
@@ -86,13 +78,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **cumulativeGasUsed**: [`BigNumber`](../classes/BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:78
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`cumulativeGasUsed`](TransactionReceipt.md#cumulativegasused)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:78
 
 ***
 
@@ -100,23 +90,19 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **effectiveGasPrice**: [`BigNumber`](../classes/BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:79
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`effectiveGasPrice`](TransactionReceipt.md#effectivegasprice)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:79
 
 ***
 
 ### events?
 
-> `optional` **events**: [`Event`](Event.md)[]
+> `optional` **events?**: [`Event`](Event.md)[]
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:58
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:58
 
 ***
 
@@ -124,13 +110,11 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **from**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:67
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`from`](TransactionReceipt.md#from)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:67
 
 ***
 
@@ -138,13 +122,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **gasUsed**: [`BigNumber`](../classes/BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:71
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`gasUsed`](TransactionReceipt.md#gasused)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:71
 
 ***
 
@@ -152,13 +134,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **logs**: [`Log`](Log.md)[]
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:75
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`logs`](TransactionReceipt.md#logs)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:75
 
 ***
 
@@ -166,41 +146,35 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **logsBloom**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:72
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`logsBloom`](TransactionReceipt.md#logsbloom)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:72
 
 ***
 
 ### root?
 
-> `optional` **root**: `string`
+> `optional` **root?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:70
 
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`root`](TransactionReceipt.md#root)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:70
-
 ***
 
 ### status?
 
-> `optional` **status**: `number`
+> `optional` **status?**: `number`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:82
 
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`status`](TransactionReceipt.md#status)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:82
 
 ***
 
@@ -208,13 +182,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **to**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:66
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`to`](TransactionReceipt.md#to)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:66
 
 ***
 
@@ -222,13 +194,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **transactionHash**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:74
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`transactionHash`](TransactionReceipt.md#transactionhash)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:74
 
 ***
 
@@ -236,13 +206,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **transactionIndex**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:69
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`transactionIndex`](TransactionReceipt.md#transactionindex)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:69
 
 ***
 
@@ -250,10 +218,8 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **type**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:81
+
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`type`](TransactionReceipt.md#type)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:81

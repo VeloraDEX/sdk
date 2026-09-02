@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,14 +8,14 @@
 
 > **constructBuildTx**(`__namedParameters`): [`BuildTxFunctions`](../type-aliases/BuildTxFunctions.md)
 
+Defined in: [src/methods/swap/transaction.ts:184](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L184)
+
 ## Parameters
 
-• **\_\_namedParameters**: [`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
+### \_\_namedParameters
+
+[`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
 
 ## Returns
 
 [`BuildTxFunctions`](../type-aliases/BuildTxFunctions.md)
-
-## Defined in
-
-[src/methods/swap/transaction.ts:184](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L184)

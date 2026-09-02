@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -6,39 +6,39 @@
 
 # Interface: FinishedOptions
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1408
+
 ## Extends
 
 - [`Abortable`](../../EventEmitter/interfaces/Abortable.md)
 
 ## Extended by
 
-- [`FinishedOptions`](../../node:stream_promises/interfaces/FinishedOptions.md)
+- [`FinishedOptions`](../../../node:stream/promises/interfaces/FinishedOptions.md)
 
 ## Properties
 
 ### error?
 
-> `optional` **error**: `boolean`
+> `optional` **error?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1409
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1409
 
 ***
 
 ### readable?
 
-> `optional` **readable**: `boolean`
+> `optional` **readable?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1410
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1410
 
 ***
 
 ### signal?
 
-> `optional` **signal**: `AbortSignal`
+> `optional` **signal?**: `AbortSignal`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561
 
 When provided the corresponding `AbortController` can be used to cancel an asynchronous action.
 
@@ -46,16 +46,10 @@ When provided the corresponding `AbortController` can be used to cancel an async
 
 [`Abortable`](../../EventEmitter/interfaces/Abortable.md).[`signal`](../../EventEmitter/interfaces/Abortable.md#signal)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561
-
 ***
 
 ### writable?
 
-> `optional` **writable**: `boolean`
+> `optional` **writable?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1411
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1411

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -6,7 +6,9 @@
 
 # Function: duplexPair()
 
-> **duplexPair**(`options`?): [[`Duplex`](../../../classes/Duplex.md), [`Duplex`](../../../classes/Duplex.md)]
+> **duplexPair**(`options?`): \[[`Duplex`](../../../classes/Duplex.md), [`Duplex`](../../../classes/Duplex.md)\]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1271
 
 The utility function `duplexPair` returns an Array with two items,
 each being a `Duplex` stream connected to the other side:
@@ -24,19 +26,17 @@ difference in behavior.
 
 ## Parameters
 
-• **options?**: [`DuplexOptions`](../../../interfaces/DuplexOptions.md)
+### options?
+
+[`DuplexOptions`](../../../interfaces/DuplexOptions.md)
 
 A value to pass to both [Duplex](../../../classes/Duplex.md) constructors,
 to set options such as buffering.
 
 ## Returns
 
-[[`Duplex`](../../../classes/Duplex.md), [`Duplex`](../../../classes/Duplex.md)]
+\[[`Duplex`](../../../classes/Duplex.md), [`Duplex`](../../../classes/Duplex.md)\]
 
 ## Since
 
 v22.6.0
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1271

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,18 +6,20 @@
 
 # Function: constructEthersV6ContractCaller()
 
-> **constructEthersV6ContractCaller**(`__namedParameters`, `account`?): [`ContractCallerFunctions`](../interfaces/ContractCallerFunctions.md)\<[`ContractTransactionResponse`](../-internal-/classes/ContractTransactionResponse.md)\>
+> **constructEthersV6ContractCaller**(`__namedParameters`, `account?`): [`ContractCallerFunctions`](../interfaces/ContractCallerFunctions.md)\<[`ContractTransactionResponse`](../-internal-/classes/ContractTransactionResponse.md)\>
+
+Defined in: [src/helpers/providers/ethersV6.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/ethersV6.ts#L23)
 
 ## Parameters
 
-• **\_\_namedParameters**: [`EthersV6ProviderDeps`](../interfaces/EthersV6ProviderDeps.md)
+### \_\_namedParameters
 
-• **account?**: `string`
+[`EthersV6ProviderDeps`](../interfaces/EthersV6ProviderDeps.md)
+
+### account?
+
+`string`
 
 ## Returns
 
 [`ContractCallerFunctions`](../interfaces/ContractCallerFunctions.md)\<[`ContractTransactionResponse`](../-internal-/classes/ContractTransactionResponse.md)\>
-
-## Defined in
-
-[src/helpers/providers/ethersV6.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/ethersV6.ts#L23)

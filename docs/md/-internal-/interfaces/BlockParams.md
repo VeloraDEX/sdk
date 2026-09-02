@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / BlockParams
 
 # Interface: BlockParams
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:12
 
 a **BlockParams** encodes the minimal required properties for a
  formatted block.
@@ -13,27 +15,23 @@ a **BlockParams** encodes the minimal required properties for a
 
 ### baseFeePerGas
 
-> **baseFeePerGas**: `null` \| `bigint`
+> **baseFeePerGas**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:81
 
 The protocol-defined base fee per gas in an [[link-eip-1559]]
  block.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:81
 
 ***
 
 ### blobGasUsed?
 
-> `optional` **blobGasUsed**: `null` \| `bigint`
+> `optional` **blobGasUsed?**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:58
 
 The total amount of BLOb gas consumed by transactions within
  the block. See [[link-eip4844].
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:58
 
 ***
 
@@ -41,25 +39,21 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **difficulty**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:45
+
 For proof-of-work networks, the difficulty target is used to
  adjust the difficulty in mining to ensure a expected block rate.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:45
 
 ***
 
 ### excessBlobGas?
 
-> `optional` **excessBlobGas**: `null` \| `bigint`
+> `optional` **excessBlobGas?**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:63
 
 The running total of BLOb gas consumed in excess of the target
  prior to the block. See [[link-eip-4844]].
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:63
 
 ***
 
@@ -67,11 +61,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **extraData**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:76
+
 Additional data the miner choose to include.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:76
 
 ***
 
@@ -79,11 +71,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **gasLimit**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:49
+
 The maximum amount of gas a block can consume.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:49
 
 ***
 
@@ -91,23 +81,19 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **gasUsed**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:53
+
 The amount of gas a block consumed.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:53
 
 ***
 
 ### hash?
 
-> `optional` **hash**: `null` \| `string`
+> `optional` **hash?**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:16
 
 The block hash.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:16
 
 ***
 
@@ -115,11 +101,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **miner**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:67
+
 The miner (or author) of a block.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:67
 
 ***
 
@@ -127,12 +111,10 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **nonce**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:40
+
 A random sequence provided during the mining process for
  proof-of-work networks.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:40
 
 ***
 
@@ -140,24 +122,20 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **number**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:20
+
 The block number.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:20
 
 ***
 
 ### parentBeaconBlockRoot?
 
-> `optional` **parentBeaconBlockRoot**: `null` \| `string`
+> `optional` **parentBeaconBlockRoot?**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:35
 
 The hash tree root of the parent beacon block for the given
  execution block. See [[link-eip-4788]].
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:35
 
 ***
 
@@ -165,50 +143,42 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **parentHash**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:30
+
 The hash of the previous block in the blockchain. The genesis block
  has the parentHash of the [[ZeroHash]].
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:30
 
 ***
 
 ### prevRandao?
 
-> `optional` **prevRandao**: `null` \| `string`
+> `optional` **prevRandao?**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:72
 
 The latest RANDAO mix of the post beacon state of
  the previous block.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:72
 
 ***
 
 ### receiptsRoot?
 
-> `optional` **receiptsRoot**: `null` \| `string`
+> `optional` **receiptsRoot?**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:90
 
 The hash of the transaction receipts trie.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:90
 
 ***
 
 ### stateRoot?
 
-> `optional` **stateRoot**: `null` \| `string`
+> `optional` **stateRoot?**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:86
 
 The root hash for the global state after applying changes
  in this block.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:86
 
 ***
 
@@ -216,12 +186,10 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **timestamp**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:25
+
 The timestamp for this block, which is the number of seconds
  since epoch that this block was included.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:25
 
 ***
 
@@ -229,8 +197,6 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **transactions**: readonly (`string` \| [`TransactionResponseParams`](TransactionResponseParams.md))[]
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:94
+
 The list of transactions in the block.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:94

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,42 +6,52 @@
 
 # Interface: TransitionalOptions
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:300
+
 ## Properties
+
+### advertiseZstdAcceptEncoding?
+
+> `optional` **advertiseZstdAcceptEncoding?**: `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:305
+
+***
 
 ### clarifyTimeoutError?
 
-> `optional` **clarifyTimeoutError**: `boolean`
+> `optional` **clarifyTimeoutError?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:282
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:303
 
 ***
 
 ### forcedJSONParsing?
 
-> `optional` **forcedJSONParsing**: `boolean`
+> `optional` **forcedJSONParsing?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:281
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:302
 
 ***
 
 ### legacyInterceptorReqResOrdering?
 
-> `optional` **legacyInterceptorReqResOrdering**: `boolean`
+> `optional` **legacyInterceptorReqResOrdering?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:283
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:304
 
 ***
 
 ### silentJSONParsing?
 
-> `optional` **silentJSONParsing**: `boolean`
+> `optional` **silentJSONParsing?**: `boolean`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:301
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:280
+***
+
+### validateStatusUndefinedResolves?
+
+> `optional` **validateStatusUndefinedResolves?**: `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:306

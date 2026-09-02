@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,75 +6,63 @@
 
 # Interface: TransactionCallAPI
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:3
+
 ## Properties
 
 ### accessList?
 
-> `readonly` `optional` **accessList**: [`AccessList`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AccessList.md)
+> `readonly` `optional` **accessList?**: [`AccessList`](../type-aliases/AccessList-3.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:13
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:13
 
 ***
 
 ### data?
 
-> `readonly` `optional` **data**: `string`
+> `readonly` `optional` **data?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:9
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:9
 
 ***
 
 ### from?
 
-> `readonly` `optional` **from**: `string`
+> `readonly` `optional` **from?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:4
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:4
 
 ***
 
 ### gas?
 
-> `readonly` `optional` **gas**: `string`
+> `readonly` `optional` **gas?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:6
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:6
 
 ***
 
 ### gasPrice?
 
-> `readonly` `optional` **gasPrice**: `string`
+> `readonly` `optional` **gasPrice?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:7
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:7
 
 ***
 
 ### maxFeePerGas?
 
-> `readonly` `optional` **maxFeePerGas**: `string`
+> `readonly` `optional` **maxFeePerGas?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:11
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:11
 
 ***
 
 ### maxPriorityFeePerGas?
 
-> `readonly` `optional` **maxPriorityFeePerGas**: `string`
+> `readonly` `optional` **maxPriorityFeePerGas?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:12
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:12
 
 ***
 
@@ -82,26 +70,20 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/
 
 > `readonly` **to**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:5
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:5
 
 ***
 
 ### type?
 
-> `readonly` `optional` **type**: `string`
+> `readonly` `optional` **type?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:10
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:10
 
 ***
 
 ### value?
 
-> `readonly` `optional` **value**: `string`
+> `readonly` `optional` **value?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:8
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:8

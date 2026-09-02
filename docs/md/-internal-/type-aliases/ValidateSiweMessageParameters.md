@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,43 +6,67 @@
 
 # Type Alias: ValidateSiweMessageParameters
 
-> **ValidateSiweMessageParameters**: `object`
+> **ValidateSiweMessageParameters** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/siwe/validateSiweMessage.d.ts:4
+
+## Properties
 
 ### address?
 
-> `optional` **address**: [`Address`](Address.md)
+> `optional` **address?**: [`Address`](Address-1.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/siwe/validateSiweMessage.d.ts:8
 
 Ethereum address to check against.
 
+***
+
 ### domain?
 
-> `optional` **domain**: `string`
+> `optional` **domain?**: `string`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/siwe/validateSiweMessage.d.ts:12
 
 [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986) authority to check against.
+
+***
 
 ### message
 
 > **message**: [`ExactPartial`](ExactPartial.md)\<[`SiweMessage`](SiweMessage.md)\>
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/siwe/validateSiweMessage.d.ts:16
+
 EIP-4361 message fields.
+
+***
 
 ### nonce?
 
-> `optional` **nonce**: `string`
+> `optional` **nonce?**: `string`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/siwe/validateSiweMessage.d.ts:20
 
 Random string to check against.
 
+***
+
 ### scheme?
 
-> `optional` **scheme**: `string`
+> `optional` **scheme?**: `string`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/siwe/validateSiweMessage.d.ts:24
 
 [RFC 3986](https://www.rfc-editor.org/rfc/rfc3986#section-3.1) URI scheme to check against.
 
+***
+
 ### time?
 
-> `optional` **time**: `Date`
+> `optional` **time?**: `Date`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/siwe/validateSiweMessage.d.ts:30
 
 Current time to check optional `expirationTime` and `notBefore` fields.
 
@@ -51,7 +75,3 @@ Current time to check optional `expirationTime` and `notBefore` fields.
 ```ts
 new Date()
 ```
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/utils/siwe/validateSiweMessage.d.ts:4

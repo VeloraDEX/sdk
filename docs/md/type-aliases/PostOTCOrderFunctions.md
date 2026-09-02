@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: PostOTCOrderFunctions
 
-> **PostOTCOrderFunctions**: `object`
+> **PostOTCOrderFunctions** = `object`
 
-## Type declaration
+Defined in: [src/methods/otcOrders/postOrder.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/postOrder.ts#L16)
+
+## Properties
 
 ### postOTCOrder
 
 > **postOTCOrder**: [`PostOTCOrder`](../-internal-/type-aliases/PostOTCOrder.md)
 
-## Defined in
-
-[src/methods/otcOrders/postOrder.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/postOrder.ts#L16)
+Defined in: [src/methods/otcOrders/postOrder.ts:17](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/postOrder.ts#L17)

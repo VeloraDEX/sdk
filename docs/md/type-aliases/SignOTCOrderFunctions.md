@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,22 +6,24 @@
 
 # Type Alias: SignOTCOrderFunctions
 
-> **SignOTCOrderFunctions**: `object`
+> **SignOTCOrderFunctions** = `object`
 
-## Type declaration
+Defined in: [src/methods/otcOrders/signOrder.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/signOrder.ts#L5)
 
-### signOTCOrder()
+## Properties
+
+### signOTCOrder
 
 > **signOTCOrder**: (`signableOrderData`) => `Promise`\<`string`\>
 
+Defined in: [src/methods/otcOrders/signOrder.ts:6](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/signOrder.ts#L6)
+
 #### Parameters
 
-• **signableOrderData**: [`SignableOrderData`](SignableOrderData.md)
+##### signableOrderData
+
+[`SignableOrderData`](SignableOrderData.md)
 
 #### Returns
 
 `Promise`\<`string`\>
-
-## Defined in
-
-[src/methods/otcOrders/signOrder.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/signOrder.ts#L5)

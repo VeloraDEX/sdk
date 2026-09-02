@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,13 @@
 
 # Interface: AxiosInterceptorHandler\<T\>
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:632
+
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Properties
 
@@ -16,29 +20,23 @@
 
 > **fulfilled**: [`AxiosInterceptorFulfilled`](../type-aliases/AxiosInterceptorFulfilled.md)\<`T`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:589
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:633
 
 ***
 
 ### rejected?
 
-> `optional` **rejected**: [`AxiosInterceptorRejected`](../type-aliases/AxiosInterceptorRejected.md)
+> `optional` **rejected?**: [`AxiosInterceptorRejected`](../type-aliases/AxiosInterceptorRejected.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:590
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:634
 
 ***
 
 ### runWhen?
 
-> `optional` **runWhen**: `null` \| (`config`) => `boolean`
+> `optional` **runWhen?**: ((`config`) => `boolean`) \| `null`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:592
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:636
 
 ***
 
@@ -46,6 +44,4 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:592
 
 > **synchronous**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:591
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:635

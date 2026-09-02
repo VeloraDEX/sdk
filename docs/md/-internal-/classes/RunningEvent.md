@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,25 +6,29 @@
 
 # Class: RunningEvent
 
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:63
+
 ## Constructors
 
-### new RunningEvent()
+### Constructor
 
-> **new RunningEvent**(`tag`, `filter`): [`RunningEvent`](RunningEvent.md)
+> **new RunningEvent**(`tag`, `filter`): `RunningEvent`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:67
 
 #### Parameters
 
-• **tag**: `string`
+##### tag
 
-• **filter**: [`EventFilter`](../type-aliases/EventFilter.md)
+`string`
+
+##### filter
+
+[`EventFilter`](../type-aliases/EventFilter.md)
 
 #### Returns
 
-[`RunningEvent`](RunningEvent.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:67
+`RunningEvent`
 
 ## Properties
 
@@ -32,9 +36,7 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **filter**: [`EventFilter`](../type-aliases/EventFilter.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:65
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:65
 
 ***
 
@@ -42,9 +44,7 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **tag**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:64
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:64
 
 ## Methods
 
@@ -52,19 +52,21 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **addListener**(`listener`, `once`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:68
+
 #### Parameters
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+##### listener
 
-• **once**: `boolean`
+[`Listener`](../type-aliases/Listener.md)
+
+##### once
+
+`boolean`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:68
 
 ***
 
@@ -72,17 +74,17 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **getEmit**(`event`): `any`[]
 
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:75
+
 #### Parameters
 
-• **event**: [`Event`](../interfaces/Event.md)
+##### event
+
+[`Event`](../interfaces/Event.md)
 
 #### Returns
 
 `any`[]
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:75
 
 ***
 
@@ -90,13 +92,11 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **listenerCount**(): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:72
+
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:72
 
 ***
 
@@ -104,13 +104,11 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **listeners**(): [`Listener`](../type-aliases/Listener.md)[]
 
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:71
+
 #### Returns
 
 [`Listener`](../type-aliases/Listener.md)[]
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:71
 
 ***
 
@@ -118,17 +116,17 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **prepareEvent**(`event`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:74
+
 #### Parameters
 
-• **event**: [`Event`](../interfaces/Event.md)
+##### event
+
+[`Event`](../interfaces/Event.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:74
 
 ***
 
@@ -136,13 +134,11 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **removeAllListeners**(): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:70
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:70
 
 ***
 
@@ -150,17 +146,17 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **removeListener**(`listener`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:69
+
 #### Parameters
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:69
 
 ***
 
@@ -168,14 +164,14 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **run**(`args`): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:73
+
 #### Parameters
 
-• **args**: `any`[]
+##### args
+
+`any`[]
 
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:73

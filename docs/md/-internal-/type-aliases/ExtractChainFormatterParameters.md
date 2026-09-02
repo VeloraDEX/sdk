@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: ExtractChainFormatterParameters\<chain, type, fallback\>
 
-> **ExtractChainFormatterParameters**\<`chain`, `type`, `fallback`\>: `chain` *extends* `object` ? `formatters`\[`type`\] *extends* [`ChainFormatter`](ChainFormatter.md) ? [`Parameters`](Parameters.md)\<`formatters`\[`type`\]\[`"format"`\]\>\[`0`\] : `fallback` : `fallback`
+> **ExtractChainFormatterParameters**\<`chain`, `type`, `fallback`\> = `chain` *extends* `object` ? `formatters`\[`type`\] *extends* [`ChainFormatter`](ChainFormatter.md) ? [`Parameters`](Parameters-8.md)\<`formatters`\[`type`\]\[`"format"`\]\>\[`0`\] : `fallback` : `fallback`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:158
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined`
+### chain
 
-• **type** *extends* keyof [`ChainFormatters`](ChainFormatters.md)
+`chain` *extends* [`Chain`](Chain.md) \| `undefined`
 
-• **fallback**
+### type
 
-## Defined in
+`type` *extends* keyof [`ChainFormatters`](ChainFormatters.md)
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:131
+### fallback
+
+`fallback`

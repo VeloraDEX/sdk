@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,25 +6,23 @@
 
 # Interface: HardforkConfig
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:19
+
 ## Properties
 
 ### block
 
-> **block**: `null` \| `number`
+> **block**: `number` \| `null`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:21
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:21
 
 ***
 
 ### forkHash?
 
-> `optional` **forkHash**: `null` \| `string`
+> `optional` **forkHash?**: `string` \| `null`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:24
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:24
 
 ***
 
@@ -32,26 +30,20 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **name**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:20
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:20
 
 ***
 
 ### timestamp?
 
-> `optional` **timestamp**: `string` \| `number`
+> `optional` **timestamp?**: `string` \| `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:23
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:23
 
 ***
 
 ### ttd?
 
-> `optional` **ttd**: `string` \| `bigint`
+> `optional` **ttd?**: `string` \| `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:22
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:22

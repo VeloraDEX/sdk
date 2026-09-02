@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../../../globals.md) / [\<internal\>](../../../README.md) / [internal](../README.md) / StreamOptions
 
 # Interface: StreamOptions\<T\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:954
 
 ## Extends
 
@@ -17,53 +19,49 @@
 
 ## Type Parameters
 
-• **T** *extends* [`Stream`](../../../classes/Stream.md)
+### T
+
+`T` *extends* [`Stream`](../../../classes/Stream.md)
 
 ## Properties
 
 ### autoDestroy?
 
-> `optional` **autoDestroy**: `boolean`
+> `optional` **autoDestroy?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:960
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:960
 
 ***
 
 ### emitClose?
 
-> `optional` **emitClose**: `boolean`
+> `optional` **emitClose?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:955
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:955
 
 ***
 
 ### highWaterMark?
 
-> `optional` **highWaterMark**: `number`
+> `optional` **highWaterMark?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:956
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:956
 
 ***
 
 ### objectMode?
 
-> `optional` **objectMode**: `boolean`
+> `optional` **objectMode?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:957
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:957
 
 ***
 
 ### signal?
 
-> `optional` **signal**: `AbortSignal`
+> `optional` **signal?**: `AbortSignal`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561
 
 When provided the corresponding `AbortController` can be used to cancel an asynchronous action.
 
@@ -71,29 +69,27 @@ When provided the corresponding `AbortController` can be used to cancel an async
 
 [`Abortable`](../../EventEmitter/interfaces/Abortable.md).[`signal`](../../EventEmitter/interfaces/Abortable.md#signal)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561
-
 ## Methods
 
 ### construct()?
 
 > `optional` **construct**(`this`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:958
+
 #### Parameters
 
-• **this**: `T`
+##### this
 
-• **callback**
+`T`
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:958
 
 ***
 
@@ -101,18 +97,22 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:958
 
 > `optional` **destroy**(`this`, `error`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:959
+
 #### Parameters
 
-• **this**: `T`
+##### this
 
-• **error**: `null` \| [`Error`](../../../interfaces/Error.md)
+`T`
 
-• **callback**
+##### error
+
+`Error` \| `null`
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:959

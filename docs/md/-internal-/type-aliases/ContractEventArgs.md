@@ -1,19 +1,21 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ContractEventArgs
 
-# Type Alias: ContractEventArgs\<abi, eventName\>
+# Type Alias: ContractEventArgs\<A\>
 
-> **ContractEventArgs**\<`abi`, `eventName`\>: [`AbiEventParametersToPrimitiveTypes`](AbiEventParametersToPrimitiveTypes.md)\<[`ExtractAbiEvent`](ExtractAbiEvent.md)\<`abi` *extends* [`Abi`](Abi.md) ? `abi` : [`Abi`](Abi.md), `eventName`\>\[`"inputs"`\]\> *extends* infer args ? [`args`] *extends* [`never`] ? readonly `unknown`[] \| [`Record`](Record.md)\<`string`, `unknown`\> : `args` : readonly `unknown`[] \| [`Record`](Record.md)\<`string`, `unknown`\>
+> **ContractEventArgs**\<`A`\> = \{ \[I in keyof A\]?: A\[I\] \| Typed \| null \}
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:142
+
+Each argument of an event is nullable (to indicate matching //any//.
+
+ @_ignore:
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### A
 
-• **eventName** *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> = [`ContractEventName`](ContractEventName.md)\<`abi`\>
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:13
+`A` *extends* `any`[]

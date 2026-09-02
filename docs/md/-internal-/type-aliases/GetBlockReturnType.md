@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: GetBlockReturnType\<chain, includeTransactions, blockTag\>
 
-> **GetBlockReturnType**\<`chain`, `includeTransactions`, `blockTag`\>: [`Prettify`](Prettify.md)\<[`FormattedBlock`](FormattedBlock.md)\<`chain`, `includeTransactions`, `blockTag`\>\>
+> **GetBlockReturnType**\<`chain`, `includeTransactions`, `blockTag`\> = [`Prettify`](Prettify-1.md)\<[`FormattedBlock`](FormattedBlock.md)\<`chain`, `includeTransactions`, `blockTag`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getBlock.d.ts:35
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+### chain
 
-• **includeTransactions** *extends* `boolean` = `false`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
 
-• **blockTag** *extends* [`BlockTag`](BlockTag.md) = `"latest"`
+### includeTransactions
 
-## Defined in
+`includeTransactions` *extends* `boolean` = `false`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getBlock.d.ts:35
+### blockTag
+
+`blockTag` *extends* [`BlockTag`](BlockTag-2.md) = `"latest"`

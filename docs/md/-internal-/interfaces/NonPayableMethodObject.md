@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,11 +6,17 @@
 
 # Interface: NonPayableMethodObject\<Inputs, Outputs\>
 
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:23
+
 ## Type Parameters
 
-• **Inputs** = `unknown`[]
+### Inputs
 
-• **Outputs** = `unknown`[]
+`Inputs` = `unknown`[]
+
+### Outputs
+
+`Outputs` = `unknown`[]
 
 ## Properties
 
@@ -18,15 +24,15 @@
 
 > **arguments**: `Inputs`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:24
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:24
 
 ## Methods
 
 ### call()
 
-> **call**\<`SpecialOutput`\>(`tx`?, `block`?): `Promise`\<`SpecialOutput`\>
+> **call**\<`SpecialOutput`\>(`tx?`, `block?`): `Promise`\<`SpecialOutput`\>
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:71
 
 This will call a method and execute its smart contract method in the EVM without sending any transaction. Note calling cannot alter the smart contract state.
 
@@ -70,15 +76,21 @@ console.log(result);
 
 #### Type Parameters
 
-• **SpecialOutput** = `Outputs`
+##### SpecialOutput
+
+`SpecialOutput` = `Outputs`
 
 #### Parameters
 
-• **tx?**: [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+##### tx?
+
+[`NonPayableCallOptions`](NonPayableCallOptions.md)
 
 The options used for calling.
 
-• **block?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+##### block?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 If you pass this parameter it will not use the default block set with contract.defaultBlock. Pre-defined block numbers as `earliest`, `latest`, `pending`, `safe` or `finalized can also be used. Useful for requesting data from or replaying transactions in past blocks.
 
@@ -88,29 +100,31 @@ If you pass this parameter it will not use the default block set with contract.d
 
 - The return value(s) of the smart contract method. If it returns a single value, it’s returned as is. If it has multiple return values they are returned as an object with properties and indices.
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:71
-
 ***
 
 ### createAccessList()
 
-> **createAccessList**(`tx`?, `block`?): `Promise`\<[`AccessListResult`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AccessListResult.md)\>
+> **createAccessList**(`tx?`, `block?`): `Promise`\<[`AccessListResult`](../type-aliases/AccessListResult.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:199
 
 This method generates an access list for a transaction. You must specify a `from` address and `gas` if it’s not specified in options.
 
 #### Parameters
 
-• **tx?**: [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+##### tx?
 
-• **block?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+[`NonPayableCallOptions`](NonPayableCallOptions.md)
+
+##### block?
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 If you pass this parameter it will not use the default block set with contract.defaultBlock. Pre-defined block numbers as `earliest`, `latest`, `pending`, `safe` or `finalized can also be used. Useful for requesting data from or replaying transactions in past blocks.
 
 #### Returns
 
-`Promise`\<[`AccessListResult`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AccessListResult.md)\>
+`Promise`\<[`AccessListResult`](../type-aliases/AccessListResult.md)\>
 
 The returned data of the createAccessList,  e.g. The generated access list for transaction.
 
@@ -131,25 +145,27 @@ The returned data of the createAccessList,  e.g. The generated access list for t
 }
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:199
-
 ***
 
 ### decodeData()
 
 > **decodeData**\<`SpecialInputs`\>(`data`): `SpecialInputs`
 
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:174
+
 Decode raw result of method call into readable value(s).
 
 #### Type Parameters
 
-• **SpecialInputs** = `Inputs`
+##### SpecialInputs
+
+`SpecialInputs` = `Inputs`
 
 #### Parameters
 
-• **data**: `string`
+##### data
+
+`string`
 
 The data to decode.
 
@@ -159,15 +175,13 @@ The data to decode.
 
 - The decoded data.
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:174
-
 ***
 
 ### encodeABI()
 
 > **encodeABI**(): `string`
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:167
 
 Encodes the ABI for this method. The resulting hex string is 32-bit function signature hash plus the passed parameters in Solidity tightly packed format.
 This can be used to send a transaction, call a method, or pass it into another smart contract’s method as arguments.
@@ -182,15 +196,13 @@ working with offline wallets and cold storage and creating transaction payload f
 
 - The encoded ABI byte code to send via a transaction or call.
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:167
-
 ***
 
 ### estimateGas()
 
-> **estimateGas**\<`ReturnFormat`\>(`options`?, `returnFormat`?): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+> **estimateGas**\<`ReturnFormat`\>(`options?`, `returnFormat?`): `Promise`\<[`NumberTypes`](../type-aliases/NumberTypes.md)\[`ReturnFormat`\[`"number"`\]\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:156
 
 Returns the amount of gas consumed by executing the method locally without creating a new transaction on the blockchain.
 The returned amount can be used as a gas estimate for executing the transaction publicly. The actual gas used can be
@@ -205,15 +217,21 @@ if(gasAmount == 5000000) {
 
 #### Type Parameters
 
-• **ReturnFormat** *extends* [`DataFormat`](../type-aliases/DataFormat.md) = `object`
+##### ReturnFormat
+
+`ReturnFormat` *extends* [`DataFormat`](../type-aliases/DataFormat.md) = \{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}
 
 #### Parameters
 
-• **options?**: [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+##### options?
+
+[`NonPayableCallOptions`](NonPayableCallOptions.md)
 
 The options used for calling
 
-• **returnFormat?**: `ReturnFormat`
+##### returnFormat?
+
+`ReturnFormat`
 
 The data format you want the output in.
 
@@ -223,35 +241,35 @@ The data format you want the output in.
 
 - The gas amount estimated.
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:156
-
 ***
 
 ### populateTransaction()
 
-> **populateTransaction**(`tx`?, `contractOptions`?): [`TransactionCall`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
+> **populateTransaction**(`tx?`, `contractOptions?`): [`TransactionCall`](TransactionCall.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:139
 
 #### Parameters
 
-• **tx?**: [`PayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/PayableCallOptions.md) \| [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+##### tx?
 
-• **contractOptions?**: [`ContractOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/ContractOptions.md)
+[`PayableCallOptions`](PayableCallOptions.md) \| [`NonPayableCallOptions`](NonPayableCallOptions.md)
+
+##### contractOptions?
+
+[`ContractOptions`](ContractOptions.md)
 
 #### Returns
 
-[`TransactionCall`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/TransactionCall.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:139
+[`TransactionCall`](TransactionCall.md)
 
 ***
 
 ### send()
 
-> **send**(`tx`?): [`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<`object`, [`SendTransactionEvents`](../type-aliases/SendTransactionEvents.md)\<`object`\>\>
+> **send**(`tx?`): [`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<\{ `blockHash`: `string`; `blockNumber`: `bigint`; `contractAddress?`: `string`; `cumulativeGasUsed`: `bigint`; `effectiveGasPrice?`: `bigint`; `events?`: \{\[`key`: `string`\]: `object`; \}; `from`: `string`; `gasUsed`: `bigint`; `logs`: `object`[]; `logsBloom`: `string`; `root`: `string`; `status`: `bigint`; `to`: `string`; `transactionHash`: `string`; `transactionIndex`: `bigint`; `type?`: `bigint`; \}, [`SendTransactionEvents`](../type-aliases/SendTransactionEvents.md)\<\{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}\>\>
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:138
 
 This will send a transaction to the smart contract and execute its method. Note this can alter the smart contract state.
 
@@ -316,80 +334,14 @@ sendObj.on('error', function(error, receipt) { // If the transaction was rejecte
 
 #### Parameters
 
-• **tx?**: [`NonPayableCallOptions`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/NonPayableCallOptions.md)
+##### tx?
+
+[`NonPayableCallOptions`](NonPayableCallOptions.md)
 
 The options used for sending.
 
 #### Returns
 
-[`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<`object`, [`SendTransactionEvents`](../type-aliases/SendTransactionEvents.md)\<`object`\>\>
+[`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<\{ `blockHash`: `string`; `blockNumber`: `bigint`; `contractAddress?`: `string`; `cumulativeGasUsed`: `bigint`; `effectiveGasPrice?`: `bigint`; `events?`: \{\[`key`: `string`\]: `object`; \}; `from`: `string`; `gasUsed`: `bigint`; `logs`: `object`[]; `logsBloom`: `string`; `root`: `string`; `status`: `bigint`; `to`: `string`; `transactionHash`: `string`; `transactionIndex`: `bigint`; `type?`: `bigint`; \}, [`SendTransactionEvents`](../type-aliases/SendTransactionEvents.md)\<\{ `bytes`: [`HEX`](../README.md#hex); `number`: [`BIGINT`](../README.md#bigint); \}\>\>
 
 - Returns a PromiEvent resolved with transaction receipt.
-
-##### blockHash
-
-> `readonly` **blockHash**: `string`
-
-##### blockNumber
-
-> `readonly` **blockNumber**: `bigint`
-
-##### contractAddress?
-
-> `readonly` `optional` **contractAddress**: `string`
-
-##### cumulativeGasUsed
-
-> `readonly` **cumulativeGasUsed**: `bigint`
-
-##### effectiveGasPrice?
-
-> `readonly` `optional` **effectiveGasPrice**: `bigint`
-
-##### events?
-
-> `optional` **events**: `object`
-
-##### from
-
-> `readonly` **from**: `string`
-
-##### gasUsed
-
-> `readonly` **gasUsed**: `bigint`
-
-##### logs
-
-> `readonly` **logs**: `object`[]
-
-##### logsBloom
-
-> `readonly` **logsBloom**: `string`
-
-##### root
-
-> `readonly` **root**: `string`
-
-##### status
-
-> `readonly` **status**: `bigint`
-
-##### to
-
-> `readonly` **to**: `string`
-
-##### transactionHash
-
-> `readonly` **transactionHash**: `string`
-
-##### transactionIndex
-
-> `readonly` **transactionIndex**: `bigint`
-
-##### type?
-
-> `readonly` `optional` **type**: `bigint`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:138

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: DeployContractParameters\<abi, chain, account, chainOverride, allArgs\>
 
-> **DeployContractParameters**\<`abi`, `chain`, `account`, `chainOverride`, `allArgs`\>: [`UnionOmit`](UnionOmit.md)\<[`SendTransactionParameters`](SendTransactionParameters.md)\<`chain`, `account`, `chainOverride`\>, `"accessList"` \| `"chain"` \| `"to"` \| `"data"`\> & [`GetChainParameter`](GetChainParameter.md)\<`chain`, `chainOverride`\> & [`UnionEvaluate`](UnionEvaluate.md)\<readonly [] *extends* `allArgs` ? `object` : `object`\> & `object`
+> **DeployContractParameters**\<`abi`, `chain`, `account`, `chainOverride`, `allArgs`\> = [`UnionOmit`](UnionOmit.md)\<[`SendTransactionParameters`](SendTransactionParameters.md)\<`chain`, `account`, `chainOverride`\>, `"accessList"` \| `"chain"` \| `"to"` \| `"data"`\> & [`GetChainParameter`](GetChainParameter.md)\<`chain`, `chainOverride`\> & [`UnionEvaluate`](UnionEvaluate.md)\<readonly \[\] *extends* `allArgs` ? `object` : `object`\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/deployContract.d.ts:11
+
+## Type Declaration
 
 ### abi
 
@@ -20,16 +22,22 @@
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### abi
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **account** *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+### chain
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-• **allArgs** = [`ContractConstructorArgs`](ContractConstructorArgs.md)\<`abi`\>
+### account
 
-## Defined in
+`account` *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/deployContract.d.ts:11
+### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+
+### allArgs
+
+`allArgs` = [`ContractConstructorArgs`](ContractConstructorArgs.md)\<`abi`\>

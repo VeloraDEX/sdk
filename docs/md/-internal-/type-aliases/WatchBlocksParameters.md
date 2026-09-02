@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: WatchBlocksParameters\<transport, chain, includeTransactions, blockTag\>
 
-> **WatchBlocksParameters**\<`transport`, `chain`, `includeTransactions`, `blockTag`\>: `object` & [`HasTransportType`](HasTransportType.md)\<`transport`, `"webSocket"` \| `"ipc"`\> *extends* `true` ? `object` : `never` \| `object`
+> **WatchBlocksParameters**\<`transport`, `chain`, `includeTransactions`, `blockTag`\> = `object` & [`HasTransportType`](HasTransportType.md)\<`transport`, `"webSocket"` \| `"ipc"`\> *extends* `true` ? `object` : `never` \| \{ `blockTag?`: `blockTag` \| [`BlockTag`](BlockTag-2.md); `emitMissed?`: `boolean`; `emitOnBegin?`: `boolean`; `includeTransactions?`: `includeTransactions`; `poll?`: `true`; `pollingInterval?`: `number`; \}
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchBlocks.d.ts:12
+
+## Type Declaration
 
 ### onBlock
 
@@ -16,15 +18,17 @@
 
 The callback to call when a new block is received.
 
-### onError()?
+### onError?
 
-> `optional` **onError**: (`error`) => `void`
+> `optional` **onError?**: (`error`) => `void`
 
 The callback to call when an error occurred when trying to get for a new block.
 
 #### Parameters
 
-• **error**: [`Error`](../interfaces/Error.md)
+##### error
+
+`Error`
 
 #### Returns
 
@@ -32,14 +36,18 @@ The callback to call when an error occurred when trying to get for a new block.
 
 ## Type Parameters
 
-• **transport** *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)
+### transport
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md)
+`transport` *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)
 
-• **includeTransactions** *extends* `boolean` = `false`
+### chain
 
-• **blockTag** *extends* [`BlockTag`](BlockTag.md) = `"latest"`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md)
 
-## Defined in
+### includeTransactions
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchBlocks.d.ts:12
+`includeTransactions` *extends* `boolean` = `false`
+
+### blockTag
+
+`blockTag` *extends* [`BlockTag`](BlockTag-2.md) = `"latest"`

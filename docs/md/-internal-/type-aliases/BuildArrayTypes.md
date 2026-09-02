@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,17 +6,19 @@
 
 # Type Alias: \_BuildArrayTypes\<T, Depth\>
 
-> **\_BuildArrayTypes**\<`T`, `Depth`\>: [`ResolvedRegister`](ResolvedRegister.md)\[`"arrayMaxDepth"`\] *extends* `false` ? \`$\{T\}\[$\{string\}\]\` : `Depth`\[`"length"`\] *extends* [`ResolvedRegister`](ResolvedRegister.md)\[`"arrayMaxDepth"`\] ? `T` : `T` *extends* \`$\{any\}\[$\{SolidityFixedArrayRange \| ""\}\]\` ? [`_BuildArrayTypes`](BuildArrayTypes.md)\<`T` \| \`$\{T\}\[$\{SolidityFixedArrayRange \| ""\}\]\`, [`...Depth`, `1`]\> : [`_BuildArrayTypes`](BuildArrayTypes.md)\<\`$\{T\}\[$\{SolidityFixedArrayRange \| ""\}\]\`, [`...Depth`, `1`]\>
+> **\_BuildArrayTypes**\<`T`, `Depth`\> = [`ResolvedRegister`](ResolvedRegister.md)\[`"arrayMaxDepth"`\] *extends* `false` ? `` `${T}[${string}]` `` : `Depth`\[`"length"`\] *extends* [`ResolvedRegister`](ResolvedRegister.md)\[`"arrayMaxDepth"`\] ? `T` : `T` *extends* \`$\{any\}\[$\{SolidityFixedArrayRange \| ""\}\]\` ? `_BuildArrayTypes`\<`T` \| \`$\{T\}\[$\{SolidityFixedArrayRange \| ""\}\]\`, \[`...Depth`, `1`\]\> : `_BuildArrayTypes`\<\`$\{T\}\[$\{SolidityFixedArrayRange \| ""\}\]\`, \[`...Depth`, `1`\]\>
+
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:21
 
 Recursively build arrays up to maximum depth
 or use a more broad type when maximum depth is switched "off"
 
 ## Type Parameters
 
-• **T** *extends* `string`
+### T
 
-• **Depth** *extends* readonly `number`[] = []
+`T` *extends* `string`
 
-## Defined in
+### Depth
 
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:21
+`Depth` *extends* readonly `number`[] = \[\]

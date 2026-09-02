@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,17 @@
 
 # Class: Iban
 
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:6
+
 Converts Ethereum addresses to IBAN or BBAN addresses and vice versa.
 
 ## Constructors
 
-### new Iban()
+### Constructor
 
-> **new Iban**(`iban`): [`Iban`](Iban.md)
+> **new Iban**(`iban`): `Iban`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:126
 
 Construct a direct or indirect IBAN that has conversion methods and validity checks.
 If the provided string was not of either the length of a direct IBAN (34 or 35),
@@ -20,13 +24,15 @@ nor the length of an indirect IBAN (20), an Error will be thrown ('Invalid IBAN 
 
 #### Parameters
 
-• **iban**: `string`
+##### iban
+
+`string`
 
 a Direct or an Indirect IBAN
 
 #### Returns
 
-[`Iban`](Iban.md)
+`Iban`
 
 - Iban instance
 
@@ -37,15 +43,13 @@ const iban = new web3.eth.Iban("XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS");
 > Iban { _iban: 'XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS' }
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:126
-
 ## Properties
 
-### toAddress()
+### toAddress
 
 > **toAddress**: () => `string`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:202
 
 This method should be used to create the equivalent ethereum address for the early provided Direct IBAN address.
 If the provided string was not a direct IBAN (has the length of 34 or 35), an Error will be thrown:
@@ -66,15 +70,13 @@ iban.toAddress();
 > "0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8"
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:202
-
 ***
 
-### toAddress()
+### toAddress
 
 > `static` **toAddress**: (`iban`) => `string`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:186
 
 This method should be used to create an ethereum address from a Direct IBAN address.
 If the provided string was not a direct IBAN (has the length of 34 or 35), an Error will be thrown:
@@ -83,7 +85,9 @@ Note: this is also available as a method at an Iban instance.
 
 #### Parameters
 
-• **iban**: `string`
+##### iban
+
+`string`
 
 a Direct IBAN address
 
@@ -100,15 +104,13 @@ web3.eth.Iban.toAddress("XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS");
 > "0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8"
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:186
-
 ## Methods
 
 ### checksum()
 
 > **checksum**(): `string`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:240
 
 Returns the IBAN checksum of the early provided IBAN
 
@@ -124,15 +126,13 @@ iban.checksum();
 > "81"
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:240
-
 ***
 
 ### client()
 
 > **client**(): `string`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:228
 
 Should be called to get client identifier within institution
 
@@ -150,15 +150,13 @@ iban.client();
 > 'GAVOFYORK'
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:228
-
 ***
 
 ### institution()
 
 > **institution**(): `string`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:251
 
 Returns institution identifier from the early provided  IBAN
 
@@ -174,15 +172,13 @@ iban.institution();
 > 'XREG'
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:251
-
 ***
 
 ### isDirect()
 
 > **isDirect**(): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:49
 
 An instance method that checks if iban number is Direct.
 It actually check the length of the provided variable and, only if it is 34 or 35, it returns true.
@@ -202,15 +198,13 @@ iban.isDirect();
 > false
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:49
-
 ***
 
 ### isIndirect()
 
 > **isIndirect**(): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:78
 
 check if iban number if indirect
 It actually check the length of the provided variable and, only if it is 20, it returns true.
@@ -230,15 +224,13 @@ iban.isIndirect();
 > true
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:78
-
 ***
 
 ### isValid()
 
 > **isValid**(): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:111
 
 Should be called to check if the early provided IBAN is correct.
 Note: this is also available as a static method.
@@ -259,15 +251,13 @@ iban.isValid();
 > false // because the checksum is incorrect
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:111
-
 ***
 
 ### toString()
 
 > **toString**(): `string`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:262
 
 Simply returns the early provided IBAN
 
@@ -283,27 +273,27 @@ iban.toString();
 > 'XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS'
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:262
-
 ***
 
 ### createIndirect()
 
-> `static` **createIndirect**(`options`): [`Iban`](Iban.md)
+> `static` **createIndirect**(`options`): `Iban`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:157
 
 Should be used to create IBAN object for given institution and identifier
 
 #### Parameters
 
-• **options**: [`IbanOptions`](../type-aliases/IbanOptions.md)
+##### options
+
+[`IbanOptions`](../type-aliases/IbanOptions.md)
 
 an object holds the `institution` and the `identifier` which will be composed to create an `Iban` object from.
 
 #### Returns
 
-[`Iban`](Iban.md)
+`Iban`
 
 an Iban class instance that holds the equivalent IBAN
 
@@ -317,27 +307,27 @@ web3.eth.Iban.createIndirect({
 > Iban {_iban: "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"}
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:157
-
 ***
 
 ### fromAddress()
 
-> `static` **fromAddress**(`address`): [`Iban`](Iban.md)
+> `static` **fromAddress**(`address`): `Iban`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:170
 
 This method should be used to create iban object from an Ethereum address.
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 an Ethereum address
 
 #### Returns
 
-[`Iban`](Iban.md)
+`Iban`
 
 an Iban class instance that holds the equivalent IBAN
 
@@ -348,15 +338,13 @@ web3.eth.Iban.fromAddress("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
 > Iban {_iban: "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"}
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:170
-
 ***
 
 ### fromBban()
 
-> `static` **fromBban**(`bban`): [`Iban`](Iban.md)
+> `static` **fromBban**(`bban`): `Iban`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:141
 
 Convert the passed BBAN to an IBAN for this country specification.
 Please note that <i>"generation of the IBAN shall be the exclusive responsibility of the bank/branch servicing the account"</i>.
@@ -364,13 +352,15 @@ This method implements the preferred algorithm described in http://en.wikipedia.
 
 #### Parameters
 
-• **bban**: `string`
+##### bban
+
+`string`
 
 the BBAN to convert to IBAN
 
 #### Returns
 
-[`Iban`](Iban.md)
+`Iban`
 
 an Iban class instance that holds the equivalent IBAN
 
@@ -381,15 +371,13 @@ web3.eth.Iban.fromBban('ETHXREGGAVOFYORK');
 > Iban {_iban: "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"}
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:141
-
 ***
 
 ### isDirect()
 
 > `static` **isDirect**(`iban`): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:34
 
 A static method that checks if an IBAN is Direct.
 It actually check the length of the provided variable and, only if it is 34 or 35, it returns true.
@@ -397,7 +385,9 @@ Note: this is also available as a method at an Iban instance.
 
 #### Parameters
 
-• **iban**: `string`
+##### iban
+
+`string`
 
 an IBAN to be checked
 
@@ -414,15 +404,13 @@ web3.eth.Iban.isDirect("XE81ETHXREGGAVOFYORK");
 > false
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:34
-
 ***
 
 ### isIndirect()
 
 > `static` **isIndirect**(`iban`): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:63
 
 A static method that checks if an IBAN is Indirect.
 It actually check the length of the provided variable and, only if it is 20, it returns true.
@@ -430,7 +418,9 @@ Note: this is also available as a method at an Iban instance.
 
 #### Parameters
 
-• **iban**: `string`
+##### iban
+
+`string`
 
 an IBAN to be checked
 
@@ -447,22 +437,22 @@ web3.eth.Iban.isIndirect("XE81ETHXREGGAVOFYORK");
 > true
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:63
-
 ***
 
 ### isValid()
 
 > `static` **isValid**(`iban`): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:95
+
 This method could be used to check if a given string is valid IBAN object.
 Note: this is also available as a method at an Iban instance.
 
 #### Parameters
 
-• **iban**: `string`
+##### iban
+
+`string`
 
 a string to be checked if it is in IBAN
 
@@ -482,21 +472,21 @@ web3.eth.Iban.isValid("XE82ETHXREGGAVOFYORK");
 > false // because the checksum is incorrect
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:95
-
 ***
 
 ### toIban()
 
 > `static` **toIban**(`address`): `string`
 
+Defined in: node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:215
+
 This method should be used to create IBAN address from an Ethereum address
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 an Ethereum address
 
@@ -512,7 +502,3 @@ the equivalent IBAN address
 web3.eth.Iban.toIban("0x00c5496aEe77C1bA1f0854206A26DdA82a81D6D8");
 > "XE7338O073KYGTWWZN0F2WZ0R8PX5ZPPZS"
 ```
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-iban@4.0.7/node\_modules/web3-eth-iban/lib/commonjs/iban.d.ts:215

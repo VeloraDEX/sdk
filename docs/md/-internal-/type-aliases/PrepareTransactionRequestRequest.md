@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,19 +6,21 @@
 
 # Type Alias: PrepareTransactionRequestRequest\<chain, chainOverride, _derivedChain\>
 
-> **PrepareTransactionRequestRequest**\<`chain`, `chainOverride`, `_derivedChain`\>: [`UnionOmit`](UnionOmit.md)\<[`FormattedTransactionRequest`](FormattedTransactionRequest.md)\<`_derivedChain`\>, `"from"`\> & [`GetTransactionRequestKzgParameter`](GetTransactionRequestKzgParameter.md) & `object`
+> **PrepareTransactionRequestRequest**\<`chain`, `chainOverride`, `_derivedChain`\> = [`UnionOmit`](UnionOmit.md)\<[`FormattedTransactionRequest`](FormattedTransactionRequest.md)\<`_derivedChain`\>, `"from"`\> & [`GetTransactionRequestKzgParameter`](GetTransactionRequestKzgParameter.md) & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/prepareTransactionRequest.d.ts:29
+
+## Type Declaration
 
 ### nonceManager?
 
-> `optional` **nonceManager**: [`NonceManager`](NonceManager.md)
+> `optional` **nonceManager?**: [`NonceManager`](NonceManager.md)
 
 Nonce manager to use for the transaction request.
 
 ### parameters?
 
-> `optional` **parameters**: readonly [`PrepareTransactionRequestParameterType`](PrepareTransactionRequestParameterType.md)[]
+> `optional` **parameters?**: readonly [`PrepareTransactionRequestParameterType`](PrepareTransactionRequestParameterType.md)[]
 
 Parameters to prepare for the transaction request.
 
@@ -30,12 +32,14 @@ Parameters to prepare for the transaction request.
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+### chain
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-• **_derivedChain** *extends* [`Chain`](Chain.md) \| `undefined` = [`DeriveChain`](DeriveChain.md)\<`chain`, `chainOverride`\>
+### chainOverride
 
-## Defined in
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/prepareTransactionRequest.d.ts:25
+### _derivedChain
+
+`_derivedChain` *extends* [`Chain`](Chain.md) \| `undefined` = [`DeriveChain`](DeriveChain.md)\<`chain`, `chainOverride`\>

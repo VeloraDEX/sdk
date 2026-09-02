@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: TransactionType
 
-> **TransactionType**: `"0x0"` \| `"0x1"` \| `"0x2"` \| `"0x3"` \| `"0x4"` \| `string` & `object`
+> **TransactionType** = `"legacy"` \| `"eip1559"` \| `"eip2930"` \| `"eip4844"` \| `"eip7702"` \| `string` & `object`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/rpc.d.ts:12
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:13

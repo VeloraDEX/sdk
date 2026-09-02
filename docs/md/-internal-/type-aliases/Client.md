@@ -1,43 +1,59 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Client
 
-# Type Alias: Client\<transport, chain, account, rpcSchema, extended\>
+# Type Alias: Client\<transport, chain, account, rpcSchema, extended, tokens\>
 
-> **Client**\<`transport`, `chain`, `account`, `rpcSchema`, `extended`\>: [`Client_Base`](Client_Base.md)\<`transport`, `chain`, `account`, `rpcSchema`\> & `extended` *extends* [`Extended`](Extended.md) ? `extended` : `unknown` & `object`
+> **Client**\<`transport`, `chain`, `account`, `rpcSchema`, `extended`, `tokens`\> = [`Client_Base`](Client_Base.md)\<`transport`, `chain`, `account`, `rpcSchema`, `tokens`\> & `extended` *extends* [`Extended`](Extended.md) ? `extended` : `unknown` & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/createClient.d.ts:78
 
-### extend()
+## Type Declaration
 
-> **extend**: \<`client`\>(`fn`) => [`Client`](Client.md)\<`transport`, `chain`, `account`, `rpcSchema`, [`Prettify`](Prettify.md)\<`client`\> & `extended` *extends* [`Extended`](Extended.md) ? `extended` : `unknown`\>
+### extend
+
+> **extend**: \<`client`\>(`fn`) => `Client`\<`transport`, `chain`, `account`, `rpcSchema`, [`Prettify`](Prettify-1.md)\<`client`\> & `extended` *extends* [`Extended`](Extended.md) ? `extended` : `unknown`, `tokens`\>
 
 #### Type Parameters
 
-• **client** *extends* [`Extended`](Extended.md) & [`ExactPartial`](ExactPartial.md)\<[`ExtendableProtectedActions`](ExtendableProtectedActions.md)\<`transport`, `chain`, `account`\>\>
+##### client
+
+`client` *extends* [`Extended`](Extended.md) & [`ExactPartial`](ExactPartial.md)\<[`ExtendableProtectedActions`](ExtendableProtectedActions.md)\<`transport`, `chain`, `account`, `tokens`\>\>
 
 #### Parameters
 
-• **fn**
+##### fn
+
+(`client`) => `client`
 
 #### Returns
 
-[`Client`](Client.md)\<`transport`, `chain`, `account`, `rpcSchema`, [`Prettify`](Prettify.md)\<`client`\> & `extended` *extends* [`Extended`](Extended.md) ? `extended` : `unknown`\>
+`Client`\<`transport`, `chain`, `account`, `rpcSchema`, [`Prettify`](Prettify-1.md)\<`client`\> & `extended` *extends* [`Extended`](Extended.md) ? `extended` : `unknown`, `tokens`\>
 
 ## Type Parameters
 
-• **transport** *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)
+### transport
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`transport` *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)
 
-• **account** *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+### chain
 
-• **rpcSchema** *extends* [`RpcSchema`](RpcSchema.md) \| `undefined` = `undefined`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-• **extended** *extends* [`Extended`](Extended.md) \| `undefined` = [`Extended`](Extended.md) \| `undefined`
+### account
 
-## Defined in
+`account` *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/clients/createClient.d.ts:68
+### rpcSchema
+
+`rpcSchema` *extends* [`RpcSchema`](RpcSchema.md) \| `undefined` = `undefined`
+
+### extended
+
+`extended` *extends* [`Extended`](Extended.md) \| `undefined` = [`Extended`](Extended.md) \| `undefined`
+
+### tokens
+
+`tokens` *extends* [`Tokens`](Tokens.md) \| `undefined` = [`Tokens`](Tokens.md) \| `undefined`

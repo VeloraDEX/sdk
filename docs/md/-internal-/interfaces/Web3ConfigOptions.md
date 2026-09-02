@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: Web3ConfigOptions
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:5
+
 ## Properties
 
 ### blockHeaderTimeout
 
 > **blockHeaderTimeout**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:16
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:16
 
 ***
 
@@ -22,29 +22,23 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **contractDataInputFill**: `"data"` \| `"input"` \| `"both"`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:18
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:18
 
 ***
 
 ### customTransactionSchema?
 
-> `optional` **customTransactionSchema**: [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md)
+> `optional` **customTransactionSchema?**: [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:32
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:32
 
 ***
 
 ### defaultAccount?
 
-> `optional` **defaultAccount**: `string`
+> `optional` **defaultAccount?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:7
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:7
 
 ***
 
@@ -52,9 +46,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **defaultBlock**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:8
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:8
 
 ***
 
@@ -62,19 +54,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **defaultChain**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:20
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:20
 
 ***
 
 ### defaultCommon?
 
-> `optional` **defaultCommon**: [`Common`](Common.md)
+> `optional` **defaultCommon?**: [`Common`](Common.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:23
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:23
 
 ***
 
@@ -82,9 +70,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **defaultHardfork**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:21
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:21
 
 ***
 
@@ -92,19 +78,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **defaultMaxPriorityFeePerGas**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:25
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:25
 
 ***
 
 ### defaultNetworkId?
 
-> `optional` **defaultNetworkId**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **defaultNetworkId?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:19
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:19
 
 ***
 
@@ -112,9 +94,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **defaultReturnFormat**: [`DataFormat`](../type-aliases/DataFormat.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:33
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:33
 
 ***
 
@@ -122,15 +102,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **defaultTransactionType**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:24
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:24
 
 ***
 
 ### enableExperimentalFeatures
 
 > **enableExperimentalFeatures**: `object`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:26
 
 #### useRpcCallSpecification
 
@@ -140,19 +120,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **useSubscriptionWhenCheckingBlockTimeout**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:26
-
 ***
 
 ### handleRevert
 
 > **handleRevert**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:6
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:6
 
 ***
 
@@ -160,9 +134,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **ignoreGasPricing**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:22
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:22
 
 ***
 
@@ -170,9 +142,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **maxListenersWarningThreshold**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:17
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:17
 
 ***
 
@@ -180,19 +150,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **transactionBlockTimeout**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:10
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:10
 
 ***
 
 ### transactionBuilder?
 
-> `optional` **transactionBuilder**: [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)
+> `optional` **transactionBuilder?**: [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:30
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:30
 
 ***
 
@@ -200,19 +166,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **transactionConfirmationBlocks**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:11
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:11
 
 ***
 
 ### transactionConfirmationPollingInterval?
 
-> `optional` **transactionConfirmationPollingInterval**: `number`
+> `optional` **transactionConfirmationPollingInterval?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:15
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:15
 
 ***
 
@@ -220,9 +182,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **transactionPollingInterval**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:12
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:12
 
 ***
 
@@ -230,19 +190,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **transactionPollingTimeout**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:13
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:13
 
 ***
 
 ### transactionReceiptPollingInterval?
 
-> `optional` **transactionReceiptPollingInterval**: `number`
+> `optional` **transactionReceiptPollingInterval?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:14
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:14
 
 ***
 
@@ -250,16 +206,12 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **transactionSendTimeout**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:9
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:9
 
 ***
 
 ### transactionTypeParser?
 
-> `optional` **transactionTypeParser**: [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md)
+> `optional` **transactionTypeParser?**: [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:31
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:31

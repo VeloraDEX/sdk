@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / FeeMarketEIP1559TxData
 
 # Interface: FeeMarketEIP1559TxData
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:139
 
 FeeMarketEIP1559Transaction data.
 
@@ -16,7 +18,9 @@ FeeMarketEIP1559Transaction data.
 
 ### accessList?
 
-> `optional` **accessList**: `null` \| [`AccessListUint8Array`](../type-aliases/AccessListUint8Array.md) \| [`AccessList`](../type-aliases/AccessList.md)
+> `optional` **accessList?**: [`AccessListUint8Array`](../type-aliases/AccessListUint8Array.md) \| [`AccessList`](../type-aliases/AccessList-4.md) \| `null`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:134
 
 The access list which contains the addresses/storage slots which the transaction wishes to access
 
@@ -24,15 +28,13 @@ The access list which contains the addresses/storage slots which the transaction
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`accessList`](AccessListEIP2930TxData.md#accesslist)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:134
-
 ***
 
 ### chainId?
 
-> `optional` **chainId**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **chainId?**: [`Numbers`](../type-aliases/Numbers.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:130
 
 The transaction's chain ID
 
@@ -40,15 +42,13 @@ The transaction's chain ID
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`chainId`](AccessListEIP2930TxData.md#chainid)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:130
-
 ***
 
 ### data?
 
-> `optional` **data**: [`Uint8ArrayLike`](../type-aliases/Uint8ArrayLike.md)
+> `optional` **data?**: [`Uint8ArrayLike`](../type-aliases/Uint8ArrayLike.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:105
 
 This will contain the data of the message or the init of a contract.
 
@@ -56,15 +56,13 @@ This will contain the data of the message or the init of a contract.
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`data`](AccessListEIP2930TxData.md#data)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:105
-
 ***
 
 ### gasLimit?
 
-> `optional` **gasLimit**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **gasLimit?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:93
 
 The transaction's gas limit.
 
@@ -72,56 +70,48 @@ The transaction's gas limit.
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`gasLimit`](AccessListEIP2930TxData.md#gaslimit)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:93
-
 ***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: `null`
+> `optional` **gasPrice?**: `null`
 
-The transaction's gas price, inherited from [Transaction](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md).  This property is not used for EIP1559
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:144
+
+The transaction's gas price, inherited from [Transaction](Transaction.md).  This property is not used for EIP1559
 transactions and should always be undefined for this specific transaction type.
 
 #### Overrides
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`gasPrice`](AccessListEIP2930TxData.md#gasprice)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:144
-
 ***
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **maxFeePerGas?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:152
 
 The maximum total fee
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:152
 
 ***
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **maxPriorityFeePerGas?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:148
 
 The maximum inclusion fee per gas (this fee is given to the miner)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:148
 
 ***
 
 ### nonce?
 
-> `optional` **nonce**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **nonce?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:85
 
 The transaction's nonce.
 
@@ -129,15 +119,13 @@ The transaction's nonce.
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`nonce`](AccessListEIP2930TxData.md#nonce)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:85
-
 ***
 
 ### r?
 
-> `optional` **r**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **r?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:113
 
 EC signature parameter.
 
@@ -145,15 +133,13 @@ EC signature parameter.
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`r`](AccessListEIP2930TxData.md#r)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:113
-
 ***
 
 ### s?
 
-> `optional` **s**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **s?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:117
 
 EC signature parameter.
 
@@ -161,15 +147,13 @@ EC signature parameter.
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`s`](AccessListEIP2930TxData.md#s)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:117
-
 ***
 
 ### to?
 
-> `optional` **to**: `string` \| `Uint8Array` \| [`Address`](../classes/Address.md)
+> `optional` **to?**: `string` \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\> \| [`Address`](../classes/Address.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:97
 
 The transaction's the address is sent to.
 
@@ -177,15 +161,13 @@ The transaction's the address is sent to.
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`to`](AccessListEIP2930TxData.md#to)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:97
-
 ***
 
 ### type?
 
-> `optional` **type**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **type?**: [`Numbers`](../type-aliases/Numbers.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:121
 
 The transaction type
 
@@ -193,15 +175,13 @@ The transaction type
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`type`](AccessListEIP2930TxData.md#type)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:121
-
 ***
 
 ### v?
 
-> `optional` **v**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **v?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:109
 
 EC recovery ID.
 
@@ -209,22 +189,16 @@ EC recovery ID.
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`v`](AccessListEIP2930TxData.md#v)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:109
-
 ***
 
 ### value?
 
-> `optional` **value**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **value?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:101
 
 The amount of Ether sent.
 
 #### Inherited from
 
 [`AccessListEIP2930TxData`](AccessListEIP2930TxData.md).[`value`](AccessListEIP2930TxData.md#value)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:101

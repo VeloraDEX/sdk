@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,25 +6,23 @@
 
 # Interface: ReadableByteStreamController
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:233
+
 ## Properties
 
 ### byobRequest
 
 > `readonly` **byobRequest**: `undefined`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:234
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:234
 
 ***
 
 ### desiredSize
 
-> `readonly` **desiredSize**: `null` \| `number`
+> `readonly` **desiredSize**: `number` \| `null`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:235
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:235
 
 ## Methods
 
@@ -32,13 +30,11 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > **close**(): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:236
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:236
 
 ***
 
@@ -46,32 +42,32 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > **enqueue**(`chunk`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:237
+
 #### Parameters
 
-• **chunk**: [`ArrayBufferView`](ArrayBufferView.md)
+##### chunk
+
+[`ArrayBufferView`](ArrayBufferView.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:237
 
 ***
 
 ### error()
 
-> **error**(`error`?): `void`
+> **error**(`error?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:238
 
 #### Parameters
 
-• **error?**: `any`
+##### error?
+
+`any`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:238

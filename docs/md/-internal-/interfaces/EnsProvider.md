@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,56 +6,58 @@
 
 # Interface: EnsProvider
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:28
+
 ## Methods
 
 ### getResolver()
 
-> **getResolver**(`name`): `Promise`\<`null` \| [`EnsResolver`](EnsResolver.md)\>
+> **getResolver**(`name`): `Promise`\<[`EnsResolver`](EnsResolver.md) \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:31
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| [`EnsResolver`](EnsResolver.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:31
+`Promise`\<[`EnsResolver`](EnsResolver.md) \| `null`\>
 
 ***
 
 ### lookupAddress()
 
-> **lookupAddress**(`address`): `Promise`\<`null` \| `string`\>
+> **lookupAddress**(`address`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:30
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:30
+`Promise`\<`string` \| `null`\>
 
 ***
 
 ### resolveName()
 
-> **resolveName**(`name`): `Promise`\<`null` \| `string`\>
+> **resolveName**(`name`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:29
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:29
+`Promise`\<`string` \| `null`\>

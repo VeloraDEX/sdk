@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,18 +6,22 @@
 
 # Type Alias: TokenCategory
 
-> **TokenCategory**: `object`
+> **TokenCategory** = `object`
 
-## Type declaration
+Defined in: [src/types.ts:162](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L162)
+
+## Properties
 
 ### id
 
 > **id**: `string`
 
+Defined in: [src/types.ts:163](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L163)
+
+***
+
 ### name
 
 > **name**: `string`
 
-## Defined in
-
-[src/types.ts:162](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L162)
+Defined in: [src/types.ts:164](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L164)

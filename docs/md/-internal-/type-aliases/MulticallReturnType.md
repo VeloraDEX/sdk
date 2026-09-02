@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: MulticallReturnType\<contracts, allowFailure, options\>
 
-> **MulticallReturnType**\<`contracts`, `allowFailure`, `options`\>: [`MulticallResults`](MulticallResults.md)\<[`Narrow`](Narrow.md)\<`contracts`\>, `allowFailure`, `object` & `options`\>
+> **MulticallReturnType**\<`contracts`, `allowFailure`, `options`\> = [`MulticallResults`](MulticallResults.md)\<[`Narrow`](Narrow.md)\<`contracts`\>, `allowFailure`, `object` & `options`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/multicall.d.ts:34
 
 ## Type Parameters
 
-• **contracts** *extends* readonly `unknown`[] = readonly [`ContractFunctionParameters`](ContractFunctionParameters.md)[]
+### contracts
 
-• **allowFailure** *extends* `boolean` = `true`
+`contracts` *extends* readonly `unknown`[] = readonly [`ContractFunctionParameters`](ContractFunctionParameters.md)[]
 
-• **options** *extends* `object` = `object`
+### allowFailure
 
-## Defined in
+`allowFailure` *extends* `boolean` = `true`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/multicall.d.ts:33
+### options
+
+`options` *extends* `object` = \{ `error`: `Error`; \}

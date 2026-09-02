@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: TypedDataDefinition\<typedData, primaryType, primaryTypes\>
 
-> **TypedDataDefinition**\<`typedData`, `primaryType`, `primaryTypes`\>: `primaryType` *extends* `"EIP712Domain"` ? [`EIP712DomainDefinition`](EIP712DomainDefinition.md)\<`typedData`, `primaryType`\> : [`MessageDefinition`](MessageDefinition.md)\<`typedData`, `primaryType`, `primaryTypes`\>
+> **TypedDataDefinition**\<`typedData`, `primaryType`, `primaryTypes`\> = `primaryType` *extends* `"EIP712Domain"` ? [`EIP712DomainDefinition`](EIP712DomainDefinition.md)\<`typedData`, `primaryType`\> : [`MessageDefinition`](MessageDefinition.md)\<`typedData`, `primaryType`, `"message"`, `primaryTypes`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/typedData.d.ts:3
 
 ## Type Parameters
 
-• **typedData** *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
+### typedData
 
-• **primaryType** *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`
+`typedData` *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
 
-• **primaryTypes** = `typedData` *extends* [`TypedData`](TypedData.md) ? keyof `typedData` : `string`
+### primaryType
 
-## Defined in
+`primaryType` *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/typedData.d.ts:3
+### primaryTypes
+
+`primaryTypes` = `typedData` *extends* [`TypedData`](TypedData.md) ? keyof `typedData` : `string`

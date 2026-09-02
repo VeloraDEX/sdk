@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: SmartAccountImplementation\<entryPointAbi, entryPointVersion, extend, eip7702\>
 
-> **SmartAccountImplementation**\<`entryPointAbi`, `entryPointVersion`, `extend`, `eip7702`\>: `object` & `eip7702` *extends* `true` ? `object` : `object`
+> **SmartAccountImplementation**\<`entryPointAbi`, `entryPointVersion`, `extend`, `eip7702`\> = `object` & `eip7702` *extends* `true` ? `object` : `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/account-abstraction/accounts/types.d.ts:18
+
+## Type Declaration
 
 ### client
 
@@ -16,19 +18,21 @@
 
 Client used to retrieve Smart Account data, and perform signing (if owner is a JSON-RPC Account).
 
-### decodeCalls()?
+### decodeCalls?
 
-> `optional` **decodeCalls**: (`data`) => `Promise`\<readonly [`Call`](Call.md)[]\>
+> `optional` **decodeCalls?**: (`data`) => `Promise`\<readonly [`Call`](Call-1.md)[]\>
 
 Decodes calldata into structured calls.
 
 #### Parameters
 
-• **data**: [`Hex`](Hex.md)
+##### data
+
+[`Hex`](Hex.md)
 
 #### Returns
 
-`Promise`\<readonly [`Call`](Call.md)[]\>
+`Promise`\<readonly [`Call`](Call-1.md)[]\>
 
 #### Example
 
@@ -37,7 +41,7 @@ const calls = await account.decodeCalls('0x...')
 // [{ to: '0x...', data: '0x...', value: 100n }, ...]
 ```
 
-### encodeCalls()
+### encodeCalls
 
 > **encodeCalls**: (`calls`) => `Promise`\<[`Hex`](Hex.md)\>
 
@@ -45,7 +49,9 @@ Encodes the calls into calldata for executing a User Operation.
 
 #### Parameters
 
-• **calls**: readonly [`Call`](Call.md)[]
+##### calls
+
+readonly [`Call`](Call-1.md)[]
 
 #### Returns
 
@@ -67,19 +73,19 @@ const callData = await account.encodeCalls([
 
 Compatible EntryPoint of the Smart Account.
 
-### entryPoint.abi
+#### entryPoint.abi
 
 > **abi**: `entryPointAbi`
 
 Compatible EntryPoint ABI.
 
-### entryPoint.address
+#### entryPoint.address
 
-> **address**: [`Address`](Address.md)
+> **address**: [`Address`](Address-1.md)
 
 Compatible EntryPoint address.
 
-### entryPoint.version
+#### entryPoint.version
 
 > **version**: `entryPointVersion`
 
@@ -87,19 +93,19 @@ Compatible EntryPoint version.
 
 ### extend?
 
-> `optional` **extend**: `extend`
+> `optional` **extend?**: `extend`
 
 Extend the Smart Account with custom properties.
 
-### getAddress()
+### getAddress
 
-> **getAddress**: () => `Promise`\<[`Address`](Address.md)\>
+> **getAddress**: () => `Promise`\<[`Address`](Address-1.md)\>
 
 Retrieves the Smart Account's address.
 
 #### Returns
 
-`Promise`\<[`Address`](Address.md)\>
+`Promise`\<[`Address`](Address-1.md)\>
 
 #### Example
 
@@ -108,48 +114,46 @@ const address = await account.getAddress()
 // '0x...'
 ```
 
-### getFactoryArgs()
+### getFactoryArgs
 
-> **getFactoryArgs**: () => `Promise`\<`object`\>
+> **getFactoryArgs**: () => `Promise`\<\{ `factory?`: [`Address`](Address-1.md); `factoryData?`: [`Hex`](Hex.md); \}\>
 
 Retrieves the calldata for factory call to deploy a Smart Account.
 If the Smart Account has already been deployed, this will return undefined values.
 
 #### Returns
 
-`Promise`\<`object`\>
-
-##### factory?
-
-> `optional` **factory**: [`Address`](Address.md)
-
-##### factoryData?
-
-> `optional` **factoryData**: [`Hex`](Hex.md)
+`Promise`\<\{ `factory?`: [`Address`](Address-1.md); `factoryData?`: [`Hex`](Hex.md); \}\>
 
 #### Examples
+
+**Counterfactual account**
 
 ```ts
 const { factory, factoryData } = await account.getFactoryArgs()
 // { factory: '0x...', factoryData: '0x...' }
 ```
 
+**Deployed account**
+
 ```ts
 const { factory, factoryData } = await account.getFactoryArgs()
 // { factory: undefined, factoryData: undefined }
 ```
 
-### getNonce()?
+### getNonce?
 
-> `optional` **getNonce**: (`parameters`?) => `Promise`\<`bigint`\>
+> `optional` **getNonce?**: (`parameters?`) => `Promise`\<`bigint`\>
 
 Retrieves the nonce of the Account.
 
 #### Parameters
 
-• **parameters?**
+##### parameters?
 
-• **parameters.key?**: `bigint`
+###### key?
+
+`bigint`
 
 #### Returns
 
@@ -162,9 +166,9 @@ const nonce = await account.getNonce()
 // 1n
 ```
 
-### getStubSignature()
+### getStubSignature
 
-> **getStubSignature**: (`parameters`?) => `Promise`\<[`Hex`](Hex.md)\>
+> **getStubSignature**: (`parameters?`) => `Promise`\<[`Hex`](Hex.md)\>
 
 Retrieves the User Operation "stub" signature for gas estimation.
 
@@ -175,7 +179,9 @@ const signature = await account.getStubSignature()
 
 #### Parameters
 
-• **parameters?**: [`UserOperationRequest`](UserOperationRequest.md)
+##### parameters?
+
+[`UserOperationRequest`](UserOperationRequest.md)
 
 #### Returns
 
@@ -183,21 +189,23 @@ const signature = await account.getStubSignature()
 
 ### nonceKeyManager?
 
-> `optional` **nonceKeyManager**: [`NonceManager`](NonceManager.md)
+> `optional` **nonceKeyManager?**: [`NonceManager`](NonceManager.md)
 
 Custom nonce key manager.
 
-### sign()?
+### sign?
 
-> `optional` **sign**: (`parameters`) => `Promise`\<[`Hex`](Hex.md)\>
+> `optional` **sign?**: (`parameters`) => `Promise`\<[`Hex`](Hex.md)\>
 
 Signs a hash via the Smart Account's owner.
 
 #### Parameters
 
-• **parameters**
+##### parameters
 
-• **parameters.hash**: [`Hash`](Hash.md)
+###### hash
+
+[`Hash`](Hash.md)
 
 #### Returns
 
@@ -212,7 +220,7 @@ const signature = await account.sign({
 // '0x...'
 ```
 
-### signMessage()
+### signMessage
 
 > **signMessage**: (`parameters`) => `Promise`\<[`Hex`](Hex.md)\>
 
@@ -220,9 +228,11 @@ Signs a [EIP-191 Personal Sign message](https://eips.ethereum.org/EIPS/eip-191).
 
 #### Parameters
 
-• **parameters**
+##### parameters
 
-• **parameters.message**: [`SignableMessage`](SignableMessage.md)
+###### message
+
+[`SignableMessage`](SignableMessage.md)
 
 #### Returns
 
@@ -237,7 +247,7 @@ const signature = await account.signMessage({
 // '0x...'
 ```
 
-### signTypedData()
+### signTypedData
 
 > **signTypedData**: \<`typedData`, `primaryType`\>(`parameters`) => `Promise`\<[`Hex`](Hex.md)\>
 
@@ -245,13 +255,19 @@ Signs [EIP-712 Typed Data](https://eips.ethereum.org/EIPS/eip-712).
 
 #### Type Parameters
 
-• **typedData** *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\>
+##### typedData
 
-• **primaryType** *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`
+`typedData` *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\>
+
+##### primaryType
+
+`primaryType` *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`
 
 #### Parameters
 
-• **parameters**: [`TypedDataDefinition`](TypedDataDefinition.md)\<`typedData`, `primaryType`\>
+##### parameters
+
+[`TypedDataDefinition`](TypedDataDefinition.md)\<`typedData`, `primaryType`\>
 
 #### Returns
 
@@ -268,7 +284,7 @@ const signature = await account.signTypedData({
 })
 ```
 
-### signUserOperation()
+### signUserOperation
 
 > **signUserOperation**: (`parameters`) => `Promise`\<[`Hex`](Hex.md)\>
 
@@ -276,7 +292,9 @@ Signs the User Operation.
 
 #### Parameters
 
-• **parameters**: [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md), `"sender"`\> & `object`
+##### parameters
+
+[`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md), `"sender"`\> & `object`
 
 #### Returns
 
@@ -293,34 +311,40 @@ const signature = await account.signUserOperation({
 
 ### userOperation?
 
-> `optional` **userOperation**: `object`
+> `optional` **userOperation?**: `object`
 
 User Operation configuration properties.
 
-### userOperation.estimateGas()?
+#### userOperation.estimateGas?
 
-> `optional` **estimateGas**: (`userOperation`) => `Promise`\<[`ExactPartial`](ExactPartial.md)\<[`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\> \| `undefined`\>
+> `optional` **estimateGas?**: (`userOperation`) => `Promise`\<[`ExactPartial`](ExactPartial.md)\<[`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\> \| `undefined`\>
 
 Prepares gas properties for the User Operation request.
 
-#### Parameters
+##### Parameters
 
-• **userOperation**: [`UserOperationRequest`](UserOperationRequest.md)
+###### userOperation
 
-#### Returns
+[`UserOperationRequest`](UserOperationRequest.md)
+
+##### Returns
 
 `Promise`\<[`ExactPartial`](ExactPartial.md)\<[`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\> \| `undefined`\>
 
 ## Type Parameters
 
-• **entryPointAbi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### entryPointAbi
 
-• **entryPointVersion** *extends* [`EntryPointVersion`](EntryPointVersion.md) = [`EntryPointVersion`](EntryPointVersion.md)
+`entryPointAbi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **extend** *extends* `object` = `object`
+### entryPointVersion
 
-• **eip7702** *extends* `boolean` = `boolean`
+`entryPointVersion` *extends* [`EntryPointVersion`](EntryPointVersion.md) = [`EntryPointVersion`](EntryPointVersion.md)
 
-## Defined in
+### extend
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/account-abstraction/accounts/types.d.ts:18
+`extend` *extends* `object` = `object`
+
+### eip7702
+
+`eip7702` *extends* `boolean` = `boolean`

@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ReadableStreamBYOBReader
 
 # Interface: ReadableStreamBYOBReader
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:206
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/ReadableStreamBYOBReader)
 
@@ -18,23 +20,25 @@
 
 > `readonly` **closed**: `Promise`\<`undefined`\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:100
+
 #### Inherited from
 
 [`ReadableStreamGenericReader`](ReadableStreamGenericReader.md).[`closed`](ReadableStreamGenericReader.md#closed)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:100
 
 ## Methods
 
 ### cancel()
 
-> **cancel**(`reason`?): `Promise`\<`void`\>
+> **cancel**(`reason?`): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:101
 
 #### Parameters
 
-• **reason?**: `any`
+##### reason?
+
+`any`
 
 #### Returns
 
@@ -44,33 +48,31 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 [`ReadableStreamGenericReader`](ReadableStreamGenericReader.md).[`cancel`](ReadableStreamGenericReader.md#cancel)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:101
-
 ***
 
 ### read()
 
 > **read**\<`T`\>(`view`): `Promise`\<[`ReadableStreamReadResult`](../type-aliases/ReadableStreamReadResult.md)\<`T`\>\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:208
+
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/ReadableStreamBYOBReader/read)
 
 #### Type Parameters
 
-• **T** *extends* [`ArrayBufferView`](ArrayBufferView.md)
+##### T
+
+`T` *extends* [`ArrayBufferView`](ArrayBufferView.md)\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
 
 #### Parameters
 
-• **view**: `T`
+##### view
+
+`T`
 
 #### Returns
 
 `Promise`\<[`ReadableStreamReadResult`](../type-aliases/ReadableStreamReadResult.md)\<`T`\>\>
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:208
 
 ***
 
@@ -78,12 +80,10 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > **releaseLock**(): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:210
+
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/ReadableStreamBYOBReader/releaseLock)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:210

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: Deferrable\<T\>
 
-> **Deferrable**\<`T`\>: \{ \[K in keyof T\]: T\[K\] \| Promise\<T\[K\]\> \}
+> **Deferrable**\<`T`\> = \{ \[K in keyof T\]: T\[K\] \| Promise\<T\[K\]\> \}
+
+Defined in: node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:3
 
 ## Type Parameters
 
-• **T**
+### T
 
-## Defined in
-
-node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:3
+`T`

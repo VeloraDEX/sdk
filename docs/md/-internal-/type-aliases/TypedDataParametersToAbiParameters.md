@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: \_TypedDataParametersToAbiParameters\<typedDataParameters, typedData, keyReferences\>
 
-> **\_TypedDataParametersToAbiParameters**\<`typedDataParameters`, `typedData`, `keyReferences`\>: \{ \[key in keyof typedDataParameters\]: typedDataParameters\[key\] extends infer typedDataParameter extends Object ? typedDataParameter\["type"\] extends keyof typedData & string ? Object : typedDataParameter\["type"\] extends \`$\{infer type extends keyof typedData & string\}\[$\{infer tail\}\]\` ? Object : typedDataParameter : never \}
+> **\_TypedDataParametersToAbiParameters**\<`typedDataParameters`, `typedData`, `keyReferences`\> = `` { [key in keyof typedDataParameters]: typedDataParameters[key] extends infer typedDataParameter extends { name: string; type: unknown } ? typedDataParameter["type"] extends keyof typedData & string ? { components: typedDataParameter["type"] extends keyof keyReferences ? Error<`Circular reference detected. '${typedDataParameter["type"]}' is a circular reference.`> : _TypedDataParametersToAbiParameters<typedData[typedDataParameter["type"]], typedData, keyReferences & { [_ in typedDataParameter["type"]]: true }>; name: typedDataParameter["name"]; type: "tuple" } : typedDataParameter["type"] extends `${infer type extends keyof typedData & string}[${infer tail}]` ? { components: type extends keyof keyReferences ? Error<`Circular reference detected. '${typedDataParameter["type"]}' is a circular reference.`> : _TypedDataParametersToAbiParameters<typedData[type], typedData, keyReferences & { [_ in type]: true }>; name: typedDataParameter["name"]; type: `tuple[${tail}]` } : typedDataParameter : never } ``
+
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:277
 
 ## Type Parameters
 
-• **typedDataParameters** *extends* readonly [`TypedDataParameter`](TypedDataParameter.md)[]
+### typedDataParameters
 
-• **typedData** *extends* [`TypedData`](TypedData.md)
+`typedDataParameters` *extends* readonly [`TypedDataParameter`](TypedDataParameter.md)[]
 
-• **keyReferences** *extends* `object` \| `unknown` = `unknown`
+### typedData
 
-## Defined in
+`typedData` *extends* [`TypedData`](TypedData.md)
 
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:213
+### keyReferences
+
+`keyReferences` *extends* \{\[`_`: `string`\]: `unknown`; \} \| `unknown` = `unknown`

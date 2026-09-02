@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,32 @@
 
 # Type Alias: GetContractEventsReturnType\<abi, eventName, strict, fromBlock, toBlock, isPending\>
 
-> **GetContractEventsReturnType**\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`, `isPending`\>: [`Log`](Log.md)\<`bigint`, `number`, `isPending`, `undefined`, `strict`, `abi`, `eventName`\>[]
+> **GetContractEventsReturnType**\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`, `isPending`\> = [`Log`](Log.md)\<`bigint`, `number`, `isPending`, `undefined`, `strict`, `abi`, `eventName`\>[]
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getContractEvents.d.ts:37
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = readonly `unknown`[]
+### abi
 
-• **eventName** *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> \| `undefined` = [`ContractEventName`](ContractEventName.md)\<`abi`\> \| `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = readonly `unknown`[]
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+### eventName
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> \| `undefined` = [`ContractEventName`](ContractEventName-1.md)\<`abi`\> \| `undefined`
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+### strict
 
-• **isPending** *extends* `boolean` = `fromBlock` *extends* `"pending"` ? `true` : `false` \| `toBlock` *extends* `"pending"` ? `true` : `false`
+`strict` *extends* `boolean` \| `undefined` = `undefined`
 
-## Defined in
+### fromBlock
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getContractEvents.d.ts:37
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+### isPending
+
+`isPending` *extends* `boolean` = `fromBlock` *extends* `"pending"` ? `true` : `false` \| `toBlock` *extends* `"pending"` ? `true` : `false`

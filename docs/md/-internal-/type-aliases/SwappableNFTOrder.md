@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: SwappableNFTOrder
 
-> **SwappableNFTOrder**: [`SwappableOrder`](../../type-aliases/SwappableOrder.md) & `object`
+> **SwappableNFTOrder** = [`SwappableOrder`](../../type-aliases/SwappableOrder.md) & `object`
 
-## Type declaration
+Defined in: [src/methods/swap/transaction.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L37)
+
+## Type Declaration
 
 ### makerAssetId
 
@@ -25,7 +27,3 @@
 ### takerAssetType
 
 > **takerAssetType**: [`AssetTypeVariant`](AssetTypeVariant.md)
-
-## Defined in
-
-[src/methods/swap/transaction.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L37)

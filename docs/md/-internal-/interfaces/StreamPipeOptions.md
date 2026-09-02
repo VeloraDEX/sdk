@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,31 +6,31 @@
 
 # Interface: StreamPipeOptions
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:52
+
 ## Properties
 
 ### preventAbort?
 
-> `optional` **preventAbort**: `boolean`
+> `optional` **preventAbort?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:53
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:53
 
 ***
 
 ### preventCancel?
 
-> `optional` **preventCancel**: `boolean`
+> `optional` **preventCancel?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:54
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:54
 
 ***
 
 ### preventClose?
 
-> `optional` **preventClose**: `boolean`
+> `optional` **preventClose?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:96
 
 Pipes this readable stream to a given writable stream destination.
 The way in which the piping process behaves under various error
@@ -72,16 +72,10 @@ case, this source readable stream will be canceled, and destination
 aborted, unless the respective options preventCancel or preventAbort
 are set.
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:96
-
 ***
 
 ### signal?
 
-> `optional` **signal**: `AbortSignal`
+> `optional` **signal?**: `AbortSignal`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:97
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:97

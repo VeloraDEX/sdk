@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,30 +6,46 @@
 
 # Type Alias: TypedDataDomain
 
-> **TypedDataDomain**: `object`
+> **TypedDataDomain** = `object`
 
-## Type declaration
+Defined in: [src/methods/common/orders/buildOrderData.ts:5](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/common/orders/buildOrderData.ts#L5)
+
+## Properties
 
 ### chainId?
 
-> `optional` **chainId**: `number` \| `bigint`
+> `optional` **chainId?**: `bigint` \| `string` \| `number`
+
+Defined in: [src/methods/common/orders/buildOrderData.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/common/orders/buildOrderData.ts#L8)
+
+***
 
 ### name?
 
-> `optional` **name**: `string`
+> `optional` **name?**: `string`
+
+Defined in: [src/methods/common/orders/buildOrderData.ts:6](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/common/orders/buildOrderData.ts#L6)
+
+***
 
 ### salt?
 
-> `optional` **salt**: [`ResolvedRegister`](ResolvedRegister.md)\[`"bytesType"`\]\[`"outputs"`\]
+> `optional` **salt?**: `string`
+
+Defined in: [src/methods/common/orders/buildOrderData.ts:10](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/common/orders/buildOrderData.ts#L10)
+
+***
 
 ### verifyingContract?
 
-> `optional` **verifyingContract**: [`Address`](Address.md)
+> `optional` **verifyingContract?**: `string`
+
+Defined in: [src/methods/common/orders/buildOrderData.ts:9](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/common/orders/buildOrderData.ts#L9)
+
+***
 
 ### version?
 
-> `optional` **version**: `string`
+> `optional` **version?**: `string`
 
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:121
+Defined in: [src/methods/common/orders/buildOrderData.ts:7](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/common/orders/buildOrderData.ts#L7)

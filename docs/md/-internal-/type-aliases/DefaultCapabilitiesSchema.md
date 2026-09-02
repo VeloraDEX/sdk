@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,110 +6,118 @@
 
 # Type Alias: DefaultCapabilitiesSchema
 
-> **DefaultCapabilitiesSchema**: `object`
+> **DefaultCapabilitiesSchema** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/capabilities.d.ts:7
+
+## Properties
 
 ### connect
 
 > **connect**: `object`
 
-### connect.Request
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/capabilities.d.ts:8
+
+#### Request
 
 > **Request**: `object`
 
-### connect.Request.unstable\_addSubAccount?
+##### Request.unstable\_addSubAccount?
 
-> `optional` **unstable\_addSubAccount**: `object`
+> `optional` **unstable\_addSubAccount?**: `object`
 
-### connect.Request.unstable\_addSubAccount.account
+##### Request.unstable\_addSubAccount.account
 
 > **account**: [`AddSubAccountParameters`](AddSubAccountParameters.md)
 
-### connect.Request.unstable\_signInWithEthereum?
+##### Request.unstable\_signInWithEthereum?
 
-> `optional` **unstable\_signInWithEthereum**: [`RequiredBy`](RequiredBy.md)\<[`Partial`](Partial.md)\<[`SiweMessage`](SiweMessage.md)\>, `"chainId"` \| `"nonce"`\>
+> `optional` **unstable\_signInWithEthereum?**: [`RequiredBy`](RequiredBy.md)\<[`Partial`](Partial.md)\<[`SiweMessage`](SiweMessage.md)\>, `"chainId"` \| `"nonce"`\>
 
-### connect.ReturnType
+#### ReturnType
 
 > **ReturnType**: `object`
 
-### connect.ReturnType.unstable\_signInWithEthereum?
+##### ReturnType.unstable\_signInWithEthereum?
 
-> `optional` **unstable\_signInWithEthereum**: `object`
+> `optional` **unstable\_signInWithEthereum?**: `object`
 
-### connect.ReturnType.unstable\_signInWithEthereum.message
+##### ReturnType.unstable\_signInWithEthereum.message
 
 > **message**: `string`
 
-### connect.ReturnType.unstable\_signInWithEthereum.signature
+##### ReturnType.unstable\_signInWithEthereum.signature
 
 > **signature**: [`Hex`](Hex.md)
 
-### connect.ReturnType.unstable\_subAccounts?
+##### ReturnType.unstable\_subAccounts?
 
-> `optional` **unstable\_subAccounts**: readonly [`AddSubAccountReturnType`](AddSubAccountReturnType.md)[]
+> `optional` **unstable\_subAccounts?**: readonly [`AddSubAccountReturnType`](AddSubAccountReturnType.md)[]
+
+***
 
 ### getCapabilities
 
 > **getCapabilities**: `object`
 
-### getCapabilities.ReturnType
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/capabilities.d.ts:23
+
+#### ReturnType
 
 > **ReturnType**: `object`
 
-### getCapabilities.ReturnType.atomic?
+##### ReturnType.atomic?
 
-> `optional` **atomic**: `object`
+> `optional` **atomic?**: `object`
 
-### getCapabilities.ReturnType.atomic.status
+##### ReturnType.atomic.status
 
 > **status**: `"supported"` \| `"ready"` \| `"unsupported"`
 
-### getCapabilities.ReturnType.paymasterService?
+##### ReturnType.paymasterService?
 
-> `optional` **paymasterService**: `object`
+> `optional` **paymasterService?**: `object`
 
-### getCapabilities.ReturnType.paymasterService.supported
+##### ReturnType.paymasterService.supported
 
 > **supported**: `boolean`
 
-### getCapabilities.ReturnType.unstable\_addSubAccount?
+##### ReturnType.unstable\_addSubAccount?
 
-> `optional` **unstable\_addSubAccount**: `object`
+> `optional` **unstable\_addSubAccount?**: `object`
 
-### getCapabilities.ReturnType.unstable\_addSubAccount.keyTypes
+##### ReturnType.unstable\_addSubAccount.keyTypes
 
 > **keyTypes**: (`"address"` \| `"p256"` \| `"webcrypto-p256"` \| `"webauthn-p256"`)[]
 
-### getCapabilities.ReturnType.unstable\_addSubAccount.supported
+##### ReturnType.unstable\_addSubAccount.supported
 
 > **supported**: `boolean`
+
+***
 
 ### sendCalls
 
 > **sendCalls**: `object`
 
-### sendCalls.Request
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/capabilities.d.ts:37
+
+#### Request
 
 > **Request**: `object`
 
-### sendCalls.Request.paymasterService?
+##### Request.paymasterService?
 
-> `optional` **paymasterService**: `object`
+> `optional` **paymasterService?**: `object`
 
-### sendCalls.Request.paymasterService.context?
+##### Request.paymasterService.context?
 
-> `optional` **context**: [`Record`](Record.md)\<`string`, `any`\>
+> `optional` **context?**: [`Record`](Record.md)\<`string`, `any`\>
 
-### sendCalls.Request.paymasterService.optional?
+##### Request.paymasterService.optional?
 
-> `optional` **optional**: `boolean`
+> `optional` **optional?**: `boolean`
 
-### sendCalls.Request.paymasterService.url
+##### Request.paymasterService.url
 
 > **url**: `string`
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/capabilities.d.ts:7

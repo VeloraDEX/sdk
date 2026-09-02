@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: SDKConfig\<TxResponse\>
 
-> **SDKConfig**\<`TxResponse`\>: [`ConstructProviderFetchInput`](../interfaces/ConstructProviderFetchInput.md)\<`TxResponse`, `"staticCall"` \| `"transactCall"` \| `"signTypedDataCall"`\> & [`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
+> **SDKConfig**\<`TxResponse`\> = [`ConstructProviderFetchInput`](../interfaces/ConstructProviderFetchInput.md)\<`TxResponse`, `"staticCall"` \| `"transactCall"` \| `"signTypedDataCall"`\> & [`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
+
+Defined in: [src/sdk/partial.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L19)
 
 ## Type Parameters
 
-• **TxResponse** = `any`
+### TxResponse
 
-## Defined in
-
-[src/sdk/partial.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L19)
+`TxResponse` = `any`

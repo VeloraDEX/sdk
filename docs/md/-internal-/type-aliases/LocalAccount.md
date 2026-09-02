@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: LocalAccount\<source, address\>
 
-> **LocalAccount**\<`source`, `address`\>: [`Prettify`](Prettify.md)\<[`CustomSource`](CustomSource.md) & `object`\>
+> **LocalAccount**\<`source`, `address`\> = [`Prettify`](Prettify-1.md)\<[`CustomSource`](CustomSource.md) & `object`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:33
 
 ## Type Parameters
 
-• **source** *extends* `string` = `string`
+### source
 
-• **address** *extends* [`Address`](Address.md) = [`Address`](Address.md)
+`source` *extends* `string` = `string`
 
-## Defined in
+### address
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:33
+`address` *extends* [`Address`](Address-1.md) = [`Address`](Address-1.md)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,49 +6,55 @@
 
 # Class: Web3RequestManager\<API\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:8
+
 ## Extends
 
 - [`Web3EventEmitter`](Web3EventEmitter.md)\<\{ \[key in Web3RequestManagerEvent\]: SupportedProviders\<API\> \| undefined \}\>
 
 ## Type Parameters
 
-• **API** *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`EthExecutionAPI`](../type-aliases/EthExecutionAPI.md)
+### API
+
+`API` *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`EthExecutionAPI`](../type-aliases/EthExecutionAPI.md)
 
 ## Constructors
 
-### new Web3RequestManager()
+### Constructor
 
-> **new Web3RequestManager**\<`API`\>(`provider`?, `useRpcCallSpecification`?, `requestManagerMiddleware`?): [`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
+> **new Web3RequestManager**\<`API`\>(`provider?`, `useRpcCallSpecification?`, `requestManagerMiddleware?`): `Web3RequestManager`\<`API`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:14
 
 #### Parameters
 
-• **provider?**: `string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
+##### provider?
 
-• **useRpcCallSpecification?**: `boolean`
+`string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
 
-• **requestManagerMiddleware?**: [`RequestManagerMiddleware`](../interfaces/RequestManagerMiddleware.md)\<`API`\>
+##### useRpcCallSpecification?
+
+`boolean`
+
+##### requestManagerMiddleware?
+
+[`RequestManagerMiddleware`](../interfaces/RequestManagerMiddleware.md)\<`API`\>
 
 #### Returns
 
-[`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
+`Web3RequestManager`\<`API`\>
 
 #### Overrides
 
-[`Web3EventEmitter`](Web3EventEmitter.md).[`constructor`](Web3EventEmitter.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:14
+[`Web3EventEmitter`](Web3EventEmitter.md).[`constructor`](Web3EventEmitter.md#constructor)
 
 ## Properties
 
 ### middleware?
 
-> `optional` **middleware**: [`RequestManagerMiddleware`](../interfaces/RequestManagerMiddleware.md)\<`API`\>
+> `optional` **middleware?**: [`RequestManagerMiddleware`](../interfaces/RequestManagerMiddleware.md)\<`API`\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:13
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:13
 
 ## Accessors
 
@@ -56,19 +62,17 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_r
 
 #### Get Signature
 
-> **get** **provider**(): `undefined` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
+> **get** **provider**(): [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:27
 
 Will return the current provider.
 
 ##### Returns
 
-`undefined` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
+[`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`
 
 Returns the current provider
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:27
 
 ***
 
@@ -78,6 +82,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_r
 
 > **get** **providers**(): `object`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:31
+
 Will return all available providers
 
 ##### Returns
@@ -91,10 +97,6 @@ Will return all available providers
 ###### WebsocketProvider
 
 > **WebsocketProvider**: [`Web3BaseProviderConstructor`](../type-aliases/Web3BaseProviderConstructor.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:31
 
 ***
 
@@ -104,6 +106,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_r
 
 > **get** `static` **providers**(): `object`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:18
+
 Will return all available providers
 
 ##### Returns
@@ -118,25 +122,29 @@ Will return all available providers
 
 > **WebsocketProvider**: [`Web3BaseProviderConstructor`](../type-aliases/Web3BaseProviderConstructor.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:18
-
 ## Methods
 
 ### emit()
 
 > **emit**\<`K`\>(`eventName`, `params`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object`\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<\{ `BEFORE_PROVIDER_CHANGE`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; `PROVIDER_CHANGED`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; \}\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **params**: `object`\[`K`\]
+`K`
+
+##### params
+
+`object`\[`K`\]
 
 #### Returns
 
@@ -146,15 +154,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_r
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`emit`](Web3EventEmitter.md#emit)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
-
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 #### Returns
 
@@ -164,15 +170,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`eventNames`](Web3EventEmitter.md#eventnames)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
-
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 #### Returns
 
@@ -182,23 +186,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`getMaxListeners`](Web3EventEmitter.md#getmaxlisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
-
 ***
 
 ### listenerCount()
 
 > **listenerCount**\<`K`\>(`eventName`): `number`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object`\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<\{ `BEFORE_PROVIDER_CHANGE`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; `PROVIDER_CHANGED`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; \}\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -208,23 +214,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`listenerCount`](Web3EventEmitter.md#listenercount)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
-
 ***
 
 ### listeners()
 
 > **listeners**\<`K`\>(`eventName`): (...`args`) => `void`[]
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object`\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<\{ `BEFORE_PROVIDER_CHANGE`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; `PROVIDER_CHANGED`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; \}\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -234,25 +242,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`listeners`](Web3EventEmitter.md#listeners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
-
 ***
 
 ### off()
 
 > **off**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object`\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<\{ `BEFORE_PROVIDER_CHANGE`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; `PROVIDER_CHANGED`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; \}\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
 
 #### Returns
 
@@ -262,25 +274,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`off`](Web3EventEmitter.md#off)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
-
 ***
 
 ### on()
 
 > **on**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object`\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<\{ `BEFORE_PROVIDER_CHANGE`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; `PROVIDER_CHANGED`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; \}\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
 
 #### Returns
 
@@ -290,25 +306,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`on`](Web3EventEmitter.md#on)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
-
 ***
 
 ### once()
 
 > **once**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
+
 #### Type Parameters
 
-• **K** *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<`object`\>
+##### K
+
+`K` *extends* [`Web3EventKey`](../type-aliases/Web3EventKey.md)\<\{ `BEFORE_PROVIDER_CHANGE`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; `PROVIDER_CHANGED`: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`; \}\>
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
 
 #### Returns
 
@@ -318,27 +338,21 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`once`](Web3EventEmitter.md#once)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
-
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 #### Returns
 
-[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
 
 #### Inherited from
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`removeAllListeners`](Web3EventEmitter.md#removealllisteners)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
@@ -346,19 +360,27 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 > **send**\<`Method`, `ResponseType`\>(`request`): `Promise`\<`ResponseType`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:51
+
 Will execute a request
 
 #### Type Parameters
 
-• **Method** *extends* `string`
+##### Method
 
-• **ResponseType** = [`Web3APIReturnType`](../type-aliases/Web3APIReturnType.md)\<`API`, `Method`\>
+`Method` *extends* `string`
+
+##### ResponseType
+
+`ResponseType` = [`Web3APIReturnType`](../type-aliases/Web3APIReturnType.md)\<`API`, `Method`\>
 
 #### Parameters
 
-• **request**: [`Web3APIRequest`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)\<`API`, `Method`\>
+##### request
 
-[Web3APIRequest](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md) The request to send
+[`Web3APIRequest`](../interfaces/Web3APIRequest.md)\<`API`, `Method`\>
+
+[Web3APIRequest](../interfaces/Web3APIRequest.md) The request to send
 
 #### Returns
 
@@ -367,21 +389,21 @@ Will execute a request
 The response of the request ResponseType. If there is error
 in the response, will throw an error
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:51
-
 ***
 
 ### sendBatch()
 
 > **sendBatch**(`request`): `Promise`\<[`JsonRpcBatchResponse`](../type-aliases/JsonRpcBatchResponse.md)\<`unknown`\>\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:57
+
 Same as send, but, will execute a batch of requests
 
 #### Parameters
 
-• **request**: [`JsonRpcBatchRequest`](../type-aliases/JsonRpcBatchRequest.md)
+##### request
+
+[`JsonRpcBatchRequest`](../type-aliases/JsonRpcBatchRequest.md)
 
 [JsonRpcBatchRequest](../type-aliases/JsonRpcBatchRequest.md) The batch request to send
 
@@ -389,19 +411,19 @@ Same as send, but, will execute a batch of requests
 
 `Promise`\<[`JsonRpcBatchResponse`](../type-aliases/JsonRpcBatchResponse.md)\<`unknown`\>\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:57
-
 ***
 
 ### setMaxListenerWarningThreshold()
 
 > **setMaxListenerWarningThreshold**(`maxListenersWarningThreshold`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+
 #### Parameters
 
-• **maxListenersWarningThreshold**: `number`
+##### maxListenersWarningThreshold
+
+`number`
 
 #### Returns
 
@@ -411,46 +433,42 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_r
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`setMaxListenerWarningThreshold`](Web3EventEmitter.md#setmaxlistenerwarningthreshold)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
-
 ***
 
 ### setMiddleware()
 
 > **setMiddleware**(`requestManagerMiddleware`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:41
+
 #### Parameters
 
-• **requestManagerMiddleware**: [`RequestManagerMiddleware`](../interfaces/RequestManagerMiddleware.md)\<`API`\>
+##### requestManagerMiddleware
+
+[`RequestManagerMiddleware`](../interfaces/RequestManagerMiddleware.md)\<`API`\>
 
 #### Returns
 
 `void`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:41
-
 ***
 
 ### setProvider()
 
-> **setProvider**(`provider`?): `boolean`
+> **setProvider**(`provider?`): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:40
 
 Use to set provider. Provider can be a provider instance or a string.
 
 #### Parameters
 
-• **provider?**: `string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
+##### provider?
+
+`string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
 
 The provider to set
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:40

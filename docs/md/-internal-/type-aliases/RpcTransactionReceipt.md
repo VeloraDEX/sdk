@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: RpcTransactionReceipt
 
-> **RpcTransactionReceipt**: [`TransactionReceipt`](TransactionReceipt.md)\<[`Quantity`](Quantity.md), [`Index`](Index.md), [`Status`](Status.md), [`TransactionType`](TransactionType.md)\>
+> **RpcTransactionReceipt** = [`TransactionReceipt`](TransactionReceipt-1.md)\<[`Quantity`](Quantity.md), [`Index`](Index.md), [`Status`](Status.md), [`TransactionType`](TransactionType-1.md)\>
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/rpc.d.ts:36
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/rpc.d.ts:36

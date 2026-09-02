@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,130 +6,164 @@
 
 # Interface: GetQuoteFunc()
 
-> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPrice`](../../type-aliases/QuoteWithDeltaPrice.md)\>
+Defined in: [src/methods/quote/getQuote.ts:81](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L81)
 
-## Parameters
+## Call Signature
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\> & `object`
+> **GetQuoteFunc**(`options`, `requestParams?`): `Promise`\<[`QuoteWithDeltaPrice`](../../type-aliases/QuoteWithDeltaPrice.md)\>
 
-• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+Defined in: [src/methods/quote/getQuote.ts:82](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L82)
 
-## Returns
+### Parameters
+
+#### options
+
+[`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\> & `object`
+
+#### requestParams?
+
+[`RequestParameters`](../type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<[`QuoteWithDeltaPrice`](../../type-aliases/QuoteWithDeltaPrice.md)\>
 
-## Defined in
+## Call Signature
 
-[src/methods/quote/getQuote.ts:82](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L82)
+> **GetQuoteFunc**(`options`, `requestParams?`): `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
 
-> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
+Defined in: [src/methods/quote/getQuote.ts:86](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L86)
 
-## Parameters
+### Parameters
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\> & `object`
+#### options
 
-• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+[`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\> & `object`
 
-## Returns
+#### requestParams?
+
+[`RequestParameters`](../type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
 
-## Defined in
+## Call Signature
 
-[src/methods/quote/getQuote.ts:86](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L86)
+> **GetQuoteFunc**(`options`, `requestParams?`): `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md)\>
 
-> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md)\>
+Defined in: [src/methods/quote/getQuote.ts:90](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L90)
 
-## Parameters
+### Parameters
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\>
+#### options
 
-• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+[`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"delta"`\>
 
-## Returns
+#### requestParams?
+
+[`RequestParameters`](../type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md)\>
 
-## Defined in
+## Call Signature
 
-[src/methods/quote/getQuote.ts:90](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L90)
+> **GetQuoteFunc**(`options`, `requestParams?`): `Promise`\<[`QuoteWithMarketPrice`](../../type-aliases/QuoteWithMarketPrice.md)\>
 
-> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithMarketPrice`](../../type-aliases/QuoteWithMarketPrice.md)\>
+Defined in: [src/methods/quote/getQuote.ts:94](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L94)
 
-## Parameters
+### Parameters
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"market"`\>
+#### options
 
-• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+[`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"market"`\>
 
-## Returns
+#### requestParams?
+
+[`RequestParameters`](../type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<[`QuoteWithMarketPrice`](../../type-aliases/QuoteWithMarketPrice.md)\>
 
-## Defined in
+## Call Signature
 
-[src/methods/quote/getQuote.ts:94](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L94)
+> **GetQuoteFunc**(`options`, `requestParams?`): `Promise`\<[`QuoteWithDeltaPrice`](../../type-aliases/QuoteWithDeltaPrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
 
-> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPrice`](../../type-aliases/QuoteWithDeltaPrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
+Defined in: [src/methods/quote/getQuote.ts:98](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L98)
 
-## Parameters
+### Parameters
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\> & `object`
+#### options
 
-• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+[`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\> & `object`
 
-## Returns
+#### requestParams?
+
+[`RequestParameters`](../type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<[`QuoteWithDeltaPrice`](../../type-aliases/QuoteWithDeltaPrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
 
-## Defined in
+## Call Signature
 
-[src/methods/quote/getQuote.ts:98](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L98)
+> **GetQuoteFunc**(`options`, `requestParams?`): `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
 
-> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
+Defined in: [src/methods/quote/getQuote.ts:104](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L104)
 
-## Parameters
+### Parameters
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\> & `object`
+#### options
 
-• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+[`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\> & `object`
 
-## Returns
+#### requestParams?
+
+[`RequestParameters`](../type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<[`QuoteWithBridgePrice`](../type-aliases/QuoteWithBridgePrice.md)\>
 
-## Defined in
+## Call Signature
 
-[src/methods/quote/getQuote.ts:104](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L104)
+> **GetQuoteFunc**(`options`, `requestParams?`): `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
 
-> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
+Defined in: [src/methods/quote/getQuote.ts:108](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L108)
 
-## Parameters
+### Parameters
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\>
+#### options
 
-• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+[`QuoteParams`](../../type-aliases/QuoteParams.md)\<`"all"`\>
 
-## Returns
+#### requestParams?
+
+[`RequestParameters`](../type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<[`QuoteWithDeltaPriceAndBridgePrice`](../type-aliases/QuoteWithDeltaPriceAndBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](../../type-aliases/QuoteWithMarketPriceAsFallback.md)\>
 
-## Defined in
+## Call Signature
 
-[src/methods/quote/getQuote.ts:108](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L108)
+> **GetQuoteFunc**(`options`, `requestParams?`): `Promise`\<[`QuoteResponse`](../../type-aliases/QuoteResponse.md)\>
 
-> **GetQuoteFunc**(`options`, `requestParams`?): `Promise`\<[`QuoteResponse`](../../type-aliases/QuoteResponse.md)\>
+Defined in: [src/methods/quote/getQuote.ts:111](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L111)
 
-## Parameters
+### Parameters
 
-• **options**: [`QuoteParams`](../../type-aliases/QuoteParams.md)\<[`TradeMode`](../type-aliases/TradeMode.md)\>
+#### options
 
-• **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+[`QuoteParams`](../../type-aliases/QuoteParams.md)
 
-## Returns
+#### requestParams?
+
+[`RequestParameters`](../type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<[`QuoteResponse`](../../type-aliases/QuoteResponse.md)\>
-
-## Defined in
-
-[src/methods/quote/getQuote.ts:111](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L111)

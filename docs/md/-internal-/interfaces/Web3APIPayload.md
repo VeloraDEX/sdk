@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,35 +6,37 @@
 
 # Interface: Web3APIPayload\<API, Method\>
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:27
+
 ## Extends
 
-- [`Web3APIRequest`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md)\<`API`, `Method`\>
+- [`Web3APIRequest`](Web3APIRequest.md)\<`API`, `Method`\>
 
 ## Type Parameters
 
-• **API** *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md)
+### API
 
-• **Method** *extends* [`Web3APIMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
+`API` *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md)
+
+### Method
+
+`Method` *extends* [`Web3APIMethod`](../type-aliases/Web3APIMethod.md)\<`API`\>
 
 ## Properties
 
 ### id?
 
-> `readonly` `optional` **id**: [`JsonRpcId`](../type-aliases/JsonRpcId.md)
+> `readonly` `optional` **id?**: [`JsonRpcId`](../type-aliases/JsonRpcId.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:29
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:29
 
 ***
 
 ### jsonrpc?
 
-> `readonly` `optional` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
+> `readonly` `optional` **jsonrpc?**: [`JsonRpcIdentifier`](../type-aliases/JsonRpcIdentifier.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:28
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:28
 
 ***
 
@@ -42,34 +44,28 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > **method**: `string` \| `Method`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:24
+
 #### Inherited from
 
-[`Web3APIRequest`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`method`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#method)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:24
+[`Web3APIRequest`](Web3APIRequest.md).[`method`](Web3APIRequest.md#method-1)
 
 ***
 
 ### params?
 
-> `optional` **params**: `object` \| readonly `unknown`[] \| [`Web3APIParams`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIParams.md)\<`API`, `Method`\>
+> `optional` **params?**: `object` \| readonly `unknown`[] \| [`Web3APIParams`](../type-aliases/Web3APIParams.md)\<`API`, `Method`\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:25
 
 #### Inherited from
 
-[`Web3APIRequest`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md).[`params`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3APIRequest.md#params)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:25
+[`Web3APIRequest`](Web3APIRequest.md).[`params`](Web3APIRequest.md#params)
 
 ***
 
 ### requestOptions?
 
-> `readonly` `optional` **requestOptions**: `unknown`
+> `readonly` `optional` **requestOptions?**: `unknown`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:30
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_api\_types.d.ts:30

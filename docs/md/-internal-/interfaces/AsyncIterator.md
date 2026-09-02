@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,21 @@
 
 # Interface: AsyncIterator\<T, TReturn, TNext\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:30
+
 ## Type Parameters
 
-• **T**
+### T
 
-• **TReturn** = `any`
+`T`
 
-• **TNext** = `any`
+### TReturn
+
+`TReturn` = `any`
+
+### TNext
+
+`TNext` = `any`
 
 ## Methods
 
@@ -20,50 +28,50 @@
 
 > **next**(...`__namedParameters`): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:32
+
 #### Parameters
 
-• ...**\_\_namedParameters**: [] \| [`TNext`]
+##### \_\_namedParameters
+
+\[\] \| \[`TNext`\]
 
 #### Returns
 
 `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:32
 
 ***
 
 ### return()?
 
-> `optional` **return**(`value`?): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
+> `optional` **return**(`value?`): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:33
 
 #### Parameters
 
-• **value?**: `TReturn` \| [`PromiseLike`](PromiseLike.md)\<`TReturn`\>
+##### value?
+
+`TReturn` \| [`PromiseLike`](PromiseLike.md)\<`TReturn`\>
 
 #### Returns
 
 `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:33
 
 ***
 
 ### throw()?
 
-> `optional` **throw**(`e`?): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
+> `optional` **throw**(`e?`): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:34
 
 #### Parameters
 
-• **e?**: `any`
+##### e?
+
+`any`
 
 #### Returns
 
 `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:34

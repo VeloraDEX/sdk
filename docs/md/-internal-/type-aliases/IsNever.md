@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,17 +6,21 @@
 
 # Type Alias: IsNever\<T\>
 
-> **IsNever**\<`T`\>: [`T`] *extends* [`never`] ? `true` : `false`
+> **IsNever**\<`T`\> = \[`T`\] *extends* \[`never`\] ? `true` : `false`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:44
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 Type to check
 
 ## Description
 
-Checks if [T](IsNever.md) is `never`
+Checks if [T](#t) is `never`
 
 ## Example
 
@@ -24,7 +28,3 @@ Checks if [T](IsNever.md) is `never`
 type Result = IsNever<never>
 //   ^? type Result = true
 ```
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:44

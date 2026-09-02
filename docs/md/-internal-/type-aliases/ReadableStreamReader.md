@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: ReadableStreamReader\<T\>
 
-> **ReadableStreamReader**\<`T`\>: [`ReadableStreamDefaultReader`](../interfaces/ReadableStreamDefaultReader.md)\<`T`\> \| [`ReadableStreamBYOBReader`](../interfaces/ReadableStreamBYOBReader.md)
+> **ReadableStreamReader**\<`T`\> = [`ReadableStreamDefaultReader`](../interfaces/ReadableStreamDefaultReader.md)\<`T`\> \| [`ReadableStreamBYOBReader`](../interfaces/ReadableStreamBYOBReader.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:200
 
 ## Type Parameters
 
-• **T**
+### T
 
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:200
+`T`

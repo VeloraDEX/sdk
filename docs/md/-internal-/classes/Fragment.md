@@ -1,163 +1,178 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Fragment
 
-# Class: `abstract` Fragment
+# Abstract Class: Fragment
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:223
+
+An abstract class to represent An individual fragment from a parse ABI.
 
 ## Extended by
 
-- [`ErrorFragment`](ErrorFragment.md)
-- [`EventFragment`](EventFragment.md)
 - [`ConstructorFragment`](ConstructorFragment.md)
-
-## Constructors
-
-### new Fragment()
-
-> **new Fragment**(`constructorGuard`, `params`): [`Fragment`](Fragment.md)
-
-#### Parameters
-
-• **constructorGuard**: `any`
-
-• **params**: `any`
-
-#### Returns
-
-[`Fragment`](Fragment.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:44
+- [`FallbackFragment`](FallbackFragment.md)
+- [`NamedFragment`](NamedFragment.md)
 
 ## Properties
 
-### \_isFragment
-
-> `readonly` **\_isFragment**: `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:43
-
-***
-
 ### inputs
 
-> `readonly` **inputs**: [`ParamType`](ParamType.md)[]
+> `readonly` **inputs**: readonly [`ParamType`](ParamType.md)[]
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:231
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:42
-
-***
-
-### name
-
-> `readonly` **name**: `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:41
+The inputs for the fragment.
 
 ***
 
 ### type
 
-> `readonly` **type**: `string`
+> `readonly` **type**: [`FragmentType`](../type-aliases/FragmentType.md)
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:227
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:40
+The type of the fragment.
 
 ## Methods
 
 ### format()
 
-> `abstract` **format**(`format`?): `string`
+> `abstract` **format**(`format?`): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:239
+
+Returns a string representation of this fragment as %%format%%.
 
 #### Parameters
 
-• **format?**: `string`
+##### format?
+
+[`FormatType`](../type-aliases/FormatType-1.md)
 
 #### Returns
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:45
-
 ***
 
 ### from()
 
-> `static` **from**(`value`): [`Fragment`](Fragment.md)
+> `static` **from**(`obj`): `Fragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:244
+
+Creates a new **Fragment** for %%obj%%, wich can be any supported
+ ABI frgament type.
 
 #### Parameters
 
-• **value**: `string` \| [`Fragment`](Fragment.md) \| [`JsonFragment`](../interfaces/JsonFragment.md)
+##### obj
+
+`any`
 
 #### Returns
 
-[`Fragment`](Fragment.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:46
+`Fragment`
 
 ***
 
-### fromObject()
+### isConstructor()
 
-> `static` **fromObject**(`value`): [`Fragment`](Fragment.md)
+> `static` **isConstructor**(`value`): `value is ConstructorFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:248
+
+Returns true if %%value%% is a [[ConstructorFragment]].
 
 #### Parameters
 
-• **value**: [`Fragment`](Fragment.md) \| [`JsonFragment`](../interfaces/JsonFragment.md)
+##### value
+
+`any`
 
 #### Returns
 
-[`Fragment`](Fragment.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:47
+`value is ConstructorFragment`
 
 ***
 
-### fromString()
+### isError()
 
-> `static` **fromString**(`value`): [`Fragment`](Fragment.md)
+> `static` **isError**(`value`): `value is ErrorFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:252
+
+Returns true if %%value%% is an [[ErrorFragment]].
 
 #### Parameters
 
-• **value**: `string`
+##### value
+
+`any`
 
 #### Returns
 
-[`Fragment`](Fragment.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:48
+`value is ErrorFragment`
 
 ***
 
-### isFragment()
+### isEvent()
 
-> `static` **isFragment**(`value`): `value is Fragment`
+> `static` **isEvent**(`value`): `value is EventFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:256
+
+Returns true if %%value%% is an [[EventFragment]].
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
-`value is Fragment`
+`value is EventFragment`
 
-#### Defined in
+***
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:49
+### isFunction()
+
+> `static` **isFunction**(`value`): `value is FunctionFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:260
+
+Returns true if %%value%% is a [[FunctionFragment]].
+
+#### Parameters
+
+##### value
+
+`any`
+
+#### Returns
+
+`value is FunctionFragment`
+
+***
+
+### isStruct()
+
+> `static` **isStruct**(`value`): `value is StructFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:264
+
+Returns true if %%value%% is a [[StructFragment]].
+
+#### Parameters
+
+##### value
+
+`any`
+
+#### Returns
+
+`value is StructFragment`

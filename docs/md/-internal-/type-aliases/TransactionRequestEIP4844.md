@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,26 +6,30 @@
 
 # Type Alias: TransactionRequestEIP4844\<quantity, index, type\>
 
-> **TransactionRequestEIP4844**\<`quantity`, `index`, `type`\>: [`RequiredBy`](RequiredBy.md)\<[`TransactionRequestBase`](TransactionRequestBase.md)\<`quantity`, `index`, `type`\>, `"to"`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesEIP4844`](FeeValuesEIP4844.md)\<`quantity`\>\> & `object` & [`OneOf`](OneOf.md)\<`object` \| `object`\>
+> **TransactionRequestEIP4844**\<`quantity`, `index`, `type`\> = [`RequiredBy`](RequiredBy.md)\<[`TransactionRequestBase`](TransactionRequestBase.md)\<`quantity`, `index`, `type`\>, `"to"`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesEIP4844`](FeeValuesEIP4844.md)\<`quantity`\>\> & `object` & [`OneOf`](OneOf.md)\<\{ `blobs?`: readonly [`Hex`](Hex.md)[] \| readonly [`ByteArray`](ByteArray.md)[]; `blobVersionedHashes`: readonly [`Hex`](Hex.md)[]; \} \| \{ `blobs`: readonly [`Hex`](Hex.md)[] \| readonly [`ByteArray`](ByteArray.md)[]; `blobVersionedHashes?`: readonly [`Hex`](Hex.md)[]; `kzg?`: [`Kzg`](Kzg.md); \}\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:158
+
+## Type Declaration
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](AccessList.md)
+> `optional` **accessList?**: [`AccessList`](AccessList-2.md)
 
 ### sidecars?
 
-> `optional` **sidecars**: readonly [`BlobSidecar`](BlobSidecar.md)\<[`Hex`](Hex.md)\>[]
+> `optional` **sidecars?**: readonly [`BlobSidecar`](BlobSidecar.md)\<[`Hex`](Hex.md)\>[]
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-• **type** = `"eip4844"`
+### index
 
-## Defined in
+`index` = `number`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:154
+### type
+
+`type` = `"eip4844"`

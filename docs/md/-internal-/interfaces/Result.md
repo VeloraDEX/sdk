@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,17 @@
 
 # Interface: Result
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:3
+
 ## Extends
 
 - `ReadonlyArray`\<`any`\>
 
 ## Indexable
 
- \[`key`: `string`\]: `any`
+> \[`key`: `string`\]: `any`
+
+> \[`n`: `number`\]: `any`
 
 ## Properties
 
@@ -20,125 +24,127 @@
 
 > `readonly` **\[unscopables\]**: `object`
 
-Is an object whose properties have the value 'true'
-when they will be absent when used in a 'with' statement.
-
-#### \[unscopables\]?
-
-> `readonly` `optional` **\[unscopables\]**: `boolean`
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:107
 
 Is an object whose properties have the value 'true'
 when they will be absent when used in a 'with' statement.
 
-#### length?
+#### Index Signature
 
-> `readonly` `optional` **length**: `boolean`
-
-Gets the length of the array. This is a number one higher than the highest element defined in an array.
+\[`key`: `number`\]: `boolean` \| `undefined`
 
 #### \[iterator\]?
 
-> `optional` **\[iterator\]**
+> `optional` **\[iterator\]?**: `boolean`
+
+#### \[unscopables\]?
+
+> `readonly` `optional` **\[unscopables\]?**: `boolean`
+
+Is an object whose properties have the value 'true'
+when they will be absent when used in a 'with' statement.
 
 #### at?
 
-> `optional` **at**
+> `optional` **at?**: `boolean`
 
 #### concat?
 
-> `optional` **concat**
+> `optional` **concat?**: `boolean`
 
 #### entries?
 
-> `optional` **entries**
+> `optional` **entries?**: `boolean`
 
 #### every?
 
-> `optional` **every**
+> `optional` **every?**: `boolean`
 
 #### filter?
 
-> `optional` **filter**
+> `optional` **filter?**: `boolean`
 
 #### find?
 
-> `optional` **find**
+> `optional` **find?**: `boolean`
 
 #### findIndex?
 
-> `optional` **findIndex**
+> `optional` **findIndex?**: `boolean`
 
 #### flat?
 
-> `optional` **flat**
+> `optional` **flat?**: `boolean`
 
 #### flatMap?
 
-> `optional` **flatMap**
+> `optional` **flatMap?**: `boolean`
 
 #### forEach?
 
-> `optional` **forEach**
+> `optional` **forEach?**: `boolean`
 
 #### includes?
 
-> `optional` **includes**
+> `optional` **includes?**: `boolean`
 
 #### indexOf?
 
-> `optional` **indexOf**
+> `optional` **indexOf?**: `boolean`
 
 #### join?
 
-> `optional` **join**
+> `optional` **join?**: `boolean`
 
 #### keys?
 
-> `optional` **keys**
+> `optional` **keys?**: `boolean`
 
 #### lastIndexOf?
 
-> `optional` **lastIndexOf**
+> `optional` **lastIndexOf?**: `boolean`
+
+#### length?
+
+> `readonly` `optional` **length?**: `boolean`
+
+Gets the length of the array. This is a number one higher than the highest element defined in an array.
 
 #### map?
 
-> `optional` **map**
+> `optional` **map?**: `boolean`
 
 #### reduce?
 
-> `optional` **reduce**
+> `optional` **reduce?**: `boolean`
 
 #### reduceRight?
 
-> `optional` **reduceRight**
+> `optional` **reduceRight?**: `boolean`
 
 #### slice?
 
-> `optional` **slice**
+> `optional` **slice?**: `boolean`
 
 #### some?
 
-> `optional` **some**
+> `optional` **some?**: `boolean`
 
 #### toLocaleString?
 
-> `optional` **toLocaleString**
+> `optional` **toLocaleString?**: `boolean`
 
 #### toString?
 
-> `optional` **toString**
+> `optional` **toString?**: `boolean`
 
 #### values?
 
-> `optional` **values**
+> `optional` **values?**: `boolean`
 
 #### Inherited from
 
 `ReadonlyArray.[unscopables]`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:107
 
 ***
 
@@ -146,21 +152,21 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.sym
 
 > `readonly` **length**: `number`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1195
+
 Gets the length of the array. This is a number one higher than the highest element defined in an array.
 
 #### Inherited from
 
-`ReadonlyArray.length`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1192
+`Result`.[`length`](#length)
 
 ## Methods
 
 ### \[iterator\]()
 
 > **\[iterator\]**(): [`ArrayIterator`](ArrayIterator.md)\<`any`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:114
 
 Iterator of values in the array.
 
@@ -172,19 +178,23 @@ Iterator of values in the array.
 
 `ReadonlyArray.[iterator]`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:114
-
 ***
 
 ### at()
 
 > **at**(`index`): `any`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2022.array.d.ts:32
+
+Returns the item located at the specified index.
+
 #### Parameters
 
-• **index**: `number`
+##### index
+
+`number`
+
+The zero-based index of the desired code unit. A negative index will count back from the last item.
 
 #### Returns
 
@@ -194,23 +204,23 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 
 `ReadonlyArray.at`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/indexable.d.ts:7
-
 ***
 
 ### concat()
 
-#### concat(items)
+#### Call Signature
 
 > **concat**(...`items`): `any`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1208
 
 Combines two or more arrays.
 
 ##### Parameters
 
-• ...**items**: [`ConcatArray`](ConcatArray.md)\<`any`\>[]
+###### items
+
+...[`ConcatArray`](ConcatArray.md)\<`any`\>[]
 
 Additional items to add to the end of array1.
 
@@ -222,19 +232,19 @@ Additional items to add to the end of array1.
 
 `ReadonlyArray.concat`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1205
-
-#### concat(items)
+#### Call Signature
 
 > **concat**(...`items`): `any`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1213
 
 Combines two or more arrays.
 
 ##### Parameters
 
-• ...**items**: `any`[]
+###### items
+
+...`any`[]
 
 Additional items to add to the end of array1.
 
@@ -245,54 +255,56 @@ Additional items to add to the end of array1.
 ##### Inherited from
 
 `ReadonlyArray.concat`
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1210
 
 ***
 
 ### entries()
 
-> **entries**(): [`ArrayIterator`](ArrayIterator.md)\<[`number`, `any`]\>
+> **entries**(): [`ArrayIterator`](ArrayIterator.md)\<\[`number`, `any`\]\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:119
 
 Returns an iterable of key, value pairs for every entry in the array
 
 #### Returns
 
-[`ArrayIterator`](ArrayIterator.md)\<[`number`, `any`]\>
+[`ArrayIterator`](ArrayIterator.md)\<\[`number`, `any`\]\>
 
 #### Inherited from
 
 `ReadonlyArray.entries`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:119
-
 ***
 
 ### every()
 
-#### every(predicate, thisArg)
+#### Call Signature
 
-> **every**\<`S`\>(`predicate`, `thisArg`?): `this is readonly S[]`
+> **every**\<`S`\>(`predicate`, `thisArg?`): `this is readonly S[]`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1245
 
 Determines whether all the members of an array satisfy the specified test.
 
 ##### Type Parameters
 
-• **S** *extends* `any`
+###### S
+
+`S` *extends* `any`
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `array`) => `value is S`
 
 A function that accepts up to three arguments. The every method calls
 the predicate function for each element in the array until the predicate returns a value
 which is coercible to the Boolean value false, or until the end of the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function.
 If thisArg is omitted, undefined is used as the this value.
@@ -305,25 +317,27 @@ If thisArg is omitted, undefined is used as the this value.
 
 `ReadonlyArray.every`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1242
+> **every**(`predicate`, `thisArg?`): `boolean`
 
-#### every(predicate, thisArg)
-
-> **every**(`predicate`, `thisArg`?): `boolean`
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1254
 
 Determines whether all the members of an array satisfy the specified test.
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `array`) => `unknown`
 
 A function that accepts up to three arguments. The every method calls
 the predicate function for each element in the array until the predicate returns a value
 which is coercible to the Boolean value false, or until the end of the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function.
 If thisArg is omitted, undefined is used as the this value.
@@ -336,31 +350,35 @@ If thisArg is omitted, undefined is used as the this value.
 
 `ReadonlyArray.every`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1251
-
 ***
 
 ### filter()
 
-#### filter(predicate, thisArg)
+#### Call Signature
 
-> **filter**\<`S`\>(`predicate`, `thisArg`?): `S`[]
+> **filter**\<`S`\>(`predicate`, `thisArg?`): `S`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1281
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
 ##### Type Parameters
 
-• **S** *extends* `any`
+###### S
+
+`S` *extends* `any`
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `array`) => `value is S`
 
 A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
 
@@ -372,23 +390,25 @@ An object to which the this keyword can refer in the predicate function. If this
 
 `ReadonlyArray.filter`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1278
+> **filter**(`predicate`, `thisArg?`): `any`[]
 
-#### filter(predicate, thisArg)
-
-> **filter**(`predicate`, `thisArg`?): `any`[]
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1287
 
 Returns the elements of an array that meet the condition specified in a callback function.
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `array`) => `unknown`
 
 A function that accepts up to three arguments. The filter method calls the predicate function one time for each element in the array.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function. If thisArg is omitted, undefined is used as the this value.
 
@@ -400,59 +420,65 @@ An object to which the this keyword can refer in the predicate function. If this
 
 `ReadonlyArray.filter`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1284
-
 ***
 
 ### find()
 
-#### find(predicate, thisArg)
+#### Call Signature
 
-> **find**\<`S`\>(`predicate`, `thisArg`?): `undefined` \| `S`
+> **find**\<`S`\>(`predicate`, `thisArg?`): `S` \| `undefined`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:352
 
 Returns the value of the first element in the array where predicate is true, and undefined
 otherwise.
 
 ##### Type Parameters
 
-• **S** *extends* `any`
+###### S
+
+`S` *extends* `any`
 
 ##### Parameters
 
-• **predicate**
+###### predicate
+
+(`value`, `index`, `obj`) => `value is S`
 
 find calls predicate once for each element of the array, in ascending
 order, until it finds one where predicate returns true. If such an element is found, find
 immediately returns that element value. Otherwise, find returns undefined.
 
-• **thisArg?**: `any`
+###### thisArg?
+
+`any`
 
 If provided, it will be used as the this value for each invocation of
 predicate. If it is not provided, undefined is used instead.
 
 ##### Returns
 
-`undefined` \| `S`
+`S` \| `undefined`
 
 ##### Inherited from
 
 `ReadonlyArray.find`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:352
+> **find**(`predicate`, `thisArg?`): `any`
 
-#### find(predicate, thisArg)
-
-> **find**(`predicate`, `thisArg`?): `any`
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:353
 
 ##### Parameters
 
-• **predicate**
+###### predicate
 
-• **thisArg?**: `any`
+(`value`, `index`, `obj`) => `unknown`
+
+###### thisArg?
+
+`any`
 
 ##### Returns
 
@@ -462,28 +488,30 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.cor
 
 `ReadonlyArray.find`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:353
-
 ***
 
 ### findIndex()
 
-> **findIndex**(`predicate`, `thisArg`?): `number`
+> **findIndex**(`predicate`, `thisArg?`): `number`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:364
 
 Returns the index of the first element in the array where predicate is true, and -1
 otherwise.
 
 #### Parameters
 
-• **predicate**
+##### predicate
+
+(`value`, `index`, `obj`) => `unknown`
 
 find calls predicate once for each element of the array, in ascending
 order, until it finds one where predicate returns true. If such an element is found,
 findIndex immediately returns that element index. Otherwise, findIndex returns -1.
 
-• **thisArg?**: `any`
+##### thisArg?
+
+`any`
 
 If provided, it will be used as the this value for each invocation of
 predicate. If it is not provided, undefined is used instead.
@@ -496,30 +524,36 @@ predicate. If it is not provided, undefined is used instead.
 
 `ReadonlyArray.findIndex`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:364
-
 ***
 
 ### flat()
 
-> **flat**\<`A`, `D`\>(`this`, `depth`?): [`FlatArray`](../type-aliases/FlatArray.md)\<`A`, `D`\>[]
+> **flat**\<`A`, `D`\>(`this`, `depth?`): [`FlatArray`](../type-aliases/FlatArray.md)\<`A`, `D`\>[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:47
 
 Returns a new array with all sub-array elements concatenated into it recursively up to the
 specified depth.
 
 #### Type Parameters
 
-• **A**
+##### A
 
-• **D** *extends* `number` = `1`
+`A`
+
+##### D
+
+`D` *extends* `number` = `1`
 
 #### Parameters
 
-• **this**: `A`
+##### this
 
-• **depth?**: `D`
+`A`
+
+##### depth?
+
+`D`
 
 The maximum recursion depth
 
@@ -531,15 +565,13 @@ The maximum recursion depth
 
 `ReadonlyArray.flat`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:47
-
 ***
 
 ### flatMap()
 
-> **flatMap**\<`U`, `This`\>(`callback`, `thisArg`?): `U`[]
+> **flatMap**\<`U`, `This`\>(`callback`, `thisArg?`): `U`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:36
 
 Calls a defined callback function on each element of an array. Then, flattens the result into
 a new array.
@@ -547,18 +579,26 @@ This is identical to a map followed by flat with depth 1.
 
 #### Type Parameters
 
-• **U**
+##### U
 
-• **This** = `undefined`
+`U`
+
+##### This
+
+`This` = `undefined`
 
 #### Parameters
 
-• **callback**
+##### callback
+
+(`this`, `value`, `index`, `array`) => `U` \| readonly `U`[]
 
 A function that accepts up to three arguments. The flatMap method calls the
 callback function one time for each element in the array.
 
-• **thisArg?**: `This`
+##### thisArg?
+
+`This`
 
 An object to which the this keyword can refer in the callback function. If
 thisArg is omitted, undefined is used as the this value.
@@ -571,25 +611,27 @@ thisArg is omitted, undefined is used as the this value.
 
 `ReadonlyArray.flatMap`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:36
-
 ***
 
 ### forEach()
 
-> **forEach**(`callbackfn`, `thisArg`?): `void`
+> **forEach**(`callbackfn`, `thisArg?`): `void`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1269
 
 Performs the specified action for each element in an array.
 
 #### Parameters
 
-• **callbackfn**
+##### callbackfn
+
+(`value`, `index`, `array`) => `void`
 
 A function that accepts up to three arguments. forEach calls the callbackfn function one time for each element in the array.
 
-• **thisArg?**: `any`
+##### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
 
@@ -601,25 +643,27 @@ An object to which the this keyword can refer in the callbackfn function. If thi
 
 `ReadonlyArray.forEach`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1266
-
 ***
 
 ### includes()
 
-> **includes**(`searchElement`, `fromIndex`?): `boolean`
+> **includes**(`searchElement`, `fromIndex?`): `boolean`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2016.array.include.d.ts:34
 
 Determines whether an array includes a certain element, returning true or false as appropriate.
 
 #### Parameters
 
-• **searchElement**: `any`
+##### searchElement
+
+`any`
 
 The element to search for.
 
-• **fromIndex?**: `number`
+##### fromIndex?
+
+`number`
 
 The position in this array at which to begin searching for searchElement.
 
@@ -631,25 +675,27 @@ The position in this array at which to begin searching for searchElement.
 
 `ReadonlyArray.includes`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2016.array.include.d.ts:34
-
 ***
 
 ### indexOf()
 
-> **indexOf**(`searchElement`, `fromIndex`?): `number`
+> **indexOf**(`searchElement`, `fromIndex?`): `number`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1230
 
 Returns the index of the first occurrence of a value in an array.
 
 #### Parameters
 
-• **searchElement**: `any`
+##### searchElement
+
+`any`
 
 The value to locate in the array.
 
-• **fromIndex?**: `number`
+##### fromIndex?
+
+`number`
 
 The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
 
@@ -661,21 +707,21 @@ The array index at which to begin the search. If fromIndex is omitted, the searc
 
 `ReadonlyArray.indexOf`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1227
-
 ***
 
 ### join()
 
-> **join**(`separator`?): `string`
+> **join**(`separator?`): `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1218
 
 Adds all the elements of an array separated by the specified separator string.
 
 #### Parameters
 
-• **separator?**: `string`
+##### separator?
+
+`string`
 
 A string used to separate one element of an array from the next in the resulting String. If omitted, the array elements are separated with a comma.
 
@@ -687,15 +733,13 @@ A string used to separate one element of an array from the next in the resulting
 
 `ReadonlyArray.join`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1215
-
 ***
 
 ### keys()
 
 > **keys**(): [`ArrayIterator`](ArrayIterator.md)\<`number`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:124
 
 Returns an iterable of keys in the array
 
@@ -707,25 +751,27 @@ Returns an iterable of keys in the array
 
 `ReadonlyArray.keys`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:124
-
 ***
 
 ### lastIndexOf()
 
-> **lastIndexOf**(`searchElement`, `fromIndex`?): `number`
+> **lastIndexOf**(`searchElement`, `fromIndex?`): `number`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1236
 
 Returns the index of the last occurrence of a specified value in an array.
 
 #### Parameters
 
-• **searchElement**: `any`
+##### searchElement
+
+`any`
 
 The value to locate in the array.
 
-• **fromIndex?**: `number`
+##### fromIndex?
+
+`number`
 
 The array index at which to begin the search. If fromIndex is omitted, the search starts at the last index in the array.
 
@@ -737,29 +783,33 @@ The array index at which to begin the search. If fromIndex is omitted, the searc
 
 `ReadonlyArray.lastIndexOf`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1233
-
 ***
 
 ### map()
 
-> **map**\<`U`\>(`callbackfn`, `thisArg`?): `U`[]
+> **map**\<`U`\>(`callbackfn`, `thisArg?`): `U`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1275
 
 Calls a defined callback function on each element of an array, and returns an array that contains the results.
 
 #### Type Parameters
 
-• **U**
+##### U
+
+`U`
 
 #### Parameters
 
-• **callbackfn**
+##### callbackfn
+
+(`value`, `index`, `array`) => `U`
 
 A function that accepts up to three arguments. The map method calls the callbackfn function one time for each element in the array.
 
-• **thisArg?**: `any`
+##### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the callbackfn function. If thisArg is omitted, undefined is used as the this value.
 
@@ -771,23 +821,23 @@ An object to which the this keyword can refer in the callbackfn function. If thi
 
 `ReadonlyArray.map`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1272
-
 ***
 
 ### reduce()
 
-#### reduce(callbackfn)
+#### Call Signature
 
 > **reduce**(`callbackfn`): `any`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1293
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
+
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `any`
 
 A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
 
@@ -799,19 +849,21 @@ A function that accepts up to four arguments. The reduce method calls the callba
 
 `ReadonlyArray.reduce`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1290
-
-#### reduce(callbackfn, initialValue)
+#### Call Signature
 
 > **reduce**(`callbackfn`, `initialValue`): `any`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1294
+
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
 
-• **initialValue**: `any`
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `any`
+
+###### initialValue
+
+`any`
 
 ##### Returns
 
@@ -821,27 +873,31 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 `ReadonlyArray.reduce`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1291
-
-#### reduce(callbackfn, initialValue)
+#### Call Signature
 
 > **reduce**\<`U`\>(`callbackfn`, `initialValue`): `U`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1300
 
 Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 ##### Type Parameters
 
-• **U**
+###### U
+
+`U`
 
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
+
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `U`
 
 A function that accepts up to four arguments. The reduce method calls the callbackfn function one time for each element in the array.
 
-• **initialValue**: `U`
+###### initialValue
+
+`U`
 
 If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
 
@@ -852,24 +908,24 @@ If initialValue is specified, it is used as the initial value to start the accum
 ##### Inherited from
 
 `ReadonlyArray.reduce`
-
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1297
 
 ***
 
 ### reduceRight()
 
-#### reduceRight(callbackfn)
+#### Call Signature
 
 > **reduceRight**(`callbackfn`): `any`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1306
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
+
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `any`
 
 A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
 
@@ -881,19 +937,21 @@ A function that accepts up to four arguments. The reduceRight method calls the c
 
 `ReadonlyArray.reduceRight`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1303
-
-#### reduceRight(callbackfn, initialValue)
+#### Call Signature
 
 > **reduceRight**(`callbackfn`, `initialValue`): `any`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1307
+
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
 
-• **initialValue**: `any`
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `any`
+
+###### initialValue
+
+`any`
 
 ##### Returns
 
@@ -903,27 +961,31 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 `ReadonlyArray.reduceRight`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1304
-
-#### reduceRight(callbackfn, initialValue)
+#### Call Signature
 
 > **reduceRight**\<`U`\>(`callbackfn`, `initialValue`): `U`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1313
 
 Calls the specified callback function for all the elements in an array, in descending order. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function.
 
 ##### Type Parameters
 
-• **U**
+###### U
+
+`U`
 
 ##### Parameters
 
-• **callbackfn**
+###### callbackfn
+
+(`previousValue`, `currentValue`, `currentIndex`, `array`) => `U`
 
 A function that accepts up to four arguments. The reduceRight method calls the callbackfn function one time for each element in the array.
 
-• **initialValue**: `U`
+###### initialValue
+
+`U`
 
 If initialValue is specified, it is used as the initial value to start the accumulation. The first call to the callbackfn function provides this value as an argument instead of an array value.
 
@@ -935,25 +997,27 @@ If initialValue is specified, it is used as the initial value to start the accum
 
 `ReadonlyArray.reduceRight`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1310
-
 ***
 
 ### slice()
 
-> **slice**(`start`?, `end`?): `any`[]
+> **slice**(`start?`, `end?`): `any`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1224
 
 Returns a section of an array.
 
 #### Parameters
 
-• **start?**: `number`
+##### start?
+
+`number`
 
 The beginning of the specified portion of the array.
 
-• **end?**: `number`
+##### end?
+
+`number`
 
 The end of the specified portion of the array. This is exclusive of the element at the index 'end'.
 
@@ -965,27 +1029,29 @@ The end of the specified portion of the array. This is exclusive of the element 
 
 `ReadonlyArray.slice`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1221
-
 ***
 
 ### some()
 
-> **some**(`predicate`, `thisArg`?): `boolean`
+> **some**(`predicate`, `thisArg?`): `boolean`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1263
 
 Determines whether the specified callback function returns true for any element of an array.
 
 #### Parameters
 
-• **predicate**
+##### predicate
+
+(`value`, `index`, `array`) => `unknown`
 
 A function that accepts up to three arguments. The some method calls
 the predicate function for each element in the array until the predicate returns a value
 which is coercible to the Boolean value true, or until the end of the array.
 
-• **thisArg?**: `any`
+##### thisArg?
+
+`any`
 
 An object to which the this keyword can refer in the predicate function.
 If thisArg is omitted, undefined is used as the this value.
@@ -998,17 +1064,15 @@ If thisArg is omitted, undefined is used as the this value.
 
 `ReadonlyArray.some`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1260
-
 ***
 
 ### toLocaleString()
 
-#### toLocaleString()
+#### Call Signature
 
 > **toLocaleString**(): `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1203
 
 Returns a string representation of an array. The elements are converted to string using their toLocaleString methods.
 
@@ -1020,19 +1084,21 @@ Returns a string representation of an array. The elements are converted to strin
 
 `ReadonlyArray.toLocaleString`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1200
+> **toLocaleString**(`locales`, `options?`): `string`
 
-#### toLocaleString(locales, options)
-
-> **toLocaleString**(`locales`, `options`?): `string`
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:366
 
 ##### Parameters
 
-• **locales**: `string` \| `string`[]
+###### locales
 
-• **options?**: `NumberFormatOptions` & `DateTimeFormatOptions`
+`string` \| `string`[]
+
+###### options?
+
+`NumberFormatOptions` & `DateTimeFormatOptions`
 
 ##### Returns
 
@@ -1042,15 +1108,13 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 `ReadonlyArray.toLocaleString`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.core.d.ts:366
-
 ***
 
 ### toString()
 
 > **toString**(): `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1199
 
 Returns a string representation of an array.
 
@@ -1062,15 +1126,13 @@ Returns a string representation of an array.
 
 `ReadonlyArray.toString`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1196
-
 ***
 
 ### values()
 
 > **values**(): [`ArrayIterator`](ArrayIterator.md)\<`any`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:129
 
 Returns an iterable of values in the array
 
@@ -1081,7 +1143,3 @@ Returns an iterable of values in the array
 #### Inherited from
 
 `ReadonlyArray.values`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:129

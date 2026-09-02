@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,12 @@
 
 # Type Alias: PostDeltaOrderParams
 
-> **PostDeltaOrderParams**: [`Omit`](../-internal-/type-aliases/Omit.md)\<[`DeltaOrderToPost`](DeltaOrderToPost.md), `"chainId"`\> & `object`
+> **PostDeltaOrderParams** = [`Omit`](../-internal-/type-aliases/Omit.md)\<[`DeltaOrderToPost`](DeltaOrderToPost.md), `"chainId"`\> & `object`
 
-## Type declaration
+Defined in: [src/methods/delta/postDeltaOrder.ts:24](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L24)
+
+## Type Declaration
 
 ### degenMode?
 
-> `optional` **degenMode**: `boolean`
-
-## Defined in
-
-[src/methods/delta/postDeltaOrder.ts:24](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postDeltaOrder.ts#L24)
+> `optional` **degenMode?**: `boolean`

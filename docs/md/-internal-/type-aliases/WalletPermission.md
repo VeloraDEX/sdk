@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,30 +6,46 @@
 
 # Type Alias: WalletPermission
 
-> **WalletPermission**: `object`
+> **WalletPermission** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:148
+
+## Properties
 
 ### caveats
 
 > **caveats**: [`WalletPermissionCaveat`](WalletPermissionCaveat.md)[]
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:149
+
+***
+
 ### date
 
 > **date**: `number`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:150
+
+***
 
 ### id
 
 > **id**: `string`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:151
+
+***
+
 ### invoker
 
-> **invoker**: \`http://$\{string\}\` \| \`https://$\{string\}\`
+> **invoker**: `` `http://${string}` `` \| `` `https://${string}` ``
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:152
+
+***
 
 ### parentCapability
 
 > **parentCapability**: `"eth_accounts"` \| `string`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:148
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:153

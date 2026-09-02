@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: OnBlockParameter\<chain, includeTransactions, blockTag\>
 
-> **OnBlockParameter**\<`chain`, `includeTransactions`, `blockTag`\>: [`GetBlockReturnType`](GetBlockReturnType.md)\<`chain`, `includeTransactions`, `blockTag`\>
+> **OnBlockParameter**\<`chain`, `includeTransactions`, `blockTag`\> = [`GetBlockReturnType`](GetBlockReturnType.md)\<`chain`, `includeTransactions`, `blockTag`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchBlocks.d.ts:10
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md)
+### chain
 
-• **includeTransactions** *extends* `boolean` = `false`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md)
 
-• **blockTag** *extends* [`BlockTag`](BlockTag.md) = `"latest"`
+### includeTransactions
 
-## Defined in
+`includeTransactions` *extends* `boolean` = `false`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchBlocks.d.ts:10
+### blockTag
+
+`blockTag` *extends* [`BlockTag`](BlockTag-2.md) = `"latest"`

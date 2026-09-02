@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Log
 
 # Class: Log
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:453
 
 A **Log** in Ethereum represents an event that has been included in a
  transaction using the ``LOG*`` opcodes, which are most commonly used by
@@ -20,25 +22,27 @@ A **Log** in Ethereum represents an event that has been included in a
 
 ## Constructors
 
-### new Log()
+### Constructor
 
-> **new Log**(`log`, `provider`): [`Log`](Log.md)
+> **new Log**(`log`, `provider`): `Log`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:511
 
 @_ignore:
 
 #### Parameters
 
-• **log**: [`LogParams`](../interfaces/LogParams.md)
+##### log
 
-• **provider**: [`Provider`](../interfaces/Provider.md)
+[`LogParams`](../interfaces/LogParams.md)
+
+##### provider
+
+[`Provider`](../interfaces/Provider.md)
 
 #### Returns
 
-[`Log`](Log.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:511
+`Log`
 
 ## Properties
 
@@ -46,21 +50,21 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > `readonly` **address**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:486
+
 The address of the contract that emitted this log.
 
 #### Implementation of
 
 [`LogParams`](../interfaces/LogParams.md).[`address`](../interfaces/LogParams.md#address)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:486
-
 ***
 
 ### blockHash
 
 > `readonly` **blockHash**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:468
 
 The block hash of the block this log occurred in. Use the
  [[Log-getBlock]] to get the [[Block]].
@@ -69,15 +73,13 @@ The block hash of the block this log occurred in. Use the
 
 [`LogParams`](../interfaces/LogParams.md).[`blockHash`](../interfaces/LogParams.md#blockhash)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:468
-
 ***
 
 ### blockNumber
 
 > `readonly` **blockNumber**: `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:475
 
 The block number of the block this log occurred in. It is preferred
  to use the [[Block-hash]] when fetching the related [[Block]],
@@ -88,15 +90,13 @@ The block number of the block this log occurred in. It is preferred
 
 [`LogParams`](../interfaces/LogParams.md).[`blockNumber`](../interfaces/LogParams.md#blocknumber)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:475
-
 ***
 
 ### data
 
 > `readonly` **data**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:490
 
 The data included in this log when it was emitted.
 
@@ -104,15 +104,13 @@ The data included in this log when it was emitted.
 
 [`LogParams`](../interfaces/LogParams.md).[`data`](../interfaces/LogParams.md#data)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:490
-
 ***
 
 ### index
 
 > `readonly` **index**: `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:503
 
 The index within the block this log occurred at. This is generally
  not useful to developers, but can be used with the various roots
@@ -122,28 +120,24 @@ The index within the block this log occurred at. This is generally
 
 [`LogParams`](../interfaces/LogParams.md).[`index`](../interfaces/LogParams.md#index)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:503
-
 ***
 
 ### provider
 
 > `readonly` **provider**: [`Provider`](../interfaces/Provider.md)
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:458
+
 The provider connected to the log used to fetch additional details
  if necessary.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:458
 
 ***
 
 ### removed
 
 > `readonly` **removed**: `boolean`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:482
 
 If the **Log** represents a block that was removed due to an orphaned
  block, this will be true.
@@ -154,15 +148,13 @@ If the **Log** represents a block that was removed due to an orphaned
 
 [`LogParams`](../interfaces/LogParams.md).[`removed`](../interfaces/LogParams.md#removed)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:482
-
 ***
 
 ### topics
 
 > `readonly` **topics**: readonly `string`[]
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:497
 
 The indexed topics included in this log when it was emitted.
 
@@ -173,15 +165,13 @@ The indexed topics included in this log when it was emitted.
 
 [`LogParams`](../interfaces/LogParams.md).[`topics`](../interfaces/LogParams.md#topics)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:497
-
 ***
 
 ### transactionHash
 
 > `readonly` **transactionHash**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:463
 
 The transaction hash of the transaction this log occurred in. Use the
  [[Log-getTransaction]] to get the [[TransactionResponse]].
@@ -190,15 +180,13 @@ The transaction hash of the transaction this log occurred in. Use the
 
 [`LogParams`](../interfaces/LogParams.md).[`transactionHash`](../interfaces/LogParams.md#transactionhash)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:463
-
 ***
 
 ### transactionIndex
 
 > `readonly` **transactionIndex**: `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:507
 
 The index within the transaction of this log.
 
@@ -206,15 +194,13 @@ The index within the transaction of this log.
 
 [`LogParams`](../interfaces/LogParams.md).[`transactionIndex`](../interfaces/LogParams.md#transactionindex)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:507
-
 ## Methods
 
 ### getBlock()
 
 > **getBlock**(): `Promise`\<[`Block`](Block.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:519
 
 Returns the block that this log occurred in.
 
@@ -222,15 +208,13 @@ Returns the block that this log occurred in.
 
 `Promise`\<[`Block`](Block.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:519
-
 ***
 
 ### getTransaction()
 
 > **getTransaction**(): `Promise`\<[`TransactionResponse`](TransactionResponse.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:523
 
 Returns the transaction that this log occurred in.
 
@@ -238,15 +222,13 @@ Returns the transaction that this log occurred in.
 
 `Promise`\<[`TransactionResponse`](TransactionResponse.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:523
-
 ***
 
 ### getTransactionReceipt()
 
 > **getTransactionReceipt**(): `Promise`\<[`TransactionReceipt`](TransactionReceipt.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:528
 
 Returns the transaction receipt fot the transaction that this
  log occurred in.
@@ -255,15 +237,13 @@ Returns the transaction receipt fot the transaction that this
 
 `Promise`\<[`TransactionReceipt`](TransactionReceipt.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:528
-
 ***
 
 ### removedEvent()
 
 > **removedEvent**(): [`OrphanFilter`](../type-aliases/OrphanFilter.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:532
 
 @_ignore:
 
@@ -271,22 +251,16 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 [`OrphanFilter`](../type-aliases/OrphanFilter.md)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:532
-
 ***
 
 ### toJSON()
 
 > **toJSON**(): `any`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:515
+
 Returns a JSON-compatible object.
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:515

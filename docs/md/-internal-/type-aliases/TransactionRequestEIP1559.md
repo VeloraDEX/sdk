@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,26 @@
 
 # Type Alias: TransactionRequestEIP1559\<quantity, index, type\>
 
-> **TransactionRequestEIP1559**\<`quantity`, `index`, `type`\>: [`TransactionRequestBase`](TransactionRequestBase.md)\<`quantity`, `index`, `type`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesEIP1559`](FeeValuesEIP1559.md)\<`quantity`\>\> & `object`
+> **TransactionRequestEIP1559**\<`quantity`, `index`, `type`\> = [`TransactionRequestBase`](TransactionRequestBase.md)\<`quantity`, `index`, `type`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesEIP1559`](FeeValuesEIP1559.md)\<`quantity`\>\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:155
+
+## Type Declaration
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](AccessList.md)
+> `optional` **accessList?**: [`AccessList`](AccessList-2.md)
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-• **type** = `"eip1559"`
+### index
 
-## Defined in
+`index` = `number`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:151
+### type
+
+`type` = `"eip1559"`

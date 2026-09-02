@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / CallExceptionError
 
 # Interface: CallExceptionError
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:298
 
 This **Error** indicates a transaction reverted.
 
@@ -18,11 +20,21 @@ This **Error** indicates a transaction reverted.
 
 > **action**: [`CallExceptionAction`](../type-aliases/CallExceptionAction.md)
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:302
+
 The action being performed when the revert was encountered.
 
-#### Defined in
+***
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:302
+### cause?
+
+> `optional` **cause?**: `unknown`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+#### Inherited from
+
+[`EthersError`](EthersError.md).[`cause`](EthersError.md#cause)
 
 ***
 
@@ -30,33 +42,31 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors
 
 > **code**: [`ErrorCode`](../type-aliases/ErrorCode.md)
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:89
+
 The string error code.
 
 #### Inherited from
 
 [`EthersError`](EthersError.md).[`code`](EthersError.md#code)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:89
-
 ***
 
 ### data
 
-> **data**: `null` \| `string`
+> **data**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:306
 
 The revert data returned.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:306
 
 ***
 
 ### error?
 
-> `optional` **error**: [`Error`](Error.md)
+> `optional` **error?**: `Error`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:104
 
 Any related error.
 
@@ -64,15 +74,13 @@ Any related error.
 
 [`EthersError`](EthersError.md).[`error`](EthersError.md#error)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:104
-
 ***
 
 ### info?
 
-> `optional` **info**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+> `optional` **info?**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:100
 
 Additional info regarding the error that may be useful.
 
@@ -82,21 +90,15 @@ Additional info regarding the error that may be useful.
 
 [`EthersError`](EthersError.md).[`info`](EthersError.md#info)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:100
-
 ***
 
 ### invocation
 
-> **invocation**: `null` \| `object`
+> **invocation**: \{ `args`: `any`[]; `method`: `string`; `signature`: `string`; \} \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:318
 
 The contract invocation details, if available.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:318
 
 ***
 
@@ -104,13 +106,11 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors
 
 > **message**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Inherited from
 
 [`EthersError`](EthersError.md).[`message`](EthersError.md#message)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -118,56 +118,50 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **name**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
+
 #### Inherited from
 
 [`EthersError`](EthersError.md).[`name`](EthersError.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
 
 ***
 
 ### reason
 
-> **reason**: `null` \| `string`
+> **reason**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:310
 
 A human-readable representation of data, if possible.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:310
 
 ***
 
 ### receipt?
 
-> `optional` **receipt**: [`TransactionReceipt`](../classes/TransactionReceipt.md)
+> `optional` **receipt?**: [`TransactionReceipt`](../classes/TransactionReceipt.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:335
 
 If the error occurred in a transaction that was mined
  (with a status of ``0``), this is the receipt.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:335
 
 ***
 
 ### revert
 
-> **revert**: `null` \| `object`
+> **revert**: \{ `args`: `any`[]; `name`: `string`; `signature`: `string`; \} \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:326
 
 The built-in or custom revert error, if available
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:326
 
 ***
 
 ### shortMessage
 
 > **shortMessage**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:94
 
 A short message describing the error, with minimal additional
  details.
@@ -176,23 +170,17 @@ A short message describing the error, with minimal additional
 
 [`EthersError`](EthersError.md).[`shortMessage`](EthersError.md#shortmessage)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:94
-
 ***
 
 ### stack?
 
-> `optional` **stack**: `string`
+> `optional` **stack?**: `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Inherited from
 
 [`EthersError`](EthersError.md).[`stack`](EthersError.md#stack)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 ***
 
@@ -200,8 +188,6 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **transaction**: [`CallExceptionTransaction`](../type-aliases/CallExceptionTransaction.md)
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:314
+
 The transaction that triggered the exception.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:314

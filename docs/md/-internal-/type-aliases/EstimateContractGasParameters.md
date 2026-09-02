@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,26 +6,32 @@
 
 # Type Alias: EstimateContractGasParameters\<abi, functionName, args, chain\>
 
-> **EstimateContractGasParameters**\<`abi`, `functionName`, `args`, `chain`\>: [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`, `args`\> & [`UnionOmit`](UnionOmit.md)\<[`EstimateGasParameters`](EstimateGasParameters.md)\<`chain`\>, `"data"` \| `"to"` \| `"value"`\> & [`GetValue`](GetValue.md)\<`abi`, `functionName`, [`EstimateGasParameters`](EstimateGasParameters.md)\<`chain`\> *extends* [`EstimateGasParameters`](EstimateGasParameters.md) ? [`EstimateGasParameters`](EstimateGasParameters.md)\<`chain`\>\[`"value"`\] : [`EstimateGasParameters`](EstimateGasParameters.md)\[`"value"`\]\> & `object`
+> **EstimateContractGasParameters**\<`abi`, `functionName`, `args`, `chain`\> = [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`, `args`\> & [`UnionOmit`](UnionOmit.md)\<[`EstimateGasParameters`](EstimateGasParameters.md)\<`chain`\>, `"data"` \| `"to"` \| `"value"`\> & [`GetValue`](GetValue.md)\<`abi`, `functionName`, [`EstimateGasParameters`](EstimateGasParameters.md)\<`chain`\> *extends* [`EstimateGasParameters`](EstimateGasParameters.md) ? [`EstimateGasParameters`](EstimateGasParameters.md)\<`chain`\>\[`"value"`\] : [`EstimateGasParameters`](EstimateGasParameters.md)\[`"value"`\]\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/estimateContractGas.d.ts:13
+
+## Type Declaration
 
 ### dataSuffix?
 
-> `optional` **dataSuffix**: [`Hex`](Hex.md)
+> `optional` **dataSuffix?**: [`Hex`](Hex.md)
 
 Data to append to the end of the calldata. Useful for adding a ["domain" tag](https://opensea.notion.site/opensea/Seaport-Order-Attributions-ec2d69bf455041a5baa490941aad307f).
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### abi
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
+### functionName
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
 
-## Defined in
+### args
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/estimateContractGas.d.ts:13
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
+
+### chain
+
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`

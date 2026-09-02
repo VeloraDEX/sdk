@@ -1,34 +1,38 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Web3BaseProvider
 
-# Class: `abstract` Web3BaseProvider\<API\>
+# Abstract Class: Web3BaseProvider\<API\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:65
 
 ## Extended by
 
-- [`Eip1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/Eip1193Provider.md)
+- [`Eip1193Provider`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/Eip1193Provider.md)
 
 ## Type Parameters
 
-• **API** *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`EthExecutionAPI`](../type-aliases/EthExecutionAPI.md)
+### API
+
+`API` *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`EthExecutionAPI`](../type-aliases/EthExecutionAPI.md)
 
 ## Implements
 
-- [`LegacySendProvider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md)
-- [`LegacySendAsyncProvider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md)
-- [`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md)\<`API`\>
+- [`LegacySendProvider`](../interfaces/LegacySendProvider.md)
+- [`LegacySendAsyncProvider`](../interfaces/LegacySendAsyncProvider.md)
+- [`EIP1193Provider`](../interfaces/EIP1193Provider.md)\<`API`\>
 
 ## Constructors
 
-### new Web3BaseProvider()
+### Constructor
 
-> **new Web3BaseProvider**\<`API`\>(): [`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\>
+> **new Web3BaseProvider**\<`API`\>(): `Web3BaseProvider`\<`API`\>
 
 #### Returns
 
-[`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\>
+`Web3BaseProvider`\<`API`\>
 
 ## Accessors
 
@@ -38,19 +42,19 @@
 
 > **get** **\[symbol\]**(): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:67
+
 ##### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:67
 
 ## Methods
 
 ### asEIP1193Provider()
 
 > **asEIP1193Provider**(): [`Eip1193Compatible`](../type-aliases/Eip1193Compatible.md)\<`API`\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:97
 
 Modify the return type of the request method to be fully compatible with EIP-1193
 
@@ -72,43 +76,39 @@ const result = await fullyCompatibleProvider.request({ method: 'eth_getBalance' 
 console.log(result); // '0x0234c8a3397aab58' or something like that
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:97
-
 ***
 
 ### connect()
 
 > `abstract` **connect**(): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:116
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:116
 
 ***
 
 ### disconnect()
 
-> `abstract` **disconnect**(`code`?, `data`?): `void`
+> `abstract` **disconnect**(`code?`, `data?`): `void`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:117
 
 #### Parameters
 
-• **code?**: `number`
+##### code?
 
-• **data?**: `string`
+`number`
+
+##### data?
+
+`string`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:117
 
 ***
 
@@ -116,27 +116,31 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `abstract` **getStatus**(): [`Web3ProviderStatus`](../type-aliases/Web3ProviderStatus.md)
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:68
+
 #### Returns
 
 [`Web3ProviderStatus`](../type-aliases/Web3ProviderStatus.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:68
 
 ***
 
 ### on()
 
-#### on(type, listener)
+#### Call Signature
 
 > `abstract` **on**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:99
+
 ##### Parameters
 
-• **type**: `"disconnect"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderRpcError`](../interfaces/ProviderRpcError.md)\>
+`"disconnect"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderRpcError`](../interfaces/ProviderRpcError.md)\>
 
 ##### Returns
 
@@ -144,25 +148,29 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`on`](../interfaces/EIP1193Provider.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:99
-
-#### on(type, listener)
+#### Call Signature
 
 > `abstract` **on**\<`T`\>(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:100
+
 ##### Type Parameters
 
-• **T** = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+###### T
+
+`T` = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
 
 ##### Parameters
 
-• **type**: `string`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderMessage`](../interfaces/ProviderMessage.md)\> \| [`Web3ProviderMessageEventCallback`](../type-aliases/Web3ProviderMessageEventCallback.md)\<`T`\>
+`string`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderMessage`](../interfaces/ProviderMessage.md)\> \| [`Web3ProviderMessageEventCallback`](../type-aliases/Web3ProviderMessageEventCallback.md)\<`T`\>
 
 ##### Returns
 
@@ -170,25 +178,29 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`on`](../interfaces/EIP1193Provider.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:100
-
-#### on(type, listener)
+#### Call Signature
 
 > `abstract` **on**\<`T`\>(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:101
+
 ##### Type Parameters
 
-• **T** = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+###### T
+
+`T` = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
 
 ##### Parameters
 
-• **type**: `string`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderMessage`](../interfaces/ProviderMessage.md)\> \| [`Web3ProviderMessageEventCallback`](../type-aliases/Web3ProviderMessageEventCallback.md)\<`T`\>
+`string`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderMessage`](../interfaces/ProviderMessage.md)\> \| [`Web3ProviderMessageEventCallback`](../type-aliases/Web3ProviderMessageEventCallback.md)\<`T`\>
 
 ##### Returns
 
@@ -196,21 +208,23 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`on`](../interfaces/EIP1193Provider.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:101
-
-#### on(type, listener)
+#### Call Signature
 
 > `abstract` **on**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:102
+
 ##### Parameters
 
-• **type**: `"connect"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderConnectInfo`](../interfaces/ProviderConnectInfo.md)\>
+`"connect"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderConnectInfo`](../interfaces/ProviderConnectInfo.md)\>
 
 ##### Returns
 
@@ -218,21 +232,23 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`on`](../interfaces/EIP1193Provider.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:102
-
-#### on(type, listener)
+#### Call Signature
 
 > `abstract` **on**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:103
+
 ##### Parameters
 
-• **type**: `"chainChanged"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`\>
+`"chainChanged"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`\>
 
 ##### Returns
 
@@ -240,21 +256,23 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`on`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#on)
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`on`](../interfaces/EIP1193Provider.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:103
-
-#### on(type, listener)
+#### Call Signature
 
 > `abstract` **on**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:104
+
 ##### Parameters
 
-• **type**: `"accountsChanged"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`[]\>
+`"accountsChanged"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`[]\>
 
 ##### Returns
 
@@ -264,107 +282,115 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 `EIP1193Provider.on`
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:104
-
 ***
 
 ### once()
 
-#### once(type, listener)
+#### Call Signature
 
 > `abstract` **once**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:110
+
 ##### Parameters
 
-• **type**: `"disconnect"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderRpcError`](../interfaces/ProviderRpcError.md)\>
+`"disconnect"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderRpcError`](../interfaces/ProviderRpcError.md)\>
 
 ##### Returns
 
 `void`
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:110
-
-#### once(type, listener)
+#### Call Signature
 
 > `abstract` **once**\<`T`\>(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:111
+
 ##### Type Parameters
 
-• **T** = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+###### T
+
+`T` = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
 
 ##### Parameters
 
-• **type**: `string`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderMessage`](../interfaces/ProviderMessage.md)\> \| [`Web3ProviderEventCallback`](../type-aliases/Web3ProviderEventCallback.md)\<`T`\>
+`string`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderMessage`](../interfaces/ProviderMessage.md)\> \| [`Web3ProviderEventCallback`](../type-aliases/Web3ProviderEventCallback.md)\<`T`\>
 
 ##### Returns
 
 `void`
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:111
-
-#### once(type, listener)
+#### Call Signature
 
 > `abstract` **once**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:112
+
 ##### Parameters
 
-• **type**: `"connect"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderConnectInfo`](../interfaces/ProviderConnectInfo.md)\>
+`"connect"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderConnectInfo`](../interfaces/ProviderConnectInfo.md)\>
 
 ##### Returns
 
 `void`
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:112
-
-#### once(type, listener)
+#### Call Signature
 
 > `abstract` **once**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:113
+
 ##### Parameters
 
-• **type**: `"chainChanged"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`\>
+`"chainChanged"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`\>
 
 ##### Returns
 
 `void`
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:113
-
-#### once(type, listener)
+#### Call Signature
 
 > `abstract` **once**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:114
+
 ##### Parameters
 
-• **type**: `"accountsChanged"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`[]\>
+`"accountsChanged"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`[]\>
 
 ##### Returns
 
 `void`
-
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:114
 
 ***
 
@@ -372,31 +398,37 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `abstract` `optional` **removeAllListeners**(`type`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:115
+
 #### Parameters
 
-• **type**: `string`
+##### type
+
+`string`
 
 #### Returns
 
 `void`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:115
-
 ***
 
 ### removeListener()
 
-#### removeListener(type, listener)
+#### Call Signature
 
 > `abstract` **removeListener**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:105
+
 ##### Parameters
 
-• **type**: `"disconnect"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderRpcError`](../interfaces/ProviderRpcError.md)\>
+`"disconnect"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderRpcError`](../interfaces/ProviderRpcError.md)\>
 
 ##### Returns
 
@@ -404,25 +436,29 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`removeListener`](../interfaces/EIP1193Provider.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:105
-
-#### removeListener(type, listener)
+#### Call Signature
 
 > `abstract` **removeListener**\<`T`\>(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:106
+
 ##### Type Parameters
 
-• **T** = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+###### T
+
+`T` = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
 
 ##### Parameters
 
-• **type**: `string`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderMessage`](../interfaces/ProviderMessage.md)\> \| [`Web3ProviderEventCallback`](../type-aliases/Web3ProviderEventCallback.md)\<`T`\>
+`string`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderMessage`](../interfaces/ProviderMessage.md)\> \| [`Web3ProviderEventCallback`](../type-aliases/Web3ProviderEventCallback.md)\<`T`\>
 
 ##### Returns
 
@@ -430,21 +466,23 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`removeListener`](../interfaces/EIP1193Provider.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:106
-
-#### removeListener(type, listener)
+#### Call Signature
 
 > `abstract` **removeListener**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:107
+
 ##### Parameters
 
-• **type**: `"connect"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderConnectInfo`](../interfaces/ProviderConnectInfo.md)\>
+`"connect"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<[`ProviderConnectInfo`](../interfaces/ProviderConnectInfo.md)\>
 
 ##### Returns
 
@@ -452,21 +490,23 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`removeListener`](../interfaces/EIP1193Provider.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:107
-
-#### removeListener(type, listener)
+#### Call Signature
 
 > `abstract` **removeListener**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:108
+
 ##### Parameters
 
-• **type**: `"chainChanged"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`\>
+`"chainChanged"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`\>
 
 ##### Returns
 
@@ -474,21 +514,23 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`removeListener`](../interfaces/EIP1193Provider.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:108
-
-#### removeListener(type, listener)
+#### Call Signature
 
 > `abstract` **removeListener**(`type`, `listener`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:109
+
 ##### Parameters
 
-• **type**: `"accountsChanged"`
+###### type
 
-• **listener**: [`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`[]\>
+`"accountsChanged"`
+
+###### listener
+
+[`Web3Eip1193ProviderEventCallback`](../type-aliases/Web3Eip1193ProviderEventCallback.md)\<`string`[]\>
 
 ##### Returns
 
@@ -496,11 +538,7 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`removeListener`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#removelistener)
-
-##### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:109
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`removeListener`](../interfaces/EIP1193Provider.md#removelistener)
 
 ***
 
@@ -508,15 +546,23 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `abstract` **request**\<`Method`, `ResultType`\>(`args`): `Promise`\<[`JsonRpcResponseWithResult`](../interfaces/JsonRpcResponseWithResult.md)\<`ResultType`\>\>
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:98
+
 #### Type Parameters
 
-• **Method** *extends* `string`
+##### Method
 
-• **ResultType** = `unknown`
+`Method` *extends* `string`
+
+##### ResultType
+
+`ResultType` = `unknown`
 
 #### Parameters
 
-• **args**: [`Web3APIPayload`](../interfaces/Web3APIPayload.md)\<`API`, `Method`\>
+##### args
+
+[`Web3APIPayload`](../interfaces/Web3APIPayload.md)\<`API`, `Method`\>
 
 #### Returns
 
@@ -524,11 +570,7 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 #### Implementation of
 
-[`EIP1193Provider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md).[`request`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/EIP1193Provider.md#request)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:98
+[`EIP1193Provider`](../interfaces/EIP1193Provider.md).[`request`](../interfaces/EIP1193Provider.md#request)
 
 ***
 
@@ -536,13 +578,11 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `abstract` **reset**(): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:118
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:118
 
 ***
 
@@ -550,19 +590,29 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > **send**\<`ResultType`, `P`\>(`payload`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:75
+
 #### Type Parameters
 
-• **ResultType** = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+##### ResultType
 
-• **P** = `unknown`
+`ResultType` = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+
+##### P
+
+`P` = `unknown`
 
 #### Parameters
 
-• **payload**: [`JsonRpcPayload`](../type-aliases/JsonRpcPayload.md)\<`P`\>
+##### payload
+
+[`JsonRpcPayload`](../type-aliases/JsonRpcPayload.md)\<`P`\>
 
 Request Payload
 
-• **callback**
+##### callback
+
+(`err`, `response?`) => `void`
 
 Callback
 
@@ -576,11 +626,7 @@ Please use `.request` instead.
 
 #### Implementation of
 
-[`LegacySendProvider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md).[`send`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendProvider.md#send)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:75
+[`LegacySendProvider`](../interfaces/LegacySendProvider.md).[`send`](../interfaces/LegacySendProvider.md#send)
 
 ***
 
@@ -588,15 +634,23 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > **sendAsync**\<`R`, `P`\>(`payload`): `Promise`\<[`JsonRpcResponse`](../type-aliases/JsonRpcResponse.md)\<`R`, [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)\>\>
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:80
+
 #### Type Parameters
 
-• **R** = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+##### R
 
-• **P** = `unknown`
+`R` = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+
+##### P
+
+`P` = `unknown`
 
 #### Parameters
 
-• **payload**: [`JsonRpcPayload`](../type-aliases/JsonRpcPayload.md)\<`P`\>
+##### payload
+
+[`JsonRpcPayload`](../type-aliases/JsonRpcPayload.md)\<`P`\>
 
 Request Payload
 
@@ -610,11 +664,7 @@ Please use `.request` instead.
 
 #### Implementation of
 
-[`LegacySendAsyncProvider`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md).[`sendAsync`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/LegacySendAsyncProvider.md#sendasync)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:80
+[`LegacySendAsyncProvider`](../interfaces/LegacySendAsyncProvider.md).[`sendAsync`](../interfaces/LegacySendAsyncProvider.md#sendasync)
 
 ***
 
@@ -622,13 +672,11 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `abstract` **supportsSubscriptions**(): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:69
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:69
 
 ***
 
@@ -636,14 +684,14 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `static` **isWeb3Provider**(`provider`): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:66
+
 #### Parameters
 
-• **provider**: `unknown`
+##### provider
+
+`unknown`
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:66

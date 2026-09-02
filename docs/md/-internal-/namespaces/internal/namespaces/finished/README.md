@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # finished
 
-## Index
-
-### Functions
+## Functions
 
 - [\_\_promisify\_\_](functions/promisify.md)

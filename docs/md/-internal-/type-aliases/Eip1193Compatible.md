@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,21 +6,31 @@
 
 # Type Alias: Eip1193Compatible\<API\>
 
-> **Eip1193Compatible**\<`API`\>: [`Omit`](Omit.md)\<[`Omit`](Omit.md)\<[`Web3BaseProvider`](../classes/Web3BaseProvider.md), `"request"`\>, `"asEIP1193Provider"`\> & `object`
+> **Eip1193Compatible**\<`API`\> = [`Omit`](Omit.md)\<[`Omit`](Omit.md)\<[`Web3BaseProvider`](../classes/Web3BaseProvider.md), `"request"`\>, `"asEIP1193Provider"`\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:62
+
+## Type Declaration
 
 ### request()
 
+> **request**\<`Method`, `ResultType`\>(`request`): `Promise`\<`ResultType`\>
+
 #### Type Parameters
 
-• **Method** *extends* `string`
+##### Method
 
-• **ResultType** = `unknown`
+`Method` *extends* `string`
+
+##### ResultType
+
+`ResultType` = `unknown`
 
 #### Parameters
 
-• **request**: [`Web3APIPayload`](../interfaces/Web3APIPayload.md)\<`API`, `Method`\>
+##### request
+
+[`Web3APIPayload`](../interfaces/Web3APIPayload.md)\<`API`, `Method`\>
 
 #### Returns
 
@@ -28,8 +38,6 @@
 
 ## Type Parameters
 
-• **API** *extends* [`Web3APISpec`](Web3APISpec.md) = [`EthExecutionAPI`](EthExecutionAPI.md)
+### API
 
-## Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:62
+`API` *extends* [`Web3APISpec`](Web3APISpec.md) = [`EthExecutionAPI`](EthExecutionAPI.md)

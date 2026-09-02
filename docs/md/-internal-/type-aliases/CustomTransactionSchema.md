@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,22 @@
 
 # Type Alias: CustomTransactionSchema
 
-> **CustomTransactionSchema**: `object`
+> **CustomTransactionSchema** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:20
+
+## Properties
 
 ### properties
 
 > **properties**: [`Record`](Record.md)\<`string`, [`Schema`](Schema.md)\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:22
+
+***
+
 ### type
 
 > **type**: `string`
 
-## Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:20
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:21

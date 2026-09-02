@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: GenericHTMLFormElement
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:731
+
 ## Properties
 
 ### method
 
 > **method**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:682
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:733
 
 ***
 
@@ -22,9 +22,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:682
 
 > **name**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:681
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:732
 
 ## Methods
 
@@ -32,10 +30,8 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:681
 
 > **submit**(): `void`
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:734
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:683

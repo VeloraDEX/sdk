@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,9 +6,13 @@
 
 # Interface: ContractCallerFunctions\<T\>
 
+Defined in: [src/types.ts:121](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L121)
+
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Properties
 
@@ -16,9 +20,7 @@
 
 > **signTypedDataCall**: [`SignTypedDataContractCallerFn`](../-internal-/type-aliases/SignTypedDataContractCallerFn.md)
 
-#### Defined in
-
-[src/types.ts:124](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L124)
+Defined in: [src/types.ts:124](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L124)
 
 ***
 
@@ -26,9 +28,7 @@
 
 > **staticCall**: [`StaticContractCallerFn`](../-internal-/type-aliases/StaticContractCallerFn.md)
 
-#### Defined in
-
-[src/types.ts:122](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L122)
+Defined in: [src/types.ts:122](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L122)
 
 ***
 
@@ -36,6 +36,4 @@
 
 > **transactCall**: [`TransactionContractCallerFn`](../-internal-/type-aliases/TransactionContractCallerFn.md)\<`T`\>
 
-#### Defined in
-
-[src/types.ts:123](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L123)
+Defined in: [src/types.ts:123](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L123)

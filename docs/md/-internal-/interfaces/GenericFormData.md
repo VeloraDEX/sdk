@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,24 +6,30 @@
 
 # Interface: GenericFormData
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:727
+
 ## Methods
 
 ### append()
 
-> **append**(`name`, `value`, `options`?): `any`
+> **append**(`name`, `value`, `options?`): `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:728
 
 #### Parameters
 
-• **name**: `string`
+##### name
 
-• **value**: `any`
+`string`
 
-• **options?**: `any`
+##### value
+
+`any`
+
+##### options?
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:677

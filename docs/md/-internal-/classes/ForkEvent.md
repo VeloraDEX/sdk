@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ForkEvent
 
-# Class: `abstract` ForkEvent
+# Abstract Class: ForkEvent
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:101
 
 ## Extends
 
@@ -12,35 +14,31 @@
 
 ## Constructors
 
-### new ForkEvent()
+### Constructor
 
-> **new ForkEvent**(`info`): [`ForkEvent`](ForkEvent.md)
+> **new ForkEvent**(`info`): `ForkEvent`
+
+Defined in: node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
 
 #### Parameters
 
-• **info**
+##### info
 
 #### Returns
 
-[`ForkEvent`](ForkEvent.md)
+`ForkEvent`
 
 #### Inherited from
 
-[`Description`](Description.md).[`constructor`](Description.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
+[`Description`](Description.md).[`constructor`](Description.md#constructor)
 
 ## Properties
 
 ### \_isForkEvent?
 
-> `readonly` `optional` **\_isForkEvent**: `boolean`
+> `readonly` `optional` **\_isForkEvent?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:103
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:103
 
 ***
 
@@ -48,9 +46,7 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > `readonly` **expiry**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:102
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:102
 
 ## Methods
 
@@ -58,14 +54,14 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > `static` **isForkEvent**(`value`): `value is ForkEvent`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:104
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `value is ForkEvent`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:104

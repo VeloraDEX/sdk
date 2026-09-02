@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Interface: ReadWriteStream
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:434
+
 ## Extends
 
-- [`ReadableStream`](ReadableStream.md).[`WritableStream`](WritableStream.md)
+- [`ReadableStream`](ReadableStream-1.md).[`WritableStream`](WritableStream-1.md)
 
 ## Properties
 
@@ -16,13 +18,11 @@
 
 > **readable**: `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:412
+
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`readable`](ReadableStream.md#readable)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:412
+[`ReadableStream`](ReadableStream-1.md).[`readable`](ReadableStream-1.md#readable)
 
 ***
 
@@ -30,51 +30,57 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:41
 
 > **writable**: `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:426
+
 #### Inherited from
 
-[`WritableStream`](WritableStream.md).[`writable`](WritableStream.md#writable)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:426
+[`WritableStream`](WritableStream-1.md).[`writable`](WritableStream-1.md#writable)
 
 ## Methods
 
 ### \[asyncIterator\]()
 
-> **\[asyncIterator\]**(): `AsyncIterator`\<`string` \| `Buffer`, `any`, `any`\>
+> **\[asyncIterator\]**(): `AsyncIterator`\<`string` \| `Buffer`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:422
 
 #### Returns
 
-`AsyncIterator`\<`string` \| `Buffer`, `any`, `any`\>
+`AsyncIterator`\<`string` \| `Buffer`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>\>
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`[asyncIterator]`](ReadableStream.md#%5Basynciterator%5D-1)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:422
+[`ReadableStream`](ReadableStream-1.md).[`[asyncIterator]`](ReadableStream-1.md#asynciterator)
 
 ***
 
 ### \[captureRejectionSymbol\]()?
 
-#### \[captureRejectionSymbol\](error, event, args)
+#### Call Signature
 
 > `optional` **\[captureRejectionSymbol\]**\<`EventName`\>(`error`, `event`, ...`args`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:650
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **error**: [`Error`](Error.md)
+###### error
 
-• **event**: `EventName`
+`Error`
 
-• ...**args**: [`Args`](../type-aliases/Args.md)\<`object`, `EventName`\>
+###### event
+
+`EventName`
+
+###### args
+
+...[`Args`](../type-aliases/Args-6.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -82,27 +88,33 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:42
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`[captureRejectionSymbol]`](WritableStream.md#%5Bcapturerejectionsymbol%5D)
+[`ReadableStream`](ReadableStream-1.md).[`[captureRejectionSymbol]`](ReadableStream-1.md#capturerejectionsymbol)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:650
-
-#### \[captureRejectionSymbol\](error, event, args)
+#### Call Signature
 
 > `optional` **\[captureRejectionSymbol\]**\<`EventName`\>(`error`, `event`, ...`args`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:655
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **error**: [`Error`](Error.md)
+###### error
 
-• **event**: `EventName`
+`Error`
 
-• ...**args**: [`Args`](../type-aliases/Args.md)\<`object`, `EventName`\>
+###### event
+
+`EventName`
+
+###### args
+
+...[`Args`](../type-aliases/Args-6.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -110,31 +122,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:650
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`[captureRejectionSymbol]`](WritableStream.md#%5Bcapturerejectionsymbol%5D)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:655
+[`ReadableStream`](ReadableStream-1.md).[`[captureRejectionSymbol]`](ReadableStream-1.md#capturerejectionsymbol)
 
 ***
 
 ### addListener()
 
-#### addListener(eventName, listener)
+#### Call Signature
 
 > **addListener**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:664
 
 Alias for `emitter.on(eventName, listener)`.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -146,25 +162,29 @@ v0.1.26
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`addListener`](WritableStream.md#addlistener)
+[`ReadableStream`](ReadableStream-1.md).[`addListener`](ReadableStream-1.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:664
-
-#### addListener(eventName, listener)
+#### Call Signature
 
 > **addListener**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:668
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -172,19 +192,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:664
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`addListener`](WritableStream.md#addlistener)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:668
+[`ReadableStream`](ReadableStream-1.md).[`addListener`](ReadableStream-1.md#addlistener)
 
 ***
 
 ### emit()
 
-#### emit(eventName, args)
+#### Call Signature
 
 > **emit**\<`EventName`\>(`eventName`, ...`args`): `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:974
 
 Synchronously calls each of the listeners registered for the event named `eventName`, in the order they were registered, passing the supplied arguments
 to each.
@@ -226,13 +244,19 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• ...**args**: [`Args`](../type-aliases/Args.md)\<`object`, `EventName`\>
+`EventName`
+
+###### args
+
+...[`Args`](../type-aliases/Args-6.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -244,25 +268,29 @@ v0.1.26
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`emit`](WritableStream.md#emit)
+[`ReadableStream`](ReadableStream-1.md).[`emit`](ReadableStream-1.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:974
-
-#### emit(eventName, args)
+#### Call Signature
 
 > **emit**\<`EventName`\>(`eventName`, ...`args`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:978
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• ...**args**: [`Args`](../type-aliases/Args.md)\<`object`, `EventName`\>
+`EventName`
+
+###### args
+
+...[`Args`](../type-aliases/Args-6.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -270,23 +298,23 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:974
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`emit`](WritableStream.md#emit)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:978
+[`ReadableStream`](ReadableStream-1.md).[`emit`](ReadableStream-1.md#emit)
 
 ***
 
 ### end()
 
-#### end(cb)
+#### Call Signature
 
-> **end**(`cb`?): `this`
+> **end**(`cb?`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:429
 
 ##### Parameters
 
-• **cb?**
+###### cb?
+
+() => `void`
 
 ##### Returns
 
@@ -294,21 +322,23 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:978
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`end`](WritableStream.md#end)
+[`WritableStream`](WritableStream-1.md).[`end`](WritableStream-1.md#end)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:429
+> **end**(`data`, `cb?`): `this`
 
-#### end(data, cb)
-
-> **end**(`data`, `cb`?): `this`
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:430
 
 ##### Parameters
 
-• **data**: `string` \| `Uint8Array`
+###### data
 
-• **cb?**
+`string` \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+###### cb?
+
+() => `void`
 
 ##### Returns
 
@@ -316,23 +346,27 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:42
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`end`](WritableStream.md#end)
+[`WritableStream`](WritableStream-1.md).[`end`](WritableStream-1.md#end)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:430
+> **end**(`str`, `encoding?`, `cb?`): `this`
 
-#### end(str, encoding, cb)
-
-> **end**(`str`, `encoding`?, `cb`?): `this`
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:431
 
 ##### Parameters
 
-• **str**: `string`
+###### str
 
-• **encoding?**: [`BufferEncoding`](../type-aliases/BufferEncoding.md)
+`string`
 
-• **cb?**
+###### encoding?
+
+[`BufferEncoding`](../type-aliases/BufferEncoding.md)
+
+###### cb?
+
+() => `void`
 
 ##### Returns
 
@@ -340,17 +374,15 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:43
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`end`](WritableStream.md#end)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:431
+[`WritableStream`](WritableStream-1.md).[`end`](WritableStream-1.md#end)
 
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1065
 
 Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
@@ -379,17 +411,15 @@ v6.0.0
 
 #### Inherited from
 
-[`WritableStream`](WritableStream.md).[`eventNames`](WritableStream.md#eventnames)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1065
+[`ReadableStream`](ReadableStream-1.md).[`eventNames`](ReadableStream-1.md#eventnames)
 
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to defaultMaxListeners.
@@ -404,11 +434,7 @@ v1.0.0
 
 #### Inherited from
 
-[`WritableStream`](WritableStream.md).[`getMaxListeners`](WritableStream.md#getmaxlisteners)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
+[`ReadableStream`](ReadableStream-1.md).[`getMaxListeners`](ReadableStream-1.md#getmaxlisteners)
 
 ***
 
@@ -416,25 +442,25 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
 
 > **isPaused**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:417
+
 #### Returns
 
 `boolean`
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`isPaused`](ReadableStream.md#ispaused)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:417
+[`ReadableStream`](ReadableStream-1.md).[`isPaused`](ReadableStream-1.md#ispaused)
 
 ***
 
 ### listenerCount()
 
-#### listenerCount(eventName, listener)
+#### Call Signature
 
-> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+> **listenerCount**\<`EventName`\>(`eventName`, `listener?`): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
 
 Returns the number of listeners listening for the event named `eventName`.
 If `listener` is provided, it will return how many times the listener is found
@@ -442,15 +468,21 @@ in the list of the listeners of the event.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event being listened for
 
-• **listener?**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+###### listener?
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 The event handler function
 
@@ -464,25 +496,29 @@ v3.2.0
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`listenerCount`](WritableStream.md#listenercount)
+[`ReadableStream`](ReadableStream-1.md).[`listenerCount`](ReadableStream-1.md#listenercount)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
+> **listenerCount**\<`EventName`\>(`eventName`, `listener?`): `number`
 
-#### listenerCount(eventName, listener)
-
-> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:994
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener?**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener?
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -490,19 +526,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`listenerCount`](WritableStream.md#listenercount)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:994
+[`ReadableStream`](ReadableStream-1.md).[`listenerCount`](ReadableStream-1.md#listenercount)
 
 ***
 
 ### listeners()
 
-#### listeners(eventName)
+#### Call Signature
 
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:892
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -516,15 +550,19 @@ console.log(util.inspect(server.listeners('connection')));
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
 ##### Since
 
@@ -532,55 +570,61 @@ v0.1.26
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`listeners`](WritableStream.md#listeners)
+[`ReadableStream`](ReadableStream-1.md).[`listeners`](ReadableStream-1.md#listeners)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:892
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
-#### listeners(eventName)
-
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:895
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`listeners`](WritableStream.md#listeners)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:895
+[`ReadableStream`](ReadableStream-1.md).[`listeners`](ReadableStream-1.md#listeners)
 
 ***
 
 ### off()
 
-#### off(eventName, listener)
+#### Call Signature
 
 > **off**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
 
 Alias for `emitter.removeListener()`.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -592,25 +636,29 @@ v10.0.0
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`off`](WritableStream.md#off)
+[`ReadableStream`](ReadableStream-1.md).[`off`](ReadableStream-1.md#off)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
-
-#### off(eventName, listener)
+#### Call Signature
 
 > **off**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:846
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -618,19 +666,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`off`](WritableStream.md#off)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:846
+[`ReadableStream`](ReadableStream-1.md).[`off`](ReadableStream-1.md#off)
 
 ***
 
 ### on()
 
-#### on(eventName, listener)
+#### Call Signature
 
 > **on**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:703
 
 Adds the `listener` function to the end of the listeners array for the event
 named `eventName`. No checks are made to see if the `listener` has already
@@ -661,15 +707,21 @@ myEE.emit('foo');
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event.
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 The callback function
 
@@ -683,25 +735,29 @@ v0.1.101
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`on`](WritableStream.md#on)
+[`ReadableStream`](ReadableStream-1.md).[`on`](ReadableStream-1.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:703
-
-#### on(eventName, listener)
+#### Call Signature
 
 > **on**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:707
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -709,19 +765,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:703
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`on`](WritableStream.md#on)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:707
+[`ReadableStream`](ReadableStream-1.md).[`on`](ReadableStream-1.md#on)
 
 ***
 
 ### once()
 
-#### once(eventName, listener)
+#### Call Signature
 
 > **once**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:740
 
 Adds a **one-time** `listener` function for the event named `eventName`. The
 next time `eventName` is triggered, this listener is removed and then invoked.
@@ -750,15 +804,21 @@ myEE.emit('foo');
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event.
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 The callback function
 
@@ -772,25 +832,29 @@ v0.3.0
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`once`](WritableStream.md#once)
+[`ReadableStream`](ReadableStream-1.md).[`once`](ReadableStream-1.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:740
-
-#### once(eventName, listener)
+#### Call Signature
 
 > **once**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:744
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -798,11 +862,7 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:740
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`once`](WritableStream.md#once)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:744
+[`ReadableStream`](ReadableStream-1.md).[`once`](ReadableStream-1.md#once)
 
 ***
 
@@ -810,35 +870,41 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:744
 
 > **pause**(): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:415
+
 #### Returns
 
 `this`
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`pause`](ReadableStream.md#pause)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:415
+[`ReadableStream`](ReadableStream-1.md).[`pause`](ReadableStream-1.md#pause)
 
 ***
 
 ### pipe()
 
-> **pipe**\<`T`\>(`destination`, `options`?): `T`
+> **pipe**\<`T`\>(`destination`, `options?`): `T`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:418
 
 #### Type Parameters
 
-• **T** *extends* [`WritableStream`](WritableStream.md)
+##### T
+
+`T` *extends* [`WritableStream`](WritableStream-1.md)
 
 #### Parameters
 
-• **destination**: `T`
+##### destination
 
-• **options?**
+`T`
 
-• **options.end?**: `boolean`
+##### options?
+
+###### end?
+
+`boolean`
 
 #### Returns
 
@@ -846,19 +912,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:41
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`pipe`](ReadableStream.md#pipe)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:418
+[`ReadableStream`](ReadableStream-1.md).[`pipe`](ReadableStream-1.md#pipe)
 
 ***
 
 ### prependListener()
 
-#### prependListener(eventName, listener)
+#### Call Signature
 
 > **prependListener**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1015
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -875,15 +939,21 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event.
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 The callback function
 
@@ -897,25 +967,29 @@ v6.0.0
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`prependListener`](WritableStream.md#prependlistener)
+[`ReadableStream`](ReadableStream-1.md).[`prependListener`](ReadableStream-1.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1015
-
-#### prependListener(eventName, listener)
+#### Call Signature
 
 > **prependListener**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1019
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -923,19 +997,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:101
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`prependListener`](WritableStream.md#prependlistener)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1019
+[`ReadableStream`](ReadableStream-1.md).[`prependListener`](ReadableStream-1.md#prependlistener)
 
 ***
 
 ### prependOnceListener()
 
-#### prependOnceListener(eventName, listener)
+#### Call Signature
 
 > **prependOnceListener**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1038
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -950,15 +1022,21 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event.
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 The callback function
 
@@ -972,25 +1050,29 @@ v6.0.0
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`prependOnceListener`](WritableStream.md#prependoncelistener)
+[`ReadableStream`](ReadableStream-1.md).[`prependOnceListener`](ReadableStream-1.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1038
-
-#### prependOnceListener(eventName, listener)
+#### Call Signature
 
 > **prependOnceListener**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1042
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -998,19 +1080,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:103
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`prependOnceListener`](WritableStream.md#prependoncelistener)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1042
+[`ReadableStream`](ReadableStream-1.md).[`prependOnceListener`](ReadableStream-1.md#prependoncelistener)
 
 ***
 
 ### rawListeners()
 
-#### rawListeners(eventName)
+#### Call Signature
 
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:928
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -1042,15 +1122,19 @@ emitter.emit('log');
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
 ##### Since
 
@@ -1058,65 +1142,65 @@ v9.4.0
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`rawListeners`](WritableStream.md#rawlisteners)
+[`ReadableStream`](ReadableStream-1.md).[`rawListeners`](ReadableStream-1.md#rawlisteners)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:928
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
-#### rawListeners(eventName)
-
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:931
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`rawListeners`](WritableStream.md#rawlisteners)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:931
+[`ReadableStream`](ReadableStream-1.md).[`rawListeners`](ReadableStream-1.md#rawlisteners)
 
 ***
 
 ### read()
 
-> **read**(`size`?): `string` \| `Buffer`
+> **read**(`size?`): `string` \| `Buffer`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:413
 
 #### Parameters
 
-• **size?**: `number`
+##### size?
+
+`number`
 
 #### Returns
 
-`string` \| `Buffer`
+`string` \| `Buffer`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`read`](ReadableStream.md#read)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:413
+[`ReadableStream`](ReadableStream-1.md).[`read`](ReadableStream-1.md#read)
 
 ***
 
 ### removeAllListeners()
 
-#### removeAllListeners(eventName)
+#### Call Signature
 
 > **removeAllListeners**\<`EventName`\>(`eventName`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -1128,11 +1212,15 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
@@ -1144,23 +1232,25 @@ v0.1.26
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`removeAllListeners`](WritableStream.md#removealllisteners)
+[`ReadableStream`](ReadableStream-1.md).[`removeAllListeners`](ReadableStream-1.md#removealllisteners)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
+> **removeAllListeners**\<`EventName`\>(`eventName?`): `this`
 
-#### removeAllListeners(eventName)
-
-> **removeAllListeners**\<`EventName`\>(`eventName`?): `this`
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:862
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName?**: `EventName`
+###### eventName?
+
+`EventName`
 
 ##### Returns
 
@@ -1168,19 +1258,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`removeAllListeners`](WritableStream.md#removealllisteners)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:862
+[`ReadableStream`](ReadableStream-1.md).[`removeAllListeners`](ReadableStream-1.md#removealllisteners)
 
 ***
 
 ### removeListener()
 
-#### removeListener(eventName, listener)
+#### Call Signature
 
 > **removeListener**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:830
 
 Removes the specified `listener` from the listener array for the event named `eventName`.
 
@@ -1264,13 +1352,19 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -1282,25 +1376,29 @@ v0.1.26
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`removeListener`](WritableStream.md#removelistener)
+[`ReadableStream`](ReadableStream-1.md).[`removeListener`](ReadableStream-1.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:830
-
-#### removeListener(eventName, listener)
+#### Call Signature
 
 > **removeListener**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:834
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -1308,11 +1406,7 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:830
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`removeListener`](WritableStream.md#removelistener)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:834
+[`ReadableStream`](ReadableStream-1.md).[`removeListener`](ReadableStream-1.md#removelistener)
 
 ***
 
@@ -1320,17 +1414,15 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:834
 
 > **resume**(): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:416
+
 #### Returns
 
 `this`
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`resume`](ReadableStream.md#resume)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:416
+[`ReadableStream`](ReadableStream-1.md).[`resume`](ReadableStream-1.md#resume)
 
 ***
 
@@ -1338,9 +1430,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:41
 
 > **setEncoding**(`encoding`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:414
+
 #### Parameters
 
-• **encoding**: [`BufferEncoding`](../type-aliases/BufferEncoding.md)
+##### encoding
+
+[`BufferEncoding`](../type-aliases/BufferEncoding.md)
 
 #### Returns
 
@@ -1348,17 +1444,15 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:41
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`setEncoding`](ReadableStream.md#setencoding)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:414
+[`ReadableStream`](ReadableStream-1.md).[`setEncoding`](ReadableStream-1.md#setencoding)
 
 ***
 
 ### setMaxListeners()
 
 > **setMaxListeners**(`n`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -1369,7 +1463,9 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-• **n**: `number`
+##### n
+
+`number`
 
 #### Returns
 
@@ -1381,21 +1477,21 @@ v0.3.5
 
 #### Inherited from
 
-[`WritableStream`](WritableStream.md).[`setMaxListeners`](WritableStream.md#setmaxlisteners)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873
+[`ReadableStream`](ReadableStream-1.md).[`setMaxListeners`](ReadableStream-1.md#setmaxlisteners)
 
 ***
 
 ### unpipe()
 
-> **unpipe**(`destination`?): `this`
+> **unpipe**(`destination?`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:419
 
 #### Parameters
 
-• **destination?**: [`WritableStream`](WritableStream.md)
+##### destination?
+
+[`WritableStream`](WritableStream-1.md)
 
 #### Returns
 
@@ -1403,23 +1499,25 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`unpipe`](ReadableStream.md#unpipe)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:419
+[`ReadableStream`](ReadableStream-1.md).[`unpipe`](ReadableStream-1.md#unpipe)
 
 ***
 
 ### unshift()
 
-> **unshift**(`chunk`, `encoding`?): `void`
+> **unshift**(`chunk`, `encoding?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:420
 
 #### Parameters
 
-• **chunk**: `string` \| `Uint8Array`
+##### chunk
 
-• **encoding?**: [`BufferEncoding`](../type-aliases/BufferEncoding.md)
+`string` \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+##### encoding?
+
+[`BufferEncoding`](../type-aliases/BufferEncoding.md)
 
 #### Returns
 
@@ -1427,11 +1525,7 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:41
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`unshift`](ReadableStream.md#unshift)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:420
+[`ReadableStream`](ReadableStream-1.md).[`unshift`](ReadableStream-1.md#unshift)
 
 ***
 
@@ -1439,9 +1533,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:42
 
 > **wrap**(`oldStream`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:421
+
 #### Parameters
 
-• **oldStream**: [`ReadableStream`](ReadableStream.md)
+##### oldStream
+
+[`ReadableStream`](ReadableStream-1.md)
 
 #### Returns
 
@@ -1449,25 +1547,27 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:42
 
 #### Inherited from
 
-[`ReadableStream`](ReadableStream.md).[`wrap`](ReadableStream.md#wrap)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:421
+[`ReadableStream`](ReadableStream-1.md).[`wrap`](ReadableStream-1.md#wrap)
 
 ***
 
 ### write()
 
-#### write(buffer, cb)
+#### Call Signature
 
-> **write**(`buffer`, `cb`?): `boolean`
+> **write**(`buffer`, `cb?`): `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:427
 
 ##### Parameters
 
-• **buffer**: `string` \| `Uint8Array`
+###### buffer
 
-• **cb?**
+`string` \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+###### cb?
+
+(`err?`) => `void`
 
 ##### Returns
 
@@ -1475,23 +1575,27 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:42
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`write`](WritableStream.md#write)
+[`WritableStream`](WritableStream-1.md).[`write`](WritableStream-1.md#write)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:427
+> **write**(`str`, `encoding?`, `cb?`): `boolean`
 
-#### write(str, encoding, cb)
-
-> **write**(`str`, `encoding`?, `cb`?): `boolean`
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:428
 
 ##### Parameters
 
-• **str**: `string`
+###### str
 
-• **encoding?**: [`BufferEncoding`](../type-aliases/BufferEncoding.md)
+`string`
 
-• **cb?**
+###### encoding?
+
+[`BufferEncoding`](../type-aliases/BufferEncoding.md)
+
+###### cb?
+
+(`err?`) => `void`
 
 ##### Returns
 
@@ -1499,8 +1603,4 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:42
 
 ##### Inherited from
 
-[`WritableStream`](WritableStream.md).[`write`](WritableStream.md#write)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:428
+[`WritableStream`](WritableStream-1.md).[`write`](WritableStream-1.md#write)

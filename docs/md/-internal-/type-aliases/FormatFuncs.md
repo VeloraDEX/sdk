@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,10 @@
 
 # Type Alias: FormatFuncs
 
-> **FormatFuncs**: `object`
+> **FormatFuncs** = `object`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:5
 
 ## Index Signature
 
- \[`key`: `string`\]: [`FormatFunc`](FormatFunc.md)
-
-## Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:5
+\[`key`: `string`\]: [`FormatFunc`](FormatFunc.md)

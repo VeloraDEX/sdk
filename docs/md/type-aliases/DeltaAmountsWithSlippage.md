@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: DeltaAmountsWithSlippage
 
-> **DeltaAmountsWithSlippage**: [`DeltaAmountsSellSlippage`](DeltaAmountsSellSlippage.md) \| [`DeltaAmountsBuySlippage`](DeltaAmountsBuySlippage.md) \| [`DeltaAmountsExplicit`](DeltaAmountsExplicit.md)
+> **DeltaAmountsWithSlippage** = [`DeltaAmountsSellSlippage`](DeltaAmountsSellSlippage.md) \| [`DeltaAmountsBuySlippage`](DeltaAmountsBuySlippage.md) \| [`DeltaAmountsExplicit`](DeltaAmountsExplicit.md)
 
-## Defined in
-
-[src/methods/delta/helpers/types.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L37)
+Defined in: [src/methods/delta/helpers/types.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L37)

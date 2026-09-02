@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,627 +6,552 @@
 
 # Class: BaseContract
 
-An interface for objects which have an address, and can
- resolve it asyncronously.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:78
 
- This allows objects such as [[Signer]] or [[Contract]] to
- be used most places an address can be, for example getting
- the [balance](Provider-getBalance).
+## Extended by
 
-## Implements
-
-- [`Addressable`](../interfaces/Addressable.md)
-- [`EventEmitterable`](../interfaces/EventEmitterable.md)\<[`ContractEventName`](../type-aliases/ContractEventName.md)\>
+- [`Contract`](Contract.md)
 
 ## Constructors
 
-### new BaseContract()
+### Constructor
 
-> **new BaseContract**(`target`, `abi`, `runner`?, `_deployTx`?): [`BaseContract`](BaseContract.md)
+> **new BaseContract**(`addressOrName`, `contractInterface`, `signerOrProvider?`): `BaseContract`
 
-Creates a new contract connected to %%target%% with the %%abi%% and
- optionally connected to a %%runner%% to perform operations on behalf
- of.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:107
 
 #### Parameters
 
-• **target**: `string` \| [`Addressable`](../interfaces/Addressable.md)
+##### addressOrName
 
-• **abi**: [`Interface`](Interface.md) \| [`InterfaceAbi`](../type-aliases/InterfaceAbi.md)
+`string`
 
-• **runner?**: `null` \| [`ContractRunner`](../interfaces/ContractRunner.md)
+##### contractInterface
 
-• **\_deployTx?**: `null` \| [`TransactionResponse`](TransactionResponse.md)
+[`ContractInterface`](../type-aliases/ContractInterface.md)
+
+##### signerOrProvider?
+
+[`Signer`](Signer.md) \| [`Provider`](Provider.md)
 
 #### Returns
 
-[`BaseContract`](BaseContract.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:56
+`BaseContract`
 
 ## Properties
 
-### \[internal\]
+### \_deployedPromise
 
-> `readonly` **\[internal\]**: `any`
+> **\_deployedPromise**: `Promise`\<[`Contract`](Contract.md)\>
 
-@_ignore:
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:46
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:100
 
 ***
 
-### fallback
+### \_runningEvents
 
-> `readonly` **fallback**: `null` \| [`WrappedFallback`](../interfaces/WrappedFallback.md)
+> **\_runningEvents**: `object`
 
-The fallback or receive function if any.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:101
 
-#### Defined in
+#### Index Signature
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:50
+\[`eventTag`: `string`\]: [`RunningEvent`](RunningEvent.md)
+
+***
+
+### \_wrappedEmits
+
+> **\_wrappedEmits**: `object`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:104
+
+#### Index Signature
+
+\[`eventTag`: `string`\]: (...`args`) => `void`
+
+***
+
+### address
+
+> `readonly` **address**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:79
+
+***
+
+### callStatic
+
+> `readonly` **callStatic**: `object`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:86
+
+#### Index Signature
+
+\[`name`: `string`\]: [`ContractFunction`](../type-aliases/ContractFunction.md)\<`any`\>
+
+***
+
+### deployTransaction
+
+> `readonly` **deployTransaction**: [`TransactionResponse`](../interfaces/TransactionResponse.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:99
+
+***
+
+### estimateGas
+
+> `readonly` **estimateGas**: `object`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:89
+
+#### Index Signature
+
+\[`name`: `string`\]: [`ContractFunction`](../type-aliases/ContractFunction.md)\<[`BigNumber`](BigNumber.md)\>
 
 ***
 
 ### filters
 
-> `readonly` **filters**: [`Record`](../type-aliases/Record.md)\<`string`, [`ContractEvent`](../interfaces/ContractEvent.md)\<`any`[]\>\>
+> `readonly` **filters**: `object`
 
-All the Events available on this contract.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:95
 
-#### Defined in
+#### Index Signature
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:42
+\[`name`: `string`\]: (...`args`) => [`EventFilter`](../type-aliases/EventFilter.md)
+
+***
+
+### functions
+
+> `readonly` **functions**: `object`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:83
+
+#### Index Signature
+
+\[`name`: `string`\]: [`ContractFunction`](../type-aliases/ContractFunction.md)\<`any`\>
 
 ***
 
 ### interface
 
-> `readonly` **interface**: [`Interface`](Interface.md)
+> `readonly` **interface**: [`Interface`](Interface-1.md)
 
-The contract Interface.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:30
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:80
 
 ***
 
-### runner
+### populateTransaction
 
-> `readonly` **runner**: `null` \| [`ContractRunner`](../interfaces/ContractRunner.md)
+> `readonly` **populateTransaction**: `object`
 
-The connected runner. This is generally a [[Provider]] or a
- [[Signer]], which dictates what operations are supported.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:92
 
- For example, a **Contract** connected to a [[Provider]] may
- only execute read-only operations.
+#### Index Signature
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:38
+\[`name`: `string`\]: [`ContractFunction`](../type-aliases/ContractFunction.md)\<[`PopulatedTransaction`](../interfaces/PopulatedTransaction.md)\>
 
 ***
 
-### target
+### provider
 
-> `readonly` **target**: `string` \| [`Addressable`](../interfaces/Addressable.md)
+> `readonly` **provider**: [`Provider`](Provider.md)
 
-The target to connect to.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:82
 
- This can be an address, ENS name or any [[Addressable]], such as
- another contract. To get the resovled address, use the ``getAddress``
- method.
+***
 
-#### Defined in
+### resolvedAddress
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:26
+> `readonly` **resolvedAddress**: `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:98
+
+***
+
+### signer
+
+> `readonly` **signer**: [`Signer`](Signer.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:81
 
 ## Methods
 
-### addListener()
+### \_checkRunningEvents()
 
-> **addListener**(`event`, `listener`): `Promise`\<[`BaseContract`](BaseContract.md)\>
+> **\_checkRunningEvents**(`runningEvent`): `void`
 
-Alias for [on].
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:121
 
 #### Parameters
 
-• **event**: [`ContractEventName`](../type-aliases/ContractEventName.md)
+##### runningEvent
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`RunningEvent`](RunningEvent.md)
 
 #### Returns
 
-`Promise`\<[`BaseContract`](BaseContract.md)\>
+`void`
 
-#### Implementation of
+***
 
-[`EventEmitterable`](../interfaces/EventEmitterable.md).[`addListener`](../interfaces/EventEmitterable.md#addlistener)
+### \_deployed()
 
-#### Defined in
+> **\_deployed**(`blockTag?`): `Promise`\<[`Contract`](Contract.md)\>
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:147
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:114
+
+#### Parameters
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag.md)
+
+#### Returns
+
+`Promise`\<[`Contract`](Contract.md)\>
+
+***
+
+### \_wrapEvent()
+
+> **\_wrapEvent**(`runningEvent`, `log`, `listener`): [`Event`](../interfaces/Event.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:122
+
+#### Parameters
+
+##### runningEvent
+
+[`RunningEvent`](RunningEvent.md)
+
+##### log
+
+[`Log`](../interfaces/Log.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
+
+#### Returns
+
+[`Event`](../interfaces/Event.md)
 
 ***
 
 ### attach()
 
-> **attach**(`target`): [`BaseContract`](BaseContract.md)
+> **attach**(`addressOrName`): [`Contract`](Contract.md)
 
-Return a new Contract instance with the same ABI and runner, but
- a different %%target%%.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:117
 
 #### Parameters
 
-• **target**: `string` \| [`Addressable`](../interfaces/Addressable.md)
+##### addressOrName
+
+`string`
 
 #### Returns
 
-[`BaseContract`](BaseContract.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:66
+[`Contract`](Contract.md)
 
 ***
 
 ### connect()
 
-> **connect**(`runner`): [`BaseContract`](BaseContract.md)
+> **connect**(`signerOrProvider`): [`Contract`](Contract.md)
 
-Return a new Contract instance with the same target and ABI, but
- a different %%runner%%.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:116
 
 #### Parameters
 
-• **runner**: `null` \| [`ContractRunner`](../interfaces/ContractRunner.md)
+##### signerOrProvider
+
+`string` \| [`Signer`](Signer.md) \| [`Provider`](Provider.md)
 
 #### Returns
 
-[`BaseContract`](BaseContract.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:61
+[`Contract`](Contract.md)
 
 ***
 
-### deploymentTransaction()
+### deployed()
 
-> **deploymentTransaction**(): `null` \| [`ContractTransactionResponse`](ContractTransactionResponse.md)
+> **deployed**(): `Promise`\<[`Contract`](Contract.md)\>
 
-Return the transaction used to deploy this contract.
-
- This is only available if this instance was returned from a
- [[ContractFactory]].
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:113
 
 #### Returns
 
-`null` \| [`ContractTransactionResponse`](ContractTransactionResponse.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:86
+`Promise`\<[`Contract`](Contract.md)\>
 
 ***
 
 ### emit()
 
-> **emit**(`event`, ...`args`): `Promise`\<`boolean`\>
+> **emit**(`eventName`, ...`args`): `boolean`
 
-Emit an %%event%% calling all listeners with %%args%%.
-
- Resolves to ``true`` if any listeners were called.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:127
 
 #### Parameters
 
-• **event**: [`ContractEventName`](../type-aliases/ContractEventName.md)
+##### eventName
 
-• ...**args**: `any`[]
+`string` \| [`EventFilter`](../type-aliases/EventFilter.md)
 
-#### Returns
+##### args
 
-`Promise`\<`boolean`\>
-
-#### Implementation of
-
-[`EventEmitterable`](../interfaces/EventEmitterable.md).[`emit`](../interfaces/EventEmitterable.md#emit)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:123
-
-***
-
-### getAddress()
-
-> **getAddress**(): `Promise`\<`string`\>
-
-Return the resolved address of this Contract.
+...`any`[]
 
 #### Returns
 
-`Promise`\<`string`\>
-
-#### Implementation of
-
-[`Addressable`](../interfaces/Addressable.md).[`getAddress`](../interfaces/Addressable.md#getaddress)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:70
+`boolean`
 
 ***
 
-### getDeployedCode()
+### fallback()
 
-> **getDeployedCode**(): `Promise`\<`null` \| `string`\>
+> **fallback**(`overrides?`): `Promise`\<[`TransactionResponse`](../interfaces/TransactionResponse.md)\>
 
-Return the deployed bytecode or null if no bytecode is found.
-
-#### Returns
-
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:74
-
-***
-
-### getEvent()
-
-> **getEvent**(`key`): [`ContractEvent`](../interfaces/ContractEvent.md)\<`any`[]\>
-
-Return the event for a given name. This is useful when a contract
- event name conflicts with a JavaScript name such as ``prototype`` or
- when using a Contract programatically.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:115
 
 #### Parameters
 
-• **key**: `string` \| [`EventFragment`](EventFragment.md)
+##### overrides?
+
+[`TransactionRequest`](../type-aliases/TransactionRequest.md)
 
 #### Returns
 
-[`ContractEvent`](../interfaces/ContractEvent.md)\<`any`[]\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:98
-
-***
-
-### getFunction()
-
-> **getFunction**\<`T`\>(`key`): `T`
-
-Return the function for a given name. This is useful when a contract
- method name conflicts with a JavaScript name such as ``prototype`` or
- when using a Contract programatically.
-
-#### Type Parameters
-
-• **T** *extends* [`ContractMethod`](../interfaces/ContractMethod.md)\<`any`[], `any`, `any`\> = [`ContractMethod`](../interfaces/ContractMethod.md)\<`any`[], `any`, `any`\>
-
-#### Parameters
-
-• **key**: `string` \| [`FunctionFragment`](FunctionFragment.md)
-
-#### Returns
-
-`T`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:92
+`Promise`\<[`TransactionResponse`](../interfaces/TransactionResponse.md)\>
 
 ***
 
 ### listenerCount()
 
-> **listenerCount**(`event`?): `Promise`\<`number`\>
+> **listenerCount**(`eventName?`): `number`
 
-Resolves to the number of listeners of %%event%% or the total number
- of listeners if unspecified.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:128
 
 #### Parameters
 
-• **event?**: [`ContractEventName`](../type-aliases/ContractEventName.md)
+##### eventName?
+
+`string` \| [`EventFilter`](../type-aliases/EventFilter.md)
 
 #### Returns
 
-`Promise`\<`number`\>
-
-#### Implementation of
-
-[`EventEmitterable`](../interfaces/EventEmitterable.md).[`listenerCount`](../interfaces/EventEmitterable.md#listenercount)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:128
+`number`
 
 ***
 
 ### listeners()
 
-> **listeners**(`event`?): `Promise`\<[`Listener`](../type-aliases/Listener.md)[]\>
+> **listeners**(`eventName?`): [`Listener`](../type-aliases/Listener.md)[]
 
-Resolves to the listeners subscribed to %%event%% or all listeners
- if unspecified.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:129
 
 #### Parameters
 
-• **event?**: [`ContractEventName`](../type-aliases/ContractEventName.md)
+##### eventName?
+
+`string` \| [`EventFilter`](../type-aliases/EventFilter.md)
 
 #### Returns
 
-`Promise`\<[`Listener`](../type-aliases/Listener.md)[]\>
-
-#### Implementation of
-
-[`EventEmitterable`](../interfaces/EventEmitterable.md).[`listeners`](../interfaces/EventEmitterable.md#listeners)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:133
+[`Listener`](../type-aliases/Listener.md)[]
 
 ***
 
 ### off()
 
-> **off**(`event`, `listener`?): `Promise`\<[`BaseContract`](BaseContract.md)\>
+> **off**(`eventName`, `listener`): `this`
 
-Remove the %%listener%% from the listeners for %%event%% or remove
- all listeners if unspecified.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:131
 
 #### Parameters
 
-• **event**: [`ContractEventName`](../type-aliases/ContractEventName.md)
+##### eventName
 
-• **listener?**: [`Listener`](../type-aliases/Listener.md)
+`string` \| [`EventFilter`](../type-aliases/EventFilter.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
-`Promise`\<[`BaseContract`](BaseContract.md)\>
-
-#### Implementation of
-
-[`EventEmitterable`](../interfaces/EventEmitterable.md).[`off`](../interfaces/EventEmitterable.md#off)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:138
+`this`
 
 ***
 
 ### on()
 
-> **on**(`event`, `listener`): `Promise`\<[`BaseContract`](BaseContract.md)\>
+> **on**(`event`, `listener`): `this`
 
-Add an event %%listener%% for the %%event%%.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:125
 
 #### Parameters
 
-• **event**: [`ContractEventName`](../type-aliases/ContractEventName.md)
+##### event
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+`string` \| [`EventFilter`](../type-aliases/EventFilter.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
-`Promise`\<[`BaseContract`](BaseContract.md)\>
-
-#### Implementation of
-
-[`EventEmitterable`](../interfaces/EventEmitterable.md).[`on`](../interfaces/EventEmitterable.md#on)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:112
+`this`
 
 ***
 
 ### once()
 
-> **once**(`event`, `listener`): `Promise`\<[`BaseContract`](BaseContract.md)\>
+> **once**(`event`, `listener`): `this`
 
-Add an event %%listener%% for the %%event%%, but remove the listener
- after it is fired once.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:126
 
 #### Parameters
 
-• **event**: [`ContractEventName`](../type-aliases/ContractEventName.md)
+##### event
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+`string` \| [`EventFilter`](../type-aliases/EventFilter.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
-`Promise`\<[`BaseContract`](BaseContract.md)\>
-
-#### Implementation of
-
-[`EventEmitterable`](../interfaces/EventEmitterable.md).[`once`](../interfaces/EventEmitterable.md#once)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:117
+`this`
 
 ***
 
 ### queryFilter()
 
-> **queryFilter**(`event`, `fromBlock`?, `toBlock`?): `Promise`\<([`Log`](Log.md) \| [`EventLog`](EventLog.md))[]\>
+> **queryFilter**(`event`, `fromBlockOrBlockhash?`, `toBlock?`): `Promise`\<[`Event`](../interfaces/Event.md)[]\>
 
-Provide historic access to event data for %%event%% in the range
- %%fromBlock%% (default: ``0``) to %%toBlock%% (default: ``"latest"``)
- inclusive.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:124
 
 #### Parameters
 
-• **event**: [`ContractEventName`](../type-aliases/ContractEventName.md)
+##### event
 
-• **fromBlock?**: [`BlockTag`](../type-aliases/BlockTag.md)
+`string` \| [`EventFilter`](../type-aliases/EventFilter.md)
 
-• **toBlock?**: [`BlockTag`](../type-aliases/BlockTag.md)
+##### fromBlockOrBlockhash?
 
-#### Returns
+[`BlockTag`](../type-aliases/BlockTag.md)
 
-`Promise`\<([`Log`](Log.md) \| [`EventLog`](EventLog.md))[]\>
+##### toBlock?
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:108
-
-***
-
-### queryTransaction()
-
-> **queryTransaction**(`hash`): `Promise`\<[`EventLog`](EventLog.md)[]\>
-
-@_ignore:
-
-#### Parameters
-
-• **hash**: `string`
+[`BlockTag`](../type-aliases/BlockTag.md)
 
 #### Returns
 
-`Promise`\<[`EventLog`](EventLog.md)[]\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:102
+`Promise`\<[`Event`](../interfaces/Event.md)[]\>
 
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(`event`?): `Promise`\<[`BaseContract`](BaseContract.md)\>
+> **removeAllListeners**(`eventName?`): `this`
 
-Remove all the listeners for %%event%% or remove all listeners if
- unspecified.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:130
 
 #### Parameters
 
-• **event?**: [`ContractEventName`](../type-aliases/ContractEventName.md)
+##### eventName?
+
+`string` \| [`EventFilter`](../type-aliases/EventFilter.md)
 
 #### Returns
 
-`Promise`\<[`BaseContract`](BaseContract.md)\>
-
-#### Implementation of
-
-[`EventEmitterable`](../interfaces/EventEmitterable.md).[`removeAllListeners`](../interfaces/EventEmitterable.md#removealllisteners)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:143
+`this`
 
 ***
 
 ### removeListener()
 
-> **removeListener**(`event`, `listener`): `Promise`\<[`BaseContract`](BaseContract.md)\>
+> **removeListener**(`eventName`, `listener`): `this`
 
-Alias for [off].
-
-#### Parameters
-
-• **event**: [`ContractEventName`](../type-aliases/ContractEventName.md)
-
-• **listener**: [`Listener`](../type-aliases/Listener.md)
-
-#### Returns
-
-`Promise`\<[`BaseContract`](BaseContract.md)\>
-
-#### Implementation of
-
-[`EventEmitterable`](../interfaces/EventEmitterable.md).[`removeListener`](../interfaces/EventEmitterable.md#removelistener)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:151
-
-***
-
-### waitForDeployment()
-
-> **waitForDeployment**(): `Promise`\<[`BaseContract`](BaseContract.md)\>
-
-Resolve to this Contract once the bytecode has been deployed, or
- resolve immediately if already deployed.
-
-#### Returns
-
-`Promise`\<[`BaseContract`](BaseContract.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:79
-
-***
-
-### buildClass()
-
-> `static` **buildClass**\<`T`\>(`abi`): (`target`, `runner`?) => [`BaseContract`](BaseContract.md) & [`Omit`](../type-aliases/Omit.md)\<`T`, keyof [`BaseContract`](BaseContract.md)\>
-
-Create a new Class for the %%abi%%.
-
-#### Type Parameters
-
-• **T** = [`ContractInterface`](../interfaces/ContractInterface.md)
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:132
 
 #### Parameters
 
-• **abi**: [`Interface`](Interface.md) \| [`InterfaceAbi`](../type-aliases/InterfaceAbi.md)
+##### eventName
+
+`string` \| [`EventFilter`](../type-aliases/EventFilter.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
-`Function`
-
-##### Parameters
-
-• **target**: `string`
-
-• **runner?**: `null` \| [`ContractRunner`](../interfaces/ContractRunner.md)
-
-##### Returns
-
-[`BaseContract`](BaseContract.md) & [`Omit`](../type-aliases/Omit.md)\<`T`, keyof [`BaseContract`](BaseContract.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:155
+`this`
 
 ***
 
-### from()
+### getContractAddress()
 
-> `static` **from**\<`T`\>(`target`, `abi`, `runner`?): [`BaseContract`](BaseContract.md) & [`Omit`](../type-aliases/Omit.md)\<`T`, keyof [`BaseContract`](BaseContract.md)\>
+> `static` **getContractAddress**(`transaction`): `string`
 
-Create a new BaseContract with a specified Interface.
-
-#### Type Parameters
-
-• **T** = [`ContractInterface`](../interfaces/ContractInterface.md)
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:108
 
 #### Parameters
 
-• **target**: `string`
+##### transaction
 
-• **abi**: [`Interface`](Interface.md) \| [`InterfaceAbi`](../type-aliases/InterfaceAbi.md)
+###### from
 
-• **runner?**: `null` \| [`ContractRunner`](../interfaces/ContractRunner.md)
+`string`
+
+###### nonce
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BaseContract`](BaseContract.md) & [`Omit`](../type-aliases/Omit.md)\<`T`, keyof [`BaseContract`](BaseContract.md)\>
+`string`
 
-#### Defined in
+***
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/contract.d.ts:159
+### getInterface()
+
+> `static` **getInterface**(`contractInterface`): [`Interface`](Interface-1.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:112
+
+#### Parameters
+
+##### contractInterface
+
+[`ContractInterface`](../type-aliases/ContractInterface.md)
+
+#### Returns
+
+[`Interface`](Interface-1.md)
+
+***
+
+### isIndexed()
+
+> `static` **isIndexed**(`value`): `value is Indexed`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:118
+
+#### Parameters
+
+##### value
+
+`any`
+
+#### Returns
+
+`value is Indexed`

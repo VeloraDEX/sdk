@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / BaseTransaction
 
-# Class: `abstract` BaseTransaction\<TransactionObject\>
+# Abstract Class: BaseTransaction\<TransactionObject\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:21
 
 This base class will likely be subject to further
 refactoring along the introduction of additional tx types
@@ -14,27 +16,31 @@ It is therefore not recommended to use directly.
 
 ## Type Parameters
 
-• **TransactionObject**
+### TransactionObject
+
+`TransactionObject`
 
 ## Constructors
 
-### new BaseTransaction()
+### Constructor
 
-> **new BaseTransaction**\<`TransactionObject`\>(`txData`, `opts`): [`BaseTransaction`](BaseTransaction.md)\<`TransactionObject`\>
+> **new BaseTransaction**\<`TransactionObject`\>(`txData`, `opts`): `BaseTransaction`\<`TransactionObject`\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:56
 
 #### Parameters
 
-• **txData**: [`TxData`](../type-aliases/TxData.md) \| [`AccessListEIP2930TxData`](../interfaces/AccessListEIP2930TxData.md) \| [`FeeMarketEIP1559TxData`](../interfaces/FeeMarketEIP1559TxData.md)
+##### txData
 
-• **opts**: [`TxOptions`](../interfaces/TxOptions.md)
+[`TxData`](../type-aliases/TxData.md) \| [`AccessListEIP2930TxData`](../interfaces/AccessListEIP2930TxData.md) \| [`FeeMarketEIP1559TxData`](../interfaces/FeeMarketEIP1559TxData.md)
+
+##### opts
+
+[`TxOptions`](../interfaces/TxOptions.md)
 
 #### Returns
 
-[`BaseTransaction`](BaseTransaction.md)\<`TransactionObject`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:56
+`BaseTransaction`\<`TransactionObject`\>
 
 ## Properties
 
@@ -42,13 +48,11 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `protected` **activeCapabilities**: `number`[]
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:39
+
 List of tx type defining EIPs,
 e.g. 1559 (fee market) and 2930 (access lists)
 for FeeMarketEIP1559Transaction objects
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:39
 
 ***
 
@@ -56,9 +60,7 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `protected` **cache**: [`TransactionCache`](../interfaces/TransactionCache.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:32
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:32
 
 ***
 
@@ -66,9 +68,7 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `readonly` **common**: [`Common`](Common.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:31
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:31
 
 ***
 
@@ -76,9 +76,7 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `readonly` **data**: `Uint8Array`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:27
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:27
 
 ***
 
@@ -86,9 +84,7 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `readonly` **gasLimit**: `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:24
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:24
 
 ***
 
@@ -96,39 +92,31 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `readonly` **nonce**: `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:23
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:23
 
 ***
 
 ### r?
 
-> `readonly` `optional` **r**: `bigint`
+> `readonly` `optional` **r?**: `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:29
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:29
 
 ***
 
 ### s?
 
-> `readonly` `optional` **s**: `bigint`
+> `readonly` `optional` **s?**: `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:30
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:30
 
 ***
 
 ### to?
 
-> `readonly` `optional` **to**: [`Address`](Address.md)
+> `readonly` `optional` **to?**: [`Address`](Address.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:25
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:25
 
 ***
 
@@ -136,19 +124,15 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `protected` `readonly` **txOptions**: [`TxOptions`](../interfaces/TxOptions.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:33
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:33
 
 ***
 
 ### v?
 
-> `readonly` `optional` **v**: `bigint`
+> `readonly` `optional` **v?**: `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:28
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:28
 
 ***
 
@@ -156,9 +140,7 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `readonly` **value**: `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:26
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:26
 
 ## Accessors
 
@@ -168,6 +150,8 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **get** **type**(): `number`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:62
+
 Returns the transaction type.
 
 Note: legacy txs will return tx type `0`.
@@ -176,37 +160,39 @@ Note: legacy txs will return tx type `0`.
 
 `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:62
-
 ## Methods
 
 ### \_ecsign()
 
-> `protected` **\_ecsign**(`msgHash`, `privateKey`, `chainId`?): [`ECDSASignature`](../interfaces/ECDSASignature.md)
+> `protected` **\_ecsign**(`msgHash`, `privateKey`, `chainId?`): [`ECDSASignature`](../interfaces/ECDSASignature.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:193
 
 #### Parameters
 
-• **msgHash**: `Uint8Array`
+##### msgHash
 
-• **privateKey**: `Uint8Array`
+`Uint8Array`
 
-• **chainId?**: `bigint`
+##### privateKey
+
+`Uint8Array`
+
+##### chainId?
+
+`bigint`
 
 #### Returns
 
 [`ECDSASignature`](../interfaces/ECDSASignature.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:193
 
 ***
 
 ### \_getSharedErrorPostfix()
 
 > `protected` **\_getSharedErrorPostfix**(): `string`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:192
 
 Returns the shared error postfix part for _error() method
 tx type implementations.
@@ -215,51 +201,57 @@ tx type implementations.
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:192
-
 ***
 
 ### \_processSignature()
 
 > `abstract` `protected` **\_processSignature**(`v`, `r`, `s`): `TransactionObject`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:155
+
 #### Parameters
 
-• **v**: `bigint`
+##### v
 
-• **r**: `Uint8Array`
+`bigint`
 
-• **s**: `Uint8Array`
+##### r
+
+`Uint8Array`
+
+##### s
+
+`Uint8Array`
 
 #### Returns
 
 `TransactionObject`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:155
-
 ***
 
 ### \_validateCannotExceedMaxInteger()
 
-> `protected` **\_validateCannotExceedMaxInteger**(`values`, `bits`?, `cannotEqual`?): `void`
+> `protected` **\_validateCannotExceedMaxInteger**(`values`, `bits?`, `cannotEqual?`): `void`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:171
 
 Validates that an object with BigInt values cannot exceed the specified bit limit.
 
 #### Parameters
 
-• **values**
+##### values
 
 Object containing string keys and BigInt values
 
-• **bits?**: `number`
+##### bits?
+
+`number`
 
 Number of bits to check (64 or 256)
 
-• **cannotEqual?**: `boolean`
+##### cannotEqual?
+
+`boolean`
 
 Pass true if the number also cannot equal one less the maximum value
 
@@ -267,15 +259,13 @@ Pass true if the number also cannot equal one less the maximum value
 
 `void`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:171
-
 ***
 
 ### \_validateHighS()
 
 > `protected` **\_validateHighS**(): `void`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:92
 
 EIP-2: All transaction signatures whose s-value is greater than secp256k1n/2are considered invalid.
 Reasoning: https://ethereum.stackexchange.com/a/55728
@@ -284,23 +274,17 @@ Reasoning: https://ethereum.stackexchange.com/a/55728
 
 `void`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:92
-
 ***
 
 ### \_validateYParity()
 
 > `protected` **\_validateYParity**(): `void`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:87
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:87
 
 ***
 
@@ -308,15 +292,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `abstract` **errorStr**(): `string`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:180
+
 Return a compact error string representation of the object
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:180
 
 ***
 
@@ -324,15 +306,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **getBaseFee**(): `bigint`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:96
+
 The minimum amount of gas the tx must have (DataFee + TxFee + Creation Fee)
 
 #### Returns
 
 `bigint`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:96
 
 ***
 
@@ -340,51 +320,49 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **getDataFee**(): `bigint`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:100
+
 The amount of gas paid for the data in this tx
 
 #### Returns
 
 `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:100
-
 ***
 
 ### getMessageToSign()
 
-#### getMessageToSign(hashMessage)
+#### Call Signature
 
-> `abstract` **getMessageToSign**(`hashMessage`): `Uint8Array` \| `Uint8Array`[]
+> `abstract` **getMessageToSign**(`hashMessage`): `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\> \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>[]
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:124
 
 ##### Parameters
 
-• **hashMessage**: `false`
+###### hashMessage
+
+`false`
 
 ##### Returns
 
-`Uint8Array` \| `Uint8Array`[]
+`Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\> \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>[]
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:124
+> `abstract` **getMessageToSign**(`hashMessage?`): `Uint8Array`
 
-#### getMessageToSign(hashMessage)
-
-> `abstract` **getMessageToSign**(`hashMessage`?): `Uint8Array`
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:125
 
 ##### Parameters
 
-• **hashMessage?**: `true`
+###### hashMessage?
+
+`true`
 
 ##### Returns
 
 `Uint8Array`
-
-##### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:125
 
 ***
 
@@ -392,13 +370,11 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `abstract` **getMessageToVerifySignature**(): `Uint8Array`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:127
+
 #### Returns
 
 `Uint8Array`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:127
 
 ***
 
@@ -406,15 +382,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **getSenderAddress**(): [`Address`](Address.md)
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:136
+
 Returns the sender's address
 
 #### Returns
 
 [`Address`](Address.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:136
 
 ***
 
@@ -422,15 +396,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `abstract` **getSenderPublicKey**(): `Uint8Array`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:140
+
 Returns the public key of the sender
 
 #### Returns
 
 `Uint8Array`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:140
 
 ***
 
@@ -438,15 +410,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `abstract` **getUpfrontCost**(): `bigint`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:104
+
 The up front amount that an account must have for this transaction to be valid
 
 #### Returns
 
 `bigint`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:104
 
 ***
 
@@ -454,13 +424,11 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `abstract` **hash**(): `Uint8Array`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:126
+
 #### Returns
 
 `Uint8Array`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:126
 
 ***
 
@@ -468,13 +436,11 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **isSigned**(): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:128
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:128
 
 ***
 
@@ -482,22 +448,20 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `abstract` **raw**(): [`TxValuesArray`](../type-aliases/TxValuesArray.md) \| [`AccessListEIP2930ValuesArray`](../type-aliases/AccessListEIP2930ValuesArray.md) \| [`FeeMarketEIP1559ValuesArray`](../type-aliases/FeeMarketEIP1559ValuesArray.md)
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:119
+
 Returns a Uint8Array Array of the raw Uint8Arrays of this transaction, in order.
 
-Use [BaseTransaction.serialize](BaseTransaction.md#serialize) to add a transaction to a block
+Use [BaseTransaction.serialize](#serialize) to add a transaction to a block
 with Block.fromValuesArray.
 
 For an unsigned tx this method uses the empty Uint8Array values for the
 signature parameters `v`, `r` and `s` for encoding. For an EIP-155 compliant
-representation for external signing use [BaseTransaction.getMessageToSign](BaseTransaction.md#getmessagetosign).
+representation for external signing use [BaseTransaction.getMessageToSign](#getmessagetosign).
 
 #### Returns
 
 [`TxValuesArray`](../type-aliases/TxValuesArray.md) \| [`AccessListEIP2930ValuesArray`](../type-aliases/AccessListEIP2930ValuesArray.md) \| [`FeeMarketEIP1559ValuesArray`](../type-aliases/FeeMarketEIP1559ValuesArray.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:119
 
 ***
 
@@ -505,21 +469,21 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `abstract` **serialize**(): `Uint8Array`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:123
+
 Returns the encoding of the transaction.
 
 #### Returns
 
 `Uint8Array`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:123
-
 ***
 
 ### sign()
 
 > **sign**(`privateKey`): `TransactionObject`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:150
 
 Signs a transaction.
 
@@ -531,21 +495,21 @@ const signedTx = tx.sign(privateKey)
 
 #### Parameters
 
-• **privateKey**: `Uint8Array`
+##### privateKey
+
+`Uint8Array`
 
 #### Returns
 
 `TransactionObject`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:150
 
 ***
 
 ### supports()
 
 > **supports**(`capability`): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:79
 
 Checks if a tx type defining capability is active
 on a tx, for example the EIP-1559 fee market mechanism
@@ -564,15 +528,13 @@ on all supported capabilities.
 
 #### Parameters
 
-• **capability**: [`Capability`](../enumerations/Capability.md)
+##### capability
+
+[`Capability`](../enumerations/Capability.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:79
 
 ***
 
@@ -580,15 +542,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **toCreationAddress**(): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:108
+
 If the tx's `to` is to the creation address
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:108
 
 ***
 
@@ -596,23 +556,23 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `abstract` **toJSON**(): [`JsonTx`](../interfaces/JsonTx.md)
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:154
+
 Returns an object with the JSON representation of the transaction
 
 #### Returns
 
 [`JsonTx`](../interfaces/JsonTx.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:154
-
 ***
 
 ### validate()
 
-#### validate()
+#### Call Signature
 
 > **validate**(): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:84
 
 Checks if the transaction has the minimum amount of gas required
 (DataFee + TxFee + Creation Fee).
@@ -621,41 +581,43 @@ Checks if the transaction has the minimum amount of gas required
 
 `boolean`
 
-##### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:84
-
-#### validate(stringError)
+#### Call Signature
 
 > **validate**(`stringError`): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:85
+
+Checks if the transaction has the minimum amount of gas required
+(DataFee + TxFee + Creation Fee).
+
 ##### Parameters
 
-• **stringError**: `false`
+###### stringError
+
+`false`
 
 ##### Returns
 
 `boolean`
 
-##### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:85
-
-#### validate(stringError)
+#### Call Signature
 
 > **validate**(`stringError`): `string`[]
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:86
+
+Checks if the transaction has the minimum amount of gas required
+(DataFee + TxFee + Creation Fee).
+
 ##### Parameters
 
-• **stringError**: `true`
+###### stringError
+
+`true`
 
 ##### Returns
 
 `string`[]
-
-##### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:86
 
 ***
 
@@ -663,15 +625,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **verifySignature**(): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:132
+
 Determines if the signature is valid
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:132
 
 ***
 
@@ -679,54 +639,56 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `protected` `static` **\_validateNotArray**(`values`): `void`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:174
+
 #### Parameters
 
-• **values**
+##### values
 
 #### Returns
 
 `void`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:174
-
 ***
 
 ### fromSerializedTx()
 
-> `static` **fromSerializedTx**(`serialized`, `opts`?): `any`
+> `static` **fromSerializedTx**(`serialized`, `opts?`): `any`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:194
 
 #### Parameters
 
-• **serialized**: `Uint8Array`
+##### serialized
 
-• **opts?**: [`TxOptions`](../interfaces/TxOptions.md)
+`Uint8Array`
+
+##### opts?
+
+[`TxOptions`](../interfaces/TxOptions.md)
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:194
 
 ***
 
 ### fromTxData()
 
-> `static` **fromTxData**(`txData`, `opts`?): `any`
+> `static` **fromTxData**(`txData`, `opts?`): `any`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:195
 
 #### Parameters
 
-• **txData**: `any`
+##### txData
 
-• **opts?**: [`TxOptions`](../interfaces/TxOptions.md)
+`any`
+
+##### opts?
+
+[`TxOptions`](../interfaces/TxOptions.md)
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:195

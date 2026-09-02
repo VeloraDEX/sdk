@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,38 +6,54 @@
 
 # Type Alias: MinAxiosResponse
 
-> **MinAxiosResponse**: `object`
+> **MinAxiosResponse** = `object`
 
-## Type declaration
+Defined in: [src/helpers/misc.ts:35](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L35)
+
+## Properties
 
 ### config
 
 > **config**: `object`
 
-### config.method?
+Defined in: [src/helpers/misc.ts:40](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L40)
 
-> `optional` **method**: `string`
+#### method?
 
-### config.url?
+> `optional` **method?**: `string`
 
-> `optional` **url**: `string`
+#### url?
+
+> `optional` **url?**: `string`
+
+***
 
 ### data
 
 > **data**: `any`
 
+Defined in: [src/helpers/misc.ts:36](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L36)
+
+***
+
 ### headers
 
 > **headers**: [`Record`](Record.md)\<`string`, `any`\>
+
+Defined in: [src/helpers/misc.ts:39](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L39)
+
+***
 
 ### status
 
 > **status**: `number`
 
+Defined in: [src/helpers/misc.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L37)
+
+***
+
 ### statusText
 
 > **statusText**: `string`
 
-## Defined in
-
-[src/helpers/misc.ts:35](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L35)
+Defined in: [src/helpers/misc.ts:38](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L38)

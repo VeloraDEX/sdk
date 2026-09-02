@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,61 +6,58 @@
 
 # Class: LogDescription
 
-## Extends
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:23
 
-- [`Description`](Description.md)\<[`LogDescription`](LogDescription.md)\>
+When using the [[Interface-parseLog]] to automatically match a Log to its event
+ for parsing, a **LogDescription** is returned.
 
 ## Constructors
 
-### new LogDescription()
+### Constructor
 
-> **new LogDescription**(`info`): [`LogDescription`](LogDescription.md)
+> **new LogDescription**(`fragment`, `topic`, `args`): `LogDescription`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:47
+
+@_ignore:
 
 #### Parameters
 
-• **info**
+##### fragment
 
-• **info.args**: [`Result`](../interfaces/Result.md)
+[`EventFragment`](EventFragment.md)
 
-• **info.eventFragment**: [`EventFragment`](EventFragment.md)
+##### topic
 
-• **info.name**: `string`
+`string`
 
-• **info.signature**: `string`
+##### args
 
-• **info.topic**: `string`
+[`Result`](Result.md)
 
 #### Returns
 
-[`LogDescription`](LogDescription.md)
-
-#### Inherited from
-
-[`Description`](Description.md).[`constructor`](Description.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
+`LogDescription`
 
 ## Properties
 
 ### args
 
-> `readonly` **args**: [`Result`](../interfaces/Result.md)
+> `readonly` **args**: [`Result`](Result.md)
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:43
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:13
+The arguments passed into the Event with ``emit``.
 
 ***
 
-### eventFragment
+### fragment
 
-> `readonly` **eventFragment**: [`EventFragment`](EventFragment.md)
+> `readonly` **fragment**: [`EventFragment`](EventFragment.md)
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:27
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:9
+The matching fragment for the ``topic0``.
 
 ***
 
@@ -68,9 +65,9 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **name**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:31
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:10
+The name of the Event.
 
 ***
 
@@ -78,9 +75,9 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **signature**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:35
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:11
+The full Event signature.
 
 ***
 
@@ -88,6 +85,6 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **topic**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:39
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:12
+The topic hash for the Event.

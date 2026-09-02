@@ -1,34 +1,42 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Coder
 
-# Class: `abstract` Coder
+# Abstract Class: Coder
+
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:11
 
 ## Constructors
 
-### new Coder()
+### Constructor
 
-> **new Coder**(`name`, `type`, `localName`, `dynamic`): [`Coder`](Coder.md)
+> **new Coder**(`name`, `type`, `localName`, `dynamic`): `Coder`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:16
 
 #### Parameters
 
-• **name**: `string`
+##### name
 
-• **type**: `string`
+`string`
 
-• **localName**: `string`
+##### type
 
-• **dynamic**: `boolean`
+`string`
+
+##### localName
+
+`string`
+
+##### dynamic
+
+`boolean`
 
 #### Returns
 
-[`Coder`](Coder.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:16
+`Coder`
 
 ## Properties
 
@@ -36,9 +44,7 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **dynamic**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:15
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:15
 
 ***
 
@@ -46,9 +52,7 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **localName**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:14
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:14
 
 ***
 
@@ -56,9 +60,7 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **name**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:12
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:12
 
 ***
 
@@ -66,9 +68,7 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **type**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:13
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:13
 
 ## Methods
 
@@ -76,19 +76,21 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > **\_throwError**(`message`, `value`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:17
+
 #### Parameters
 
-• **message**: `string`
+##### message
 
-• **value**: `any`
+`string`
+
+##### value
+
+`any`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:17
 
 ***
 
@@ -96,17 +98,17 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `abstract` **decode**(`reader`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:19
+
 #### Parameters
 
-• **reader**: [`Reader`](Reader.md)
+##### reader
+
+[`Reader`](Reader.md)
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:19
 
 ***
 
@@ -114,13 +116,11 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `abstract` **defaultValue**(): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:20
+
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:20
 
 ***
 
@@ -128,16 +128,18 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `abstract` **encode**(`writer`, `value`): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:18
+
 #### Parameters
 
-• **writer**: [`Writer`](Writer.md)
+##### writer
 
-• **value**: `any`
+[`Writer`](Writer.md)
+
+##### value
+
+`any`
 
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:18

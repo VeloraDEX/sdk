@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: GetContractEventsParameters\<abi, eventName, strict, fromBlock, toBlock\>
 
-> **GetContractEventsParameters**\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>: `object` & `object` \| `object`
+> **GetContractEventsParameters**\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\> = `object` & \{ `blockHash?`: `undefined`; `fromBlock?`: `fromBlock` \| [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md); `toBlock?`: `toBlock` \| [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md); \} \| \{ `blockHash?`: [`Hash`](Hash.md); `fromBlock?`: `undefined`; `toBlock?`: `undefined`; \}
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getContractEvents.d.ts:12
+
+## Type Declaration
 
 ### abi
 
@@ -18,23 +20,23 @@ Contract ABI.
 
 ### address?
 
-> `optional` **address**: [`Address`](Address.md) \| [`Address`](Address.md)[]
+> `optional` **address?**: [`Address`](Address-1.md) \| [`Address`](Address-1.md)[]
 
 The address of the contract.
 
 ### args?
 
-> `optional` **args**: [`ContractEventArgs`](ContractEventArgs.md)\<`abi`, `eventName` *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> ? `eventName` : [`ContractEventName`](ContractEventName.md)\<`abi`\>\>
+> `optional` **args?**: [`ContractEventArgs`](ContractEventArgs-1.md)\<`abi`, `eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> ? `eventName` : [`ContractEventName`](ContractEventName-1.md)\<`abi`\>\>
 
 ### eventName?
 
-> `optional` **eventName**: `eventName` \| [`ContractEventName`](ContractEventName.md)\<`abi`\>
+> `optional` **eventName?**: `eventName` \| [`ContractEventName`](ContractEventName-1.md)\<`abi`\>
 
 Contract event.
 
 ### strict?
 
-> `optional` **strict**: `strict` \| `boolean`
+> `optional` **strict?**: `strict` \| `boolean`
 
 Whether or not the logs must match the indexed/non-indexed arguments on `event`.
 
@@ -46,16 +48,22 @@ false
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### abi
 
-• **eventName** *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> \| `undefined` = [`ContractEventName`](ContractEventName.md)\<`abi`\> \| `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+### eventName
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> \| `undefined` = [`ContractEventName`](ContractEventName-1.md)\<`abi`\> \| `undefined`
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+### strict
 
-## Defined in
+`strict` *extends* `boolean` \| `undefined` = `undefined`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getContractEvents.d.ts:12
+### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`

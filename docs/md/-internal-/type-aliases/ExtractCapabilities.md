@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: ExtractCapabilities\<method, key\>
 
-> **ExtractCapabilities**\<`method`, `key`\>: [`Prettify`](Prettify.md)\<`method` *extends* keyof [`CapabilitiesSchema`](CapabilitiesSchema.md) ? [`CapabilitiesSchema`](CapabilitiesSchema.md)\[`method`\] *extends* `{ [k in key]: infer value extends Record<string, any> }` ? [`Capabilities`](Capabilities.md)\<`value`\> : [`Capabilities`](Capabilities.md) : [`Capabilities`](Capabilities.md)\>
+> **ExtractCapabilities**\<`method`, `key`\> = [`Prettify`](Prettify-1.md)\<`method` *extends* keyof [`CapabilitiesSchema`](CapabilitiesSchema.md) ? [`CapabilitiesSchema`](CapabilitiesSchema.md)\[`method`\] *extends* `{ [k in key]: infer value extends Record<string, any> }` ? [`Capabilities`](Capabilities.md)\<`value`\> : [`Capabilities`](Capabilities.md) : [`Capabilities`](Capabilities.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/capabilities.d.ts:53
 
 ## Type Parameters
 
-• **method** *extends* `string`
+### method
 
-• **key** *extends* `"Request"` \| `"ReturnType"`
+`method` *extends* `string`
 
-## Defined in
+### key
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/capabilities.d.ts:53
+`key` *extends* `"Request"` \| `"ReturnType"`

@@ -1,29 +1,33 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TransactionContractCallerFn
 
-# Type Alias: TransactionContractCallerFn()\<T\>
+# Type Alias: TransactionContractCallerFn\<T\>
 
-> **TransactionContractCallerFn**\<`T`\>: \<`M`\>(`params`) => `Promise`\<`T`\>
+> **TransactionContractCallerFn**\<`T`\> = \<`M`\>(`params`) => `Promise`\<`T`\>
 
-## Type Parameters
-
-• **T**
+Defined in: [src/types.ts:114](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L114)
 
 ## Type Parameters
 
-• **M** *extends* `string` = `string`
+### T
+
+`T`
+
+## Type Parameters
+
+### M
+
+`M` *extends* `string` = `string`
 
 ## Parameters
 
-• **params**: [`ContractCallTransactionInput`](../interfaces/ContractCallTransactionInput.md)\<`M`\>
+### params
+
+[`ContractCallTransactionInput`](../interfaces/ContractCallTransactionInput.md)\<`M`\>
 
 ## Returns
 
 `Promise`\<`T`\>
-
-## Defined in
-
-[src/types.ts:114](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L114)

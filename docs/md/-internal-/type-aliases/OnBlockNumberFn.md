@@ -1,23 +1,25 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / OnBlockNumberFn
 
-# Type Alias: OnBlockNumberFn()
+# Type Alias: OnBlockNumberFn
 
-> **OnBlockNumberFn**: (`blockNumber`, `prevBlockNumber`) => `void`
+> **OnBlockNumberFn** = (`blockNumber`, `prevBlockNumber`) => `void`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchBlockNumber.d.ts:9
 
 ## Parameters
 
-• **blockNumber**: [`OnBlockNumberParameter`](OnBlockNumberParameter.md)
+### blockNumber
 
-• **prevBlockNumber**: [`OnBlockNumberParameter`](OnBlockNumberParameter.md) \| `undefined`
+[`OnBlockNumberParameter`](OnBlockNumberParameter.md)
+
+### prevBlockNumber
+
+[`OnBlockNumberParameter`](OnBlockNumberParameter.md) \| `undefined`
 
 ## Returns
 
 `void`
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchBlockNumber.d.ts:9

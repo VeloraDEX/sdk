@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,27 +6,37 @@
 
 # Type Alias: Tuple\<type, size\>
 
-> **Tuple**\<`type`, `size`\>: `size` *extends* `size` ? `number` *extends* `size` ? `type`[] : [`_TupleOf`](TupleOf.md)\<`type`, `size`, []\> : `never`
+> **Tuple**\<`type`, `size`\> = `size` *extends* `size` ? `number` *extends* `size` ? `type`[] : [`_TupleOf`](TupleOf.md)\<`type`, `size`, \[\]\> : `never`
 
-Create tuple of [type](Tuple.md) type with [size](Tuple.md) size
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/types.d.ts:148
+
+Create tuple of [type](#type) type with [size](#size) size
 
 ## Type Parameters
 
-• **type**
+### type
 
-• **size** *extends* `number`
+`type`
+
+### size
+
+`size` *extends* `number`
 
 ## Param
+
+**Type**
 
 Type of tuple
 
 ## Param
 
+**Size**
+
 Size of tuple
 
 ## Returns
 
-Tuple of [type](Tuple.md) type with [size](Tuple.md) size
+Tuple of [type](#type) type with [size](#size) size
 
 ## Example
 
@@ -34,7 +44,3 @@ Tuple of [type](Tuple.md) type with [size](Tuple.md) size
 type Result = Tuple<string, 2>
 //   ^? type Result = [string, string]
 ```
-
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/types.d.ts:148

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,24 +6,26 @@
 
 # Type Alias: TransactionSerializableLegacy\<quantity, index\>
 
-> **TransactionSerializableLegacy**\<`quantity`, `index`\>: [`TransactionSerializableBase`](TransactionSerializableBase.md)\<`quantity`, `index`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesLegacy`](FeeValuesLegacy.md)\<`quantity`\>\> & `object`
+> **TransactionSerializableLegacy**\<`quantity`, `index`\> = [`TransactionSerializableBase`](TransactionSerializableBase.md)\<`quantity`, `index`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesLegacy`](FeeValuesLegacy.md)\<`quantity`\>\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:192
+
+## Type Declaration
 
 ### chainId?
 
-> `optional` **chainId**: `number`
+> `optional` **chainId?**: `number`
 
 ### type?
 
-> `optional` **type**: `"legacy"`
+> `optional` **type?**: `"legacy"`
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-## Defined in
+### index
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:188
+`index` = `number`

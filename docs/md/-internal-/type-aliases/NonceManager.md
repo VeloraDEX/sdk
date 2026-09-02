@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,66 +6,86 @@
 
 # Type Alias: NonceManager
 
-> **NonceManager**: `object`
+> **NonceManager** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/nonceManager.d.ts:11
 
-### consume()
+## Properties
+
+### consume
 
 > **consume**: (`parameters`) => `Promise`\<`number`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/nonceManager.d.ts:13
 
 Get and increment a nonce.
 
 #### Parameters
 
-• **parameters**: [`FunctionParameters`](FunctionParameters.md) & `object`
+##### parameters
+
+[`FunctionParameters`](FunctionParameters.md) & `object`
 
 #### Returns
 
 `Promise`\<`number`\>
 
-### get()
+***
+
+### get
 
 > **get**: (`chainId`) => `Promise`\<`number`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/nonceManager.d.ts:19
 
 Get a nonce.
 
 #### Parameters
 
-• **chainId**: [`FunctionParameters`](FunctionParameters.md) & `object`
+##### chainId
+
+[`FunctionParameters`](FunctionParameters.md) & `object`
 
 #### Returns
 
 `Promise`\<`number`\>
 
-### increment()
+***
+
+### increment
 
 > **increment**: (`chainId`) => `void`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/nonceManager.d.ts:17
 
 Increment a nonce.
 
 #### Parameters
 
-• **chainId**: [`FunctionParameters`](FunctionParameters.md)
+##### chainId
+
+[`FunctionParameters`](FunctionParameters.md)
 
 #### Returns
 
 `void`
 
-### reset()
+***
+
+### reset
 
 > **reset**: (`chainId`) => `void`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/nonceManager.d.ts:23
 
 Reset a nonce.
 
 #### Parameters
 
-• **chainId**: [`FunctionParameters`](FunctionParameters.md)
+##### chainId
+
+[`FunctionParameters`](FunctionParameters.md)
 
 #### Returns
 
 `void`
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/utils/nonceManager.d.ts:11

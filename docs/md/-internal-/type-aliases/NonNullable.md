@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: NonNullable\<T\>
 
-> **NonNullable**\<`T`\>: `T` & `object`
+> **NonNullable**\<`T`\> = `T` & `object`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1635
 
 Exclude null and undefined from T
 
 ## Type Parameters
 
-• **T**
+### T
 
-## Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1628
+`T`

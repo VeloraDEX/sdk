@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,19 +6,21 @@
 
 # Interface: JsonRpcResponseWithResult\<T\>
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:15
+
 ## Type Parameters
 
-• **T** = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+### T
+
+`T` = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
 
 ## Properties
 
 ### error?
 
-> `readonly` `optional` **error**: `undefined`
+> `readonly` `optional` **error?**: `undefined`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:18
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:18
 
 ***
 
@@ -26,19 +28,15 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\
 
 > `readonly` **id**: [`JsonRpcId`](../type-aliases/JsonRpcId.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:16
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:16
 
 ***
 
 ### jsonrpc
 
-> `readonly` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
+> `readonly` **jsonrpc**: [`JsonRpcIdentifier`](../type-aliases/JsonRpcIdentifier.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:17
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:17
 
 ***
 
@@ -46,6 +44,4 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\
 
 > `readonly` **result**: `T`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:19
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:19

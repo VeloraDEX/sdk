@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: AssetTypeVariant
 
-> **AssetTypeVariant**: *typeof* [`AssetType`](../variables/AssetType.md)\[keyof *typeof* [`AssetType`](../variables/AssetType.md)\]
+> **AssetTypeVariant** = *typeof* [`AssetType`](../variables/AssetType.md)\[keyof *typeof* [`AssetType`](../variables/AssetType.md)\]
 
-## Defined in
-
-[src/methods/nftOrders/helpers/types.ts:43](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L43)
+Defined in: [src/methods/nftOrders/helpers/types.ts:43](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/types.ts#L43)

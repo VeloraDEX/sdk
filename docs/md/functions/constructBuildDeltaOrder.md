@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,14 +8,14 @@
 
 > **constructBuildDeltaOrder**(`options`): [`BuildDeltaOrderFunctions`](../type-aliases/BuildDeltaOrderFunctions.md)
 
+Defined in: [src/methods/delta/buildDeltaOrder.ts:64](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L64)
+
 ## Parameters
 
-• **options**: [`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
+### options
+
+[`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
 
 ## Returns
 
 [`BuildDeltaOrderFunctions`](../type-aliases/BuildDeltaOrderFunctions.md)
-
-## Defined in
-
-[src/methods/delta/buildDeltaOrder.ts:53](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildDeltaOrder.ts#L53)

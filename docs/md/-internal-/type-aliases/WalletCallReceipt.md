@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,40 +6,76 @@
 
 # Type Alias: WalletCallReceipt\<quantity, status\>
 
-> **WalletCallReceipt**\<`quantity`, `status`\>: `object`
+> **WalletCallReceipt**\<`quantity`, `status`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:69
 
 ## Type Parameters
 
-• **quantity** = [`Hex`](Hex.md)
+### quantity
 
-• **status** = [`Hex`](Hex.md)
+`quantity` = [`Hex`](Hex.md)
 
-## Type declaration
+### status
+
+`status` = [`Hex`](Hex.md)
+
+## Properties
 
 ### blockHash
 
 > **blockHash**: [`Hex`](Hex.md)
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:76
+
+***
+
 ### blockNumber
 
 > **blockNumber**: `quantity`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:77
+
+***
 
 ### gasUsed
 
 > **gasUsed**: `quantity`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:78
+
+***
+
 ### logs
 
 > **logs**: `object`[]
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:70
+
+#### address
+
+> **address**: [`Hex`](Hex.md)
+
+#### data
+
+> **data**: [`Hex`](Hex.md)
+
+#### topics
+
+> **topics**: [`Hex`](Hex.md)[]
+
+***
 
 ### status
 
 > **status**: `status`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:75
+
+***
+
 ### transactionHash
 
 > **transactionHash**: [`Hex`](Hex.md)
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:69
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:79

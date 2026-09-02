@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,32 +6,28 @@
 
 # Interface: Common
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:322
+
 ## Properties
 
 ### baseChain?
 
-> `optional` **baseChain**: [`ValidChains`](../type-aliases/ValidChains.md)
+> `optional` **baseChain?**: [`ValidChains`](../type-aliases/ValidChains.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:324
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:324
 
 ***
 
 ### customChain
 
-> **customChain**: [`CustomChain`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/CustomChain.md)
+> **customChain**: [`CustomChain`](CustomChain.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:323
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:323
 
 ***
 
 ### hardfork?
 
-> `optional` **hardfork**: `"chainstart"` \| `"frontier"` \| `"homestead"` \| `"dao"` \| `"tangerineWhistle"` \| `"spuriousDragon"` \| `"byzantium"` \| `"constantinople"` \| `"petersburg"` \| `"istanbul"` \| `"muirGlacier"` \| `"berlin"` \| `"london"` \| `"altair"` \| `"arrowGlacier"` \| `"grayGlacier"` \| `"bellatrix"` \| `"merge"` \| `"capella"` \| `"shanghai"`
+> `optional` **hardfork?**: `"chainstart"` \| `"frontier"` \| `"homestead"` \| `"dao"` \| `"tangerineWhistle"` \| `"spuriousDragon"` \| `"byzantium"` \| `"constantinople"` \| `"petersburg"` \| `"istanbul"` \| `"muirGlacier"` \| `"berlin"` \| `"london"` \| `"altair"` \| `"arrowGlacier"` \| `"grayGlacier"` \| `"bellatrix"` \| `"merge"` \| `"capella"` \| `"shanghai"`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:325
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:325

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: GetProofParameters
 
-> **GetProofParameters**: `object` & `object` \| `object`
+> **GetProofParameters** = `object` & \{ `blockHash?`: `undefined`; `blockNumber?`: `bigint`; `blockTag?`: `undefined`; `requireCanonical?`: `undefined`; \} \| \{ `blockHash?`: `undefined`; `blockNumber?`: `undefined`; `blockTag?`: [`BlockTag`](BlockTag-2.md); `requireCanonical?`: `undefined`; \} \| \{ `blockHash`: [`Hash`](Hash.md); `blockNumber?`: `undefined`; `blockTag?`: `undefined`; `requireCanonical?`: `boolean`; \}
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getProof.d.ts:12
+
+## Type Declaration
 
 ### address
 
-> **address**: [`Address`](Address.md)
+> **address**: [`Address`](Address-1.md)
 
 Account address.
 
@@ -21,7 +23,3 @@ Account address.
 > **storageKeys**: [`Hash`](Hash.md)[]
 
 Array of storage-keys that should be proofed and included.
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getProof.d.ts:12

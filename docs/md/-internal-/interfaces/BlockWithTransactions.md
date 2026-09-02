@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / BlockWithTransactions
 
 # Interface: BlockWithTransactions
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:51
 
 ## Extends
 
@@ -16,27 +18,23 @@
 
 > **\_difficulty**: [`BigNumber`](../classes/BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:41
+
 #### Inherited from
 
 [`_Block`](Block.md).[`_difficulty`](Block.md#_difficulty)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:41
 
 ***
 
 ### baseFeePerGas?
 
-> `optional` **baseFeePerGas**: `null` \| [`BigNumber`](../classes/BigNumber.md)
+> `optional` **baseFeePerGas?**: [`BigNumber`](../classes/BigNumber.md) \| `null`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:46
 
 #### Inherited from
 
 [`_Block`](Block.md).[`baseFeePerGas`](Block.md#basefeepergas)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:46
 
 ***
 
@@ -44,13 +42,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **difficulty**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:40
+
 #### Inherited from
 
 [`_Block`](Block.md).[`difficulty`](Block.md#difficulty)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:40
 
 ***
 
@@ -58,13 +54,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **extraData**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:45
+
 #### Inherited from
 
 [`_Block`](Block.md).[`extraData`](Block.md#extradata)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:45
 
 ***
 
@@ -72,13 +66,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **gasLimit**: [`BigNumber`](../classes/BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:42
+
 #### Inherited from
 
 [`_Block`](Block.md).[`gasLimit`](Block.md#gaslimit)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:42
 
 ***
 
@@ -86,13 +78,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **gasUsed**: [`BigNumber`](../classes/BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:43
+
 #### Inherited from
 
 [`_Block`](Block.md).[`gasUsed`](Block.md#gasused)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:43
 
 ***
 
@@ -100,13 +90,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **hash**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:35
+
 #### Inherited from
 
 [`_Block`](Block.md).[`hash`](Block.md#hash)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:35
 
 ***
 
@@ -114,13 +102,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **miner**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:44
+
 #### Inherited from
 
 [`_Block`](Block.md).[`miner`](Block.md#miner)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:44
 
 ***
 
@@ -128,13 +114,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **nonce**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:39
+
 #### Inherited from
 
 [`_Block`](Block.md).[`nonce`](Block.md#nonce)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:39
 
 ***
 
@@ -142,13 +126,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **number**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:37
+
 #### Inherited from
 
 [`_Block`](Block.md).[`number`](Block.md#number)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:37
 
 ***
 
@@ -156,13 +138,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **parentHash**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:36
+
 #### Inherited from
 
 [`_Block`](Block.md).[`parentHash`](Block.md#parenthash)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:36
 
 ***
 
@@ -170,13 +150,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **timestamp**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:38
+
 #### Inherited from
 
 [`_Block`](Block.md).[`timestamp`](Block.md#timestamp)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:38
 
 ***
 
@@ -184,6 +162,4 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **transactions**: [`TransactionResponse`](TransactionResponse.md)[]
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:52
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:52

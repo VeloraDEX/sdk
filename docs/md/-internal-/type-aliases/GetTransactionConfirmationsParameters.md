@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,44 @@
 
 # Type Alias: GetTransactionConfirmationsParameters\<chain\>
 
-> **GetTransactionConfirmationsParameters**\<`chain`\>: `object` \| `object`
+> **GetTransactionConfirmationsParameters**\<`chain`\> = \{ `hash`: [`Hash`](Hash.md); `transactionReceipt?`: `undefined`; \} \| \{ `hash?`: `undefined`; `transactionReceipt`: [`FormattedTransactionReceipt`](FormattedTransactionReceipt.md)\<`chain`\>; \}
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getTransactionConfirmations.d.ts:9
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md)
+### chain
 
-## Defined in
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md)
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getTransactionConfirmations.d.ts:9
+## Union Members
+
+### Type Literal
+
+\{ `hash`: [`Hash`](Hash.md); `transactionReceipt?`: `undefined`; \}
+
+#### hash
+
+> **hash**: [`Hash`](Hash.md)
+
+The transaction hash.
+
+#### transactionReceipt?
+
+> `optional` **transactionReceipt?**: `undefined`
+
+***
+
+### Type Literal
+
+\{ `hash?`: `undefined`; `transactionReceipt`: [`FormattedTransactionReceipt`](FormattedTransactionReceipt.md)\<`chain`\>; \}
+
+#### hash?
+
+> `optional` **hash?**: `undefined`
+
+#### transactionReceipt
+
+> **transactionReceipt**: [`FormattedTransactionReceipt`](FormattedTransactionReceipt.md)\<`chain`\>
+
+The transaction receipt.

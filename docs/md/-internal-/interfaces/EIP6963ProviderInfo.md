@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: EIP6963ProviderInfo
 
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:6
+
 ## Properties
 
 ### icon
 
 > **icon**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:9
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:9
 
 ***
 
@@ -22,9 +22,7 @@ node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web
 
 > **name**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:8
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:8
 
 ***
 
@@ -32,9 +30,7 @@ node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web
 
 > **rdns**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:10
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:10
 
 ***
 
@@ -42,6 +38,4 @@ node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web
 
 > **uuid**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3@4.14.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:7
+Defined in: node\_modules/.pnpm/web3@4.14.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3/lib/commonjs/web3\_eip6963.d.ts:7

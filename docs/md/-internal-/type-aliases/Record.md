@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,18 @@
 
 # Type Alias: Record\<K, T\>
 
-> **Record**\<`K`, `T`\>: `{ [P in K]: T }`
+> **Record**\<`K`, `T`\> = `{ [P in K]: T }`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1613
 
 Construct a type with a set of properties K of type T
 
 ## Type Parameters
 
-• **K** *extends* keyof `any`
+### K
 
-• **T**
+`K` *extends* keyof `any`
 
-## Defined in
+### T
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1606
+`T`

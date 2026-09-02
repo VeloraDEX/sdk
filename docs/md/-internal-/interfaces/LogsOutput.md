@@ -1,0 +1,89 @@
+[**@velora-dex/sdk**](../../README.md)
+
+***
+
+[@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / LogsOutput
+
+# Interface: LogsOutput
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:79
+
+## Properties
+
+### address
+
+> `readonly` **address**: `string`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:87
+
+***
+
+### blockHash?
+
+> `readonly` `optional` **blockHash?**: `string`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:85
+
+***
+
+### blockNumber?
+
+> `readonly` `optional` **blockNumber?**: [`Numbers`](../type-aliases/Numbers.md)
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:86
+
+***
+
+### data
+
+> `readonly` **data**: `string`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:89
+
+***
+
+### id?
+
+> `readonly` `optional` **id?**: `string`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:80
+
+***
+
+### logIndex?
+
+> `readonly` `optional` **logIndex?**: [`Numbers`](../type-aliases/Numbers.md)
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:82
+
+***
+
+### removed
+
+> `readonly` **removed**: `boolean`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:81
+
+***
+
+### topics
+
+> `readonly` **topics**: `string`[]
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:88
+
+***
+
+### transactionHash?
+
+> `readonly` `optional` **transactionHash?**: `string`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:84
+
+***
+
+### transactionIndex?
+
+> `readonly` `optional` **transactionIndex?**: [`Numbers`](../type-aliases/Numbers.md)
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:83

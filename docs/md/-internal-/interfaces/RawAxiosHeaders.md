@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,6 +6,8 @@
 
 # Interface: RawAxiosHeaders
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:8
+
 ## Indexable
 
- \[`key`: `string`\]: [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+> \[`key`: `string`\]: [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,20 @@
 
 # Interface: LookupAddressEntry
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:384
+
 ## Properties
 
 ### address
 
 > **address**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:360
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:385
 
 ***
 
 ### family?
 
-> `optional` **family**: [`AddressFamily`](../type-aliases/AddressFamily.md)
+> `optional` **family?**: [`AddressFamily`](../type-aliases/AddressFamily.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:361
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:386

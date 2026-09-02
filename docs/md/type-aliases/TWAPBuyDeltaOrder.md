@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: TWAPBuyDeltaOrder
 
-> **TWAPBuyDeltaOrder**: [`TWAPDeltaOrderBase`](../-internal-/type-aliases/TWAPDeltaOrderBase.md) & `object`
+> **TWAPBuyDeltaOrder** = [`TWAPDeltaOrderBase`](../-internal-/type-aliases/TWAPDeltaOrderBase.md) & `object`
 
-## Type declaration
+Defined in: [src/methods/delta/helpers/types.ts:190](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L190)
+
+## Type Declaration
 
 ### maxSrcAmount
 
@@ -25,7 +27,3 @@ The maximum amount of src token willing to spend
 #### Description
 
 The total amount of dest token to buy across all slices
-
-## Defined in
-
-[src/methods/delta/helpers/types.ts:190](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L190)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,7 +8,9 @@
 
 > `const` **ContractMethod**: `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:46
+
+## Type Declaration
 
 ### buy
 
@@ -157,7 +159,3 @@
 ### swapOnZeroXv4
 
 > **swapOnZeroXv4**: [`swapOnZeroXv4`](../enumerations/ContractMethodV5.md#swaponzeroxv4)
-
-## Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:46

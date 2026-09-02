@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,48 +6,50 @@
 
 # Type Alias: TransactionRequestGeneric\<quantity, index\>
 
-> **TransactionRequestGeneric**\<`quantity`, `index`\>: [`TransactionRequestBase`](TransactionRequestBase.md)\<`quantity`, `index`\> & `object`
+> **TransactionRequestGeneric**\<`quantity`, `index`\> = [`TransactionRequestBase`](TransactionRequestBase.md)\<`quantity`, `index`\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:174
+
+## Type Declaration
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](AccessList.md)
+> `optional` **accessList?**: [`AccessList`](AccessList-2.md)
 
 ### blobs?
 
-> `optional` **blobs**: readonly [`Hex`](Hex.md)[] \| readonly [`ByteArray`](ByteArray.md)[]
+> `optional` **blobs?**: readonly [`Hex`](Hex.md)[] \| readonly [`ByteArray`](ByteArray.md)[]
 
 ### blobVersionedHashes?
 
-> `optional` **blobVersionedHashes**: readonly [`Hex`](Hex.md)[]
+> `optional` **blobVersionedHashes?**: readonly [`Hex`](Hex.md)[]
 
 ### gasPrice?
 
-> `optional` **gasPrice**: `quantity`
+> `optional` **gasPrice?**: `quantity`
 
 ### maxFeePerBlobGas?
 
-> `optional` **maxFeePerBlobGas**: `quantity`
+> `optional` **maxFeePerBlobGas?**: `quantity`
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: `quantity`
+> `optional` **maxFeePerGas?**: `quantity`
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: `quantity`
+> `optional` **maxPriorityFeePerGas?**: `quantity`
 
 ### type?
 
-> `optional` **type**: `string`
+> `optional` **type?**: `string`
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-## Defined in
+### index
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:170
+`index` = `number`

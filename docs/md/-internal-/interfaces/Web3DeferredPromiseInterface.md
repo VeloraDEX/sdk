@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,17 @@
 
 # Interface: Web3DeferredPromiseInterface\<T\>
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:1
+
 ## Extends
 
 - `Promise`\<`T`\>
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Properties
 
@@ -20,13 +24,11 @@
 
 > `readonly` **\[toStringTag\]**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:176
+
 #### Inherited from
 
 `Promise.[toStringTag]`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts:176
 
 ***
 
@@ -34,25 +36,29 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.sym
 
 > **state**: `"pending"` \| `"fulfilled"` \| `"rejected"`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:2
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:2
 
 ## Methods
 
 ### catch()
 
-> **catch**\<`TResult`\>(`onrejected`?): `Promise`\<`T` \| `TResult`\>
+> **catch**\<`TResult`\>(`onrejected?`): `Promise`\<`T` \| `TResult`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1564
 
 Attaches a callback for only the rejection of the Promise.
 
 #### Type Parameters
 
-• **TResult** = `never`
+##### TResult
+
+`TResult` = `never`
 
 #### Parameters
 
-• **onrejected?**: `null` \| (`reason`) => `TResult` \| [`PromiseLike`](PromiseLike.md)\<`TResult`\>
+##### onrejected?
+
+((`reason`) => `TResult` \| [`PromiseLike`](PromiseLike.md)\<`TResult`\>) \| `null`
 
 The callback to execute when the Promise is rejected.
 
@@ -66,22 +72,22 @@ A Promise for the completion of the callback.
 
 `Promise.catch`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1557
-
 ***
 
 ### finally()
 
-> **finally**(`onfinally`?): `Promise`\<`T`\>
+> **finally**(`onfinally?`): `Promise`\<`T`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.promise.d.ts:29
 
 Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
 resolved value cannot be modified from the callback.
 
 #### Parameters
 
-• **onfinally?**: `null` \| () => `void`
+##### onfinally?
+
+(() => `void`) \| `null`
 
 The callback to execute when the Promise is settled (fulfilled or rejected).
 
@@ -95,27 +101,23 @@ A Promise for the completion of the callback.
 
 `Promise.finally`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.promise.d.ts:29
-
 ***
 
 ### reject()
 
-> **reject**(`reason`?): `void`
+> **reject**(`reason?`): `void`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:4
 
 #### Parameters
 
-• **reason?**: `unknown`
+##### reason?
+
+`unknown`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:4
 
 ***
 
@@ -123,17 +125,17 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > **resolve**(`value`): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:3
+
 #### Parameters
 
-• **value**: `T` \| [`PromiseLike`](PromiseLike.md)\<`T`\>
+##### value
+
+`T` \| [`PromiseLike`](PromiseLike.md)\<`T`\>
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:3
 
 ***
 
@@ -141,35 +143,43 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > **startTimer**(): `void`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:5
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_deferred\_promise\_type.d.ts:5
 
 ***
 
 ### then()
 
-> **then**\<`TResult1`, `TResult2`\>(`onfulfilled`?, `onrejected`?): `Promise`\<`TResult1` \| `TResult2`\>
+> **then**\<`TResult1`, `TResult2`\>(`onfulfilled?`, `onrejected?`): `Promise`\<`TResult1` \| `TResult2`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1557
 
 Attaches callbacks for the resolution and/or rejection of the Promise.
 
 #### Type Parameters
 
-• **TResult1** = `T`
+##### TResult1
 
-• **TResult2** = `never`
+`TResult1` = `T`
+
+##### TResult2
+
+`TResult2` = `never`
 
 #### Parameters
 
-• **onfulfilled?**: `null` \| (`value`) => `TResult1` \| [`PromiseLike`](PromiseLike.md)\<`TResult1`\>
+##### onfulfilled?
+
+((`value`) => `TResult1` \| [`PromiseLike`](PromiseLike.md)\<`TResult1`\>) \| `null`
 
 The callback to execute when the Promise is resolved.
 
-• **onrejected?**: `null` \| (`reason`) => `TResult2` \| [`PromiseLike`](PromiseLike.md)\<`TResult2`\>
+##### onrejected?
+
+((`reason`) => `TResult2` \| [`PromiseLike`](PromiseLike.md)\<`TResult2`\>) \| `null`
 
 The callback to execute when the Promise is rejected.
 
@@ -182,7 +192,3 @@ A Promise for the completion of which ever callback is executed.
 #### Inherited from
 
 `Promise.then`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1550

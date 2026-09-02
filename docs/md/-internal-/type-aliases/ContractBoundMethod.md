@@ -1,27 +1,31 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ContractBoundMethod
 
-# Type Alias: ContractBoundMethod()\<Abi, Method\>
+# Type Alias: ContractBoundMethod\<Abi, Method\>
 
-> **ContractBoundMethod**\<`Abi`, `Method`\>: (...`args`) => `Method`\[`"Abi"`\]\[`"stateMutability"`\] *extends* `"payable"` \| `"pure"` ? [`PayableMethodObject`](../interfaces/PayableMethodObject.md)\<`Method`\[`"Inputs"`\], `Method`\[`"Outputs"`\]\> : [`NonPayableMethodObject`](../interfaces/NonPayableMethodObject.md)\<`Method`\[`"Inputs"`\], `Method`\[`"Outputs"`\]\>
+> **ContractBoundMethod**\<`Abi`, `Method`\> = (...`args`) => `Method`\[`"Abi"`\]\[`"stateMutability"`\] *extends* `"payable"` \| `"pure"` ? [`PayableMethodObject`](../interfaces/PayableMethodObject.md)\<`Method`\[`"Inputs"`\], `Method`\[`"Outputs"`\]\> : [`NonPayableMethodObject`](../interfaces/NonPayableMethodObject.md)\<`Method`\[`"Inputs"`\], `Method`\[`"Outputs"`\]\>
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract.d.ts:7
 
 ## Type Parameters
 
-• **Abi** *extends* [`AbiFunctionFragment`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AbiFunctionFragment.md)
+### Abi
 
-• **Method** *extends* [`ContractMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\> = [`ContractMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/ContractMethod.md)\<`Abi`\>
+`Abi` *extends* [`AbiFunctionFragment`](AbiFunctionFragment.md)
+
+### Method
+
+`Method` *extends* [`ContractMethod`](ContractMethod.md)\<`Abi`\> = [`ContractMethod`](ContractMethod.md)\<`Abi`\>
 
 ## Parameters
 
-• ...**args**: `Method`\[`"Inputs"`\] *extends* `undefined` \| `unknown` ? `any`[] : `Method`\[`"Inputs"`\]
+### args
+
+...`Method`\[`"Inputs"`\] *extends* `undefined` \| `unknown` ? `any`[] : `Method`\[`"Inputs"`\]
 
 ## Returns
 
 `Method`\[`"Abi"`\]\[`"stateMutability"`\] *extends* `"payable"` \| `"pure"` ? [`PayableMethodObject`](../interfaces/PayableMethodObject.md)\<`Method`\[`"Inputs"`\], `Method`\[`"Outputs"`\]\> : [`NonPayableMethodObject`](../interfaces/NonPayableMethodObject.md)\<`Method`\[`"Inputs"`\], `Method`\[`"Outputs"`\]\>
-
-## Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract.d.ts:7

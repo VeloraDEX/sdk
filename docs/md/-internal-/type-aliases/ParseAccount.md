@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: ParseAccount\<accountOrAddress\>
 
-> **ParseAccount**\<`accountOrAddress`\>: `accountOrAddress` *extends* [`Address`](Address.md) ? [`Prettify`](Prettify.md)\<[`JsonRpcAccount`](JsonRpcAccount.md)\<`accountOrAddress`\>\> : `accountOrAddress`
+> **ParseAccount**\<`accountOrAddress`\> = `accountOrAddress` *extends* [`Address`](Address-1.md) ? [`Prettify`](Prettify-1.md)\<[`JsonRpcAccount`](JsonRpcAccount.md)\<`accountOrAddress`\>\> : `accountOrAddress`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/account.d.ts:8
 
 ## Type Parameters
 
-• **accountOrAddress** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `null` \| `undefined` = [`Account`](Account.md) \| [`Address`](Address.md) \| `null` \| `undefined`
+### accountOrAddress
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/account.d.ts:8
+`accountOrAddress` *extends* [`Account`](Account.md) \| [`Address`](Address-1.md) \| `null` \| `undefined` = [`Account`](Account.md) \| [`Address`](Address-1.md) \| `null` \| `undefined`

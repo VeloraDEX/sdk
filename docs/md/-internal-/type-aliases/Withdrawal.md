@@ -1,31 +1,55 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Withdrawal
 
-# Type Alias: Withdrawal
+# Type Alias: Withdrawal\<bigintType, numberType\>
 
-> **Withdrawal**: `object`
+> **Withdrawal**\<`bigintType`, `numberType`\> = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/Withdrawal.d.ts:4
+
+A Withdrawal as defined in the [Execution API specification](https://github.com/ethereum/execution-apis/blob/main/src/schemas/withdrawal.yaml).
+
+## Type Parameters
+
+### bigintType
+
+`bigintType` = `bigint`
+
+### numberType
+
+`numberType` = `number`
+
+## Properties
 
 ### address
 
-> **address**: [`Hex`](Hex.md)
+> **address**: [`Hex`](Hex-1.md)
+
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/Withdrawal.d.ts:5
+
+***
 
 ### amount
 
-> **amount**: [`Hex`](Hex.md)
+> **amount**: `bigintType`
+
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/Withdrawal.d.ts:6
+
+***
 
 ### index
 
-> **index**: [`Hex`](Hex.md)
+> **index**: `numberType`
+
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/Withdrawal.d.ts:7
+
+***
 
 ### validatorIndex
 
-> **validatorIndex**: [`Hex`](Hex.md)
+> **validatorIndex**: `numberType`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/withdrawal.d.ts:2
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/Withdrawal.d.ts:8

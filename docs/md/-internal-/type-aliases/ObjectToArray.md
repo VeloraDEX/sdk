@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: ObjectToArray\<T\>
 
-> **ObjectToArray**\<`T`\>: `T` *extends* [`...(infer R)`, infer A] ? [`Record`](Record.md)\<`R`\[`"length"`\], `A`\> & [`ObjectToArray`](ObjectToArray.md)\<`R`\> : `T`
+> **ObjectToArray**\<`T`\> = `T` *extends* \[`...(infer R)`, infer A\] ? [`Record`](Record.md)\<`R`\[`"length"`\], `A`\> & `ObjectToArray`\<`R`\> : `T`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:115
 
 ## Type Parameters
 
-• **T** *extends* `unknown`[]
+### T
 
-## Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:115
+`T` *extends* `unknown`[]

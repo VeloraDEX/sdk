@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,24 @@
 
 # Type Alias: FormattedTransaction\<chain, blockTag, _FormatterReturnType, _ExcludedPendingDependencies\>
 
-> **FormattedTransaction**\<`chain`, `blockTag`, `_FormatterReturnType`, `_ExcludedPendingDependencies`\>: [`UnionLooseOmit`](UnionLooseOmit.md)\<`_FormatterReturnType`, [`TransactionPendingDependencies`](TransactionPendingDependencies.md)\> & `{ [_K in _ExcludedPendingDependencies]: never }` & [`Pick`](Pick.md)\<[`Transaction`](Transaction.md)\<`bigint`, `number`, `blockTag` *extends* `"pending"` ? `true` : `false`\>, [`TransactionPendingDependencies`](TransactionPendingDependencies.md)\>
+> **FormattedTransaction**\<`chain`, `blockTag`, `_FormatterReturnType`, `_ExcludedPendingDependencies`\> = [`UnionLooseOmit`](UnionLooseOmit.md)\<`_FormatterReturnType`, [`TransactionPendingDependencies`](TransactionPendingDependencies.md)\> & `{ [_K in _ExcludedPendingDependencies]: never }` & [`Pick`](Pick.md)\<[`Transaction`](Transaction.md)\<`bigint`, `number`, `blockTag` *extends* `"pending"` ? `true` : `false`\>, [`TransactionPendingDependencies`](TransactionPendingDependencies.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/formatters/transaction.d.ts:9
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+### chain
 
-• **blockTag** *extends* [`BlockTag`](BlockTag.md) = [`BlockTag`](BlockTag.md)
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
 
-• **_FormatterReturnType** = [`ExtractChainFormatterReturnType`](ExtractChainFormatterReturnType.md)\<`chain`, `"transaction"`, [`Transaction`](Transaction.md)\>
+### blockTag
 
-• **_ExcludedPendingDependencies** *extends* `string` = [`TransactionPendingDependencies`](TransactionPendingDependencies.md) & [`ExtractChainFormatterExclude`](ExtractChainFormatterExclude.md)\<`chain`, `"transaction"`\>
+`blockTag` *extends* [`BlockTag`](BlockTag-2.md) = [`BlockTag`](BlockTag-2.md)
 
-## Defined in
+### _FormatterReturnType
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/utils/formatters/transaction.d.ts:9
+`_FormatterReturnType` = [`ExtractChainFormatterReturnType`](ExtractChainFormatterReturnType.md)\<`chain`, `"transaction"`, [`Transaction`](Transaction.md)\>
+
+### _ExcludedPendingDependencies
+
+`_ExcludedPendingDependencies` *extends* `string` = [`TransactionPendingDependencies`](TransactionPendingDependencies.md) & [`ExtractChainFormatterExclude`](ExtractChainFormatterExclude.md)\<`chain`, `"transaction"`\>

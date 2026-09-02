@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: EstimateFeesPerGasParameters\<chain, chainOverride, type\>
 
-> **EstimateFeesPerGasParameters**\<`chain`, `chainOverride`, `type`\>: `object` & [`GetChainParameter`](GetChainParameter.md)\<`chain`, `chainOverride`\>
+> **EstimateFeesPerGasParameters**\<`chain`, `chainOverride`, `type`\> = `object` & [`GetChainParameter`](GetChainParameter.md)\<`chain`, `chainOverride`\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/estimateFeesPerGas.d.ts:12
+
+## Type Declaration
 
 ### type?
 
-> `optional` **type**: `type` \| [`FeeValuesType`](FeeValuesType.md)
+> `optional` **type?**: `type` \| [`FeeValuesType`](FeeValuesType.md)
 
 The type of fee values to return.
 
@@ -27,12 +29,14 @@ The type of fee values to return.
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+### chain
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-• **type** *extends* [`FeeValuesType`](FeeValuesType.md) = [`FeeValuesType`](FeeValuesType.md)
+### chainOverride
 
-## Defined in
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/estimateFeesPerGas.d.ts:12
+### type
+
+`type` *extends* [`FeeValuesType`](FeeValuesType.md) = [`FeeValuesType`](FeeValuesType.md)

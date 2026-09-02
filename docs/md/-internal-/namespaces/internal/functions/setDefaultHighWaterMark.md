@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -8,13 +8,19 @@
 
 > **setDefaultHighWaterMark**(`objectMode`, `value`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1407
+
 Sets the default highWaterMark used by streams.
 
 ## Parameters
 
-• **objectMode**: `boolean`
+### objectMode
 
-• **value**: `number`
+`boolean`
+
+### value
+
+`number`
 
 highWaterMark value
 
@@ -25,7 +31,3 @@ highWaterMark value
 ## Since
 
 v19.9.0
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1407

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: BlockTag
 
-> **BlockTag**: `string` \| `number` \| `"latest"` \| `"pending"` \| `"earliest"` \| `"genesis"`
+> **BlockTag** = `string` \| `number`
 
-## Defined in
-
-[src/types.ts:84](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L84)
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:33

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: DeriveChain\<chain, chainOverride\>
 
-> **DeriveChain**\<`chain`, `chainOverride`\>: `chainOverride` *extends* [`Chain`](Chain.md) ? `chainOverride` : `chain`
+> **DeriveChain**\<`chain`, `chainOverride`\> = `chainOverride` *extends* [`Chain`](Chain.md) ? `chainOverride` : `chain`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:166
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined`
+### chain
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined`
 
-## Defined in
+### chainOverride
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:139
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined`

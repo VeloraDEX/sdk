@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: NumberAsString
 
-> **NumberAsString**: `string`
+> **NumberAsString** = `string`
 
-## Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/types.d.ts:3
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/types.d.ts:3

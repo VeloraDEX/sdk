@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: UserOperationRequest\<entryPointVersion, uint256, uint32\>
 
-> **UserOperationRequest**\<`entryPointVersion`, `uint256`, `uint32`\>: [`OneOf`](OneOf.md)\<`entryPointVersion` *extends* `"0.8"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.8"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.8"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never` \| `entryPointVersion` *extends* `"0.7"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.7"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.7"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never` \| `entryPointVersion` *extends* `"0.6"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.6"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.6"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never`\>
+> **UserOperationRequest**\<`entryPointVersion`, `uint256`, `uint32`\> = [`OneOf`](OneOf.md)\<`entryPointVersion` *extends* `"0.9"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.9"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.9"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never` \| `entryPointVersion` *extends* `"0.8"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.8"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.8"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never` \| `entryPointVersion` *extends* `"0.7"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.7"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.7"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never` \| `entryPointVersion` *extends* `"0.6"` ? [`UnionPartialBy`](UnionPartialBy.md)\<[`UserOperation`](UserOperation.md)\<`"0.6"`, `uint256`, `uint32`\>, keyof [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`"0.6"`\> \| `"callData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"signature"`\> : `never`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/account-abstraction/types/userOperation.d.ts:189
 
 ## Type Parameters
 
-• **entryPointVersion** *extends* [`EntryPointVersion`](EntryPointVersion.md) = [`EntryPointVersion`](EntryPointVersion.md)
+### entryPointVersion
 
-• **uint256** = `bigint`
+`entryPointVersion` *extends* [`EntryPointVersion`](EntryPointVersion.md) = [`EntryPointVersion`](EntryPointVersion.md)
 
-• **uint32** = `number`
+### uint256
 
-## Defined in
+`uint256` = `bigint`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/account-abstraction/types/userOperation.d.ts:148
+### uint32
+
+`uint32` = `number`

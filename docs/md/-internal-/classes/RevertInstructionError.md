@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / RevertInstructionError
 
 # Class: RevertInstructionError
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:16
 
 Base class for Web3 errors.
 
@@ -14,41 +16,41 @@ Base class for Web3 errors.
 
 ## Constructors
 
-### new RevertInstructionError()
+### Constructor
 
-> **new RevertInstructionError**(`reason`, `signature`): [`RevertInstructionError`](RevertInstructionError.md)
+> **new RevertInstructionError**(`reason`, `signature`): `RevertInstructionError`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:20
 
 #### Parameters
 
-• **reason**: `string`
+##### reason
 
-• **signature**: `string`
+`string`
+
+##### signature
+
+`string`
 
 #### Returns
 
-[`RevertInstructionError`](RevertInstructionError.md)
+`RevertInstructionError`
 
 #### Overrides
 
-[`BaseWeb3Error`](BaseWeb3Error.md).[`constructor`](BaseWeb3Error.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:20
+[`BaseWeb3Error`](BaseWeb3Error.md).[`constructor`](BaseWeb3Error.md#constructor)
 
 ## Properties
 
 ### cause
 
-> **cause**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **cause**: `Error` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:9
 
 #### Inherited from
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`cause`](BaseWeb3Error.md#cause)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:9
 
 ***
 
@@ -56,13 +58,11 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **code**: `number`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:19
+
 #### Overrides
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`code`](BaseWeb3Error.md#code)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:19
 
 ***
 
@@ -70,13 +70,11 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/err
 
 > **message**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Inherited from
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`message`](BaseWeb3Error.md#message)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -84,13 +82,11 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > `readonly` **name**: `string`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
+
 #### Inherited from
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`name`](BaseWeb3Error.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
 
 ***
 
@@ -98,9 +94,7 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **reason**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:17
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:17
 
 ***
 
@@ -108,37 +102,39 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/err
 
 > **signature**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:18
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:18
 
 ***
 
 ### stack
 
-> **stack**: `undefined` \| `string`
+> **stack**: `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
 
 #### Inherited from
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`stack`](BaseWeb3Error.md#stack)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
-
 ***
 
-### prepareStackTrace()?
+### prepareStackTrace?
 
-> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
+> `static` `optional` **prepareStackTrace?**: (`err`, `stackTraces`) => `any`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
 
 Optional override for formatting stack traces
 
 #### Parameters
 
-• **err**: [`Error`](../interfaces/Error.md)
+##### err
 
-• **stackTraces**: [`CallSite`](../interfaces/CallSite.md)[]
+`Error`
+
+##### stackTraces
+
+[`CallSite`](../interfaces/CallSite.md)[]
 
 #### Returns
 
@@ -152,23 +148,17 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`prepareStackTrace`](BaseWeb3Error.md#preparestacktrace)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
-
 ***
 
 ### stackTraceLimit
 
 > `static` **stackTraceLimit**: `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
+
 #### Inherited from
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`stackTraceLimit`](BaseWeb3Error.md#stacktracelimit)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
 
 ## Accessors
 
@@ -176,7 +166,9 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:14
 
 #### Get Signature
 
-> **get** **innerError**(): `undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+> **get** **innerError**(): `Error` \| `Error`[] \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
 
 ##### Deprecated
 
@@ -184,11 +176,13 @@ Use the `cause` property instead.
 
 ##### Returns
 
-`undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+`Error` \| `Error`[] \| `undefined`
 
 #### Set Signature
 
 > **set** **innerError**(`cause`): `void`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:17
 
 ##### Deprecated
 
@@ -196,7 +190,9 @@ Use the `cause` property instead.
 
 ##### Parameters
 
-• **cause**: `undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+###### cause
+
+`Error` \| `Error`[] \| `undefined`
 
 ##### Returns
 
@@ -204,11 +200,7 @@ Use the `cause` property instead.
 
 #### Inherited from
 
-[`BaseWeb3Error`](BaseWeb3Error.md).[`innerError`](BaseWeb3Error.md#innererror)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
+`BaseWeb3Error.innerError`
 
 ## Methods
 
@@ -216,13 +208,15 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **toJSON**(): `object`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:21
+
 #### Returns
 
 `object`
 
 ##### cause
 
-> **cause**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **cause**: `Error` \| `undefined`
 
 ##### code
 
@@ -230,7 +224,7 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 ##### innerError
 
-> **innerError**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **innerError**: `Error` \| `undefined`
 
 ##### message
 
@@ -252,23 +246,25 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`toJSON`](BaseWeb3Error.md#tojson)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:21
-
 ***
 
 ### captureStackTrace()
 
-> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
 
 Create .stack property on a target object
 
 #### Parameters
 
-• **targetObject**: `object`
+##### targetObject
 
-• **constructorOpt?**: `Function`
+`object`
+
+##### constructorOpt?
+
+`Function`
 
 #### Returns
 
@@ -278,21 +274,23 @@ Create .stack property on a target object
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`captureStackTrace`](BaseWeb3Error.md#capturestacktrace)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
-
 ***
 
 ### convertToString()
 
-> `static` **convertToString**(`value`, `unquotValue`?): `string`
+> `static` **convertToString**(`value`, `unquotValue?`): `string`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19
 
 #### Parameters
 
-• **value**: `unknown`
+##### value
 
-• **unquotValue?**: `boolean`
+`unknown`
+
+##### unquotValue?
+
+`boolean`
 
 #### Returns
 
@@ -301,7 +299,3 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:13
 #### Inherited from
 
 [`BaseWeb3Error`](BaseWeb3Error.md).[`convertToString`](BaseWeb3Error.md#converttostring)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19

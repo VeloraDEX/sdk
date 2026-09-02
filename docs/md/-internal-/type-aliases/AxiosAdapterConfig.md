@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: AxiosAdapterConfig
 
-> **AxiosAdapterConfig**: [`AxiosAdapter`](../interfaces/AxiosAdapter.md) \| [`AxiosAdapterName`](AxiosAdapterName.md)
+> **AxiosAdapterConfig** = [`AxiosAdapter`](../interfaces/AxiosAdapter.md) \| [`AxiosAdapterName`](AxiosAdapterName.md)
 
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:355
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:380

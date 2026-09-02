@@ -1,27 +1,25 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
-[@velora-dex/sdk](../../../../globals.md) / [\<internal\>](../../../README.md) / [EventEmitter](../README.md) / EventEmitterBuiltInEventMap
+[@velora-dex/sdk](../../../../globals.md) / [\<internal\>](../../../README.md) / [EventEmitter](../README-1.md) / EventEmitterBuiltInEventMap
 
 # Interface: EventEmitterBuiltInEventMap
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:642
 
 ## Properties
 
 ### newListener
 
-> **newListener**: [`string` \| `symbol`, `Function`]
+> **newListener**: \[`string` \| `symbol`, `Function`\]
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:643
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:643
 
 ***
 
 ### removeListener
 
-> **removeListener**: [`string` \| `symbol`, `Function`]
+> **removeListener**: \[`string` \| `symbol`, `Function`\]
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:644
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:644

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: JsonRpcSubscriptionResult
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:40
+
 ## Properties
 
 ### data?
 
-> `readonly` `optional` **data**: `undefined`
+> `readonly` `optional` **data?**: `undefined`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:46
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:46
 
 ***
 
@@ -22,9 +22,7 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\
 
 > `readonly` **id**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:41
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:41
 
 ***
 
@@ -32,9 +30,7 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\
 
 > `readonly` **jsonrpc**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:42
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:42
 
 ***
 
@@ -42,9 +38,7 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\
 
 > `readonly` **method**: `never`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:44
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:44
 
 ***
 
@@ -52,9 +46,7 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\
 
 > `readonly` **params**: `never`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:45
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:45
 
 ***
 
@@ -62,6 +54,4 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\
 
 > `readonly` **result**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:43
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:43

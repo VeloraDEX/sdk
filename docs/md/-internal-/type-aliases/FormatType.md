@@ -1,28 +1,21 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / FormatType
 
-# Type Alias: FormatType
+# Type Alias: FormatType\<T, F\>
 
-> **FormatType**: `"sighash"` \| `"minimal"` \| `"full"` \| `"json"`
+> **FormatType**\<`T`, `F`\> = `number` *extends* [`Extract`](Extract.md)\<`T`, [`Numbers`](Numbers.md)\> ? [`NumberTypes`](NumberTypes.md)\[`F`\[`"number"`\]\] \| [`Exclude`](Exclude.md)\<`T`, [`Numbers`](Numbers.md)\> : `Uint8Array` *extends* [`Extract`](Extract.md)\<`T`, [`Bytes`](Bytes-1.md)\> ? [`ByteTypes`](ByteTypes.md)\[`F`\[`"bytes"`\]\] \| [`Exclude`](Exclude.md)\<`T`, [`Bytes`](Bytes-1.md)\> : `T` *extends* `object` \| `undefined` ? `{ [P in keyof T]: FormatType<T[P], F> }` : `T`
 
-The format to serialize the output as.
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:39
 
- **``"sighash"``** - the bare formatting, used to compute the selector
- or topic hash; this format cannot be reversed (as it discards ``indexed``)
- so cannot by used to export an [[Interface]].
+## Type Parameters
 
- **``"minimal"``** - Human-Readable ABI with minimal spacing and without
- names, so it is compact, but will result in Result objects that cannot
- be accessed by name.
+### T
 
- **``"full"``** - Full Human-Readable ABI, with readable spacing and names
- intact; this is generally the recommended format.
+`T`
 
- **``"json"``** - The [JSON ABI format](link-solc-jsonabi).
+### F
 
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:94
+`F` *extends* [`DataFormat`](DataFormat.md)

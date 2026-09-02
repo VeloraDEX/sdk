@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,24 +6,34 @@
 
 # Interface: SerializerVisitor()
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:322
+
 > **SerializerVisitor**(`this`, `value`, `key`, `path`, `helpers`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:323
 
 ## Parameters
 
-• **this**: [`GenericFormData`](GenericFormData.md)
+### this
 
-• **value**: `any`
+[`GenericFormData`](GenericFormData.md)
 
-• **key**: `string` \| `number`
+### value
 
-• **path**: `null` \| (`string` \| `number`)[]
+`any`
 
-• **helpers**: [`FormDataVisitorHelpers`](FormDataVisitorHelpers.md)
+### key
+
+`string` \| `number`
+
+### path
+
+(`string` \| `number`)[] \| `null`
+
+### helpers
+
+[`FormDataVisitorHelpers`](FormDataVisitorHelpers.md)
 
 ## Returns
 
 `boolean`
-
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:300

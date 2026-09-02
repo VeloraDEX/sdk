@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,121 +6,52 @@
 
 # Class: AbiCoder
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/abi-coder.d.ts:20
+
+The **AbiCoder** is a low-level class responsible for encoding JavaScript
+ values into binary data and decoding binary data into JavaScript values.
+
 ## Constructors
 
-### new AbiCoder()
+### Constructor
 
-> **new AbiCoder**(`coerceFunc`?): [`AbiCoder`](AbiCoder.md)
-
-#### Parameters
-
-• **coerceFunc?**: [`CoerceFunc`](../type-aliases/CoerceFunc.md)
+> **new AbiCoder**(): `AbiCoder`
 
 #### Returns
 
-[`AbiCoder`](AbiCoder.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:7
-
-## Properties
-
-### coerceFunc
-
-> `readonly` **coerceFunc**: [`CoerceFunc`](../type-aliases/CoerceFunc.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:6
+`AbiCoder`
 
 ## Methods
 
-### \_getCoder()
-
-> **\_getCoder**(`param`): [`Coder`](Coder.md)
-
-#### Parameters
-
-• **param**: [`ParamType`](ParamType.md)
-
-#### Returns
-
-[`Coder`](Coder.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:8
-
-***
-
-### \_getReader()
-
-> **\_getReader**(`data`, `allowLoose`?): [`Reader`](Reader.md)
-
-#### Parameters
-
-• **data**: `Uint8Array`
-
-• **allowLoose?**: `boolean`
-
-#### Returns
-
-[`Reader`](Reader.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:10
-
-***
-
-### \_getWordSize()
-
-> **\_getWordSize**(): `number`
-
-#### Returns
-
-`number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:9
-
-***
-
-### \_getWriter()
-
-> **\_getWriter**(): [`Writer`](Writer.md)
-
-#### Returns
-
-[`Writer`](Writer.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:11
-
-***
-
 ### decode()
 
-> **decode**(`types`, `data`, `loose`?): [`Result`](../interfaces/Result.md)
+> **decode**(`types`, `data`, `loose?`): [`Result`](Result.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/abi-coder.d.ts:42
+
+Decode the ABI %%data%% as the %%types%% into values.
+
+ If %%loose%% decoding is enabled, then strict padding is
+ not enforced. Some older versions of Solidity incorrectly
+ padded event data emitted from ``external`` functions.
 
 #### Parameters
 
-• **types**: readonly (`string` \| [`ParamType`](ParamType.md))[]
+##### types
 
-• **data**: [`BytesLike`](../type-aliases/BytesLike.md)
+readonly (`string` \| [`ParamType`](ParamType.md))[]
 
-• **loose?**: `boolean`
+##### data
+
+[`BytesLike`](../type-aliases/BytesLike.md)
+
+##### loose?
+
+`boolean`
 
 #### Returns
 
-[`Result`](../interfaces/Result.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:14
+[`Result`](Result.md)
 
 ***
 
@@ -128,34 +59,119 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > **encode**(`types`, `values`): `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/abi-coder.d.ts:34
+
+Encode the %%values%% as the %%types%% into ABI data.
+
 #### Parameters
 
-• **types**: readonly (`string` \| [`ParamType`](ParamType.md))[]
+##### types
 
-• **values**: readonly `any`[]
+readonly (`string` \| [`ParamType`](ParamType.md))[]
+
+##### values
+
+readonly `any`[]
 
 #### Returns
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:13
+DataHexstring
 
 ***
 
 ### getDefaultValue()
 
-> **getDefaultValue**(`types`): [`Result`](../interfaces/Result.md)
+> **getDefaultValue**(`types`): [`Result`](Result.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/abi-coder.d.ts:28
+
+Get the default values for the given %%types%%.
+
+ For example, a ``uint`` is by default ``0`` and ``bool``
+ is by default ``false``.
 
 #### Parameters
 
-• **types**: readonly (`string` \| [`ParamType`](ParamType.md))[]
+##### types
+
+readonly (`string` \| [`ParamType`](ParamType.md))[]
 
 #### Returns
 
-[`Result`](../interfaces/Result.md)
+[`Result`](Result.md)
 
-#### Defined in
+***
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:12
+### \_setDefaultMaxInflation()
+
+> `static` **\_setDefaultMaxInflation**(`value`): `void`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/abi-coder.d.ts:43
+
+#### Parameters
+
+##### value
+
+`number`
+
+#### Returns
+
+`void`
+
+***
+
+### defaultAbiCoder()
+
+> `static` **defaultAbiCoder**(): `AbiCoder`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/abi-coder.d.ts:49
+
+Returns the shared singleton instance of a default [[AbiCoder]].
+
+ On the first call, the instance is created internally.
+
+#### Returns
+
+`AbiCoder`
+
+***
+
+### getBuiltinCallException()
+
+> `static` **getBuiltinCallException**(`action`, `tx`, `data`): [`CallExceptionError`](../interfaces/CallExceptionError.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/abi-coder.d.ts:55
+
+Returns an ethers-compatible [[CallExceptionError]] Error for the given
+ result %%data%% for the [[CallExceptionAction]] %%action%% against
+ the Transaction %%tx%%.
+
+#### Parameters
+
+##### action
+
+[`CallExceptionAction`](../type-aliases/CallExceptionAction.md)
+
+##### tx
+
+###### data?
+
+`string`
+
+###### from?
+
+`string` \| `null`
+
+###### to?
+
+`string` \| `null`
+
+##### data
+
+[`BytesLike`](../type-aliases/BytesLike.md) \| `null`
+
+#### Returns
+
+[`CallExceptionError`](../interfaces/CallExceptionError.md)

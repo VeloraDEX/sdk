@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,21 @@
 
 # Class: Web3PromiEvent\<ResolveType, EventMap\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:3
+
 ## Extends
 
 - [`Web3EventEmitter`](Web3EventEmitter.md)\<`EventMap`\>
 
 ## Type Parameters
 
-• **ResolveType**
+### ResolveType
 
-• **EventMap** *extends* [`Web3EventMap`](../type-aliases/Web3EventMap.md)
+`ResolveType`
+
+### EventMap
+
+`EventMap` *extends* [`Web3EventMap`](../type-aliases/Web3EventMap.md)
 
 ## Implements
 
@@ -22,25 +28,25 @@
 
 ## Constructors
 
-### new Web3PromiEvent()
+### Constructor
 
-> **new Web3PromiEvent**\<`ResolveType`, `EventMap`\>(`executor`): [`Web3PromiEvent`](Web3PromiEvent.md)\<`ResolveType`, `EventMap`\>
+> **new Web3PromiEvent**\<`ResolveType`, `EventMap`\>(`executor`): `Web3PromiEvent`\<`ResolveType`, `EventMap`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:5
 
 #### Parameters
 
-• **executor**: [`PromiseExecutor`](../type-aliases/PromiseExecutor.md)\<`ResolveType`\>
+##### executor
+
+[`PromiseExecutor`](../type-aliases/PromiseExecutor.md)\<`ResolveType`\>
 
 #### Returns
 
-[`Web3PromiEvent`](Web3PromiEvent.md)\<`ResolveType`, `EventMap`\>
+`Web3PromiEvent`\<`ResolveType`, `EventMap`\>
 
 #### Overrides
 
-[`Web3EventEmitter`](Web3EventEmitter.md).[`constructor`](Web3EventEmitter.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:5
+[`Web3EventEmitter`](Web3EventEmitter.md).[`constructor`](Web3EventEmitter.md#constructor)
 
 ## Properties
 
@@ -48,29 +54,33 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_p
 
 > **\[toStringTag\]**: `"Promise"`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:6
+
 #### Implementation of
 
 `Promise.[toStringTag]`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:6
 
 ## Methods
 
 ### catch()
 
-> **catch**\<`TResult`\>(`onrejected`?): `Promise`\<`ResolveType` \| `TResult`\>
+> **catch**\<`TResult`\>(`onrejected?`): `Promise`\<`ResolveType` \| `TResult`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:8
 
 Attaches a callback for only the rejection of the Promise.
 
 #### Type Parameters
 
-• **TResult** = `never`
+##### TResult
+
+`TResult` = `never`
 
 #### Parameters
 
-• **onrejected?**
+##### onrejected?
+
+(`reason`) => `TResult` \| [`PromiseLike`](../interfaces/PromiseLike.md)\<`TResult`\>
 
 The callback to execute when the Promise is rejected.
 
@@ -84,25 +94,29 @@ A Promise for the completion of the callback.
 
 `Promise.catch`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:8
-
 ***
 
 ### emit()
 
 > **emit**\<`K`\>(`eventName`, `params`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **params**: `EventMap`\[`K`\]
+`K`
+
+##### params
+
+`EventMap`\[`K`\]
 
 #### Returns
 
@@ -112,15 +126,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_p
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`emit`](Web3EventEmitter.md#emit)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
-
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 #### Returns
 
@@ -130,22 +142,22 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`eventNames`](Web3EventEmitter.md#eventnames)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
-
 ***
 
 ### finally()
 
-> **finally**(`onfinally`?): `Promise`\<`ResolveType`\>
+> **finally**(`onfinally?`): `Promise`\<`ResolveType`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:9
 
 Attaches a callback that is invoked when the Promise is settled (fulfilled or rejected). The
 resolved value cannot be modified from the callback.
 
 #### Parameters
 
-• **onfinally?**
+##### onfinally?
+
+() => `void`
 
 The callback to execute when the Promise is settled (fulfilled or rejected).
 
@@ -159,15 +171,13 @@ A Promise for the completion of the callback.
 
 `Promise.finally`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:9
-
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 #### Returns
 
@@ -177,23 +187,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_p
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`getMaxListeners`](Web3EventEmitter.md#getmaxlisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
-
 ***
 
 ### listenerCount()
 
 > **listenerCount**\<`K`\>(`eventName`): `number`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -203,23 +215,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`listenerCount`](Web3EventEmitter.md#listenercount)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
-
 ***
 
 ### listeners()
 
 > **listeners**\<`K`\>(`eventName`): (...`args`) => `void`[]
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -229,25 +243,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`listeners`](Web3EventEmitter.md#listeners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
-
 ***
 
 ### off()
 
 > **off**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`EventMap`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`EventMap`\[`K`\]\>
 
 #### Returns
 
@@ -257,25 +275,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`off`](Web3EventEmitter.md#off)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
-
 ***
 
 ### on()
 
 > **on**\<`K`\>(`eventName`, `fn`): `this`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:10
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`EventMap`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`EventMap`\[`K`\]\>
 
 #### Returns
 
@@ -285,25 +307,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`on`](Web3EventEmitter.md#on)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:10
-
 ***
 
 ### once()
 
 > **once**\<`K`\>(`eventName`, `fn`): `this`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:11
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`EventMap`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`EventMap`\[`K`\]\>
 
 #### Returns
 
@@ -313,27 +339,21 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_p
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`once`](Web3EventEmitter.md#once)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:11
-
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 #### Returns
 
-[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
 
 #### Inherited from
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`removeAllListeners`](Web3EventEmitter.md#removealllisteners)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
@@ -341,9 +361,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 > **setMaxListenerWarningThreshold**(`maxListenersWarningThreshold`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+
 #### Parameters
 
-• **maxListenersWarningThreshold**: `number`
+##### maxListenersWarningThreshold
+
+`number`
 
 #### Returns
 
@@ -353,31 +377,37 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`setMaxListenerWarningThreshold`](Web3EventEmitter.md#setmaxlistenerwarningthreshold)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
-
 ***
 
 ### then()
 
-> **then**\<`TResult1`, `TResult2`\>(`onfulfilled`?, `onrejected`?): `Promise`\<`TResult1` \| `TResult2`\>
+> **then**\<`TResult1`, `TResult2`\>(`onfulfilled?`, `onrejected?`): `Promise`\<`TResult1` \| `TResult2`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:7
 
 Attaches callbacks for the resolution and/or rejection of the Promise.
 
 #### Type Parameters
 
-• **TResult1** = `ResolveType`
+##### TResult1
 
-• **TResult2** = `never`
+`TResult1` = `ResolveType`
+
+##### TResult2
+
+`TResult2` = `never`
 
 #### Parameters
 
-• **onfulfilled?**
+##### onfulfilled?
+
+(`value`) => `TResult1` \| [`PromiseLike`](../interfaces/PromiseLike.md)\<`TResult1`\>
 
 The callback to execute when the Promise is resolved.
 
-• **onrejected?**
+##### onrejected?
+
+(`reason`) => `TResult2` \| [`PromiseLike`](../interfaces/PromiseLike.md)\<`TResult2`\>
 
 The callback to execute when the Promise is rejected.
 
@@ -390,7 +420,3 @@ A Promise for the completion of which ever callback is executed.
 #### Implementation of
 
 `Promise.then`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_promi\_event.d.ts:7

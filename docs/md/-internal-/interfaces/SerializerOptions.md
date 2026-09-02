@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / SerializerOptions
 
 # Interface: SerializerOptions
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:332
 
 ## Extended by
 
@@ -13,40 +15,58 @@
 
 ## Properties
 
+### Blob?
+
+> `optional` **Blob?**: (...`args`) => `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:338
+
+#### Parameters
+
+##### args
+
+...`any`[]
+
+#### Returns
+
+`any`
+
+***
+
 ### dots?
 
-> `optional` **dots**: `boolean`
+> `optional` **dots?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:311
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:334
 
 ***
 
 ### indexes?
 
-> `optional` **indexes**: `null` \| `boolean`
+> `optional` **indexes?**: `boolean` \| `null`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:336
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:313
+***
+
+### maxDepth?
+
+> `optional` **maxDepth?**: `number`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:337
 
 ***
 
 ### metaTokens?
 
-> `optional` **metaTokens**: `boolean`
+> `optional` **metaTokens?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:312
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:335
 
 ***
 
 ### visitor?
 
-> `optional` **visitor**: [`SerializerVisitor`](SerializerVisitor.md)
+> `optional` **visitor?**: [`SerializerVisitor`](SerializerVisitor.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:310
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:333

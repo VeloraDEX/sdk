@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,13 +8,19 @@
 
 > **constructPreSignDeltaOrder**\<`T`\>(`options`): [`PreSignDeltaOrderFunctions`](../type-aliases/PreSignDeltaOrderFunctions.md)\<`T`\>
 
+Defined in: [src/methods/delta/preSignDeltaOrder.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignDeltaOrder.ts#L58)
+
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **options**: [`ConstructProviderFetchInput`](../interfaces/ConstructProviderFetchInput.md)\<`T`, `"transactCall"`\>
+### options
+
+[`ConstructProviderFetchInput`](../interfaces/ConstructProviderFetchInput.md)\<`T`, `"transactCall"`\>
 
 ## Returns
 
@@ -26,7 +32,3 @@ Construct on-chain pre-signing helpers for standard Delta orders:
 order hashing (`hashDeltaOrder` / `hashDeltaOrderTypedData`) and `setPreSignature`
 transactions (`setDeltaOrderPreSignature` / `preSignDeltaOrder`). The transact
 methods return whatever the configured `contractCaller` returns, for versatility.
-
-## Defined in
-
-[src/methods/delta/preSignDeltaOrder.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignDeltaOrder.ts#L58)

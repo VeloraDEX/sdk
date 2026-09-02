@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TypedString
 
 # Interface: TypedString
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:64
 
 A **Typed** that represents a UTF-8 sequence of bytes.
 
@@ -18,15 +20,13 @@ A **Typed** that represents a UTF-8 sequence of bytes.
 
 > `readonly` **\_typedSymbol**: `Symbol`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:90
+
 @_ignore:
 
 #### Inherited from
 
 [`Typed`](../classes/Typed.md).[`_typedSymbol`](../classes/Typed.md#_typedsymbol)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:90
 
 ***
 
@@ -34,15 +34,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > `readonly` **type**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:82
+
 The type, as a Solidity-compatible type.
 
 #### Inherited from
 
 [`Typed`](../classes/Typed.md).[`type`](../classes/Typed.md#type)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:82
 
 ***
 
@@ -50,15 +48,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > **value**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:68
+
 The value.
 
 #### Overrides
 
 [`Typed`](../classes/Typed.md).[`value`](../classes/Typed.md#value)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:68
 
 ## Accessors
 
@@ -66,7 +62,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 #### Get Signature
 
-> **get** **arrayLength**(): `null` \| `number`
+> **get** **arrayLength**(): `number` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:132
 
 Returns the length of the array type or ``-1`` if it is dynamic.
 
@@ -74,15 +72,11 @@ Returns the length of the array type or ``-1`` if it is dynamic.
 
 ##### Returns
 
-`null` \| `number`
+`number` \| `null`
 
 #### Inherited from
 
-[`Typed`](../classes/Typed.md).[`arrayLength`](../classes/Typed.md#arraylength)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:132
+`Typed.arrayLength`
 
 ***
 
@@ -90,27 +84,27 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 #### Get Signature
 
-> **get** **tupleName**(): `null` \| `string`
+> **get** **tupleName**(): `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:126
 
 Returns the tuple name, if this is a tuple. Throws otherwise.
 
 ##### Returns
 
-`null` \| `string`
+`string` \| `null`
 
 #### Inherited from
 
-[`Typed`](../classes/Typed.md).[`tupleName`](../classes/Typed.md#tuplename)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:126
+`Typed.tupleName`
 
 ## Methods
 
 ### defaultValue()
 
 > **defaultValue**(): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:72
 
 The default value for the string type is the empty string (i.e. ``""``).
 
@@ -122,15 +116,13 @@ The default value for the string type is the empty string (i.e. ``""``).
 
 [`Typed`](../classes/Typed.md).[`defaultValue`](../classes/Typed.md#defaultvalue)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:72
-
 ***
 
 ### format()
 
 > **format**(): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:98
 
 Format the type as a Human-Readable type.
 
@@ -142,15 +134,13 @@ Format the type as a Human-Readable type.
 
 [`Typed`](../classes/Typed.md).[`format`](../classes/Typed.md#format)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:98
-
 ***
 
 ### isBigInt()
 
 > **isBigInt**(): `this is TypedBigInt`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:114
 
 Returns ``true`` and provides a type guard is this is a [[TypedBigInt]].
 
@@ -162,15 +152,13 @@ Returns ``true`` and provides a type guard is this is a [[TypedBigInt]].
 
 [`Typed`](../classes/Typed.md).[`isBigInt`](../classes/Typed.md#isbigint)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:114
-
 ***
 
 ### isData()
 
 > **isData**(): `this is TypedData`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:118
 
 Returns ``true`` and provides a type guard is this is a [[TypedData]].
 
@@ -182,15 +170,13 @@ Returns ``true`` and provides a type guard is this is a [[TypedData]].
 
 [`Typed`](../classes/Typed.md).[`isData`](../classes/Typed.md#isdata)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:118
-
 ***
 
 ### isString()
 
 > **isString**(): `this is TypedString`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:122
 
 Returns ``true`` and provides a type guard is this is a [[TypedString]].
 
@@ -202,15 +188,13 @@ Returns ``true`` and provides a type guard is this is a [[TypedString]].
 
 [`Typed`](../classes/Typed.md).[`isString`](../classes/Typed.md#isstring)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:122
-
 ***
 
 ### maxValue()
 
 > **maxValue**(): `string` \| `number` \| `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:110
 
 The maximum value for numeric types.
 
@@ -222,15 +206,13 @@ The maximum value for numeric types.
 
 [`Typed`](../classes/Typed.md).[`maxValue`](../classes/Typed.md#maxvalue)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:110
-
 ***
 
 ### minValue()
 
 > **minValue**(): `string` \| `number` \| `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:106
 
 The minimum value for numeric types.
 
@@ -241,7 +223,3 @@ The minimum value for numeric types.
 #### Inherited from
 
 [`Typed`](../classes/Typed.md).[`minValue`](../classes/Typed.md#minvalue)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:106

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,28 @@
 
 # Type Alias: GetCapabilitiesParameters\<chainId\>
 
-> **GetCapabilitiesParameters**\<`chainId`\>: `object`
+> **GetCapabilitiesParameters**\<`chainId`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/getCapabilities.d.ts:9
 
 ## Type Parameters
 
-• **chainId** *extends* `number` \| `undefined` = `undefined`
+### chainId
 
-## Type declaration
+`chainId` *extends* `number` \| `undefined` = `undefined`
+
+## Properties
 
 ### account?
 
-> `optional` **account**: [`Account`](Account.md) \| [`Address`](Address.md)
+> `optional` **account?**: [`Account`](Account.md) \| [`Address`](Address-1.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/getCapabilities.d.ts:10
+
+***
 
 ### chainId?
 
-> `optional` **chainId**: `chainId` \| `number`
+> `optional` **chainId?**: `chainId` \| `number`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/getCapabilities.d.ts:9
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/getCapabilities.d.ts:11

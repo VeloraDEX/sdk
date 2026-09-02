@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: FragmentTypes
 
-> **FragmentTypes**: `"constructor"` \| `"event"` \| `"function"` \| `"fallback"` \| `"receive"`
+> **FragmentTypes** = `"constructor"` \| `"event"` \| `"function"` \| `"fallback"` \| `"receive"`
 
-## Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:31
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:31

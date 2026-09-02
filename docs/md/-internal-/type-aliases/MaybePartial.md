@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: MaybePartial\<type, enabled\>
 
-> **MaybePartial**\<`type`, `enabled`\>: `enabled` *extends* `true` ? [`Prettify`](Prettify.md)\<[`ExactPartial`](ExactPartial.md)\<`type`\>\> : `type`
+> **MaybePartial**\<`type`, `enabled`\> = `enabled` *extends* `true` ? [`Prettify`](Prettify-1.md)\<[`ExactPartial`](ExactPartial.md)\<`type`\>\> : `type`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:163
 
 ## Type Parameters
 
-• **type**
+### type
 
-• **enabled** *extends* `boolean` \| `undefined`
+`type`
 
-## Defined in
+### enabled
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:162
+`enabled` *extends* `boolean` \| `undefined`

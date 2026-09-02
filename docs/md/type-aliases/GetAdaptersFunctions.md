@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,22 +6,24 @@
 
 # Type Alias: GetAdaptersFunctions
 
-> **GetAdaptersFunctions**: `object`
+> **GetAdaptersFunctions** = `object`
 
-## Type declaration
+Defined in: [src/methods/swap/adapters.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/adapters.ts#L11)
 
-### getAdapters()
+## Properties
 
-> **getAdapters**: (`requestParams`?) => `Promise`\<[`AdaptersAsStrings`](../-internal-/type-aliases/AdaptersAsStrings.md)\>
+### getAdapters
+
+> **getAdapters**: (`requestParams?`) => `Promise`\<[`AdaptersAsStrings`](../-internal-/type-aliases/AdaptersAsStrings.md)\>
+
+Defined in: [src/methods/swap/adapters.ts:12](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/adapters.ts#L12)
 
 #### Parameters
 
-• **requestParams?**: [`RequestParameters`](../-internal-/type-aliases/RequestParameters.md)
+##### requestParams?
+
+[`RequestParameters`](../-internal-/type-aliases/RequestParameters.md)
 
 #### Returns
 
 `Promise`\<[`AdaptersAsStrings`](../-internal-/type-aliases/AdaptersAsStrings.md)\>
-
-## Defined in
-
-[src/methods/swap/adapters.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/adapters.ts#L11)

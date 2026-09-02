@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: Log\<quantity, index, pending, abiEvent, strict, abi, eventName\>
 
-> **Log**\<`quantity`, `index`, `pending`, `abiEvent`, `strict`, `abi`, `eventName`\>: `object` & [`GetInferredLogValues`](GetInferredLogValues.md)\<`abiEvent`, `abi`, `eventName`, `strict`\>
+> **Log**\<`quantity`, `index`, `pending`, `abiEvent`, `strict`, `abi`, `eventName`\> = `object` & [`GetInferredLogValues`](GetInferredLogValues.md)\<`abiEvent`, `abi`, `eventName`, `strict`\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/log.d.ts:4
+
+## Type Declaration
 
 ### address
 
-> **address**: [`Address`](Address.md)
+> **address**: [`Address`](Address-1.md)
 
 The address from which this log originated
 
@@ -27,6 +29,12 @@ Hash of block containing this log or `null` if pending
 > **blockNumber**: `pending` *extends* `true` ? `null` : `quantity`
 
 Number of block containing this log or `null` if pending
+
+### blockTimestamp?
+
+> `optional` **blockTimestamp?**: `pending` *extends* `true` ? `null` : `quantity`
+
+Timestamp of block containing this log or `null` if pending
 
 ### data
 
@@ -60,20 +68,30 @@ Index of the transaction that created this log or `null` if pending
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-• **pending** *extends* `boolean` = `boolean`
+### index
 
-• **abiEvent** *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
+`index` = `number`
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+### pending
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? [`abiEvent`] : `undefined`
+`pending` *extends* `boolean` = `boolean`
 
-• **eventName** *extends* `string` \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? `abiEvent`\[`"name"`\] : `undefined`
+### abiEvent
 
-## Defined in
+`abiEvent` *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/log.d.ts:4
+### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+### abi
+
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? \[`abiEvent`\] : `undefined`
+
+### eventName
+
+`eventName` *extends* `string` \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? `abiEvent`\[`"name"`\] : `undefined`

@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ContractTransactionReceipt
 
 # Class: ContractTransactionReceipt
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:54
 
 A **ContractTransactionReceipt** includes the parsed logs from a
  [[TransactionReceipt]].
@@ -15,37 +17,43 @@ A **ContractTransactionReceipt** includes the parsed logs from a
 
 ## Constructors
 
-### new ContractTransactionReceipt()
+### Constructor
 
-> **new ContractTransactionReceipt**(`iface`, `provider`, `tx`): [`ContractTransactionReceipt`](ContractTransactionReceipt.md)
+> **new ContractTransactionReceipt**(`iface`, `provider`, `tx`): `ContractTransactionReceipt`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:59
 
 @_ignore:
 
 #### Parameters
 
-• **iface**: [`Interface`](Interface.md)
+##### iface
 
-• **provider**: [`Provider`](../interfaces/Provider.md)
+[`Interface`](Interface.md)
 
-• **tx**: [`TransactionReceipt`](TransactionReceipt.md)
+##### provider
+
+[`Provider`](../interfaces/Provider.md)
+
+##### tx
+
+[`TransactionReceipt`](TransactionReceipt.md)
 
 #### Returns
 
-[`ContractTransactionReceipt`](ContractTransactionReceipt.md)
+`ContractTransactionReceipt`
 
 #### Overrides
 
-[`TransactionReceipt`](TransactionReceipt.md).[`constructor`](TransactionReceipt.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:59
+[`TransactionReceipt`](TransactionReceipt.md).[`constructor`](TransactionReceipt.md#constructor)
 
 ## Properties
 
 ### blobGasPrice
 
-> `readonly` **blobGasPrice**: `null` \| `bigint`
+> `readonly` **blobGasPrice**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:614
 
 The price paid per BLOB in gas. See [[link-eip-4844]].
 
@@ -53,15 +61,13 @@ The price paid per BLOB in gas. See [[link-eip-4844]].
 
 [`TransactionReceipt`](TransactionReceipt.md).[`blobGasPrice`](TransactionReceipt.md#blobgasprice)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:614
-
 ***
 
 ### blobGasUsed
 
-> `readonly` **blobGasUsed**: `null` \| `bigint`
+> `readonly` **blobGasUsed**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:594
 
 The gas used for BLObs. See [[link-eip-4844]].
 
@@ -69,15 +75,13 @@ The gas used for BLObs. See [[link-eip-4844]].
 
 [`TransactionReceipt`](TransactionReceipt.md).[`blobGasUsed`](TransactionReceipt.md#blobgasused)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:594
-
 ***
 
 ### blockHash
 
 > `readonly` **blockHash**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:572
 
 The block hash of the [[Block]] this transaction was included in.
 
@@ -85,15 +89,13 @@ The block hash of the [[Block]] this transaction was included in.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`blockHash`](TransactionReceipt.md#blockhash)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:572
-
 ***
 
 ### blockNumber
 
 > `readonly` **blockNumber**: `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:576
 
 The block number of the [[Block]] this transaction was included in.
 
@@ -101,15 +103,13 @@ The block number of the [[Block]] this transaction was included in.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`blockNumber`](TransactionReceipt.md#blocknumber)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:576
-
 ***
 
 ### contractAddress
 
-> `readonly` **contractAddress**: `null` \| `string`
+> `readonly` **contractAddress**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:560
 
 The address of the contract if the transaction was directly
  responsible for deploying one.
@@ -121,15 +121,13 @@ The address of the contract if the transaction was directly
 
 [`TransactionReceipt`](TransactionReceipt.md).[`contractAddress`](TransactionReceipt.md#contractaddress)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:560
-
 ***
 
 ### cumulativeGasUsed
 
 > `readonly` **cumulativeGasUsed**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:602
 
 The amount of gas used by all transactions within the block for this
  and all transactions with a lower ``index``.
@@ -141,15 +139,13 @@ The amount of gas used by all transactions within the block for this
 
 [`TransactionReceipt`](TransactionReceipt.md).[`cumulativeGasUsed`](TransactionReceipt.md#cumulativegasused)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:602
-
 ***
 
 ### from
 
 > `readonly` **from**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:552
 
 The sender of the transaction.
 
@@ -157,15 +153,13 @@ The sender of the transaction.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`from`](TransactionReceipt.md#from)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:552
-
 ***
 
 ### gasPrice
 
 > `readonly` **gasPrice**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:610
 
 The actual gas price used during execution.
 
@@ -177,15 +171,13 @@ The actual gas price used during execution.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`gasPrice`](TransactionReceipt.md#gasprice)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:610
-
 ***
 
 ### gasUsed
 
 > `readonly` **gasUsed**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:590
 
 The actual amount of gas used by this transaction.
 
@@ -197,15 +189,13 @@ The actual amount of gas used by this transaction.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`gasUsed`](TransactionReceipt.md#gasused)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:590
-
 ***
 
 ### hash
 
 > `readonly` **hash**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:564
 
 The transaction hash.
 
@@ -213,15 +203,13 @@ The transaction hash.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`hash`](TransactionReceipt.md#hash)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:564
-
 ***
 
 ### index
 
 > `readonly` **index**: `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:568
 
 The index of this transaction within the block transactions.
 
@@ -229,15 +217,13 @@ The index of this transaction within the block transactions.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`index`](TransactionReceipt.md#index)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:568
-
 ***
 
 ### logsBloom
 
 > `readonly` **logsBloom**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:582
 
 The bloom filter bytes that represent all logs that occurred within
  this transaction. This is generally not useful for most developers,
@@ -247,15 +233,13 @@ The bloom filter bytes that represent all logs that occurred within
 
 [`TransactionReceipt`](TransactionReceipt.md).[`logsBloom`](TransactionReceipt.md#logsbloom)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:582
-
 ***
 
 ### provider
 
 > `readonly` **provider**: [`Provider`](../interfaces/Provider.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:544
 
 The provider connected to the log used to fetch additional details
  if necessary.
@@ -264,15 +248,13 @@ The provider connected to the log used to fetch additional details
 
 [`TransactionReceipt`](TransactionReceipt.md).[`provider`](TransactionReceipt.md#provider)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:544
-
 ***
 
 ### root
 
-> `readonly` **root**: `null` \| `string`
+> `readonly` **root**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:633
 
 The root hash of this transaction.
 
@@ -283,15 +265,13 @@ The root hash of this transaction.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`root`](TransactionReceipt.md#root)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:633
-
 ***
 
 ### status
 
-> `readonly` **status**: `null` \| `number`
+> `readonly` **status**: `number` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:626
 
 The status of this transaction, indicating success (i.e. ``1``) or
  a revert (i.e. ``0``).
@@ -303,15 +283,13 @@ The status of this transaction, indicating success (i.e. ``1``) or
 
 [`TransactionReceipt`](TransactionReceipt.md).[`status`](TransactionReceipt.md#status)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:626
-
 ***
 
 ### to
 
-> `readonly` **to**: `null` \| `string`
+> `readonly` **to**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:548
 
 The address the transaction was sent to.
 
@@ -319,25 +297,19 @@ The address the transaction was sent to.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`to`](TransactionReceipt.md#to)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:548
-
 ***
 
 ### type
 
 > `readonly` **type**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:618
+
 The [[link-eip-2718]] transaction type.
 
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`type`](TransactionReceipt.md#type)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:618
 
 ## Accessors
 
@@ -346,6 +318,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 #### Get Signature
 
 > **get** **fee**(): `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:654
 
 The total fee for this transaction, in wei.
 
@@ -357,10 +331,6 @@ The total fee for this transaction, in wei.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`fee`](TransactionReceipt.md#fee)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:654
-
 ***
 
 ### length
@@ -368,6 +338,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 #### Get Signature
 
 > **get** **length**(): `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:649
 
 @_ignore:
 
@@ -379,10 +351,6 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 [`TransactionReceipt`](TransactionReceipt.md).[`length`](TransactionReceipt.md#length)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:649
-
 ***
 
 ### logs
@@ -390,6 +358,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 #### Get Signature
 
 > **get** **logs**(): ([`Log`](Log.md) \| [`EventLog`](EventLog.md))[]
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:64
 
 The parsed logs for any [[Log]] which has a matching event in the
  Contract ABI.
@@ -404,33 +374,29 @@ The logs emitted during the execution of this transaction.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`logs`](TransactionReceipt.md#logs)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/wrappers.d.ts:64
-
 ## Methods
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): [`Iterator`](../interfaces/Iterator.md)\<[`Log`](Log.md), `any`, `any`\>
+> **\[iterator\]**(): [`Iterator`](../interfaces/Iterator.md)\<[`Log`](Log.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:650
 
 #### Returns
 
-[`Iterator`](../interfaces/Iterator.md)\<[`Log`](Log.md), `any`, `any`\>
+[`Iterator`](../interfaces/Iterator.md)\<[`Log`](Log.md)\>
 
 #### Inherited from
 
-[`TransactionReceipt`](TransactionReceipt.md).[`[iterator]`](TransactionReceipt.md#%5Biterator%5D)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:650
+[`TransactionReceipt`](TransactionReceipt.md).[`[iterator]`](TransactionReceipt.md#iterator)
 
 ***
 
 ### confirmations()
 
 > **confirmations**(): `Promise`\<`number`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:673
 
 Resolves to the number of confirmations this transaction has.
 
@@ -442,15 +408,13 @@ Resolves to the number of confirmations this transaction has.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`confirmations`](TransactionReceipt.md#confirmations)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:673
-
 ***
 
 ### getBlock()
 
 > **getBlock**(): `Promise`\<[`Block`](Block.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:658
 
 Resolves to the block this transaction occurred in.
 
@@ -462,15 +426,13 @@ Resolves to the block this transaction occurred in.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`getBlock`](TransactionReceipt.md#getblock)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:658
-
 ***
 
 ### getResult()
 
 > **getResult**(): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:669
 
 Resolves to the return value of the execution of this transaction.
 
@@ -485,15 +447,13 @@ Resolves to the return value of the execution of this transaction.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`getResult`](TransactionReceipt.md#getresult)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:669
-
 ***
 
 ### getTransaction()
 
 > **getTransaction**(): `Promise`\<[`TransactionResponse`](TransactionResponse.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:662
 
 Resolves to the transaction this transaction occurred in.
 
@@ -505,15 +465,13 @@ Resolves to the transaction this transaction occurred in.
 
 [`TransactionReceipt`](TransactionReceipt.md).[`getTransaction`](TransactionReceipt.md#gettransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:662
-
 ***
 
 ### removedEvent()
 
 > **removedEvent**(): [`OrphanFilter`](../type-aliases/OrphanFilter.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:677
 
 @_ignore:
 
@@ -525,21 +483,21 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 [`TransactionReceipt`](TransactionReceipt.md).[`removedEvent`](TransactionReceipt.md#removedevent)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:677
-
 ***
 
 ### reorderedEvent()
 
-> **reorderedEvent**(`other`?): [`OrphanFilter`](../type-aliases/OrphanFilter.md)
+> **reorderedEvent**(`other?`): [`OrphanFilter`](../type-aliases/OrphanFilter.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:681
 
 @_ignore:
 
 #### Parameters
 
-• **other?**: [`TransactionResponse`](TransactionResponse.md)
+##### other?
+
+[`TransactionResponse`](TransactionResponse.md)
 
 #### Returns
 
@@ -549,15 +507,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 [`TransactionReceipt`](TransactionReceipt.md).[`reorderedEvent`](TransactionReceipt.md#reorderedevent)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:681
-
 ***
 
 ### toJSON()
 
 > **toJSON**(): `any`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:645
 
 Returns a JSON-compatible representation.
 
@@ -568,7 +524,3 @@ Returns a JSON-compatible representation.
 #### Inherited from
 
 [`TransactionReceipt`](TransactionReceipt.md).[`toJSON`](TransactionReceipt.md#tojson)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:645

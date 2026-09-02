@@ -1,25 +1,29 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / BuildOTCOrdersTx
 
-# Type Alias: BuildOTCOrdersTx()
+# Type Alias: BuildOTCOrdersTx
 
-> **BuildOTCOrdersTx**: (`params`, `options`?, `requestParams`?) => `Promise`\<[`TransactionParams`](../../interfaces/TransactionParams.md)\>
+> **BuildOTCOrdersTx** = (`params`, `options?`, `requestParams?`) => `Promise`\<[`TransactionParams`](../../interfaces/TransactionParams.md)\>
+
+Defined in: [src/methods/otcOrders/transaction.ts:41](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/transaction.ts#L41)
 
 ## Parameters
 
-• **params**: [`MinBuildOTCOrderTxInput`](MinBuildOTCOrderTxInput.md)
+### params
 
-• **options?**: [`BuildOptions`](../../type-aliases/BuildOptions.md)
+[`MinBuildOTCOrderTxInput`](MinBuildOTCOrderTxInput.md)
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+### options?
+
+[`BuildOptions`](../../type-aliases/BuildOptions.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<[`TransactionParams`](../../interfaces/TransactionParams.md)\>
-
-## Defined in
-
-[src/methods/otcOrders/transaction.ts:41](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/transaction.ts#L41)

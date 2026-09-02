@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TransactionResponseParams
 
 # Interface: TransactionResponseParams
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:232
 
 a **TransactionResponseParams** encodes the minimal required properties
  for a formatted transaction response.
@@ -13,49 +15,41 @@ a **TransactionResponseParams** encodes the minimal required properties
 
 ### accessList
 
-> **accessList**: `null` \| [`AccessList`](../type-aliases/AccessList.md)
+> **accessList**: [`AccessList`](../type-aliases/AccessList-1.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:308
 
 The transaction access list.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:308
 
 ***
 
 ### blobVersionedHashes?
 
-> `optional` **blobVersionedHashes**: `null` \| `string`[]
+> `optional` **blobVersionedHashes?**: `string`[] \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:312
 
 The [[link-eip-4844]] BLOb versioned hashes.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:312
 
 ***
 
 ### blockHash
 
-> **blockHash**: `null` \| `string`
+> **blockHash**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:240
 
 The block hash of the block that included this transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:240
 
 ***
 
 ### blockNumber
 
-> **blockNumber**: `null` \| `number`
+> **blockNumber**: `number` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:236
 
 The block number of the block that included this transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:236
 
 ***
 
@@ -63,11 +57,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **chainId**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:300
+
 The chain ID this transaction is valid on.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:300
 
 ***
 
@@ -75,11 +67,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **data**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:292
+
 The transaction data.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:292
 
 ***
 
@@ -87,11 +77,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **from**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:261
+
 The sender of the transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:261
 
 ***
 
@@ -99,11 +87,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **gasLimit**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:269
+
 The maximum amount of gas this transaction is authorized to consume.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:269
 
 ***
 
@@ -111,11 +97,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **gasPrice**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:273
+
 For legacy transactions, this is the gas price per gas to pay.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:273
 
 ***
 
@@ -123,11 +107,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **hash**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:244
+
 The transaction hash.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:244
 
 ***
 
@@ -135,50 +117,42 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **index**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:248
+
 The transaction index.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:248
 
 ***
 
 ### maxFeePerBlobGas?
 
-> `optional` **maxFeePerBlobGas**: `null` \| `bigint`
+> `optional` **maxFeePerBlobGas?**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:288
 
 For [[link-eip-4844]] transactions, this is the maximum fee that
  will be paid per BLOb.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:288
 
 ***
 
 ### maxFeePerGas
 
-> **maxFeePerGas**: `null` \| `bigint`
+> **maxFeePerGas**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:283
 
 For [[link-eip-1559]] transactions, this is the maximum fee that
  will be paid.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:283
 
 ***
 
 ### maxPriorityFeePerGas
 
-> **maxPriorityFeePerGas**: `null` \| `bigint`
+> **maxPriorityFeePerGas**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:278
 
 For [[link-eip-1559]] transactions, this is the maximum priority
  fee to allow a producer to claim.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:278
 
 ***
 
@@ -186,11 +160,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **nonce**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:265
+
 The nonce of the transaction, used for replay protection.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:265
 
 ***
 
@@ -198,24 +170,20 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **signature**: [`Signature`](../classes/Signature.md)
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:304
+
 The signature of the transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:304
 
 ***
 
 ### to
 
-> **to**: `null` \| `string`
+> **to**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:257
 
 The target of the transaction. If ``null``, the ``data`` is initcode
  and this transaction is a deployment transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:257
 
 ***
 
@@ -223,11 +191,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **type**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:252
+
 The [[link-eip-2718]] transaction type.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:252
 
 ***
 
@@ -235,8 +201,6 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **value**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:296
+
 The transaction value (in wei).
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:296

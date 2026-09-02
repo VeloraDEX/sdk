@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: BinaryLike
 
-> **BinaryLike**: `string` \| [`ArrayBufferView`](ArrayBufferView.md)
+> **BinaryLike** = `string` \| [`ArrayBufferView`](ArrayBufferView.md)
 
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/crypto.d.ts:675
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/crypto.d.ts:675

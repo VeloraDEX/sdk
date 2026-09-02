@@ -1,17 +1,17 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / UnionToIntersection
 
-# Type Alias: UnionToIntersection\<union\>
+# Type Alias: UnionToIntersection\<Union\>
 
-> **UnionToIntersection**\<`union`\>: `union` *extends* `unknown` ? (`arg`) => `0` : `never` *extends* (`arg`) => `0` ? `i` : `never`
+> **UnionToIntersection**\<`Union`\> = `Union` *extends* `any` ? (`arg`) => `void` : `never` *extends* (`arg`) => `void` ? `Intersection` : `never`
+
+Defined in: node\_modules/.pnpm/ts-essentials@10.0.3\_typescript@5.9.3/node\_modules/ts-essentials/dist/union-to-intersection/index.d.ts:1
 
 ## Type Parameters
 
-• **union**
+### Union
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:160
+`Union`

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,317 +6,343 @@
 
 # Class: AxiosHeaders
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:25
+
 ## Indexable
 
- \[`key`: `string`\]: `any`
+> \[`key`: `string`\]: `any`
 
 ## Constructors
 
-### new AxiosHeaders()
+### Constructor
 
-> **new AxiosHeaders**(`headers`?): [`AxiosHeaders`](AxiosHeaders.md)
+> **new AxiosHeaders**(`headers?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:26
 
 #### Parameters
 
-• **headers?**: `string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| [`AxiosHeaders`](AxiosHeaders.md)
+##### headers?
+
+`string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| `AxiosHeaders`
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:24
+`AxiosHeaders`
 
 ## Methods
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): [`IterableIterator`](../interfaces/IterableIterator.md)\<[`string`, [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)], `any`, `any`\>
+> **\[iterator\]**(): [`IterableIterator`](../interfaces/IterableIterator.md)\<\[`string`, [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)\]\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:102
 
 #### Returns
 
-[`IterableIterator`](../interfaces/IterableIterator.md)\<[`string`, [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)], `any`, `any`\>
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:92
+[`IterableIterator`](../interfaces/IterableIterator.md)\<\[`string`, [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)\]\>
 
 ***
 
 ### clear()
 
-> **clear**(`matcher`?): `boolean`
+> **clear**(`matcher?`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:46
 
 #### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+##### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:42
 
 ***
 
 ### concat()
 
-> **concat**(...`targets`): [`AxiosHeaders`](AxiosHeaders.md)
+> **concat**(...`targets`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:50
 
 #### Parameters
 
-• ...**targets**: (`undefined` \| `null` \| `string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| [`AxiosHeaders`](AxiosHeaders.md))[]
+##### targets
+
+...(`string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| `AxiosHeaders` \| `null` \| `undefined`)[]
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:46
+`AxiosHeaders`
 
 ***
 
 ### delete()
 
-> **delete**(`header`, `matcher`?): `boolean`
+> **delete**(`header`, `matcher?`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:44
 
 #### Parameters
 
-• **header**: `string` \| `string`[]
+##### header
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+`string` \| `string`[]
+
+##### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
 `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:40
-
 ***
 
 ### get()
 
-#### get(headerName, parser)
+#### Call Signature
 
-> **get**(`headerName`, `parser`): `null` \| `RegExpExecArray`
+> **get**(`headerName`, `parser`): [`AxiosHeaderParameters`](../type-aliases/AxiosHeaderParameters.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:38
 
 ##### Parameters
 
-• **headerName**: `string`
+###### headerName
 
-• **parser**: `RegExp`
+`string`
+
+###### parser
+
+(`value`) => [`AxiosHeaderParameters`](../type-aliases/AxiosHeaderParameters.md)
 
 ##### Returns
 
-`null` \| `RegExpExecArray`
+[`AxiosHeaderParameters`](../type-aliases/AxiosHeaderParameters.md)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:35
+> **get**(`headerName`, `parser`): `RegExpExecArray` \| `null`
 
-#### get(headerName, matcher)
-
-> **get**(`headerName`, `matcher`?): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:39
 
 ##### Parameters
 
-• **headerName**: `string`
+###### headerName
 
-• **matcher?**: `true` \| [`AxiosHeaderParser`](../type-aliases/AxiosHeaderParser.md)
+`string`
+
+###### parser
+
+`RegExp`
+
+##### Returns
+
+`RegExpExecArray` \| `null`
+
+#### Call Signature
+
+> **get**(`headerName`, `matcher?`): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:40
+
+##### Parameters
+
+###### headerName
+
+`string`
+
+###### matcher?
+
+`true` \| [`AxiosHeaderParser`](../type-aliases/AxiosHeaderParser.md)
 
 ##### Returns
 
 [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
-
-##### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:36
 
 ***
 
 ### getAccept()
 
-#### getAccept(parser)
+#### Call Signature
 
-> **getAccept**(`parser`?): `null` \| `RegExpExecArray`
+> **getAccept**(`parser?`): `RegExpExecArray` \| `null`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:79
 
 ##### Parameters
 
-• **parser?**: `RegExp`
+###### parser?
+
+`RegExp`
 
 ##### Returns
 
-`null` \| `RegExpExecArray`
+`RegExpExecArray` \| `null`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:71
+> **getAccept**(`matcher?`): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
 
-#### getAccept(matcher)
-
-> **getAccept**(`matcher`?): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:80
 
 ##### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+###### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 ##### Returns
 
 [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
-
-##### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:72
 
 ***
 
 ### getAuthorization()
 
-#### getAuthorization(parser)
+#### Call Signature
 
-> **getAuthorization**(`parser`?): `null` \| `RegExpExecArray`
+> **getAuthorization**(`parser?`): `RegExpExecArray` \| `null`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:94
 
 ##### Parameters
 
-• **parser?**: `RegExp`
+###### parser?
+
+`RegExp`
 
 ##### Returns
 
-`null` \| `RegExpExecArray`
+`RegExpExecArray` \| `null`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:86
+> **getAuthorization**(`matcher?`): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
 
-#### getAuthorization(matcher)
-
-> **getAuthorization**(`matcher`?): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:95
 
 ##### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+###### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 ##### Returns
 
 [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
-
-##### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:87
 
 ***
 
 ### getContentEncoding()
 
-#### getContentEncoding(parser)
+#### Call Signature
 
-> **getContentEncoding**(`parser`?): `null` \| `RegExpExecArray`
+> **getContentEncoding**(`parser?`): `RegExpExecArray` \| `null`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:89
 
 ##### Parameters
 
-• **parser?**: `RegExp`
+###### parser?
+
+`RegExp`
 
 ##### Returns
 
-`null` \| `RegExpExecArray`
+`RegExpExecArray` \| `null`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:81
+> **getContentEncoding**(`matcher?`): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
 
-#### getContentEncoding(matcher)
-
-> **getContentEncoding**(`matcher`?): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:90
 
 ##### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+###### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 ##### Returns
 
 [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
-
-##### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:82
 
 ***
 
 ### getContentLength()
 
-#### getContentLength(parser)
+#### Call Signature
 
-> **getContentLength**(`parser`?): `null` \| `RegExpExecArray`
+> **getContentLength**(`parser?`): `RegExpExecArray` \| `null`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:74
 
 ##### Parameters
 
-• **parser?**: `RegExp`
+###### parser?
+
+`RegExp`
 
 ##### Returns
 
-`null` \| `RegExpExecArray`
+`RegExpExecArray` \| `null`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:66
+> **getContentLength**(`matcher?`): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
 
-#### getContentLength(matcher)
-
-> **getContentLength**(`matcher`?): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:75
 
 ##### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+###### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 ##### Returns
 
 [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
-
-##### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:67
 
 ***
 
 ### getContentType()
 
-#### getContentType(parser)
+#### Call Signature
 
-> **getContentType**(`parser`?): `null` \| `RegExpExecArray`
+> **getContentType**(`parser?`): `RegExpExecArray` \| `null`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:69
 
 ##### Parameters
 
-• **parser?**: `RegExp`
+###### parser?
+
+`RegExp`
 
 ##### Returns
 
-`null` \| `RegExpExecArray`
+`RegExpExecArray` \| `null`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:61
+> **getContentType**(`matcher?`): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
 
-#### getContentType(matcher)
-
-> **getContentType**(`matcher`?): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:70
 
 ##### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+###### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 ##### Returns
 
 [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
-
-##### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:62
 
 ***
 
@@ -324,426 +350,528 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:62
 
 > **getSetCookie**(): `string`[]
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:98
+
 #### Returns
 
 `string`[]
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:90
 
 ***
 
 ### getUserAgent()
 
-#### getUserAgent(parser)
+#### Call Signature
 
-> **getUserAgent**(`parser`?): `null` \| `RegExpExecArray`
+> **getUserAgent**(`parser?`): `RegExpExecArray` \| `null`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:84
 
 ##### Parameters
 
-• **parser?**: `RegExp`
+###### parser?
+
+`RegExp`
 
 ##### Returns
 
-`null` \| `RegExpExecArray`
+`RegExpExecArray` \| `null`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:76
+> **getUserAgent**(`matcher?`): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
 
-#### getUserAgent(matcher)
-
-> **getUserAgent**(`matcher`?): [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:85
 
 ##### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+###### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 ##### Returns
 
 [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
 
-##### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:77
-
 ***
 
 ### has()
 
-> **has**(`header`, `matcher`?): `boolean`
+> **has**(`header`, `matcher?`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:42
 
 #### Parameters
 
-• **header**: `string`
+##### header
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+`string`
+
+##### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:38
 
 ***
 
 ### hasAccept()
 
-> **hasAccept**(`matcher`?): `boolean`
+> **hasAccept**(`matcher?`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:81
 
 #### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+##### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:73
 
 ***
 
 ### hasAuthorization()
 
-> **hasAuthorization**(`matcher`?): `boolean`
+> **hasAuthorization**(`matcher?`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:96
 
 #### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+##### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:88
 
 ***
 
 ### hasContentEncoding()
 
-> **hasContentEncoding**(`matcher`?): `boolean`
+> **hasContentEncoding**(`matcher?`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:91
 
 #### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+##### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:83
 
 ***
 
 ### hasContentLength()
 
-> **hasContentLength**(`matcher`?): `boolean`
+> **hasContentLength**(`matcher?`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:76
 
 #### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+##### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:68
 
 ***
 
 ### hasContentType()
 
-> **hasContentType**(`matcher`?): `boolean`
+> **hasContentType**(`matcher?`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:71
 
 #### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+##### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:63
 
 ***
 
 ### hasUserAgent()
 
-> **hasUserAgent**(`matcher`?): `boolean`
+> **hasUserAgent**(`matcher?`): `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:86
 
 #### Parameters
 
-• **matcher?**: [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+##### matcher?
+
+[`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
 `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:78
-
 ***
 
 ### normalize()
 
-> **normalize**(`format`): [`AxiosHeaders`](AxiosHeaders.md)
+> **normalize**(`format`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:48
 
 #### Parameters
 
-• **format**: `boolean`
+##### format
+
+`boolean`
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:44
+`AxiosHeaders`
 
 ***
 
 ### set()
 
-#### set(headerName, value, rewrite)
+#### Call Signature
 
-> **set**(`headerName`?, `value`?, `rewrite`?): [`AxiosHeaders`](AxiosHeaders.md)
+> **set**(`headerName?`, `value?`, `rewrite?`): `AxiosHeaders`
 
-##### Parameters
-
-• **headerName?**: `string`
-
-• **value?**: [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
-
-• **rewrite?**: `boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
-
-##### Returns
-
-[`AxiosHeaders`](AxiosHeaders.md)
-
-##### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:28
-
-#### set(headers, rewrite)
-
-> **set**(`headers`?, `rewrite`?): [`AxiosHeaders`](AxiosHeaders.md)
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:30
 
 ##### Parameters
 
-• **headers?**: `string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| [`AxiosHeaders`](AxiosHeaders.md)
+###### headerName?
 
-• **rewrite?**: `boolean`
+`string`
+
+###### value?
+
+[`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+
+###### rewrite?
+
+`boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 ##### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
+`AxiosHeaders`
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:33
+> **set**(`headers?`, `rewrite?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:35
+
+##### Parameters
+
+###### headers?
+
+`string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| `AxiosHeaders`
+
+###### rewrite?
+
+`boolean`
+
+##### Returns
+
+`AxiosHeaders`
+
+#### Call Signature
+
+> **set**(`headers?`, `rewrite?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:36
+
+##### Parameters
+
+###### headers?
+
+[`Iterable`](../interfaces/Iterable.md)\<\[`string`, [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)\], `any`, `any`\>
+
+###### rewrite?
+
+`boolean`
+
+##### Returns
+
+`AxiosHeaders`
 
 ***
 
 ### setAccept()
 
-> **setAccept**(`value`, `rewrite`?): [`AxiosHeaders`](AxiosHeaders.md)
+> **setAccept**(`value`, `rewrite?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:78
 
 #### Parameters
 
-• **value**: [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+##### value
 
-• **rewrite?**: `boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+[`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+
+##### rewrite?
+
+`boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:70
+`AxiosHeaders`
 
 ***
 
 ### setAuthorization()
 
-> **setAuthorization**(`value`, `rewrite`?): [`AxiosHeaders`](AxiosHeaders.md)
+> **setAuthorization**(`value`, `rewrite?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:93
 
 #### Parameters
 
-• **value**: [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+##### value
 
-• **rewrite?**: `boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+[`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+
+##### rewrite?
+
+`boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:85
+`AxiosHeaders`
 
 ***
 
 ### setContentEncoding()
 
-> **setContentEncoding**(`value`, `rewrite`?): [`AxiosHeaders`](AxiosHeaders.md)
+> **setContentEncoding**(`value`, `rewrite?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:88
 
 #### Parameters
 
-• **value**: [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+##### value
 
-• **rewrite?**: `boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+[`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+
+##### rewrite?
+
+`boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:80
+`AxiosHeaders`
 
 ***
 
 ### setContentLength()
 
-> **setContentLength**(`value`, `rewrite`?): [`AxiosHeaders`](AxiosHeaders.md)
+> **setContentLength**(`value`, `rewrite?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:73
 
 #### Parameters
 
-• **value**: [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+##### value
 
-• **rewrite?**: `boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+[`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+
+##### rewrite?
+
+`boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:65
+`AxiosHeaders`
 
 ***
 
 ### setContentType()
 
-> **setContentType**(`value`, `rewrite`?): [`AxiosHeaders`](AxiosHeaders.md)
+> **setContentType**(`value`, `rewrite?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:68
 
 #### Parameters
 
-• **value**: [`ContentType`](../type-aliases/ContentType.md)
+##### value
 
-• **rewrite?**: `boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+[`ContentType`](../type-aliases/ContentType.md)
+
+##### rewrite?
+
+`boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:60
+`AxiosHeaders`
 
 ***
 
 ### setUserAgent()
 
-> **setUserAgent**(`value`, `rewrite`?): [`AxiosHeaders`](AxiosHeaders.md)
+> **setUserAgent**(`value`, `rewrite?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:83
 
 #### Parameters
 
-• **value**: [`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+##### value
 
-• **rewrite?**: `boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
+[`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+
+##### rewrite?
+
+`boolean` \| [`AxiosHeaderMatcher`](../type-aliases/AxiosHeaderMatcher.md)
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:75
+`AxiosHeaders`
 
 ***
 
 ### toJSON()
 
-> **toJSON**(`asStrings`?): [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md)
+#### Call Signature
 
-#### Parameters
+> **toJSON**(`asStrings`): [`Record`](../type-aliases/Record.md)\<`string`, `string`\>
 
-• **asStrings?**: `boolean`
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:54
+
+##### Parameters
+
+###### asStrings
+
+`true`
+
+##### Returns
+
+[`Record`](../type-aliases/Record.md)\<`string`, `string`\>
+
+#### Call Signature
+
+> **toJSON**(`asStrings?`): [`Record`](../type-aliases/Record.md)\<`string`, `string` \| `string`[]\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:55
+
+##### Parameters
+
+###### asStrings?
+
+`false`
+
+##### Returns
+
+[`Record`](../type-aliases/Record.md)\<`string`, `string` \| `string`[]\>
+
+#### Call Signature
+
+> **toJSON**(`asStrings?`): [`Record`](../type-aliases/Record.md)\<`string`, `string` \| `string`[]\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:56
+
+##### Parameters
+
+###### asStrings?
+
+`boolean`
+
+##### Returns
+
+[`Record`](../type-aliases/Record.md)\<`string`, `string` \| `string`[]\>
+
+***
+
+### toString()
+
+> **toString**(): `string`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:100
 
 #### Returns
 
-[`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:50
+`string`
 
 ***
 
 ### accessor()
 
-> `static` **accessor**(`header`): [`AxiosHeaders`](AxiosHeaders.md)
+> `static` **accessor**(`header`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:62
 
 #### Parameters
 
-• **header**: `string` \| `string`[]
+##### header
+
+`string` \| `string`[]
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:54
+`AxiosHeaders`
 
 ***
 
 ### concat()
 
-> `static` **concat**(...`targets`): [`AxiosHeaders`](AxiosHeaders.md)
+> `static` **concat**(...`targets`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:64
 
 #### Parameters
 
-• ...**targets**: (`undefined` \| `null` \| `string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| [`AxiosHeaders`](AxiosHeaders.md))[]
+##### targets
+
+...(`string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| `AxiosHeaders` \| `null` \| `undefined`)[]
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:56
+`AxiosHeaders`
 
 ***
 
 ### from()
 
-> `static` **from**(`thing`?): [`AxiosHeaders`](AxiosHeaders.md)
+> `static` **from**(`thing?`): `AxiosHeaders`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:58
 
 #### Parameters
 
-• **thing?**: `string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| [`AxiosHeaders`](AxiosHeaders.md)
+##### thing?
+
+`string` \| [`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) \| `AxiosHeaders`
 
 #### Returns
 
-[`AxiosHeaders`](AxiosHeaders.md)
+`AxiosHeaders`
 
-#### Defined in
+***
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:52
+### parseParameters()
+
+> `static` **parseParameters**(`value`): [`AxiosHeaderParameters`](../type-aliases/AxiosHeaderParameters.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:60
+
+#### Parameters
+
+##### value
+
+[`AxiosHeaderValue`](../type-aliases/AxiosHeaderValue.md)
+
+#### Returns
+
+[`AxiosHeaderParameters`](../type-aliases/AxiosHeaderParameters.md)

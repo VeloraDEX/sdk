@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,19 +6,21 @@
 
 # Interface: JsonRpcResponseWithError\<Error\>
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:9
+
 ## Type Parameters
 
-• **Error** = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
+### Error
+
+`Error` = [`JsonRpcResult`](../type-aliases/JsonRpcResult.md)
 
 ## Properties
 
 ### error
 
-> `readonly` **error**: [`JsonRpcError`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcError.md)\<`Error`\>
+> `readonly` **error**: [`JsonRpcError`](JsonRpcError.md)\<`Error`\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:12
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:12
 
 ***
 
@@ -26,26 +28,20 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\
 
 > `readonly` **id**: [`JsonRpcId`](../type-aliases/JsonRpcId.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:10
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:10
 
 ***
 
 ### jsonrpc
 
-> `readonly` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
+> `readonly` **jsonrpc**: [`JsonRpcIdentifier`](../type-aliases/JsonRpcIdentifier.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:11
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:11
 
 ***
 
 ### result?
 
-> `readonly` `optional` **result**: `undefined`
+> `readonly` `optional` **result?**: `undefined`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:13
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:13

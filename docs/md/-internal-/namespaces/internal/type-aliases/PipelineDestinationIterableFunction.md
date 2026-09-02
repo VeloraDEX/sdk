@@ -1,25 +1,27 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../../../globals.md) / [\<internal\>](../../../README.md) / [internal](../README.md) / PipelineDestinationIterableFunction
 
-# Type Alias: PipelineDestinationIterableFunction()\<T\>
+# Type Alias: PipelineDestinationIterableFunction\<T\>
 
-> **PipelineDestinationIterableFunction**\<`T`\>: (`source`) => [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`any`\>
+> **PipelineDestinationIterableFunction**\<`T`\> = (`source`) => [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`any`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1482
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **source**: [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`T`\>
+### source
+
+[`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`T`\>
 
 ## Returns
 
 [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`any`\>
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1482

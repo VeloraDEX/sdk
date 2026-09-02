@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Web3PluginBase
 
-# Class: `abstract` Web3PluginBase\<API\>
+# Abstract Class: Web3PluginBase\<API\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:184
 
 Extend this class when creating a plugin that either doesn't require [EthExecutionAPI](../type-aliases/EthExecutionAPI.md),
 or interacts with a RPC node that doesn't fully implement [EthExecutionAPI](../type-aliases/EthExecutionAPI.md).
@@ -29,43 +31,43 @@ class CustomPlugin extends Web3PluginBase<CustomRpcApi> {...}
 
 ## Type Parameters
 
-• **API** *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`Web3APISpec`](../type-aliases/Web3APISpec.md)
+### API
+
+`API` *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`Web3APISpec`](../type-aliases/Web3APISpec.md)
 
 ## Constructors
 
-### new Web3PluginBase()
+### Constructor
 
-> **new Web3PluginBase**\<`API`\>(`providerOrContext`?): [`Web3PluginBase`](Web3PluginBase.md)\<`API`\>
+> **new Web3PluginBase**\<`API`\>(`providerOrContext?`): `Web3PluginBase`\<`API`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:53
 
 #### Parameters
 
-• **providerOrContext?**: `string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| [`Web3ContextInitOptions`](../type-aliases/Web3ContextInitOptions.md)\<`API`, `any`\>
+##### providerOrContext?
+
+`string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| [`Web3ContextInitOptions`](../type-aliases/Web3ContextInitOptions.md)\<`API`, `any`\>
 
 #### Returns
 
-[`Web3PluginBase`](Web3PluginBase.md)\<`API`\>
+`Web3PluginBase`\<`API`\>
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`constructor`](Web3Context.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:53
+[`Web3Context`](Web3Context.md).[`constructor`](Web3Context.md#constructor)
 
 ## Properties
 
 ### \_accountProvider?
 
-> `protected` `optional` **\_accountProvider**: [`Web3AccountProvider`](../interfaces/Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\>
+> `protected` `optional` **\_accountProvider?**: [`Web3AccountProvider`](../interfaces/Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:51
 
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`_accountProvider`](Web3Context.md#_accountprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:51
 
 ***
 
@@ -73,13 +75,11 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > `protected` **\_requestManager**: [`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:49
+
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`_requestManager`](Web3Context.md#_requestmanager)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:49
 
 ***
 
@@ -87,27 +87,23 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > `protected` **\_subscriptionManager**: [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `any`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:50
+
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`_subscriptionManager`](Web3Context.md#_subscriptionmanager)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:50
 
 ***
 
 ### \_wallet?
 
-> `protected` `optional` **\_wallet**: [`Web3BaseWallet`](Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\>
+> `protected` `optional` **\_wallet?**: [`Web3BaseWallet`](Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:52
 
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`_wallet`](Web3Context.md#_wallet)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:52
 
 ***
 
@@ -115,13 +111,11 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **config**: [`Web3ConfigOptions`](../interfaces/Web3ConfigOptions.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:46
+
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`config`](Web3Context.md#config)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:46
 
 ***
 
@@ -129,15 +123,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > `abstract` **pluginNamespace**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:185
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:185
 
 ***
 
 ### providers
 
 > `readonly` **providers**: `object`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:45
 
 #### HttpProvider
 
@@ -151,29 +145,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Context`](Web3Context.md).[`providers`](Web3Context.md#providers)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:45
-
 ***
 
 ### givenProvider?
 
-> `static` `optional` **givenProvider**: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\>
+> `static` `optional` **givenProvider?**: [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:44
 
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`givenProvider`](Web3Context.md#givenprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:44
 
 ***
 
 ### providers
 
 > `readonly` `static` **providers**: `object`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:40
 
 #### HttpProvider
 
@@ -187,29 +177,23 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Context`](Web3Context.md).[`providers`](Web3Context.md#providers-1)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:40
-
 ## Accessors
 
 ### accountProvider
 
 #### Get Signature
 
-> **get** **accountProvider**(): `undefined` \| [`Web3AccountProvider`](../interfaces/Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\>
+> **get** **accountProvider**(): [`Web3AccountProvider`](../interfaces/Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:60
 
 ##### Returns
 
-`undefined` \| [`Web3AccountProvider`](../interfaces/Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\>
+[`Web3AccountProvider`](../interfaces/Web3AccountProvider.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\> \| `undefined`
 
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`accountProvider`](Web3Context.md#accountprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:60
 
 ***
 
@@ -219,23 +203,17 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **BatchRequest**(): () => [`Web3BatchRequest`](Web3BatchRequest.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:160
+
 Will return the [Web3BatchRequest](Web3BatchRequest.md) constructor.
 
 ##### Returns
 
-`Function`
-
-###### Returns
-
-[`Web3BatchRequest`](Web3BatchRequest.md)
+() => [`Web3BatchRequest`](Web3BatchRequest.md)
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`BatchRequest`](Web3Context.md#batchrequest)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:160
+`Web3Context.BatchRequest`
 
 ***
 
@@ -244,6 +222,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **blockHeaderTimeout**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:169
 
 The blockHeaderTimeout is used over socket-based connections. This option defines the amount seconds it should wait for `'newBlockHeaders'` event before falling back to polling to fetch transaction receipt.
 Default is `10` seconds.
@@ -256,11 +236,15 @@ Default is `10` seconds.
 
 > **set** **blockHeaderTimeout**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:173
+
 Will set the blockHeaderTimeout
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -268,11 +252,7 @@ Will set the blockHeaderTimeout
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`blockHeaderTimeout`](Web3Context.md#blockheadertimeout)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:169
+`Web3Context.blockHeaderTimeout`
 
 ***
 
@@ -281,6 +261,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **contractDataInputFill**(): `"data"` \| `"input"` \| `"both"`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:70
 
 The `contractDataInputFill` options property will allow you to set the hash of the method signature and encoded parameters to the property
 either `data`, `input` or both within your contract.
@@ -295,11 +277,15 @@ Default is `data`.
 
 > **set** **contractDataInputFill**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:74
+
 Will set the contractDataInputFill
 
 ##### Parameters
 
-• **val**: `"data"` \| `"input"` \| `"both"`
+###### val
+
+`"data"` \| `"input"` \| `"both"`
 
 ##### Returns
 
@@ -307,11 +293,7 @@ Will set the contractDataInputFill
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`contractDataInputFill`](Web3Context.md#contractdatainputfill)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:70
+`Web3Context.contractDataInputFill`
 
 ***
 
@@ -319,7 +301,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **currentProvider**(): `undefined` \| [`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\>
+> **get** **currentProvider**(): [`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:123
 
 Will return the current provider. (The same as `provider`)
 
@@ -336,13 +320,15 @@ console.log(web3Context.provider);
 
 ##### Returns
 
-`undefined` \| [`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\>
+[`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\> \| `undefined`
 
 Returns the current provider
 
 #### Set Signature
 
 > **set** **currentProvider**(`provider`): `void`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:142
 
 Will set the current provider. (The same as `provider`)
 
@@ -362,7 +348,9 @@ _eventsCount: 0,
 
 ##### Parameters
 
-• **provider**: `undefined` \| `string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
+###### provider
+
+`string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`
 
 [SupportedProviders](../type-aliases/SupportedProviders.md) The provider to set
 
@@ -372,11 +360,7 @@ _eventsCount: 0,
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`currentProvider`](Web3Context.md#currentprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:123
+`Web3Context.currentProvider`
 
 ***
 
@@ -384,19 +368,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **customTransactionSchema**(): `undefined` \| [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md)
+> **get** **customTransactionSchema**(): [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:255
 
 ##### Returns
 
-`undefined` \| [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md)
+[`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md) \| `undefined`
 
 #### Set Signature
 
 > **set** **customTransactionSchema**(`schema`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:256
+
 ##### Parameters
 
-• **schema**: `undefined` \| [`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md)
+###### schema
+
+[`CustomTransactionSchema`](../type-aliases/CustomTransactionSchema.md) \| `undefined`
 
 ##### Returns
 
@@ -404,11 +394,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`customTransactionSchema`](Web3Context.md#customtransactionschema)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:255
+`Web3Context.customTransactionSchema`
 
 ***
 
@@ -416,7 +402,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **defaultAccount**(): `undefined` \| `string`
+> **get** **defaultAccount**(): `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:82
 
 This default address is used as the default `from` property, if no `from` property is specified in for the following methods:
 - web3.eth.sendTransaction()
@@ -426,17 +414,21 @@ This default address is used as the default `from` property, if no `from` proper
 
 ##### Returns
 
-`undefined` \| `string`
+`string` \| `undefined`
 
 #### Set Signature
 
 > **set** **defaultAccount**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:86
+
 Will set the default account.
 
 ##### Parameters
 
-• **val**: `undefined` \| `string`
+###### val
+
+`string` \| `undefined`
 
 ##### Returns
 
@@ -444,11 +436,7 @@ Will set the default account.
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`defaultAccount`](Web3Context.md#defaultaccount)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:82
+`Web3Context.defaultAccount`
 
 ***
 
@@ -457,6 +445,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **defaultBlock**(): [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:96
 
 The default block is used for certain methods. You can override it by passing in the defaultBlock as last parameter. The default value is `"latest"`.
 - web3.eth.getBalance()
@@ -474,6 +464,8 @@ The default block is used for certain methods. You can override it by passing in
 
 > **set** **defaultBlock**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:107
+
 Will set the default block.
 
 - A block number
@@ -485,7 +477,9 @@ Will set the default block.
 
 ##### Parameters
 
-• **val**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+###### val
+
+[`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
 ##### Returns
 
@@ -493,11 +487,7 @@ Will set the default block.
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`defaultBlock`](Web3Context.md#defaultblock)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:96
+`Web3Context.defaultBlock`
 
 ***
 
@@ -507,6 +497,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **defaultChain**(): `string`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:195
+
 ##### Returns
 
 `string`
@@ -515,9 +507,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **defaultChain**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:196
+
 ##### Parameters
 
-• **val**: `string`
+###### val
+
+`string`
 
 ##### Returns
 
@@ -525,11 +521,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`defaultChain`](Web3Context.md#defaultchain)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:195
+`Web3Context.defaultChain`
 
 ***
 
@@ -537,7 +529,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **defaultCommon**(): `undefined` \| [`Common`](../interfaces/Common.md)
+> **get** **defaultCommon**(): [`Common`](../interfaces/Common.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:235
 
 Will get the default common property
 The default common property does contain the following Common object:
@@ -551,17 +545,21 @@ Default is `undefined`.
 
 ##### Returns
 
-`undefined` \| [`Common`](../interfaces/Common.md)
+[`Common`](../interfaces/Common.md) \| `undefined`
 
 #### Set Signature
 
 > **set** **defaultCommon**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:240
+
 Will set the default common property
 
 ##### Parameters
 
-• **val**: `undefined` \| [`Common`](../interfaces/Common.md)
+###### val
+
+[`Common`](../interfaces/Common.md) \| `undefined`
 
 ##### Returns
 
@@ -569,11 +567,7 @@ Will set the default common property
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`defaultCommon`](Web3Context.md#defaultcommon)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:235
+`Web3Context.defaultCommon`
 
 ***
 
@@ -582,6 +576,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **defaultHardfork**(): `string`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:216
 
 Will return the default hardfork. Default is `london`
 The default hardfork property can be one of the following:
@@ -608,11 +604,15 @@ The default hardfork property can be one of the following:
 
 > **set** **defaultHardfork**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:221
+
 Will set the default hardfork.
 
 ##### Parameters
 
-• **val**: `string`
+###### val
+
+`string`
 
 ##### Returns
 
@@ -620,11 +620,7 @@ Will set the default hardfork.
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`defaultHardfork`](Web3Context.md#defaulthardfork)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:216
+`Web3Context.defaultHardfork`
 
 ***
 
@@ -634,6 +630,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **defaultMaxPriorityFeePerGas**(): [`Numbers`](../type-aliases/Numbers.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:249
+
 ##### Returns
 
 [`Numbers`](../type-aliases/Numbers.md)
@@ -642,9 +640,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **defaultMaxPriorityFeePerGas**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:250
+
 ##### Parameters
 
-• **val**: [`Numbers`](../type-aliases/Numbers.md)
+###### val
+
+[`Numbers`](../type-aliases/Numbers.md)
 
 ##### Returns
 
@@ -652,11 +654,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`defaultMaxPriorityFeePerGas`](Web3Context.md#defaultmaxpriorityfeepergas)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:249
+`Web3Context.defaultMaxPriorityFeePerGas`
 
 ***
 
@@ -664,19 +662,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **defaultNetworkId**(): `undefined` \| [`Numbers`](../type-aliases/Numbers.md)
+> **get** **defaultNetworkId**(): [`Numbers`](../type-aliases/Numbers.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:193
 
 ##### Returns
 
-`undefined` \| [`Numbers`](../type-aliases/Numbers.md)
+[`Numbers`](../type-aliases/Numbers.md) \| `undefined`
 
 #### Set Signature
 
 > **set** **defaultNetworkId**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:194
+
 ##### Parameters
 
-• **val**: `undefined` \| [`Numbers`](../type-aliases/Numbers.md)
+###### val
+
+[`Numbers`](../type-aliases/Numbers.md) \| `undefined`
 
 ##### Returns
 
@@ -684,11 +688,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`defaultNetworkId`](Web3Context.md#defaultnetworkid)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:193
+`Web3Context.defaultNetworkId`
 
 ***
 
@@ -698,6 +698,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **defaultReturnFormat**(): [`DataFormat`](../type-aliases/DataFormat.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:191
+
 ##### Returns
 
 [`DataFormat`](../type-aliases/DataFormat.md)
@@ -706,9 +708,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **defaultReturnFormat**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:192
+
 ##### Parameters
 
-• **val**: [`DataFormat`](../type-aliases/DataFormat.md)
+###### val
+
+[`DataFormat`](../type-aliases/DataFormat.md)
 
 ##### Returns
 
@@ -716,11 +722,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`defaultReturnFormat`](Web3Context.md#defaultreturnformat)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:191
+`Web3Context.defaultReturnFormat`
 
 ***
 
@@ -730,6 +732,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **defaultTransactionType**(): [`Numbers`](../type-aliases/Numbers.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:247
+
 ##### Returns
 
 [`Numbers`](../type-aliases/Numbers.md)
@@ -738,9 +742,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **defaultTransactionType**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:248
+
 ##### Parameters
 
-• **val**: [`Numbers`](../type-aliases/Numbers.md)
+###### val
+
+[`Numbers`](../type-aliases/Numbers.md)
 
 ##### Returns
 
@@ -748,11 +756,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`defaultTransactionType`](Web3Context.md#defaulttransactiontype)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:247
+`Web3Context.defaultTransactionType`
 
 ***
 
@@ -761,6 +765,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **enableExperimentalFeatures**(): `object`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:178
 
 The enableExperimentalFeatures is used to enable trying new experimental features that are still not fully implemented or not fully tested or still have some related issues.
 Default is `false` for every feature.
@@ -781,15 +787,21 @@ Default is `false` for every feature.
 
 > **set** **enableExperimentalFeatures**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:185
+
 Will set the enableExperimentalFeatures
 
 ##### Parameters
 
-• **val**
+###### val
 
-• **val.useRpcCallSpecification**: `boolean`
+###### useRpcCallSpecification
 
-• **val.useSubscriptionWhenCheckingBlockTimeout**: `boolean`
+`boolean`
+
+###### useSubscriptionWhenCheckingBlockTimeout
+
+`boolean`
 
 ##### Returns
 
@@ -797,11 +809,7 @@ Will set the enableExperimentalFeatures
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`enableExperimentalFeatures`](Web3Context.md#enableexperimentalfeatures)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:178
+`Web3Context.enableExperimentalFeatures`
 
 ***
 
@@ -809,7 +817,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **givenProvider**(): `undefined` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\>
+> **get** **givenProvider**(): [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:148
 
 Will return the givenProvider if available.
 
@@ -817,15 +827,11 @@ When using web3.js in an Ethereum compatible browser, it will set with the curre
 
 ##### Returns
 
-`undefined` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\>
+[`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`never`\> \| `undefined`
 
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`givenProvider`](Web3Context.md#givenprovider-1)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:148
 
 ***
 
@@ -834,6 +840,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **handleRevert**(): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:59
 
 The `handleRevert` options property returns the revert reason string if enabled for the following methods:
 - web3.eth.sendTransaction()
@@ -852,11 +860,15 @@ Default is `false`.
 
 > **set** **handleRevert**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:63
+
 Will set the handleRevert
 
 ##### Parameters
 
-• **val**: `boolean`
+###### val
+
+`boolean`
 
 ##### Returns
 
@@ -864,11 +876,7 @@ Will set the handleRevert
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`handleRevert`](Web3Context.md#handlerevert)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:59
+`Web3Context.handleRevert`
 
 ***
 
@@ -877,6 +885,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **ignoreGasPricing**(): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:245
 
 Will get the ignoreGasPricing property. When true, the gasPrice, maxPriorityFeePerGas, and maxFeePerGas will not be autofilled in the transaction object.
  Useful when you want wallets to handle gas pricing.
@@ -889,9 +899,13 @@ Will get the ignoreGasPricing property. When true, the gasPrice, maxPriorityFeeP
 
 > **set** **ignoreGasPricing**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:246
+
 ##### Parameters
 
-• **val**: `boolean`
+###### val
+
+`boolean`
 
 ##### Returns
 
@@ -899,11 +913,7 @@ Will get the ignoreGasPricing property. When true, the gasPrice, maxPriorityFeeP
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`ignoreGasPricing`](Web3Context.md#ignoregaspricing)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:245
+`Web3Context.ignoreGasPricing`
 
 ***
 
@@ -913,6 +923,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **maxListenersWarningThreshold**(): `number`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:189
+
 ##### Returns
 
 `number`
@@ -921,9 +933,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **set** **maxListenersWarningThreshold**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:190
+
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -931,11 +947,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`maxListenersWarningThreshold`](Web3Context.md#maxlistenerswarningthreshold)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:189
+`Web3Context.maxListenersWarningThreshold`
 
 ***
 
@@ -943,7 +955,9 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **provider**(): `undefined` \| [`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\>
+> **get** **provider**(): [`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:88
 
 Will return the current provider.
 
@@ -960,13 +974,15 @@ console.log(web3.provider);
 
 ##### Returns
 
-`undefined` \| [`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\>
+[`Web3BaseProvider`](Web3BaseProvider.md)\<`API`\> \| `undefined`
 
 Returns the current provider
 
 #### Set Signature
 
 > **set** **provider**(`provider`): `void`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:108
 
 Will set the current provider.
 
@@ -986,7 +1002,9 @@ _eventsCount: 0,
 
 ##### Parameters
 
-• **provider**: `undefined` \| `string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
+###### provider
+
+`string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\> \| `undefined`
 
 The provider to set
 
@@ -998,11 +1016,7 @@ Accepted providers are of type [SupportedProviders](../type-aliases/SupportedPro
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`provider`](Web3Context.md#provider)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:88
+`Web3Context.provider`
 
 ***
 
@@ -1012,17 +1026,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **requestManager**(): [`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:54
+
 ##### Returns
 
 [`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`requestManager`](Web3Context.md#requestmanager)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:54
+`Web3Context.requestManager`
 
 ***
 
@@ -1032,6 +1044,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **get** **subscriptionManager**(): [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `RegisteredSubs`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:58
+
 Will return the current subscriptionManager ([Web3SubscriptionManager](Web3SubscriptionManager.md))
 
 ##### Returns
@@ -1040,11 +1054,7 @@ Will return the current subscriptionManager ([Web3SubscriptionManager](Web3Subsc
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`subscriptionManager`](Web3Context.md#subscriptionmanager)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:58
+`Web3Context.subscriptionManager`
 
 ***
 
@@ -1053,6 +1063,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionBlockTimeout**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:122
 
 The `transactionBlockTimeout` is used over socket-based connections. This option defines the amount of new blocks it should wait until the first confirmation happens, otherwise the PromiEvent rejects with a timeout error.
 Default is `50`.
@@ -1065,11 +1077,15 @@ Default is `50`.
 
 > **set** **transactionBlockTimeout**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:126
+
 Will set the transactionBlockTimeout.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -1077,11 +1093,7 @@ Will set the transactionBlockTimeout.
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`transactionBlockTimeout`](Web3Context.md#transactionblocktimeout)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:122
+`Web3Context.transactionBlockTimeout`
 
 ***
 
@@ -1089,19 +1101,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **transactionBuilder**(): `undefined` \| [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\>
+> **get** **transactionBuilder**(): [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:251
 
 ##### Returns
 
-`undefined` \| [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\>
+[`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\> \| `undefined`
 
 #### Set Signature
 
 > **set** **transactionBuilder**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:252
+
 ##### Parameters
 
-• **val**: `undefined` \| [`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\>
+###### val
+
+[`TransactionBuilder`](../type-aliases/TransactionBuilder.md)\<`unknown`\> \| `undefined`
 
 ##### Returns
 
@@ -1109,11 +1127,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`transactionBuilder`](Web3Context.md#transactionbuilder)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:251
+`Web3Context.transactionBuilder`
 
 ***
 
@@ -1122,6 +1136,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionConfirmationBlocks**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:131
 
 This defines the number of blocks it requires until a transaction is considered confirmed.
 Default is `24`.
@@ -1134,11 +1150,15 @@ Default is `24`.
 
 > **set** **transactionConfirmationBlocks**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:135
+
 Will set the transactionConfirmationBlocks.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -1146,11 +1166,7 @@ Will set the transactionConfirmationBlocks.
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`transactionConfirmationBlocks`](Web3Context.md#transactionconfirmationblocks)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:131
+`Web3Context.transactionConfirmationBlocks`
 
 ***
 
@@ -1158,19 +1174,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **transactionConfirmationPollingInterval**(): `undefined` \| `number`
+> **get** **transactionConfirmationPollingInterval**(): `number` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:163
 
 ##### Returns
 
-`undefined` \| `number`
+`number` \| `undefined`
 
 #### Set Signature
 
 > **set** **transactionConfirmationPollingInterval**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:164
+
 ##### Parameters
 
-• **val**: `undefined` \| `number`
+###### val
+
+`number` \| `undefined`
 
 ##### Returns
 
@@ -1178,11 +1200,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`transactionConfirmationPollingInterval`](Web3Context.md#transactionconfirmationpollinginterval)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:163
+`Web3Context.transactionConfirmationPollingInterval`
 
 ***
 
@@ -1191,6 +1209,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionPollingInterval**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:140
 
 Used over HTTP connections. This option defines the number of seconds between Web3 calls for a receipt which confirms that a transaction was mined by the network.
 Default is `1000` ms.
@@ -1203,11 +1223,15 @@ Default is `1000` ms.
 
 > **set** **transactionPollingInterval**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:144
+
 Will set the transactionPollingInterval.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -1215,11 +1239,7 @@ Will set the transactionPollingInterval.
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`transactionPollingInterval`](Web3Context.md#transactionpollinginterval)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:140
+`Web3Context.transactionPollingInterval`
 
 ***
 
@@ -1228,6 +1248,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionPollingTimeout**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:149
 
 Used over HTTP connections. This option defines the number of seconds Web3 will wait for a receipt which confirms that a transaction was mined by the network. Note: If this method times out, the transaction may still be pending.
 Default is `750` seconds (12.5 minutes).
@@ -1240,11 +1262,15 @@ Default is `750` seconds (12.5 minutes).
 
 > **set** **transactionPollingTimeout**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:153
+
 Will set the transactionPollingTimeout.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -1252,11 +1278,7 @@ Will set the transactionPollingTimeout.
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`transactionPollingTimeout`](Web3Context.md#transactionpollingtimeout)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:149
+`Web3Context.transactionPollingTimeout`
 
 ***
 
@@ -1264,24 +1286,30 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **transactionReceiptPollingInterval**(): `undefined` \| `number`
+> **get** **transactionReceiptPollingInterval**(): `number` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:158
 
 The `transactionPollingInterval` is used over HTTP connections. This option defines the number of seconds between Web3 calls for a receipt which confirms that a transaction was mined by the network.
 Default is `undefined`
 
 ##### Returns
 
-`undefined` \| `number`
+`number` \| `undefined`
 
 #### Set Signature
 
 > **set** **transactionReceiptPollingInterval**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:162
+
 Will set the transactionReceiptPollingInterval
 
 ##### Parameters
 
-• **val**: `undefined` \| `number`
+###### val
+
+`number` \| `undefined`
 
 ##### Returns
 
@@ -1289,11 +1317,7 @@ Will set the transactionReceiptPollingInterval
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`transactionReceiptPollingInterval`](Web3Context.md#transactionreceiptpollinginterval)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:158
+`Web3Context.transactionReceiptPollingInterval`
 
 ***
 
@@ -1302,6 +1326,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Get Signature
 
 > **get** **transactionSendTimeout**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:113
 
 The time used to wait for Ethereum Node to return the sent transaction result.
 Note: If the RPC call stuck at the Node and therefor timed-out, the transaction may still be pending or even mined by the Network. We recommend checking the pending transactions in such a case.
@@ -1315,11 +1341,15 @@ Default is `750` seconds (12.5 minutes).
 
 > **set** **transactionSendTimeout**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:117
+
 Will set the transactionSendTimeout.
 
 ##### Parameters
 
-• **val**: `number`
+###### val
+
+`number`
 
 ##### Returns
 
@@ -1327,11 +1357,7 @@ Will set the transactionSendTimeout.
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`transactionSendTimeout`](Web3Context.md#transactionsendtimeout)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:113
+`Web3Context.transactionSendTimeout`
 
 ***
 
@@ -1339,19 +1365,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **transactionTypeParser**(): `undefined` \| [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md)
+> **get** **transactionTypeParser**(): [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:253
 
 ##### Returns
 
-`undefined` \| [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md)
+[`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md) \| `undefined`
 
 #### Set Signature
 
 > **set** **transactionTypeParser**(`val`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:254
+
 ##### Parameters
 
-• **val**: `undefined` \| [`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md)
+###### val
+
+[`TransactionTypeParser`](../type-aliases/TransactionTypeParser.md) \| `undefined`
 
 ##### Returns
 
@@ -1359,11 +1391,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Inherited from
 
-[`Web3Context`](Web3Context.md).[`transactionTypeParser`](Web3Context.md#transactiontypeparser)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:253
+`Web3Context.transactionTypeParser`
 
 ***
 
@@ -1371,19 +1399,17 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 #### Get Signature
 
-> **get** **wallet**(): `undefined` \| [`Web3BaseWallet`](Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\>
+> **get** **wallet**(): [`Web3BaseWallet`](Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\> \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:59
 
 ##### Returns
 
-`undefined` \| [`Web3BaseWallet`](Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\>
+[`Web3BaseWallet`](Web3BaseWallet.md)\<[`Web3BaseWalletAccount`](../interfaces/Web3BaseWalletAccount.md)\> \| `undefined`
 
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`wallet`](Web3Context.md#wallet)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:59
 
 ## Methods
 
@@ -1391,15 +1417,23 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **emit**\<`K`\>(`eventName`, `params`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **params**: `object`\[`K`\]
+`K`
+
+##### params
+
+`object`\[`K`\]
 
 #### Returns
 
@@ -1409,15 +1443,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Context`](Web3Context.md).[`emit`](Web3Context.md#emit)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
-
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 #### Returns
 
@@ -1427,22 +1459,22 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Context`](Web3Context.md).[`eventNames`](Web3Context.md#eventnames)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
-
 ***
 
 ### extend()
 
 > **extend**(`extendObj`): `this`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:165
+
 This method allows extending the web3 modules.
 Note: This method is only for backward compatibility, and It is recommended to use Web3 v4 Plugin feature for extending web3.js functionality if you are developing something new.
 
 #### Parameters
 
-• **extendObj**: [`ExtensionObject`](../interfaces/ExtensionObject.md)
+##### extendObj
+
+[`ExtensionObject`](../interfaces/ExtensionObject.md)
 
 #### Returns
 
@@ -1452,15 +1484,13 @@ Note: This method is only for backward compatibility, and It is recommended to u
 
 [`Web3Context`](Web3Context.md).[`extend`](Web3Context.md#extend)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:165
-
 ***
 
 ### getContextObject()
 
 > **getContextObject**(): [`Web3ContextObject`](../type-aliases/Web3ContextObject.md)\<`API`, `any`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:62
 
 #### Returns
 
@@ -1470,15 +1500,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Context`](Web3Context.md).[`getContextObject`](Web3Context.md#getcontextobject)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:62
-
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 #### Returns
 
@@ -1488,25 +1516,27 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Context`](Web3Context.md).[`getMaxListeners`](Web3Context.md#getmaxlisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
-
 ***
 
 ### link()
 
 > **link**\<`T`\>(`parentContext`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:72
+
 Link current context to another context.
 
 #### Type Parameters
 
-• **T** *extends* [`Web3Context`](Web3Context.md)\<`unknown`, `any`\>
+##### T
+
+`T` *extends* [`Web3Context`](Web3Context.md)\<`unknown`, `any`\>
 
 #### Parameters
 
-• **parentContext**: `T`
+##### parentContext
+
+`T`
 
 #### Returns
 
@@ -1516,23 +1546,25 @@ Link current context to another context.
 
 [`Web3Context`](Web3Context.md).[`link`](Web3Context.md#link)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:72
-
 ***
 
 ### listenerCount()
 
 > **listenerCount**\<`K`\>(`eventName`): `number`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -1542,23 +1574,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Context`](Web3Context.md).[`listenerCount`](Web3Context.md#listenercount)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
-
 ***
 
 ### listeners()
 
 > **listeners**\<`K`\>(`eventName`): (...`args`) => `void`[]
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -1568,25 +1602,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Context`](Web3Context.md).[`listeners`](Web3Context.md#listeners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
-
 ***
 
 ### off()
 
 > **off**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
 
 #### Returns
 
@@ -1596,25 +1634,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Context`](Web3Context.md).[`off`](Web3Context.md#off)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
-
 ***
 
 ### on()
 
 > **on**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
 
 #### Returns
 
@@ -1624,25 +1666,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Context`](Web3Context.md).[`on`](Web3Context.md#on)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
-
 ***
 
 ### once()
 
 > **once**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
+
 #### Type Parameters
 
-• **K** *extends* [`CONFIG_CHANGE`](../README.md#config_change)
+##### K
+
+`K` *extends* [`CONFIG_CHANGE`](../README.md#config_change)
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`object`\[`K`\]\>
 
 #### Returns
 
@@ -1652,33 +1698,33 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Context`](Web3Context.md).[`once`](Web3Context.md#once)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
-
 ***
 
 ### registerNewTransactionType()
 
 > `protected` **registerNewTransactionType**\<`NewTxTypeClass`\>(`type`, `txClass`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:186
+
 #### Type Parameters
 
-• **NewTxTypeClass** *extends* *typeof* [`BaseTransaction`](BaseTransaction.md)
+##### NewTxTypeClass
+
+`NewTxTypeClass` *extends* *typeof* [`BaseTransaction`](BaseTransaction.md)
 
 #### Parameters
 
-• **type**: [`Numbers`](../type-aliases/Numbers.md)
+##### type
 
-• **txClass**: `NewTxTypeClass`
+[`Numbers`](../type-aliases/Numbers.md)
+
+##### txClass
+
+`NewTxTypeClass`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:186
 
 ***
 
@@ -1686,9 +1732,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 > **registerPlugin**(`plugin`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:73
+
 #### Parameters
 
-• **plugin**: [`Web3PluginBase`](Web3PluginBase.md)\<`unknown`\>
+##### plugin
+
+`Web3PluginBase`
 
 #### Returns
 
@@ -1698,27 +1748,21 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Context`](Web3Context.md).[`registerPlugin`](Web3Context.md#registerplugin)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:73
-
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 #### Returns
 
-[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
 
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`removeAllListeners`](Web3Context.md#removealllisteners)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
@@ -1726,9 +1770,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 > **setConfig**(`options`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:48
+
 #### Parameters
 
-• **options**: [`Partial`](../type-aliases/Partial.md)\<[`Web3ConfigOptions`](../interfaces/Web3ConfigOptions.md)\>
+##### options
+
+[`Partial`](../type-aliases/Partial.md)\<[`Web3ConfigOptions`](../interfaces/Web3ConfigOptions.md)\>
 
 #### Returns
 
@@ -1738,19 +1786,19 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3Context`](Web3Context.md).[`setConfig`](Web3Context.md#setconfig)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:48
-
 ***
 
 ### setMaxListenerWarningThreshold()
 
 > **setMaxListenerWarningThreshold**(`maxListenersWarningThreshold`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+
 #### Parameters
 
-• **maxListenersWarningThreshold**: `number`
+##### maxListenersWarningThreshold
+
+`number`
 
 #### Returns
 
@@ -1760,21 +1808,21 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Context`](Web3Context.md).[`setMaxListenerWarningThreshold`](Web3Context.md#setmaxlistenerwarningthreshold)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
-
 ***
 
 ### setProvider()
 
-> **setProvider**(`provider`?): `boolean`
+> **setProvider**(`provider?`): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:155
 
 Will set the provider.
 
 #### Parameters
 
-• **provider?**: `string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
+##### provider?
+
+`string` \| [`SupportedProviders`](../type-aliases/SupportedProviders.md)\<`API`\>
 
 [SupportedProviders](../type-aliases/SupportedProviders.md) The provider to set
 
@@ -1788,19 +1836,19 @@ Returns true if the provider was set
 
 [`Web3Context`](Web3Context.md).[`setProvider`](Web3Context.md#setprovider)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:155
-
 ***
 
 ### setRequestManagerMiddleware()
 
 > **setRequestManagerMiddleware**(`requestManagerMiddleware`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:156
+
 #### Parameters
 
-• **requestManagerMiddleware**: [`RequestManagerMiddleware`](../interfaces/RequestManagerMiddleware.md)\<`API`\>
+##### requestManagerMiddleware
+
+[`RequestManagerMiddleware`](../interfaces/RequestManagerMiddleware.md)\<`API`\>
 
 #### Returns
 
@@ -1810,15 +1858,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 
 [`Web3Context`](Web3Context.md).[`setRequestManagerMiddleware`](Web3Context.md#setrequestmanagermiddleware)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:156
-
 ***
 
 ### use()
 
 > **use**\<`T`, `T2`\>(`ContextRef`, ...`args`): `T`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:68
 
 Use to create new object of any type extended by `Web3Context`
 and link it to current context. This can be used to initiate a global context object
@@ -1826,15 +1872,23 @@ and then use it to create new objects of any type extended by `Web3Context`.
 
 #### Type Parameters
 
-• **T** *extends* [`Web3Context`](Web3Context.md)\<`unknown`, `any`\>
+##### T
 
-• **T2** *extends* `unknown`[]
+`T` *extends* [`Web3Context`](Web3Context.md)\<`unknown`, `any`\>
+
+##### T2
+
+`T2` *extends* `unknown`[]
 
 #### Parameters
 
-• **ContextRef**: [`Web3ContextConstructor`](../type-aliases/Web3ContextConstructor.md)\<`T`, `T2`\>
+##### ContextRef
 
-• ...**args**: [`...T2[]`]
+[`Web3ContextConstructor`](../type-aliases/Web3ContextConstructor.md)\<`T`, `T2`\>
+
+##### args
+
+...\[`...T2[]`\]
 
 #### Returns
 
@@ -1844,27 +1898,33 @@ and then use it to create new objects of any type extended by `Web3Context`.
 
 [`Web3Context`](Web3Context.md).[`use`](Web3Context.md#use)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:68
-
 ***
 
 ### fromContextObject()
 
 > `static` **fromContextObject**\<`T`, `T3`\>(`this`, ...`args`): `T`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:61
+
 #### Type Parameters
 
-• **T** *extends* [`Web3Context`](Web3Context.md)\<`unknown`, `any`\>
+##### T
 
-• **T3** *extends* `unknown`[]
+`T` *extends* [`Web3Context`](Web3Context.md)\<`unknown`, `any`\>
+
+##### T3
+
+`T3` *extends* `unknown`[]
 
 #### Parameters
 
-• **this**: [`Web3ContextConstructor`](../type-aliases/Web3ContextConstructor.md)\<`T`, `T3`\>
+##### this
 
-• ...**args**: [[`Web3ContextObject`](../type-aliases/Web3ContextObject.md)\<`unknown`, `any`\>, `...T3[]`]
+[`Web3ContextConstructor`](../type-aliases/Web3ContextConstructor.md)\<`T`, `T3`\>
+
+##### args
+
+...\[[`Web3ContextObject`](../type-aliases/Web3ContextObject.md)\<`unknown`, `any`\>, `...T3[]`\]
 
 #### Returns
 
@@ -1873,7 +1933,3 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_c
 #### Inherited from
 
 [`Web3Context`](Web3Context.md).[`fromContextObject`](Web3Context.md#fromcontextobject)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_context.d.ts:61

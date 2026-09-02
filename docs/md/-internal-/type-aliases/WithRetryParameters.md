@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,34 +6,54 @@
 
 # Type Alias: WithRetryParameters
 
-> **WithRetryParameters**: `object`
+> **WithRetryParameters** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/promise/withRetry.d.ts:2
+
+## Properties
 
 ### delay?
 
-> `optional` **delay**: (`config`) => `number` \| `number`
+> `optional` **delay?**: ((`config`) => `number`) \| `number`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/promise/withRetry.d.ts:3
+
+***
 
 ### retryCount?
 
-> `optional` **retryCount**: `number`
+> `optional` **retryCount?**: `number`
 
-### shouldRetry()?
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/promise/withRetry.d.ts:7
 
-> `optional` **shouldRetry**: (`{ count, error, }`) => `Promise`\<`boolean`\> \| `boolean`
+***
+
+### shouldRetry?
+
+> `optional` **shouldRetry?**: (`{ count, error, }`) => `Promise`\<`boolean`\> \| `boolean`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/promise/withRetry.d.ts:8
 
 #### Parameters
 
-• **\{ count, error, \}**
+##### \{ count, error, \}
 
-• **\{ count, error, \}.count**: `number`
+###### count
 
-• **\{ count, error, \}.error**: [`Error`](../interfaces/Error.md)
+`number`
+
+###### error
+
+`Error`
 
 #### Returns
 
 `Promise`\<`boolean`\> \| `boolean`
 
-## Defined in
+***
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/utils/promise/withRetry.d.ts:2
+### signal?
+
+> `optional` **signal?**: `AbortSignal`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/promise/withRetry.d.ts:12

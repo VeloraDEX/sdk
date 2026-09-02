@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: ContractInterface
 
-> **ContractInterface**: `string` \| `ReadonlyArray`\<[`Fragment`](../classes/Fragment.md) \| [`JsonFragment`](../interfaces/JsonFragment.md) \| `string`\> \| [`Interface`](../classes/Interface.md)
+> **ContractInterface** = `string` \| `ReadonlyArray`\<[`Fragment`](../classes/Fragment-1.md) \| [`JsonFragment`](../interfaces/JsonFragment.md) \| `string`\> \| [`Interface`](../classes/Interface-1.md)
 
-## Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:77
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:77

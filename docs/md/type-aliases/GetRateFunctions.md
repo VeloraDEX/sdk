@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,18 +6,22 @@
 
 # Type Alias: GetRateFunctions
 
-> **GetRateFunctions**: `object`
+> **GetRateFunctions** = `object`
 
-## Type declaration
+Defined in: [src/methods/swap/rates.ts:204](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L204)
+
+## Properties
 
 ### getRate
 
 > **getRate**: [`GetRate`](../-internal-/type-aliases/GetRate.md)
 
+Defined in: [src/methods/swap/rates.ts:205](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L205)
+
+***
+
 ### getRateByRoute
 
 > **getRateByRoute**: [`GetRateByRoute`](../-internal-/type-aliases/GetRateByRoute.md)
 
-## Defined in
-
-[src/methods/swap/rates.ts:204](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L204)
+Defined in: [src/methods/swap/rates.ts:206](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L206)

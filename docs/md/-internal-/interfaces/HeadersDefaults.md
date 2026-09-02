@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,122 +6,100 @@
 
 # Interface: HeadersDefaults
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:489
+
 ## Properties
 
 ### common
 
-> **common**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> **common**: [`RawAxiosRequestHeaders`](../type-aliases/RawAxiosRequestHeaders.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:462
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:490
 
 ***
 
 ### delete
 
-> **delete**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> **delete**: [`RawAxiosRequestHeaders`](../type-aliases/RawAxiosRequestHeaders.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:463
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:491
 
 ***
 
 ### get
 
-> **get**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> **get**: [`RawAxiosRequestHeaders`](../type-aliases/RawAxiosRequestHeaders.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:464
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:492
 
 ***
 
 ### head
 
-> **head**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> **head**: [`RawAxiosRequestHeaders`](../type-aliases/RawAxiosRequestHeaders.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:465
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:493
 
 ***
 
 ### link?
 
-> `optional` **link**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> `optional` **link?**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:471
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:499
 
 ***
 
 ### options?
 
-> `optional` **options**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> `optional` **options?**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:469
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:497
 
 ***
 
 ### patch
 
-> **patch**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> **patch**: [`RawAxiosRequestHeaders`](../type-aliases/RawAxiosRequestHeaders.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:468
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:496
 
 ***
 
 ### post
 
-> **post**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> **post**: [`RawAxiosRequestHeaders`](../type-aliases/RawAxiosRequestHeaders.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:466
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:494
 
 ***
 
 ### purge?
 
-> `optional` **purge**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> `optional` **purge?**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:470
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:498
 
 ***
 
 ### put
 
-> **put**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> **put**: [`RawAxiosRequestHeaders`](../type-aliases/RawAxiosRequestHeaders.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:467
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:495
 
 ***
 
 ### query?
 
-> `optional` **query**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> `optional` **query?**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:473
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:501
 
 ***
 
 ### unlink?
 
-> `optional` **unlink**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
+> `optional` **unlink?**: [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:472
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:500

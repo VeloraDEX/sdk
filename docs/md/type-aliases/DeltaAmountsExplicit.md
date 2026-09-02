@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,42 +6,54 @@
 
 # Type Alias: DeltaAmountsExplicit
 
-> **DeltaAmountsExplicit**: `object`
+> **DeltaAmountsExplicit** = `object`
 
-## Type declaration
-
-### destAmount
-
-> **destAmount**: `string`
-
-#### Description
-
-The minimum amount of dest token to receive
-
-### side?
-
-> `optional` **side**: [`SwapSideUnion`](SwapSideUnion.md)
-
-#### Description
-
-The side of the order. Default is SELL
-
-### slippage?
-
-> `optional` **slippage**: `never`
-
-### srcAmount
-
-> **srcAmount**: `string`
-
-#### Description
-
-The amount of src token to swap
+Defined in: [src/methods/delta/helpers/types.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L27)
 
 ## Description
 
 Explicit amounts, no slippage (backward-compatible)
 
-## Defined in
+## Properties
 
-[src/methods/delta/helpers/types.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L27)
+### destAmount
+
+> **destAmount**: `string`
+
+Defined in: [src/methods/delta/helpers/types.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L32)
+
+#### Description
+
+The minimum amount of dest token to receive
+
+***
+
+### side?
+
+> `optional` **side?**: [`SwapSideUnion`](SwapSideUnion.md)
+
+Defined in: [src/methods/delta/helpers/types.ts:34](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L34)
+
+#### Description
+
+The side of the order. Default is SELL
+
+***
+
+### slippage?
+
+> `optional` **slippage?**: `never`
+
+Defined in: [src/methods/delta/helpers/types.ts:28](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L28)
+
+***
+
+### srcAmount
+
+> **srcAmount**: `string`
+
+Defined in: [src/methods/delta/helpers/types.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L30)
+
+#### Description
+
+The amount of src token to swap

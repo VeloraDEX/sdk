@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,27 +6,29 @@
 
 # Type Alias: TransactionLegacy\<quantity, index, isPending, type\>
 
-> **TransactionLegacy**\<`quantity`, `index`, `isPending`, `type`\>: [`Omit`](Omit.md)\<[`TransactionBase`](TransactionBase.md)\<`quantity`, `index`, `isPending`\>, `"yParity"`\> & `object` & [`FeeValuesLegacy`](FeeValuesLegacy.md)\<`quantity`\>
+> **TransactionLegacy**\<`quantity`, `index`, `isPending`, `type`\> = [`Omit`](Omit-1.md)\<[`TransactionBase`](TransactionBase.md)\<`quantity`, `index`, `isPending`\>, `"yParity"`\> & `object` & [`FeeValuesLegacy`](FeeValuesLegacy.md)\<`quantity`\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:86
+
+## Type Declaration
 
 ### accessList?
 
-> `optional` **accessList**: `undefined`
+> `optional` **accessList?**: `undefined`
 
 EIP-2930 Access List.
 
 ### authorizationList?
 
-> `optional` **authorizationList**: `undefined`
+> `optional` **authorizationList?**: `undefined`
 
 ### blobVersionedHashes?
 
-> `optional` **blobVersionedHashes**: `undefined`
+> `optional` **blobVersionedHashes?**: `undefined`
 
 ### chainId?
 
-> `optional` **chainId**: `index`
+> `optional` **chainId?**: `index`
 
 Chain ID that this transaction is valid on.
 
@@ -36,18 +38,22 @@ Chain ID that this transaction is valid on.
 
 ### yParity?
 
-> `optional` **yParity**: `undefined`
+> `optional` **yParity?**: `undefined`
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-• **isPending** *extends* `boolean` = `boolean`
+### index
 
-• **type** = `"legacy"`
+`index` = `number`
 
-## Defined in
+### isPending
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:82
+`isPending` *extends* `boolean` = `boolean`
+
+### type
+
+`type` = `"legacy"`

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -8,12 +8,10 @@
 
 > `const` **NOT\_FOUND\_RESPONSE**: `object`
 
-## Type declaration
+Defined in: [src/methods/swap/balance.ts:55](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L55)
+
+## Type Declaration
 
 ### message
 
 > `readonly` **message**: `"Not Found"` = `'Not Found'`
-
-## Defined in
-
-[src/methods/swap/balance.ts:55](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L55)

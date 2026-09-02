@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: GetPartnerFeeFunctions
 
-> **GetPartnerFeeFunctions**: `object`
+> **GetPartnerFeeFunctions** = `object`
 
-## Type declaration
+Defined in: [src/methods/delta/getPartnerFee.ts:20](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getPartnerFee.ts#L20)
+
+## Properties
 
 ### getPartnerFee
 
 > **getPartnerFee**: [`GetPartnerFee`](../-internal-/type-aliases/GetPartnerFee.md)
 
-## Defined in
-
-[src/methods/delta/getPartnerFee.ts:20](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getPartnerFee.ts#L20)
+Defined in: [src/methods/delta/getPartnerFee.ts:21](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getPartnerFee.ts#L21)

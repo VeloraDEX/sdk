@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,45 +6,39 @@
 
 # Interface: AxiosProgressEvent
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:363
+
 ## Properties
 
 ### bytes
 
 > **bytes**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:342
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:367
 
 ***
 
 ### download?
 
-> `optional` **download**: `boolean`
+> `optional` **download?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:346
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:371
 
 ***
 
 ### estimated?
 
-> `optional` **estimated**: `number`
+> `optional` **estimated?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:344
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:369
 
 ***
 
 ### event?
 
-> `optional` **event**: `any`
+> `optional` **event?**: `any`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:347
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:372
 
 ***
 
@@ -52,9 +46,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:347
 
 > **lengthComputable**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:348
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:373
 
 ***
 
@@ -62,46 +54,36 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:348
 
 > **loaded**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:339
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:364
 
 ***
 
 ### progress?
 
-> `optional` **progress**: `number`
+> `optional` **progress?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:341
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:366
 
 ***
 
 ### rate?
 
-> `optional` **rate**: `number`
+> `optional` **rate?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:343
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:368
 
 ***
 
 ### total?
 
-> `optional` **total**: `number`
+> `optional` **total?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:340
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:365
 
 ***
 
 ### upload?
 
-> `optional` **upload**: `boolean`
+> `optional` **upload?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:345
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:370

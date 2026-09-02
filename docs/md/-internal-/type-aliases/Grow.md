@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: \_Grow\<T, A\>
 
-> **\_Grow**\<`T`, `A`\>: (`x`, ...`xs`) => `void` *extends* (...`a`) => `void` ? `X` : `never`
+> **\_Grow**\<`T`, `A`\> = (`x`, ...`xs`) => `void` *extends* (...`a`) => `void` ? `X` : `never`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/utility\_types.d.ts:25
 
 ## Type Parameters
 
-• **T**
+### T
 
-• **A** *extends* `T`[]
+`T`
 
-## Defined in
+### A
 
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/utility\_types.d.ts:25
+`A` *extends* `T`[]

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: CancelTokenSource
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:608
+
 ## Properties
 
 ### cancel
 
 > **cancel**: [`Canceler`](Canceler.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:566
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:610
 
 ***
 
@@ -22,6 +22,4 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:566
 
 > **token**: [`CancelToken`](CancelToken.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:565
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:609

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,22 +6,24 @@
 
 # Type Alias: ApproveTokenForDeltaFunctions\<T\>
 
-> **ApproveTokenForDeltaFunctions**\<`T`\>: `object`
+> **ApproveTokenForDeltaFunctions**\<`T`\> = `object`
+
+Defined in: [src/methods/delta/approveForDelta.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/approveForDelta.ts#L8)
 
 ## Type Parameters
 
-• **T**
+### T
 
-## Type declaration
+`T`
+
+## Properties
 
 ### approveTokenForDelta
 
 > **approveTokenForDelta**: [`ApproveToken`](../-internal-/type-aliases/ApproveToken.md)\<`T`\>
 
+Defined in: [src/methods/delta/approveForDelta.ts:10](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/approveForDelta.ts#L10)
+
 #### Description
 
 approving ParaswapDelta contract as spender for Token
-
-## Defined in
-
-[src/methods/delta/approveForDelta.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/approveForDelta.ts#L8)

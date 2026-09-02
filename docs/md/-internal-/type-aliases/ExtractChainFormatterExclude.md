@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: ExtractChainFormatterExclude\<chain, type\>
 
-> **ExtractChainFormatterExclude**\<`chain`, `type`\>: `chain` *extends* `object` ? `formatters`\[`type`\] *extends* `object` ? [`Extract`](Extract.md)\<`exclude`, readonly `string`[]\>\[`number`\] : `""` : `""`
+> **ExtractChainFormatterExclude**\<`chain`, `type`\> = `chain` *extends* `object` ? `formatters`\[`type`\] *extends* `object` ? [`Extract`](Extract.md)\<`exclude`, readonly `string`[]\>\[`number`\] : `""` : `""`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:153
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined`
+### chain
 
-• **type** *extends* keyof [`ChainFormatters`](ChainFormatters.md)
+`chain` *extends* [`Chain`](Chain.md) \| `undefined`
 
-## Defined in
+### type
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:126
+`type` *extends* keyof [`ChainFormatters`](ChainFormatters.md)

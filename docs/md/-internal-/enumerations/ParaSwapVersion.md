@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: ParaSwapVersion
 
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/types.d.ts:67
+
 ## Enumeration Members
 
 ### V5
 
 > **V5**: `"5"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/types.d.ts:68
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/types.d.ts:68
 
 ***
 
@@ -22,6 +22,4 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/type
 
 > **V6**: `"6.2"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/types.d.ts:69
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/types.d.ts:69

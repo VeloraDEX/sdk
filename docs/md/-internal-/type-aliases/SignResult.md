@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,16 @@
 
 # Type Alias: SignResult
 
-> **SignResult**: [`SignatureObject`](SignatureObject.md) & `object`
+> **SignResult** = [`SignatureObject`](SignatureObject.md) & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:15
+
+## Type Declaration
 
 ### message?
 
-> `optional` **message**: `string`
+> `optional` **message?**: `string`
 
 ### signature
 
 > **signature**: `string`
-
-## Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/types.d.ts:15

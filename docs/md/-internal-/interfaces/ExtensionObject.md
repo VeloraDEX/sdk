@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,20 @@
 
 # Interface: ExtensionObject
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:8
+
 ## Properties
 
 ### methods
 
 > **methods**: [`Method`](Method.md)[]
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:10
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:10
 
 ***
 
 ### property?
 
-> `optional` **property**: `string`
+> `optional` **property?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:9
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:9

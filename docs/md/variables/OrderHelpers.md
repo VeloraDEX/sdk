@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,186 +8,220 @@
 
 > `const` **OrderHelpers**: `object`
 
-## Type declaration
+Defined in: [src/methods/delta/helpers/orders.ts:649](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/orders.ts#L649)
+
+## Type Declaration
 
 ### checks
 
 > **checks**: `object`
 
-### checks.isCanceledAuction()
+#### checks.isCanceledAuction
 
-> **isCanceledAuction**: \<`T`\>(`auction`) => `auction is T & Object`
+> **isCanceledAuction**: \<`T`\>(`auction`) => `auction is T & { status: "CANCELLED" }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
+###### T
 
-#### Parameters
+`T` *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
 
-• **auction**: `T`
+##### Parameters
 
-#### Returns
+###### auction
 
-`auction is T & Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is T & { status: "CANCELLED" }`
+
+##### Description
 
 Checks whether an auction status is cancelled.
 
-### checks.isCompletedAuction()
+#### checks.isCompletedAuction
 
-> **isCompletedAuction**: \<`T`\>(`auction`) => `auction is T & Object`
+> **isCompletedAuction**: \<`T`\>(`auction`) => `auction is T & { status: "COMPLETED" }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
+###### T
 
-#### Parameters
+`T` *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
 
-• **auction**: `T`
+##### Parameters
 
-#### Returns
+###### auction
 
-`auction is T & Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is T & { status: "COMPLETED" }`
+
+##### Description
 
 Checks whether an auction is fully executed (settled on every chain).
 
-### checks.isDeltaAuction()
+#### checks.isDeltaAuction
 
-> **isDeltaAuction**: \<`T`\>(`auction`) => `auction is Object`
+> **isDeltaAuction**: \<`T`\>(`auction`) => `auction is { onChainOrderType: "Order" & T }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
+###### T
 
-#### Parameters
+`T` *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
 
-• **auction**
+##### Parameters
 
-• **auction.onChainOrderType**: `T`
+###### auction
 
-#### Returns
+###### onChainOrderType
 
-`auction is Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is { onChainOrderType: "Order" & T }`
+
+##### Description
 
 Checks whether an auction is a Delta auction.
 
-### checks.isDeltaOrder()
+#### checks.isDeltaOrder
 
 > **isDeltaOrder**: (`order`) => `order is DeltaAuctionOrder`
 
-#### Parameters
+##### Parameters
 
-• **order**: [`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+###### order
 
-#### Returns
+[`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+
+##### Returns
 
 `order is DeltaAuctionOrder`
 
-#### Description
+##### Description
 
 Checks whether an order is a regular Delta auction order.
 
-### checks.isExpiredAuction()
+#### checks.isExpiredAuction
 
-> **isExpiredAuction**: \<`T`\>(`auction`) => `auction is T & Object`
+> **isExpiredAuction**: \<`T`\>(`auction`) => `auction is T & { status: "EXPIRED" }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
+###### T
 
-#### Parameters
+`T` *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
 
-• **auction**: `T`
+##### Parameters
 
-#### Returns
+###### auction
 
-`auction is T & Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is T & { status: "EXPIRED" }`
+
+##### Description
 
 Checks whether an auction status is expired.
 
-### checks.isExternalAuction()
+#### checks.isExternalAuction
 
-> **isExternalAuction**: \<`T`\>(`auction`) => `auction is Object`
+> **isExternalAuction**: \<`T`\>(`auction`) => `auction is { onChainOrderType: "ExternalOrder" & T }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
+###### T
 
-#### Parameters
+`T` *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
 
-• **auction**
+##### Parameters
 
-• **auction.onChainOrderType**: `T`
+###### auction
 
-#### Returns
+###### onChainOrderType
 
-`auction is Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is { onChainOrderType: "ExternalOrder" & T }`
+
+##### Description
 
 Checks whether an auction is an External auction.
 
-### checks.isExternalOrder()
+#### checks.isExternalOrder
 
 > **isExternalOrder**: (`order`) => `order is ExternalDeltaOrder`
 
-#### Parameters
+##### Parameters
 
-• **order**: [`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+###### order
 
-#### Returns
+[`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+
+##### Returns
 
 `order is ExternalDeltaOrder`
 
-#### Description
+##### Description
 
 Checks whether an order is an External order.
 
-### checks.isFailedAuction()
+#### checks.isFailedAuction
 
-> **isFailedAuction**: \<`T`\>(`auction`) => `auction is T & Object`
+> **isFailedAuction**: \<`T`\>(`auction`) => auction is T & \{ status: "CANCELLED" \| "EXPIRED" \| "FAILED" \| "REFUNDED" \| "REFUNDING" \}
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
+###### T
 
-#### Parameters
+`T` *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
 
-• **auction**: `T`
+##### Parameters
 
-#### Returns
+###### auction
 
-`auction is T & Object`
+`T`
 
-#### Description
+##### Returns
+
+auction is T & \{ status: "CANCELLED" \| "EXPIRED" \| "FAILED" \| "REFUNDED" \| "REFUNDING" \}
+
+##### Description
 
 Checks whether an auction is in a terminal failure state
 (failed, expired, cancelled, or refunded).
 
-### checks.isFillableAuction()
+#### checks.isFillableAuction
 
-> **isFillableAuction**: \<`T`\>(`auction`) => `auction is T & Object`
+> **isFillableAuction**: \<`T`\>(`auction`) => `auction is T & { onChainOrderType: "FillableOrder" }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"onChainOrderType"`\>
+###### T
 
-#### Parameters
+`T` *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"onChainOrderType"`\>
 
-• **auction**: `T`
+##### Parameters
 
-#### Returns
+###### auction
 
-`auction is T & Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is T & { onChainOrderType: "FillableOrder" }`
+
+##### Description
 
 Checks whether an auction is a Fillable auction.
 `FillableOrder` is the `onChainOrderType` the server reports for a
@@ -195,219 +229,255 @@ Checks whether an auction is a Fillable auction.
 `Order`. Consumers that don't distinguish the two should treat
 `isDeltaAuction(a) || isFillableAuction(a)` as "is a standard order".
 
-### checks.isOrderCrosschain()
+#### checks.isOrderCrosschain
 
-> **isOrderCrosschain**: \<`T`\>(`order`) => `order is Prettify<Extract<T, Object> & Object>`
+> **isOrderCrosschain**: \<`T`\>(`order`) => `order is Prettify<Extract<T, { bridge?: Bridge }> & { bridge: Bridge }>`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* `object` \| `object`
+###### T
 
-#### Parameters
+`T` *extends* `object` \| \{ `bridge?`: [`Bridge`](../type-aliases/Bridge.md); \}
 
-• **order**: `T`
+##### Parameters
 
-#### Returns
+###### order
 
-`order is Prettify<Extract<T, Object> & Object>`
+`T`
 
-#### Description
+##### Returns
+
+`order is Prettify<Extract<T, { bridge?: Bridge }> & { bridge: Bridge }>`
+
+##### Description
 
 Checks whether an order includes valid cross-chain bridge details.
 
-### checks.isPartiallyExecutedAuction()
+#### checks.isPartiallyExecutedAuction
 
-> **isPartiallyExecutedAuction**: \<`T`\>(`auction`) => `auction is T & Object`
+> **isPartiallyExecutedAuction**: \<`T`\>(`auction`) => `auction is T & { transactions: NonEmptyArray<DeltaTransaction> }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"order"` \| `"transactions"`\>
+###### T
 
-#### Parameters
+`T` *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"order"` \| `"transactions"`\>
 
-• **auction**: `T`
+##### Parameters
 
-#### Returns
+###### auction
 
-`auction is T & Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is T & { transactions: NonEmptyArray<DeltaTransaction> }`
+
+##### Description
 
 Checks whether an auction has been partially executed:
 it has at least one transaction and an overall filled percent strictly
 between 0 and 100.
 
-### checks.isPendingAuction()
+#### checks.isPendingAuction
 
-> **isPendingAuction**: \<`T`\>(`auction`) => `auction is T & Object`
+> **isPendingAuction**: \<`T`\>(`auction`) => auction is T & \{ status: "PENDING" \| "AWAITING\_SIGNATURE" \| "ACTIVE" \| "BRIDGING" \}
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
+###### T
 
-#### Parameters
+`T` *extends* [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"`\>
 
-• **auction**: `T`
+##### Parameters
 
-#### Returns
+###### auction
 
-`auction is T & Object`
+`T`
 
-#### Description
+##### Returns
+
+auction is T & \{ status: "PENDING" \| "AWAITING\_SIGNATURE" \| "ACTIVE" \| "BRIDGING" \}
+
+##### Description
 
 Checks whether an auction is still in flight (not yet settled
 and not failed): awaiting signature, pending, actively executing, or bridging.
 
-### checks.isProductiveAuction()
+#### checks.isProductiveAuction
 
-> **isProductiveAuction**: \<`T`\>(`auction`) => `auction is Object`
+> **isProductiveAuction**: \<`T`\>(`auction`) => `auction is { onChainOrderType: "ProductiveOrder" & T }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
+###### T
 
-#### Parameters
+`T` *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
 
-• **auction**
+##### Parameters
 
-• **auction.onChainOrderType**: `T`
+###### auction
 
-#### Returns
+###### onChainOrderType
 
-`auction is Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is { onChainOrderType: "ProductiveOrder" & T }`
+
+##### Description
 
 Checks whether an auction is a Productive auction.
 
-### checks.isProductiveOrder()
+#### checks.isProductiveOrder
 
 > **isProductiveOrder**: (`order`) => `order is ProductiveDeltaOrder`
 
-#### Parameters
+##### Parameters
 
-• **order**: [`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+###### order
 
-#### Returns
+[`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+
+##### Returns
 
 `order is ProductiveDeltaOrder`
 
-#### Description
+##### Description
 
 Checks whether an order is a Productive Delta order
 (strategy-routed order without an explicit OrderKind).
 
-### checks.isTWAPAuction()
+#### checks.isTWAPAuction
 
-> **isTWAPAuction**: \<`T`\>(`auction`) => `auction is Object`
+> **isTWAPAuction**: \<`T`\>(`auction`) => auction is \{ onChainOrderType: ("TWAPOrder" \| "TWAPBuyOrder") & T \}
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
+###### T
 
-#### Parameters
+`T` *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
 
-• **auction**
+##### Parameters
 
-• **auction.onChainOrderType**: `T`
+###### auction
 
-#### Returns
+###### onChainOrderType
 
-`auction is Object`
+`T`
 
-#### Description
+##### Returns
+
+auction is \{ onChainOrderType: ("TWAPOrder" \| "TWAPBuyOrder") & T \}
+
+##### Description
 
 Checks whether an auction is a TWAP auction.
 
-### checks.isTWAPBuyAuction()
+#### checks.isTWAPBuyAuction
 
-> **isTWAPBuyAuction**: \<`T`\>(`auction`) => `auction is Object`
+> **isTWAPBuyAuction**: \<`T`\>(`auction`) => `auction is { onChainOrderType: "TWAPBuyOrder" & T }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
+###### T
 
-#### Parameters
+`T` *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
 
-• **auction**
+##### Parameters
 
-• **auction.onChainOrderType**: `T`
+###### auction
 
-#### Returns
+###### onChainOrderType
 
-`auction is Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is { onChainOrderType: "TWAPBuyOrder" & T }`
+
+##### Description
 
 Checks whether an auction is a TWAP Buy auction.
 
-### checks.isTWAPBuyOrder()
+#### checks.isTWAPBuyOrder
 
 > **isTWAPBuyOrder**: (`order`) => `order is TWAPBuyDeltaOrder`
 
-#### Parameters
+##### Parameters
 
-• **order**: [`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+###### order
 
-#### Returns
+[`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+
+##### Returns
 
 `order is TWAPBuyDeltaOrder`
 
-#### Description
+##### Description
 
 Checks whether an order is a TWAP Buy order.
 
-### checks.isTWAPOrder()
+#### checks.isTWAPOrder
 
 > **isTWAPOrder**: (`order`) => order is TWAPDeltaOrder \| TWAPBuyDeltaOrder
 
-#### Parameters
+##### Parameters
 
-• **order**: [`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+###### order
 
-#### Returns
+[`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+
+##### Returns
 
 order is TWAPDeltaOrder \| TWAPBuyDeltaOrder
 
-#### Description
+##### Description
 
 Checks whether an order is a TWAP Sell or TWAP Buy order.
 
-### checks.isTWAPSellAuction()
+#### checks.isTWAPSellAuction
 
-> **isTWAPSellAuction**: \<`T`\>(`auction`) => `auction is Object`
+> **isTWAPSellAuction**: \<`T`\>(`auction`) => `auction is { onChainOrderType: "TWAPOrder" & T }`
 
-#### Type Parameters
+##### Type Parameters
 
-• **T** *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
+###### T
 
-#### Parameters
+`T` *extends* keyof [`OnChainOrderMap`](../-internal-/type-aliases/OnChainOrderMap.md)
 
-• **auction**
+##### Parameters
 
-• **auction.onChainOrderType**: `T`
+###### auction
 
-#### Returns
+###### onChainOrderType
 
-`auction is Object`
+`T`
 
-#### Description
+##### Returns
+
+`auction is { onChainOrderType: "TWAPOrder" & T }`
+
+##### Description
 
 Checks whether an auction is a TWAP Sell auction.
 
-### checks.isTWAPSellOrder()
+#### checks.isTWAPSellOrder
 
 > **isTWAPSellOrder**: (`order`) => `order is TWAPDeltaOrder`
 
-#### Parameters
+##### Parameters
 
-• **order**: [`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+###### order
 
-#### Returns
+[`DeltaOrderUnion`](../type-aliases/DeltaOrderUnion.md)
+
+##### Returns
 
 `order is TWAPDeltaOrder`
 
-#### Description
+##### Description
 
 Checks whether an order is a TWAP Sell order.
 
@@ -415,272 +485,309 @@ Checks whether an order is a TWAP Sell order.
 
 > **getters**: `object`
 
-### getters.getAuctionAmounts()
+#### getters.getAuctionAmounts
 
-> **getAuctionAmounts**: (`auction`) => `object` \| `object`
+> **getAuctionAmounts**: (`auction`) => \{ `executed?`: `undefined`; `expected`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; `minimal`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; \} \| \{ `executed`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; `expected`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; `minimal`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; \}
 
-#### Parameters
+##### Parameters
 
-• **auction**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"` \| `"order"` \| `"input"` \| `"transactions"` \| `"output"`\>
+###### auction
 
-#### Returns
+[`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"status"` \| `"order"` \| `"input"` \| `"output"` \| `"transactions"`\>
 
-`object` \| `object`
+##### Returns
 
-#### Description
+\{ `executed?`: `undefined`; `expected`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; `minimal`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; \} \| \{ `executed`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; `expected`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; `minimal`: \{ `destAmount`: `string`; `srcAmount`: `string`; \}; \}
+
+##### Description
 
 Returns expected and minimal amounts and, once the auction is completed,
-executed amounts. Executed amounts prefer the `executedAmount` baked onto the
+executed amounts. Minimal amounts read the signed bounds baked onto the token
+sides (`maxAmount` spend cap on input, `minAmount` receive floor on output).
+Executed amounts prefer the `executedAmount` baked onto the
 token sides and fall back to summing transactions.
 
-### getters.getAuctionDestChainId()
+#### getters.getAuctionDestChainId
 
 > **getAuctionDestChainId**: (`auction`) => `number`
 
-#### Parameters
+##### Parameters
 
-• **auction**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"output"`\>
+###### auction
 
-#### Returns
+[`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"output"`\>
+
+##### Returns
 
 `number`
 
-#### Description
+##### Description
 
 Returns the destination chain id for the auction (the output side's chain).
 Equals the source chain id for same-chain orders.
 
-### getters.getAuctionSrcChainId()
+#### getters.getAuctionSrcChainId
 
 > **getAuctionSrcChainId**: (`auction`) => `number`
 
-#### Parameters
+##### Parameters
 
-• **auction**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"input"`\>
+###### auction
 
-#### Returns
+[`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"input"`\>
+
+##### Returns
 
 `number`
 
-#### Description
+##### Description
 
 Returns the source chain id for the auction (the input side's chain).
 
-### getters.getAuctionSwapSide()
+#### getters.getAuctionSwapSide
 
 > **getAuctionSwapSide**: (`auction`) => [`SwapSideUnion`](../type-aliases/SwapSideUnion.md)
 
-#### Parameters
+##### Parameters
 
-• **auction**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"side"`\>
+###### auction
 
-#### Returns
+[`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"side"`\>
+
+##### Returns
 
 [`SwapSideUnion`](../type-aliases/SwapSideUnion.md)
 
-#### Description
+##### Description
 
 Returns the swap side for any auction. The auction carries `side`
 directly, so no order introspection is needed.
 
-### getters.getAuctionTokenAddresses()
+#### getters.getAuctionTokenAddresses
 
 > **getAuctionTokenAddresses**: (`auction`) => `object`
 
-#### Parameters
+##### Parameters
 
-• **auction**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"input"` \| `"output"`\>
+###### auction
 
-#### Returns
+[`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"input"` \| `"output"`\>
+
+##### Returns
 
 `object`
 
-##### destToken
+###### destToken
 
 > **destToken**: `string` = `auction.output.token`
 
-##### srcToken
+###### srcToken
 
 > **srcToken**: `string` = `auction.input.token`
 
-#### Description
+##### Description
 
 Returns source and destination token addresses for the auction,
 read from the input/output sides (already resolved to the dest-chain token
 for cross-chain orders).
 
-### getters.getExpectedTwapDestAmount()
+#### getters.getExpectedTwapDestAmount
 
 > **getExpectedTwapDestAmount**: (`order`) => `string`
 
-#### Parameters
+##### Parameters
 
-• **order**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`TWAPDeltaOrder`](../type-aliases/TWAPDeltaOrder.md), `"bridge"` \| `"numSlices"` \| `"destAmountPerSlice"`\> \| [`Pick`](../-internal-/type-aliases/Pick.md)\<[`TWAPBuyDeltaOrder`](../type-aliases/TWAPBuyDeltaOrder.md), `"bridge"` \| `"totalDestAmount"`\>
+###### order
 
-#### Returns
+[`Pick`](../-internal-/type-aliases/Pick.md)\<[`TWAPDeltaOrder`](../type-aliases/TWAPDeltaOrder.md), `"numSlices"` \| `"destAmountPerSlice"`\> \| [`Pick`](../-internal-/type-aliases/Pick.md)\<[`TWAPBuyDeltaOrder`](../type-aliases/TWAPBuyDeltaOrder.md), `"totalDestAmount"`\>
+
+##### Returns
 
 `string`
 
-#### Description
+##### Description
 
 Returns the expected destination amount for a TWAP order.
 
-### getters.getExpectedTwapOrderAmounts()
+#### getters.getExpectedTwapOrderAmounts
 
 > **getExpectedTwapOrderAmounts**: (`order`) => `object`
 
-#### Parameters
+##### Parameters
 
-• **order**: [`TWAPDeltaOrder`](../type-aliases/TWAPDeltaOrder.md) \| [`TWAPBuyDeltaOrder`](../type-aliases/TWAPBuyDeltaOrder.md)
+###### order
 
-#### Returns
+[`TWAPDeltaOrder`](../type-aliases/TWAPDeltaOrder.md) \| [`TWAPBuyDeltaOrder`](../type-aliases/TWAPBuyDeltaOrder.md)
+
+##### Returns
 
 `object`
 
-##### destAmount
+###### destAmount
 
 > **destAmount**: `string`
 
-##### srcAmount
+###### srcAmount
 
 > **srcAmount**: `string`
 
-#### Description
+##### Description
 
 Returns expected source and destination amounts for a TWAP order.
 
-### getters.getExpectedTwapSrcAmount()
+#### getters.getExpectedTwapSrcAmount
 
 > **getExpectedTwapSrcAmount**: (`order`) => `string`
 
-#### Parameters
+##### Parameters
 
-• **order**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`TWAPDeltaOrder`](../type-aliases/TWAPDeltaOrder.md), `"totalSrcAmount"`\> \| [`Pick`](../-internal-/type-aliases/Pick.md)\<[`TWAPBuyDeltaOrder`](../type-aliases/TWAPBuyDeltaOrder.md), `"maxSrcAmount"`\>
+###### order
 
-#### Returns
+[`Pick`](../-internal-/type-aliases/Pick.md)\<[`TWAPDeltaOrder`](../type-aliases/TWAPDeltaOrder.md), `"totalSrcAmount"`\> \| [`Pick`](../-internal-/type-aliases/Pick.md)\<[`TWAPBuyDeltaOrder`](../type-aliases/TWAPBuyDeltaOrder.md), `"maxSrcAmount"`\>
+
+##### Returns
 
 `string`
 
-#### Description
+##### Description
 
 Returns the expected source amount for a TWAP order.
 
-### getters.getFilledPercent()
+#### getters.getFilledPercent
 
 > **getFilledPercent**: (`__namedParameters`) => `number`
 
-#### Parameters
+##### Parameters
 
-• **\_\_namedParameters**: [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"order"` \| `"transactions"`\>
+###### \_\_namedParameters
 
-#### Returns
+[`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaAuction`](../type-aliases/DeltaAuction.md), `"order"` \| `"transactions"`\>
+
+##### Returns
 
 `number`
 
-#### Description
+##### Description
 
 Calculates the overall filled percent (0–100) from the
 per-transaction `filledPercent` values. For cross-chain orders,
 only transactions with a `destinationTx` are counted towards the filled percent.
 
-### getters.getOrderTokenAddresses()
+#### getters.getOrderTokenAddresses
 
 > **getOrderTokenAddresses**: (`order`) => `object`
 
-#### Parameters
+##### Parameters
 
-• **order**: [`DeltaAuctionOrder`](../type-aliases/DeltaAuctionOrder.md) \| [`ExternalDeltaOrder`](../type-aliases/ExternalDeltaOrder.md) \| [`ProductiveDeltaOrder`](../type-aliases/ProductiveDeltaOrder.md) \| [`TWAPDeltaOrder`](../type-aliases/TWAPDeltaOrder.md) \| [`TWAPBuyDeltaOrder`](../type-aliases/TWAPBuyDeltaOrder.md)
+###### order
 
-#### Returns
+[`DeltaAuctionOrder`](../type-aliases/DeltaAuctionOrder.md) \| [`ExternalDeltaOrder`](../type-aliases/ExternalDeltaOrder.md) \| [`ProductiveDeltaOrder`](../type-aliases/ProductiveDeltaOrder.md) \| [`TWAPDeltaOrder`](../type-aliases/TWAPDeltaOrder.md) \| [`TWAPBuyDeltaOrder`](../type-aliases/TWAPBuyDeltaOrder.md)
+
+##### Returns
 
 `object`
 
-##### destToken
+###### destToken
 
 > **destToken**: `string`
 
-##### srcToken
+###### srcToken
 
 > **srcToken**: `string`
 
-#### Description
+##### Description
 
 Returns source and destination token addresses for an order.
 
-### getters.getSwapSideFromDeltaOrder()
+#### getters.getSwapSideFromDeltaOrder
 
 > **getSwapSideFromDeltaOrder**: (`order`) => [`SwapSideUnion`](../type-aliases/SwapSideUnion.md)
 
-#### Parameters
+##### Parameters
 
-• **order**: [`DeltaAuctionOrder`](../type-aliases/DeltaAuctionOrder.md) \| [`ExternalDeltaOrder`](../type-aliases/ExternalDeltaOrder.md)
+###### order
 
-#### Returns
+[`DeltaAuctionOrder`](../type-aliases/DeltaAuctionOrder.md) \| [`ExternalDeltaOrder`](../type-aliases/ExternalDeltaOrder.md)
+
+##### Returns
 
 [`SwapSideUnion`](../type-aliases/SwapSideUnion.md)
 
-#### Description
+##### Description
 
 Returns swap side from a Delta or External order kind.
 
-### getters.getSwapSideFromTwapOrderType()
+#### getters.getSwapSideFromTwapOrderType
 
 > **getSwapSideFromTwapOrderType**: (`onChainOrderType`) => [`SwapSideUnion`](../type-aliases/SwapSideUnion.md)
 
-#### Parameters
+##### Parameters
 
-• **onChainOrderType**: `"TWAPOrder"` \| `"TWAPBuyOrder"`
+###### onChainOrderType
 
-#### Returns
+`"TWAPOrder"` \| `"TWAPBuyOrder"`
+
+##### Returns
 
 [`SwapSideUnion`](../type-aliases/SwapSideUnion.md)
 
-#### Description
+##### Description
 
 Returns swap side from TWAP on-chain order type.
 
-### getters.getTransactionAmounts()
+#### getters.getTransactionAmounts
 
-> **getTransactionAmounts**: (`transactions`) => `object`
+> **getTransactionAmounts**: (`transactions`, `options?`) => `object`
 
-#### Parameters
+##### Parameters
 
-• **transactions**: [`DeltaTransaction`](../type-aliases/DeltaTransaction.md)[]
+###### transactions
 
-#### Returns
+[`DeltaTransaction`](../type-aliases/DeltaTransaction.md)[]
+
+###### options?
+
+###### crosschain
+
+`boolean`
+
+##### Returns
 
 `object`
 
-##### destAmount
+###### destAmount
 
 > **destAmount**: `string`
 
-##### srcAmount
+###### srcAmount
 
 > **srcAmount**: `string`
 
-#### Description
+##### Description
 
 Aggregates transaction amounts into total spent (src) and
 received (dest) values.
 
-### getters.getUnifiedDeltaOrderData()
+`destAmount` is denominated in the auction's `output` token, so pass
+`crosschain` to read the leg that token sits on — mirroring how the server
+derives `output.executedAmount`. Omit it and the legacy `receivedAmount` is
+summed, whose leg depends on the order.
+
+#### getters.getUnifiedDeltaOrderData
 
 > **getUnifiedDeltaOrderData**: (`auction`) => [`UnifiedDeltaOrderData`](../type-aliases/UnifiedDeltaOrderData.md)
 
-#### Parameters
+##### Parameters
 
-• **auction**: [`DeltaAuction`](../type-aliases/DeltaAuction.md)
+###### auction
 
-#### Returns
+[`DeltaAuction`](../type-aliases/DeltaAuction.md)
+
+##### Returns
 
 [`UnifiedDeltaOrderData`](../type-aliases/UnifiedDeltaOrderData.md)
 
-#### Description
+##### Description
 
 Returns unified order data with normalized amounts, tokens,
 chain ids, and side, built from the auction envelope.
-
-## Defined in
-
-[src/methods/delta/helpers/orders.ts:612](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/orders.ts#L612)

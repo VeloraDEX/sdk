@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,24 @@
 
 # Type Alias: SignTypedDataParameters\<typedData, primaryType, account, primaryTypes\>
 
-> **SignTypedDataParameters**\<`typedData`, `primaryType`, `account`, `primaryTypes`\>: [`TypedDataDefinition`](TypedDataDefinition.md)\<`typedData`, `primaryType`, `primaryTypes`\> & [`GetAccountParameter`](GetAccountParameter.md)\<`account`\>
+> **SignTypedDataParameters**\<`typedData`, `primaryType`, `account`, `primaryTypes`\> = [`TypedDataDefinition`](TypedDataDefinition.md)\<`typedData`, `primaryType`, `primaryTypes`\> & [`GetAccountParameter`](GetAccountParameter.md)\<`account`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/signTypedData.d.ts:17
 
 ## Type Parameters
 
-• **typedData** *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
+### typedData
 
-• **primaryType** *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`
+`typedData` *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
 
-• **account** *extends* [`Account`](Account.md) \| `undefined` = `undefined`
+### primaryType
 
-• **primaryTypes** = `typedData` *extends* [`TypedData`](TypedData.md) ? keyof `typedData` : `string`
+`primaryType` *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`
 
-## Defined in
+### account
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/signTypedData.d.ts:17
+`account` *extends* [`Account`](Account.md) \| `undefined` = `undefined`
+
+### primaryTypes
+
+`primaryTypes` = `typedData` *extends* [`TypedData`](TypedData.md) ? keyof `typedData` : `string`

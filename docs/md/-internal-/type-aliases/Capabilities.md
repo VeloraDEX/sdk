@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: Capabilities\<capabilities\>
 
-> **Capabilities**\<`capabilities`\>: `object` & `capabilities`
+> **Capabilities**\<`capabilities`\> = `object` & `capabilities`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/capabilities.d.ts:47
 
 ## Type Parameters
 
-• **capabilities** *extends* [`Record`](Record.md)\<`string`, `any`\> = `object`
+### capabilities
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/capabilities.d.ts:47
+`capabilities` *extends* [`Record`](Record.md)\<`string`, `any`\> = \{ \}

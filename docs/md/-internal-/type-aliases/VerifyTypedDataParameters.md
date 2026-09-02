@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: VerifyTypedDataParameters\<typedData, primaryType\>
 
-> **VerifyTypedDataParameters**\<`typedData`, `primaryType`\>: [`Omit`](Omit.md)\<[`VerifyHashParameters`](VerifyHashParameters.md), `"hash"`\> & [`TypedDataDefinition`](TypedDataDefinition.md)\<`typedData`, `primaryType`\> & `object`
+> **VerifyTypedDataParameters**\<`typedData`, `primaryType`\> = [`Omit`](Omit.md)\<[`VerifyHashParameters`](VerifyHashParameters.md), `"blockHash"` \| `"blockNumber"` \| `"blockTag"` \| `"hash"` \| `"requireCanonical"`\> & [`BlockParameters`](BlockParameters.md) & [`TypedDataDefinition`](TypedDataDefinition.md)\<`typedData`, `primaryType`\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/verifyTypedData.d.ts:10
+
+## Type Declaration
 
 ### address
 
-> **address**: [`Address`](Address.md)
+> **address**: [`Address`](Address-1.md)
 
 The address to verify the typed data for.
 
@@ -24,10 +26,10 @@ The signature to verify
 
 ## Type Parameters
 
-• **typedData** *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
+### typedData
 
-• **primaryType** *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`
+`typedData` *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
 
-## Defined in
+### primaryType
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/verifyTypedData.d.ts:10
+`primaryType` *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`

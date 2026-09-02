@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: TransactionSerialized\<type, result\>
 
-> **TransactionSerialized**\<`type`, `result`\>: [`IsNever`](IsNever.md)\<`result`\> *extends* `true` ? [`TransactionSerializedGeneric`](TransactionSerializedGeneric.md) : `result`
+> **TransactionSerialized**\<`type`, `result`\> = [`IsNever`](IsNever.md)\<`result`\> *extends* `true` ? [`TransactionSerializedGeneric`](TransactionSerializedGeneric.md) : `result`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:190
 
 ## Type Parameters
 
-• **type** *extends* [`TransactionType`](TransactionType.md) = [`TransactionType`](TransactionType.md)
+### type
 
-• **result** = `type` *extends* `"eip1559"` ? [`TransactionSerializedEIP1559`](TransactionSerializedEIP1559.md) : `never` \| `type` *extends* `"eip2930"` ? [`TransactionSerializedEIP2930`](TransactionSerializedEIP2930.md) : `never` \| `type` *extends* `"eip4844"` ? [`TransactionSerializedEIP4844`](TransactionSerializedEIP4844.md) : `never` \| `type` *extends* `"eip7702"` ? [`TransactionSerializedEIP7702`](TransactionSerializedEIP7702.md) : `never` \| `type` *extends* `"legacy"` ? [`TransactionSerializedLegacy`](TransactionSerializedLegacy.md) : `never`
+`type` *extends* [`TransactionType`](TransactionType.md) = [`TransactionType`](TransactionType.md)
 
-## Defined in
+### result
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:186
+`result` = `type` *extends* `"eip1559"` ? [`TransactionSerializedEIP1559`](TransactionSerializedEIP1559.md) : `never` \| `type` *extends* `"eip2930"` ? [`TransactionSerializedEIP2930`](TransactionSerializedEIP2930.md) : `never` \| `type` *extends* `"eip4844"` ? [`TransactionSerializedEIP4844`](TransactionSerializedEIP4844.md) : `never` \| `type` *extends* `"eip7702"` ? [`TransactionSerializedEIP7702`](TransactionSerializedEIP7702.md) : `never` \| `type` *extends* `"legacy"` ? [`TransactionSerializedLegacy`](TransactionSerializedLegacy.md) : `never`

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: SimpleSDK
 
-> **SimpleSDK**: `object` & [`Required`](../-internal-/type-aliases/Required.md)\<[`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md)\>
+> **SimpleSDK** = `object` & [`Required`](../-internal-/type-aliases/Required.md)\<[`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md)\>
 
-## Type declaration
+Defined in: [src/sdk/simple.ts:147](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L147)
+
+## Type Declaration
 
 ### delta
 
@@ -25,7 +27,3 @@
 ### swap
 
 > **swap**: [`SwapSDKMethods`](SwapSDKMethods.md)\<[`TxHash`](TxHash.md)\>
-
-## Defined in
-
-[src/sdk/simple.ts:147](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L147)

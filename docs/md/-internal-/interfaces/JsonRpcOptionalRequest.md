@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / JsonRpcOptionalRequest
 
 # Interface: JsonRpcOptionalRequest\<ParamType\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:54
 
 Construct a type with the properties of T except for those in type K.
 
@@ -14,27 +16,25 @@ Construct a type with the properties of T except for those in type K.
 
 ## Type Parameters
 
-• **ParamType** = `unknown`[]
+### ParamType
+
+`ParamType` = `unknown`[]
 
 ## Properties
 
 ### id?
 
-> `readonly` `optional` **id**: [`JsonRpcId`](../type-aliases/JsonRpcId.md)
+> `readonly` `optional` **id?**: [`JsonRpcId`](../type-aliases/JsonRpcId.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:55
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:55
 
 ***
 
 ### jsonrpc?
 
-> `readonly` `optional` **jsonrpc**: [`JsonRpcIdentifier`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/JsonRpcIdentifier.md)
+> `readonly` `optional` **jsonrpc?**: [`JsonRpcIdentifier`](../type-aliases/JsonRpcIdentifier.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:56
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:56
 
 ***
 
@@ -42,24 +42,20 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\
 
 > `readonly` **method**: `string`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:51
+
 #### Inherited from
 
-`Omit.method`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:51
+[`JsonRpcRequest`](JsonRpcRequest.md).[`method`](JsonRpcRequest.md#method)
 
 ***
 
 ### params?
 
-> `readonly` `optional` **params**: `ParamType`
+> `readonly` `optional` **params?**: `ParamType`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:52
 
 #### Inherited from
 
 `Omit.params`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:52

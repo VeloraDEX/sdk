@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,26 +6,26 @@
 
 # Interface: QueuingStrategy\<T\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:330
+
 ## Type Parameters
 
-• **T** = `any`
+### T
+
+`T` = `any`
 
 ## Properties
 
 ### highWaterMark?
 
-> `optional` **highWaterMark**: `number`
+> `optional` **highWaterMark?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:331
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:331
 
 ***
 
 ### size?
 
-> `optional` **size**: [`QueuingStrategySize`](QueuingStrategySize.md)\<`T`\>
+> `optional` **size?**: [`QueuingStrategySize`](QueuingStrategySize.md)\<`T`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:332
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:332

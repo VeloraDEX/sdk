@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Timer
 
 # Interface: Timer
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:35
 
 ## Extends
 
@@ -16,13 +18,11 @@
 
 > **\[toPrimitive\]**(): `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:38
+
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:38
 
 ***
 
@@ -30,19 +30,19 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:38
 
 > **hasRef**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:36
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:36
 
 ***
 
 ### ref()
 
 > **ref**(): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:437
 
 #### Returns
 
@@ -52,29 +52,25 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:36
 
 [`RefCounted`](RefCounted.md).[`ref`](RefCounted.md#ref)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:437
-
 ***
 
 ### refresh()
 
 > **refresh**(): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:37
+
 #### Returns
 
 `this`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:37
 
 ***
 
 ### unref()
 
 > **unref**(): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:438
 
 #### Returns
 
@@ -83,7 +79,3 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/timers.d.ts:37
 #### Inherited from
 
 [`RefCounted`](RefCounted.md).[`unref`](RefCounted.md#unref)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:438

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,32 +6,46 @@
 
 # Type Alias: FeeValuesLegacy\<quantity\>
 
-> **FeeValuesLegacy**\<`quantity`\>: `object`
+> **FeeValuesLegacy**\<`quantity`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/fee.d.ts:15
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-## Type declaration
+`quantity` = `bigint`
+
+## Properties
 
 ### gasPrice
 
 > **gasPrice**: `quantity`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/fee.d.ts:17
+
 Base fee per gas.
+
+***
 
 ### maxFeePerBlobGas?
 
-> `optional` **maxFeePerBlobGas**: `undefined`
+> `optional` **maxFeePerBlobGas?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/fee.d.ts:18
+
+***
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: `undefined`
+> `optional` **maxFeePerGas?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/fee.d.ts:19
+
+***
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: `undefined`
+> `optional` **maxPriorityFeePerGas?**: `undefined`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/fee.d.ts:15
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/fee.d.ts:20

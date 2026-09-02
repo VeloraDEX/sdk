@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: Authorization\<uint32, signed\>
 
-> **Authorization**\<`uint32`, `signed`\>: `object` & `signed` *extends* `true` ? [`Signature`](Signature.md)\<`uint32`\> : [`ExactPartial`](ExactPartial.md)\<[`Signature`](Signature.md)\<`uint32`\>\>
+> **Authorization**\<`uint32`, `signed`\> = `object` & `signed` *extends* `true` ? [`Signature`](Signature.md)\<`uint32`\> : [`ExactPartial`](ExactPartial.md)\<[`Signature`](Signature.md)\<`uint32`\>\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/authorization.d.ts:4
+
+## Type Declaration
 
 ### address
 
-> **address**: [`Address`](Address.md)
+> **address**: [`Address`](Address-1.md)
 
 Address of the contract to delegate to.
 
@@ -30,10 +32,10 @@ Nonce of the EOA to delegate to.
 
 ## Type Parameters
 
-• **uint32** = `number`
+### uint32
 
-• **signed** *extends* `boolean` = `false`
+`uint32` = `number`
 
-## Defined in
+### signed
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/authorization.d.ts:4
+`signed` *extends* `boolean` = `false`

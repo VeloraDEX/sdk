@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Interface: Cancel
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:586
+
 ## Properties
 
 ### message
 
-> **message**: `undefined` \| `string`
+> **message**: `string` \| `undefined`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:546
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:587

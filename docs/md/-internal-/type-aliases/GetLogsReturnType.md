@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,24 +6,36 @@
 
 # Type Alias: GetLogsReturnType\<abiEvent, abiEvents, strict, fromBlock, toBlock, _eventName, _pending\>
 
-> **GetLogsReturnType**\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`, `_eventName`, `_pending`\>: [`Log`](Log.md)\<`bigint`, `number`, `_pending`, `abiEvent`, `strict`, `abiEvents`, `_eventName`\>[]
+> **GetLogsReturnType**\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`, `_eventName`, `_pending`\> = [`Log`](Log.md)\<`bigint`, `number`, `_pending`, `abiEvent`, `strict`, `abiEvents`, `_eventName`\>[]
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getLogs.d.ts:53
 
 ## Type Parameters
 
-• **abiEvent** *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
+### abiEvent
 
-• **abiEvents** *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? [`abiEvent`] : `undefined`
+`abiEvent` *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+### abiEvents
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`abiEvents` *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? \[`abiEvent`\] : `undefined`
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+### strict
 
-• **_eventName** *extends* `string` \| `undefined` = [`MaybeAbiEventName`](MaybeAbiEventName.md)\<`abiEvent`\>
+`strict` *extends* `boolean` \| `undefined` = `undefined`
 
-• **_pending** *extends* `boolean` = `fromBlock` *extends* `"pending"` ? `true` : `false` \| `toBlock` *extends* `"pending"` ? `true` : `false`
+### fromBlock
 
-## Defined in
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getLogs.d.ts:53
+### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+### _eventName
+
+`_eventName` *extends* `string` \| `undefined` = [`MaybeAbiEventName`](MaybeAbiEventName.md)\<`abiEvent`\>
+
+### _pending
+
+`_pending` *extends* `boolean` = `fromBlock` *extends* `"pending"` ? `true` : `false` \| `toBlock` *extends* `"pending"` ? `true` : `false`

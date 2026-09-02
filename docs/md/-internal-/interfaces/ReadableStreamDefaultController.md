@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,19 +6,21 @@
 
 # Interface: ReadableStreamDefaultController\<R\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:244
+
 ## Type Parameters
 
-• **R** = `any`
+### R
+
+`R` = `any`
 
 ## Properties
 
 ### desiredSize
 
-> `readonly` **desiredSize**: `null` \| `number`
+> `readonly` **desiredSize**: `number` \| `null`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:245
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:245
 
 ## Methods
 
@@ -26,46 +28,44 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > **close**(): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:246
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:246
 
 ***
 
 ### enqueue()
 
-> **enqueue**(`chunk`?): `void`
+> **enqueue**(`chunk?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:247
 
 #### Parameters
 
-• **chunk?**: `R`
+##### chunk?
+
+`R`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:247
 
 ***
 
 ### error()
 
-> **error**(`e`?): `void`
+> **error**(`e?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:248
 
 #### Parameters
 
-• **e?**: `any`
+##### e?
+
+`any`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:248

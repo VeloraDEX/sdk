@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: SimulateCallsParameters\<calls, account\>
 
-> **SimulateCallsParameters**\<`calls`, `account`\>: [`Omit`](Omit.md)\<[`SimulateBlocksParameters`](SimulateBlocksParameters.md), `"blocks"` \| `"returnFullTransactions"`\> & `object`
+> **SimulateCallsParameters**\<`calls`, `account`\> = [`Omit`](Omit.md)\<[`SimulateBlocksParameters`](SimulateBlocksParameters.md), `"blocks"` \| `"returnFullTransactions"`\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/simulateCalls.d.ts:19
+
+## Type Declaration
 
 ### account?
 
-> `optional` **account**: `account`
+> `optional` **account?**: `account`
 
 Account attached to the calls (msg.sender).
 
@@ -24,22 +26,22 @@ Calls to simulate.
 
 ### stateOverrides?
 
-> `optional` **stateOverrides**: [`StateOverride`](StateOverride.md)
+> `optional` **stateOverrides?**: [`StateOverride`](StateOverride.md)
 
 State overrides.
 
 ### traceAssetChanges?
 
-> `optional` **traceAssetChanges**: `boolean`
+> `optional` **traceAssetChanges?**: `boolean`
 
 Whether to trace asset changes.
 
 ## Type Parameters
 
-• **calls** *extends* readonly `unknown`[] = readonly `unknown`[]
+### calls
 
-• **account** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined` = [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined`
+`calls` *extends* readonly `unknown`[] = readonly `unknown`[]
 
-## Defined in
+### account
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/simulateCalls.d.ts:17
+`account` *extends* [`Account`](Account.md) \| [`Address`](Address-1.md) \| `undefined` = [`Account`](Account.md) \| [`Address`](Address-1.md) \| `undefined`

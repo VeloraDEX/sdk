@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: TransactionSerializableEIP2930\<quantity, index\>
 
-> **TransactionSerializableEIP2930**\<`quantity`, `index`\>: [`TransactionSerializableBase`](TransactionSerializableBase.md)\<`quantity`, `index`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesLegacy`](FeeValuesLegacy.md)\<`quantity`\>\> & `object`
+> **TransactionSerializableEIP2930**\<`quantity`, `index`\> = [`TransactionSerializableBase`](TransactionSerializableBase.md)\<`quantity`, `index`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesLegacy`](FeeValuesLegacy.md)\<`quantity`\>\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:196
+
+## Type Declaration
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](AccessList.md)
+> `optional` **accessList?**: [`AccessList`](AccessList-2.md)
 
 ### chainId
 
@@ -20,18 +22,18 @@
 
 ### type?
 
-> `optional` **type**: `"eip2930"`
+> `optional` **type?**: `"eip2930"`
 
 ### yParity?
 
-> `optional` **yParity**: `number`
+> `optional` **yParity?**: `number`
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-## Defined in
+### index
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:192
+`index` = `number`

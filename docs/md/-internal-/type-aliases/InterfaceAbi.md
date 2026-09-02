@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,7 +6,9 @@
 
 # Type Alias: InterfaceAbi
 
-> **InterfaceAbi**: `string` \| `ReadonlyArray`\<[`Fragment`](../classes/Fragment.md) \| [`JsonFragment`](../interfaces/JsonFragment.md) \| `string`\>
+> **InterfaceAbi** = `string` \| `ReadonlyArray`\<[`Fragment`](../classes/Fragment.md) \| [`JsonFragment`](../interfaces/JsonFragment-1.md) \| `string`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:159
 
 An **InterfaceAbi** may be any supported ABI format.
 
@@ -25,7 +27,3 @@ An **InterfaceAbi** may be any supported ABI format.
 
  A **Parsed JSON Fragment** is a JavaScript Object desribed in the
  [Solidity documentation](link-solc-jsonabi).
-
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:159

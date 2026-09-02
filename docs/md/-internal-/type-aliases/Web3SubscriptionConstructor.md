@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: Web3SubscriptionConstructor\<API, SubscriptionType\>
 
-> **Web3SubscriptionConstructor**\<`API`, `SubscriptionType`\>: (`args`, `options`) => `SubscriptionType` \| (`args`, `options`) => `SubscriptionType` \| (`args`, `options`) => `SubscriptionType`
+> **Web3SubscriptionConstructor**\<`API`, `SubscriptionType`\> = ((`args`, `options`) => `SubscriptionType`) \| ((`args`, `options`) => `SubscriptionType`) \| ((`args`, `options`) => `SubscriptionType`)
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:44
 
 ## Type Parameters
 
-• **API** *extends* [`Web3APISpec`](Web3APISpec.md)
+### API
 
-• **SubscriptionType** *extends* [`Web3Subscription`](../classes/Web3Subscription.md)\<`any`, `any`, `API`\> = [`Web3Subscription`](../classes/Web3Subscription.md)\<`any`, `any`, `API`\>
+`API` *extends* [`Web3APISpec`](Web3APISpec.md)
 
-## Defined in
+### SubscriptionType
 
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:44
+`SubscriptionType` *extends* [`Web3Subscription`](../classes/Web3Subscription.md)\<`any`, `any`, `API`\> = [`Web3Subscription`](../classes/Web3Subscription.md)\<`any`, `any`, `API`\>

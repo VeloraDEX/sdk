@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,7 @@
 
 # Interface: EventFilter
 
-An **EventFilter** allows efficiently filtering logs (also known as
- events) using bloom filters included within blocks.
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:90
 
 ## Extended by
 
@@ -18,18 +17,14 @@ An **EventFilter** allows efficiently filtering logs (also known as
 
 ### address?
 
-> `optional` **address**: [`AddressLike`](../type-aliases/AddressLike.md) \| [`AddressLike`](../type-aliases/AddressLike.md)[]
+> `optional` **address?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1003
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:91
 
 ***
 
 ### topics?
 
-> `optional` **topics**: [`TopicFilter`](../type-aliases/TopicFilter.md)
+> `optional` **topics?**: (`string` \| `string`[] \| `null`)[]
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1004
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:92

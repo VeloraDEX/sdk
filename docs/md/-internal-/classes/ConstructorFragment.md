@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,133 +6,77 @@
 
 # Class: ConstructorFragment
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:343
+
+A Fragment which represents a constructor.
+
 ## Extends
 
 - [`Fragment`](Fragment.md)
 
-## Extended by
-
-- [`FunctionFragment`](FunctionFragment.md)
-
-## Constructors
-
-### new ConstructorFragment()
-
-> **new ConstructorFragment**(`constructorGuard`, `params`): [`ConstructorFragment`](ConstructorFragment.md)
-
-#### Parameters
-
-• **constructorGuard**: `any`
-
-• **params**: `any`
-
-#### Returns
-
-[`ConstructorFragment`](ConstructorFragment.md)
-
-#### Inherited from
-
-[`Fragment`](Fragment.md).[`constructor`](Fragment.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:44
-
 ## Properties
 
-### \_isFragment
+### gas
 
-> `readonly` **\_isFragment**: `boolean`
+> `readonly` **gas**: `bigint` \| `null`
 
-#### Inherited from
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:351
 
-[`Fragment`](Fragment.md).[`_isFragment`](Fragment.md#_isfragment)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:43
-
-***
-
-### gas?
-
-> `optional` **gas**: [`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:62
+The recommended gas limit for deployment or ``null``.
 
 ***
 
 ### inputs
 
-> `readonly` **inputs**: [`ParamType`](ParamType.md)[]
+> `readonly` **inputs**: readonly [`ParamType`](ParamType.md)[]
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:231
+
+The inputs for the fragment.
 
 #### Inherited from
 
-[`Fragment`](Fragment.md).[`inputs`](Fragment.md#inputs-1)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:42
-
-***
-
-### name
-
-> `readonly` **name**: `string`
-
-#### Inherited from
-
-[`Fragment`](Fragment.md).[`name`](Fragment.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:41
+[`Fragment`](Fragment.md).[`inputs`](Fragment.md#inputs)
 
 ***
 
 ### payable
 
-> **payable**: `boolean`
+> `readonly` **payable**: `boolean`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:347
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:61
-
-***
-
-### stateMutability
-
-> **stateMutability**: `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:60
+Whether the constructor can receive an endowment.
 
 ***
 
 ### type
 
-> `readonly` **type**: `string`
+> `readonly` **type**: [`FragmentType`](../type-aliases/FragmentType.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:227
+
+The type of the fragment.
 
 #### Inherited from
 
-[`Fragment`](Fragment.md).[`type`](Fragment.md#type-1)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:40
+[`Fragment`](Fragment.md).[`type`](Fragment.md#type)
 
 ## Methods
 
 ### format()
 
-> **format**(`format`?): `string`
+> **format**(`format?`): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:359
+
+Returns a string representation of this constructor as %%format%%.
 
 #### Parameters
 
-• **format?**: `string`
+##### format?
+
+[`FormatType`](../type-aliases/FormatType-1.md)
 
 #### Returns
 
@@ -140,114 +84,169 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 #### Overrides
 
-[`Fragment`](Fragment.md).[`format`](Fragment.md#format-1)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:63
+[`Fragment`](Fragment.md).[`format`](Fragment.md#format)
 
 ***
 
 ### from()
 
-> `static` **from**(`value`): [`ConstructorFragment`](ConstructorFragment.md)
+> `static` **from**(`obj`): `ConstructorFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:363
+
+Returns a new **ConstructorFragment** for %%obj%%.
 
 #### Parameters
 
-• **value**: `string` \| [`JsonFragment`](../interfaces/JsonFragment.md) \| [`ConstructorFragment`](ConstructorFragment.md)
+##### obj
+
+`any`
 
 #### Returns
 
-[`ConstructorFragment`](ConstructorFragment.md)
+`ConstructorFragment`
 
 #### Overrides
 
-[`Fragment`](Fragment.md).[`from`](Fragment.md#from-1)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:64
+[`Fragment`](Fragment.md).[`from`](Fragment.md#from)
 
 ***
 
-### fromObject()
+### isConstructor()
 
-> `static` **fromObject**(`value`): [`ConstructorFragment`](ConstructorFragment.md)
+> `static` **isConstructor**(`value`): `value is ConstructorFragment`
 
-#### Parameters
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:248
 
-• **value**: [`JsonFragment`](../interfaces/JsonFragment.md) \| [`ConstructorFragment`](ConstructorFragment.md)
-
-#### Returns
-
-[`ConstructorFragment`](ConstructorFragment.md)
-
-#### Overrides
-
-[`Fragment`](Fragment.md).[`fromObject`](Fragment.md#fromobject)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:65
-
-***
-
-### fromString()
-
-> `static` **fromString**(`value`): [`ConstructorFragment`](ConstructorFragment.md)
+Returns true if %%value%% is a [[ConstructorFragment]].
 
 #### Parameters
 
-• **value**: `string`
+##### value
 
-#### Returns
-
-[`ConstructorFragment`](ConstructorFragment.md)
-
-#### Overrides
-
-[`Fragment`](Fragment.md).[`fromString`](Fragment.md#fromstring)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:66
-
-***
-
-### isConstructorFragment()
-
-> `static` **isConstructorFragment**(`value`): `value is ConstructorFragment`
-
-#### Parameters
-
-• **value**: `any`
+`any`
 
 #### Returns
 
 `value is ConstructorFragment`
 
-#### Defined in
+#### Inherited from
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:67
+[`Fragment`](Fragment.md).[`isConstructor`](Fragment.md#isconstructor)
+
+***
+
+### isError()
+
+> `static` **isError**(`value`): `value is ErrorFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:252
+
+Returns true if %%value%% is an [[ErrorFragment]].
+
+#### Parameters
+
+##### value
+
+`any`
+
+#### Returns
+
+`value is ErrorFragment`
+
+#### Inherited from
+
+[`Fragment`](Fragment.md).[`isError`](Fragment.md#iserror)
+
+***
+
+### isEvent()
+
+> `static` **isEvent**(`value`): `value is EventFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:256
+
+Returns true if %%value%% is an [[EventFragment]].
+
+#### Parameters
+
+##### value
+
+`any`
+
+#### Returns
+
+`value is EventFragment`
+
+#### Inherited from
+
+[`Fragment`](Fragment.md).[`isEvent`](Fragment.md#isevent)
 
 ***
 
 ### isFragment()
 
-> `static` **isFragment**(`value`): `value is Fragment`
+> `static` **isFragment**(`value`): `value is ConstructorFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:368
+
+Returns ``true`` and provides a type guard if %%value%% is a
+ **ConstructorFragment**.
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
-`value is Fragment`
+`value is ConstructorFragment`
+
+***
+
+### isFunction()
+
+> `static` **isFunction**(`value`): `value is FunctionFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:260
+
+Returns true if %%value%% is a [[FunctionFragment]].
+
+#### Parameters
+
+##### value
+
+`any`
+
+#### Returns
+
+`value is FunctionFragment`
 
 #### Inherited from
 
-[`Fragment`](Fragment.md).[`isFragment`](Fragment.md#isfragment)
+[`Fragment`](Fragment.md).[`isFunction`](Fragment.md#isfunction)
 
-#### Defined in
+***
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:49
+### isStruct()
+
+> `static` **isStruct**(`value`): `value is StructFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:264
+
+Returns true if %%value%% is a [[StructFragment]].
+
+#### Parameters
+
+##### value
+
+`any`
+
+#### Returns
+
+`value is StructFragment`
+
+#### Inherited from
+
+[`Fragment`](Fragment.md).[`isStruct`](Fragment.md#isstruct)

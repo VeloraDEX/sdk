@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,18 +6,20 @@
 
 # Function: constructAxiosFetcher()
 
-> **constructAxiosFetcher**(`axios`, `extra`?): [`FetcherFunction`](../type-aliases/FetcherFunction.md)
+> **constructAxiosFetcher**(`axios`, `extra?`): [`FetcherFunction`](../type-aliases/FetcherFunction.md)
+
+Defined in: [src/helpers/fetchers/axios.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/fetchers/axios.ts#L8)
 
 ## Parameters
 
-• **axios**: [`AxiosRequirement`](../-internal-/type-aliases/AxiosRequirement.md)
+### axios
 
-• **extra?**: [`ExtraFetchParams`](../type-aliases/ExtraFetchParams.md)
+[`AxiosRequirement`](../-internal-/type-aliases/AxiosRequirement.md)
+
+### extra?
+
+[`ExtraFetchParams`](../type-aliases/ExtraFetchParams.md)
 
 ## Returns
 
 [`FetcherFunction`](../type-aliases/FetcherFunction.md)
-
-## Defined in
-
-[src/helpers/fetchers/axios.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/fetchers/axios.ts#L8)

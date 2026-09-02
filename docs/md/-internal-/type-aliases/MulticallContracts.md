@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: MulticallContracts\<contracts, options, result\>
 
-> **MulticallContracts**\<`contracts`, `options`, `result`\>: `contracts` *extends* readonly [] ? readonly [] : `contracts` *extends* readonly [infer contract] ? readonly [`...result`, [`MaybePartial`](MaybePartial.md)\<[`Prettify`](Prettify.md)\<[`GetMulticallContractParameters`](GetMulticallContractParameters.md)\<`contract`, `options`\[`"mutability"`\]\> & `options`\[`"properties"`\]\>, `options`\[`"optional"`\]\>] : `contracts` *extends* readonly [infer contract, `...(infer rest)`] ? [`MulticallContracts`](MulticallContracts.md)\<[`...rest`], `options`, [`...result`, [`MaybePartial`](MaybePartial.md)\<[`Prettify`](Prettify.md)\<[`GetMulticallContractParameters`](GetMulticallContractParameters.md)\<`contract`, `options`\[`"mutability"`\]\> & `options`\[`"properties"`\]\>, `options`\[`"optional"`\]\>]\> : readonly `unknown`[] *extends* `contracts` ? `contracts` : `contracts` *extends* readonly infer contract[] ? readonly [`MaybePartial`](MaybePartial.md)\<[`Prettify`](Prettify.md)\<`contract` & ...\[...\]\>, `options`\[`"optional"`\]\>[] : readonly [`MaybePartial`](MaybePartial.md)\<[`Prettify`](Prettify.md)\<[`ContractFunctionParameters`](ContractFunctionParameters.md) & ...\[...\]\>, `options`\[`"optional"`\]\>[]
+> **MulticallContracts**\<`contracts`, `options`, `result`\> = `contracts` *extends* readonly \[\] ? readonly \[\] : `contracts` *extends* readonly \[infer contract\] ? readonly \[`...result`, [`MaybePartial`](MaybePartial.md)\<[`Prettify`](Prettify-1.md)\<[`GetMulticallContractParameters`](GetMulticallContractParameters.md)\<`contract`, `options`\[`"mutability"`\]\> & `options`\[`"properties"`\]\>, `options`\[`"optional"`\]\>\] : `contracts` *extends* readonly \[infer contract, `...(infer rest)`\] ? `MulticallContracts`\<\[`...rest`\], `options`, \[`...result`, [`MaybePartial`](MaybePartial.md)\<[`Prettify`](Prettify-1.md)\<[`GetMulticallContractParameters`](GetMulticallContractParameters.md)\<`contract`, `options`\[`"mutability"`\]\> & `options`\[`"properties"`\]\>, `options`\[`"optional"`\]\>\]\> : readonly `unknown`[] *extends* `contracts` ? `contracts` : `contracts` *extends* readonly infer contract[] ? readonly [`MaybePartial`](MaybePartial.md)\<[`Prettify`](Prettify-1.md)\<`contract` & ...\[...\]\>, `options`\[`"optional"`\]\>[] : readonly [`MaybePartial`](MaybePartial.md)\<[`Prettify`](Prettify-1.md)\<[`ContractFunctionParameters`](ContractFunctionParameters.md) & ...\[...\]\>, `options`\[`"optional"`\]\>[]
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/multicall.d.ts:4
 
 ## Type Parameters
 
-• **contracts** *extends* readonly `unknown`[]
+### contracts
 
-• **options** *extends* `object` = `object`
+`contracts` *extends* readonly `unknown`[]
 
-• **result** *extends* readonly `any`[] = []
+### options
 
-## Defined in
+`options` *extends* `object` = \{ `mutability`: [`AbiStateMutability`](AbiStateMutability.md); \}
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/multicall.d.ts:4
+### result
+
+`result` *extends* readonly `any`[] = \[\]

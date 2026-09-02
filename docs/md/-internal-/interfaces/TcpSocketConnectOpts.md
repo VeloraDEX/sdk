@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,123 +6,103 @@
 
 # Interface: TcpSocketConnectOpts
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:49
+
 ## Properties
 
 ### autoSelectFamily?
 
-> `optional` **autoSelectFamily**: `boolean`
+> `optional` **autoSelectFamily?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:63
 
 #### Since
 
 v18.13.0
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:63
 
 ***
 
 ### autoSelectFamilyAttemptTimeout?
 
-> `optional` **autoSelectFamilyAttemptTimeout**: `number`
+> `optional` **autoSelectFamilyAttemptTimeout?**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:67
 
 #### Since
 
 v18.13.0
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:67
-
 ***
 
 ### family?
 
-> `optional` **family**: `number`
+> `optional` **family?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:55
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:55
 
 ***
 
 ### hints?
 
-> `optional` **hints**: `number`
+> `optional` **hints?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:54
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:54
 
 ***
 
 ### host?
 
-> `optional` **host**: `string`
+> `optional` **host?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:51
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:51
 
 ***
 
 ### keepAlive?
 
-> `optional` **keepAlive**: `boolean`
+> `optional` **keepAlive?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:58
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:58
 
 ***
 
 ### keepAliveInitialDelay?
 
-> `optional` **keepAliveInitialDelay**: `number`
+> `optional` **keepAliveInitialDelay?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:59
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:59
 
 ***
 
 ### localAddress?
 
-> `optional` **localAddress**: `string`
+> `optional` **localAddress?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:52
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:52
 
 ***
 
 ### localPort?
 
-> `optional` **localPort**: `number`
+> `optional` **localPort?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:53
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:53
 
 ***
 
 ### lookup?
 
-> `optional` **lookup**: [`LookupFunction`](../type-aliases/LookupFunction.md)
+> `optional` **lookup?**: [`LookupFunction`](../type-aliases/LookupFunction.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:56
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:56
 
 ***
 
 ### noDelay?
 
-> `optional` **noDelay**: `boolean`
+> `optional` **noDelay?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:57
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:57
 
 ***
 
@@ -130,6 +110,4 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:57
 
 > **port**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:50
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:50

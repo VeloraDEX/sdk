@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: Uint8ArrayLike
 
-> **Uint8ArrayLike**: `Uint8Array` \| `number`[] \| `number` \| `bigint` \| [`PrefixedHexString`](PrefixedHexString.md)
+> **Uint8ArrayLike** = `Uint8Array` \| `number`[] \| `number` \| `bigint` \| [`PrefixedHexString`](PrefixedHexString.md)
 
-## Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:113
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/types.d.ts:113

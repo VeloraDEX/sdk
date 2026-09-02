@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AxiosInstance
 
 # Interface: AxiosInstance()
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:710
 
 ## Extends
 
@@ -14,59 +16,87 @@
 
 - [`AxiosStatic`](AxiosStatic.md)
 
-> **AxiosInstance**\<`T`, `R`, `D`\>(`config`): `Promise`\<`R`\>
+## Call Signature
 
-## Type Parameters
+> **AxiosInstance**\<`T`, `R`, `D`, `P`\>(`config`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
-• **T** = `any`
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:711
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+### Type Parameters
 
-• **D** = `any`
+#### T
 
-## Parameters
+`T` = `any`
 
-• **config**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+#### R
 
-## Returns
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
 
-`Promise`\<`R`\>
+#### D
 
-## Defined in
+`D` = `any`
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:665
+#### P
 
-> **AxiosInstance**\<`T`, `R`, `D`\>(`url`, `config`?): `Promise`\<`R`\>
+`P` = `any`
 
-## Type Parameters
+### Parameters
 
-• **T** = `any`
+#### config
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
-• **D** = `any`
+### Returns
 
-## Parameters
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
-• **url**: `string`
+## Call Signature
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+> **AxiosInstance**\<`T`, `R`, `D`, `P`\>(`url`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
-## Returns
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:714
 
-`Promise`\<`R`\>
+### Type Parameters
 
-## Defined in
+#### T
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:666
+`T` = `any`
+
+#### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+#### D
+
+`D` = `any`
+
+#### P
+
+`P` = `any`
+
+### Parameters
+
+#### url
+
+`string`
+
+#### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
+
+### Returns
+
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 ## Properties
 
 ### defaults
 
-> **defaults**: [`Omit`](../type-aliases/Omit.md)\<[`AxiosDefaults`](AxiosDefaults.md)\<`any`\>, `"headers"`\> & `object`
+> **defaults**: [`Omit`](../type-aliases/Omit.md)\<[`AxiosDefaults`](AxiosDefaults.md)\<`any`, `any`\>, `"headers"`\> & `object`
 
-#### Type declaration
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:720
+
+#### Type Declaration
 
 ##### headers
 
@@ -76,123 +106,145 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:666
 
 [`Axios`](../classes/Axios.md).[`defaults`](../classes/Axios.md#defaults)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:669
-
 ***
 
 ### interceptors
 
 > **interceptors**: `object`
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:649
+
 #### request
 
-> **request**: [`AxiosInterceptorManager`](AxiosInterceptorManager.md)\<[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)\<`any`\>\>
+> **request**: [`AxiosInterceptorManager`](AxiosInterceptorManager.md)\<[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)\<`any`, `any`\>\>
 
 #### response
 
-> **response**: [`AxiosInterceptorManager`](AxiosInterceptorManager.md)\<[`AxiosResponse`](AxiosResponse.md)\<`any`, `any`, `object`\>\>
+> **response**: [`AxiosInterceptorManager`](AxiosInterceptorManager.md)\<[`AxiosResponse`](AxiosResponse.md)\<`any`, `any`, \{ \}, `any`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`interceptors`](../classes/Axios.md#interceptors)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:605
-
 ## Methods
 
 ### create()
 
-> **create**(`config`?): [`AxiosInstance`](AxiosInstance.md)
+> **create**(`config?`): `AxiosInstance`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:719
 
 #### Parameters
 
-• **config?**: [`CreateAxiosDefaults`](CreateAxiosDefaults.md)\<`any`\>
+##### config?
+
+[`CreateAxiosDefaults`](CreateAxiosDefaults.md)\<`any`, `any`\>
 
 #### Returns
 
-[`AxiosInstance`](AxiosInstance.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:668
+`AxiosInstance`
 
 ***
 
 ### delete()
 
-> **delete**\<`T`, `R`, `D`\>(`url`, `config`?): `Promise`\<`R`\>
+> **delete**\<`T`, `R`, `D`, `P`\>(`url`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:661
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+`string`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`delete`](../classes/Axios.md#delete)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:615
-
 ***
 
 ### get()
 
-> **get**\<`T`, `R`, `D`\>(`url`, `config`?): `Promise`\<`R`\>
+> **get**\<`T`, `R`, `D`, `P`\>(`url`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:657
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+`string`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`get`](../classes/Axios.md#get)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:611
-
 ***
 
 ### getUri()
 
-> **getUri**(`config`?): `string`
+> **getUri**(`config?`): `string`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:653
 
 #### Parameters
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`any`\>
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`any`, `any`\>
 
 #### Returns
 
@@ -202,338 +254,466 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:611
 
 [`Axios`](../classes/Axios.md).[`getUri`](../classes/Axios.md#geturi)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:609
-
 ***
 
 ### head()
 
-> **head**\<`T`, `R`, `D`\>(`url`, `config`?): `Promise`\<`R`\>
+> **head**\<`T`, `R`, `D`, `P`\>(`url`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:665
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+`string`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`head`](../classes/Axios.md#head)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:619
-
 ***
 
 ### options()
 
-> **options**\<`T`, `R`, `D`\>(`url`, `config`?): `Promise`\<`R`\>
+> **options**\<`T`, `R`, `D`, `P`\>(`url`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:669
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+`string`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`options`](../classes/Axios.md#options)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:623
-
 ***
 
 ### patch()
 
-> **patch**\<`T`, `R`, `D`\>(`url`, `data`?, `config`?): `Promise`\<`R`\>
+> **patch**\<`T`, `R`, `D`, `P`\>(`url`, `data?`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:683
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **data?**: `D`
+`string`
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+##### data?
+
+`D`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`patch`](../classes/Axios.md#patch)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:637
-
 ***
 
 ### patchForm()
 
-> **patchForm**\<`T`, `R`, `D`\>(`url`, `data`?, `config`?): `Promise`\<`R`\>
+> **patchForm**\<`T`, `R`, `D`, `P`\>(`url`, `data?`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:698
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **data?**: `D`
+`string`
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+##### data?
+
+`D`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`patchForm`](../classes/Axios.md#patchform)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:652
-
 ***
 
 ### post()
 
-> **post**\<`T`, `R`, `D`\>(`url`, `data`?, `config`?): `Promise`\<`R`\>
+> **post**\<`T`, `R`, `D`, `P`\>(`url`, `data?`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:673
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **data?**: `D`
+`string`
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+##### data?
+
+`D`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`post`](../classes/Axios.md#post)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:627
-
 ***
 
 ### postForm()
 
-> **postForm**\<`T`, `R`, `D`\>(`url`, `data`?, `config`?): `Promise`\<`R`\>
+> **postForm**\<`T`, `R`, `D`, `P`\>(`url`, `data?`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:688
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **data?**: `D`
+`string`
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+##### data?
+
+`D`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`postForm`](../classes/Axios.md#postform)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:642
-
 ***
 
 ### put()
 
-> **put**\<`T`, `R`, `D`\>(`url`, `data`?, `config`?): `Promise`\<`R`\>
+> **put**\<`T`, `R`, `D`, `P`\>(`url`, `data?`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:678
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **data?**: `D`
+`string`
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+##### data?
+
+`D`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`put`](../classes/Axios.md#put)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:632
-
 ***
 
 ### putForm()
 
-> **putForm**\<`T`, `R`, `D`\>(`url`, `data`?, `config`?): `Promise`\<`R`\>
+> **putForm**\<`T`, `R`, `D`, `P`\>(`url`, `data?`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:693
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **data?**: `D`
+`string`
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+##### data?
+
+`D`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`putForm`](../classes/Axios.md#putform)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:647
-
 ***
 
 ### query()
 
-> **query**\<`T`, `R`, `D`\>(`url`, `data`?, `config`?): `Promise`\<`R`\>
+> **query**\<`T`, `R`, `D`, `P`\>(`url`, `data?`, `config?`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:703
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **url**: `string`
+##### url
 
-• **data?**: `D`
+`string`
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+##### data?
+
+`D`
+
+##### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
 [`Axios`](../classes/Axios.md).[`query`](../classes/Axios.md#query)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:657
-
 ***
 
 ### request()
 
-> **request**\<`T`, `R`, `D`\>(`config`): `Promise`\<`R`\>
+> **request**\<`T`, `R`, `D`, `P`\>(`config`): `Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:654
 
 #### Type Parameters
 
-• **T** = `any`
+##### T
 
-• **R** = [`AxiosResponse`](AxiosResponse.md)\<`T`, `any`, `object`\>
+`T` = `any`
 
-• **D** = `any`
+##### R
+
+`R` = *typeof* [`axiosResponseDefault`](../variables/axiosResponseDefault.md)
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **config**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>
+##### config
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>
 
 #### Returns
 
-`Promise`\<`R`\>
+`Promise`\<[`AxiosResponseResult`](../type-aliases/AxiosResponseResult.md)\<`T`, `R`, `D`, `P`\>\>
 
 #### Inherited from
 
-[`Axios`](../classes/Axios.md).[`request`](../classes/Axios.md#request-1)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:610
+[`Axios`](../classes/Axios.md).[`request`](../classes/Axios.md#request)

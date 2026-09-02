@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,20 @@
 
 # Interface: AxiosInterceptorOptions
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:613
+
 ## Properties
 
 ### runWhen?
 
-> `optional` **runWhen**: `null` \| (`config`) => `boolean`
+> `optional` **runWhen?**: ((`config`) => `boolean`) \| `null`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:571
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:615
 
 ***
 
 ### synchronous?
 
-> `optional` **synchronous**: `boolean`
+> `optional` **synchronous?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:570
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:614

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: RpcEstimateUserOperationGasReturnType\<entryPointVersion\>
 
-> **RpcEstimateUserOperationGasReturnType**\<`entryPointVersion`\>: [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`entryPointVersion`, [`Hex`](Hex.md)\>
+> **RpcEstimateUserOperationGasReturnType**\<`entryPointVersion`\> = [`EstimateUserOperationGasReturnType`](EstimateUserOperationGasReturnType.md)\<`entryPointVersion`, [`Hex`](Hex.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/account-abstraction/types/rpc.d.ts:5
 
 ## Type Parameters
 
-• **entryPointVersion** *extends* [`EntryPointVersion`](EntryPointVersion.md) = [`EntryPointVersion`](EntryPointVersion.md)
+### entryPointVersion
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/account-abstraction/types/rpc.d.ts:5
+`entryPointVersion` *extends* [`EntryPointVersion`](EntryPointVersion.md) = [`EntryPointVersion`](EntryPointVersion.md)

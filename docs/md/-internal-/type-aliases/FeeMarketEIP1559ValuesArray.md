@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,10 +6,8 @@
 
 # Type Alias: FeeMarketEIP1559ValuesArray
 
-> **FeeMarketEIP1559ValuesArray**: [`Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, [`AccessListUint8Array`](AccessListUint8Array.md), `Uint8Array?`, `Uint8Array?`, `Uint8Array?`]
+> **FeeMarketEIP1559ValuesArray** = \[`Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, [`AccessListUint8Array`](AccessListUint8Array.md), `Uint8Array`?, `Uint8Array`?, `Uint8Array`?\]
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:177
 
 Uint8Array values array for a FeeMarketEIP1559Transaction
-
-## Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:177

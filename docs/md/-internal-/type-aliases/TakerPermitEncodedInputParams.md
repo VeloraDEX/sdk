@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: TakerPermitEncodedInputParams
 
-> **TakerPermitEncodedInputParams**: `object`
+> **TakerPermitEncodedInputParams** = `object`
 
-## Type declaration
+Defined in: [src/methods/otcOrders/fillOrderDirectly.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/fillOrderDirectly.ts#L19)
+
+## Properties
 
 ### encodedPermitParams
 
 > **encodedPermitParams**: `string`
 
-## Defined in
-
-[src/methods/otcOrders/fillOrderDirectly.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/fillOrderDirectly.ts#L19)
+Defined in: [src/methods/otcOrders/fillOrderDirectly.ts:20](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/fillOrderDirectly.ts#L20)

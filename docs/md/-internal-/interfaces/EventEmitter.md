@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,87 +6,111 @@
 
 # Interface: EventEmitter\<Events\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:649
+
 ## Extended by
 
-- [`ReadableStream`](ReadableStream.md)
-- [`EventEmitter`](../classes/EventEmitter.md)
-- [`WritableStream`](WritableStream.md)
+- [`ReadableStream`](ReadableStream-1.md)
+- [`EventEmitter`](../classes/EventEmitter-1.md)
+- [`WritableStream`](WritableStream-1.md)
 
 ## Type Parameters
 
-• **Events** *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\> = `object`
+### Events
+
+`Events` *extends* [`EventMap`](../type-aliases/EventMap.md)\<`Events`\> = \{ \}
 
 ## Methods
 
 ### \[captureRejectionSymbol\]()?
 
-#### \[captureRejectionSymbol\](error, event, args)
+#### Call Signature
 
 > `optional` **\[captureRejectionSymbol\]**\<`EventName`\>(`error`, `event`, ...`args`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:650
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **error**: [`Error`](Error.md)
+###### error
 
-• **event**: `EventName`
+`Error`
 
-• ...**args**: [`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>
+###### event
+
+`EventName`
+
+###### args
+
+...[`Args`](../type-aliases/Args-6.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `void`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:650
-
-#### \[captureRejectionSymbol\](error, event, args)
+#### Call Signature
 
 > `optional` **\[captureRejectionSymbol\]**\<`EventName`\>(`error`, `event`, ...`args`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:655
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **error**: [`Error`](Error.md)
+###### error
 
-• **event**: `EventName`
+`Error`
 
-• ...**args**: [`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>
+###### event
+
+`EventName`
+
+###### args
+
+...[`Args`](../type-aliases/Args-6.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `void`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:655
 
 ***
 
 ### addListener()
 
-#### addListener(eventName, listener)
+#### Call Signature
 
 > **addListener**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:664
 
 Alias for `emitter.on(eventName, listener)`.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
@@ -96,39 +120,41 @@ Alias for `emitter.on(eventName, listener)`.
 
 v0.1.26
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:664
-
-#### addListener(eventName, listener)
+#### Call Signature
 
 > **addListener**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:668
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `this`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:668
-
 ***
 
 ### emit()
 
-#### emit(eventName, args)
+#### Call Signature
 
 > **emit**\<`EventName`\>(`eventName`, ...`args`): `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:974
 
 Synchronously calls each of the listeners registered for the event named `eventName`, in the order they were registered, passing the supplied arguments
 to each.
@@ -170,13 +196,19 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• ...**args**: [`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### args
+
+...[`Args`](../type-aliases/Args-6.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
@@ -186,37 +218,39 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 v0.1.26
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:974
-
-#### emit(eventName, args)
+#### Call Signature
 
 > **emit**\<`EventName`\>(`eventName`, ...`args`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:978
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• ...**args**: [`Args`](../type-aliases/Args.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### args
+
+...[`Args`](../type-aliases/Args-6.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `boolean`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:978
 
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[] & [`EventNames`](../type-aliases/EventNames.md)\<`Events`\>[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1065
 
 Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
@@ -243,15 +277,13 @@ console.log(myEE.eventNames());
 
 v6.0.0
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1065
-
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
 
 Returns the current max listener value for the `EventEmitter` which is either
 set by `emitter.setMaxListeners(n)` or defaults to defaultMaxListeners.
@@ -264,17 +296,15 @@ set by `emitter.setMaxListeners(n)` or defaults to defaultMaxListeners.
 
 v1.0.0
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
-
 ***
 
 ### listenerCount()
 
-#### listenerCount(eventName, listener)
+#### Call Signature
 
-> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+> **listenerCount**\<`EventName`\>(`eventName`, `listener?`): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
 
 Returns the number of listeners listening for the event named `eventName`.
 If `listener` is provided, it will return how many times the listener is found
@@ -282,15 +312,21 @@ in the list of the listeners of the event.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event being listened for
 
-• **listener?**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+###### listener?
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 The event handler function
 
@@ -302,39 +338,41 @@ The event handler function
 
 v3.2.0
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
+> **listenerCount**\<`EventName`\>(`eventName`, `listener?`): `number`
 
-#### listenerCount(eventName, listener)
-
-> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:994
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener?**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener?
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `number`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:994
-
 ***
 
 ### listeners()
 
-#### listeners(eventName)
+#### Call Signature
 
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:892
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -348,63 +386,73 @@ console.log(util.inspect(server.listeners('connection')));
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
 
 ##### Since
 
 v0.1.26
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:892
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
 
-#### listeners(eventName)
-
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:895
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:895
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
 
 ***
 
 ### off()
 
-#### off(eventName, listener)
+#### Call Signature
 
 > **off**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
 
 Alias for `emitter.removeListener()`.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
@@ -414,39 +462,41 @@ Alias for `emitter.removeListener()`.
 
 v10.0.0
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
-
-#### off(eventName, listener)
+#### Call Signature
 
 > **off**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:846
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `this`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:846
-
 ***
 
 ### on()
 
-#### on(eventName, listener)
+#### Call Signature
 
 > **on**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:703
 
 Adds the `listener` function to the end of the listeners array for the event
 named `eventName`. No checks are made to see if the `listener` has already
@@ -477,15 +527,21 @@ myEE.emit('foo');
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event.
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 The callback function
 
@@ -497,39 +553,41 @@ The callback function
 
 v0.1.101
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:703
-
-#### on(eventName, listener)
+#### Call Signature
 
 > **on**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:707
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `this`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:707
-
 ***
 
 ### once()
 
-#### once(eventName, listener)
+#### Call Signature
 
 > **once**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:740
 
 Adds a **one-time** `listener` function for the event named `eventName`. The
 next time `eventName` is triggered, this listener is removed and then invoked.
@@ -558,15 +616,21 @@ myEE.emit('foo');
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event.
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 The callback function
 
@@ -578,39 +642,41 @@ The callback function
 
 v0.3.0
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:740
-
-#### once(eventName, listener)
+#### Call Signature
 
 > **once**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:744
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `this`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:744
-
 ***
 
 ### prependListener()
 
-#### prependListener(eventName, listener)
+#### Call Signature
 
 > **prependListener**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1015
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -627,15 +693,21 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event.
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 The callback function
 
@@ -647,39 +719,41 @@ The callback function
 
 v6.0.0
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1015
-
-#### prependListener(eventName, listener)
+#### Call Signature
 
 > **prependListener**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1019
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `this`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1019
-
 ***
 
 ### prependOnceListener()
 
-#### prependOnceListener(eventName, listener)
+#### Call Signature
 
 > **prependOnceListener**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1038
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -694,15 +768,21 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event.
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 The callback function
 
@@ -714,39 +794,41 @@ The callback function
 
 v6.0.0
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1038
-
-#### prependOnceListener(eventName, listener)
+#### Call Signature
 
 > **prependOnceListener**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1042
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `this`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1042
-
 ***
 
 ### rawListeners()
 
-#### rawListeners(eventName)
+#### Call Signature
 
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:928
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -778,51 +860,55 @@ emitter.emit('log');
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
 
 ##### Since
 
 v9.4.0
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:928
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
 
-#### rawListeners(eventName)
-
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:931
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:931
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
 
 ***
 
 ### removeAllListeners()
 
-#### removeAllListeners(eventName)
+#### Call Signature
 
 > **removeAllListeners**\<`EventName`\>(`eventName`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -834,11 +920,15 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
@@ -848,37 +938,37 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v0.1.26
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
+> **removeAllListeners**\<`EventName`\>(`eventName?`): `this`
 
-#### removeAllListeners(eventName)
-
-> **removeAllListeners**\<`EventName`\>(`eventName`?): `this`
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:862
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName?**: `EventName`
+###### eventName?
+
+`EventName`
 
 ##### Returns
 
 `this`
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:862
-
 ***
 
 ### removeListener()
 
-#### removeListener(eventName, listener)
+#### Call Signature
 
 > **removeListener**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:830
 
 Removes the specified `listener` from the listener array for the event named `eventName`.
 
@@ -962,13 +1052,19 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
@@ -978,37 +1074,39 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 v0.1.26
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:830
-
-#### removeListener(eventName, listener)
+#### Call Signature
 
 > **removeListener**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:834
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)\<`Events`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../type-aliases/Listener-2.md)\<`Events`, `EventName`\>
 
 ##### Returns
 
 `this`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:834
 
 ***
 
 ### setMaxListeners()
 
 > **setMaxListeners**(`n`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -1019,7 +1117,9 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-• **n**: `number`
+##### n
+
+`number`
 
 #### Returns
 
@@ -1028,7 +1128,3 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 #### Since
 
 v0.3.5
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873

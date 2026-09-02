@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,10 +6,8 @@
 
 # Type Alias: AccessListEIP2930ValuesArray
 
-> **AccessListEIP2930ValuesArray**: [`Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, [`AccessListUint8Array`](AccessListUint8Array.md), `Uint8Array?`, `Uint8Array?`, `Uint8Array?`]
+> **AccessListEIP2930ValuesArray** = \[`Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, `Uint8Array`, [`AccessListUint8Array`](AccessListUint8Array.md), `Uint8Array`?, `Uint8Array`?, `Uint8Array`?\]
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:161
 
 Uint8Array values array for an AccessListEIP2930Transaction
-
-## Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:161

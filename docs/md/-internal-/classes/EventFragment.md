@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,71 +6,37 @@
 
 # Class: EventFragment
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:309
+
+A Fragment which represents an Event.
+
 ## Extends
 
-- [`Fragment`](Fragment.md)
-
-## Constructors
-
-### new EventFragment()
-
-> **new EventFragment**(`constructorGuard`, `params`): [`EventFragment`](EventFragment.md)
-
-#### Parameters
-
-• **constructorGuard**: `any`
-
-• **params**: `any`
-
-#### Returns
-
-[`EventFragment`](EventFragment.md)
-
-#### Inherited from
-
-[`Fragment`](Fragment.md).[`constructor`](Fragment.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:44
+- [`NamedFragment`](NamedFragment.md)
 
 ## Properties
-
-### \_isFragment
-
-> `readonly` **\_isFragment**: `boolean`
-
-#### Inherited from
-
-[`Fragment`](Fragment.md).[`_isFragment`](Fragment.md#_isfragment)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:43
-
-***
 
 ### anonymous
 
 > `readonly` **anonymous**: `boolean`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:313
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:52
+Whether this event is anonymous.
 
 ***
 
 ### inputs
 
-> `readonly` **inputs**: [`ParamType`](ParamType.md)[]
+> `readonly` **inputs**: readonly [`ParamType`](ParamType.md)[]
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:231
+
+The inputs for the fragment.
 
 #### Inherited from
 
-[`Fragment`](Fragment.md).[`inputs`](Fragment.md#inputs-1)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:42
+[`NamedFragment`](NamedFragment.md).[`inputs`](NamedFragment.md#inputs)
 
 ***
 
@@ -78,37 +44,59 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **name**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:274
+
+The name of the fragment.
+
 #### Inherited from
 
-[`Fragment`](Fragment.md).[`name`](Fragment.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:41
+[`NamedFragment`](NamedFragment.md).[`name`](NamedFragment.md#name)
 
 ***
 
 ### type
 
-> `readonly` **type**: `string`
+> `readonly` **type**: [`FragmentType`](../type-aliases/FragmentType.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:227
+
+The type of the fragment.
 
 #### Inherited from
 
-[`Fragment`](Fragment.md).[`type`](Fragment.md#type-1)
+[`NamedFragment`](NamedFragment.md).[`type`](NamedFragment.md#type)
 
-#### Defined in
+## Accessors
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:40
+### topicHash
+
+#### Get Signature
+
+> **get** **topicHash**(): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:321
+
+The Event topic hash.
+
+##### Returns
+
+`string`
 
 ## Methods
 
 ### format()
 
-> **format**(`format`?): `string`
+> **format**(`format?`): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:325
+
+Returns a string representation of this event as %%format%%.
 
 #### Parameters
 
-• **format?**: `string`
+##### format?
+
+[`FormatType`](../type-aliases/FormatType-1.md)
 
 #### Returns
 
@@ -116,114 +104,193 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 #### Overrides
 
-[`Fragment`](Fragment.md).[`format`](Fragment.md#format-1)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:53
+[`NamedFragment`](NamedFragment.md).[`format`](NamedFragment.md#format)
 
 ***
 
 ### from()
 
-> `static` **from**(`value`): [`EventFragment`](EventFragment.md)
+> `static` **from**(`obj`): `EventFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:333
+
+Returns a new **EventFragment** for %%obj%%.
 
 #### Parameters
 
-• **value**: `string` \| [`JsonFragment`](../interfaces/JsonFragment.md) \| [`EventFragment`](EventFragment.md)
+##### obj
+
+`any`
 
 #### Returns
 
-[`EventFragment`](EventFragment.md)
+`EventFragment`
 
 #### Overrides
 
-[`Fragment`](Fragment.md).[`from`](Fragment.md#from-1)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:54
+[`NamedFragment`](NamedFragment.md).[`from`](NamedFragment.md#from)
 
 ***
 
-### fromObject()
+### getTopicHash()
 
-> `static` **fromObject**(`value`): [`EventFragment`](EventFragment.md)
+> `static` **getTopicHash**(`name`, `params?`): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:329
+
+Return the topic hash for an event with %%name%% and %%params%%.
 
 #### Parameters
 
-• **value**: [`JsonFragment`](../interfaces/JsonFragment.md) \| [`EventFragment`](EventFragment.md)
+##### name
+
+`string`
+
+##### params?
+
+`any`[]
 
 #### Returns
 
-[`EventFragment`](EventFragment.md)
-
-#### Overrides
-
-[`Fragment`](Fragment.md).[`fromObject`](Fragment.md#fromobject)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:55
+`string`
 
 ***
 
-### fromString()
+### isConstructor()
 
-> `static` **fromString**(`value`): [`EventFragment`](EventFragment.md)
+> `static` **isConstructor**(`value`): `value is ConstructorFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:248
+
+Returns true if %%value%% is a [[ConstructorFragment]].
 
 #### Parameters
 
-• **value**: `string`
+##### value
+
+`any`
 
 #### Returns
 
-[`EventFragment`](EventFragment.md)
+`value is ConstructorFragment`
 
-#### Overrides
+#### Inherited from
 
-[`Fragment`](Fragment.md).[`fromString`](Fragment.md#fromstring)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:56
+[`NamedFragment`](NamedFragment.md).[`isConstructor`](NamedFragment.md#isconstructor)
 
 ***
 
-### isEventFragment()
+### isError()
 
-> `static` **isEventFragment**(`value`): `value is EventFragment`
+> `static` **isError**(`value`): `value is ErrorFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:252
+
+Returns true if %%value%% is an [[ErrorFragment]].
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
+
+#### Returns
+
+`value is ErrorFragment`
+
+#### Inherited from
+
+[`NamedFragment`](NamedFragment.md).[`isError`](NamedFragment.md#iserror)
+
+***
+
+### isEvent()
+
+> `static` **isEvent**(`value`): `value is EventFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:256
+
+Returns true if %%value%% is an [[EventFragment]].
+
+#### Parameters
+
+##### value
+
+`any`
 
 #### Returns
 
 `value is EventFragment`
 
-#### Defined in
+#### Inherited from
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:57
+[`NamedFragment`](NamedFragment.md).[`isEvent`](NamedFragment.md#isevent)
 
 ***
 
 ### isFragment()
 
-> `static` **isFragment**(`value`): `value is Fragment`
+> `static` **isFragment**(`value`): `value is EventFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:338
+
+Returns ``true`` and provides a type guard if %%value%% is an
+ **EventFragment**.
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
-`value is Fragment`
+`value is EventFragment`
+
+***
+
+### isFunction()
+
+> `static` **isFunction**(`value`): `value is FunctionFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:260
+
+Returns true if %%value%% is a [[FunctionFragment]].
+
+#### Parameters
+
+##### value
+
+`any`
+
+#### Returns
+
+`value is FunctionFragment`
 
 #### Inherited from
 
-[`Fragment`](Fragment.md).[`isFragment`](Fragment.md#isfragment)
+[`NamedFragment`](NamedFragment.md).[`isFunction`](NamedFragment.md#isfunction)
 
-#### Defined in
+***
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:49
+### isStruct()
+
+> `static` **isStruct**(`value`): `value is StructFragment`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:264
+
+Returns true if %%value%% is a [[StructFragment]].
+
+#### Parameters
+
+##### value
+
+`any`
+
+#### Returns
+
+`value is StructFragment`
+
+#### Inherited from
+
+[`NamedFragment`](NamedFragment.md).[`isStruct`](NamedFragment.md#isstruct)

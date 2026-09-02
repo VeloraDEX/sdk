@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../../../README.md)
 
 ***
 
@@ -6,18 +6,20 @@
 
 # Function: \_\_promisify\_\_()
 
-> **\_\_promisify\_\_**(`stream`, `options`?): `Promise`\<`void`\>
+> **\_\_promisify\_\_**(`stream`, `options?`): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1468
 
 ## Parameters
 
-• **stream**: [`ReadableStream`](../../../../../interfaces/ReadableStream.md) \| [`WritableStream`](../../../../../interfaces/WritableStream.md) \| [`ReadWriteStream`](../../../../../interfaces/ReadWriteStream.md)
+### stream
 
-• **options?**: [`FinishedOptions`](../../../interfaces/FinishedOptions.md)
+[`ReadableStream`](../../../../../interfaces/ReadableStream-1.md) \| [`WritableStream`](../../../../../interfaces/WritableStream-1.md) \| [`ReadWriteStream`](../../../../../interfaces/ReadWriteStream.md)
+
+### options?
+
+[`FinishedOptions`](../../../interfaces/FinishedOptions.md)
 
 ## Returns
 
 `Promise`\<`void`\>
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1468

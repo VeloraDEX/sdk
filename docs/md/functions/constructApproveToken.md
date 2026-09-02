@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,18 +8,20 @@
 
 > **constructApproveToken**\<`T`\>(`options`): [`ApproveTokenFunctions`](../type-aliases/ApproveTokenFunctions.md)\<`T`\>
 
+Defined in: [src/methods/swap/approve.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/approve.ts#L25)
+
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **options**: [`ConstructProviderFetchInput`](../interfaces/ConstructProviderFetchInput.md)\<`T`, `"transactCall"`\>
+### options
+
+[`ConstructProviderFetchInput`](../interfaces/ConstructProviderFetchInput.md)\<`T`, `"transactCall"`\>
 
 ## Returns
 
 [`ApproveTokenFunctions`](../type-aliases/ApproveTokenFunctions.md)\<`T`\>
-
-## Defined in
-
-[src/methods/swap/approve.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/approve.ts#L25)

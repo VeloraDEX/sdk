@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: CreateContractEventFilterParameters\<abi, eventName, args, strict, fromBlock, toBlock\>
 
-> **CreateContractEventFilterParameters**\<`abi`, `eventName`, `args`, `strict`, `fromBlock`, `toBlock`\>: `object` & `undefined` *extends* `eventName` ? `object` : [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abi`, `eventName`\> *extends* infer eventFilterArgs ? `object` : `object`
+> **CreateContractEventFilterParameters**\<`abi`, `eventName`, `args`, `strict`, `fromBlock`, `toBlock`\> = `object` & `undefined` *extends* `eventName` ? `object` : [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abi`, `eventName`\> *extends* infer eventFilterArgs ? `object` : `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/createContractEventFilter.d.ts:12
+
+## Type Declaration
 
 ### abi
 
@@ -16,19 +18,19 @@
 
 ### address?
 
-> `optional` **address**: [`Address`](Address.md) \| [`Address`](Address.md)[]
+> `optional` **address?**: [`Address`](Address-1.md) \| [`Address`](Address-1.md)[]
 
 ### eventName?
 
-> `optional` **eventName**: `eventName` \| [`ContractEventName`](ContractEventName.md)\<`abi`\>
+> `optional` **eventName?**: `eventName` \| [`ContractEventName`](ContractEventName-1.md)\<`abi`\>
 
 ### fromBlock?
 
-> `optional` **fromBlock**: `fromBlock` \| [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md)
+> `optional` **fromBlock?**: `fromBlock` \| [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md)
 
 ### strict?
 
-> `optional` **strict**: `strict` \| `boolean`
+> `optional` **strict?**: `strict` \| `boolean`
 
 Whether or not the logs must match the indexed/non-indexed arguments in the event ABI item.
 
@@ -40,22 +42,30 @@ false
 
 ### toBlock?
 
-> `optional` **toBlock**: `toBlock` \| [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md)
+> `optional` **toBlock?**: `toBlock` \| [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md)
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### abi
 
-• **eventName** *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> \| `undefined` = `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **args** *extends* [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abi`, `eventName`\> \| `undefined` = `undefined`
+### eventName
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+`eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> \| `undefined` = `undefined`
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+### args
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`args` *extends* [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abi`, `eventName`\> \| `undefined` = `undefined`
 
-## Defined in
+### strict
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/createContractEventFilter.d.ts:12
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: UnionLooseOmit\<type, keys\>
 
-> **UnionLooseOmit**\<`type`, `keys`\>: `type` *extends* `any` ? [`LooseOmit`](LooseOmit.md)\<`type`, `keys`\> : `never`
+> **UnionLooseOmit**\<`type`, `keys`\> = `type` *extends* `any` ? [`LooseOmit`](LooseOmit.md)\<`type`, `keys`\> : `never`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:180
 
 ## Type Parameters
 
-• **type**
+### type
 
-• **keys** *extends* `string`
+`type`
 
-## Defined in
+### keys
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:179
+`keys` *extends* `string`

@@ -1,36 +1,21 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Merge
 
-# Type Alias: Merge\<object1, object2\>
+# Type Alias: Merge\<Object1, Object2\>
 
-> **Merge**\<`object1`, `object2`\>: [`Omit`](Omit.md)\<`object1`, keyof `object2`\> & `object2`
+> **Merge**\<`Object1`, `Object2`\> = [`Omit`](Omit.md)\<`Object1`, keyof `Object2`\> & `Object2`
 
-Merges two object types into new type
+Defined in: node\_modules/.pnpm/ts-essentials@10.0.3\_typescript@5.9.3/node\_modules/ts-essentials/dist/merge/index.d.ts:1
 
 ## Type Parameters
 
-• **object1**
+### Object1
 
-Object to merge into
+`Object1`
 
-• **object2**
+### Object2
 
-Object to merge and override keys from [object1](Merge.md)
-
-## Returns
-
-New object type with keys from [object1](Merge.md) and [object2](Merge.md). If a key exists in both [object1](Merge.md) and [object2](Merge.md), the key from [object2](Merge.md) will be used.
-
-## Example
-
-```ts
-type Result = Merge<{ foo: string }, { foo: number; bar: string }>
-//   ^? type Result = { foo: number; bar: string }
-```
-
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/types.d.ts:86
+`Object2`

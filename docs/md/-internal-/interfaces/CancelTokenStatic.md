@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,23 +6,25 @@
 
 # Interface: CancelTokenStatic
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:594
+
 ## Constructors
 
-### new CancelTokenStatic()
+### Constructor
 
 > **new CancelTokenStatic**(`executor`): [`CancelToken`](CancelToken.md)
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:595
+
 #### Parameters
 
-• **executor**
+##### executor
+
+(`cancel`) => `void`
 
 #### Returns
 
 [`CancelToken`](CancelToken.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:554
 
 ## Methods
 
@@ -30,10 +32,8 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:554
 
 > **source**(): [`CancelTokenSource`](CancelTokenSource.md)
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:596
+
 #### Returns
 
 [`CancelTokenSource`](CancelTokenSource.md)
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:555

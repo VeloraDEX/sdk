@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: DefaultedKeys
 
-> **DefaultedKeys**: `"tokenType"` \| `"mainConnector"` \| `"connectors"` \| `"network"` \| `"sources"` \| `"categories"` \| `"tags"`
+> **DefaultedKeys** = `"tokenType"` \| `"mainConnector"` \| `"connectors"` \| `"network"` \| `"sources"` \| `"categories"` \| `"tags"`
 
-## Defined in
-
-[src/helpers/token.ts:56](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L56)
+Defined in: [src/helpers/token.ts:56](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L56)

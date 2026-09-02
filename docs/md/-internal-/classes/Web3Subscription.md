@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Web3Subscription
 
-# Class: `abstract` Web3Subscription\<EventMap, ArgsType, API, CombinedEventMap\>
+# Abstract Class: Web3Subscription\<EventMap, ArgsType, API, CombinedEventMap\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:10
 
 ## Extends
 
@@ -16,63 +18,83 @@
 - [`NewPendingTransactionsSubscription`](NewPendingTransactionsSubscription.md)
 - [`NewHeadsSubscription`](NewHeadsSubscription.md)
 - [`SyncingSubscription`](SyncingSubscription.md)
-- [`LogsSubscription`](LogsSubscription.md)
+- [`LogsSubscription`](LogsSubscription-1.md)
 
 ## Type Parameters
 
-• **EventMap** *extends* [`Web3EventMap`](../type-aliases/Web3EventMap.md)
+### EventMap
 
-• **ArgsType** = `any`
+`EventMap` *extends* [`Web3EventMap`](../type-aliases/Web3EventMap.md)
 
-• **API** *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`EthExecutionAPI`](../type-aliases/EthExecutionAPI.md)
+### ArgsType
 
-• **CombinedEventMap** *extends* [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md) = `EventMap` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)
+`ArgsType` = `any`
+
+### API
+
+`API` *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`EthExecutionAPI`](../type-aliases/EthExecutionAPI.md)
+
+### CombinedEventMap
+
+`CombinedEventMap` *extends* [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md) = `EventMap` & [`CommonSubscriptionEvents`](../type-aliases/CommonSubscriptionEvents.md)
 
 ## Constructors
 
-### new Web3Subscription()
+### Constructor
 
-> **new Web3Subscription**\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>(`args`, `options`): [`Web3Subscription`](Web3Subscription.md)\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>
+> **new Web3Subscription**\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>(`args`, `options`): `Web3Subscription`\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:16
 
 #### Parameters
 
-• **args**: `ArgsType`
+##### args
 
-• **options**
+`ArgsType`
 
-• **options.returnFormat?**: [`DataFormat`](../type-aliases/DataFormat.md)
+##### options
 
-• **options.subscriptionManager**: [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`unknown`, `object`\>
+###### returnFormat?
+
+[`DataFormat`](../type-aliases/DataFormat.md)
+
+###### subscriptionManager
+
+[`Web3SubscriptionManager`](Web3SubscriptionManager.md)
 
 #### Returns
 
-[`Web3Subscription`](Web3Subscription.md)\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>
+`Web3Subscription`\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>
 
 #### Overrides
 
-[`Web3EventEmitter`](Web3EventEmitter.md).[`constructor`](Web3EventEmitter.md#constructors)
+[`Web3EventEmitter`](Web3EventEmitter.md).[`constructor`](Web3EventEmitter.md#constructor)
 
-#### Defined in
+### Constructor
 
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:16
+> **new Web3Subscription**\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>(`args`, `options`): `Web3Subscription`\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>
 
-### new Web3Subscription()
-
-> **new Web3Subscription**\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>(`args`, `options`): [`Web3Subscription`](Web3Subscription.md)\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:23
 
 #### Parameters
 
-• **args**: `ArgsType`
+##### args
 
-• **options**
+`ArgsType`
 
-• **options.requestManager**: [`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
+##### options
 
-• **options.returnFormat?**: [`DataFormat`](../type-aliases/DataFormat.md)
+###### requestManager
+
+[`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
+
+###### returnFormat?
+
+[`DataFormat`](../type-aliases/DataFormat.md)
 
 #### Returns
 
-[`Web3Subscription`](Web3Subscription.md)\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>
+`Web3Subscription`\<`EventMap`, `ArgsType`, `API`, `CombinedEventMap`\>
 
 #### Deprecated
 
@@ -82,19 +104,13 @@ This constructor overloading should not be used
 
 `Web3EventEmitter<CombinedEventMap>.constructor`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:23
-
 ## Properties
 
 ### \_id?
 
-> `protected` `optional` **\_id**: `string`
+> `protected` `optional` **\_id?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:15
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:15
 
 ***
 
@@ -102,9 +118,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > `readonly` **args**: `ArgsType`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:11
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:11
 
 ## Accessors
 
@@ -112,15 +126,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 #### Get Signature
 
-> **get** **id**(): `undefined` \| `string`
+> **get** **id**(): `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:27
 
 ##### Returns
 
-`undefined` \| `string`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:27
+`string` \| `undefined`
 
 ***
 
@@ -128,15 +140,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 #### Get Signature
 
-> **get** **lastBlock**(): `undefined` \| [`BlockOutput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
+> **get** **lastBlock**(): [`BlockOutput`](../interfaces/BlockOutput.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:28
 
 ##### Returns
 
-`undefined` \| [`BlockOutput`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/BlockOutput.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:28
+[`BlockOutput`](../interfaces/BlockOutput.md) \| `undefined`
 
 ***
 
@@ -146,13 +156,11 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **get** `protected` **returnFormat**(): [`DataFormat`](../type-aliases/DataFormat.md)
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:32
+
 ##### Returns
 
 [`DataFormat`](../type-aliases/DataFormat.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:32
 
 ***
 
@@ -160,29 +168,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 #### Get Signature
 
-> **get** `protected` **subscriptionManager**(): [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `object`\>
+> **get** `protected` **subscriptionManager**(): [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, \{\[`key`: `string`\]: [`Web3SubscriptionConstructor`](../type-aliases/Web3SubscriptionConstructor.md)\<`API`, `Web3Subscription`\<`any`, `any`, `API`, `any`\>\>; \}\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:33
 
 ##### Returns
 
-[`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `object`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:33
+[`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, \{\[`key`: `string`\]: [`Web3SubscriptionConstructor`](../type-aliases/Web3SubscriptionConstructor.md)\<`API`, `Web3Subscription`\<`any`, `any`, `API`, `any`\>\>; \}\>
 
 ## Methods
 
 ### \_buildSubscriptionParams()
 
-> `protected` **\_buildSubscriptionParams**(): [`Web3APIParams`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIParams.md)\<`API`, `"eth_subscribe"`\>
+> `protected` **\_buildSubscriptionParams**(): [`Web3APIParams`](../type-aliases/Web3APIParams.md)\<`API`, `"eth_subscribe"`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:42
 
 #### Returns
 
-[`Web3APIParams`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIParams.md)\<`API`, `"eth_subscribe"`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:42
+[`Web3APIParams`](../type-aliases/Web3APIParams.md)\<`API`, `"eth_subscribe"`\>
 
 ***
 
@@ -190,17 +194,17 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **\_processSubscriptionError**(`error`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:41
+
 #### Parameters
 
-• **error**: [`Error`](../interfaces/Error.md)
+##### error
+
+`Error`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:41
 
 ***
 
@@ -208,17 +212,17 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **\_processSubscriptionResult**(`data`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:40
+
 #### Parameters
 
-• **data**: `unknown`
+##### data
+
+`unknown`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:40
 
 ***
 
@@ -226,15 +230,23 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **emit**\<`K`\>(`eventName`, `params`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **params**: `CombinedEventMap`\[`K`\]
+`K`
+
+##### params
+
+`CombinedEventMap`\[`K`\]
 
 #### Returns
 
@@ -244,15 +256,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`emit`](Web3EventEmitter.md#emit)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:16
-
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
 
 #### Returns
 
@@ -262,33 +272,31 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`eventNames`](Web3EventEmitter.md#eventnames)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:19
-
 ***
 
 ### formatSubscriptionResult()
 
 > `protected` **formatSubscriptionResult**(`data`): `CombinedEventMap`\[`"data"`\]
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:39
+
 #### Parameters
 
-• **data**: `CombinedEventMap`\[`"data"`\]
+##### data
+
+`CombinedEventMap`\[`"data"`\]
 
 #### Returns
 
 `CombinedEventMap`\[`"data"`\]
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:39
 
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
 
 #### Returns
 
@@ -298,23 +306,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`getMaxListeners`](Web3EventEmitter.md#getmaxlisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:22
-
 ***
 
 ### listenerCount()
 
 > **listenerCount**\<`K`\>(`eventName`): `number`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -324,23 +334,25 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`listenerCount`](Web3EventEmitter.md#listenercount)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:17
-
 ***
 
 ### listeners()
 
 > **listeners**\<`K`\>(`eventName`): (...`args`) => `void`[]
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
+
+`K`
 
 #### Returns
 
@@ -350,25 +362,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`listeners`](Web3EventEmitter.md#listeners)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:18
-
 ***
 
 ### off()
 
 > **off**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`CombinedEventMap`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`CombinedEventMap`\[`K`\]\>
 
 #### Returns
 
@@ -378,25 +394,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`off`](Web3EventEmitter.md#off)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:15
-
 ***
 
 ### on()
 
 > **on**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`CombinedEventMap`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`CombinedEventMap`\[`K`\]\>
 
 #### Returns
 
@@ -406,25 +426,29 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`on`](Web3EventEmitter.md#on)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:13
-
 ***
 
 ### once()
 
 > **once**\<`K`\>(`eventName`, `fn`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
+
 #### Type Parameters
 
-• **K** *extends* `string`
+##### K
+
+`K` *extends* `string`
 
 #### Parameters
 
-• **eventName**: `K`
+##### eventName
 
-• **fn**: [`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`CombinedEventMap`\[`K`\]\>
+`K`
+
+##### fn
+
+[`Web3EventCallback`](../type-aliases/Web3EventCallback.md)\<`CombinedEventMap`\[`K`\]\>
 
 #### Returns
 
@@ -434,45 +458,39 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`once`](Web3EventEmitter.md#once)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:14
-
 ***
 
 ### processSubscriptionData()
 
 > **processSubscriptionData**(`data`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:30
+
 #### Parameters
 
-• **data**: [`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\>
+##### data
+
+[`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../interfaces/Log-1.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../interfaces/Log-1.md)\>
 
 #### Returns
 
 `void`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:30
-
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(): [`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+> **removeAllListeners**(): [`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 #### Returns
 
-[`EventEmitter`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/EventEmitter.md)
+[`EventEmitter`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/EventEmitter.md)
 
 #### Inherited from
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`removeAllListeners`](Web3EventEmitter.md#removealllisteners)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:20
 
 ***
 
@@ -480,13 +498,11 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_e
 
 > **resubscribe**(): `Promise`\<`void`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:36
+
 #### Returns
 
 `Promise`\<`void`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:36
 
 ***
 
@@ -494,13 +510,11 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **sendSubscriptionRequest**(): `Promise`\<`string`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:31
+
 #### Returns
 
 `Promise`\<`string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:31
 
 ***
 
@@ -508,13 +522,11 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **sendUnsubscribeRequest**(): `Promise`\<`void`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:38
+
 #### Returns
 
 `Promise`\<`void`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:38
 
 ***
 
@@ -522,9 +534,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **setMaxListenerWarningThreshold**(`maxListenersWarningThreshold`): `void`
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
+
 #### Parameters
 
-• **maxListenersWarningThreshold**: `number`
+##### maxListenersWarningThreshold
+
+`number`
 
 #### Returns
 
@@ -534,23 +550,17 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 [`Web3EventEmitter`](Web3EventEmitter.md).[`setMaxListenerWarningThreshold`](Web3EventEmitter.md#setmaxlistenerwarningthreshold)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_event\_emitter.d.ts:21
-
 ***
 
 ### subscribe()
 
 > **subscribe**(): `Promise`\<`string`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:29
+
 #### Returns
 
 `Promise`\<`string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:29
 
 ***
 
@@ -558,10 +568,8 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **unsubscribe**(): `Promise`\<`void`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:37
+
 #### Returns
 
 `Promise`\<`void`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscriptions.d.ts:37

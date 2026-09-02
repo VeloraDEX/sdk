@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,7 +6,9 @@
 
 # Type Alias: ErrorCode
 
-> **ErrorCode**: `"UNKNOWN_ERROR"` \| `"NOT_IMPLEMENTED"` \| `"UNSUPPORTED_OPERATION"` \| `"NETWORK_ERROR"` \| `"SERVER_ERROR"` \| `"TIMEOUT"` \| `"BAD_DATA"` \| `"CANCELLED"` \| `"BUFFER_OVERRUN"` \| `"NUMERIC_FAULT"` \| `"INVALID_ARGUMENT"` \| `"MISSING_ARGUMENT"` \| `"UNEXPECTED_ARGUMENT"` \| `"VALUE_MISMATCH"` \| `"CALL_EXCEPTION"` \| `"INSUFFICIENT_FUNDS"` \| `"NONCE_EXPIRED"` \| `"REPLACEMENT_UNDERPRICED"` \| `"TRANSACTION_REPLACED"` \| `"UNCONFIGURED_NAME"` \| `"OFFCHAIN_FAULT"` \| `"ACTION_REJECTED"`
+> **ErrorCode** = `"UNKNOWN_ERROR"` \| `"NOT_IMPLEMENTED"` \| `"UNSUPPORTED_OPERATION"` \| `"NETWORK_ERROR"` \| `"SERVER_ERROR"` \| `"TIMEOUT"` \| `"BAD_DATA"` \| `"CANCELLED"` \| `"BUFFER_OVERRUN"` \| `"NUMERIC_FAULT"` \| `"INVALID_ARGUMENT"` \| `"MISSING_ARGUMENT"` \| `"UNEXPECTED_ARGUMENT"` \| `"VALUE_MISMATCH"` \| `"CALL_EXCEPTION"` \| `"INSUFFICIENT_FUNDS"` \| `"NONCE_EXPIRED"` \| `"REPLACEMENT_UNDERPRICED"` \| `"TRANSACTION_REPLACED"` \| `"UNCONFIGURED_NAME"` \| `"OFFCHAIN_FAULT"` \| `"ACTION_REJECTED"`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:80
 
 All errors emitted by ethers have an **ErrorCode** to help
  identify and coalesce errors to simplify programmatic analysis.
@@ -67,7 +69,3 @@ All errors emitted by ethers have an **ErrorCode** to help
  **User Interaction Errors**
 
  **``"ACTION_REJECTED"``** - see [[ActionRejectedError]]
-
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:80

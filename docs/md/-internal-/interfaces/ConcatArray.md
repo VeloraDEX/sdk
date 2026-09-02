@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,17 @@
 
 # Interface: ConcatArray\<T\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1318
+
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Indexable
 
- \[`n`: `number`\]: `T`
+> \[`n`: `number`\]: `T`
 
 ## Properties
 
@@ -20,44 +24,44 @@
 
 > `readonly` **length**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1316
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1319
 
 ## Methods
 
 ### join()
 
-> **join**(`separator`?): `string`
+> **join**(`separator?`): `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1321
 
 #### Parameters
 
-• **separator?**: `string`
+##### separator?
+
+`string`
 
 #### Returns
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1318
-
 ***
 
 ### slice()
 
-> **slice**(`start`?, `end`?): `T`[]
+> **slice**(`start?`, `end?`): `T`[]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1322
 
 #### Parameters
 
-• **start?**: `number`
+##### start?
 
-• **end?**: `number`
+`number`
+
+##### end?
+
+`number`
 
 #### Returns
 
 `T`[]
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1319

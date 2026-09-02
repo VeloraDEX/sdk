@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: LogTopic
 
-> **LogTopic**: [`Hex`](Hex.md) \| [`Hex`](Hex.md)[] \| `null`
+> **LogTopic** = [`Hex`](Hex.md) \| readonly [`Hex`](Hex.md)[] \| `null`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/misc.d.ts:5
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/misc.d.ts:5

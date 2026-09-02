@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,26 +6,28 @@
 
 # Interface: TxOptions
 
-The options for initializing a [Transaction](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md).
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:34
+
+The options for initializing a [Transaction](Transaction.md).
 
 ## Properties
 
 ### allowUnlimitedInitCodeSize?
 
-> `optional` **allowUnlimitedInitCodeSize**: `boolean`
+> `optional` **allowUnlimitedInitCodeSize?**: `boolean`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:62
 
 Allows unlimited contract code-size init while debugging. This (partially) disables EIP-3860.
 Gas cost for initcode size analysis will still be charged. Use with caution.
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:62
 
 ***
 
 ### common?
 
-> `optional` **common**: [`Common`](../classes/Common.md)
+> `optional` **common?**: [`Common`](../classes/Common.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:45
 
 A [Common](../classes/Common.md) object defining the chain and hardfork for the transaction.
 
@@ -36,15 +38,13 @@ Default: [Common](../classes/Common.md) object set to `mainnet` and the default 
 
 Current default hardfork: `istanbul`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:45
-
 ***
 
 ### freeze?
 
-> `optional` **freeze**: `boolean`
+> `optional` **freeze?**: `boolean`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:57
 
 A transaction object by default gets frozen along initialization. This gives you
 strong additional security guarantees on the consistency of the tx parameters.
@@ -55,7 +55,3 @@ add additional properties - it is strongly encouraged that you do the freeze you
 within your code instead.
 
 Default: true
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:57

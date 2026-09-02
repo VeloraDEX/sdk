@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: JsonRpcResponse\<Result, Error\>
 
-> **JsonRpcResponse**\<`Result`, `Error`\>: [`JsonRpcResponseWithError`](../interfaces/JsonRpcResponseWithError.md)\<`Error`\> \| [`JsonRpcResponseWithResult`](../interfaces/JsonRpcResponseWithResult.md)\<`Result`\> \| [`JsonRpcBatchResponse`](JsonRpcBatchResponse.md)\<`Result`, `Error`\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<`Result`\>
+> **JsonRpcResponse**\<`Result`, `Error`\> = [`JsonRpcResponseWithError`](../interfaces/JsonRpcResponseWithError.md)\<`Error`\> \| [`JsonRpcResponseWithResult`](../interfaces/JsonRpcResponseWithResult.md)\<`Result`\> \| [`JsonRpcBatchResponse`](JsonRpcBatchResponse.md)\<`Result`, `Error`\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<`Result`\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:61
 
 ## Type Parameters
 
-• **Result** = [`JsonRpcResult`](JsonRpcResult.md)
+### Result
 
-• **Error** = [`JsonRpcResult`](JsonRpcResult.md)
+`Result` = [`JsonRpcResult`](JsonRpcResult.md)
 
-## Defined in
+### Error
 
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/json\_rpc\_types.d.ts:61
+`Error` = [`JsonRpcResult`](JsonRpcResult.md)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: SwapFetchMethods
 
-> **SwapFetchMethods**: [`GetBalancesFunctions`](../../type-aliases/GetBalancesFunctions.md) & [`GetTokensFunctions`](../../type-aliases/GetTokensFunctions.md) & [`GetSpenderFunctions`](../../type-aliases/GetSpenderFunctions.md) & [`BuildTxFunctions`](../../type-aliases/BuildTxFunctions.md) & [`GetAdaptersFunctions`](../../type-aliases/GetAdaptersFunctions.md) & [`GetRateFunctions`](../../type-aliases/GetRateFunctions.md) & [`GetSwapTxFunctions`](../../type-aliases/GetSwapTxFunctions.md)
+> **SwapFetchMethods** = [`GetBalancesFunctions`](../../type-aliases/GetBalancesFunctions.md) & [`GetTokensFunctions`](../../type-aliases/GetTokensFunctions.md) & [`GetSpenderFunctions`](../../type-aliases/GetSpenderFunctions.md) & [`BuildTxFunctions`](../../type-aliases/BuildTxFunctions.md) & [`GetAdaptersFunctions`](../../type-aliases/GetAdaptersFunctions.md) & [`GetRateFunctions`](../../type-aliases/GetRateFunctions.md) & [`GetSwapTxFunctions`](../../type-aliases/GetSwapTxFunctions.md)
 
-## Defined in
-
-[src/sdk/simple.ts:115](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L115)
+Defined in: [src/sdk/simple.ts:115](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L115)

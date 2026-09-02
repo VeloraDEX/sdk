@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / EventEmitterOptions
 
 # Interface: EventEmitterOptions
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:73
 
 ## Extended by
 
@@ -14,10 +16,8 @@
 
 ### captureRejections?
 
-> `optional` **captureRejections**: `boolean`
+> `optional` **captureRejections?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:77
 
 Enables automatic capturing of promise rejection.
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:77

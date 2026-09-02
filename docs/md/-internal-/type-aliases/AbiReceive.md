@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,20 +6,24 @@
 
 # Type Alias: AbiReceive
 
-> **AbiReceive**: `object`
+> **AbiReceive** = `object`
+
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:98
 
 ABI ["receive"](https://docs.soliditylang.org/en/latest/contracts.html#receive-ether-function) type
 
-## Type declaration
+## Properties
 
 ### stateMutability
 
 > **stateMutability**: [`Extract`](Extract.md)\<[`AbiStateMutability`](AbiStateMutability.md), `"payable"`\>
 
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:100
+
+***
+
 ### type
 
 > **type**: `"receive"`
 
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:98
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:99

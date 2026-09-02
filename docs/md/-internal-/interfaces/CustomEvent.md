@@ -1,10 +1,14 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / CustomEvent
 
 # Interface: CustomEvent\<T\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:8543
+
+The **`CustomEvent`** interface represents events initialized by an application for any purpose.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/CustomEvent)
 
@@ -18,7 +22,9 @@
 
 ## Type Parameters
 
-• **T** = `any`
+### T
+
+`T` = `any`
 
 ## Properties
 
@@ -26,13 +32,11 @@
 
 > `readonly` **AT\_TARGET**: `2`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11462
+
 #### Inherited from
 
 `Event.AT_TARGET`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8192
 
 ***
 
@@ -40,7 +44,9 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8
 
 > `readonly` **bubbles**: `boolean`
 
-Returns true or false depending on how event was initialized. True if event goes through its target's ancestors in reverse tree order, and false otherwise.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11353
+
+The **`bubbles`** read-only property of the Event interface indicates whether the event bubbles up through the DOM tree or not.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/bubbles)
 
@@ -48,23 +54,17 @@ Returns true or false depending on how event was initialized. True if event goes
 
 `Event.bubbles`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8087
-
 ***
 
 ### BUBBLING\_PHASE
 
 > `readonly` **BUBBLING\_PHASE**: `3`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11463
+
 #### Inherited from
 
 `Event.BUBBLING_PHASE`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8193
 
 ***
 
@@ -72,7 +72,9 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8
 
 > `readonly` **cancelable**: `boolean`
 
-Returns true or false depending on how event was initialized. Its return value does not always carry meaning, but true can indicate that part of the operation during which event was dispatched, can be canceled by invoking the preventDefault() method.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11366
+
+The **`cancelable`** read-only property of the Event interface indicates whether the event can be canceled, and therefore prevented as if the event never happened.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/cancelable)
 
@@ -80,15 +82,15 @@ Returns true or false depending on how event was initialized. Its return value d
 
 `Event.cancelable`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8099
-
 ***
 
 ### ~~cancelBubble~~
 
 > **cancelBubble**: `boolean`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11360
+
+The **`cancelBubble`** property of the Event interface is deprecated.
 
 #### Deprecated
 
@@ -98,23 +100,17 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8
 
 `Event.cancelBubble`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8093
-
 ***
 
 ### CAPTURING\_PHASE
 
 > `readonly` **CAPTURING\_PHASE**: `1`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11461
+
 #### Inherited from
 
 `Event.CAPTURING_PHASE`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8191
 
 ***
 
@@ -122,7 +118,9 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8
 
 > `readonly` **composed**: `boolean`
 
-Returns true or false depending on how event was initialized. True if event invokes listeners past a ShadowRoot node that is the root of its target, and false otherwise.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11372
+
+The read-only **`composed`** property of the or not the event will propagate across the shadow DOM boundary into the standard DOM.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/composed)
 
@@ -130,27 +128,21 @@ Returns true or false depending on how event was initialized. True if event invo
 
 `Event.composed`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8105
-
 ***
 
 ### currentTarget
 
-> `readonly` **currentTarget**: `null` \| `EventTarget`
+> `readonly` **currentTarget**: `EventTarget` \| `null`
 
-Returns the object whose event listener's callback is currently being invoked.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11378
+
+The **`currentTarget`** read-only property of the Event interface identifies the element to which the event handler has been attached.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/currentTarget)
 
 #### Inherited from
 
-`Event.currentTarget`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8111
+`CustomEvent`.[`currentTarget`](#currenttarget)
 
 ***
 
@@ -158,7 +150,9 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8
 
 > `readonly` **defaultPrevented**: `boolean`
 
-Returns true if preventDefault() was invoked successfully to indicate cancelation, and false otherwise.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11384
+
+The **`defaultPrevented`** read-only property of the Event interface returns a boolean value indicating whether or not the call to Event.preventDefault() canceled the event.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/defaultPrevented)
 
@@ -166,23 +160,17 @@ Returns true if preventDefault() was invoked successfully to indicate cancelatio
 
 `Event.defaultPrevented`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8117
-
 ***
 
 ### detail
 
 > `readonly` **detail**: `T`
 
-Returns any custom data event was created with. Typically used for synthetic events.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:8549
+
+The read-only **`detail`** property of the CustomEvent interface returns any data passed when initializing the event.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/CustomEvent/detail)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:6045
 
 ***
 
@@ -190,7 +178,9 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:6
 
 > `readonly` **eventPhase**: `number`
 
-Returns the event's phase, which is one of NONE, CAPTURING_PHASE, AT_TARGET, and BUBBLING_PHASE.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11390
+
+The **`eventPhase`** read-only property of the being evaluated.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/eventPhase)
 
@@ -198,17 +188,15 @@ Returns the event's phase, which is one of NONE, CAPTURING_PHASE, AT_TARGET, and
 
 `Event.eventPhase`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8123
-
 ***
 
 ### isTrusted
 
 > `readonly` **isTrusted**: `boolean`
 
-Returns true if event was dispatched by the user agent, and false otherwise.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11396
+
+The **`isTrusted`** read-only property of the when the event was generated by the user agent (including via user actions and programmatic methods such as HTMLElement.focus()), and `false` when the event was dispatched via The only exception is the `click` event, which initializes the `isTrusted` property to `false` in user agents.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/isTrusted)
 
@@ -216,29 +204,27 @@ Returns true if event was dispatched by the user agent, and false otherwise.
 
 `Event.isTrusted`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8129
-
 ***
 
 ### NONE
 
 > `readonly` **NONE**: `0`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11460
+
 #### Inherited from
 
 `Event.NONE`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8190
 
 ***
 
 ### ~~returnValue~~
 
 > **returnValue**: `boolean`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11403
+
+The Event property **`returnValue`** indicates whether the default action for this event has been prevented or not.
 
 #### Deprecated
 
@@ -248,15 +234,15 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8
 
 `Event.returnValue`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8135
-
 ***
 
 ### ~~srcElement~~
 
-> `readonly` **srcElement**: `null` \| `EventTarget`
+> `readonly` **srcElement**: `EventTarget` \| `null`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11410
+
+The deprecated **`Event.srcElement`** is an alias for the Event.target property.
 
 #### Deprecated
 
@@ -264,29 +250,23 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8
 
 #### Inherited from
 
-`Event.srcElement`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8141
+`CustomEvent`.[`srcElement`](#srcelement)
 
 ***
 
 ### target
 
-> `readonly` **target**: `null` \| `EventTarget`
+> `readonly` **target**: `EventTarget` \| `null`
 
-Returns the object to which event is dispatched (its target).
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11416
+
+The read-only **`target`** property of the dispatched.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/target)
 
 #### Inherited from
 
-`Event.target`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8147
+`CustomEvent`.[`target`](#target)
 
 ***
 
@@ -294,7 +274,9 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8
 
 > `readonly` **timeStamp**: `number`
 
-Returns the event's timestamp as the number of milliseconds measured relative to the time origin.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11422
+
+The **`timeStamp`** read-only property of the Event interface returns the time (in milliseconds) at which the event was created.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/timeStamp)
 
@@ -302,17 +284,15 @@ Returns the event's timestamp as the number of milliseconds measured relative to
 
 `Event.timeStamp`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8153
-
 ***
 
 ### type
 
 > `readonly` **type**: `string`
 
-Returns the type of event, e.g. "click", "hashchange", or "submit".
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11428
+
+The **`type`** read-only property of the Event interface returns a string containing the event's type.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/type)
 
@@ -320,17 +300,15 @@ Returns the type of event, e.g. "click", "hashchange", or "submit".
 
 `Event.type`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8159
-
 ## Methods
 
 ### composedPath()
 
 > **composedPath**(): `EventTarget`[]
 
-Returns the invocation target objects of event's path (objects on which listeners will be invoked), except for any nodes in shadow trees of which the shadow root's mode is "closed" that are not reachable from event's currentTarget.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11434
+
+The **`composedPath()`** method of the Event interface returns the event's path which is an array of the objects on which listeners will be invoked.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/composedPath)
 
@@ -342,25 +320,33 @@ Returns the invocation target objects of event's path (objects on which listener
 
 `Event.composedPath`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8165
-
 ***
 
 ### ~~initCustomEvent()~~
 
-> **initCustomEvent**(`type`, `bubbles`?, `cancelable`?, `detail`?): `void`
+> **initCustomEvent**(`type`, `bubbles?`, `cancelable?`, `detail?`): `void`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:8556
+
+The **`CustomEvent.initCustomEvent()`** method initializes a CustomEvent object.
 
 #### Parameters
 
-• **type**: `string`
+##### type
 
-• **bubbles?**: `boolean`
+`string`
 
-• **cancelable?**: `boolean`
+##### bubbles?
 
-• **detail?**: `T`
+`boolean`
+
+##### cancelable?
+
+`boolean`
+
+##### detail?
+
+`T`
 
 #### Returns
 
@@ -370,23 +356,29 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/CustomEvent/initCustomEvent)
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:6051
-
 ***
 
 ### ~~initEvent()~~
 
-> **initEvent**(`type`, `bubbles`?, `cancelable`?): `void`
+> **initEvent**(`type`, `bubbles?`, `cancelable?`): `void`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11441
+
+The **`Event.initEvent()`** method is used to initialize the value of an event created using Document.createEvent().
 
 #### Parameters
 
-• **type**: `string`
+##### type
 
-• **bubbles?**: `boolean`
+`string`
 
-• **cancelable?**: `boolean`
+##### bubbles?
+
+`boolean`
+
+##### cancelable?
+
+`boolean`
 
 #### Returns
 
@@ -400,17 +392,15 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:6
 
 `Event.initEvent`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8171
-
 ***
 
 ### preventDefault()
 
 > **preventDefault**(): `void`
 
-If invoked when the cancelable attribute value is true, and while executing a listener for the event with passive set to false, signals to the operation that caused event to be dispatched that it needs to be canceled.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11447
+
+The **`preventDefault()`** method of the Event interface tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/preventDefault)
 
@@ -422,17 +412,15 @@ If invoked when the cancelable attribute value is true, and while executing a li
 
 `Event.preventDefault`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8177
-
 ***
 
 ### stopImmediatePropagation()
 
 > **stopImmediatePropagation**(): `void`
 
-Invoking this method prevents event from reaching any registered event listeners after the current one finishes running and, when dispatched in a tree, also prevents event from reaching any other objects.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11453
+
+The **`stopImmediatePropagation()`** method of the If several listeners are attached to the same element for the same event type, they are called in the order in which they were added.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/stopImmediatePropagation)
 
@@ -444,17 +432,15 @@ Invoking this method prevents event from reaching any registered event listeners
 
 `Event.stopImmediatePropagation`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8183
-
 ***
 
 ### stopPropagation()
 
 > **stopPropagation**(): `void`
 
-When dispatched in a tree, invoking this method prevents event from reaching any objects other than the current object.
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.dom.d.ts:11459
+
+The **`stopPropagation()`** method of the Event interface prevents further propagation of the current event in the capturing and bubbling phases.
 
 [MDN Reference](https://developer.mozilla.org/docs/Web/API/Event/stopPropagation)
 
@@ -465,7 +451,3 @@ When dispatched in a tree, invoking this method prevents event from reaching any
 #### Inherited from
 
 `Event.stopPropagation`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.dom.d.ts:8189

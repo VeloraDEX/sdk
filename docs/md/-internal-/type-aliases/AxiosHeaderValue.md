@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: AxiosHeaderValue
 
-> **AxiosHeaderValue**: [`AxiosHeaders`](../classes/AxiosHeaders.md) \| `string` \| `string`[] \| `number` \| `boolean` \| `null`
+> **AxiosHeaderValue** = [`AxiosHeaders`](../classes/AxiosHeaders.md) \| `string` \| `string`[] \| `number` \| `boolean` \| `null`
 
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:4
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:4

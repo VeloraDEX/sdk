@@ -1,21 +1,21 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TransactionTypeParser
 
-# Type Alias: TransactionTypeParser()
+# Type Alias: TransactionTypeParser
 
-> **TransactionTypeParser**: (`transaction`) => [`HexString`](HexString.md) \| `undefined`
+> **TransactionTypeParser** = (`transaction`) => [`HexString`](HexString.md) \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:3
 
 ## Parameters
 
-• **transaction**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+### transaction
+
+[`Transaction`](../interfaces/Transaction-1.md)
 
 ## Returns
 
 [`HexString`](HexString.md) \| `undefined`
-
-## Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/types.d.ts:3

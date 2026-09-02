@@ -1,37 +1,49 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / EIP1193RequestFn
 
-# Type Alias: EIP1193RequestFn()\<rpcSchema, raw\>
+# Type Alias: EIP1193RequestFn\<rpcSchema, raw\>
 
-> **EIP1193RequestFn**\<`rpcSchema`, `raw`\>: \<`rpcSchemaOverride`, `_parameters`, `_returnType`\>(`args`, `options`?) => `Promise`\<`_returnType`\>
+> **EIP1193RequestFn**\<`rpcSchema`, `raw`\> = \<`rpcSchemaOverride`, `_parameters`, `_returnType`\>(`args`, `options?`) => `Promise`\<`_returnType`\>
 
-## Type Parameters
-
-• **rpcSchema** *extends* [`RpcSchema`](RpcSchema.md) \| `undefined` = `undefined`
-
-• **raw** *extends* `boolean` = `false`
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:1972
 
 ## Type Parameters
 
-• **rpcSchemaOverride** *extends* [`RpcSchemaOverride`](RpcSchemaOverride.md) \| `undefined` = `undefined`
+### rpcSchema
 
-• **_parameters** *extends* [`EIP1193Parameters`](EIP1193Parameters.md)\<[`DerivedRpcSchema`](DerivedRpcSchema.md)\<`rpcSchema`, `rpcSchemaOverride`\>\> = [`EIP1193Parameters`](EIP1193Parameters.md)\<[`DerivedRpcSchema`](DerivedRpcSchema.md)\<`rpcSchema`, `rpcSchemaOverride`\>\>
+`rpcSchema` *extends* [`RpcSchema`](RpcSchema.md) \| `undefined` = `undefined`
 
-• **_returnType** = [`DerivedRpcSchema`](DerivedRpcSchema.md)\<`rpcSchema`, `rpcSchemaOverride`\> *extends* [`RpcSchema`](RpcSchema.md) ? `raw` *extends* `true` ? [`OneOf`](OneOf.md)\<`object` \| `object`\> : [`Extract`](Extract.md)\<[`DerivedRpcSchema`](DerivedRpcSchema.md)\<`rpcSchema`, `rpcSchemaOverride`\>\[`number`\], `object`\>\[`"ReturnType"`\] : `raw` *extends* `true` ? [`OneOf`](OneOf.md)\<`object` \| `object`\> : `unknown`
+### raw
+
+`raw` *extends* `boolean` = `false`
+
+## Type Parameters
+
+### rpcSchemaOverride
+
+`rpcSchemaOverride` *extends* [`RpcSchemaOverride`](RpcSchemaOverride.md) \| `undefined` = `undefined`
+
+### _parameters
+
+`_parameters` *extends* [`EIP1193Parameters`](EIP1193Parameters.md)\<[`DerivedRpcSchema`](DerivedRpcSchema.md)\<`rpcSchema`, `rpcSchemaOverride`\>\> = [`EIP1193Parameters`](EIP1193Parameters.md)\<[`DerivedRpcSchema`](DerivedRpcSchema.md)\<`rpcSchema`, `rpcSchemaOverride`\>\>
+
+### _returnType
+
+`_returnType` = [`DerivedRpcSchema`](DerivedRpcSchema.md)\<`rpcSchema`, `rpcSchemaOverride`\> *extends* [`RpcSchema`](RpcSchema.md) ? `raw` *extends* `true` ? [`OneOf`](OneOf.md)\<\{ `result`: [`Extract`](Extract.md)\<[`DerivedRpcSchema`](DerivedRpcSchema.md)\<`rpcSchema`, `rpcSchemaOverride`\>\[`number`\], \{ `Method`: `_parameters`\[`"method"`\]; \}\>\[`"ReturnType"`\]; \} \| \{ `error`: [`ErrorObject`](ErrorObject.md); \}\> : [`Extract`](Extract.md)\<[`DerivedRpcSchema`](DerivedRpcSchema.md)\<`rpcSchema`, `rpcSchemaOverride`\>\[`number`\], \{ `Method`: `_parameters`\[`"method"`\]; \}\>\[`"ReturnType"`\] : `raw` *extends* `true` ? [`OneOf`](OneOf.md)\<\{ `result`: `unknown`; \} \| \{ `error`: [`ErrorObject`](ErrorObject.md); \}\> : `unknown`
 
 ## Parameters
 
-• **args**: `_parameters`
+### args
 
-• **options?**: [`EIP1193RequestOptions`](EIP1193RequestOptions.md)
+`_parameters`
+
+### options?
+
+[`EIP1193RequestOptions`](EIP1193RequestOptions.md)
 
 ## Returns
 
 `Promise`\<`_returnType`\>
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:1914

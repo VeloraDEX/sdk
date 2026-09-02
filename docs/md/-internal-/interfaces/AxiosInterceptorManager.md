@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,29 +6,29 @@
 
 # Interface: AxiosInterceptorManager\<V\>
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:639
+
 ## Type Parameters
 
-• **V**
+### V
+
+`V`
 
 ## Properties
 
 ### handlers?
 
-> `optional` **handlers**: [`AxiosInterceptorHandler`](AxiosInterceptorHandler.md)\<`V`\>[]
+> `optional` **handlers?**: [`AxiosInterceptorHandler`](AxiosInterceptorHandler.md)\<`V`\>[]
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:599
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:643
 
 ***
 
 ### use
 
-> **use**: `V` *extends* [`AxiosResponse`](AxiosResponse.md)\<`any`, `any`, `object`\> ? [`AxiosResponseInterceptorUse`](../type-aliases/AxiosResponseInterceptorUse.md)\<`V`\<`V`\>\> : [`AxiosRequestInterceptorUse`](../type-aliases/AxiosRequestInterceptorUse.md)\<`V`\>
+> **use**: `V` *extends* [`AxiosResponse`](AxiosResponse.md)\<`any`, `any`, \{ \}, `any`\> ? [`AxiosResponseInterceptorUse`](../type-aliases/AxiosResponseInterceptorUse.md)\<`V`\> : [`AxiosRequestInterceptorUse`](../type-aliases/AxiosRequestInterceptorUse.md)\<`V`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:596
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:640
 
 ## Methods
 
@@ -36,13 +36,11 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:596
 
 > **clear**(): `void`
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:642
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:598
 
 ***
 
@@ -50,14 +48,14 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:598
 
 > **eject**(`id`): `void`
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:641
+
 #### Parameters
 
-• **id**: `number`
+##### id
+
+`number`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:597

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: ValidInputTypes
 
-> **ValidInputTypes**: `Uint8Array` \| `bigint` \| `string` \| `number` \| `boolean`
+> **ValidInputTypes** = `Uint8Array` \| `bigint` \| `string` \| `number` \| `boolean`
 
-## Defined in
-
-node\_modules/.pnpm/web3-validator@2.0.6/node\_modules/web3-validator/lib/commonjs/types.d.ts:3
+Defined in: node\_modules/.pnpm/web3-validator@2.0.6/node\_modules/web3-validator/lib/commonjs/types.d.ts:3

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,25 +6,35 @@
 
 # Interface: AsyncGenerator\<T, TReturn, TNext\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:21
+
 ## Extends
 
 - `AsyncIteratorObject`\<`T`, `TReturn`, `TNext`\>
 
 ## Type Parameters
 
-• **T** = `unknown`
+### T
 
-• **TReturn** = `any`
+`T` = `unknown`
 
-• **TNext** = `any`
+### TReturn
+
+`TReturn` = `any`
+
+### TNext
+
+`TNext` = `any`
 
 ## Methods
 
 ### \[asyncDispose\]()
 
-#### \[asyncDispose\]()
+#### Call Signature
 
 > **\[asyncDispose\]**(): [`PromiseLike`](PromiseLike.md)\<`void`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.esnext.disposable.d.ts:40
 
 ##### Returns
 
@@ -34,13 +44,11 @@
 
 `AsyncIteratorObject.[asyncDispose]`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.disposable.d.ts:40
-
-#### \[asyncDispose\]()
+#### Call Signature
 
 > **\[asyncDispose\]**(): [`PromiseLike`](PromiseLike.md)\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:15
 
 ##### Returns
 
@@ -49,28 +57,22 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.dis
 ##### Inherited from
 
 `AsyncIteratorObject.[asyncDispose]`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:15
 
 ***
 
 ### \[asyncIterator\]()
 
-> **\[asyncIterator\]**(): [`AsyncGenerator`](AsyncGenerator.md)\<`T`, `TReturn`, `TNext`\>
+> **\[asyncIterator\]**(): `AsyncGenerator`\<`T`, `TReturn`, `TNext`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:26
 
 #### Returns
 
-[`AsyncGenerator`](AsyncGenerator.md)\<`T`, `TReturn`, `TNext`\>
+`AsyncGenerator`\<`T`, `TReturn`, `TNext`\>
 
 #### Overrides
 
 `AsyncIteratorObject.[asyncIterator]`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:26
 
 ***
 
@@ -78,9 +80,13 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asy
 
 > **next**(...`__namedParameters`): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:23
+
 #### Parameters
 
-• ...**\_\_namedParameters**: [] \| [`TNext`]
+##### \_\_namedParameters
+
+\[\] \| \[`TNext`\]
 
 #### Returns
 
@@ -90,19 +96,19 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asy
 
 `AsyncIteratorObject.next`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:23
-
 ***
 
 ### return()
 
 > **return**(`value`): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:24
+
 #### Parameters
 
-• **value**: `TReturn` \| [`PromiseLike`](PromiseLike.md)\<`TReturn`\>
+##### value
+
+`TReturn` \| [`PromiseLike`](PromiseLike.md)\<`TReturn`\>
 
 #### Returns
 
@@ -112,19 +118,19 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asy
 
 `AsyncIteratorObject.return`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:24
-
 ***
 
 ### throw()
 
 > **throw**(`e`): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:25
+
 #### Parameters
 
-• **e**: `any`
+##### e
+
+`any`
 
 #### Returns
 
@@ -133,7 +139,3 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asy
 #### Overrides
 
 `AsyncIteratorObject.throw`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:25

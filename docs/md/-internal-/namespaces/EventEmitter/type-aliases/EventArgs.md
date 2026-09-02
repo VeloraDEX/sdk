@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: EventArgs\<T, K\>
 
-> **EventArgs**\<`T`, `K`\>: [`Parameters`](../../../type-aliases/Parameters.md)\<[`EventListener`](EventListener.md)\<`T`, `K`\>\>
+> **EventArgs**\<`T`, `K`\> = [`Parameters`](../../../type-aliases/Parameters-8.md)\<[`EventListener`](EventListener.md)\<`T`, `K`\>\>
+
+Defined in: node\_modules/.pnpm/eventemitter3@5.0.4/node\_modules/eventemitter3/index.d.ts:126
 
 ## Type Parameters
 
-• **T** *extends* [`ValidEventTypes`](ValidEventTypes.md)
+### T
 
-• **K** *extends* [`EventNames`](EventNames.md)\<`T`\>
+`T` *extends* [`ValidEventTypes`](ValidEventTypes.md)
 
-## Defined in
+### K
 
-node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:126
+`K` *extends* [`EventNames`](EventNames.md)\<`T`\>

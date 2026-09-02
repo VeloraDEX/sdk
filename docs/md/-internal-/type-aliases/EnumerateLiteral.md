@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: EnumerateLiteral\<T\>
 
-> **EnumerateLiteral**\<`T`\>: \{ \[K in keyof T\]: T\[K\] extends \`$\{infer n\}\` ? n : never \}\[keyof `T`\]
+> **EnumerateLiteral**\<`T`\> = `` { [K in keyof T]: T[K] extends `${infer n}` ? n : never } ``\[keyof `T`\]
+
+Defined in: [src/types.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L27)
 
 ## Type Parameters
 
-• **T** *extends* [`Record`](Record.md)\<`string`, `any`\>
+### T
 
-## Defined in
-
-[src/types.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L27)
+`T` *extends* [`Record`](Record.md)\<`string`, `any`\>

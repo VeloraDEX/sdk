@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,22 @@
 
 # Type Alias: RequestParameters
 
-> **RequestParameters**: `object`
+> **RequestParameters** = `object`
 
-## Index Signature
-
- \[`K`: `string`\]: `any`
-
-## Type declaration
-
-### signal?
-
-> `optional` **signal**: `AbortSignal`
+Defined in: [src/types.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L44)
 
 ## Description
 
 Any params that can be passed to fetcher. E.g. Axios fetcher can accept signal and timeout, fetch can accept signal
 
-## Defined in
+## Indexable
 
-[src/types.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L44)
+> \[`K`: `string`\]: `any`
+
+## Properties
+
+### signal?
+
+> `optional` **signal?**: `AbortSignal`
+
+Defined in: [src/types.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L44)

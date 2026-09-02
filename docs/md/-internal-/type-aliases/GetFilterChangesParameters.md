@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,28 +6,40 @@
 
 # Type Alias: GetFilterChangesParameters\<filterType, abi, eventName, strict, fromBlock, toBlock\>
 
-> **GetFilterChangesParameters**\<`filterType`, `abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>: `object`
+> **GetFilterChangesParameters**\<`filterType`, `abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getFilterChanges.d.ts:13
 
 ## Type Parameters
 
-• **filterType** *extends* [`FilterType`](FilterType.md) = [`FilterType`](FilterType.md)
+### filterType
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined` = `undefined`
+`filterType` *extends* [`FilterType`](FilterType.md) = [`FilterType`](FilterType.md)
 
-• **eventName** *extends* `string` \| `undefined` = `undefined`
+### abi
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined` = `undefined`
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+### eventName
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`eventName` *extends* `string` \| `undefined` = `undefined`
 
-## Type declaration
+### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+## Properties
 
 ### filter
 
 > **filter**: [`Filter`](Filter.md)\<`filterType`, `abi`, `eventName`, `any`, `strict`, `fromBlock`, `toBlock`\>
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getFilterChanges.d.ts:13
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getFilterChanges.d.ts:14

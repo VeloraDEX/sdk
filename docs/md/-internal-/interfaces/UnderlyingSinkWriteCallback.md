@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,28 @@
 
 # Interface: UnderlyingSinkWriteCallback()\<W\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:125
+
 ## Type Parameters
 
-• **W**
+### W
+
+`W`
 
 > **UnderlyingSinkWriteCallback**(`chunk`, `controller`): `void` \| [`PromiseLike`](PromiseLike.md)\<`void`\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:126
+
 ## Parameters
 
-• **chunk**: `W`
+### chunk
 
-• **controller**: [`WritableStreamDefaultController`](WritableStreamDefaultController.md)
+`W`
+
+### controller
+
+[`WritableStreamDefaultController`](WritableStreamDefaultController.md)
 
 ## Returns
 
 `void` \| [`PromiseLike`](PromiseLike.md)\<`void`\>
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:126

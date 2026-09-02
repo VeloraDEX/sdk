@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,38 +6,34 @@
 
 # Interface: ContractEventOptions
 
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:9
+
 ## Properties
 
 ### filter?
 
-> `optional` **filter**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+> `optional` **filter?**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:13
 
 Let you filter events by indexed parameters, e.g. `{filter: {myNumber: [12,13]}}` means all events where `myNumber` is `12` or `13`.
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:13
 
 ***
 
 ### fromBlock?
 
-> `optional` **fromBlock**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+> `optional` **fromBlock?**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
 
-The block number (greater than or equal to) from which to get events on. Pre-defined block numbers as `earliest`, `latest`, `pending`, `safe` or `finalized` can also be used. For specific range use [Contract.getPastEvents](../classes/Contract.md#getpastevents).
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:17
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:17
+The block number (greater than or equal to) from which to get events on. Pre-defined block numbers as `earliest`, `latest`, `pending`, `safe` or `finalized` can also be used. For specific range use [Contract.getPastEvents](../classes/Contract-2.md#getpastevents).
 
 ***
 
 ### topics?
 
-> `optional` **topics**: `string`[]
+> `optional` **topics?**: `string`[]
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:21
 
 This allows to manually set the topics for the event filter. If given the filter property and event signature, (topic[0]) will not be set automatically. Each topic can also be a nested array of topics that behaves as `or` operation between the given nested topics.
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/types.d.ts:21

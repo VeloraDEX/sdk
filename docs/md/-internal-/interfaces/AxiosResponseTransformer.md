@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,30 @@
 
 # Interface: AxiosResponseTransformer()
 
-> **AxiosResponseTransformer**(`this`, `data`, `headers`, `status`?): `any`
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:155
+
+> **AxiosResponseTransformer**(`this`, `data`, `headers`, `status?`): `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:156
 
 ## Parameters
 
-• **this**: [`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)\<`any`\>
+### this
 
-• **data**: `any`
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)
 
-• **headers**: [`AxiosResponseHeaders`](../type-aliases/AxiosResponseHeaders.md)
+### data
 
-• **status?**: `number`
+`any`
+
+### headers
+
+[`AxiosResponseHeaders`](../type-aliases/AxiosResponseHeaders.md)
+
+### status?
+
+`number`
 
 ## Returns
 
 `any`
-
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:146

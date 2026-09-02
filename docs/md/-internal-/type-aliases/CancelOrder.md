@@ -1,29 +1,35 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / CancelOrder
 
-# Type Alias: CancelOrder()\<T\>
+# Type Alias: CancelOrder\<T\>
 
-> **CancelOrder**\<`T`\>: (`orderHash`, `overrides`?, `requestParams`?) => `Promise`\<`T`\>
+> **CancelOrder**\<`T`\> = (`orderHash`, `overrides?`, `requestParams?`) => `Promise`\<`T`\>
+
+Defined in: [src/methods/otcOrders/cancelOrder.ts:9](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/cancelOrder.ts#L9)
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **orderHash**: `string`
+### orderHash
 
-• **overrides?**: [`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+`string`
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+### overrides?
+
+[`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<`T`\>
-
-## Defined in
-
-[src/methods/otcOrders/cancelOrder.ts:9](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/cancelOrder.ts#L9)

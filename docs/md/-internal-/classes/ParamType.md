@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,55 +6,33 @@
 
 # Class: ParamType
 
-## Constructors
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:108
 
-### new ParamType()
-
-> **new ParamType**(`constructorGuard`, `params`): [`ParamType`](ParamType.md)
-
-#### Parameters
-
-• **constructorGuard**: `any`
-
-• **params**: `any`
-
-#### Returns
-
-[`ParamType`](ParamType.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:32
+Each input and output of a [[Fragment]] is an Array of **ParamType**.
 
 ## Properties
 
-### \_isParamType
-
-> `readonly` **\_isParamType**: `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:31
-
-***
-
 ### arrayChildren
 
-> `readonly` **arrayChildren**: [`ParamType`](ParamType.md)
+> `readonly` **arrayChildren**: `ParamType` \| `null`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:146
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:30
+The type of each child in the array.
+
+ For non-array types this is ``null``.
 
 ***
 
 ### arrayLength
 
-> `readonly` **arrayLength**: `number`
+> `readonly` **arrayLength**: `number` \| `null`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:140
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:29
+The array length, or ``-1`` for dynamic-lengthed arrays.
+
+ For non-array types this is ``null``.
 
 ***
 
@@ -62,29 +40,33 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **baseType**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:122
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:26
+The base type (e.g. ``"address"``, ``"tuple"``, ``"array"``)
 
 ***
 
 ### components
 
-> `readonly` **components**: [`ParamType`](ParamType.md)[]
+> `readonly` **components**: readonly `ParamType`[] \| `null`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:134
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:28
+The components for the tuple.
+
+ For non-tuple types this is ``null``.
 
 ***
 
 ### indexed
 
-> `readonly` **indexed**: `boolean`
+> `readonly` **indexed**: `boolean` \| `null`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:128
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:27
+True if the parameters is indexed.
+
+ For non-indexable types this is ``null``.
 
 ***
 
@@ -92,9 +74,9 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **name**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:113
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:24
+The local name of the parameter (or ``""`` if unbound)
 
 ***
 
@@ -102,85 +84,169 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **type**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:118
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:25
+The fully qualified type (e.g. ``"address"``, ``"tuple(address)"``,
+ ``"uint256[3][]"``)
 
 ## Methods
 
 ### format()
 
-> **format**(`format`?): `string`
+> **format**(`format?`): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:162
+
+Return a string representation of this type.
+
+ For example,
+
+ ``sighash" => "(uint256,address)"``
+
+ ``"minimal" => "tuple(uint256,address) indexed"``
+
+ ``"full" => "tuple(uint256 foo, address bar) indexed baz"``
 
 #### Parameters
 
-• **format?**: `string`
+##### format?
+
+[`FormatType`](../type-aliases/FormatType-1.md)
 
 #### Returns
 
 `string`
 
-#### Defined in
+***
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:33
+### isArray()
+
+> **isArray**(): `this is ParamType & { arrayChildren: ParamType; arrayLength: number }`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:169
+
+Returns true if %%this%% is an Array type.
+
+ This provides a type gaurd ensuring that [[arrayChildren]]
+ and [[arrayLength]] are non-null.
+
+#### Returns
+
+`this is ParamType & { arrayChildren: ParamType; arrayLength: number }`
+
+***
+
+### isIndexable()
+
+> **isIndexable**(): `this is ParamType & { indexed: boolean }`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:188
+
+Returns true if %%this%% is an Indexable type.
+
+ This provides a type gaurd ensuring that [[indexed]]
+ is non-null.
+
+#### Returns
+
+`this is ParamType & { indexed: boolean }`
+
+***
+
+### isTuple()
+
+> **isTuple**(): `this is ParamType & { components: readonly ParamType[] }`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:179
+
+Returns true if %%this%% is a Tuple type.
+
+ This provides a type gaurd ensuring that [[components]]
+ is non-null.
+
+#### Returns
+
+`this is ParamType & { components: readonly ParamType[] }`
+
+***
+
+### walk()
+
+> **walk**(`value`, `process`): `any`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:195
+
+Walks the **ParamType** with %%value%%, calling %%process%%
+ on each type, destructing the %%value%% recursively.
+
+#### Parameters
+
+##### value
+
+`any`
+
+##### process
+
+[`ParamTypeWalkFunc`](../type-aliases/ParamTypeWalkFunc.md)
+
+#### Returns
+
+`any`
+
+***
+
+### walkAsync()
+
+> **walkAsync**(`value`, `process`): `Promise`\<`any`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:203
+
+Walks the **ParamType** with %%value%%, asynchronously calling
+ %%process%% on each type, destructing the %%value%% recursively.
+
+ This can be used to resolve ENS names by walking and resolving each
+ ``"address"`` type.
+
+#### Parameters
+
+##### value
+
+`any`
+
+##### process
+
+[`ParamTypeWalkAsyncFunc`](../type-aliases/ParamTypeWalkAsyncFunc.md)
+
+#### Returns
+
+`Promise`\<`any`\>
 
 ***
 
 ### from()
 
-> `static` **from**(`value`, `allowIndexed`?): [`ParamType`](ParamType.md)
+> `static` **from**(`obj`, `allowIndexed?`): `ParamType`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:210
+
+Creates a new **ParamType** for %%obj%%.
+
+ If %%allowIndexed%% then the ``indexed`` keyword is permitted,
+ otherwise the ``indexed`` keyword will throw an error.
 
 #### Parameters
 
-• **value**: `string` \| [`JsonFragmentType`](../interfaces/JsonFragmentType.md) \| [`ParamType`](ParamType.md)
+##### obj
 
-• **allowIndexed?**: `boolean`
+`any`
 
-#### Returns
+##### allowIndexed?
 
-[`ParamType`](ParamType.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:34
-
-***
-
-### fromObject()
-
-> `static` **fromObject**(`value`): [`ParamType`](ParamType.md)
-
-#### Parameters
-
-• **value**: [`JsonFragmentType`](../interfaces/JsonFragmentType.md) \| [`ParamType`](ParamType.md)
+`boolean`
 
 #### Returns
 
-[`ParamType`](ParamType.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:35
-
-***
-
-### fromString()
-
-> `static` **fromString**(`value`, `allowIndexed`?): [`ParamType`](ParamType.md)
-
-#### Parameters
-
-• **value**: `string`
-
-• **allowIndexed?**: `boolean`
-
-#### Returns
-
-[`ParamType`](ParamType.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:36
+`ParamType`
 
 ***
 
@@ -188,14 +254,16 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `static` **isParamType**(`value`): `value is ParamType`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:214
+
+Returns true if %%value%% is a **ParamType**.
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `value is ParamType`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:37

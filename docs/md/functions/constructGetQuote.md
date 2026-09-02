@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,14 +8,14 @@
 
 > **constructGetQuote**(`__namedParameters`): [`GetQuoteFunctions`](../type-aliases/GetQuoteFunctions.md)
 
+Defined in: [src/methods/quote/getQuote.ts:121](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L121)
+
 ## Parameters
 
-• **\_\_namedParameters**: [`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
+### \_\_namedParameters
+
+[`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
 
 ## Returns
 
 [`GetQuoteFunctions`](../type-aliases/GetQuoteFunctions.md)
-
-## Defined in
-
-[src/methods/quote/getQuote.ts:121](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L121)

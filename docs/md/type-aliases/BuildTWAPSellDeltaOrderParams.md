@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: BuildTWAPSellDeltaOrderParams
 
-> **BuildTWAPSellDeltaOrderParams**: [`BuildTWAPDeltaOrderBase`](../-internal-/type-aliases/BuildTWAPDeltaOrderBase.md) & `object`
+> **BuildTWAPSellDeltaOrderParams** = [`BuildTWAPDeltaOrderBase`](../-internal-/type-aliases/BuildTWAPDeltaOrderBase.md) & `object`
 
-## Type declaration
+Defined in: [src/methods/delta/buildTWAPDeltaOrder.ts:45](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildTWAPDeltaOrder.ts#L45)
+
+## Type Declaration
 
 ### onChainOrderType
 
@@ -21,7 +23,3 @@
 #### Description
 
 Total source token amount across all slices. route.origin.input.amount must equal floor(totalSrcAmount / numSlices).
-
-## Defined in
-
-[src/methods/delta/buildTWAPDeltaOrder.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/buildTWAPDeltaOrder.ts#L44)

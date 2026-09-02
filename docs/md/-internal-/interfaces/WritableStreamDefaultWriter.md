@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / WritableStreamDefaultWriter
 
 # Interface: WritableStreamDefaultWriter\<W\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:304
 
 This Streams API interface is the object returned by
 WritableStream.getWriter() and once created locks the < writer to the
@@ -13,7 +15,9 @@ sink.
 
 ## Type Parameters
 
-• **W** = `any`
+### W
+
+`W` = `any`
 
 ## Properties
 
@@ -21,19 +25,15 @@ sink.
 
 > `readonly` **closed**: `Promise`\<`undefined`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:305
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:305
 
 ***
 
 ### desiredSize
 
-> `readonly` **desiredSize**: `null` \| `number`
+> `readonly` **desiredSize**: `number` \| `null`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:306
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:306
 
 ***
 
@@ -41,27 +41,25 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > `readonly` **ready**: `Promise`\<`undefined`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:307
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:307
 
 ## Methods
 
 ### abort()
 
-> **abort**(`reason`?): `Promise`\<`void`\>
+> **abort**(`reason?`): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:308
 
 #### Parameters
 
-• **reason?**: `any`
+##### reason?
+
+`any`
 
 #### Returns
 
 `Promise`\<`void`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:308
 
 ***
 
@@ -69,13 +67,11 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > **close**(): `Promise`\<`void`\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:309
+
 #### Returns
 
 `Promise`\<`void`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:309
 
 ***
 
@@ -83,28 +79,26 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > **releaseLock**(): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:310
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:310
 
 ***
 
 ### write()
 
-> **write**(`chunk`?): `Promise`\<`void`\>
+> **write**(`chunk?`): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:311
 
 #### Parameters
 
-• **chunk?**: `W`
+##### chunk?
+
+`W`
 
 #### Returns
 
 `Promise`\<`void`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:311

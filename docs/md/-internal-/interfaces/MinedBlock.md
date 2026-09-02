@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / MinedBlock
 
 # Interface: MinedBlock
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:261
 
 An Interface to indicate a [[Block]] has been included in the
  blockchain. This asserts a Type Guard that necessary properties
@@ -20,7 +22,9 @@ An Interface to indicate a [[Block]] has been included in the
 
 ### baseFeePerGas
 
-> `readonly` **baseFeePerGas**: `null` \| `bigint`
+> `readonly` **baseFeePerGas**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:386
 
 The base fee per gas that all transactions in this block were
  charged.
@@ -30,28 +34,22 @@ The base fee per gas that all transactions in this block were
 
 #### Inherited from
 
-[`Block`](../classes/Block.md).[`baseFeePerGas`](../classes/Block.md#basefeepergas)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:386
+`MinedBlock`.[`baseFeePerGas`](#basefeepergas)
 
 ***
 
 ### blobGasUsed
 
-> `readonly` **blobGasUsed**: `null` \| `bigint`
+> `readonly` **blobGasUsed**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:359
 
 The total amount of blob gas consumed by the transactions
  within the block. See [[link-eip-4844]].
 
 #### Inherited from
 
-[`Block`](../classes/Block.md).[`blobGasUsed`](../classes/Block.md#blobgasused)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:359
+`MinedBlock`.[`blobGasUsed`](#blobgasused)
 
 ***
 
@@ -59,21 +57,21 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > `readonly` **date**: `Date`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:277
+
 The block date, created from the [[timestamp]].
 
 #### Overrides
 
-[`Block`](../classes/Block.md).[`date`](../classes/Block.md#date)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:277
+`Block.date`
 
 ***
 
 ### difficulty
 
 > `readonly` **difficulty**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:337
 
 The difficulty target.
 
@@ -87,26 +85,20 @@ The difficulty target.
 
 [`Block`](../classes/Block.md).[`difficulty`](../classes/Block.md#difficulty)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:337
-
 ***
 
 ### excessBlobGas
 
-> `readonly` **excessBlobGas**: `null` \| `bigint`
+> `readonly` **excessBlobGas**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:364
 
 The running total of blob gas consumed in excess of the
  target, prior to the block. See [[link-eip-4844]].
 
 #### Inherited from
 
-[`Block`](../classes/Block.md).[`excessBlobGas`](../classes/Block.md#excessblobgas)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:364
+`MinedBlock`.[`excessBlobGas`](#excessblobgas)
 
 ***
 
@@ -114,15 +106,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > `readonly` **extraData**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:378
+
 Any extra data the validator wished to include.
 
 #### Inherited from
 
 [`Block`](../classes/Block.md).[`extraData`](../classes/Block.md#extradata)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:378
 
 ***
 
@@ -130,15 +120,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > `readonly` **gasLimit**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:341
+
 The total gas limit for this block.
 
 #### Inherited from
 
 [`Block`](../classes/Block.md).[`gasLimit`](../classes/Block.md#gaslimit)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:341
 
 ***
 
@@ -146,15 +134,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > `readonly` **gasUsed**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:345
+
 The total gas used in this block.
 
 #### Inherited from
 
 [`Block`](../classes/Block.md).[`gasUsed`](../classes/Block.md#gasused)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:345
 
 ***
 
@@ -162,21 +148,21 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > `readonly` **hash**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:269
+
 The block hash.
 
 #### Overrides
 
 [`Block`](../classes/Block.md).[`hash`](../classes/Block.md#hash)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:269
-
 ***
 
 ### miner
 
 > `readonly` **miner**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:282
 
 The miner of the block, also known as the ``author`` or
  block ``producer``.
@@ -185,15 +171,13 @@ The miner of the block, also known as the ``author`` or
 
 [`Block`](../classes/Block.md).[`miner`](../classes/Block.md#miner)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:282
-
 ***
 
 ### nonce
 
 > `readonly` **nonce**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:327
 
 The nonce.
 
@@ -204,15 +188,13 @@ The nonce.
 
 [`Block`](../classes/Block.md).[`nonce`](../classes/Block.md#nonce)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:327
-
 ***
 
 ### number
 
 > `readonly` **number**: `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:265
 
 The block number also known as the block height.
 
@@ -220,26 +202,20 @@ The block number also known as the block height.
 
 [`Block`](../classes/Block.md).[`number`](../classes/Block.md#number)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:265
-
 ***
 
 ### parentBeaconBlockRoot
 
-> **parentBeaconBlockRoot**: `null` \| `string`
+> **parentBeaconBlockRoot**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:320
 
 The hash tree root of the parent beacon block for the given
  execution block. See [[link-eip-4788]].
 
 #### Inherited from
 
-[`Block`](../classes/Block.md).[`parentBeaconBlockRoot`](../classes/Block.md#parentbeaconblockroot)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:320
+`MinedBlock`.[`parentBeaconBlockRoot`](#parentbeaconblockroot)
 
 ***
 
@@ -247,38 +223,36 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > `readonly` **parentHash**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:315
+
 The block hash of the parent block.
 
 #### Inherited from
 
 [`Block`](../classes/Block.md).[`parentHash`](../classes/Block.md#parenthash)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:315
-
 ***
 
 ### prevRandao
 
-> `readonly` **prevRandao**: `null` \| `string`
+> `readonly` **prevRandao**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:374
 
 The latest RANDAO mix of the post beacon state of
  the previous block.
 
 #### Inherited from
 
-[`Block`](../classes/Block.md).[`prevRandao`](../classes/Block.md#prevrandao)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:374
+`MinedBlock`.[`prevRandao`](#prevrandao)
 
 ***
 
 ### provider
 
 > `readonly` **provider**: [`Provider`](Provider.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:294
 
 The provider connected to the block used to fetch additional details
  if necessary.
@@ -287,42 +261,34 @@ The provider connected to the block used to fetch additional details
 
 [`Block`](../classes/Block.md).[`provider`](../classes/Block.md#provider)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:294
-
 ***
 
 ### receiptsRoot
 
-> `readonly` **receiptsRoot**: `null` \| `string`
+> `readonly` **receiptsRoot**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:354
 
 The hash of the transaction receipts trie.
 
 #### Inherited from
 
-[`Block`](../classes/Block.md).[`receiptsRoot`](../classes/Block.md#receiptsroot)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:354
+`MinedBlock`.[`receiptsRoot`](#receiptsroot)
 
 ***
 
 ### stateRoot
 
-> `readonly` **stateRoot**: `null` \| `string`
+> `readonly` **stateRoot**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:350
 
 The root hash for the global state after applying changes
  in this block.
 
 #### Inherited from
 
-[`Block`](../classes/Block.md).[`stateRoot`](../classes/Block.md#stateroot)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:350
+`MinedBlock`.[`stateRoot`](#stateroot)
 
 ***
 
@@ -330,15 +296,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > `readonly` **timestamp**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:273
+
 The block timestamp, in seconds from epoch.
 
 #### Overrides
 
 [`Block`](../classes/Block.md).[`timestamp`](../classes/Block.md#timestamp)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:273
 
 ## Accessors
 
@@ -347,6 +311,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 #### Get Signature
 
 > **get** **length**(): `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:416
 
 The number of transactions in this block.
 
@@ -358,10 +324,6 @@ The number of transactions in this block.
 
 [`Block`](../classes/Block.md).[`length`](../classes/Block.md#length)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:416
-
 ***
 
 ### prefetchedTransactions
@@ -369,6 +331,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 #### Get Signature
 
 > **get** **prefetchedTransactions**(): [`TransactionResponse`](../classes/TransactionResponse.md)[]
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:407
 
 Returns the complete transactions, in the order they
  were executed within the block.
@@ -385,10 +349,6 @@ Returns the complete transactions, in the order they
 
 [`Block`](../classes/Block.md).[`prefetchedTransactions`](../classes/Block.md#prefetchedtransactions)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:407
-
 ***
 
 ### transactions
@@ -396,6 +356,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 #### Get Signature
 
 > **get** **transactions**(): readonly `string`[]
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:398
 
 Returns the list of transaction hashes, in the order
  they were executed within the block.
@@ -410,33 +372,29 @@ The list of transactions in the block.
 
 [`Block`](../classes/Block.md).[`transactions`](../classes/Block.md#transactions)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:398
-
 ## Methods
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): [`Iterator`](Iterator.md)\<`string`, `any`, `any`\>
+> **\[iterator\]**(): [`Iterator`](Iterator.md)\<`string`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:412
 
 #### Returns
 
-[`Iterator`](Iterator.md)\<`string`, `any`, `any`\>
+[`Iterator`](Iterator.md)\<`string`\>
 
 #### Inherited from
 
-[`Block`](../classes/Block.md).[`[iterator]`](../classes/Block.md#%5Biterator%5D)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:412
+[`Block`](../classes/Block.md).[`[iterator]`](../classes/Block.md#iterator)
 
 ***
 
 ### getPrefetchedTransaction()
 
 > **getPrefetchedTransaction**(`indexOrHash`): [`TransactionResponse`](../classes/TransactionResponse.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:431
 
 If a **Block** was fetched with a request to include the transactions
  this will allow synchronous access to those transactions.
@@ -445,7 +403,9 @@ If a **Block** was fetched with a request to include the transactions
 
 #### Parameters
 
-• **indexOrHash**: `string` \| `number`
+##### indexOrHash
+
+`string` \| `number`
 
 #### Returns
 
@@ -455,21 +415,21 @@ If a **Block** was fetched with a request to include the transactions
 
 [`Block`](../classes/Block.md).[`getPrefetchedTransaction`](../classes/Block.md#getprefetchedtransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:431
-
 ***
 
 ### getTransaction()
 
 > **getTransaction**(`indexOrHash`): `Promise`\<[`TransactionResponse`](../classes/TransactionResponse.md)\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:424
+
 Get the transaction at %%indexe%% within this block.
 
 #### Parameters
 
-• **indexOrHash**: `string` \| `number`
+##### indexOrHash
+
+`string` \| `number`
 
 #### Returns
 
@@ -479,35 +439,31 @@ Get the transaction at %%indexe%% within this block.
 
 [`Block`](../classes/Block.md).[`getTransaction`](../classes/Block.md#gettransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:424
-
 ***
 
 ### isLondon()
 
-> **isLondon**(): `this is Block & Object`
+> **isLondon**(): `this is Block & { baseFeePerGas: bigint }`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:440
 
 Returns true if this block is an [[link-eip-2930]] block.
 
 #### Returns
 
-`this is Block & Object`
+`this is Block & { baseFeePerGas: bigint }`
 
 #### Inherited from
 
 [`Block`](../classes/Block.md).[`isLondon`](../classes/Block.md#islondon)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:440
 
 ***
 
 ### isMined()
 
 > **isMined**(): `this is MinedBlock`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:436
 
 Returns true if this block been mined. This provides a type guard
  for all properties on a [[MinedBlock]].
@@ -520,15 +476,13 @@ Returns true if this block been mined. This provides a type guard
 
 [`Block`](../classes/Block.md).[`isMined`](../classes/Block.md#ismined)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:436
-
 ***
 
 ### orphanedEvent()
 
 > **orphanedEvent**(): [`OrphanFilter`](../type-aliases/OrphanFilter.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:446
 
 @_ignore:
 
@@ -540,15 +494,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 [`Block`](../classes/Block.md).[`orphanedEvent`](../classes/Block.md#orphanedevent)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:446
-
 ***
 
 ### toJSON()
 
 > **toJSON**(): `any`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:411
 
 Returns a JSON-friendly value.
 
@@ -559,7 +511,3 @@ Returns a JSON-friendly value.
 #### Inherited from
 
 [`Block`](../classes/Block.md).[`toJSON`](../classes/Block.md#tojson)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:411

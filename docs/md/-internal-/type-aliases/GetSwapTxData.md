@@ -1,23 +1,25 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / GetSwapTxData
 
-# Type Alias: GetSwapTxData()
+# Type Alias: GetSwapTxData
 
-> **GetSwapTxData**: (`options`, `requestParams`?) => `Promise`\<[`SwapTxResult`](SwapTxResult.md)\>
+> **GetSwapTxData** = (`options`, `requestParams?`) => `Promise`\<[`SwapTxResult`](SwapTxResult.md)\>
+
+Defined in: [src/methods/swap/swapTx.ts:216](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L216)
 
 ## Parameters
 
-• **options**: [`SwapTxInput`](SwapTxInput.md)
+### options
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+[`SwapTxInput`](SwapTxInput.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<[`SwapTxResult`](SwapTxResult.md)\>
-
-## Defined in
-
-[src/methods/swap/swapTx.ts:216](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L216)

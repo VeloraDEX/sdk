@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,14 @@
 
 # Interface: EthersError\<T\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:85
+
 All errors in Ethers include properties to assist in
  machine-readable errors.
 
 ## Extends
 
-- [`Error`](Error.md)
+- `Error`
 
 ## Extended by
 
@@ -19,45 +21,53 @@ All errors in Ethers include properties to assist in
 
 ## Type Parameters
 
-• **T** *extends* [`ErrorCode`](../type-aliases/ErrorCode.md) = [`ErrorCode`](../type-aliases/ErrorCode.md)
+### T
+
+`T` *extends* [`ErrorCode`](../type-aliases/ErrorCode.md) = [`ErrorCode`](../type-aliases/ErrorCode.md)
 
 ## Properties
+
+### cause?
+
+> `optional` **cause?**: `unknown`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2022.error.d.ts:26
+
+#### Inherited from
+
+`Error.cause`
+
+***
 
 ### code
 
 > **code**: [`ErrorCode`](../type-aliases/ErrorCode.md)
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:89
+
 The string error code.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:89
 
 ***
 
 ### error?
 
-> `optional` **error**: [`Error`](Error.md)
+> `optional` **error?**: `Error`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:104
 
 Any related error.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:104
 
 ***
 
 ### info?
 
-> `optional` **info**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+> `optional` **info?**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:100
 
 Additional info regarding the error that may be useful.
 
  This is generally helpful mostly for human-based debugging.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:100
 
 ***
 
@@ -65,13 +75,11 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors
 
 > **message**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Inherited from
 
-[`Error`](Error.md).[`message`](Error.md#message)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+`Error.message`
 
 ***
 
@@ -79,13 +87,11 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **name**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
+
 #### Inherited from
 
-[`Error`](Error.md).[`name`](Error.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
+`Error.name`
 
 ***
 
@@ -93,23 +99,19 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **shortMessage**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:94
+
 A short message describing the error, with minimal additional
  details.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/errors.d.ts:94
 
 ***
 
 ### stack?
 
-> `optional` **stack**: `string`
+> `optional` **stack?**: `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Inherited from
 
-[`Error`](Error.md).[`stack`](Error.md#stack)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
+`Error.stack`

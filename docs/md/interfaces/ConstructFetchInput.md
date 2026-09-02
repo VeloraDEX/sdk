@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
 [@velora-dex/sdk](../globals.md) / ConstructFetchInput
 
 # Interface: ConstructFetchInput
+
+Defined in: [src/types.ts:71](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L71)
 
 ## Extends
 
@@ -18,15 +20,13 @@
 
 ### apiURL?
 
-> `optional` **apiURL**: `string`
+> `optional` **apiURL?**: `string`
+
+Defined in: [src/types.ts:38](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L38)
 
 #### Inherited from
 
 [`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md).[`apiURL`](../-internal-/interfaces/ConstructBaseInput.md#apiurl)
-
-#### Defined in
-
-[src/types.ts:38](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L38)
 
 ***
 
@@ -34,13 +34,11 @@
 
 > **chainId**: `number`
 
+Defined in: [src/types.ts:40](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L40)
+
 #### Inherited from
 
 [`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md).[`chainId`](../-internal-/interfaces/ConstructBaseInput.md#chainid)
-
-#### Defined in
-
-[src/types.ts:40](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L40)
 
 ***
 
@@ -48,20 +46,16 @@
 
 > **fetcher**: [`FetcherFunction`](../type-aliases/FetcherFunction.md)
 
-#### Defined in
-
-[src/types.ts:72](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L72)
+Defined in: [src/types.ts:72](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L72)
 
 ***
 
 ### version?
 
-> `optional` **version**: [`APIVersion`](../type-aliases/APIVersion.md)
+> `optional` **version?**: [`APIVersion`](../type-aliases/APIVersion.md)
+
+Defined in: [src/types.ts:39](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L39)
 
 #### Inherited from
 
 [`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md).[`version`](../-internal-/interfaces/ConstructBaseInput.md#version)
-
-#### Defined in
-
-[src/types.ts:39](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L39)

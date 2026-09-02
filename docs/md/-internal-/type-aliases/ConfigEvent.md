@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: ConfigEvent\<T, P\>
 
-> **ConfigEvent**\<`T`, `P`\>: `P` *extends* `unknown` ? `object` : `never`
+> **ConfigEvent**\<`T`, `P`\> = `P` *extends* `unknown` ? `object` : `never`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:35
 
 ## Type Parameters
 
-• **T**
+### T
 
-• **P** *extends* keyof `T` = keyof `T`
+`T`
 
-## Defined in
+### P
 
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_config.d.ts:35
+`P` *extends* keyof `T` = keyof `T`

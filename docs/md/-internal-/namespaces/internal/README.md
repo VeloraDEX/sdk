@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../README.md)
 
 ***
 
@@ -6,20 +6,18 @@
 
 # internal
 
-## Index
-
-### Namespaces
+## Namespaces
 
 - [finished](namespaces/finished/README.md)
 - [pipeline](namespaces/pipeline/README.md)
 
-### Classes
+## Classes
 
 - [PassThrough](classes/PassThrough.md)
 - [Transform](classes/Transform.md)
 - [Writable](classes/Writable.md)
 
-### Interfaces
+## Interfaces
 
 - [FinishedOptions](interfaces/FinishedOptions.md)
 - [Pipe](interfaces/Pipe.md)
@@ -29,7 +27,7 @@
 - [TransformOptions](interfaces/TransformOptions.md)
 - [WritableOptions](interfaces/WritableOptions.md)
 
-### Type Aliases
+## Type Aliases
 
 - [PipelineCallback](type-aliases/PipelineCallback.md)
 - [PipelineDestination](type-aliases/PipelineDestination.md)
@@ -42,12 +40,12 @@
 - [PipelineTransformSource](type-aliases/PipelineTransformSource.md)
 - [TransformCallback](type-aliases/TransformCallback.md)
 
-### Variables
+## Variables
 
 - [consumers](variables/consumers.md)
 - [promises](variables/promises.md)
 
-### Functions
+## Functions
 
 - [addAbortSignal](functions/addAbortSignal.md)
 - [duplexPair](functions/duplexPair.md)

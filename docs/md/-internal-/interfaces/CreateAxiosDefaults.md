@@ -1,114 +1,126 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / CreateAxiosDefaults
 
-# Interface: CreateAxiosDefaults\<D\>
+# Interface: CreateAxiosDefaults\<D, P\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:508
 
 Construct a type with the properties of T except for those in type K.
 
 ## Extends
 
-- [`Omit`](../type-aliases/Omit.md)\<[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`\>, `"headers"`\>
+- [`Omit`](../type-aliases/Omit.md)\<[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`D`, `P`\>, `"headers"`\>
 
 ## Type Parameters
 
-• **D** = `any`
+### D
+
+`D` = `any`
+
+### P
+
+`P` = `any`
 
 ## Properties
 
 ### adapter?
 
-> `optional` **adapter**: [`AxiosAdapterConfig`](../type-aliases/AxiosAdapterConfig.md) \| [`AxiosAdapterConfig`](../type-aliases/AxiosAdapterConfig.md)[]
+> `optional` **adapter?**: [`AxiosAdapterConfig`](../type-aliases/AxiosAdapterConfig.md) \| [`AxiosAdapterConfig`](../type-aliases/AxiosAdapterConfig.md)[]
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:407
 
 #### Inherited from
 
-`Omit.adapter`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:380
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`adapter`](InternalAxiosRequestConfig.md#adapter)
 
 ***
 
 ### allowAbsoluteUrls?
 
-> `optional` **allowAbsoluteUrls**: `boolean`
+> `optional` **allowAbsoluteUrls?**: `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:395
 
 #### Inherited from
 
-`Omit.allowAbsoluteUrls`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:370
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`allowAbsoluteUrls`](InternalAxiosRequestConfig.md#allowabsoluteurls)
 
 ***
 
 ### allowedSocketPaths?
 
-> `optional` **allowedSocketPaths**: `null` \| `string` \| `string`[]
+> `optional` **allowedSocketPaths?**: `string` \| `string`[] \| `null`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:433
 
 #### Inherited from
 
-`Omit.allowedSocketPaths`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:406
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`allowedSocketPaths`](InternalAxiosRequestConfig.md#allowedsocketpaths)
 
 ***
 
 ### auth?
 
-> `optional` **auth**: [`AxiosBasicCredentials`](AxiosBasicCredentials.md)
+> `optional` **auth?**: [`AxiosBasicCredentials`](AxiosBasicCredentials.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:408
 
 #### Inherited from
 
-`Omit.auth`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:381
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`auth`](InternalAxiosRequestConfig.md#auth)
 
 ***
 
 ### baseURL?
 
-> `optional` **baseURL**: `string`
+> `optional` **baseURL?**: `string`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:394
 
 #### Inherited from
 
-`Omit.baseURL`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:369
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`baseURL`](InternalAxiosRequestConfig.md#baseurl)
 
 ***
 
-### beforeRedirect()?
+### beforeRedirect?
 
-> `optional` **beforeRedirect**: (`options`, `responseDetails`, `requestDetails`) => `void`
+> `optional` **beforeRedirect?**: (`options`, `responseDetails`, `requestDetails`) => `void`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:420
 
 #### Parameters
 
-• **options**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+##### options
 
-• **responseDetails**
+[`Record`](../type-aliases/Record.md)\<`string`, `any`\>
 
-• **responseDetails.headers**: [`Record`](../type-aliases/Record.md)\<`string`, `string`\>
+##### responseDetails
 
-• **responseDetails.statusCode**: [`HttpStatusCode`](../enumerations/HttpStatusCode.md)
+###### headers
 
-• **requestDetails**
+[`Record`](../type-aliases/Record.md)\<`string`, `string`\>
 
-• **requestDetails.headers**: [`Record`](../type-aliases/Record.md)\<`string`, `string`\>
+###### statusCode
 
-• **requestDetails.method**: `string`
+[`HttpStatusCode`](../enumerations/HttpStatusCode.md)
 
-• **requestDetails.url**: `string`
+##### requestDetails
+
+###### headers
+
+[`Record`](../type-aliases/Record.md)\<`string`, `string`\>
+
+###### method
+
+`string`
+
+###### url
+
+`string`
 
 #### Returns
 
@@ -118,107 +130,113 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:369
 
 `Omit.beforeRedirect`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:393
-
 ***
 
 ### cancelToken?
 
-> `optional` **cancelToken**: [`CancelToken`](CancelToken.md)
+> `optional` **cancelToken?**: [`CancelToken`](CancelToken.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:438
 
 #### Inherited from
 
-`Omit.cancelToken`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:411
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`cancelToken`](InternalAxiosRequestConfig.md#canceltoken)
 
 ***
 
 ### data?
 
-> `optional` **data**: `D`
+> `optional` **data?**: `D`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:403
 
 #### Inherited from
 
 `Omit.data`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:376
-
 ***
 
 ### decompress?
 
-> `optional` **decompress**: `boolean`
+> `optional` **decompress?**: `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:439
 
 #### Inherited from
 
-`Omit.decompress`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:412
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`decompress`](InternalAxiosRequestConfig.md#decompress)
 
 ***
 
 ### env?
 
-> `optional` **env**: `object`
+> `optional` **env?**: `object`
 
-#### fetch()?
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:443
 
-> `optional` **fetch**: (`input`, `init`?) => `Promise`\<`Response`\>
+#### fetch?
+
+> `optional` **fetch?**: (`input`, `init?`) => `Promise`\<`Response`\>
 
 ##### Parameters
 
-• **input**: `string` \| `URL` \| `Request`
+###### input
 
-• **init?**: `RequestInit`
+`string` \| `URL` \| `Request`
+
+###### init?
+
+`RequestInit`
 
 ##### Returns
 
 `Promise`\<`Response`\>
 
-#### FormData()?
+#### FormData?
 
-> `optional` **FormData**: (...`args`) => `object`
+> `optional` **FormData?**: (...`args`) => `object`
 
 ##### Parameters
 
-• ...**args**: `any`[]
+###### args
+
+...`any`[]
 
 ##### Returns
 
 `object`
 
-#### Request()?
+#### Request?
 
-> `optional` **Request**: (`input`, `init`?) => `Request`
+> `optional` **Request?**: (`input`, `init?`) => `Request`
 
 ##### Parameters
 
-• **input**: `string` \| `URL` \| `Request`
+###### input
 
-• **init?**: `RequestInit`
+`string` \| `URL` \| `Request`
+
+###### init?
+
+`RequestInit`
 
 ##### Returns
 
 `Request`
 
-#### Response()?
+#### Response?
 
-> `optional` **Response**: (`body`?, `init`?) => `Response`
+> `optional` **Response?**: (`body?`, `init?`) => `Response`
 
 ##### Parameters
 
-• **body?**: `null` \| `string` \| `URLSearchParams` \| `Blob` \| [`ArrayBufferView`](ArrayBufferView.md) \| `ArrayBuffer` \| `FormData`
+###### body?
 
-• **init?**: `ResponseInit`
+`string` \| `URLSearchParams` \| `ArrayBuffer` \| `Blob` \| `FormData` \| [`ArrayBufferView`](ArrayBufferView.md)\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\> \| `null`
+
+###### init?
+
+`ResponseInit`
 
 ##### Returns
 
@@ -228,245 +246,213 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:412
 
 `Omit.env`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:416
-
 ***
 
 ### family?
 
-> `optional` **family**: [`AddressFamily`](../type-aliases/AddressFamily.md)
+> `optional` **family?**: [`AddressFamily`](../type-aliases/AddressFamily.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:453
 
 #### Inherited from
 
-`Omit.family`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:426
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`family`](InternalAxiosRequestConfig.md#family)
 
 ***
 
 ### fetchOptions?
 
-> `optional` **fetchOptions**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\> \| [`Omit`](../type-aliases/Omit.md)\<`RequestInit`, `"signal"` \| `"method"` \| `"headers"` \| `"body"`\>
+> `optional` **fetchOptions?**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\> \| [`Omit`](../type-aliases/Omit.md)\<`RequestInit`, `"signal"` \| `"method"` \| `"headers"` \| `"body"`\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:472
 
 #### Inherited from
 
-`Omit.fetchOptions`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:445
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`fetchOptions`](InternalAxiosRequestConfig.md#fetchoptions)
 
 ***
 
 ### formDataHeaderPolicy?
 
-> `optional` **formDataHeaderPolicy**: `"legacy"` \| `"content-only"`
+> `optional` **formDataHeaderPolicy?**: `"legacy"` \| `"content-only"`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:477
 
 #### Inherited from
 
-`Omit.formDataHeaderPolicy`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:450
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`formDataHeaderPolicy`](InternalAxiosRequestConfig.md#formdataheaderpolicy)
 
 ***
 
 ### formSerializer?
 
-> `optional` **formSerializer**: [`FormSerializerOptions`](FormSerializerOptions.md)
+> `optional` **formSerializer?**: [`FormSerializerOptions`](FormSerializerOptions.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:452
 
 #### Inherited from
 
-`Omit.formSerializer`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:425
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`formSerializer`](InternalAxiosRequestConfig.md#formserializer)
 
 ***
 
 ### headers?
 
-> `optional` **headers**: [`AxiosHeaders`](../classes/AxiosHeaders.md) \| [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\> \| [`Partial`](../type-aliases/Partial.md)\<[`HeadersDefaults`](HeadersDefaults.md)\>
+> `optional` **headers?**: [`AxiosHeaders`](../classes/AxiosHeaders.md) \| [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\> \| [`Partial`](../type-aliases/Partial.md)\<[`HeadersDefaults`](HeadersDefaults.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:481
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:512
 
 ***
 
 ### http2Options?
 
-> `optional` **http2Options**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\> & `object`
+> `optional` **http2Options?**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\> & `object`
 
-#### Type declaration
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:474
+
+#### Type Declaration
 
 ##### sessionTimeout?
 
-> `optional` **sessionTimeout**: `number`
+> `optional` **sessionTimeout?**: `number`
 
 #### Inherited from
 
 `Omit.http2Options`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:447
-
 ***
 
 ### httpAgent?
 
-> `optional` **httpAgent**: `any`
+> `optional` **httpAgent?**: `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:435
 
 #### Inherited from
 
-`Omit.httpAgent`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:408
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`httpAgent`](InternalAxiosRequestConfig.md#httpagent)
 
 ***
 
 ### httpsAgent?
 
-> `optional` **httpsAgent**: `any`
+> `optional` **httpsAgent?**: `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:436
 
 #### Inherited from
 
-`Omit.httpsAgent`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:409
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`httpsAgent`](InternalAxiosRequestConfig.md#httpsagent)
 
 ***
 
 ### httpVersion?
 
-> `optional` **httpVersion**: `2` \| `1`
+> `optional` **httpVersion?**: `2` \| `1`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:473
 
 #### Inherited from
 
-`Omit.httpVersion`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:446
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`httpVersion`](InternalAxiosRequestConfig.md#httpversion)
 
 ***
 
 ### insecureHTTPParser?
 
-> `optional` **insecureHTTPParser**: `boolean`
+> `optional` **insecureHTTPParser?**: `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:442
 
 #### Inherited from
 
-`Omit.insecureHTTPParser`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:415
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`insecureHTTPParser`](InternalAxiosRequestConfig.md#insecurehttpparser)
 
 ***
 
 ### lookup?
 
-> `optional` **lookup**: (`hostname`, `options`, `cb`) => `void` \| (`hostname`, `options`) => `Promise`\<[`LookupAddress`](../type-aliases/LookupAddress.md) \| [[`LookupAddressEntry`](LookupAddressEntry.md) \| [`LookupAddressEntry`](LookupAddressEntry.md)[], [`AddressFamily`](../type-aliases/AddressFamily.md)]\>
+> `optional` **lookup?**: ((`hostname`, `options`, `cb`) => `void`) \| ((`hostname`, `options`) => `Promise`\<[`LookupAddress`](../type-aliases/LookupAddress.md) \| \[[`LookupAddressEntry`](LookupAddressEntry.md) \| [`LookupAddressEntry`](LookupAddressEntry.md)[], [`AddressFamily`](../type-aliases/AddressFamily.md)\]\>)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:454
 
 #### Inherited from
 
 `Omit.lookup`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:427
-
 ***
 
 ### maxBodyLength?
 
-> `optional` **maxBodyLength**: `number`
+> `optional` **maxBodyLength?**: `number`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:417
 
 #### Inherited from
 
-`Omit.maxBodyLength`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:390
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`maxBodyLength`](InternalAxiosRequestConfig.md#maxbodylength)
 
 ***
 
 ### maxContentLength?
 
-> `optional` **maxContentLength**: `number`
+> `optional` **maxContentLength?**: `number`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:415
 
 #### Inherited from
 
-`Omit.maxContentLength`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:388
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`maxContentLength`](InternalAxiosRequestConfig.md#maxcontentlength)
 
 ***
 
 ### maxRate?
 
-> `optional` **maxRate**: `number` \| [`number`, `number`]
+> `optional` **maxRate?**: `number` \| \[`number`, `number`\]
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:419
 
 #### Inherited from
 
-`Omit.maxRate`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:392
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`maxRate`](InternalAxiosRequestConfig.md#maxrate)
 
 ***
 
 ### maxRedirects?
 
-> `optional` **maxRedirects**: `number`
+> `optional` **maxRedirects?**: `number`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:418
 
 #### Inherited from
 
-`Omit.maxRedirects`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:391
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`maxRedirects`](InternalAxiosRequestConfig.md#maxredirects)
 
 ***
 
 ### method?
 
-> `optional` **method**: [`StringLiteralsOrString`](../type-aliases/StringLiteralsOrString.md)\<[`Method`](../type-aliases/Method.md)\>
+> `optional` **method?**: [`StringLiteralsOrString`](../type-aliases/StringLiteralsOrString.md)\<[`Method`](../type-aliases/Method.md)\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:393
 
 #### Inherited from
 
-`Omit.method`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:368
+[`AxiosRequestConfig`](AxiosRequestConfig.md).[`method`](AxiosRequestConfig.md#method)
 
 ***
 
-### onDownloadProgress()?
+### onDownloadProgress?
 
-> `optional` **onDownloadProgress**: (`progressEvent`) => `void`
+> `optional` **onDownloadProgress?**: (`progressEvent`) => `void`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:414
 
 #### Parameters
 
-• **progressEvent**: [`AxiosProgressEvent`](AxiosProgressEvent.md)
+##### progressEvent
+
+[`AxiosProgressEvent`](AxiosProgressEvent.md)
 
 #### Returns
 
@@ -476,19 +462,19 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:368
 
 `Omit.onDownloadProgress`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:387
-
 ***
 
-### onUploadProgress()?
+### onUploadProgress?
 
-> `optional` **onUploadProgress**: (`progressEvent`) => `void`
+> `optional` **onUploadProgress?**: (`progressEvent`) => `void`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:413
 
 #### Parameters
 
-• **progressEvent**: [`AxiosProgressEvent`](AxiosProgressEvent.md)
+##### progressEvent
+
+[`AxiosProgressEvent`](AxiosProgressEvent.md)
 
 #### Returns
 
@@ -498,55 +484,57 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:387
 
 `Omit.onUploadProgress`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:386
-
 ***
 
 ### params?
 
-> `optional` **params**: `any`
+> `optional` **params?**: `P`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:399
 
 #### Inherited from
 
 `Omit.params`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:374
-
 ***
 
 ### paramsSerializer?
 
-> `optional` **paramsSerializer**: [`ParamsSerializerOptions`](ParamsSerializerOptions.md) \| [`CustomParamsSerializer`](CustomParamsSerializer.md)
+> `optional` **paramsSerializer?**: [`ParamsSerializerOptions`](ParamsSerializerOptions.md)\<`unknown` *extends* `P` ? [`Record`](../type-aliases/Record.md)\<`string`, `any`\> : `P`\> \| [`CustomParamsSerializer`](CustomParamsSerializer.md)\<`unknown` *extends* `P` ? [`Record`](../type-aliases/Record.md)\<`string`, `any`\> : `P`\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:400
 
 #### Inherited from
 
 `Omit.paramsSerializer`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:375
-
 ***
 
-### parseReviver()?
+### parseReviver?
 
-> `optional` **parseReviver**: (`this`, `key`, `value`, `context`?) => `any`
+> `optional` **parseReviver?**: (`this`, `key`, `value`, `context?`) => `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:471
 
 #### Parameters
 
-• **this**: `any`
+##### this
 
-• **key**: `string`
+`any`
 
-• **value**: `any`
+##### key
 
-• **context?**
+`string`
 
-• **context.source?**: `string`
+##### value
+
+`any`
+
+##### context?
+
+###### source?
+
+`string`
 
 #### Returns
 
@@ -556,258 +544,230 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:375
 
 `Omit.parseReviver`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:444
-
 ***
 
 ### proxy?
 
-> `optional` **proxy**: `false` \| [`AxiosProxyConfig`](AxiosProxyConfig.md)
+> `optional` **proxy?**: `false` \| [`AxiosProxyConfig`](AxiosProxyConfig.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:437
 
 #### Inherited from
 
-`Omit.proxy`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:410
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`proxy`](InternalAxiosRequestConfig.md#proxy)
 
 ***
 
 ### redact?
 
-> `optional` **redact**: `string`[]
+> `optional` **redact?**: `string`[]
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:478
 
 #### Inherited from
 
-`Omit.redact`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:451
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`redact`](InternalAxiosRequestConfig.md#redact)
 
 ***
 
 ### responseEncoding?
 
-> `optional` **responseEncoding**: [`StringLiteralsOrString`](../type-aliases/StringLiteralsOrString.md)\<[`responseEncoding`](../type-aliases/responseEncoding.md)\>
+> `optional` **responseEncoding?**: [`StringLiteralsOrString`](../type-aliases/StringLiteralsOrString.md)\<[`responseEncoding`](../type-aliases/responseEncoding.md)\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:410
 
 #### Inherited from
 
-`Omit.responseEncoding`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:383
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`responseEncoding`](InternalAxiosRequestConfig.md#responseencoding)
 
 ***
 
 ### responseType?
 
-> `optional` **responseType**: [`ResponseType`](../type-aliases/ResponseType.md)
+> `optional` **responseType?**: [`ResponseType`](../type-aliases/ResponseType.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:409
 
 #### Inherited from
 
-`Omit.responseType`
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`responseType`](InternalAxiosRequestConfig.md#responsetype)
 
-#### Defined in
+***
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:382
+### sensitiveHeaders?
+
+> `optional` **sensitiveHeaders?**: `string`[]
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:479
+
+#### Inherited from
+
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`sensitiveHeaders`](InternalAxiosRequestConfig.md#sensitiveheaders)
 
 ***
 
 ### signal?
 
-> `optional` **signal**: [`GenericAbortSignal`](GenericAbortSignal.md)
+> `optional` **signal?**: [`GenericAbortSignal`](GenericAbortSignal.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:441
 
 #### Inherited from
 
-`Omit.signal`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:414
+[`AxiosRequestConfig`](AxiosRequestConfig.md).[`signal`](AxiosRequestConfig.md#signal)
 
 ***
 
 ### socketPath?
 
-> `optional` **socketPath**: `null` \| `string`
+> `optional` **socketPath?**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:432
 
 #### Inherited from
 
-`Omit.socketPath`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:405
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`socketPath`](InternalAxiosRequestConfig.md#socketpath)
 
 ***
 
 ### timeout?
 
-> `optional` **timeout**: `number`
+> `optional` **timeout?**: `number`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:404
 
 #### Inherited from
 
-`Omit.timeout`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:377
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`timeout`](InternalAxiosRequestConfig.md#timeout)
 
 ***
 
 ### timeoutErrorMessage?
 
-> `optional` **timeoutErrorMessage**: `string`
+> `optional` **timeoutErrorMessage?**: `string`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:405
 
 #### Inherited from
 
-`Omit.timeoutErrorMessage`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:378
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`timeoutErrorMessage`](InternalAxiosRequestConfig.md#timeouterrormessage)
 
 ***
 
 ### transformRequest?
 
-> `optional` **transformRequest**: [`AxiosRequestTransformer`](AxiosRequestTransformer.md) \| [`AxiosRequestTransformer`](AxiosRequestTransformer.md)[]
+> `optional` **transformRequest?**: [`AxiosRequestTransformer`](AxiosRequestTransformer.md) \| [`AxiosRequestTransformer`](AxiosRequestTransformer.md)[]
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:396
 
 #### Inherited from
 
-`Omit.transformRequest`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:371
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`transformRequest`](InternalAxiosRequestConfig.md#transformrequest)
 
 ***
 
 ### transformResponse?
 
-> `optional` **transformResponse**: [`AxiosResponseTransformer`](AxiosResponseTransformer.md) \| [`AxiosResponseTransformer`](AxiosResponseTransformer.md)[]
+> `optional` **transformResponse?**: [`AxiosResponseTransformer`](AxiosResponseTransformer.md) \| [`AxiosResponseTransformer`](AxiosResponseTransformer.md)[]
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:397
 
 #### Inherited from
 
-`Omit.transformResponse`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:372
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`transformResponse`](InternalAxiosRequestConfig.md#transformresponse)
 
 ***
 
 ### transitional?
 
-> `optional` **transitional**: [`TransitionalOptions`](TransitionalOptions.md)
+> `optional` **transitional?**: [`TransitionalOptions`](TransitionalOptions.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:440
 
 #### Inherited from
 
-`Omit.transitional`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:413
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`transitional`](InternalAxiosRequestConfig.md#transitional)
 
 ***
 
 ### transport?
 
-> `optional` **transport**: `any`
+> `optional` **transport?**: `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:434
 
 #### Inherited from
 
-`Omit.transport`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:407
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`transport`](InternalAxiosRequestConfig.md#transport)
 
 ***
 
 ### url?
 
-> `optional` **url**: `string`
+> `optional` **url?**: `string`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:392
 
 #### Inherited from
 
-`Omit.url`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:367
+[`AxiosRequestConfig`](AxiosRequestConfig.md).[`url`](AxiosRequestConfig.md#url)
 
 ***
 
 ### validateStatus?
 
-> `optional` **validateStatus**: `null` \| (`status`) => `boolean`
+> `optional` **validateStatus?**: ((`status`) => `boolean`) \| `null`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:416
 
 #### Inherited from
 
 `Omit.validateStatus`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:389
-
 ***
 
 ### withCredentials?
 
-> `optional` **withCredentials**: `boolean`
+> `optional` **withCredentials?**: `boolean`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:406
 
 #### Inherited from
 
-`Omit.withCredentials`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:379
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`withCredentials`](InternalAxiosRequestConfig.md#withcredentials)
 
 ***
 
 ### withXSRFToken?
 
-> `optional` **withXSRFToken**: `boolean` \| (`config`) => `undefined` \| `boolean`
+> `optional` **withXSRFToken?**: `boolean` \| ((`config`) => `boolean` \| `undefined`)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:470
 
 #### Inherited from
 
 `Omit.withXSRFToken`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:443
-
 ***
 
 ### xsrfCookieName?
 
-> `optional` **xsrfCookieName**: `string`
+> `optional` **xsrfCookieName?**: `string`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:411
 
 #### Inherited from
 
-`Omit.xsrfCookieName`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:384
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`xsrfCookieName`](InternalAxiosRequestConfig.md#xsrfcookiename)
 
 ***
 
 ### xsrfHeaderName?
 
-> `optional` **xsrfHeaderName**: `string`
+> `optional` **xsrfHeaderName?**: `string`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:412
 
 #### Inherited from
 
-`Omit.xsrfHeaderName`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:385
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md).[`xsrfHeaderName`](InternalAxiosRequestConfig.md#xsrfheadername)

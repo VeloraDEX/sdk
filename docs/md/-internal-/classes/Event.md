@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,27 +6,33 @@
 
 # Class: Event
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:8
+
 ## Constructors
 
-### new Event()
+### Constructor
 
-> **new Event**(`tag`, `listener`, `once`): [`Event`](Event.md)
+> **new Event**(`tag`, `listener`, `once`): `Event`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:14
 
 #### Parameters
 
-• **tag**: `string`
+##### tag
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+`string`
 
-• **once**: `boolean`
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
+
+##### once
+
+`boolean`
 
 #### Returns
 
-[`Event`](Event.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:14
+`Event`
 
 ## Properties
 
@@ -34,9 +40,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_inflight**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:13
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:13
 
 ***
 
@@ -44,9 +48,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_lastBlockNumber**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:12
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:12
 
 ***
 
@@ -54,9 +56,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **listener**: [`Listener`](../type-aliases/Listener.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:9
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:9
 
 ***
 
@@ -64,9 +64,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **once**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:10
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:10
 
 ***
 
@@ -74,9 +72,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **tag**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:11
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:11
 
 ## Accessors
 
@@ -86,13 +82,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **get** **event**(): [`EventType`](../type-aliases/EventType.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:15
+
 ##### Returns
 
 [`EventType`](../type-aliases/EventType.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:15
 
 ***
 
@@ -102,13 +96,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **get** **filter**(): [`Filter`](../interfaces/Filter.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:18
+
 ##### Returns
 
 [`Filter`](../interfaces/Filter.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:18
 
 ***
 
@@ -118,13 +110,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **get** **hash**(): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:17
+
 ##### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:17
 
 ***
 
@@ -134,13 +124,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **get** **type**(): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:16
+
 ##### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:16
 
 ## Methods
 
@@ -148,10 +136,8 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **pollable**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:19
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:19

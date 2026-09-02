@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,22 @@
 
 # Type Alias: EventFilter
 
-> **EventFilter**: `object`
+> **EventFilter** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:41
+
+## Properties
 
 ### address?
 
-> `optional` **address**: `string`
+> `optional` **address?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:42
+
+***
 
 ### topics?
 
-> `optional` **topics**: (`string` \| `string`[])[]
+> `optional` **topics?**: (`string` \| `string`[])[]
 
-## Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:41
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:43

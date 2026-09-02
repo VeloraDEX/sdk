@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -7,6 +7,8 @@
 # Function: addAbortSignal()
 
 > **addAbortSignal**\<`T`\>(`signal`, `stream`): `T`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1395
 
 A stream to attach a signal to.
 
@@ -85,15 +87,21 @@ reader.read().then(({ value, done }) => {
 
 ## Type Parameters
 
-• **T** *extends* [`Stream`](../../../classes/Stream.md)
+### T
+
+`T` *extends* [`Stream`](../../../classes/Stream.md)
 
 ## Parameters
 
-• **signal**: `AbortSignal`
+### signal
+
+`AbortSignal`
 
 A signal representing possible cancellation
 
-• **stream**: `T`
+### stream
+
+`T`
 
 A stream to attach a signal to.
 
@@ -104,7 +112,3 @@ A stream to attach a signal to.
 ## Since
 
 v15.4.0
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1395

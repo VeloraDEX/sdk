@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -6,19 +6,19 @@
 
 # Interface: Pipe
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1700
+
 ## Methods
 
 ### close()
 
 > **close**(): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1701
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1701
 
 ***
 
@@ -26,13 +26,11 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:170
 
 > **hasRef**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1702
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1702
 
 ***
 
@@ -40,13 +38,11 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:170
 
 > **ref**(): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1703
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1703
 
 ***
 
@@ -54,10 +50,8 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:170
 
 > **unref**(): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1704
+
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1704

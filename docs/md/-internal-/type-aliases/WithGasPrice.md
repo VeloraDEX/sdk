@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: WithGasPrice
 
-> **WithGasPrice**: `object`
+> **WithGasPrice** = `object`
 
-## Type declaration
+Defined in: [src/gas.ts:1](https://github.com/paraswap/paraswap-sdk/blob/master/src/gas.ts#L1)
+
+## Properties
 
 ### gasPrice
 
 > **gasPrice**: `string`
 
-## Defined in
-
-[src/gas.ts:1](https://github.com/paraswap/paraswap-sdk/blob/master/src/gas.ts#L1)
+Defined in: [src/gas.ts:2](https://github.com/paraswap/paraswap-sdk/blob/master/src/gas.ts#L2)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,18 +6,16 @@
 
 # Type Alias: SubmitTWAPDeltaOrderParams
 
-> **SubmitTWAPDeltaOrderParams**: [`BuildTWAPDeltaOrderParams`](BuildTWAPDeltaOrderParams.md) & `object` & [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaOrderToPost`](DeltaOrderToPost.md), `"type"` \| `"includeAgents"` \| `"excludeAgents"`\>
+> **SubmitTWAPDeltaOrderParams** = [`BuildTWAPDeltaOrderParams`](BuildTWAPDeltaOrderParams.md) & `object` & [`Pick`](../-internal-/type-aliases/Pick.md)\<[`DeltaOrderToPost`](DeltaOrderToPost.md), `"type"` \| `"includeAgents"` \| `"excludeAgents"`\>
 
-## Type declaration
+Defined in: [src/methods/delta/index.ts:213](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L213)
+
+## Type Declaration
 
 ### degenMode?
 
-> `optional` **degenMode**: `boolean`
+> `optional` **degenMode?**: `boolean`
 
 ### referrerAddress?
 
-> `optional` **referrerAddress**: `string`
-
-## Defined in
-
-[src/methods/delta/index.ts:213](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L213)
+> `optional` **referrerAddress?**: `string`

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,23 +6,25 @@
 
 # Class: Address
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:1
+
 ## Constructors
 
-### new Address()
+### Constructor
 
-> **new Address**(`buf`): [`Address`](Address.md)
+> **new Address**(`buf`): `Address`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:3
 
 #### Parameters
 
-• **buf**: `Uint8Array`
+##### buf
+
+`Uint8Array`
 
 #### Returns
 
-[`Address`](Address.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:3
+`Address`
 
 ## Properties
 
@@ -30,9 +32,7 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > `readonly` **buf**: `Uint8Array`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:2
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:2
 
 ## Methods
 
@@ -40,19 +40,19 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **equals**(`address`): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:11
+
 Is address equal to another.
 
 #### Parameters
 
-• **address**: [`Address`](Address.md)
+##### address
+
+`Address`
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:11
 
 ***
 
@@ -60,15 +60,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **isZero**(): `boolean`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:15
+
 Is address zero.
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:15
 
 ***
 
@@ -76,15 +74,13 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **toArray**(): `Uint8Array`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:23
+
 Returns Uint8Array representation of address.
 
 #### Returns
 
 `Uint8Array`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:23
 
 ***
 
@@ -92,30 +88,34 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **toString**(): `string`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:19
+
 Returns hex encoding of address.
 
 #### Returns
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:19
-
 ***
 
 ### publicToAddress()
 
-> `static` **publicToAddress**(`_pubKey`, `sanitize`?): `Uint8Array`
+> `static` **publicToAddress**(`_pubKey`, `sanitize?`): `Uint8Array`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:30
 
 Returns the ethereum address of a given public key.
 Accepts "Ethereum public keys" and SEC1 encoded keys.
 
 #### Parameters
 
-• **\_pubKey**: `Uint8Array`
+##### \_pubKey
 
-• **sanitize?**: `boolean`
+`Uint8Array`
+
+##### sanitize?
+
+`boolean`
 
 Accept public keys in other formats
 
@@ -123,22 +123,16 @@ Accept public keys in other formats
 
 `Uint8Array`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:30
-
 ***
 
 ### zero()
 
-> `static` **zero**(): [`Address`](Address.md)
+> `static` **zero**(): `Address`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:7
 
 Returns the zero address.
 
 #### Returns
 
-[`Address`](Address.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/address.d.ts:7
+`Address`

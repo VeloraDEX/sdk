@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,11 +6,17 @@
 
 # Interface: ReadableWritablePair\<R, W\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:39
+
 ## Type Parameters
 
-• **R** = `any`
+### R
 
-• **W** = `any`
+`R` = `any`
+
+### W
+
+`W` = `any`
 
 ## Properties
 
@@ -18,15 +24,15 @@
 
 > **readable**: [`ReadableStream`](ReadableStream.md)\<`R`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:40
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:40
 
 ***
 
 ### writable
 
 > **writable**: [`WritableStream`](WritableStream.md)\<`W`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:50
 
 Provides a convenient, chainable way of piping this readable stream
 through a transform stream (or any other { writable, readable }
@@ -35,7 +41,3 @@ supplied pair, and returns the readable side for further use.
 
 Piping a stream will lock it for the duration of the pipe, preventing
 any other consumer from acquiring a reader.
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:50

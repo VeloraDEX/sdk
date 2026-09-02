@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,21 @@
 
 # Interface: Iterable\<T, TReturn, TNext\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:48
+
 ## Type Parameters
 
-• **T**
+### T
 
-• **TReturn** = `any`
+`T`
 
-• **TNext** = `any`
+### TReturn
+
+`TReturn` = `any`
+
+### TNext
+
+`TNext` = `any`
 
 ## Methods
 
@@ -20,10 +28,8 @@
 
 > **\[iterator\]**(): [`Iterator`](Iterator.md)\<`T`, `TReturn`, `TNext`\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:49
+
 #### Returns
 
 [`Iterator`](Iterator.md)\<`T`, `TReturn`, `TNext`\>
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:49

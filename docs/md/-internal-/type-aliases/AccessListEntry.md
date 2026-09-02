@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,20 +6,24 @@
 
 # Type Alias: AccessListEntry
 
-> **AccessListEntry**: `object`
+> **AccessListEntry** = `object`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/index.d.ts:9
 
 A single [[AccessList]] entry of storage keys (slots) for an address.
 
-## Type declaration
+## Properties
 
 ### address
 
 > **address**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/index.d.ts:10
+
+***
+
 ### storageKeys
 
 > **storageKeys**: `string`[]
 
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/index.d.ts:9
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/index.d.ts:11

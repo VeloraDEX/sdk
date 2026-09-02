@@ -1,23 +1,25 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Web3BaseProviderConstructor
 
-# Type Alias: Web3BaseProviderConstructor()
+# Type Alias: Web3BaseProviderConstructor
 
-> **Web3BaseProviderConstructor**: \<`API`\>(`url`, `net`?) => [`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\>
+> **Web3BaseProviderConstructor** = \<`API`\>(`url`, `net?`) => [`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:121
 
 ## Parameters
 
-• **url**: `string`
+### url
 
-• **net?**: [`Socket`](../classes/Socket.md)
+`string`
+
+### net?
+
+[`Socket`](../classes/Socket.md)
 
 ## Returns
 
 [`Web3BaseProvider`](../classes/Web3BaseProvider.md)\<`API`\>
-
-## Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:121

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: ContractMethodV6
 
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:30
+
 ## Enumeration Members
 
 ### swapExactAmountIn
 
 > **swapExactAmountIn**: `"swapExactAmountIn"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:31
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:31
 
 ***
 
@@ -22,9 +22,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountInOnBalancerV2**: `"swapExactAmountInOnBalancerV2"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:37
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:37
 
 ***
 
@@ -32,9 +30,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountInOnCurveV1**: `"swapExactAmountInOnCurveV1"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:39
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:39
 
 ***
 
@@ -42,9 +38,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountInOnCurveV2**: `"swapExactAmountInOnCurveV2"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:40
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:40
 
 ***
 
@@ -52,9 +46,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountInOnUniswapV2**: `"swapExactAmountInOnUniswapV2"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:33
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:33
 
 ***
 
@@ -62,9 +54,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountInOnUniswapV3**: `"swapExactAmountInOnUniswapV3"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:35
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:35
 
 ***
 
@@ -72,9 +62,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountInOutOnMakerPSM**: `"swapExactAmountInOutOnMakerPSM"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:42
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:42
 
 ***
 
@@ -82,9 +70,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountInPro**: `"swapExactAmountInPro"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:43
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:43
 
 ***
 
@@ -92,9 +78,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountOut**: `"swapExactAmountOut"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:32
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:32
 
 ***
 
@@ -102,9 +86,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountOutOnBalancerV2**: `"swapExactAmountOutOnBalancerV2"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:38
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:38
 
 ***
 
@@ -112,9 +94,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountOutOnUniswapV2**: `"swapExactAmountOutOnUniswapV2"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:34
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:34
 
 ***
 
@@ -122,9 +102,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountOutOnUniswapV3**: `"swapExactAmountOutOnUniswapV3"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:36
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:36
 
 ***
 
@@ -132,9 +110,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapExactAmountOutPro**: `"swapExactAmountOutPro"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:44
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:44
 
 ***
 
@@ -142,6 +118,4 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapOnAugustusRFQTryBatchFill**: `"swapOnAugustusRFQTryBatchFill"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:41
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:41

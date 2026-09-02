@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,27 +6,39 @@
 
 # Class: Web3SubscriptionManager\<API, RegisteredSubs\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:8
+
 ## Type Parameters
 
-• **API** *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`Web3APISpec`](../type-aliases/Web3APISpec.md)
+### API
 
-• **RegisteredSubs** *extends* `object` = `object`
+`API` *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md) = [`Web3APISpec`](../type-aliases/Web3APISpec.md)
+
+### RegisteredSubs
+
+`RegisteredSubs` *extends* `object` = \{\[`key`: `string`\]: [`Web3SubscriptionConstructor`](../type-aliases/Web3SubscriptionConstructor.md)\<`API`\>; \}
 
 ## Constructors
 
-### new Web3SubscriptionManager()
+### Constructor
 
-> **new Web3SubscriptionManager**\<`API`, `RegisteredSubs`\>(`requestManager`, `registeredSubscriptions`): [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `RegisteredSubs`\>
+> **new Web3SubscriptionManager**\<`API`, `RegisteredSubs`\>(`requestManager`, `registeredSubscriptions`): `Web3SubscriptionManager`\<`API`, `RegisteredSubs`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:28
 
 #### Parameters
 
-• **requestManager**: [`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
+##### requestManager
 
-• **registeredSubscriptions**: `RegisteredSubs`
+[`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
+
+##### registeredSubscriptions
+
+`RegisteredSubs`
 
 #### Returns
 
-[`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `RegisteredSubs`\>
+`Web3SubscriptionManager`\<`API`, `RegisteredSubs`\>
 
 #### Example
 
@@ -35,33 +47,33 @@ const requestManager = new Web3RequestManager("ws://localhost:8545");
 const subscriptionManager = new Web3SubscriptionManager(requestManager, {});
 ```
 
-#### Defined in
+### Constructor
 
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:28
+> **new Web3SubscriptionManager**\<`API`, `RegisteredSubs`\>(`requestManager`, `registeredSubscriptions`, `tolerateUnlinkedSubscription`): `Web3SubscriptionManager`\<`API`, `RegisteredSubs`\>
 
-### new Web3SubscriptionManager()
-
-> **new Web3SubscriptionManager**\<`API`, `RegisteredSubs`\>(`requestManager`, `registeredSubscriptions`, `tolerateUnlinkedSubscription`): [`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `RegisteredSubs`\>
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:32
 
 #### Parameters
 
-• **requestManager**: [`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
+##### requestManager
 
-• **registeredSubscriptions**: `RegisteredSubs`
+[`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
 
-• **tolerateUnlinkedSubscription**: `boolean`
+##### registeredSubscriptions
+
+`RegisteredSubs`
+
+##### tolerateUnlinkedSubscription
+
+`boolean`
 
 #### Returns
 
-[`Web3SubscriptionManager`](Web3SubscriptionManager.md)\<`API`, `RegisteredSubs`\>
+`Web3SubscriptionManager`\<`API`, `RegisteredSubs`\>
 
 #### Deprecated
 
 This constructor overloading should not be used
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:32
 
 ## Properties
 
@@ -69,9 +81,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > `readonly` **registeredSubscriptions**: `RegisteredSubs`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:14
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:14
 
 ***
 
@@ -79,9 +89,7 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > `readonly` **requestManager**: [`Web3RequestManager`](Web3RequestManager.md)\<`API`\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:13
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:13
 
 ## Accessors
 
@@ -91,15 +99,13 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **get** **subscriptions**(): `Map`\<`string`, [`InstanceType`](../type-aliases/InstanceType.md)\<`RegisteredSubs`\[keyof `RegisteredSubs`\]\>\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:49
+
 Will returns all subscriptions.
 
 ##### Returns
 
 `Map`\<`string`, [`InstanceType`](../type-aliases/InstanceType.md)\<`RegisteredSubs`\[keyof `RegisteredSubs`\]\>\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:49
 
 ## Methods
 
@@ -107,11 +113,15 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **addSubscription**(`sub`): `Promise`\<`string`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:56
+
 Adds an instance of [Web3Subscription](Web3Subscription.md) and subscribes to it
 
 #### Parameters
 
-• **sub**: [`InstanceType`](../type-aliases/InstanceType.md)\<`RegisteredSubs`\[keyof `RegisteredSubs`\]\>
+##### sub
+
+[`InstanceType`](../type-aliases/InstanceType.md)\<`RegisteredSubs`\[keyof `RegisteredSubs`\]\>
 
 A [Web3Subscription](Web3Subscription.md) object
 
@@ -119,15 +129,13 @@ A [Web3Subscription](Web3Subscription.md) object
 
 `Promise`\<`string`\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:56
-
 ***
 
 ### clear()
 
 > **clear**(): `void`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:73
 
 Clears all subscriptions
 
@@ -135,27 +143,23 @@ Clears all subscriptions
 
 `void`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:73
-
 ***
 
 ### messageListener()
 
-> `protected` **messageListener**(`data`?): `void`
+> `protected` **messageListener**(`data?`): `void`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:34
 
 #### Parameters
 
-• **data?**: [`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Log.md)\>
+##### data?
+
+[`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcSubscriptionResultOld`](../interfaces/JsonRpcSubscriptionResultOld.md)\<[`Log`](../interfaces/Log-1.md)\> \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<[`Log`](../interfaces/Log-1.md)\>
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:34
 
 ***
 
@@ -163,43 +167,53 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_s
 
 > **removeSubscription**(`sub`): `Promise`\<`string`\>
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:62
+
 Will clear a subscription
 
 #### Parameters
 
-• **sub**: [`InstanceType`](../type-aliases/InstanceType.md)\<`RegisteredSubs`\[keyof `RegisteredSubs`\]\>
+##### sub
+
+[`InstanceType`](../type-aliases/InstanceType.md)\<`RegisteredSubs`\[keyof `RegisteredSubs`\]\>
 
 #### Returns
 
 `Promise`\<`string`\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:62
-
 ***
 
 ### subscribe()
 
-> **subscribe**\<`T`\>(`name`, `args`?, `returnFormat`?): `Promise`\<[`InstanceType`](../type-aliases/InstanceType.md)\<`RegisteredSubs`\[`T`\]\>\>
+> **subscribe**\<`T`\>(`name`, `args?`, `returnFormat?`): `Promise`\<[`InstanceType`](../type-aliases/InstanceType.md)\<`RegisteredSubs`\[`T`\]\>\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:45
 
 Will create a new subscription
 
 #### Type Parameters
 
-• **T** *extends* `string` \| `number` \| `symbol`
+##### T
+
+`T` *extends* `string` \| `number` \| `symbol`
 
 #### Parameters
 
-• **name**: `T`
+##### name
+
+`T`
 
 The subscription you want to subscribe to
 
-• **args?**: [`ConstructorParameters`](../type-aliases/ConstructorParameters.md)\<`RegisteredSubs`\[`T`\]\>\[`0`\]
+##### args?
+
+[`ConstructorParameters`](../type-aliases/ConstructorParameters.md)\<`RegisteredSubs`\[`T`\]\>\[`0`\]
 
 Optional additional parameters, depending on the subscription type
 
-• **returnFormat?**: [`DataFormat`](../type-aliases/DataFormat.md)
+##### returnFormat?
+
+[`DataFormat`](../type-aliases/DataFormat.md)
 
 #### Returns
 
@@ -207,15 +221,13 @@ Optional additional parameters, depending on the subscription type
 
 The subscription object
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:45
-
 ***
 
 ### supportsSubscriptions()
 
 > **supportsSubscriptions**(): `boolean`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:79
 
 Check whether the current provider supports subscriptions.
 
@@ -225,21 +237,21 @@ Check whether the current provider supports subscriptions.
 
 `true` or `false` depending on if the current provider supports subscriptions
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:79
-
 ***
 
 ### unsubscribe()
 
-> **unsubscribe**(`condition`?): `Promise`\<`string`[]\>
+> **unsubscribe**(`condition?`): `Promise`\<`string`[]\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:69
 
 Will unsubscribe all subscriptions that fulfill the condition
 
 #### Parameters
 
-• **condition?**: [`ShouldUnsubscribeCondition`](../type-aliases/ShouldUnsubscribeCondition.md)
+##### condition?
+
+[`ShouldUnsubscribeCondition`](../type-aliases/ShouldUnsubscribeCondition.md)
 
 A function that access and `id` and a `subscription` and return `true` or `false`
 
@@ -248,7 +260,3 @@ A function that access and `id` and a `subscription` and return `true` or `false
 `Promise`\<`string`[]\>
 
 An array of all the un-subscribed subscriptions
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_subscription\_manager.d.ts:69

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,10 +6,8 @@
 
 # Type Alias: AddressLike
 
-> **AddressLike**: `string` \| `Promise`\<`string`\> \| [`Addressable`](../interfaces/Addressable.md)
+> **AddressLike** = `string` \| `Promise`\<`string`\> \| [`Addressable`](../interfaces/Addressable.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/address/index.d.ts:32
 
 Anything that can be used to return or resolve an address.
-
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/address/index.d.ts:32

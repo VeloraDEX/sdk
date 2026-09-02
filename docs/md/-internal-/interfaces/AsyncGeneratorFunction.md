@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,45 +6,47 @@
 
 # Interface: AsyncGeneratorFunction()
 
-> **AsyncGeneratorFunction**(...`args`): [`AsyncGenerator`](AsyncGenerator.md)\<`unknown`, `any`, `any`\>
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:29
+
+> **AsyncGeneratorFunction**(...`args`): [`AsyncGenerator`](AsyncGenerator.md)
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:39
 
 Creates a new AsyncGenerator object.
 
 ## Parameters
 
-• ...**args**: `any`[]
+### args
+
+...`any`[]
 
 A list of arguments the function accepts.
 
 ## Returns
 
-[`AsyncGenerator`](AsyncGenerator.md)\<`unknown`, `any`, `any`\>
-
-## Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:39
+[`AsyncGenerator`](AsyncGenerator.md)
 
 ## Constructors
 
-### new AsyncGeneratorFunction()
+### Constructor
 
-> **new AsyncGeneratorFunction**(...`args`): [`AsyncGenerator`](AsyncGenerator.md)\<`unknown`, `any`, `any`\>
+> **new AsyncGeneratorFunction**(...`args`): [`AsyncGenerator`](AsyncGenerator.md)
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:34
 
 Creates a new AsyncGenerator object.
 
 #### Parameters
 
-• ...**args**: `any`[]
+##### args
+
+...`any`[]
 
 A list of arguments the function accepts.
 
 #### Returns
 
-[`AsyncGenerator`](AsyncGenerator.md)\<`unknown`, `any`, `any`\>
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:34
+[`AsyncGenerator`](AsyncGenerator.md)
 
 ## Properties
 
@@ -52,11 +54,9 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asy
 
 > `readonly` **length**: `number`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:43
+
 The length of the arguments.
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:43
 
 ***
 
@@ -64,20 +64,16 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asy
 
 > `readonly` **name**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:47
+
 Returns the name of the function.
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:47
 
 ***
 
 ### prototype
 
-> `readonly` **prototype**: [`AsyncGenerator`](AsyncGenerator.md)\<`unknown`, `any`, `any`\>
+> `readonly` **prototype**: [`AsyncGenerator`](AsyncGenerator.md)
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:51
 
 A reference to the prototype.
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts:51

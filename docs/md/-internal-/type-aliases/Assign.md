@@ -1,19 +1,32 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
-[@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Assign\_
+[@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Assign
 
-# Type Alias: Assign\_\<T, U\>
+# Type Alias: Assign\<T, U\>
 
-> **Assign\_**\<`T`, `U`\>: `{ [K in keyof T as K extends keyof U ? U[K] extends void ? never : K : K]: K extends keyof U ? U[K] : T[K] }`
+> **Assign**\<`T`, `U`\> = [`Assign_`](Assign-1.md)\<`T`, `U`\> & `U`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:92
 
 ## Type Parameters
 
-• **T**
+### T
 
-• **U**
+`T`
 
-## Defined in
+### U
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:93
+`U`
+
+## Description
+
+Assigns the properties of U onto T.
+
+## Example
+
+```ts
+Assign<{ a: string, b: number }, { a: undefined, c: boolean }>
+=> { a: undefined, b: number, c: boolean }
+```

@@ -1,29 +1,35 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / WithdrawDeltaNative
 
-# Type Alias: WithdrawDeltaNative()\<T\>
+# Type Alias: WithdrawDeltaNative\<T\>
 
-> **WithdrawDeltaNative**\<`T`\>: (`amount`, `overrides`?, `requestParams`?) => `Promise`\<`T`\>
+> **WithdrawDeltaNative**\<`T`\> = (`amount`, `overrides?`, `requestParams?`) => `Promise`\<`T`\>
+
+Defined in: [src/methods/delta/deltaTokenModule.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L29)
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **amount**: `string`
+### amount
 
-• **overrides?**: [`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+`string`
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+### overrides?
+
+[`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<`T`\>
-
-## Defined in
-
-[src/methods/delta/deltaTokenModule.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L29)

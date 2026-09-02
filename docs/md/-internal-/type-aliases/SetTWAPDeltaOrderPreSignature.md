@@ -1,29 +1,35 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / SetTWAPDeltaOrderPreSignature
 
-# Type Alias: SetTWAPDeltaOrderPreSignature()\<T\>
+# Type Alias: SetTWAPDeltaOrderPreSignature\<T\>
 
-> **SetTWAPDeltaOrderPreSignature**\<`T`\>: (`orderHash`, `overrides`?, `requestParams`?) => `Promise`\<`T`\>
+> **SetTWAPDeltaOrderPreSignature**\<`T`\> = (`orderHash`, `overrides?`, `requestParams?`) => `Promise`\<`T`\>
+
+Defined in: [src/methods/delta/preSignTWAPDeltaOrder.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignTWAPDeltaOrder.ts#L37)
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **orderHash**: `string`
+### orderHash
 
-• **overrides?**: [`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+`string`
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+### overrides?
+
+[`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<`T`\>
-
-## Defined in
-
-[src/methods/delta/preSignTWAPDeltaOrder.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignTWAPDeltaOrder.ts#L37)

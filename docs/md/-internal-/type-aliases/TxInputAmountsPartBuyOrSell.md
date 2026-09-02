@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,30 @@
 
 # Type Alias: TxInputAmountsPartBuyOrSell
 
-> **TxInputAmountsPartBuyOrSell**: `object`
+> **TxInputAmountsPartBuyOrSell** = `object`
 
-## Type declaration
+Defined in: [src/methods/swap/transaction.ts:57](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L57)
+
+## Properties
 
 ### destAmount
 
 > **destAmount**: [`PriceString`](../../type-aliases/PriceString.md)
 
+Defined in: [src/methods/swap/transaction.ts:60](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L60)
+
+***
+
 ### slippage?
 
-> `optional` **slippage**: `never`
+> `optional` **slippage?**: `never`
+
+Defined in: [src/methods/swap/transaction.ts:58](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L58)
+
+***
 
 ### srcAmount
 
 > **srcAmount**: [`PriceString`](../../type-aliases/PriceString.md)
 
-## Defined in
-
-[src/methods/swap/transaction.ts:57](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L57)
+Defined in: [src/methods/swap/transaction.ts:59](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L59)

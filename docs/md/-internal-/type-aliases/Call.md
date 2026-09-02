@@ -1,27 +1,21 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Call
 
-# Type Alias: Call
+# Type Alias: Call\<call, extraProperties\>
 
-> **Call**: `object`
+> **Call**\<`call`, `extraProperties`\> = [`OneOf`](OneOf.md)\<[`Assign`](Assign.md)\<\{ `data?`: [`Hex`](Hex.md); `dataSuffix?`: [`Hex`](Hex.md); `to`: [`Address`](Address-1.md); `value?`: `bigint`; \}, `extraProperties`\> \| [`Assign`](Assign.md)\<[`Omit`](Omit.md)\<[`GetMulticallContractParameters`](GetMulticallContractParameters.md)\<`call`, [`AbiStateMutability`](AbiStateMutability.md)\>, `"address"`\> & `object`, `extraProperties`\>\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/calls.d.ts:5
 
-### data?
+## Type Parameters
 
-> `optional` **data**: [`Hex`](Hex.md)
+### call
 
-### to
+`call` = `unknown`
 
-> **to**: [`Hex`](Hex.md)
+### extraProperties
 
-### value?
-
-> `optional` **value**: `bigint`
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/account-abstraction/accounts/types.d.ts:13
+`extraProperties` *extends* [`Record`](Record.md)\<`string`, `unknown`\> = \{ \}

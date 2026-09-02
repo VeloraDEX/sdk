@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,16 @@
 
 # Type Alias: SendRawTransactionParameters
 
-> **SendRawTransactionParameters**: `object`
+> **SendRawTransactionParameters** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/sendRawTransaction.d.ts:8
+
+## Properties
 
 ### serializedTransaction
 
 > **serializedTransaction**: [`TransactionSerializedGeneric`](TransactionSerializedGeneric.md)
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/sendRawTransaction.d.ts:10
+
 The signed serialized transaction.
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/sendRawTransaction.d.ts:8

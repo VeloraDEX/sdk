@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: BuildTxInputBaseBUYForOrders\<K\>
 
-> **BuildTxInputBaseBUYForOrders**\<`K`\>: [`Omit`](Omit.md)\<[`BuildTxInputBase`](BuildTxInputBase.md), `K`\> & [`Omit`](Omit.md)\<[`TxInputAmountsPartBuy`](TxInputAmountsPartBuy.md), `"destAmount"` \| `K`\> \| [`Omit`](Omit.md)\<[`TxInputAmountsPartBuyOrSell`](TxInputAmountsPartBuyOrSell.md), `"destAmount"` \| `K`\>
+> **BuildTxInputBaseBUYForOrders**\<`K`\> = [`Omit`](Omit.md)\<[`BuildTxInputBase`](BuildTxInputBase.md), `K`\> & [`Omit`](Omit.md)\<[`TxInputAmountsPartBuy`](TxInputAmountsPartBuy.md), `"destAmount"` \| `K`\> \| [`Omit`](Omit.md)\<[`TxInputAmountsPartBuyOrSell`](TxInputAmountsPartBuyOrSell.md), `"destAmount"` \| `K`\>
+
+Defined in: [src/methods/swap/transaction.ts:103](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L103)
 
 ## Type Parameters
 
-• **K** *extends* keyof [`TxInputAmountsPartBuy`](TxInputAmountsPartBuy.md) \| keyof [`BuildTxInputBase`](BuildTxInputBase.md) = `never`
+### K
 
-## Defined in
-
-[src/methods/swap/transaction.ts:103](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L103)
+`K` *extends* keyof [`TxInputAmountsPartBuy`](TxInputAmountsPartBuy.md) \| keyof [`BuildTxInputBase`](BuildTxInputBase.md) = `never`

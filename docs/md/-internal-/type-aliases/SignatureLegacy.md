@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,26 +6,36 @@
 
 # Type Alias: SignatureLegacy\<bigintType\>
 
-> **SignatureLegacy**\<`bigintType`\>: `object`
+> **SignatureLegacy**\<`bigintType`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/misc.d.ts:10
 
 ## Type Parameters
 
-• **bigintType** = `bigint`
+### bigintType
 
-## Type declaration
+`bigintType` = `bigint`
+
+## Properties
 
 ### r
 
 > **r**: [`Hex`](Hex.md)
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/misc.d.ts:11
+
+***
+
 ### s
 
 > **s**: [`Hex`](Hex.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/misc.d.ts:12
+
+***
 
 ### v
 
 > **v**: `bigintType`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/misc.d.ts:10
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/misc.d.ts:13

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,56 +6,50 @@
 
 # Interface: UnderlyingSink\<W\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:159
+
 ## Type Parameters
 
-• **W** = `any`
+### W
+
+`W` = `any`
 
 ## Properties
 
 ### abort?
 
-> `optional` **abort**: [`UnderlyingSinkAbortCallback`](UnderlyingSinkAbortCallback.md)
+> `optional` **abort?**: [`UnderlyingSinkAbortCallback`](UnderlyingSinkAbortCallback.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:160
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:160
 
 ***
 
 ### close?
 
-> `optional` **close**: [`UnderlyingSinkCloseCallback`](UnderlyingSinkCloseCallback.md)
+> `optional` **close?**: [`UnderlyingSinkCloseCallback`](UnderlyingSinkCloseCallback.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:161
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:161
 
 ***
 
 ### start?
 
-> `optional` **start**: [`UnderlyingSinkStartCallback`](UnderlyingSinkStartCallback.md)
+> `optional` **start?**: [`UnderlyingSinkStartCallback`](UnderlyingSinkStartCallback.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:162
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:162
 
 ***
 
 ### type?
 
-> `optional` **type**: `undefined`
+> `optional` **type?**: `undefined`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:163
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:163
 
 ***
 
 ### write?
 
-> `optional` **write**: [`UnderlyingSinkWriteCallback`](UnderlyingSinkWriteCallback.md)\<`W`\>
+> `optional` **write?**: [`UnderlyingSinkWriteCallback`](UnderlyingSinkWriteCallback.md)\<`W`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:164
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:164

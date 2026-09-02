@@ -1,37 +1,55 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / HashTWAPDeltaOrder
 
-# Type Alias: HashTWAPDeltaOrder()
+# Type Alias: HashTWAPDeltaOrder
 
-> **HashTWAPDeltaOrder**: (`orderData`, `onChainOrderType`, `requestParams`?) => `Promise`\<`string`\>(`orderData`, `onChainOrderType`, `requestParams`?) => `Promise`\<`string`\>
+> **HashTWAPDeltaOrder** = \{(`orderData`, `onChainOrderType`, `requestParams?`): `Promise`\<`string`\>; (`orderData`, `onChainOrderType`, `requestParams?`): `Promise`\<`string`\>; \}
 
-## Parameters
+Defined in: [src/methods/delta/preSignTWAPDeltaOrder.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignTWAPDeltaOrder.ts#L23)
 
-• **orderData**: [`TWAPDeltaOrder`](../../type-aliases/TWAPDeltaOrder.md)
+## Call Signature
 
-• **onChainOrderType**: `"TWAPOrder"`
+> (`orderData`, `onChainOrderType`, `requestParams?`): `Promise`\<`string`\>
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+### Parameters
 
-## Returns
+#### orderData
+
+[`TWAPDeltaOrder`](../../type-aliases/TWAPDeltaOrder.md)
+
+#### onChainOrderType
+
+`"TWAPOrder"`
+
+#### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
+
+### Returns
 
 `Promise`\<`string`\>
 
-## Parameters
+## Call Signature
 
-• **orderData**: [`TWAPBuyDeltaOrder`](../../type-aliases/TWAPBuyDeltaOrder.md)
+> (`orderData`, `onChainOrderType`, `requestParams?`): `Promise`\<`string`\>
 
-• **onChainOrderType**: `"TWAPBuyOrder"`
+### Parameters
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+#### orderData
 
-## Returns
+[`TWAPBuyDeltaOrder`](../../type-aliases/TWAPBuyDeltaOrder.md)
+
+#### onChainOrderType
+
+`"TWAPBuyOrder"`
+
+#### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
+
+### Returns
 
 `Promise`\<`string`\>
-
-## Defined in
-
-[src/methods/delta/preSignTWAPDeltaOrder.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignTWAPDeltaOrder.ts#L23)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: TransactionEIP7702\<quantity, index, isPending, type\>
 
-> **TransactionEIP7702**\<`quantity`, `index`, `isPending`, `type`\>: [`TransactionBase`](TransactionBase.md)\<`quantity`, `index`, `isPending`\> & `object` & [`FeeValuesEIP1559`](FeeValuesEIP1559.md)\<`quantity`\>
+> **TransactionEIP7702**\<`quantity`, `index`, `isPending`, `type`\> = [`TransactionBase`](TransactionBase.md)\<`quantity`, `index`, `isPending`\> & `object` & [`FeeValuesEIP1559`](FeeValuesEIP1559.md)\<`quantity`\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:124
+
+## Type Declaration
 
 ### accessList
 
-> **accessList**: [`AccessList`](AccessList.md)
+> **accessList**: [`AccessList`](AccessList-2.md)
 
 EIP-2930 Access List.
 
@@ -24,7 +26,7 @@ Authorization list for the transaction.
 
 ### blobVersionedHashes?
 
-> `optional` **blobVersionedHashes**: `undefined`
+> `optional` **blobVersionedHashes?**: `undefined`
 
 ### chainId
 
@@ -38,14 +40,18 @@ Chain ID that this transaction is valid on.
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-• **isPending** *extends* `boolean` = `boolean`
+### index
 
-• **type** = `"eip7702"`
+`index` = `number`
 
-## Defined in
+### isPending
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:120
+`isPending` *extends* `boolean` = `boolean`
+
+### type
+
+`type` = `"eip7702"`

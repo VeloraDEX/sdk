@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,7 +6,9 @@
 
 # Type Alias: ProviderEvent
 
-> **ProviderEvent**: `string` \| (`string` \| `string`[])[] \| [`EventFilter`](../interfaces/EventFilter.md) \| [`OrphanFilter`](OrphanFilter.md)
+> **ProviderEvent** = `string` \| (`string` \| `string`[])[] \| [`EventFilter`](../interfaces/EventFilter-1.md) \| [`OrphanFilter`](OrphanFilter.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1054
 
 A **ProviderEvent** provides the types of events that can be subscribed
  to on a [[Provider]].
@@ -30,7 +32,3 @@ A **ProviderEvent** provides the types of events that can be subscribed
  **``Array``** - calls the listener on each log that matches the filter.
 
  [[EventFilter]] - calls the listener with each matching log
-
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1054

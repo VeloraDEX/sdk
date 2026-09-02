@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,23 +6,25 @@
 
 # Type Alias: EIP712DomainDefinition\<typedData, primaryType, schema\>
 
-> **EIP712DomainDefinition**\<`typedData`, `primaryType`, `schema`\>: `object` & `object`
+> **EIP712DomainDefinition**\<`typedData`, `primaryType`, `schema`\> = `object` & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/typedData.d.ts:16
+
+## Type Declaration
 
 ### types?
 
-> `optional` **types**: `typedData`
+> `optional` **types?**: `typedData`
 
-## Type declaration
+## Type Declaration
 
 ### domain
 
-> **domain**: `schema` *extends* `object` ? `domain` : [`Prettify`](Prettify.md)\<[`TypedDataDomain`](TypedDataDomain.md)\>
+> **domain**: `schema` *extends* `object` ? `domain` : [`Prettify`](Prettify-1.md)\<[`TypedDataDomain`](TypedDataDomain-1.md)\>
 
 ### message?
 
-> `optional` **message**: `undefined`
+> `optional` **message?**: `undefined`
 
 ### primaryType
 
@@ -30,12 +32,14 @@
 
 ## Type Parameters
 
-• **typedData** *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
+### typedData
 
-• **primaryType** *extends* `"EIP712Domain"` = `"EIP712Domain"`
+`typedData` *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
 
-• **schema** *extends* [`Record`](Record.md)\<`string`, `unknown`\> = `typedData` *extends* [`TypedData`](TypedData.md) ? [`TypedDataToPrimitiveTypes`](TypedDataToPrimitiveTypes.md)\<`typedData`\> : [`Record`](Record.md)\<`string`, `unknown`\>
+### primaryType
 
-## Defined in
+`primaryType` *extends* `"EIP712Domain"` = `"EIP712Domain"`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/typedData.d.ts:15
+### schema
+
+`schema` *extends* [`Record`](Record.md)\<`string`, `unknown`\> = `typedData` *extends* [`TypedData`](TypedData.md) ? [`TypedDataToPrimitiveTypes`](TypedDataToPrimitiveTypes.md)\<`typedData`\> : [`Record`](Record.md)\<`string`, `unknown`\>

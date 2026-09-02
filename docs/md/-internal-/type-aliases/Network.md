@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,36 +6,52 @@
 
 # Type Alias: Network
 
-> **Network**: `object`
+> **Network** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/@ethersproject+networks@5.8.0/node\_modules/@ethersproject/networks/lib/types.d.ts:1
 
-### \_defaultProvider()?
+## Properties
 
-> `optional` **\_defaultProvider**: (`providers`, `options`?) => `any`
+### \_defaultProvider?
+
+> `optional` **\_defaultProvider?**: (`providers`, `options?`) => `any`
+
+Defined in: node\_modules/.pnpm/@ethersproject+networks@5.8.0/node\_modules/@ethersproject/networks/lib/types.d.ts:5
 
 #### Parameters
 
-• **providers**: `any`
+##### providers
 
-• **options?**: `any`
+`any`
+
+##### options?
+
+`any`
 
 #### Returns
 
 `any`
 
+***
+
 ### chainId
 
 > **chainId**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+networks@5.8.0/node\_modules/@ethersproject/networks/lib/types.d.ts:3
+
+***
+
 ### ensAddress?
 
-> `optional` **ensAddress**: `string`
+> `optional` **ensAddress?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+networks@5.8.0/node\_modules/@ethersproject/networks/lib/types.d.ts:4
+
+***
 
 ### name
 
 > **name**: `string`
 
-## Defined in
-
-node\_modules/.pnpm/@ethersproject+networks@5.8.0/node\_modules/@ethersproject/networks/lib/types.d.ts:1
+Defined in: node\_modules/.pnpm/@ethersproject+networks@5.8.0/node\_modules/@ethersproject/networks/lib/types.d.ts:2

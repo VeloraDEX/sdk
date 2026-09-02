@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,13 +8,19 @@
 
 > **constructFullSDK**\<`TxResponse`\>(`config`): [`AllSDKMethods`](../type-aliases/AllSDKMethods.md)\<`TxResponse`\>
 
+Defined in: [src/sdk/full.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/full.ts#L26)
+
 ## Type Parameters
 
-• **TxResponse** = `any`
+### TxResponse
+
+`TxResponse` = `any`
 
 ## Parameters
 
-• **config**: [`SDKConfig`](../type-aliases/SDKConfig.md)\<`TxResponse`\>
+### config
+
+[`SDKConfig`](../type-aliases/SDKConfig.md)\<`TxResponse`\>
 
 ## Returns
 
@@ -23,7 +29,3 @@
 ## Description
 
 construct SDK with every method, for swap and otcOrders
-
-## Defined in
-
-[src/sdk/full.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/full.ts#L26)

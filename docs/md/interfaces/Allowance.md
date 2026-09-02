@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: Allowance
 
+Defined in: [src/methods/swap/balance.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L25)
+
 ## Properties
 
 ### allowance
 
 > **allowance**: `string`
 
-#### Defined in
-
-[src/methods/swap/balance.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L27)
+Defined in: [src/methods/swap/balance.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L27)
 
 ***
 
@@ -22,6 +22,4 @@
 
 > **tokenAddress**: `string`
 
-#### Defined in
-
-[src/methods/swap/balance.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L26)
+Defined in: [src/methods/swap/balance.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L26)

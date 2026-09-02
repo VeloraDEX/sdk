@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: GetRateInput
 
-> **GetRateInput**: [`CommonGetRateInput`](../-internal-/type-aliases/CommonGetRateInput.md) & `object`
+> **GetRateInput** = [`CommonGetRateInput`](../-internal-/type-aliases/CommonGetRateInput.md) & `object`
 
-## Type declaration
+Defined in: [src/methods/swap/rates.ts:185](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L185)
+
+## Type Declaration
 
 ### destToken
 
@@ -17,7 +19,3 @@
 ### srcToken
 
 > **srcToken**: [`AddressOrSymbol`](AddressOrSymbol.md)
-
-## Defined in
-
-[src/methods/swap/rates.ts:185](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L185)

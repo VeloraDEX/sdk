@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: EthersV5ProviderDeps
 
+Defined in: [src/helpers/providers/ethers.ts:28](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/ethers.ts#L28)
+
 ## Properties
 
 ### EthersContract
 
 > **EthersContract**: *typeof* [`Contract`](../-internal-/classes/Contract.md)
 
-#### Defined in
-
-[src/helpers/providers/ethers.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/ethers.ts#L30)
+Defined in: [src/helpers/providers/ethers.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/ethers.ts#L30)
 
 ***
 
@@ -22,6 +22,4 @@
 
 > **ethersProviderOrSigner**: [`BaseProvider`](../-internal-/classes/BaseProvider.md) \| [`Signer`](../-internal-/classes/Signer.md)
 
-#### Defined in
-
-[src/helpers/providers/ethers.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/ethers.ts#L29)
+Defined in: [src/helpers/providers/ethers.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/ethers.ts#L29)

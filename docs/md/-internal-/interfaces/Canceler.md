@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,20 +6,26 @@
 
 # Interface: Canceler()
 
-> **Canceler**(`message`?, `config`?, `request`?): `void`
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:590
+
+> **Canceler**(`message?`, `config?`, `request?`): `void`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:591
 
 ## Parameters
 
-• **message?**: `string`
+### message?
 
-• **config?**: [`AxiosRequestConfig`](AxiosRequestConfig.md)\<`any`\>
+`string`
 
-• **request?**: `any`
+### config?
+
+[`AxiosRequestConfig`](AxiosRequestConfig.md)\<`any`, `any`\>
+
+### request?
+
+`any`
 
 ## Returns
 
 `void`
-
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:550

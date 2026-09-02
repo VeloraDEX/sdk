@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,12 @@
 
 # Type Alias: CheckableOrderData
 
-> **CheckableOrderData**: [`Pick`](Pick.md)\<[`OrderData`](../../type-aliases/OrderData.md), `"takerAsset"` \| `"makerAsset"` \| `"takerAmount"` \| `"maker"`\> & `object`
+> **CheckableOrderData** = [`Pick`](Pick.md)\<[`OrderData`](../../type-aliases/OrderData.md), `"takerAsset"` \| `"makerAsset"` \| `"takerAmount"` \| `"maker"`\> & `object`
 
-## Type declaration
+Defined in: [src/methods/otcOrders/transaction.ts:183](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/transaction.ts#L183)
+
+## Type Declaration
 
 ### taker?
 
-> `optional` **taker**: [`OrderData`](../../type-aliases/OrderData.md)\[`"taker"`\]
-
-## Defined in
-
-[src/methods/otcOrders/transaction.ts:183](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/transaction.ts#L183)
+> `optional` **taker?**: [`OrderData`](../../type-aliases/OrderData.md)\[`"taker"`\]

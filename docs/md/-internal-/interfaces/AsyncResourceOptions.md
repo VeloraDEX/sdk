@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AsyncResourceOptions
 
 # Interface: AsyncResourceOptions
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:211
 
 ## Extended by
 
@@ -14,7 +16,9 @@
 
 ### requireManualDestroy?
 
-> `optional` **requireManualDestroy**: `boolean`
+> `optional` **requireManualDestroy?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:224
 
 Disables automatic `emitDestroy` when the object is garbage collected.
 This usually does not need to be set (even if `emitDestroy` is called
@@ -27,15 +31,13 @@ sensitive API's `emitDestroy` is called with it.
 false
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:224
-
 ***
 
 ### triggerAsyncId?
 
-> `optional` **triggerAsyncId**: `number`
+> `optional` **triggerAsyncId?**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:216
 
 The ID of the execution context that created this async event.
 
@@ -44,7 +46,3 @@ The ID of the execution context that created this async event.
 ```ts
 executionAsyncId()
 ```
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:216

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: LendingToken
 
-> **LendingToken**: `"cToken"` \| `"iToken"` \| `"aToken"` \| `"aToken2"` \| `"idleToken"` \| `"Chai"` \| `"bDAI"`
+> **LendingToken** = `"cToken"` \| `"iToken"` \| `"aToken"` \| `"aToken2"` \| `"idleToken"` \| `"Chai"` \| `"bDAI"`
 
-## Defined in
-
-[src/helpers/token.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L23)
+Defined in: [src/helpers/token.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L23)

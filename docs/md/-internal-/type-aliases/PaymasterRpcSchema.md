@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: PaymasterRpcSchema
 
-> **PaymasterRpcSchema**: [`object`, `object`]
+> **PaymasterRpcSchema** = \[\{ `Method`: `"pm_getPaymasterStubData"`; `Parameters?`: \[[`OneOf`](OneOf.md)\<[`PartialBy`](PartialBy.md)\<[`Pick`](Pick.md)\<[`RpcUserOperation`](RpcUserOperation.md)\<`"0.6"`\>, `"callData"` \| `"callGasLimit"` \| `"initCode"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"preVerificationGas"` \| `"verificationGasLimit"`\>, `"callGasLimit"` \| `"initCode"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"preVerificationGas"` \| `"verificationGasLimit"`\> \| [`PartialBy`](PartialBy.md)\<[`Pick`](Pick.md)\<[`RpcUserOperation`](RpcUserOperation.md)\<`"0.7"`\>, `"callData"` \| `"callGasLimit"` \| `"factory"` \| `"factoryData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"preVerificationGas"` \| `"verificationGasLimit"`\>, `"callGasLimit"` \| `"factory"` \| `"factoryData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"preVerificationGas"` \| `"verificationGasLimit"`\>\>, [`Address`](Address-1.md), [`Hex`](Hex.md), `unknown`\]; `ReturnType`: [`OneOf`](OneOf.md)\<\{ `paymasterAndData`: [`Hex`](Hex.md); \} \| \{ `paymaster`: [`Address`](Address-1.md); `paymasterData`: [`Hex`](Hex.md); `paymasterPostOpGasLimit`: [`Hex`](Hex.md); `paymasterVerificationGasLimit`: [`Hex`](Hex.md); \}\> & `object`; \}, \{ `Method`: `"pm_getPaymasterData"`; `Parameters?`: \[[`Pick`](Pick.md)\<[`RpcUserOperation`](RpcUserOperation.md)\<`"0.6"`\>, `"callData"` \| `"callGasLimit"` \| `"initCode"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"preVerificationGas"` \| `"verificationGasLimit"`\> \| [`Pick`](Pick.md)\<[`RpcUserOperation`](RpcUserOperation.md)\<`"0.7"`\>, `"callData"` \| `"callGasLimit"` \| `"factory"` \| `"factoryData"` \| `"maxFeePerGas"` \| `"maxPriorityFeePerGas"` \| `"nonce"` \| `"sender"` \| `"preVerificationGas"` \| `"verificationGasLimit"`\>, [`Address`](Address-1.md), [`Hex`](Hex.md), `unknown`\]; `ReturnType`: [`OneOf`](OneOf.md)\<\{ `paymasterAndData`: [`Hex`](Hex.md); \} \| \{ `paymaster`: [`Address`](Address-1.md); `paymasterData`: [`Hex`](Hex.md); `paymasterPostOpGasLimit`: [`Hex`](Hex.md); `paymasterVerificationGasLimit`: [`Hex`](Hex.md); \}\>; \}\]
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:368
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:368

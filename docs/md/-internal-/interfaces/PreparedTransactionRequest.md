@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,83 +6,77 @@
 
 # Interface: PreparedTransactionRequest
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:172
+
 A **PreparedTransactionRequest** is identical to a [[TransactionRequest]]
  except all the property types are strictly enforced.
 
 ## Extended by
 
-- [`ContractTransaction`](ContractTransaction.md)
+- [`ContractTransaction`](ContractTransaction-1.md)
 
 ## Properties
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](../type-aliases/AccessList.md)
+> `optional` **accessList?**: [`AccessList`](../type-aliases/AccessList-1.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:226
 
 The [[link-eip-2930]] access list. Storage slots included in the access
  list are //warmed// by pre-loading them, so their initial cost to
  fetch is guaranteed, but then each additional access is cheaper.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:226
-
 ***
 
 ### blockTag?
 
-> `optional` **blockTag**: [`BlockTag`](../type-aliases/BlockTag.md)
+> `optional` **blockTag?**: [`BlockTag`](../type-aliases/BlockTag-1.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:237
 
 When using ``call`` or ``estimateGas``, this allows a specific
  block to be queried. Many backends do not support this and when
  unsupported errors are silently squelched and ``"latest"`` is used.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:237
-
 ***
 
 ### chainId?
 
-> `optional` **chainId**: `bigint`
+> `optional` **chainId?**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:220
 
 The chain ID for the network this transaction is valid on.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:220
 
 ***
 
 ### customData?
 
-> `optional` **customData**: `any`
+> `optional` **customData?**: `any`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:231
 
 A custom object, which can be passed along for network-specific
  values.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:231
 
 ***
 
 ### data?
 
-> `optional` **data**: `string`
+> `optional` **data?**: `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:212
 
 The transaction data.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:212
 
 ***
 
 ### enableCcipRead?
 
-> `optional` **enableCcipRead**: `boolean`
+> `optional` **enableCcipRead?**: `boolean`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:247
 
 When using ``call``, this enables CCIP-read, which permits the
  provider to be redirected to web-based content during execution,
@@ -92,118 +86,96 @@ When using ``call``, this enables CCIP-read, which permits the
  it could be used to expose the IP address or user activity during
  the fetch to unexpected parties.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:247
-
 ***
 
 ### from?
 
-> `optional` **from**: [`AddressLike`](../type-aliases/AddressLike.md)
+> `optional` **from?**: [`AddressLike`](../type-aliases/AddressLike.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:184
 
 The sender of the transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:184
 
 ***
 
 ### gasLimit?
 
-> `optional` **gasLimit**: `bigint`
+> `optional` **gasLimit?**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:192
 
 The maximum amount of gas to allow this transaction to consime.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:192
 
 ***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: `bigint`
+> `optional` **gasPrice?**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:199
 
 The gas price to use for legacy transactions or transactions on
  legacy networks.
 
  Most of the time the ``max*FeePerGas`` is preferred.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:199
-
 ***
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: `bigint`
+> `optional` **maxFeePerGas?**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:208
 
 The [[link-eip-1559]] maximum total fee to pay per gas. The actual
  value used is protocol enforced to be the block's base fee.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:208
 
 ***
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: `bigint`
+> `optional` **maxPriorityFeePerGas?**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:203
 
 The [[link-eip-1559]] maximum priority fee to pay per gas.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:203
 
 ***
 
 ### nonce?
 
-> `optional` **nonce**: `number`
+> `optional` **nonce?**: `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:188
 
 The nonce of the transaction, used to prevent replay attacks.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:188
 
 ***
 
 ### to?
 
-> `optional` **to**: [`AddressLike`](../type-aliases/AddressLike.md)
+> `optional` **to?**: [`AddressLike`](../type-aliases/AddressLike.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:180
 
 The target of the transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:180
 
 ***
 
 ### type?
 
-> `optional` **type**: `number`
+> `optional` **type?**: `number`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:176
 
 The transaction type.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:176
 
 ***
 
 ### value?
 
-> `optional` **value**: `bigint`
+> `optional` **value?**: `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:216
 
 The transaction value (in wei).
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:216

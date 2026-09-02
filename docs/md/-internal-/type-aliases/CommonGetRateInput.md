@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,34 +6,54 @@
 
 # Type Alias: CommonGetRateInput
 
-> **CommonGetRateInput**: `object`
+> **CommonGetRateInput** = `object`
 
-## Type declaration
+Defined in: [src/methods/swap/rates.ts:176](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L176)
+
+## Properties
 
 ### amount
 
 > **amount**: [`PriceString`](../../type-aliases/PriceString.md)
 
+Defined in: [src/methods/swap/rates.ts:177](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L177)
+
+***
+
 ### destDecimals?
 
-> `optional` **destDecimals**: `number`
+> `optional` **destDecimals?**: `number`
+
+Defined in: [src/methods/swap/rates.ts:182](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L182)
+
+***
 
 ### options?
 
-> `optional` **options**: [`RateOptions`](RateOptions.md)
+> `optional` **options?**: [`RateOptions`](RateOptions.md)
+
+Defined in: [src/methods/swap/rates.ts:180](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L180)
+
+***
 
 ### side?
 
-> `optional` **side**: `"SELL"` \| `"BUY"`
+> `optional` **side?**: `"SELL"` \| `"BUY"`
+
+Defined in: [src/methods/swap/rates.ts:179](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L179)
+
+***
 
 ### srcDecimals?
 
-> `optional` **srcDecimals**: `number`
+> `optional` **srcDecimals?**: `number`
+
+Defined in: [src/methods/swap/rates.ts:181](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L181)
+
+***
 
 ### userAddress?
 
-> `optional` **userAddress**: [`Address`](../../type-aliases/Address.md)
+> `optional` **userAddress?**: [`Address`](../../type-aliases/Address.md)
 
-## Defined in
-
-[src/methods/swap/rates.ts:176](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L176)
+Defined in: [src/methods/swap/rates.ts:178](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L178)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,19 +6,19 @@
 
 # Class: Formatter
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:18
+
 ## Constructors
 
-### new Formatter()
+### Constructor
 
-> **new Formatter**(): [`Formatter`](Formatter.md)
+> **new Formatter**(): `Formatter`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:20
 
 #### Returns
 
-[`Formatter`](Formatter.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:20
+`Formatter`
 
 ## Properties
 
@@ -26,29 +26,29 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **formats**: [`Formats`](../type-aliases/Formats.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:19
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:19
 
 ## Methods
 
 ### \_block()
 
-> **\_block**(`value`, `format`): [`Block`](../interfaces/Block.md)
+> **\_block**(`value`, `format`): [`Block`](../interfaces/Block-1.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:36
 
 #### Parameters
 
-• **value**: `any`
+##### value
 
-• **format**: `any`
+`any`
+
+##### format
+
+`any`
 
 #### Returns
 
-[`Block`](../interfaces/Block.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:36
+[`Block`](../interfaces/Block-1.md)
 
 ***
 
@@ -56,17 +56,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **accessList**(`accessList`): [`AccessList`](../type-aliases/AccessList.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:22
+
 #### Parameters
 
-• **accessList**: `any`[]
+##### accessList
+
+`any`[]
 
 #### Returns
 
 [`AccessList`](../type-aliases/AccessList.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:22
 
 ***
 
@@ -74,17 +74,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **address**(`value`): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:29
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:29
 
 ***
 
@@ -92,35 +92,35 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **bigNumber**(`value`): [`BigNumber`](BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:25
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 [`BigNumber`](BigNumber.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:25
-
 ***
 
 ### block()
 
-> **block**(`value`): [`Block`](../interfaces/Block.md)
+> **block**(`value`): [`Block`](../interfaces/Block-1.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:37
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
-[`Block`](../interfaces/Block.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:37
+[`Block`](../interfaces/Block-1.md)
 
 ***
 
@@ -128,35 +128,35 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **blockTag**(`blockTag`): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:32
+
 #### Parameters
 
-• **blockTag**: `any`
+##### blockTag
+
+`any`
 
 #### Returns
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:32
-
 ***
 
 ### blockWithTransactions()
 
-> **blockWithTransactions**(`value`): [`Block`](../interfaces/Block.md)
+> **blockWithTransactions**(`value`): [`Block`](../interfaces/Block-1.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:38
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
-[`Block`](../interfaces/Block.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:38
+[`Block`](../interfaces/Block-1.md)
 
 ***
 
@@ -164,17 +164,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **boolean**(`value`): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:26
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:26
 
 ***
 
@@ -182,17 +182,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **callAddress**(`value`): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:30
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:30
 
 ***
 
@@ -200,37 +200,39 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **contractAddress**(`value`): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:31
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:31
 
 ***
 
 ### data()
 
-> **data**(`value`, `strict`?): `string`
+> **data**(`value`, `strict?`): `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:28
 
 #### Parameters
 
-• **value**: `any`
+##### value
 
-• **strict?**: `boolean`
+`any`
+
+##### strict?
+
+`boolean`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:28
 
 ***
 
@@ -238,17 +240,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **difficulty**(`value`): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:34
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:34
 
 ***
 
@@ -256,17 +258,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **filter**(`value`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:45
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:45
 
 ***
 
@@ -274,17 +276,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **filterLog**(`value`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:46
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:46
 
 ***
 
@@ -292,53 +294,55 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **getDefaultFormats**(): [`Formats`](../type-aliases/Formats.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:21
+
 #### Returns
 
 [`Formats`](../type-aliases/Formats.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:21
 
 ***
 
 ### hash()
 
-> **hash**(`value`, `strict`?): `string`
+> **hash**(`value`, `strict?`): `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:33
 
 #### Parameters
 
-• **value**: `any`
+##### value
 
-• **strict?**: `boolean`
+`any`
+
+##### strict?
+
+`boolean`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:33
 
 ***
 
 ### hex()
 
-> **hex**(`value`, `strict`?): `string`
+> **hex**(`value`, `strict?`): `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:27
 
 #### Parameters
 
-• **value**: `any`
+##### value
 
-• **strict?**: `boolean`
+`any`
+
+##### strict?
+
+`boolean`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:27
 
 ***
 
@@ -346,17 +350,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **number**(`number`): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:23
+
 #### Parameters
 
-• **number**: `any`
+##### number
+
+`any`
 
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:23
 
 ***
 
@@ -364,17 +368,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **receipt**(`value`): [`TransactionReceipt`](../interfaces/TransactionReceipt.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:43
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 [`TransactionReceipt`](../interfaces/TransactionReceipt.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:43
 
 ***
 
@@ -382,17 +386,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **receiptLog**(`value`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:42
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:42
 
 ***
 
@@ -400,17 +404,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **topics**(`value`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:44
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:44
 
 ***
 
@@ -418,17 +422,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **transaction**(`value`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:41
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:41
 
 ***
 
@@ -436,17 +440,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **transactionRequest**(`value`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:39
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:39
 
 ***
 
@@ -454,17 +458,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **transactionResponse**(`transaction`): [`TransactionResponse`](../interfaces/TransactionResponse.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:40
+
 #### Parameters
 
-• **transaction**: `any`
+##### transaction
+
+`any`
 
 #### Returns
 
 [`TransactionResponse`](../interfaces/TransactionResponse.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:40
 
 ***
 
@@ -472,17 +476,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **type**(`number`): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:24
+
 #### Parameters
 
-• **number**: `any`
+##### number
+
+`any`
 
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:24
 
 ***
 
@@ -490,17 +494,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **uint256**(`value`): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:35
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:35
 
 ***
 
@@ -508,39 +512,43 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `static` **allowFalsish**(`format`, `replaceValue`): [`FormatFunc`](../type-aliases/FormatFunc.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:51
+
 #### Parameters
 
-• **format**: [`FormatFunc`](../type-aliases/FormatFunc.md)
+##### format
 
-• **replaceValue**: `any`
+[`FormatFunc`](../type-aliases/FormatFunc.md)
+
+##### replaceValue
+
+`any`
 
 #### Returns
 
 [`FormatFunc`](../type-aliases/FormatFunc.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:51
 
 ***
 
 ### allowNull()
 
-> `static` **allowNull**(`format`, `nullValue`?): [`FormatFunc`](../type-aliases/FormatFunc.md)
+> `static` **allowNull**(`format`, `nullValue?`): [`FormatFunc`](../type-aliases/FormatFunc.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:50
 
 #### Parameters
 
-• **format**: [`FormatFunc`](../type-aliases/FormatFunc.md)
+##### format
 
-• **nullValue?**: `any`
+[`FormatFunc`](../type-aliases/FormatFunc.md)
+
+##### nullValue?
+
+`any`
 
 #### Returns
 
 [`FormatFunc`](../type-aliases/FormatFunc.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:50
 
 ***
 
@@ -548,17 +556,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `static` **arrayOf**(`format`): [`FormatFunc`](../type-aliases/FormatFunc.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:52
+
 #### Parameters
 
-• **format**: [`FormatFunc`](../type-aliases/FormatFunc.md)
+##### format
+
+[`FormatFunc`](../type-aliases/FormatFunc.md)
 
 #### Returns
 
 [`FormatFunc`](../type-aliases/FormatFunc.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:52
 
 ***
 
@@ -566,16 +574,16 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `static` **check**(`format`, `object`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:47
+
 #### Parameters
 
-• **format**
+##### format
 
-• **object**: `any`
+##### object
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/formatter.d.ts:47

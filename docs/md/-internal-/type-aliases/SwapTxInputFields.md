@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: SwapTxInputFields
 
-> **SwapTxInputFields**: `"srcToken"` \| `"destToken"` \| `"amount"` \| `"side"` \| `"srcDecimals"` \| `"destDecimals"` \| `"userAddress"` \| `"slippage"`
+> **SwapTxInputFields** = `"srcToken"` \| `"destToken"` \| `"amount"` \| `"side"` \| `"srcDecimals"` \| `"destDecimals"` \| `"userAddress"` \| `"slippage"`
 
-## Defined in
-
-[src/methods/swap/swapTx.ts:164](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L164)
+Defined in: [src/methods/swap/swapTx.ts:164](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L164)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,26 +6,36 @@
 
 # Type Alias: GetFilterLogsParameters\<abi, eventName, strict, fromBlock, toBlock\>
 
-> **GetFilterLogsParameters**\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>: `object`
+> **GetFilterLogsParameters**\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getFilterLogs.d.ts:12
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined` = `undefined`
+### abi
 
-• **eventName** *extends* `string` \| `undefined` = `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined` = `undefined`
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+### eventName
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`eventName` *extends* `string` \| `undefined` = `undefined`
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+### strict
 
-## Type declaration
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+## Properties
 
 ### filter
 
 > **filter**: [`Filter`](Filter.md)\<`"event"`, `abi`, `eventName`, `any`, `strict`, `fromBlock`, `toBlock`\>
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getFilterLogs.d.ts:12
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getFilterLogs.d.ts:13

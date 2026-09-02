@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,17 +6,17 @@
 
 # Interface: Object
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:123
+
 ## Properties
 
 ### constructor
 
 > **constructor**: `Function`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:125
+
 The initial value of Object.prototype.constructor is the standard built-in Object constructor.
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:125
 
 ## Methods
 
@@ -24,21 +24,21 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **hasOwnProperty**(`v`): `boolean`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:140
+
 Determines whether an object has a property with the specified name.
 
 #### Parameters
 
-• **v**: [`PropertyKey`](../type-aliases/PropertyKey.md)
+##### v
+
+[`PropertyKey`](../type-aliases/PropertyKey.md)
 
 A property name.
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:140
 
 ***
 
@@ -46,11 +46,15 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **isPrototypeOf**(`v`): `boolean`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:146
+
 Determines whether an object exists in another object's prototype chain.
 
 #### Parameters
 
-• **v**: [`Object`](Object.md)
+##### v
+
+`Object`
 
 Another object whose prototype chain is to be checked.
 
@@ -58,21 +62,21 @@ Another object whose prototype chain is to be checked.
 
 `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:146
-
 ***
 
 ### propertyIsEnumerable()
 
 > **propertyIsEnumerable**(`v`): `boolean`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:152
+
 Determines whether a specified property is enumerable.
 
 #### Parameters
 
-• **v**: [`PropertyKey`](../type-aliases/PropertyKey.md)
+##### v
+
+[`PropertyKey`](../type-aliases/PropertyKey.md)
 
 A property name.
 
@@ -80,15 +84,13 @@ A property name.
 
 `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:152
-
 ***
 
 ### toLocaleString()
 
 > **toLocaleString**(): `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:131
 
 Returns a date converted to a string using the current locale.
 
@@ -96,15 +98,13 @@ Returns a date converted to a string using the current locale.
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:131
-
 ***
 
 ### toString()
 
 > **toString**(): `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:128
 
 Returns a string representation of an object.
 
@@ -112,22 +112,16 @@ Returns a string representation of an object.
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:128
-
 ***
 
 ### valueOf()
 
-> **valueOf**(): [`Object`](Object.md)
+> **valueOf**(): `Object`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:134
 
 Returns the primitive value of the specified object.
 
 #### Returns
 
-[`Object`](Object.md)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:134
+`Object`

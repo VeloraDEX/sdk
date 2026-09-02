@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: CheckArgs\<abiFunction, args, targetArgs\>
 
-> **CheckArgs**\<`abiFunction`, `args`, `targetArgs`\>: readonly [] *extends* `args` ? readonly [] : `args` *extends* `targetArgs` ? `abiFunction` : `never`
+> **CheckArgs**\<`abiFunction`, `args`, `targetArgs`\> = readonly \[\] *extends* `args` ? readonly \[\] : `args` *extends* `targetArgs` ? `abiFunction` : `never`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:30
 
 ## Type Parameters
 
-• **abiFunction** *extends* [`AbiFunction`](AbiFunction.md)
+### abiFunction
 
-• **args**
+`abiFunction` *extends* [`AbiFunction`](AbiFunction.md)
 
-• **targetArgs** *extends* [`AbiParametersToPrimitiveTypes`](AbiParametersToPrimitiveTypes.md)\<`abiFunction`\[`"inputs"`\], `"inputs"`\> = [`AbiParametersToPrimitiveTypes`](AbiParametersToPrimitiveTypes.md)\<`abiFunction`\[`"inputs"`\], `"inputs"`\>
+### args
 
-## Defined in
+`args`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:30
+### targetArgs
+
+`targetArgs` *extends* [`AbiParametersToPrimitiveTypes`](AbiParametersToPrimitiveTypes.md)\<`abiFunction`\[`"inputs"`\], `"inputs"`, `true`\> = [`AbiParametersToPrimitiveTypes`](AbiParametersToPrimitiveTypes.md)\<`abiFunction`\[`"inputs"`\], `"inputs"`, `true`\>

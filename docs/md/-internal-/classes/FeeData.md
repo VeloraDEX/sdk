@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,51 +6,57 @@
 
 # Class: FeeData
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:26
+
 A **FeeData** wraps all the fee-related values associated with
  the network.
 
 ## Constructors
 
-### new FeeData()
+### Constructor
 
-> **new FeeData**(`gasPrice`?, `maxFeePerGas`?, `maxPriorityFeePerGas`?): [`FeeData`](FeeData.md)
+> **new FeeData**(`gasPrice?`, `maxFeePerGas?`, `maxPriorityFeePerGas?`): `FeeData`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:58
 
 Creates a new FeeData for %%gasPrice%%, %%maxFeePerGas%% and
  %%maxPriorityFeePerGas%%.
 
 #### Parameters
 
-• **gasPrice?**: `null` \| `bigint`
+##### gasPrice?
 
-• **maxFeePerGas?**: `null` \| `bigint`
+`bigint` \| `null`
 
-• **maxPriorityFeePerGas?**: `null` \| `bigint`
+##### maxFeePerGas?
+
+`bigint` \| `null`
+
+##### maxPriorityFeePerGas?
+
+`bigint` \| `null`
 
 #### Returns
 
-[`FeeData`](FeeData.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:58
+`FeeData`
 
 ## Properties
 
 ### gasPrice
 
-> `readonly` **gasPrice**: `null` \| `bigint`
+> `readonly` **gasPrice**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:30
 
 The gas price for legacy networks.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:30
 
 ***
 
 ### maxFeePerGas
 
-> `readonly` **maxFeePerGas**: `null` \| `bigint`
+> `readonly` **maxFeePerGas**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:43
 
 The maximum fee to pay per gas.
 
@@ -63,15 +69,13 @@ The maximum fee to pay per gas.
 
  This will be ``null`` on legacy networks (i.e. [pre-EIP-1559](link-eip-1559))
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:43
-
 ***
 
 ### maxPriorityFeePerGas
 
-> `readonly` **maxPriorityFeePerGas**: `null` \| `bigint`
+> `readonly` **maxPriorityFeePerGas**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:53
 
 The additional amout to pay per gas to encourage a validator
  to include the transaction.
@@ -81,22 +85,16 @@ The additional amout to pay per gas to encourage a validator
 
  This will be ``null`` on legacy networks (i.e. [pre-EIP-1559](link-eip-1559))
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:53
-
 ## Methods
 
 ### toJSON()
 
 > **toJSON**(): `any`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:62
+
 Returns a JSON-friendly value.
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:62

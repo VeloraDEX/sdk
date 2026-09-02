@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,46 +6,42 @@
 
 # Interface: UnderlyingSource\<R\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:153
+
 ## Type Parameters
 
-• **R** = `any`
+### R
+
+`R` = `any`
 
 ## Properties
 
 ### cancel?
 
-> `optional` **cancel**: [`UnderlyingSourceCancelCallback`](UnderlyingSourceCancelCallback.md)
+> `optional` **cancel?**: [`UnderlyingSourceCancelCallback`](UnderlyingSourceCancelCallback.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:154
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:154
 
 ***
 
 ### pull?
 
-> `optional` **pull**: [`UnderlyingSourcePullCallback`](UnderlyingSourcePullCallback.md)\<`R`\>
+> `optional` **pull?**: [`UnderlyingSourcePullCallback`](UnderlyingSourcePullCallback.md)\<`R`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:155
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:155
 
 ***
 
 ### start?
 
-> `optional` **start**: [`UnderlyingSourceStartCallback`](UnderlyingSourceStartCallback.md)\<`R`\>
+> `optional` **start?**: [`UnderlyingSourceStartCallback`](UnderlyingSourceStartCallback.md)\<`R`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:156
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:156
 
 ***
 
 ### type?
 
-> `optional` **type**: `undefined`
+> `optional` **type?**: `undefined`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:157
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:157

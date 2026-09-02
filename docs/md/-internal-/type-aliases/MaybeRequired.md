@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,19 @@
 
 # Type Alias: MaybeRequired\<T, required\>
 
-> **MaybeRequired**\<`T`, `required`\>: `required` *extends* `true` ? [`ExactRequired`](ExactRequired.md)\<`T`\> : `T`
+> **MaybeRequired**\<`T`, `required`\> = `required` *extends* `true` ? [`ExactRequired`](ExactRequired.md)\<`T`\> : `T`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:84
 
 ## Type Parameters
 
-• **T**
+### T
 
-• **required** *extends* `boolean`
+`T`
+
+### required
+
+`required` *extends* `boolean`
 
 ## Description
 
@@ -27,7 +33,3 @@ MaybeRequired<{ a: string, b?: number }, true>
 MaybeRequired<{ a: string, b?: number }, false>
 => { a: string, b?: number }
 ```
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:84

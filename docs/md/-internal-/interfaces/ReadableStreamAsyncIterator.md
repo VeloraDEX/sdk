@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,21 +6,27 @@
 
 # Interface: ReadableStreamAsyncIterator\<T\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:169
+
 ## Extends
 
-- `AsyncIterator`\<`T`, [`BuiltinIteratorReturn`](../type-aliases/BuiltinIteratorReturn.md), `unknown`\>
+- `AsyncIterator`\<`T`, [`BuiltinIteratorReturn`](../type-aliases/BuiltinIteratorReturn-1.md), `unknown`\>
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Methods
 
 ### \[asyncDispose\]()
 
-#### \[asyncDispose\]()
+#### Call Signature
 
 > **\[asyncDispose\]**(): [`PromiseLike`](PromiseLike.md)\<`void`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.esnext.disposable.d.ts:40
 
 ##### Returns
 
@@ -30,13 +36,11 @@
 
 `NodeJS.AsyncIterator.[asyncDispose]`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.disposable.d.ts:40
-
-#### \[asyncDispose\]()
+#### Call Signature
 
 > **\[asyncDispose\]**(): [`PromiseLike`](PromiseLike.md)\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:15
 
 ##### Returns
 
@@ -45,28 +49,22 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.dis
 ##### Inherited from
 
 `NodeJS.AsyncIterator.[asyncDispose]`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:15
 
 ***
 
 ### \[asyncIterator\]()
 
-> **\[asyncIterator\]**(): [`ReadableStreamAsyncIterator`](ReadableStreamAsyncIterator.md)\<`T`\>
+> **\[asyncIterator\]**(): `ReadableStreamAsyncIterator`\<`T`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:170
 
 #### Returns
 
-[`ReadableStreamAsyncIterator`](ReadableStreamAsyncIterator.md)\<`T`\>
+`ReadableStreamAsyncIterator`\<`T`\>
 
 #### Overrides
 
 `NodeJS.AsyncIterator.[asyncIterator]`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:170
 
 ***
 
@@ -74,9 +72,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > **next**(...`__namedParameters`): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:32
+
 #### Parameters
 
-• ...**\_\_namedParameters**: [] \| [`unknown`]
+##### \_\_namedParameters
+
+\[\] \| \[`unknown`\]
 
 #### Returns
 
@@ -86,19 +88,19 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 `NodeJS.AsyncIterator.next`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:32
-
 ***
 
 ### return()?
 
-> `optional` **return**(`value`?): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>\>
+> `optional` **return**(`value?`): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:33
 
 #### Parameters
 
-• **value?**: [`PromiseLike`](PromiseLike.md)\<`undefined`\>
+##### value?
+
+[`PromiseLike`](PromiseLike.md)\<`undefined`\>
 
 #### Returns
 
@@ -108,19 +110,19 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asy
 
 `NodeJS.AsyncIterator.return`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:33
-
 ***
 
 ### throw()?
 
-> `optional` **throw**(`e`?): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>\>
+> `optional` **throw**(`e?`): `Promise`\<[`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:34
 
 #### Parameters
 
-• **e?**: `any`
+##### e?
+
+`any`
 
 #### Returns
 
@@ -129,7 +131,3 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asy
 #### Inherited from
 
 `NodeJS.AsyncIterator.throw`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2018.asynciterable.d.ts:34

@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / StaticEventEmitterIteratorOptions
 
 # Interface: StaticEventEmitterIteratorOptions
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:85
 
 ## Extends
 
@@ -14,19 +16,19 @@
 
 ### close?
 
-> `optional` **close**: `string`[]
+> `optional` **close?**: `string`[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:89
 
 Names of events that will end the iteration.
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:89
 
 ***
 
 ### highWaterMark?
 
-> `optional` **highWaterMark**: `number`
+> `optional` **highWaterMark?**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:95
 
 The high watermark. The emitter is paused every time the size of events being buffered is higher than it.
 Supported only on emitters implementing `pause()` and `resume()` methods.
@@ -37,15 +39,13 @@ Supported only on emitters implementing `pause()` and `resume()` methods.
 Number.MAX_SAFE_INTEGER
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:95
-
 ***
 
 ### lowWaterMark?
 
-> `optional` **lowWaterMark**: `number`
+> `optional` **lowWaterMark?**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:101
 
 The low watermark. The emitter is resumed every time the size of events being buffered is lower than it.
 Supported only on emitters implementing `pause()` and `resume()` methods.
@@ -56,22 +56,16 @@ Supported only on emitters implementing `pause()` and `resume()` methods.
 1
 ```
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:101
-
 ***
 
 ### signal?
 
-> `optional` **signal**: `AbortSignal`
+> `optional` **signal?**: `AbortSignal`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:83
 
 Can be used to cancel awaiting events.
 
 #### Inherited from
 
 [`StaticEventEmitterOptions`](StaticEventEmitterOptions.md).[`signal`](StaticEventEmitterOptions.md#signal)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:83

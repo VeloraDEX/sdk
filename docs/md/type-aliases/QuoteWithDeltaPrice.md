@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,18 +6,22 @@
 
 # Type Alias: QuoteWithDeltaPrice
 
-> **QuoteWithDeltaPrice**: `object`
+> **QuoteWithDeltaPrice** = `object`
 
-## Type declaration
+Defined in: [src/methods/quote/getQuote.ts:55](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L55)
+
+## Properties
 
 ### delta
 
 > **delta**: [`DeltaPrice`](DeltaPrice.md)
 
+Defined in: [src/methods/quote/getQuote.ts:56](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L56)
+
+***
+
 ### deltaAddress
 
 > **deltaAddress**: `string`
 
-## Defined in
-
-[src/methods/quote/getQuote.ts:55](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L55)
+Defined in: [src/methods/quote/getQuote.ts:57](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L57)

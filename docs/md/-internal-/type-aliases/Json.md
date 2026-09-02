@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: Json
 
-> **Json**: `string` \| `number` \| `boolean` \| [`Json`](Json.md)[] \| `object`
+> **Json** = `string` \| `number` \| `boolean` \| `Json`[] \| \{\[`id`: `string`\]: `Json`; \}
 
-## Defined in
-
-node\_modules/.pnpm/web3-validator@2.0.6/node\_modules/web3-validator/lib/commonjs/types.d.ts:13
+Defined in: node\_modules/.pnpm/web3-validator@2.0.6/node\_modules/web3-validator/lib/commonjs/types.d.ts:13

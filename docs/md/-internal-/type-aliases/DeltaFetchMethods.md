@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: DeltaFetchMethods
 
-> **DeltaFetchMethods**: [`BuildDeltaOrderFunctions`](../../type-aliases/BuildDeltaOrderFunctions.md) & [`GetDeltaOrdersFunctions`](../../type-aliases/GetDeltaOrdersFunctions.md) & [`GetDeltaPriceFunctions`](../../type-aliases/GetDeltaPriceFunctions.md) & [`GetDeltaContractFunctions`](../../type-aliases/GetDeltaContractFunctions.md) & [`GetPartnerFeeFunctions`](../../type-aliases/GetPartnerFeeFunctions.md) & [`GetBridgeRoutesFunctions`](../../type-aliases/GetBridgeRoutesFunctions.md) & [`IsTokenSupportedInDeltaFunctions`](../../type-aliases/IsTokenSupportedInDeltaFunctions.md) & [`PostDeltaOrderFunctions`](../../type-aliases/PostDeltaOrderFunctions.md)
+> **DeltaFetchMethods** = [`BuildDeltaOrderFunctions`](../../type-aliases/BuildDeltaOrderFunctions.md) & [`GetDeltaOrdersFunctions`](../../type-aliases/GetDeltaOrdersFunctions.md) & [`GetDeltaPriceFunctions`](../../type-aliases/GetDeltaPriceFunctions.md) & [`GetDeltaContractFunctions`](../../type-aliases/GetDeltaContractFunctions.md) & [`GetPartnerFeeFunctions`](../../type-aliases/GetPartnerFeeFunctions.md) & [`GetBridgeRoutesFunctions`](../../type-aliases/GetBridgeRoutesFunctions.md) & [`IsTokenSupportedInDeltaFunctions`](../../type-aliases/IsTokenSupportedInDeltaFunctions.md) & [`PostDeltaOrderFunctions`](../../type-aliases/PostDeltaOrderFunctions.md)
 
-## Defined in
-
-[src/sdk/simple.ts:129](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L129)
+Defined in: [src/sdk/simple.ts:129](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L129)

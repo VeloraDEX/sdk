@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,16 @@
 
 # Type Alias: GetTransactionReceiptParameters
 
-> **GetTransactionReceiptParameters**: `object`
+> **GetTransactionReceiptParameters** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getTransactionReceipt.d.ts:9
+
+## Properties
 
 ### hash
 
 > **hash**: [`Hash`](Hash.md)
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getTransactionReceipt.d.ts:11
+
 The hash of the transaction.
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getTransactionReceipt.d.ts:9

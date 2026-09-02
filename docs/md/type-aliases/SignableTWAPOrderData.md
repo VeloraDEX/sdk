@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: SignableTWAPOrderData
 
-> **SignableTWAPOrderData**: [`SignableTWAPSellOrderData`](../-internal-/type-aliases/SignableTWAPSellOrderData.md) \| [`SignableTWAPBuyOrderData`](../-internal-/type-aliases/SignableTWAPBuyOrderData.md)
+> **SignableTWAPOrderData** = [`SignableTWAPSellOrderData`](../-internal-/type-aliases/SignableTWAPSellOrderData.md) \| [`SignableTWAPBuyOrderData`](../-internal-/type-aliases/SignableTWAPBuyOrderData.md)
 
-## Defined in
-
-[src/methods/delta/helpers/buildTWAPOrderData.ts:69](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildTWAPOrderData.ts#L69)
+Defined in: [src/methods/delta/helpers/buildTWAPOrderData.ts:69](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildTWAPOrderData.ts#L69)

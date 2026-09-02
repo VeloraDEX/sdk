@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,13 +8,19 @@
 
 > **constructPreSignExternalDeltaOrder**\<`T`\>(`options`): [`PreSignExternalDeltaOrderFunctions`](../type-aliases/PreSignExternalDeltaOrderFunctions.md)\<`T`\>
 
+Defined in: [src/methods/delta/preSignExternalDeltaOrder.ts:59](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignExternalDeltaOrder.ts#L59)
+
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **options**: [`ConstructProviderFetchInput`](../interfaces/ConstructProviderFetchInput.md)\<`T`, `"transactCall"`\>
+### options
+
+[`ConstructProviderFetchInput`](../interfaces/ConstructProviderFetchInput.md)\<`T`, `"transactCall"`\>
 
 ## Returns
 
@@ -27,7 +33,3 @@ order hashing (`hashExternalDeltaOrder` / `hashExternalDeltaOrderTypedData`) and
 `setPreSignature` transactions (`setExternalDeltaOrderPreSignature` /
 `preSignExternalDeltaOrder`). The transact methods return whatever the configured
 `contractCaller` returns, for versatility.
-
-## Defined in
-
-[src/methods/delta/preSignExternalDeltaOrder.ts:59](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignExternalDeltaOrder.ts#L59)

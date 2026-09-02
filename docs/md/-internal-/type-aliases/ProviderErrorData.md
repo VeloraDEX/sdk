@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: ProviderErrorData
 
-> **ProviderErrorData**: [`HexString`](HexString.md) \| `object` \| `object`
+> **ProviderErrorData** = [`HexString`](HexString.md) \| \{ `data`: [`HexString`](HexString.md); \} \| \{ `originalError`: \{ `data`: [`HexString`](HexString.md); \}; \}
 
-## Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:71
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:71

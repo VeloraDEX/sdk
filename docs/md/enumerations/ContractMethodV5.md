@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: ContractMethodV5
 
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:5
+
 ## Enumeration Members
 
 ### buy
 
 > **buy**: `"buy"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:22
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:22
 
 ***
 
@@ -22,9 +22,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **buyOnUniswap**: `"buyOnUniswap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:7
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:7
 
 ***
 
@@ -32,9 +30,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **buyOnUniswapFork**: `"buyOnUniswapFork"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:9
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:9
 
 ***
 
@@ -42,9 +38,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **buyOnUniswapV2Fork**: `"buyOnUniswapV2Fork"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:11
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:11
 
 ***
 
@@ -52,9 +46,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **directBalancerV2GivenInSwap**: `"directBalancerV2GivenInSwap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:27
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:27
 
 ***
 
@@ -62,9 +54,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **directBalancerV2GivenOutSwap**: `"directBalancerV2GivenOutSwap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:28
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:28
 
 ***
 
@@ -72,9 +62,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **directCurveV1Swap**: `"directCurveV1Swap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:25
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:25
 
 ***
 
@@ -82,9 +70,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **directCurveV2Swap**: `"directCurveV2Swap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:26
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:26
 
 ***
 
@@ -92,9 +78,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **directUniV3Buy**: `"directUniV3Buy"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:24
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:24
 
 ***
 
@@ -102,9 +86,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **directUniV3Swap**: `"directUniV3Swap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:23
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:23
 
 ***
 
@@ -112,9 +94,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **megaSwap**: `"megaSwap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:15
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:15
 
 ***
 
@@ -122,9 +102,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **multiSwap**: `"multiSwap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:14
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:14
 
 ***
 
@@ -132,9 +110,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **protectedMegaSwap**: `"protectedMegaSwap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:17
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:17
 
 ***
 
@@ -142,9 +118,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **protectedMultiSwap**: `"protectedMultiSwap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:16
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:16
 
 ***
 
@@ -152,9 +126,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **protectedSimpleBuy**: `"protectedSimpleBuy"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:19
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:19
 
 ***
 
@@ -162,9 +134,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **protectedSimpleSwap**: `"protectedSimpleSwap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:18
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:18
 
 ***
 
@@ -172,9 +142,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **simpleBuy**: `"simpleBuy"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:12
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:12
 
 ***
 
@@ -182,9 +150,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **simpleSwap**: `"simpleSwap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:13
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:13
 
 ***
 
@@ -192,9 +158,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapOnUniswap**: `"swapOnUniswap"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:6
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:6
 
 ***
 
@@ -202,9 +166,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapOnUniswapFork**: `"swapOnUniswapFork"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:8
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:8
 
 ***
 
@@ -212,9 +174,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapOnUniswapV2Fork**: `"swapOnUniswapV2Fork"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:10
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:10
 
 ***
 
@@ -222,9 +182,7 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapOnZeroXv2**: `"swapOnZeroXv2"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:20
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:20
 
 ***
 
@@ -232,6 +190,4 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **swapOnZeroXv4**: `"swapOnZeroXv4"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:21
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:21

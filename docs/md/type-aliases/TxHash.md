@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: TxHash
 
-> **TxHash**: \`0x$\{string\}\`
+> **TxHash** = `` `0x${string}` ``
 
-## Defined in
-
-[src/helpers/token.ts:20](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L20)
+Defined in: [src/helpers/token.ts:20](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L20)

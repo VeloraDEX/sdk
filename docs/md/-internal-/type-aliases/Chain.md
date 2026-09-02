@@ -1,50 +1,52 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Chain
 
-# Type Alias: Chain\<formatters, custom\>
+# Type Alias: Chain\<formatters, extendSchema\>
 
-> **Chain**\<`formatters`, `custom`\>: `object` & [`ChainConfig`](ChainConfig.md)\<`formatters`, `custom`\>
+> **Chain**\<`formatters`, `extendSchema`\> = `object` & [`ChainConfig`](ChainConfig.md)\<`formatters`, `extendSchema`\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:13
+
+## Type Declaration
 
 ### blockExplorers?
 
-> `optional` **blockExplorers**: `object`
+> `optional` **blockExplorers?**: `object`
 
 Collection of block explorers
 
 #### Index Signature
 
- \[`key`: `string`\]: [`ChainBlockExplorer`](ChainBlockExplorer.md)
+\[`key`: `string`\]: [`ChainBlockExplorer`](ChainBlockExplorer.md)
 
-### blockExplorers.default
+#### blockExplorers.default
 
 > **default**: [`ChainBlockExplorer`](ChainBlockExplorer.md)
 
 ### blockTime?
 
-> `optional` **blockTime**: `number`
+> `optional` **blockTime?**: `number`
 
 Block time in milliseconds.
 
 ### contracts?
 
-> `optional` **contracts**: [`Prettify`](Prettify.md)\<`object` & `object`\>
+> `optional` **contracts?**: [`Prettify`](Prettify-1.md)\<`object` & `object`\>
 
 Collection of contracts
 
 ### ensTlds?
 
-> `optional` **ensTlds**: readonly `string`[]
+> `optional` **ensTlds?**: readonly `string`[]
 
 Collection of ENS TLDs for the chain.
 
 ### experimental\_preconfirmationTime?
 
-> `optional` **experimental\_preconfirmationTime**: `number`
+> `optional` **experimental\_preconfirmationTime?**: `number`
 
 Preconfirmation time in milliseconds.
 
@@ -74,30 +76,42 @@ Collection of RPC endpoints
 
 #### Index Signature
 
- \[`key`: `string`\]: [`ChainRpcUrls`](ChainRpcUrls.md)
+\[`key`: `string`\]: [`ChainRpcUrls`](ChainRpcUrls.md)
 
-### rpcUrls.default
+#### rpcUrls.default
 
 > **default**: [`ChainRpcUrls`](ChainRpcUrls.md)
 
 ### sourceId?
 
-> `optional` **sourceId**: `number`
+> `optional` **sourceId?**: `number`
 
 Source Chain ID (ie. the L1 chain)
 
+### supportsTransactionReplacementDetection?
+
+> `optional` **supportsTransactionReplacementDetection?**: `boolean`
+
+Whether transaction replacement detection is supported.
+
+#### Default
+
+```ts
+true
+```
+
 ### testnet?
 
-> `optional` **testnet**: `boolean`
+> `optional` **testnet?**: `boolean`
 
 Flag for test networks
 
 ## Type Parameters
 
-• **formatters** *extends* [`ChainFormatters`](ChainFormatters.md) \| `undefined` = [`ChainFormatters`](ChainFormatters.md) \| `undefined`
+### formatters
 
-• **custom** *extends* [`Record`](Record.md)\<`string`, `unknown`\> \| `undefined` = [`Record`](Record.md)\<`string`, `unknown`\> \| `undefined`
+`formatters` *extends* [`ChainFormatters`](ChainFormatters.md) \| `undefined` = [`ChainFormatters`](ChainFormatters.md) \| `undefined`
 
-## Defined in
+### extendSchema
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:12
+`extendSchema` *extends* [`Record`](Record.md)\<`string`, `unknown`\> \| `undefined` = [`Record`](Record.md)\<`string`, `unknown`\> \| `undefined`

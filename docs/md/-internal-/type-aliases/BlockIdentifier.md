@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,20 +6,42 @@
 
 # Type Alias: BlockIdentifier\<quantity\>
 
-> **BlockIdentifier**\<`quantity`\>: `object` & `object` \| `object`
+> **BlockIdentifier**\<`quantity`\> = \{ `blockNumber`: [`BlockNumber`](BlockNumber.md)\<`quantity`\>; \} \| \{ `blockHash`: [`Hash`](Hash.md); `requireCanonical?`: `boolean`; \}
 
-## Type declaration
-
-### requireCanonical?
-
-> `optional` **requireCanonical**: `boolean`
-
-Whether or not to throw an error if the block is not in the canonical chain as described below. Only allowed in conjunction with the blockHash tag. Defaults to false.
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/block.d.ts:60
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-## Defined in
+`quantity` = `bigint`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/block.d.ts:60
+## Union Members
+
+### Type Literal
+
+\{ `blockNumber`: [`BlockNumber`](BlockNumber.md)\<`quantity`\>; \}
+
+#### blockNumber
+
+> **blockNumber**: [`BlockNumber`](BlockNumber.md)\<`quantity`\>
+
+The block in the canonical chain with this number
+
+***
+
+### Type Literal
+
+\{ `blockHash`: [`Hash`](Hash.md); `requireCanonical?`: `boolean`; \}
+
+#### blockHash
+
+> **blockHash**: [`Hash`](Hash.md)
+
+The block uniquely identified by this hash. The `blockNumber` and `blockHash` properties are mutually exclusive; exactly one of them must be set.
+
+#### requireCanonical?
+
+> `optional` **requireCanonical?**: `boolean`
+
+Whether or not to throw an error if the block is not in the canonical chain as described below. Only allowed in conjunction with the blockHash tag. Defaults to false.

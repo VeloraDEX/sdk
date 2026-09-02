@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,24 +6,32 @@
 
 # Type Alias: ErrorObject
 
-> **ErrorObject**: `object`
+> **ErrorObject** = `object`
+
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/RpcResponse.d.ts:13
 
 JSON-RPC error object as per the [JSON-RPC 2.0 specification](https://www.jsonrpc.org/specification#error_object).
 
-## Type declaration
+## Properties
 
 ### code
 
 > **code**: `number`
 
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/RpcResponse.d.ts:14
+
+***
+
 ### data?
 
-> `optional` **data**: `unknown`
+> `optional` **data?**: `unknown`
+
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/RpcResponse.d.ts:16
+
+***
 
 ### message
 
 > **message**: `string`
 
-## Defined in
-
-node\_modules/.pnpm/ox@0.9.6\_typescript@5.6.3\_zod@3.25.76/node\_modules/ox/\_types/core/RpcResponse.d.ts:13
+Defined in: node\_modules/.pnpm/ox@0.14.34\_typescript@5.9.3\_zod@3.25.76/node\_modules/ox/\_types/core/RpcResponse.d.ts:15

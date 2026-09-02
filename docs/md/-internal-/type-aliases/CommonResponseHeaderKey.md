@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: CommonResponseHeaderKey
 
-> **CommonResponseHeaderKey**: [`CommonResponseHeadersList`](CommonResponseHeadersList.md) \| [`Lowercase`](Lowercase.md)\<[`CommonResponseHeadersList`](CommonResponseHeadersList.md)\>
+> **CommonResponseHeaderKey** = [`CommonResponseHeadersList`](CommonResponseHeadersList.md) \| [`Lowercase`](Lowercase.md)\<[`CommonResponseHeadersList`](CommonResponseHeadersList.md)\>
 
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:129
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:139

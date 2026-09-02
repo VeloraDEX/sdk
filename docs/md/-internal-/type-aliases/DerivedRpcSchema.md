@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: DerivedRpcSchema\<rpcSchema, rpcSchemaOverride\>
 
-> **DerivedRpcSchema**\<`rpcSchema`, `rpcSchemaOverride`\>: `rpcSchemaOverride` *extends* [`RpcSchemaOverride`](RpcSchemaOverride.md) ? [`rpcSchemaOverride` & `object`] : `rpcSchema`
+> **DerivedRpcSchema**\<`rpcSchema`, `rpcSchemaOverride`\> = `rpcSchemaOverride` *extends* [`RpcSchemaOverride`](RpcSchemaOverride.md) ? \[`rpcSchemaOverride` & `object`\] : `rpcSchema`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:1969
 
 ## Type Parameters
 
-• **rpcSchema** *extends* [`RpcSchema`](RpcSchema.md) \| `undefined`
+### rpcSchema
 
-• **rpcSchemaOverride** *extends* [`RpcSchemaOverride`](RpcSchemaOverride.md) \| `undefined`
+`rpcSchema` *extends* [`RpcSchema`](RpcSchema.md) \| `undefined`
 
-## Defined in
+### rpcSchemaOverride
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:1911
+`rpcSchemaOverride` *extends* [`RpcSchemaOverride`](RpcSchemaOverride.md) \| `undefined`

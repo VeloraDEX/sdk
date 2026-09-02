@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TransactionRevertWithCustomError
 
 # Class: TransactionRevertWithCustomError\<ReceiptType\>
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:55
 
 This error is used when a transaction to a smart contract fails and
 a custom user error (https://blog.soliditylang.org/2021/04/21/custom-errors/)
@@ -16,55 +18,67 @@ is able to be parsed from the revert reason
 
 ## Type Parameters
 
-• **ReceiptType** = [`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+### ReceiptType
+
+`ReceiptType` = [`TransactionReceipt`](../type-aliases/TransactionReceipt.md)
 
 ## Constructors
 
-### new TransactionRevertWithCustomError()
+### Constructor
 
-> **new TransactionRevertWithCustomError**\<`ReceiptType`\>(`reason`, `customErrorName`, `customErrorDecodedSignature`, `customErrorArguments`, `signature`?, `receipt`?, `data`?): [`TransactionRevertWithCustomError`](TransactionRevertWithCustomError.md)\<`ReceiptType`\>
+> **new TransactionRevertWithCustomError**\<`ReceiptType`\>(`reason`, `customErrorName`, `customErrorDecodedSignature`, `customErrorArguments`, `signature?`, `receipt?`, `data?`): `TransactionRevertWithCustomError`\<`ReceiptType`\>
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:64
 
 #### Parameters
 
-• **reason**: `string`
+##### reason
 
-• **customErrorName**: `string`
+`string`
 
-• **customErrorDecodedSignature**: `string`
+##### customErrorName
 
-• **customErrorArguments**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+`string`
 
-• **signature?**: `string`
+##### customErrorDecodedSignature
 
-• **receipt?**: `ReceiptType`
+`string`
 
-• **data?**: `string`
+##### customErrorArguments
+
+[`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+
+##### signature?
+
+`string`
+
+##### receipt?
+
+`ReceiptType`
+
+##### data?
+
+`string`
 
 #### Returns
 
-[`TransactionRevertWithCustomError`](TransactionRevertWithCustomError.md)\<`ReceiptType`\>
+`TransactionRevertWithCustomError`\<`ReceiptType`\>
 
 #### Overrides
 
-[`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`constructor`](TransactionRevertInstructionError.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:64
+[`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`constructor`](TransactionRevertInstructionError.md#constructor)
 
 ## Properties
 
 ### cause
 
-> **cause**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **cause**: `Error` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:9
 
 #### Inherited from
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`cause`](TransactionRevertInstructionError.md#cause)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:9
 
 ***
 
@@ -72,13 +86,11 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **code**: `number`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:63
+
 #### Overrides
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`code`](TransactionRevertInstructionError.md#code)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:63
 
 ***
 
@@ -86,9 +98,7 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/err
 
 > **customErrorArguments**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:59
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:59
 
 ***
 
@@ -96,9 +106,7 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/err
 
 > **customErrorDecodedSignature**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:58
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:58
 
 ***
 
@@ -106,23 +114,19 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/err
 
 > **customErrorName**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:57
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:57
 
 ***
 
 ### data?
 
-> `optional` **data**: `string`
+> `optional` **data?**: `string`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:62
 
 #### Overrides
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`data`](TransactionRevertInstructionError.md#data)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:62
 
 ***
 
@@ -130,13 +134,11 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/err
 
 > **message**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Inherited from
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`message`](TransactionRevertInstructionError.md#message)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -144,13 +146,11 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > `readonly` **name**: `string`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
+
 #### Inherited from
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`name`](TransactionRevertInstructionError.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
 
 ***
 
@@ -158,69 +158,67 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **reason**: `string`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:56
+
 #### Overrides
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`reason`](TransactionRevertInstructionError.md#reason)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:56
 
 ***
 
 ### receipt?
 
-> `optional` **receipt**: `ReceiptType`
+> `optional` **receipt?**: `ReceiptType`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:61
 
 #### Overrides
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`receipt`](TransactionRevertInstructionError.md#receipt)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:61
-
 ***
 
 ### signature?
 
-> `optional` **signature**: `string`
+> `optional` **signature?**: `string`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:60
 
 #### Overrides
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`signature`](TransactionRevertInstructionError.md#signature)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:60
-
 ***
 
 ### stack
 
-> **stack**: `undefined` \| `string`
+> **stack**: `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
 
 #### Inherited from
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`stack`](TransactionRevertInstructionError.md#stack)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
-
 ***
 
-### prepareStackTrace()?
+### prepareStackTrace?
 
-> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
+> `static` `optional` **prepareStackTrace?**: (`err`, `stackTraces`) => `any`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
 
 Optional override for formatting stack traces
 
 #### Parameters
 
-• **err**: [`Error`](../interfaces/Error.md)
+##### err
 
-• **stackTraces**: [`CallSite`](../interfaces/CallSite.md)[]
+`Error`
+
+##### stackTraces
+
+[`CallSite`](../interfaces/CallSite.md)[]
 
 #### Returns
 
@@ -234,23 +232,17 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`prepareStackTrace`](TransactionRevertInstructionError.md#preparestacktrace)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
-
 ***
 
 ### stackTraceLimit
 
 > `static` **stackTraceLimit**: `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
+
 #### Inherited from
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`stackTraceLimit`](TransactionRevertInstructionError.md#stacktracelimit)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
 
 ## Accessors
 
@@ -258,7 +250,9 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:14
 
 #### Get Signature
 
-> **get** **innerError**(): `undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+> **get** **innerError**(): `Error` \| `Error`[] \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
 
 ##### Deprecated
 
@@ -266,11 +260,13 @@ Use the `cause` property instead.
 
 ##### Returns
 
-`undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+`Error` \| `Error`[] \| `undefined`
 
 #### Set Signature
 
 > **set** **innerError**(`cause`): `void`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:17
 
 ##### Deprecated
 
@@ -278,7 +274,9 @@ Use the `cause` property instead.
 
 ##### Parameters
 
-• **cause**: `undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+###### cause
+
+`Error` \| `Error`[] \| `undefined`
 
 ##### Returns
 
@@ -286,11 +284,7 @@ Use the `cause` property instead.
 
 #### Inherited from
 
-[`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`innerError`](TransactionRevertInstructionError.md#innererror)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
+`TransactionRevertInstructionError.innerError`
 
 ## Methods
 
@@ -298,13 +292,15 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **toJSON**(): `object`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:65
+
 #### Returns
 
 `object`
 
 ##### cause
 
-> **cause**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **cause**: `Error` \| `undefined`
 
 ##### code
 
@@ -324,11 +320,11 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 ##### data
 
-> **data**: `undefined` \| `string`
+> **data**: `string` \| `undefined`
 
 ##### innerError
 
-> **innerError**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **innerError**: `Error` \| `undefined`
 
 ##### message
 
@@ -344,33 +340,35 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 ##### receipt
 
-> **receipt**: `undefined` \| `ReceiptType`
+> **receipt**: `ReceiptType` \| `undefined`
 
 ##### signature
 
-> **signature**: `undefined` \| `string`
+> **signature**: `string` \| `undefined`
 
 #### Overrides
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`toJSON`](TransactionRevertInstructionError.md#tojson)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/transaction\_errors.d.ts:65
-
 ***
 
 ### captureStackTrace()
 
-> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
 
 Create .stack property on a target object
 
 #### Parameters
 
-• **targetObject**: `object`
+##### targetObject
 
-• **constructorOpt?**: `Function`
+`object`
+
+##### constructorOpt?
+
+`Function`
 
 #### Returns
 
@@ -380,21 +378,23 @@ Create .stack property on a target object
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`captureStackTrace`](TransactionRevertInstructionError.md#capturestacktrace)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
-
 ***
 
 ### convertToString()
 
-> `static` **convertToString**(`value`, `unquotValue`?): `string`
+> `static` **convertToString**(`value`, `unquotValue?`): `string`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19
 
 #### Parameters
 
-• **value**: `unknown`
+##### value
 
-• **unquotValue?**: `boolean`
+`unknown`
+
+##### unquotValue?
+
+`boolean`
 
 #### Returns
 
@@ -403,7 +403,3 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:13
 #### Inherited from
 
 [`TransactionRevertInstructionError`](TransactionRevertInstructionError.md).[`convertToString`](TransactionRevertInstructionError.md#converttostring)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,60 +6,66 @@
 
 # Interface: Web3AccountProvider\<T\>
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:64
+
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Properties
 
-### create()
+### create
 
 > **create**: () => `T`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:66
 
 #### Returns
 
 `T`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:66
-
 ***
 
-### decrypt()
+### decrypt
 
-> **decrypt**: (`keystore`, `password`, `options`?) => `Promise`\<`T`\>
+> **decrypt**: (`keystore`, `password`, `options?`) => `Promise`\<`T`\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:67
 
 #### Parameters
 
-• **keystore**: `string` \| [`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)
+##### keystore
 
-• **password**: `string`
+`string` \| [`KeyStore`](../type-aliases/KeyStore.md)
 
-• **options?**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+##### password
+
+`string`
+
+##### options?
+
+[`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
 
 #### Returns
 
 `Promise`\<`T`\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:67
-
 ***
 
-### privateKeyToAccount()
+### privateKeyToAccount
 
 > **privateKeyToAccount**: (`privateKey`) => `T`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:65
+
 #### Parameters
 
-• **privateKey**: `string`
+##### privateKey
+
+`string`
 
 #### Returns
 
 `T`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:65

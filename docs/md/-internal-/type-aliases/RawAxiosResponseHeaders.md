@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: RawAxiosResponseHeaders
 
-> **RawAxiosResponseHeaders**: [`Partial`](Partial.md)\<[`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) & [`RawCommonResponseHeaders`](RawCommonResponseHeaders.md)\>
+> **RawAxiosResponseHeaders** = [`Partial`](Partial.md)\<[`RawAxiosHeaders`](../interfaces/RawAxiosHeaders.md) & [`RawCommonResponseHeaders`](RawCommonResponseHeaders.md)\>
 
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:137
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:147

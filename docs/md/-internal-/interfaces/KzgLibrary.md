@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,43 +6,47 @@
 
 # Interface: KzgLibrary
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:115
+
 A KZG Library with the necessary functions to compute
  BLOb commitments and proofs.
 
 ## Properties
 
-### blobToKzgCommitment()
+### blobToKzgCommitment
 
 > **blobToKzgCommitment**: (`blob`) => `Uint8Array`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:116
+
 #### Parameters
 
-• **blob**: `Uint8Array`
+##### blob
+
+`Uint8Array`
 
 #### Returns
 
 `Uint8Array`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:116
 
 ***
 
-### computeBlobKzgProof()
+### computeBlobKzgProof
 
 > **computeBlobKzgProof**: (`blob`, `commitment`) => `Uint8Array`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:117
+
 #### Parameters
 
-• **blob**: `Uint8Array`
+##### blob
 
-• **commitment**: `Uint8Array`
+`Uint8Array`
+
+##### commitment
+
+`Uint8Array`
 
 #### Returns
 
 `Uint8Array`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/transaction/transaction.d.ts:117

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,21 +6,23 @@
 
 # Interface: CompileResultAPI
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:87
+
 ## Properties
 
 ### code
 
 > `readonly` **code**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:88
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:88
 
 ***
 
 ### info
 
 > `readonly` **info**: `object`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:89
 
 #### abiDefinition
 
@@ -34,7 +36,7 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/
 
 > `readonly` **developerDoc**: `object`
 
-#### developerDoc.methods
+##### developerDoc.methods
 
 > `readonly` **methods**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
 
@@ -54,10 +56,6 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/
 
 > `readonly` **userDoc**: `object`
 
-#### userDoc.methods
+##### userDoc.methods
 
 > `readonly` **methods**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/apis/eth\_execution\_api.d.ts:89

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,31 +6,35 @@
 
 # Type Alias: WatchEventParameters\<abiEvent, abiEvents, strict, transport, _eventName\>
 
-> **WatchEventParameters**\<`abiEvent`, `abiEvents`, `strict`, `transport`, `_eventName`\>: `object` & [`GetPollOptions`](GetPollOptions.md)\<`transport`\> & `object` \| `object` \| `object`
+> **WatchEventParameters**\<`abiEvent`, `abiEvents`, `strict`, `transport`, `_eventName`\> = `object` & [`GetPollOptions`](GetPollOptions.md)\<`transport`\> & \{ `args?`: [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abiEvents`, `_eventName`\>; `event`: `abiEvent`; `events?`: `undefined`; `strict?`: `strict`; \} \| \{ `args?`: `undefined`; `event?`: `undefined`; `events?`: `abiEvents`; `strict?`: `strict`; \} \| \{ `args?`: `undefined`; `event?`: `undefined`; `events?`: `undefined`; `strict?`: `undefined`; \}
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchEvent.d.ts:14
+
+## Type Declaration
 
 ### address?
 
-> `optional` **address**: [`Address`](Address.md) \| [`Address`](Address.md)[]
+> `optional` **address?**: [`Address`](Address-1.md) \| [`Address`](Address-1.md)[]
 
 The address of the contract.
 
 ### fromBlock?
 
-> `optional` **fromBlock**: [`BlockNumber`](BlockNumber.md)\<`bigint`\>
+> `optional` **fromBlock?**: [`BlockNumber`](BlockNumber.md)\<`bigint`\>
 
 Block to start listening from.
 
-### onError()?
+### onError?
 
-> `optional` **onError**: (`error`) => `void`
+> `optional` **onError?**: (`error`) => `void`
 
 The callback to call when an error occurred when trying to get for a new block.
 
 #### Parameters
 
-• **error**: [`Error`](../interfaces/Error.md)
+##### error
+
+`Error`
 
 #### Returns
 
@@ -44,16 +48,22 @@ The callback to call when new event logs are received.
 
 ## Type Parameters
 
-• **abiEvent** *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
+### abiEvent
 
-• **abiEvents** *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? [`abiEvent`] : `undefined`
+`abiEvent` *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+### abiEvents
 
-• **transport** *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)
+`abiEvents` *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? \[`abiEvent`\] : `undefined`
 
-• **_eventName** *extends* `string` \| `undefined` = [`MaybeAbiEventName`](MaybeAbiEventName.md)\<`abiEvent`\>
+### strict
 
-## Defined in
+`strict` *extends* `boolean` \| `undefined` = `undefined`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchEvent.d.ts:14
+### transport
+
+`transport` *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)
+
+### _eventName
+
+`_eventName` *extends* `string` \| `undefined` = [`MaybeAbiEventName`](MaybeAbiEventName.md)\<`abiEvent`\>

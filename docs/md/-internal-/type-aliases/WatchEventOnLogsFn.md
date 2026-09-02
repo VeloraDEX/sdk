@@ -1,31 +1,39 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / WatchEventOnLogsFn
 
-# Type Alias: WatchEventOnLogsFn()\<abiEvent, abiEvents, strict, _eventName\>
+# Type Alias: WatchEventOnLogsFn\<abiEvent, abiEvents, strict, _eventName\>
 
-> **WatchEventOnLogsFn**\<`abiEvent`, `abiEvents`, `strict`, `_eventName`\>: (`logs`) => `void`
+> **WatchEventOnLogsFn**\<`abiEvent`, `abiEvents`, `strict`, `_eventName`\> = (`logs`) => `void`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchEvent.d.ts:13
 
 ## Type Parameters
 
-• **abiEvent** *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
+### abiEvent
 
-• **abiEvents** *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? [`abiEvent`] : `undefined`
+`abiEvent` *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+### abiEvents
 
-• **_eventName** *extends* `string` \| `undefined` = [`MaybeAbiEventName`](MaybeAbiEventName.md)\<`abiEvent`\>
+`abiEvents` *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? \[`abiEvent`\] : `undefined`
+
+### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+### _eventName
+
+`_eventName` *extends* `string` \| `undefined` = [`MaybeAbiEventName`](MaybeAbiEventName.md)\<`abiEvent`\>
 
 ## Parameters
 
-• **logs**: [`WatchEventOnLogsParameter`](WatchEventOnLogsParameter.md)\<`abiEvent`, `abiEvents`, `strict`, `_eventName`\>
+### logs
+
+[`WatchEventOnLogsParameter`](WatchEventOnLogsParameter.md)\<`abiEvent`, `abiEvents`, `strict`, `_eventName`\>
 
 ## Returns
 
 `void`
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchEvent.d.ts:13

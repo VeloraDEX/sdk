@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: SimulateBlocksParameters\<calls\>
 
-> **SimulateBlocksParameters**\<`calls`\>: `object` & `object` \| `object`
+> **SimulateBlocksParameters**\<`calls`\> = `object` & \{ `blockNumber?`: `bigint`; `blockTag?`: `undefined`; \} \| \{ `blockNumber?`: `undefined`; `blockTag?`: [`BlockTag`](BlockTag-2.md); \}
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/simulateBlocks.d.ts:31
+
+## Type Declaration
 
 ### blocks
 
@@ -18,26 +20,24 @@ Blocks to simulate.
 
 ### returnFullTransactions?
 
-> `optional` **returnFullTransactions**: `boolean`
+> `optional` **returnFullTransactions?**: `boolean`
 
 Whether to return the full transactions.
 
 ### traceTransfers?
 
-> `optional` **traceTransfers**: `boolean`
+> `optional` **traceTransfers?**: `boolean`
 
 Whether to trace transfers.
 
 ### validation?
 
-> `optional` **validation**: `boolean`
+> `optional` **validation?**: `boolean`
 
 Whether to enable validation mode.
 
 ## Type Parameters
 
-• **calls** *extends* readonly `unknown`[] = readonly `unknown`[]
+### calls
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/simulateBlocks.d.ts:31
+`calls` *extends* readonly `unknown`[] = readonly `unknown`[]

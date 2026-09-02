@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,24 +6,32 @@
 
 # Type Alias: AbiError
 
-> **AbiError**: `object`
+> **AbiError** = `object`
+
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:110
 
 ABI ["error"](https://docs.soliditylang.org/en/latest/abi-spec.html#errors) type
 
-## Type declaration
+## Properties
 
 ### inputs
 
-> **inputs**: readonly [`AbiParameter`](AbiParameter.md)[]
+> **inputs**: readonly [`AbiParameter`](AbiParameter-1.md)[]
+
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:112
+
+***
 
 ### name
 
 > **name**: `string`
 
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:113
+
+***
+
 ### type
 
 > **type**: `"error"`
 
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:110
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:111

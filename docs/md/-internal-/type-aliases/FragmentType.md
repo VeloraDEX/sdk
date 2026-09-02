@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,10 +6,8 @@
 
 # Type Alias: FragmentType
 
-> **FragmentType**: `"constructor"` \| `"error"` \| `"event"` \| `"fallback"` \| `"function"` \| `"struct"`
+> **FragmentType** = `"constructor"` \| `"error"` \| `"event"` \| `"fallback"` \| `"function"` \| `"struct"`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:219
 
 The type of a [[Fragment]].
-
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/fragments.d.ts:219

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: Address
 
-> **Address**: `string`
+> **Address** = `string`
 
-## Defined in
-
-[src/helpers/token.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L8)
+Defined in: [src/helpers/token.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L8)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: SendCallsSyncParameters\<chain, account, chainOverride, calls\>
 
-> **SendCallsSyncParameters**\<`chain`, `account`, `chainOverride`, `calls`\>: [`SendCallsParameters`](SendCallsParameters.md)\<`chain`, `account`, `chainOverride`, `calls`\> & [`Pick`](Pick.md)\<[`WaitForCallsStatusParameters`](WaitForCallsStatusParameters.md), `"pollingInterval"` \| `"status"` \| `"throwOnFailure"`\> & `object`
+> **SendCallsSyncParameters**\<`chain`, `account`, `chainOverride`, `calls`\> = [`SendCallsParameters`](SendCallsParameters.md)\<`chain`, `account`, `chainOverride`, `calls`\> & [`Pick`](Pick.md)\<[`WaitForCallsStatusParameters`](WaitForCallsStatusParameters.md), `"pollingInterval"` \| `"status"` \| `"throwOnFailure"`\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/sendCallsSync.d.ts:8
+
+## Type Declaration
 
 ### timeout?
 
-> `optional` **timeout**: `number`
+> `optional` **timeout?**: `number`
 
 Timeout (ms) to wait for calls to be included in a block.
 
@@ -24,14 +26,18 @@ chain.blockTime * 3
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+### chain
 
-• **account** *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+### account
 
-• **calls** *extends* readonly `unknown`[] = readonly `unknown`[]
+`account` *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
 
-## Defined in
+### chainOverride
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/sendCallsSync.d.ts:8
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+
+### calls
+
+`calls` *extends* readonly `unknown`[] = readonly `unknown`[]

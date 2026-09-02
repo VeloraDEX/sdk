@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: HttpStatusCode
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:180
+
 ## Enumeration Members
 
 ### Accepted
 
 > **Accepted**: `202`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:177
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:187
 
 ***
 
@@ -22,9 +22,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:177
 
 > **AlreadyReported**: `208`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:183
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:193
 
 ***
 
@@ -32,9 +30,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:183
 
 > **BadGateway**: `502`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:225
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:239
 
 ***
 
@@ -42,9 +38,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:225
 
 > **BadRequest**: `400`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:194
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:204
 
 ***
 
@@ -52,9 +46,23 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:194
 
 > **Conflict**: `409`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:213
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:203
+***
+
+### ConnectionTimedOut
+
+> **ConnectionTimedOut**: `522`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:250
+
+***
+
+### ContentTooLarge
+
+> **ContentTooLarge**: `413`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:219
 
 ***
 
@@ -62,9 +70,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:203
 
 > **Continue**: `100`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:171
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:181
 
 ***
 
@@ -72,9 +78,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:171
 
 > **Created**: `201`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:176
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:186
 
 ***
 
@@ -82,9 +86,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:176
 
 > **EarlyHints**: `103`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:174
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:184
 
 ***
 
@@ -92,9 +94,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:174
 
 > **ExpectationFailed**: `417`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:211
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:223
 
 ***
 
@@ -102,9 +102,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:211
 
 > **FailedDependency**: `424`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:216
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:230
 
 ***
 
@@ -112,9 +110,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:216
 
 > **Forbidden**: `403`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:197
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:207
 
 ***
 
@@ -122,9 +118,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:197
 
 > **Found**: `302`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:187
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:197
 
 ***
 
@@ -132,9 +126,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:187
 
 > **GatewayTimeout**: `504`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:227
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:241
 
 ***
 
@@ -142,9 +134,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:227
 
 > **Gone**: `410`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:204
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:214
 
 ***
 
@@ -152,9 +142,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:204
 
 > **HttpVersionNotSupported**: `505`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:228
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:242
 
 ***
 
@@ -162,9 +150,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:228
 
 > **ImATeapot**: `418`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:212
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:224
 
 ***
 
@@ -172,9 +158,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:212
 
 > **ImUsed**: `226`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:184
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:194
 
 ***
 
@@ -182,9 +166,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:184
 
 > **InsufficientStorage**: `507`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:230
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:244
 
 ***
 
@@ -192,9 +174,15 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:230
 
 > **InternalServerError**: `500`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:237
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:223
+***
+
+### InvalidSslCertificate
+
+> **InvalidSslCertificate**: `526`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:254
 
 ***
 
@@ -202,9 +190,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:223
 
 > **LengthRequired**: `411`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:205
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:215
 
 ***
 
@@ -212,9 +198,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:205
 
 > **Locked**: `423`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:215
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:229
 
 ***
 
@@ -222,9 +206,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:215
 
 > **LoopDetected**: `508`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:231
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:245
 
 ***
 
@@ -232,9 +214,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:231
 
 > **MethodNotAllowed**: `405`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:199
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:209
 
 ***
 
@@ -242,9 +222,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:199
 
 > **MisdirectedRequest**: `421`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:213
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:225
 
 ***
 
@@ -252,9 +230,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:213
 
 > **MovedPermanently**: `301`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:186
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:196
 
 ***
 
@@ -262,9 +238,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:186
 
 > **MultipleChoices**: `300`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:185
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:195
 
 ***
 
@@ -272,9 +246,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:185
 
 > **MultiStatus**: `207`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:182
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:192
 
 ***
 
@@ -282,9 +254,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:182
 
 > **NetworkAuthenticationRequired**: `511`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:233
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:247
 
 ***
 
@@ -292,9 +262,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:233
 
 > **NoContent**: `204`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:179
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:189
 
 ***
 
@@ -302,9 +270,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:179
 
 > **NonAuthoritativeInformation**: `203`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:178
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:188
 
 ***
 
@@ -312,9 +278,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:178
 
 > **NotAcceptable**: `406`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:200
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:210
 
 ***
 
@@ -322,9 +286,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:200
 
 > **NotExtended**: `510`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:232
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:246
 
 ***
 
@@ -332,9 +294,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:232
 
 > **NotFound**: `404`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:198
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:208
 
 ***
 
@@ -342,9 +302,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:198
 
 > **NotImplemented**: `501`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:224
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:238
 
 ***
 
@@ -352,9 +310,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:224
 
 > **NotModified**: `304`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:189
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:199
 
 ***
 
@@ -362,9 +318,15 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:189
 
 > **Ok**: `200`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:185
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:175
+***
+
+### OriginIsUnreachable
+
+> **OriginIsUnreachable**: `523`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:251
 
 ***
 
@@ -372,19 +334,19 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:175
 
 > **PartialContent**: `206`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:181
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:191
 
 ***
 
-### PayloadTooLarge
+### ~~PayloadTooLarge~~
 
 > **PayloadTooLarge**: `413`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:218
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:207
+#### Deprecated
+
+Use `ContentTooLarge` instead.
 
 ***
 
@@ -392,9 +354,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:207
 
 > **PaymentRequired**: `402`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:196
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:206
 
 ***
 
@@ -402,9 +362,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:196
 
 > **PermanentRedirect**: `308`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:193
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:203
 
 ***
 
@@ -412,9 +370,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:193
 
 > **PreconditionFailed**: `412`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:206
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:216
 
 ***
 
@@ -422,9 +378,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:206
 
 > **PreconditionRequired**: `428`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:219
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:233
 
 ***
 
@@ -432,9 +386,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:219
 
 > **Processing**: `102`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:173
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:183
 
 ***
 
@@ -442,9 +394,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:173
 
 > **ProxyAuthenticationRequired**: `407`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:201
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:211
 
 ***
 
@@ -452,9 +402,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:201
 
 > **RangeNotSatisfiable**: `416`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:210
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:222
 
 ***
 
@@ -462,9 +410,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:210
 
 > **RequestHeaderFieldsTooLarge**: `431`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:221
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:235
 
 ***
 
@@ -472,9 +418,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:221
 
 > **RequestTimeout**: `408`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:202
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:212
 
 ***
 
@@ -482,9 +426,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:202
 
 > **ResetContent**: `205`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:180
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:190
 
 ***
 
@@ -492,9 +434,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:180
 
 > **SeeOther**: `303`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:188
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:198
 
 ***
 
@@ -502,9 +442,15 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:188
 
 > **ServiceUnavailable**: `503`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:240
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:226
+***
+
+### SslHandshakeFailed
+
+> **SslHandshakeFailed**: `525`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:253
 
 ***
 
@@ -512,9 +458,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:226
 
 > **SwitchingProtocols**: `101`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:172
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:182
 
 ***
 
@@ -522,9 +466,15 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:172
 
 > **TemporaryRedirect**: `307`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:202
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:192
+***
+
+### TimeoutOccurred
+
+> **TimeoutOccurred**: `524`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:252
 
 ***
 
@@ -532,9 +482,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:192
 
 > **TooEarly**: `425`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:217
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:231
 
 ***
 
@@ -542,9 +490,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:217
 
 > **TooManyRequests**: `429`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:220
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:234
 
 ***
 
@@ -552,9 +498,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:220
 
 > **Unauthorized**: `401`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:195
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:205
 
 ***
 
@@ -562,19 +506,27 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:195
 
 > **UnavailableForLegalReasons**: `451`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:222
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:236
 
 ***
 
-### UnprocessableEntity
+### UnprocessableContent
+
+> **UnprocessableContent**: `422`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:228
+
+***
+
+### ~~UnprocessableEntity~~
 
 > **UnprocessableEntity**: `422`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:227
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:214
+#### Deprecated
+
+Use `UnprocessableContent` instead.
 
 ***
 
@@ -582,9 +534,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:214
 
 > **UnsupportedMediaType**: `415`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:209
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:221
 
 ***
 
@@ -592,9 +542,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:209
 
 > **Unused**: `306`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:191
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:201
 
 ***
 
@@ -602,9 +550,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:191
 
 > **UpgradeRequired**: `426`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:218
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:232
 
 ***
 
@@ -612,9 +558,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:218
 
 > **UriTooLong**: `414`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:208
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:220
 
 ***
 
@@ -622,9 +566,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:208
 
 > **UseProxy**: `305`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:190
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:200
 
 ***
 
@@ -632,6 +574,20 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:190
 
 > **VariantAlsoNegotiates**: `506`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:243
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:229
+***
+
+### WebServerIsDown
+
+> **WebServerIsDown**: `521`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:249
+
+***
+
+### WebServerReturnsAnUnknownError
+
+> **WebServerReturnsAnUnknownError**: `520`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:248

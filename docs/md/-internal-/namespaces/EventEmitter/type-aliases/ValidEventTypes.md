@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -6,7 +6,9 @@
 
 # Type Alias: ValidEventTypes
 
-> **ValidEventTypes**: `string` \| `symbol` \| `object`
+> **ValidEventTypes** = `string` \| `symbol` \| `object`
+
+Defined in: node\_modules/.pnpm/eventemitter3@5.0.4/node\_modules/eventemitter3/index.d.ts:103
 
 `object` should be in either of the following forms:
 ```
@@ -15,7 +17,3 @@ interface EventTypes {
   'event-with-example-handler': (...args: any[]) => void
 }
 ```
-
-## Defined in
-
-node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:103

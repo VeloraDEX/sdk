@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: SimpleFetchSDK
 
-> **SimpleFetchSDK**: `object` & [`Required`](../-internal-/type-aliases/Required.md)\<[`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md)\>
+> **SimpleFetchSDK** = `object` & [`Required`](../-internal-/type-aliases/Required.md)\<[`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md)\>
 
-## Type declaration
+Defined in: [src/sdk/simple.ts:138](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L138)
+
+## Type Declaration
 
 ### delta
 
@@ -25,7 +27,3 @@
 ### swap
 
 > **swap**: [`SwapFetchMethods`](../-internal-/type-aliases/SwapFetchMethods.md)
-
-## Defined in
-
-[src/sdk/simple.ts:138](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L138)

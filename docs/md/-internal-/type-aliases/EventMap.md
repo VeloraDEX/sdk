@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: EventMap\<Events\>
 
-> **EventMap**\<`Events`\>: [`Record`](Record.md)\<keyof `Events`, `unknown`[]\>
+> **EventMap**\<`Events`\> = [`Record`](Record.md)\<keyof `Events`, `unknown`[]\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:104
 
 ## Type Parameters
 
-• **Events**
+### Events
 
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:104
+`Events`

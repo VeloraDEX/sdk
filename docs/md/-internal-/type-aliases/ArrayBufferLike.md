@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: ArrayBufferLike
 
-> **ArrayBufferLike**: `ArrayBufferTypes`\[keyof `ArrayBufferTypes`\]
+> **ArrayBufferLike** = `ArrayBufferTypes`\[keyof `ArrayBufferTypes`\]
 
-## Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1713
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1720

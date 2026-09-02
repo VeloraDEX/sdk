@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../../../globals.md) / [\<internal\>](../../../README.md) / [internal](../README.md) / ReadableOptions
 
 # Interface: ReadableOptions
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:962
 
 ## Extends
 
@@ -18,73 +20,65 @@
 
 ### autoDestroy?
 
-> `optional` **autoDestroy**: `boolean`
+> `optional` **autoDestroy?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:960
 
 #### Inherited from
 
 [`StreamOptions`](StreamOptions.md).[`autoDestroy`](StreamOptions.md#autodestroy)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:960
-
 ***
 
 ### emitClose?
 
-> `optional` **emitClose**: `boolean`
+> `optional` **emitClose?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:955
 
 #### Inherited from
 
 [`StreamOptions`](StreamOptions.md).[`emitClose`](StreamOptions.md#emitclose)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:955
-
 ***
 
 ### encoding?
 
-> `optional` **encoding**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+> `optional` **encoding?**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:963
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:963
 
 ***
 
 ### highWaterMark?
 
-> `optional` **highWaterMark**: `number`
+> `optional` **highWaterMark?**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:956
 
 #### Inherited from
 
 [`StreamOptions`](StreamOptions.md).[`highWaterMark`](StreamOptions.md#highwatermark)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:956
-
 ***
 
 ### objectMode?
 
-> `optional` **objectMode**: `boolean`
+> `optional` **objectMode?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:957
 
 #### Inherited from
 
 [`StreamOptions`](StreamOptions.md).[`objectMode`](StreamOptions.md#objectmode)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:957
-
 ***
 
 ### signal?
 
-> `optional` **signal**: `AbortSignal`
+> `optional` **signal?**: `AbortSignal`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561
 
 When provided the corresponding `AbortController` can be used to cancel an asynchronous action.
 
@@ -92,21 +86,23 @@ When provided the corresponding `AbortController` can be used to cancel an async
 
 [`StreamOptions`](StreamOptions.md).[`signal`](StreamOptions.md#signal)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561
-
 ## Methods
 
 ### construct()?
 
 > `optional` **construct**(`this`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:958
+
 #### Parameters
 
-• **this**: [`Readable`](../../../classes/Readable.md)
+##### this
 
-• **callback**
+[`Readable`](../../../classes/Readable.md)
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -116,23 +112,27 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561
 
 [`StreamOptions`](StreamOptions.md).[`construct`](StreamOptions.md#construct)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:958
-
 ***
 
 ### destroy()?
 
 > `optional` **destroy**(`this`, `error`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:959
+
 #### Parameters
 
-• **this**: [`Readable`](../../../classes/Readable.md)
+##### this
 
-• **error**: `null` \| [`Error`](../../../interfaces/Error.md)
+[`Readable`](../../../classes/Readable.md)
 
-• **callback**
+##### error
+
+`Error` \| `null`
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -142,26 +142,24 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:958
 
 [`StreamOptions`](StreamOptions.md).[`destroy`](StreamOptions.md#destroy)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:959
-
 ***
 
 ### read()?
 
 > `optional` **read**(`this`, `size`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:964
+
 #### Parameters
 
-• **this**: [`Readable`](../../../classes/Readable.md)
+##### this
 
-• **size**: `number`
+[`Readable`](../../../classes/Readable.md)
+
+##### size
+
+`number`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:964

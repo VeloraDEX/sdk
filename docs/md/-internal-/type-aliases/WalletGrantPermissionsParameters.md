@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,30 +6,38 @@
 
 # Type Alias: WalletGrantPermissionsParameters
 
-> **WalletGrantPermissionsParameters**: `object`
+> **WalletGrantPermissionsParameters** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:81
+
+## Properties
 
 ### expiry
 
 > **expiry**: `number`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:95
+
+***
+
 ### permissions
 
 > **permissions**: readonly `object`[]
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:86
+
+***
+
 ### signer?
 
-> `optional` **signer**: `object`
+> `optional` **signer?**: `object`
 
-### signer.data?
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:82
 
-> `optional` **data**: `unknown`
+#### data?
 
-### signer.type
+> `optional` **data?**: `unknown`
+
+#### type
 
 > **type**: `string`
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:81

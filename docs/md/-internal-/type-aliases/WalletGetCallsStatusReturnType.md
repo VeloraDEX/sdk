@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,48 +6,80 @@
 
 # Type Alias: WalletGetCallsStatusReturnType\<capabilities, numberType, bigintType, receiptStatus\>
 
-> **WalletGetCallsStatusReturnType**\<`capabilities`, `numberType`, `bigintType`, `receiptStatus`\>: `object`
+> **WalletGetCallsStatusReturnType**\<`capabilities`, `numberType`, `bigintType`, `receiptStatus`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:135
 
 ## Type Parameters
 
-• **capabilities** *extends* [`Capabilities`](Capabilities.md) = [`Capabilities`](Capabilities.md)
+### capabilities
 
-• **numberType** = [`Hex`](Hex.md)
+`capabilities` *extends* [`Capabilities`](Capabilities.md) = [`Capabilities`](Capabilities.md)
 
-• **bigintType** = [`Hex`](Hex.md)
+### numberType
 
-• **receiptStatus** = [`Hex`](Hex.md)
+`numberType` = [`Hex`](Hex.md)
 
-## Type declaration
+### bigintType
+
+`bigintType` = [`Hex`](Hex.md)
+
+### receiptStatus
+
+`receiptStatus` = [`Hex`](Hex.md)
+
+## Properties
 
 ### atomic
 
 > **atomic**: `boolean`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:136
+
+***
+
 ### capabilities?
 
-> `optional` **capabilities**: `capabilities` \| [`Capabilities`](Capabilities.md)
+> `optional` **capabilities?**: `capabilities` \| [`Capabilities`](Capabilities.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:137
+
+***
 
 ### chainId
 
 > **chainId**: `numberType`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:138
+
+***
+
 ### id
 
 > **id**: `string`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:139
+
+***
+
 ### receipts?
 
-> `optional` **receipts**: [`WalletCallReceipt`](WalletCallReceipt.md)\<`bigintType`, `receiptStatus`\>[]
+> `optional` **receipts?**: [`WalletCallReceipt`](WalletCallReceipt.md)\<`bigintType`, `receiptStatus`\>[]
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:140
+
+***
 
 ### status
 
 > **status**: `number`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:141
+
+***
+
 ### version
 
 > **version**: `string`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:135
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:142

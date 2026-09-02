@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,32 @@
 
 # Type Alias: WriteContractSyncParameters\<abi, functionName, args, chain, account, chainOverride\>
 
-> **WriteContractSyncParameters**\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`\>: [`WriteContractParameters`](WriteContractParameters.md)\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`\> & [`Pick`](Pick.md)\<[`SendTransactionSyncParameters`](SendTransactionSyncParameters.md)\<`chain`\>, `"pollingInterval"` \| `"throwOnReceiptRevert"` \| `"timeout"`\>
+> **WriteContractSyncParameters**\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`\> = [`WriteContractParameters`](WriteContractParameters.md)\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`\> & [`Pick`](Pick.md)\<[`SendTransactionSyncParameters`](SendTransactionSyncParameters.md)\<`chain`\>, `"pollingInterval"` \| `"throwOnReceiptRevert"` \| `"timeout"`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/writeContractSync.d.ts:10
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### abi
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
+### functionName
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
 
-• **account** *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+### args
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
 
-## Defined in
+### chain
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/writeContractSync.d.ts:10
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+
+### account
+
+`account` *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+
+### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,12 @@
 
 # Type Alias: SimpleSDKProviderOptions
 
-> **SimpleSDKProviderOptions**: [`EthersProviderDeps`](EthersProviderDeps.md) \| `object` \| `object` & `object`
+> **SimpleSDKProviderOptions** = [`EthersProviderDeps`](EthersProviderDeps.md) \| \{ `web3`: [`Web3`](../-internal-/classes/Web3.md); \} \| \{ `viemClient`: [`MinViemClient`](MinViemClient.md); \} & `object`
 
-## Type declaration
+Defined in: [src/sdk/simple.ts:165](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L165)
+
+## Type Declaration
 
 ### account
 
 > **account**: [`Address`](Address.md)
-
-## Defined in
-
-[src/sdk/simple.ts:165](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/simple.ts#L165)

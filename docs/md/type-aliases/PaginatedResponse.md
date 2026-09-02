@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,38 +6,56 @@
 
 # Type Alias: PaginatedResponse\<T\>
 
-> **PaginatedResponse**\<`T`\>: `object`
+> **PaginatedResponse**\<`T`\> = `object`
 
-## Type Parameters
-
-• **T**
-
-## Type declaration
-
-### data
-
-> **data**: `T`[]
-
-### hasMore
-
-> **hasMore**: `boolean`
-
-### limit
-
-> **limit**: `number`
-
-### page
-
-> **page**: `number`
-
-### total
-
-> **total**: `number`
+Defined in: [src/types.ts:276](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L276)
 
 ## Description
 
 Standard pagination envelope returned by paginated API endpoints.
 
-## Defined in
+## Type Parameters
 
-[src/types.ts:276](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L276)
+### T
+
+`T`
+
+## Properties
+
+### data
+
+> **data**: `T`[]
+
+Defined in: [src/types.ts:277](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L277)
+
+***
+
+### hasMore
+
+> **hasMore**: `boolean`
+
+Defined in: [src/types.ts:281](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L281)
+
+***
+
+### limit
+
+> **limit**: `number`
+
+Defined in: [src/types.ts:280](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L280)
+
+***
+
+### page
+
+> **page**: `number`
+
+Defined in: [src/types.ts:279](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L279)
+
+***
+
+### total
+
+> **total**: `number`
+
+Defined in: [src/types.ts:278](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L278)

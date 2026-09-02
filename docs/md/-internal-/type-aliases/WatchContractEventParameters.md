@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: WatchContractEventParameters\<abi, eventName, strict, transport\>
 
-> **WatchContractEventParameters**\<`abi`, `eventName`, `strict`, `transport`\>: `object` & [`GetPollOptions`](GetPollOptions.md)\<`transport`\>
+> **WatchContractEventParameters**\<`abi`, `eventName`, `strict`, `transport`\> = `object` & [`GetPollOptions`](GetPollOptions.md)\<`transport`\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchContractEvent.d.ts:14
+
+## Type Declaration
 
 ### abi
 
@@ -18,35 +20,37 @@ Contract ABI.
 
 ### address?
 
-> `optional` **address**: [`Address`](Address.md) \| [`Address`](Address.md)[]
+> `optional` **address?**: [`Address`](Address-1.md) \| [`Address`](Address-1.md)[]
 
 The address of the contract.
 
 ### args?
 
-> `optional` **args**: [`ContractEventArgs`](ContractEventArgs.md)\<`abi`, `eventName` *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> ? `eventName` : [`ContractEventName`](ContractEventName.md)\<`abi`\>\>
+> `optional` **args?**: [`ContractEventArgs`](ContractEventArgs-1.md)\<`abi`, `eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> ? `eventName` : [`ContractEventName`](ContractEventName-1.md)\<`abi`\>\>
 
 ### eventName?
 
-> `optional` **eventName**: `eventName` \| [`ContractEventName`](ContractEventName.md)\<`abi`\>
+> `optional` **eventName?**: `eventName` \| [`ContractEventName`](ContractEventName-1.md)\<`abi`\>
 
 Contract event.
 
 ### fromBlock?
 
-> `optional` **fromBlock**: [`BlockNumber`](BlockNumber.md)\<`bigint`\>
+> `optional` **fromBlock?**: [`BlockNumber`](BlockNumber.md)\<`bigint`\>
 
 Block to start listening from.
 
-### onError()?
+### onError?
 
-> `optional` **onError**: (`error`) => `void`
+> `optional` **onError?**: (`error`) => `void`
 
 The callback to call when an error occurred when trying to get for a new block.
 
 #### Parameters
 
-• **error**: [`Error`](../interfaces/Error.md)
+##### error
+
+`Error`
 
 #### Returns
 
@@ -54,13 +58,13 @@ The callback to call when an error occurred when trying to get for a new block.
 
 ### onLogs
 
-> **onLogs**: [`WatchContractEventOnLogsFn`](WatchContractEventOnLogsFn.md)\<`abi`, `eventName` *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> ? `eventName` : [`ContractEventName`](ContractEventName.md)\<`abi`\>, `strict`\>
+> **onLogs**: [`WatchContractEventOnLogsFn`](WatchContractEventOnLogsFn.md)\<`abi`, `eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> ? `eventName` : [`ContractEventName`](ContractEventName-1.md)\<`abi`\>, `strict`\>
 
 The callback to call when new event logs are received.
 
 ### strict?
 
-> `optional` **strict**: `strict` \| `boolean`
+> `optional` **strict?**: `strict` \| `boolean`
 
 Whether or not the logs must match the indexed/non-indexed arguments on `event`.
 
@@ -72,14 +76,18 @@ false
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### abi
 
-• **eventName** *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> \| `undefined` = [`ContractEventName`](ContractEventName.md)\<`abi`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+### eventName
 
-• **transport** *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)
+`eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> \| `undefined` = [`ContractEventName`](ContractEventName-1.md)\<`abi`\>
 
-## Defined in
+### strict
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchContractEvent.d.ts:14
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+### transport
+
+`transport` *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)

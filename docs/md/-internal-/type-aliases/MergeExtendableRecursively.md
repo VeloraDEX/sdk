@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: MergeExtendableRecursively\<Accum, Replacements\>
 
-> **MergeExtendableRecursively**\<`Accum`, `Replacements`\>: `Replacements` *extends* [infer Head, infer Tail] ? `Tail` *extends* [`Record`](Record.md)\<`string`, `any`\>[] ? [`MergeExtendableRecursively`](MergeExtendableRecursively.md)\<[`MergeExtendableOnce`](MergeExtendableOnce.md)\<`Accum`, `Head`\>, `Tail`\> : [`MergeExtendableOnce`](MergeExtendableOnce.md)\<`Accum`, `Head`\> : `Accum`
+> **MergeExtendableRecursively**\<`Accum`, `Replacements`\> = `Replacements` *extends* \[infer Head, infer Tail\] ? `Tail` *extends* [`Record`](Record.md)\<`string`, `any`\>[] ? `MergeExtendableRecursively`\<[`MergeExtendableOnce`](MergeExtendableOnce.md)\<`Accum`, `Head`\>, `Tail`\> : [`MergeExtendableOnce`](MergeExtendableOnce.md)\<`Accum`, `Head`\> : `Accum`
+
+Defined in: [src/sdk/partial.ts:75](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L75)
 
 ## Type Parameters
 
-• **Accum** *extends* [`Record`](Record.md)\<`string`, `any`\>
+### Accum
 
-• **Replacements** *extends* [`Record`](Record.md)\<`string`, `any`\>[]
+`Accum` *extends* [`Record`](Record.md)\<`string`, `any`\>
 
-## Defined in
+### Replacements
 
-[src/sdk/partial.ts:75](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L75)
+`Replacements` *extends* [`Record`](Record.md)\<`string`, `any`\>[]

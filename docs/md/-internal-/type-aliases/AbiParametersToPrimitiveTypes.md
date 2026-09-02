@@ -1,29 +1,35 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AbiParametersToPrimitiveTypes
 
-# Type Alias: AbiParametersToPrimitiveTypes\<abiParameters, abiParameterKind\>
+# Type Alias: AbiParametersToPrimitiveTypes\<abiParameters, abiParameterKind, experimental_namedTuples\>
 
-> **AbiParametersToPrimitiveTypes**\<`abiParameters`, `abiParameterKind`\>: [`Pretty`](Pretty.md)\<`{ [key in keyof abiParameters]: AbiParameterToPrimitiveType<abiParameters[key], abiParameterKind> }`\>
+> **AbiParametersToPrimitiveTypes**\<`abiParameters`, `abiParameterKind`, `experimental_namedTuples`\> = `experimental_namedTuples` *extends* `true` ? [`AbiParametersToPrimitiveTypes_named`](AbiParametersToPrimitiveTypes_named.md)\<`abiParameters`, `abiParameterKind`\> : [`AbiParametersToPrimitiveTypes_mapped`](AbiParametersToPrimitiveTypes_mapped.md)\<`abiParameters`, `abiParameterKind`\>
 
-Converts array of [AbiParameter](AbiParameter.md) to corresponding TypeScript primitive types.
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:87
+
+Converts array of [AbiParameter](AbiParameter-1.md) to corresponding TypeScript primitive types.
 
 ## Type Parameters
 
-• **abiParameters** *extends* readonly [`AbiParameter`](AbiParameter.md)[]
+### abiParameters
 
-Array of [AbiParameter](AbiParameter.md) to convert to TypeScript representations
+`abiParameters` *extends* readonly [`AbiParameter`](AbiParameter-1.md)[]
 
-• **abiParameterKind** *extends* [`AbiParameterKind`](AbiParameterKind.md) = [`AbiParameterKind`](AbiParameterKind.md)
+Array of [AbiParameter](AbiParameter-1.md) to convert to TypeScript representations
+
+### abiParameterKind
+
+`abiParameterKind` *extends* [`AbiParameterKind`](AbiParameterKind.md) = [`AbiParameterKind`](AbiParameterKind.md)
 
 Optional [AbiParameterKind](AbiParameterKind.md) to narrow by parameter type
+
+### experimental_namedTuples
+
+`experimental_namedTuples` *extends* `boolean` = [`ResolvedRegister`](ResolvedRegister.md)\[`"experimental_namedTuples"`\]
 
 ## Returns
 
 Array of TypeScript primitive types
-
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:86

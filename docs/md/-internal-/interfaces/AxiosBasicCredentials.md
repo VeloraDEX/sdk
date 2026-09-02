@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: AxiosBasicCredentials
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:168
+
 ## Properties
 
 ### password
 
 > **password**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:160
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:170
 
 ***
 
@@ -22,6 +22,4 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:160
 
 > **username**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:159
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:169

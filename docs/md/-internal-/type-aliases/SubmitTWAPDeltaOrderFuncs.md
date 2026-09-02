@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: SubmitTWAPDeltaOrderFuncs
 
-> **SubmitTWAPDeltaOrderFuncs**: `object`
+> **SubmitTWAPDeltaOrderFuncs** = `object`
 
-## Type declaration
+Defined in: [src/methods/delta/index.ts:222](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L222)
+
+## Properties
 
 ### submitTWAPDeltaOrder
 
 > **submitTWAPDeltaOrder**: [`SubmitTWAPDeltaOrder`](SubmitTWAPDeltaOrder.md)
 
-## Defined in
-
-[src/methods/delta/index.ts:222](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L222)
+Defined in: [src/methods/delta/index.ts:223](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/index.ts#L223)

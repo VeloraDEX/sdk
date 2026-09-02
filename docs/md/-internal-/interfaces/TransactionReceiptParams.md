@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TransactionReceiptParams
 
 # Interface: TransactionReceiptParams
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:145
 
 a **TransactionReceiptParams** encodes the minimal required properties
  for a formatted transaction receipt.
@@ -13,25 +15,21 @@ a **TransactionReceiptParams** encodes the minimal required properties
 
 ### blobGasPrice?
 
-> `optional` **blobGasPrice**: `null` \| `bigint`
+> `optional` **blobGasPrice?**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:206
 
 The actual BLOb gas price that was charged. See [[link-eip-4844]].
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:206
 
 ***
 
 ### blobGasUsed?
 
-> `optional` **blobGasUsed**: `null` \| `bigint`
+> `optional` **blobGasUsed?**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:193
 
 The amount of BLOb gas used. See [[link-eip-4844]].
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:193
 
 ***
 
@@ -39,11 +37,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **blockHash**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:172
+
 The block hash of the block that included this transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:172
 
 ***
 
@@ -51,25 +47,21 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **blockNumber**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:176
+
 The block number of the block that included this transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:176
 
 ***
 
 ### contractAddress
 
-> **contractAddress**: `null` \| `string`
+> **contractAddress**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:160
 
 If the transaction was directly deploying a contract, the [[to]]
  will be null, the ``data`` will be initcode and if successful, this
  will be the address of the contract deployed.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:160
 
 ***
 
@@ -77,24 +69,20 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **cumulativeGasUsed**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:198
+
 The total amount of gas consumed during the entire block up to
  and including this transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:198
 
 ***
 
 ### effectiveGasPrice?
 
-> `optional` **effectiveGasPrice**: `null` \| `bigint`
+> `optional` **effectiveGasPrice?**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:210
 
 The actual gas price per gas charged for this transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:210
 
 ***
 
@@ -102,23 +90,19 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **from**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:154
+
 The sender of the transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:154
 
 ***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: `null` \| `bigint`
+> `optional` **gasPrice?**: `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:202
 
 The actual gas price per gas charged for this transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:202
 
 ***
 
@@ -126,11 +110,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **gasUsed**: `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:189
+
 The amount of gas consumed executing this transaciton.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:189
 
 ***
 
@@ -138,11 +120,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **hash**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:164
+
 The transaction hash.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:164
 
 ***
 
@@ -150,11 +130,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **index**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:168
+
 The transaction index.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:168
 
 ***
 
@@ -162,11 +140,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **logs**: readonly [`LogParams`](LogParams.md)[]
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:185
+
 The logs emitted during the execution of this transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:185
 
 ***
 
@@ -174,53 +150,45 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **logsBloom**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:181
+
 The bloom filter for the logs emitted during execution of this
  transaction.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:181
 
 ***
 
 ### root
 
-> **root**: `null` \| `string`
+> **root**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:226
 
 The root of this transaction in a pre-bazatium block. In
  post-byzantium blocks this is null.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:226
 
 ***
 
 ### status
 
-> **status**: `null` \| `number`
+> **status**: `number` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:221
 
 The status of the transaction execution. If ``1`` then the
  the transaction returned success, if ``0`` then the transaction
  was reverted. For pre-byzantium blocks, this is usually null, but
  some nodes may have backfilled this data.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:221
-
 ***
 
 ### to
 
-> **to**: `null` \| `string`
+> **to**: `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:150
 
 The target of the transaction. If null, the transaction was trying
  to deploy a transaction with the ``data`` as the initi=code.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:150
 
 ***
 
@@ -228,8 +196,6 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/fo
 
 > **type**: `number`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:214
+
 The [[link-eip-2718]] envelope type.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/formatting.d.ts:214

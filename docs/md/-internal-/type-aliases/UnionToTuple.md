@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: UnionToTuple\<union, last\>
 
-> **UnionToTuple**\<`union`, `last`\>: [`union`] *extends* [`never`] ? [] : [`...UnionToTuple<Exclude<union, last>>`, `last`]
+> **UnionToTuple**\<`union`, `last`\> = \[`union`\] *extends* \[`never`\] ? \[\] : \[`...UnionToTuple<Exclude<union, last>>`, `last`\]
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:159
 
 ## Type Parameters
 
-• **union**
+### union
 
-• **last** = [`LastInUnion`](LastInUnion.md)\<`union`\>
+`union`
 
-## Defined in
+### last
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:158
+`last` = [`LastInUnion`](LastInUnion.md)\<`union`\>

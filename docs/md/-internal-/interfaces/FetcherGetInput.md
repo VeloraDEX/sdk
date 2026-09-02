@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,27 +6,29 @@
 
 # Interface: FetcherGetInput\<URL\>
 
+Defined in: [src/types.ts:51](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L51)
+
 ## Extends
 
 - [`FetcherInputBase`](FetcherInputBase.md)\<`URL`\>
 
 ## Type Parameters
 
-• **URL** *extends* `string` = `string`
+### URL
+
+`URL` *extends* `string` = `string`
 
 ## Properties
 
 ### headers?
 
-> `optional` **headers**: [`Record`](../type-aliases/Record.md)\<`string`, `string`\>
+> `optional` **headers?**: [`Record`](../type-aliases/Record.md)\<`string`, `string`\>
+
+Defined in: [src/types.ts:48](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L48)
 
 #### Inherited from
 
 [`FetcherInputBase`](FetcherInputBase.md).[`headers`](FetcherInputBase.md#headers)
-
-#### Defined in
-
-[src/types.ts:48](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L48)
 
 ***
 
@@ -34,23 +36,19 @@
 
 > **method**: `"GET"`
 
-#### Defined in
-
-[src/types.ts:53](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L53)
+Defined in: [src/types.ts:53](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L53)
 
 ***
 
 ### requestParams?
 
-> `optional` **requestParams**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+> `optional` **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+
+Defined in: [src/types.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L49)
 
 #### Inherited from
 
 [`FetcherInputBase`](FetcherInputBase.md).[`requestParams`](FetcherInputBase.md#requestparams)
-
-#### Defined in
-
-[src/types.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L49)
 
 ***
 
@@ -58,10 +56,8 @@
 
 > **url**: `URL`
 
+Defined in: [src/types.ts:47](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L47)
+
 #### Inherited from
 
-[`FetcherInputBase`](FetcherInputBase.md).[`url`](FetcherInputBase.md#url)
-
-#### Defined in
-
-[src/types.ts:47](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L47)
+[`FetcherInputBase`](FetcherInputBase.md).[`url`](FetcherInputBase.md#url-1)

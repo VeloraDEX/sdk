@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / IterableIterator
 
 # Interface: IterableIterator\<T, TReturn, TNext\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:55
 
 Describes a user-defined [Iterator](Iterator.md) that is also iterable.
 
@@ -14,25 +16,29 @@ Describes a user-defined [Iterator](Iterator.md) that is also iterable.
 
 ## Type Parameters
 
-• **T**
+### T
 
-• **TReturn** = `any`
+`T`
 
-• **TNext** = `any`
+### TReturn
+
+`TReturn` = `any`
+
+### TNext
+
+`TNext` = `any`
 
 ## Methods
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): [`IterableIterator`](IterableIterator.md)\<`T`, `TReturn`, `TNext`\>
+> **\[iterator\]**(): `IterableIterator`\<`T`, `TReturn`, `TNext`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:56
 
 #### Returns
 
-[`IterableIterator`](IterableIterator.md)\<`T`, `TReturn`, `TNext`\>
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:56
+`IterableIterator`\<`T`, `TReturn`, `TNext`\>
 
 ***
 
@@ -40,9 +46,13 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 
 > **next**(...`__namedParameters`): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
+
 #### Parameters
 
-• ...**\_\_namedParameters**: [] \| [`TNext`]
+##### \_\_namedParameters
+
+\[\] \| \[`TNext`\]
 
 #### Returns
 
@@ -52,19 +62,19 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 
 [`Iterator`](Iterator.md).[`next`](Iterator.md#next)
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
-
 ***
 
 ### return()?
 
-> `optional` **return**(`value`?): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>
+> `optional` **return**(`value?`): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
 
 #### Parameters
 
-• **value?**: `TReturn`
+##### value?
+
+`TReturn`
 
 #### Returns
 
@@ -74,19 +84,19 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 
 [`Iterator`](Iterator.md).[`return`](Iterator.md#return)
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
-
 ***
 
 ### throw()?
 
-> `optional` **throw**(`e`?): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>
+> `optional` **throw**(`e?`): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `TReturn`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:45
 
 #### Parameters
 
-• **e?**: `any`
+##### e?
+
+`any`
 
 #### Returns
 
@@ -95,7 +105,3 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 #### Inherited from
 
 [`Iterator`](Iterator.md).[`throw`](Iterator.md#throw)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:45

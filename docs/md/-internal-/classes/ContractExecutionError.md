@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ContractExecutionError
 
 # Class: ContractExecutionError
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:114
 
 Used when an error is raised while executing a function inside a smart contract.
 The data is expected to be encoded according to EIP-848.
@@ -15,25 +17,25 @@ The data is expected to be encoded according to EIP-848.
 
 ## Constructors
 
-### new ContractExecutionError()
+### Constructor
 
-> **new ContractExecutionError**(`rpcError`): [`ContractExecutionError`](ContractExecutionError.md)
+> **new ContractExecutionError**(`rpcError`): `ContractExecutionError`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:116
 
 #### Parameters
 
-• **rpcError**: [`JsonRpcError`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/JsonRpcError.md)\<[`JsonRpcResult`](../type-aliases/JsonRpcResult.md)\>
+##### rpcError
+
+[`JsonRpcError`](../interfaces/JsonRpcError.md)
 
 #### Returns
 
-[`ContractExecutionError`](ContractExecutionError.md)
+`ContractExecutionError`
 
 #### Overrides
 
-[`Web3ContractError`](Web3ContractError.md).[`constructor`](Web3ContractError.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:116
+[`Web3ContractError`](Web3ContractError.md).[`constructor`](Web3ContractError.md#constructor)
 
 ## Properties
 
@@ -41,13 +43,11 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/err
 
 > **cause**: [`Eip838ExecutionError`](Eip838ExecutionError.md)
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:115
+
 #### Overrides
 
 [`Web3ContractError`](Web3ContractError.md).[`cause`](Web3ContractError.md#cause)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:115
 
 ***
 
@@ -55,13 +55,11 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/err
 
 > **code**: `number`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:4
+
 #### Inherited from
 
 [`Web3ContractError`](Web3ContractError.md).[`code`](Web3ContractError.md#code)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:4
 
 ***
 
@@ -69,13 +67,11 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/err
 
 > **message**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Inherited from
 
 [`Web3ContractError`](Web3ContractError.md).[`message`](Web3ContractError.md#message)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
 
 ***
 
@@ -83,55 +79,55 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > `readonly` **name**: `string`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
+
 #### Inherited from
 
 [`Web3ContractError`](Web3ContractError.md).[`name`](Web3ContractError.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
 
 ***
 
 ### receipt?
 
-> `optional` **receipt**: [`TransactionReceipt`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/TransactionReceipt.md)
+> `optional` **receipt?**: [`TransactionReceipt`](../type-aliases/TransactionReceipt.md)
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:5
 
 #### Inherited from
 
 [`Web3ContractError`](Web3ContractError.md).[`receipt`](Web3ContractError.md#receipt)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/errors/contract\_errors.d.ts:5
-
 ***
 
 ### stack
 
-> **stack**: `undefined` \| `string`
+> **stack**: `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
 
 #### Inherited from
 
 [`Web3ContractError`](Web3ContractError.md).[`stack`](Web3ContractError.md#stack)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
-
 ***
 
-### prepareStackTrace()?
+### prepareStackTrace?
 
-> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
+> `static` `optional` **prepareStackTrace?**: (`err`, `stackTraces`) => `any`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
 
 Optional override for formatting stack traces
 
 #### Parameters
 
-• **err**: [`Error`](../interfaces/Error.md)
+##### err
 
-• **stackTraces**: [`CallSite`](../interfaces/CallSite.md)[]
+`Error`
+
+##### stackTraces
+
+[`CallSite`](../interfaces/CallSite.md)[]
 
 #### Returns
 
@@ -145,23 +141,17 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 [`Web3ContractError`](Web3ContractError.md).[`prepareStackTrace`](Web3ContractError.md#preparestacktrace)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
-
 ***
 
 ### stackTraceLimit
 
 > `static` **stackTraceLimit**: `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
+
 #### Inherited from
 
 [`Web3ContractError`](Web3ContractError.md).[`stackTraceLimit`](Web3ContractError.md#stacktracelimit)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
 
 ## Accessors
 
@@ -169,7 +159,9 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:14
 
 #### Get Signature
 
-> **get** **innerError**(): `undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+> **get** **innerError**(): `Error` \| `Error`[] \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
 
 ##### Deprecated
 
@@ -177,11 +169,13 @@ Use the `cause` property instead.
 
 ##### Returns
 
-`undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+`Error` \| `Error`[] \| `undefined`
 
 #### Set Signature
 
 > **set** **innerError**(`cause`): `void`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:17
 
 ##### Deprecated
 
@@ -189,7 +183,9 @@ Use the `cause` property instead.
 
 ##### Parameters
 
-• **cause**: `undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+###### cause
+
+`Error` \| `Error`[] \| `undefined`
 
 ##### Returns
 
@@ -197,11 +193,7 @@ Use the `cause` property instead.
 
 #### Inherited from
 
-[`Web3ContractError`](Web3ContractError.md).[`innerError`](Web3ContractError.md#innererror)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
+`Web3ContractError.innerError`
 
 ## Methods
 
@@ -209,13 +201,15 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **toJSON**(): `object`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:20
+
 #### Returns
 
 `object`
 
 ##### cause
 
-> **cause**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **cause**: `Error` \| `undefined`
 
 ##### code
 
@@ -223,7 +217,7 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 ##### innerError
 
-> **innerError**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **innerError**: `Error` \| `undefined`
 
 ##### message
 
@@ -237,23 +231,25 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 [`Web3ContractError`](Web3ContractError.md).[`toJSON`](Web3ContractError.md#tojson)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:20
-
 ***
 
 ### captureStackTrace()
 
-> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
 
 Create .stack property on a target object
 
 #### Parameters
 
-• **targetObject**: `object`
+##### targetObject
 
-• **constructorOpt?**: `Function`
+`object`
+
+##### constructorOpt?
+
+`Function`
 
 #### Returns
 
@@ -263,21 +259,23 @@ Create .stack property on a target object
 
 [`Web3ContractError`](Web3ContractError.md).[`captureStackTrace`](Web3ContractError.md#capturestacktrace)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
-
 ***
 
 ### convertToString()
 
-> `static` **convertToString**(`value`, `unquotValue`?): `string`
+> `static` **convertToString**(`value`, `unquotValue?`): `string`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19
 
 #### Parameters
 
-• **value**: `unknown`
+##### value
 
-• **unquotValue?**: `boolean`
+`unknown`
+
+##### unquotValue?
+
+`boolean`
 
 #### Returns
 
@@ -286,7 +284,3 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:13
 #### Inherited from
 
 [`Web3ContractError`](Web3ContractError.md).[`convertToString`](Web3ContractError.md#converttostring)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19

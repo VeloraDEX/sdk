@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,12 @@
 
 # Type Alias: QuoteWithMarketPriceAsFallback
 
-> **QuoteWithMarketPriceAsFallback**: [`QuoteWithMarketPrice`](QuoteWithMarketPrice.md) & `object`
+> **QuoteWithMarketPriceAsFallback** = [`QuoteWithMarketPrice`](QuoteWithMarketPrice.md) & `object`
 
-## Type declaration
+Defined in: [src/methods/quote/getQuote.ts:70](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L70)
+
+## Type Declaration
 
 ### fallbackReason
 
 > **fallbackReason**: [`FallbackReason`](../-internal-/type-aliases/FallbackReason.md)
-
-## Defined in
-
-[src/methods/quote/getQuote.ts:70](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L70)

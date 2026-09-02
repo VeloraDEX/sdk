@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,23 +6,25 @@
 
 # Class: Web3BatchRequest
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_batch\_request.d.ts:5
+
 ## Constructors
 
-### new Web3BatchRequest()
+### Constructor
 
-> **new Web3BatchRequest**(`requestManager`): [`Web3BatchRequest`](Web3BatchRequest.md)
+> **new Web3BatchRequest**(`requestManager`): `Web3BatchRequest`
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_batch\_request.d.ts:8
 
 #### Parameters
 
-• **requestManager**: [`Web3RequestManager`](Web3RequestManager.md)\<[`EthExecutionAPI`](../type-aliases/EthExecutionAPI.md)\>
+##### requestManager
+
+[`Web3RequestManager`](Web3RequestManager.md)
 
 #### Returns
 
-[`Web3BatchRequest`](Web3BatchRequest.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_batch\_request.d.ts:8
+`Web3BatchRequest`
 
 ## Accessors
 
@@ -32,52 +34,52 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_b
 
 > **get** **requests**(): [`JsonRpcRequest`](../interfaces/JsonRpcRequest.md)\<`unknown`[]\>[]
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_batch\_request.d.ts:9
+
 ##### Returns
 
 [`JsonRpcRequest`](../interfaces/JsonRpcRequest.md)\<`unknown`[]\>[]
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_batch\_request.d.ts:9
 
 ## Methods
 
 ### add()
 
-> **add**\<`ResponseType`\>(`request`): [`Web3DeferredPromise`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/Web3DeferredPromise.md)\<`ResponseType`\>
+> **add**\<`ResponseType`\>(`request`): [`Web3DeferredPromise`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/Web3DeferredPromise.md)\<`ResponseType`\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_batch\_request.d.ts:10
 
 #### Type Parameters
 
-• **ResponseType** = `unknown`
+##### ResponseType
+
+`ResponseType` = `unknown`
 
 #### Parameters
 
-• **request**: [`JsonRpcOptionalRequest`](../interfaces/JsonRpcOptionalRequest.md)\<`unknown`\>
+##### request
+
+[`JsonRpcOptionalRequest`](../interfaces/JsonRpcOptionalRequest.md)\<`unknown`\>
 
 #### Returns
 
-[`Web3DeferredPromise`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-utils@4.3.2_node_modules_web3-utils_lib_commonjs_index/classes/Web3DeferredPromise.md)\<`ResponseType`\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_batch\_request.d.ts:10
+[`Web3DeferredPromise`](../namespaces/node_modules/.pnpm/web3-utils@4.3.2/node_modules/web3-utils/lib/commonjs/classes/Web3DeferredPromise.md)\<`ResponseType`\>
 
 ***
 
 ### execute()
 
-> **execute**(`options`?): `Promise`\<[`JsonRpcBatchResponse`](../type-aliases/JsonRpcBatchResponse.md)\<`unknown`, `unknown`\>\>
+> **execute**(`options?`): `Promise`\<[`JsonRpcBatchResponse`](../type-aliases/JsonRpcBatchResponse.md)\<`unknown`, `unknown`\>\>
+
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_batch\_request.d.ts:11
 
 #### Parameters
 
-• **options?**
+##### options?
 
-• **options.timeout?**: `number`
+###### timeout?
+
+`number`
 
 #### Returns
 
 `Promise`\<[`JsonRpcBatchResponse`](../type-aliases/JsonRpcBatchResponse.md)\<`unknown`, `unknown`\>\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_batch\_request.d.ts:11

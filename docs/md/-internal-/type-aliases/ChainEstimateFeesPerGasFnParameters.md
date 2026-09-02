@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,11 +6,13 @@
 
 # Type Alias: ChainEstimateFeesPerGasFnParameters\<formatters\>
 
-> **ChainEstimateFeesPerGasFnParameters**\<`formatters`\>: `object` & [`ChainFeesFnParameters`](ChainFeesFnParameters.md)\<`formatters`\>
+> **ChainEstimateFeesPerGasFnParameters**\<`formatters`\> = `object` & [`ChainFeesFnParameters`](ChainFeesFnParameters.md)\<`formatters`\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:103
 
-### multiply()
+## Type Declaration
+
+### multiply
 
 > **multiply**: (`x`) => `bigint`
 
@@ -18,7 +20,9 @@ A function to multiply the base fee based on the `baseFeeMultiplier` value.
 
 #### Parameters
 
-• **x**: `bigint`
+##### x
+
+`bigint`
 
 #### Returns
 
@@ -32,8 +36,6 @@ The type of fees to return.
 
 ## Type Parameters
 
-• **formatters** *extends* [`ChainFormatters`](ChainFormatters.md) \| `undefined` = [`ChainFormatters`](ChainFormatters.md) \| `undefined`
+### formatters
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:76
+`formatters` *extends* [`ChainFormatters`](ChainFormatters.md) \| `undefined` = [`ChainFormatters`](ChainFormatters.md) \| `undefined`

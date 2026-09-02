@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,62 +6,52 @@
 
 # Interface: SocketConstructorOpts
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:29
+
 ## Properties
 
 ### allowHalfOpen?
 
-> `optional` **allowHalfOpen**: `boolean`
+> `optional` **allowHalfOpen?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:31
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:31
 
 ***
 
 ### fd?
 
-> `optional` **fd**: `number`
+> `optional` **fd?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:30
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:30
 
 ***
 
 ### onread?
 
-> `optional` **onread**: [`OnReadOpts`](OnReadOpts.md)
+> `optional` **onread?**: [`OnReadOpts`](OnReadOpts.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:32
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:32
 
 ***
 
 ### readable?
 
-> `optional` **readable**: `boolean`
+> `optional` **readable?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:33
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:33
 
 ***
 
 ### signal?
 
-> `optional` **signal**: `AbortSignal`
+> `optional` **signal?**: `AbortSignal`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:35
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:35
 
 ***
 
 ### writable?
 
-> `optional` **writable**: `boolean`
+> `optional` **writable?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:34
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:34

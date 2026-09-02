@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,7 @@
 
 # Interface: FilterByBlockHash
 
-A **FilterByBlockHash** allows searching a specific block for mathcing
- logs.
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:98
 
 ## Extends
 
@@ -17,38 +16,30 @@ A **FilterByBlockHash** allows searching a specific block for mathcing
 
 ### address?
 
-> `optional` **address**: [`AddressLike`](../type-aliases/AddressLike.md) \| [`AddressLike`](../type-aliases/AddressLike.md)[]
+> `optional` **address?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:91
 
 #### Inherited from
 
-[`EventFilter`](EventFilter.md).[`address`](EventFilter.md#address-1)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1003
+[`EventFilter`](EventFilter.md).[`address`](EventFilter.md#address)
 
 ***
 
 ### blockHash?
 
-> `optional` **blockHash**: `string`
+> `optional` **blockHash?**: `string`
 
-The blockhash of the specific block for the filter.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1028
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:99
 
 ***
 
 ### topics?
 
-> `optional` **topics**: [`TopicFilter`](../type-aliases/TopicFilter.md)
+> `optional` **topics?**: (`string` \| `string`[] \| `null`)[]
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:92
 
 #### Inherited from
 
-[`EventFilter`](EventFilter.md).[`topics`](EventFilter.md#topics-1)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1004
+[`EventFilter`](EventFilter.md).[`topics`](EventFilter.md#topics)

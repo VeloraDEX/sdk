@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,62 +6,44 @@
 
 # Interface: JsonFragmentType
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:2
+
 ## Properties
 
 ### components?
 
-> `readonly` `optional` **components**: readonly [`JsonFragmentType`](JsonFragmentType.md)[]
+> `readonly` `optional` **components?**: readonly `JsonFragmentType`[]
 
-The components for a tuple.
-
-#### Defined in
-
-[src/types.ts:225](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L225)
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:7
 
 ***
 
 ### indexed?
 
-> `readonly` `optional` **indexed**: `boolean`
+> `readonly` `optional` **indexed?**: `boolean`
 
-If the parameter is indexed.
-
-#### Defined in
-
-[src/types.ts:210](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L210)
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:4
 
 ***
 
 ### internalType?
 
-> `readonly` `optional` **internalType**: `string`
+> `readonly` `optional` **internalType?**: `any`
 
-The internal Solidity type.
-
-#### Defined in
-
-[src/types.ts:220](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L220)
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:6
 
 ***
 
 ### name?
 
-> `readonly` `optional` **name**: `string`
+> `readonly` `optional` **name?**: `string`
 
-The parameter name.
-
-#### Defined in
-
-[src/types.ts:205](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L205)
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:3
 
 ***
 
 ### type?
 
-> `readonly` `optional` **type**: `string`
+> `readonly` `optional` **type?**: `string`
 
-The type of the parameter.
-
-#### Defined in
-
-[src/types.ts:215](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L215)
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/fragments.d.ts:5

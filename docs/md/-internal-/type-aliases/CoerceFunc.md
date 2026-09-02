@@ -1,23 +1,25 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / CoerceFunc
 
-# Type Alias: CoerceFunc()
+# Type Alias: CoerceFunc
 
-> **CoerceFunc**: (`type`, `value`) => `any`
+> **CoerceFunc** = (`type`, `value`) => `any`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/abi-coder.d.ts:4
 
 ## Parameters
 
-• **type**: `string`
+### type
 
-• **value**: `any`
+`string`
+
+### value
+
+`any`
 
 ## Returns
 
 `any`
-
-## Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:10

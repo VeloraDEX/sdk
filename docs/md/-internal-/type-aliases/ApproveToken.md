@@ -1,31 +1,39 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ApproveToken
 
-# Type Alias: ApproveToken()\<T\>
+# Type Alias: ApproveToken\<T\>
 
-> **ApproveToken**\<`T`\>: (`amount`, `tokenAddress`, `overrides`?, `requestParams`?) => `Promise`\<`T`\>
+> **ApproveToken**\<`T`\> = (`amount`, `tokenAddress`, `overrides?`, `requestParams?`) => `Promise`\<`T`\>
+
+Defined in: [src/helpers/approve.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/approve.ts#L32)
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **amount**: [`PriceString`](../../type-aliases/PriceString.md)
+### amount
 
-• **tokenAddress**: [`Address`](../../type-aliases/Address.md)
+[`PriceString`](../../type-aliases/PriceString.md)
 
-• **overrides?**: [`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+### tokenAddress
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+[`Address`](../../type-aliases/Address.md)
+
+### overrides?
+
+[`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<`T`\>
-
-## Defined in
-
-[src/helpers/approve.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/approve.ts#L32)

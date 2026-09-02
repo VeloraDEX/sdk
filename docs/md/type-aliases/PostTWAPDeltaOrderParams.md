@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: PostTWAPDeltaOrderParams
 
-> **PostTWAPDeltaOrderParams**: [`Prettify`](../-internal-/type-aliases/Prettify.md)\<[`Omit`](../-internal-/type-aliases/Omit.md)\<[`DeltaOrderToPost`](DeltaOrderToPost.md)\<`"TWAPOrder"`\> \| [`DeltaOrderToPost`](DeltaOrderToPost.md)\<`"TWAPBuyOrder"`\>, `"chainId"`\> & `object`\>
+> **PostTWAPDeltaOrderParams** = [`Prettify`](../-internal-/type-aliases/Prettify.md)\<[`Omit`](../-internal-/type-aliases/Omit.md)\<[`DeltaOrderToPost`](DeltaOrderToPost.md)\<`"TWAPOrder"`\> \| [`DeltaOrderToPost`](DeltaOrderToPost.md)\<`"TWAPBuyOrder"`\>, `"chainId"`\> & `object`\>
 
-## Defined in
-
-[src/methods/delta/postTWAPDeltaOrder.ts:9](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postTWAPDeltaOrder.ts#L9)
+Defined in: [src/methods/delta/postTWAPDeltaOrder.ts:9](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postTWAPDeltaOrder.ts#L9)

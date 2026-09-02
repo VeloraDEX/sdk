@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: GetMulticallContractParameters\<contract, mutability\>
 
-> **GetMulticallContractParameters**\<`contract`, `mutability`\>: `contract` *extends* `object` ? `contract` *extends* `object` ? `contract` *extends* `object` ? [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `mutability`, `functionName`, `args`\> : [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `mutability`, `functionName`\> : [`Abi`](Abi.md) *extends* `abi` ? [`ContractFunctionParameters`](ContractFunctionParameters.md) : [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `mutability`\> : [`ContractFunctionParameters`](ContractFunctionParameters.md)\<readonly `unknown`[]\>
+> **GetMulticallContractParameters**\<`contract`, `mutability`\> = `contract` *extends* `object` ? `contract` *extends* `object` ? `contract` *extends* `object` ? [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `mutability`, `functionName`, `args`\> : [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `mutability`, `functionName`\> : [`Abi`](Abi.md) *extends* `abi` ? [`ContractFunctionParameters`](ContractFunctionParameters.md) : [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `mutability`\> : [`ContractFunctionParameters`](ContractFunctionParameters.md)\<readonly `unknown`[]\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/multicall.d.ts:45
 
 ## Type Parameters
 
-• **contract**
+### contract
 
-• **mutability** *extends* [`AbiStateMutability`](AbiStateMutability.md)
+`contract`
 
-## Defined in
+### mutability
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/multicall.d.ts:45
+`mutability` *extends* [`AbiStateMutability`](AbiStateMutability.md)

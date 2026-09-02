@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../../../globals.md) / [\<internal\>](../../../README.md) / [internal](../README.md) / Transform
 
 # Class: Transform
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1306
 
 Transform streams are `Duplex` streams where the output is in some way
 related to the input. Like all `Duplex` streams, `Transform` streams
@@ -29,31 +31,33 @@ v0.9.4
 
 ## Constructors
 
-### new Transform()
+### Constructor
 
-> **new Transform**(`opts`?): [`Transform`](Transform.md)
+> **new Transform**(`opts?`): `Transform`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1307
 
 #### Parameters
 
-• **opts?**: [`TransformOptions`](../interfaces/TransformOptions.md)
+##### opts?
+
+[`TransformOptions`](../interfaces/TransformOptions.md)
 
 #### Returns
 
-[`Transform`](Transform.md)
+`Transform`
 
 #### Overrides
 
-[`Duplex`](../../../classes/Duplex.md).[`constructor`](../../../classes/Duplex.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1307
+[`Duplex`](../../../classes/Duplex.md).[`constructor`](../../../classes/Duplex.md#constructor)
 
 ## Properties
 
 ### allowHalfOpen
 
 > **allowHalfOpen**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1076
 
 If `false` then the stream will automatically end the writable side when the
 readable side ends. Set initially by the `allowHalfOpen` constructor option,
@@ -70,15 +74,13 @@ v0.9.4
 
 [`Duplex`](../../../classes/Duplex.md).[`allowHalfOpen`](../../../classes/Duplex.md#allowhalfopen)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1076
-
 ***
 
 ### closed
 
 > `readonly` **closed**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1065
 
 Is `true` after `'close'` has been emitted.
 
@@ -90,15 +92,13 @@ v18.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`closed`](../../../classes/Duplex.md#closed)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1065
-
 ***
 
 ### destroyed
 
 > **destroyed**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 
 Is `true` after `readable.destroy()` has been called.
 
@@ -110,15 +110,13 @@ v8.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`destroyed`](../../../classes/Duplex.md#destroyed)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
-
 ***
 
 ### errored
 
-> `readonly` **errored**: `null` \| [`Error`](../../../interfaces/Error.md)
+> `readonly` **errored**: `Error` \| `null`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1066
 
 Returns error if the stream has been destroyed with an error.
 
@@ -130,15 +128,13 @@ v18.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`errored`](../../../classes/Duplex.md#errored)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1066
-
 ***
 
 ### readable
 
 > **readable**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:77
 
 Is `true` if it is safe to call [read](../../../classes/ReadableBase.md#read), which means
 the stream has not been destroyed or emitted `'error'` or `'end'`.
@@ -151,15 +147,13 @@ v11.4.0
 
 [`Duplex`](../../../classes/Duplex.md).[`readable`](../../../classes/Duplex.md#readable)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:77
-
 ***
 
 ### readableAborted
 
 > `readonly` **readableAborted**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:71
 
 **`Experimental`**
 
@@ -173,15 +167,13 @@ v16.8.0
 
 [`Duplex`](../../../classes/Duplex.md).[`readableAborted`](../../../classes/Duplex.md#readableaborted)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:71
-
 ***
 
 ### readableDidRead
 
 > `readonly` **readableDidRead**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:83
 
 **`Experimental`**
 
@@ -195,15 +187,13 @@ v16.7.0, v14.18.0
 
 [`Duplex`](../../../classes/Duplex.md).[`readableDidRead`](../../../classes/Duplex.md#readabledidread)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:83
-
 ***
 
 ### readableEncoding
 
-> `readonly` **readableEncoding**: `null` \| [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+> `readonly` **readableEncoding**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md) \| `null`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:88
 
 Getter for the property `encoding` of a given `Readable` stream. The `encoding` property can be set using the [setEncoding](../../../classes/ReadableBase.md#setencoding) method.
 
@@ -215,15 +205,13 @@ v12.7.0
 
 [`Duplex`](../../../classes/Duplex.md).[`readableEncoding`](../../../classes/Duplex.md#readableencoding)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:88
-
 ***
 
 ### readableEnded
 
 > `readonly` **readableEnded**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:93
 
 Becomes `true` when [`'end'`](https://nodejs.org/docs/latest-v22.x/api/stream.html#event-end) event is emitted.
 
@@ -235,15 +223,13 @@ v12.9.0
 
 [`Duplex`](../../../classes/Duplex.md).[`readableEnded`](../../../classes/Duplex.md#readableended)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:93
-
 ***
 
 ### readableFlowing
 
-> `readonly` **readableFlowing**: `null` \| `boolean`
+> `readonly` **readableFlowing**: `boolean` \| `null`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:99
 
 This property reflects the current state of a `Readable` stream as described
 in the [Three states](https://nodejs.org/docs/latest-v22.x/api/stream.html#three-states) section.
@@ -256,15 +242,13 @@ v9.4.0
 
 [`Duplex`](../../../classes/Duplex.md).[`readableFlowing`](../../../classes/Duplex.md#readableflowing)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:99
-
 ***
 
 ### readableHighWaterMark
 
 > `readonly` **readableHighWaterMark**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:104
 
 Returns the value of `highWaterMark` passed when creating this `Readable`.
 
@@ -276,15 +260,13 @@ v9.3.0
 
 [`Duplex`](../../../classes/Duplex.md).[`readableHighWaterMark`](../../../classes/Duplex.md#readablehighwatermark)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:104
-
 ***
 
 ### readableLength
 
 > `readonly` **readableLength**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:111
 
 This property contains the number of bytes (or objects) in the queue
 ready to be read. The value provides introspection data regarding
@@ -298,15 +280,13 @@ v9.4.0
 
 [`Duplex`](../../../classes/Duplex.md).[`readableLength`](../../../classes/Duplex.md#readablelength)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:111
-
 ***
 
 ### readableObjectMode
 
 > `readonly` **readableObjectMode**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:116
 
 Getter for the property `objectMode` of a given `Readable` stream.
 
@@ -318,15 +298,13 @@ v12.3.0
 
 [`Duplex`](../../../classes/Duplex.md).[`readableObjectMode`](../../../classes/Duplex.md#readableobjectmode)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:116
-
 ***
 
 ### writable
 
 > `readonly` **writable**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1057
 
 Is `true` if it is safe to call `writable.write()`, which means
 the stream has not been destroyed, errored, or ended.
@@ -339,15 +317,13 @@ v11.4.0
 
 [`Duplex`](../../../classes/Duplex.md).[`writable`](../../../classes/Duplex.md#writable)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1057
-
 ***
 
 ### writableCorked
 
 > `readonly` **writableCorked**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1063
 
 Number of times `writable.uncork()` needs to be
 called in order to fully uncork the stream.
@@ -360,15 +336,13 @@ v13.2.0, v12.16.0
 
 [`Duplex`](../../../classes/Duplex.md).[`writableCorked`](../../../classes/Duplex.md#writablecorked)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1063
-
 ***
 
 ### writableEnded
 
 > `readonly` **writableEnded**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1058
 
 Is `true` after `writable.end()` has been called. This property
 does not indicate whether the data has been flushed, for this use `writable.writableFinished` instead.
@@ -381,15 +355,13 @@ v12.9.0
 
 [`Duplex`](../../../classes/Duplex.md).[`writableEnded`](../../../classes/Duplex.md#writableended)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1058
-
 ***
 
 ### writableFinished
 
 > `readonly` **writableFinished**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1059
 
 Is set to `true` immediately before the `'finish'` event is emitted.
 
@@ -401,15 +373,13 @@ v12.6.0
 
 [`Duplex`](../../../classes/Duplex.md).[`writableFinished`](../../../classes/Duplex.md#writablefinished)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1059
-
 ***
 
 ### writableHighWaterMark
 
 > `readonly` **writableHighWaterMark**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1060
 
 Return the value of `highWaterMark` passed when creating this `Writable`.
 
@@ -421,15 +391,13 @@ v9.3.0
 
 [`Duplex`](../../../classes/Duplex.md).[`writableHighWaterMark`](../../../classes/Duplex.md#writablehighwatermark)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1060
-
 ***
 
 ### writableLength
 
 > `readonly` **writableLength**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1061
 
 This property contains the number of bytes (or objects) in the queue
 ready to be written. The value provides introspection data regarding
@@ -443,15 +411,13 @@ v9.4.0
 
 [`Duplex`](../../../classes/Duplex.md).[`writableLength`](../../../classes/Duplex.md#writablelength)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1061
-
 ***
 
 ### writableNeedDrain
 
 > `readonly` **writableNeedDrain**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1064
 
 Is `true` if the stream's buffer has been full and stream will emit `'drain'`.
 
@@ -463,15 +429,13 @@ v15.2.0, v14.17.0
 
 [`Duplex`](../../../classes/Duplex.md).[`writableNeedDrain`](../../../classes/Duplex.md#writableneeddrain)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1064
-
 ***
 
 ### writableObjectMode
 
 > `readonly` **writableObjectMode**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1062
 
 Getter for the property `objectMode` of a given `Writable` stream.
 
@@ -483,15 +447,13 @@ v12.3.0
 
 [`Duplex`](../../../classes/Duplex.md).[`writableObjectMode`](../../../classes/Duplex.md#writableobjectmode)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1062
-
 ***
 
 ### captureRejections
 
 > `static` **captureRejections**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:512
 
 Value: [boolean](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)
 
@@ -505,15 +467,13 @@ v13.4.0, v12.16.0
 
 [`Duplex`](../../../classes/Duplex.md).[`captureRejections`](../../../classes/Duplex.md#capturerejections)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:512
-
 ***
 
 ### captureRejectionSymbol
 
-> `readonly` `static` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](../../../classes/EventEmitter.md#capturerejectionsymbol)
+> `readonly` `static` **captureRejectionSymbol**: *typeof* [`captureRejectionSymbol`](../../../classes/EventEmitter-1.md#capturerejectionsymbol)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:505
 
 Value: `Symbol.for('nodejs.rejection')`
 
@@ -527,15 +487,13 @@ v13.4.0, v12.16.0
 
 [`Duplex`](../../../classes/Duplex.md).[`captureRejectionSymbol`](../../../classes/Duplex.md#capturerejectionsymbol)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:505
-
 ***
 
 ### defaultMaxListeners
 
 > `static` **defaultMaxListeners**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:551
 
 By default, a maximum of `10` listeners can be registered for any single
 event. This limit can be changed for individual `EventEmitter` instances
@@ -581,15 +539,13 @@ v0.11.2
 
 [`Duplex`](../../../classes/Duplex.md).[`defaultMaxListeners`](../../../classes/Duplex.md#defaultmaxlisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:551
-
 ***
 
 ### errorMonitor
 
-> `readonly` `static` **errorMonitor**: *typeof* [`errorMonitor`](../../../classes/EventEmitter.md#errormonitor)
+> `readonly` `static` **errorMonitor**: *typeof* [`errorMonitor`](../../../classes/EventEmitter-1.md#errormonitor)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:498
 
 This symbol shall be used to install a listener for only monitoring `'error'` events. Listeners installed using this symbol are called before the regular `'error'` listeners are called.
 
@@ -604,19 +560,19 @@ v13.6.0, v12.17.0
 
 [`Duplex`](../../../classes/Duplex.md).[`errorMonitor`](../../../classes/Duplex.md#errormonitor)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:498
-
 ## Methods
 
 ### \_construct()?
 
 > `optional` **\_construct**(`callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:133
+
 #### Parameters
 
-• **callback**
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -626,21 +582,23 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:498
 
 [`Duplex`](../../../classes/Duplex.md).[`_construct`](../../../classes/Duplex.md#_construct)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:133
-
 ***
 
 ### \_destroy()
 
 > **\_destroy**(`error`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1119
+
 #### Parameters
 
-• **error**: `null` \| [`Error`](../../../interfaces/Error.md)
+##### error
 
-• **callback**
+`Error` \| `null`
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -650,19 +608,19 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:133
 
 [`Duplex`](../../../classes/Duplex.md).[`_destroy`](../../../classes/Duplex.md#_destroy)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1119
-
 ***
 
 ### \_final()
 
 > **\_final**(`callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1120
+
 #### Parameters
 
-• **callback**
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -672,27 +630,23 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:111
 
 [`Duplex`](../../../classes/Duplex.md).[`_final`](../../../classes/Duplex.md#_final)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1120
-
 ***
 
 ### \_flush()
 
 > **\_flush**(`callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1309
+
 #### Parameters
 
-• **callback**: [`TransformCallback`](../type-aliases/TransformCallback.md)
+##### callback
+
+[`TransformCallback`](../type-aliases/TransformCallback.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1309
 
 ***
 
@@ -700,9 +654,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:130
 
 > **\_read**(`size`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:134
+
 #### Parameters
 
-• **size**: `number`
+##### size
+
+`number`
 
 #### Returns
 
@@ -712,31 +670,31 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:130
 
 [`Duplex`](../../../classes/Duplex.md).[`_read`](../../../classes/Duplex.md#_read)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:134
-
 ***
 
 ### \_transform()
 
 > **\_transform**(`chunk`, `encoding`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1308
+
 #### Parameters
 
-• **chunk**: `any`
+##### chunk
 
-• **encoding**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+`any`
 
-• **callback**: [`TransformCallback`](../type-aliases/TransformCallback.md)
+##### encoding
+
+[`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+
+##### callback
+
+[`TransformCallback`](../type-aliases/TransformCallback.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1308
 
 ***
 
@@ -744,13 +702,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:130
 
 > **\_write**(`chunk`, `encoding`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1111
+
 #### Parameters
 
-• **chunk**: `any`
+##### chunk
 
-• **encoding**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+`any`
 
-• **callback**
+##### encoding
+
+[`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -760,21 +726,23 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:130
 
 [`Duplex`](../../../classes/Duplex.md).[`_write`](../../../classes/Duplex.md#_write)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1111
-
 ***
 
 ### \_writev()?
 
 > `optional` **\_writev**(`chunks`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1112
+
 #### Parameters
 
-• **chunks**: `object`[]
+##### chunks
 
-• **callback**
+`object`[]
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -784,15 +752,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:111
 
 [`Duplex`](../../../classes/Duplex.md).[`_writev`](../../../classes/Duplex.md#_writev)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1112
-
 ***
 
 ### \[asyncDispose\]()
 
 > **\[asyncDispose\]**(): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:659
 
 Calls `readable.destroy()` with an `AbortError` and returns a promise that fulfills when the stream is finished.
 
@@ -806,49 +772,53 @@ v20.4.0
 
 #### Inherited from
 
-[`Duplex`](../../../classes/Duplex.md).[`[asyncDispose]`](../../../classes/Duplex.md#%5Basyncdispose%5D)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:659
+[`Duplex`](../../../classes/Duplex.md).[`[asyncDispose]`](../../../classes/Duplex.md#asyncdispose)
 
 ***
 
 ### \[asyncIterator\]()
 
-> **\[asyncIterator\]**(): `AsyncIterator`\<`any`, `any`, `any`\>
+> **\[asyncIterator\]**(): `AsyncIterator`\<`any`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:654
 
 #### Returns
 
-`AsyncIterator`\<`any`, `any`, `any`\>
+`AsyncIterator`\<`any`\>
 
 #### Inherited from
 
-[`Duplex`](../../../classes/Duplex.md).[`[asyncIterator]`](../../../classes/Duplex.md#%5Basynciterator%5D)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:654
+[`Duplex`](../../../classes/Duplex.md).[`[asyncIterator]`](../../../classes/Duplex.md#asynciterator)
 
 ***
 
 ### \[captureRejectionSymbol\]()?
 
-#### \[captureRejectionSymbol\](error, event, args)
+#### Call Signature
 
 > `optional` **\[captureRejectionSymbol\]**\<`EventName`\>(`error`, `event`, ...`args`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:146
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **error**: [`Error`](../../../interfaces/Error.md)
+###### error
 
-• **event**: `EventName`
+`Error`
 
-• ...**args**: [`Args`](../../../type-aliases/Args.md)\<`object`, `EventName`\>
+###### event
+
+`EventName`
+
+###### args
+
+...[`Args`](../../../type-aliases/Args-6.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -856,23 +826,27 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:654
 
 ##### Inherited from
 
-[`Duplex`](../../../classes/Duplex.md).[`[captureRejectionSymbol]`](../../../classes/Duplex.md#%5Bcapturerejectionsymbol%5D)
+[`Duplex`](../../../classes/Duplex.md).[`[captureRejectionSymbol]`](../../../classes/Duplex.md#capturerejectionsymbol-1)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:146
-
-#### \[captureRejectionSymbol\](error, event, args)
+#### Call Signature
 
 > `optional` **\[captureRejectionSymbol\]**(`error`, `event`, ...`args`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:151
+
 ##### Parameters
 
-• **error**: [`Error`](../../../interfaces/Error.md)
+###### error
 
-• **event**: `string` \| `symbol`
+`Error`
 
-• ...**args**: `any`[]
+###### event
+
+`string` \| `symbol`
+
+###### args
+
+...`any`[]
 
 ##### Returns
 
@@ -880,19 +854,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:146
 
 ##### Inherited from
 
-[`Duplex`](../../../classes/Duplex.md).[`[captureRejectionSymbol]`](../../../classes/Duplex.md#%5Bcapturerejectionsymbol%5D)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:151
+[`Duplex`](../../../classes/Duplex.md).[`[captureRejectionSymbol]`](../../../classes/Duplex.md#capturerejectionsymbol-1)
 
 ***
 
 ### addListener()
 
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1168
 
 Event emitter
 The defined events on documents including:
@@ -910,9 +882,13 @@ The defined events on documents including:
 
 ##### Parameters
 
-• **event**: `"close"`
+###### event
 
-• **listener**
+`"close"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -922,19 +898,35 @@ The defined events on documents including:
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1168
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1169
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"data"`
+###### event
 
-• **listener**
+`"data"`
+
+###### listener
+
+(`chunk`) => `void`
 
 ##### Returns
 
@@ -944,19 +936,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:116
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1169
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1170
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"drain"`
+###### event
 
-• **listener**
+`"drain"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -966,19 +974,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:116
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1170
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1171
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"end"`
+###### event
 
-• **listener**
+`"end"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -988,19 +1012,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:117
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1171
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1172
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"error"`
+###### event
 
-• **listener**
+`"error"`
+
+###### listener
+
+(`err`) => `void`
 
 ##### Returns
 
@@ -1010,19 +1050,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:117
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1172
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1173
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"finish"`
+###### event
 
-• **listener**
+`"finish"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -1032,19 +1088,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:117
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1173
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1174
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"pause"`
+###### event
 
-• **listener**
+`"pause"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -1054,19 +1126,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:117
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1174
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1175
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"pipe"`
+###### event
 
-• **listener**
+`"pipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -1076,19 +1164,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:117
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1175
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1176
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"readable"`
+###### event
 
-• **listener**
+`"readable"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -1098,19 +1202,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:117
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1176
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1177
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"resume"`
+###### event
 
-• **listener**
+`"resume"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -1120,19 +1240,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:117
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1177
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1178
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `"unpipe"`
+###### event
 
-• **listener**
+`"unpipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -1142,19 +1278,35 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:117
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1178
-
-#### addListener(event, listener)
+#### Call Signature
 
 > **addListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1179
+
+Event emitter
+The defined events on documents including:
+1.  close
+2.  data
+3.  drain
+4.  end
+5.  error
+6.  finish
+7.  pause
+8.  pipe
+9.  readable
+10. resume
+11. unpipe
+
 ##### Parameters
 
-• **event**: `string` \| `symbol`
+###### event
 
-• **listener**
+`string` \| `symbol`
+
+###### listener
+
+(...`args`) => `void`
 
 ##### Returns
 
@@ -1163,23 +1315,23 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:117
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`addListener`](../../../classes/Duplex.md#addlistener)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1179
 
 ***
 
 ### asIndexedPairs()
 
-> **asIndexedPairs**(`options`?): [`Readable`](../../../classes/Readable.md)
+> **asIndexedPairs**(`options?`): [`Readable`](../../../classes/Readable.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:549
 
 This method returns a new stream with chunks of the underlying stream paired with a counter
 in the form `[index, chunk]`. The first index value is `0` and it increases by 1 for each chunk produced.
 
 #### Parameters
 
-• **options?**: [`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
+##### options?
+
+[`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
 
 #### Returns
 
@@ -1195,27 +1347,31 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`asIndexedPairs`](../../../classes/Duplex.md#asindexedpairs)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:549
-
 ***
 
 ### compose()
 
-> **compose**\<`T`\>(`stream`, `options`?): `T`
+> **compose**\<`T`\>(`stream`, `options?`): `T`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:36
 
 #### Type Parameters
 
-• **T** *extends* [`ReadableStream`](../../../interfaces/ReadableStream.md)
+##### T
+
+`T` *extends* [`ReadableStream`](../../../interfaces/ReadableStream-1.md)
 
 #### Parameters
 
-• **stream**: [`ComposeFnParam`](../../../type-aliases/ComposeFnParam.md) \| `T` \| [`Iterable`](../../../interfaces/Iterable.md)\<`T`, `any`, `any`\> \| [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`T`, `any`, `any`\>
+##### stream
 
-• **options?**
+[`ComposeFnParam`](../../../type-aliases/ComposeFnParam.md) \| `T` \| [`Iterable`](../../../interfaces/Iterable.md)\<`T`, `any`, `any`\> \| [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`T`, `any`, `any`\>
 
-• **options.signal?**: `AbortSignal`
+##### options?
+
+###### signal
+
+`AbortSignal`
 
 #### Returns
 
@@ -1225,15 +1381,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:549
 
 [`Duplex`](../../../classes/Duplex.md).[`compose`](../../../classes/Duplex.md#compose)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:36
-
 ***
 
 ### cork()
 
 > **cork**(): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1127
 
 The `writable.cork()` method forces all written data to be buffered in memory.
 The buffered data will be flushed when either the [uncork](../../../classes/WritableBase.md#uncork) or [end](../../../classes/WritableBase.md#end) methods are called.
@@ -1259,15 +1413,13 @@ v0.11.2
 
 [`Duplex`](../../../classes/Duplex.md).[`cork`](../../../classes/Duplex.md#cork)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1127
-
 ***
 
 ### destroy()
 
-> **destroy**(`error`?): `this`
+> **destroy**(`error?`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:586
 
 Destroy the stream. Optionally emit an `'error'` event, and emit a `'close'` event (unless `emitClose` is set to `false`). After this call, the readable
 stream will release any internal resources and subsequent calls to `push()` will be ignored.
@@ -1279,7 +1431,9 @@ Implementors should not override this method, but instead implement `readable._d
 
 #### Parameters
 
-• **error?**: [`Error`](../../../interfaces/Error.md)
+##### error?
+
+`Error`
 
 Error which will be passed as payload in `'error'` event
 
@@ -1295,25 +1449,27 @@ v8.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`destroy`](../../../classes/Duplex.md#destroy)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:586
-
 ***
 
 ### drop()
 
-> **drop**(`limit`, `options`?): [`Readable`](../../../classes/Readable.md)
+> **drop**(`limit`, `options?`): [`Readable`](../../../classes/Readable.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:535
 
 This method returns a new stream with the first *limit* chunks dropped from the start.
 
 #### Parameters
 
-• **limit**: `number`
+##### limit
+
+`number`
 
 the number of chunks to drop from the readable.
 
-• **options?**: [`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
+##### options?
+
+[`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
 
 #### Returns
 
@@ -1329,17 +1485,15 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`drop`](../../../classes/Duplex.md#drop)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:535
-
 ***
 
 ### emit()
 
-#### emit(event)
+#### Call Signature
 
 > **emit**(`event`): `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1180
 
 Synchronously calls each of the listeners registered for the event named `eventName`, in the order they were registered, passing the supplied arguments
 to each.
@@ -1381,7 +1535,9 @@ myEmitter.emit('event', 1, 2, 3, 4, 5);
 
 ##### Parameters
 
-• **event**: `"close"`
+###### event
+
+`"close"`
 
 ##### Returns
 
@@ -1395,19 +1551,21 @@ v0.1.26
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1180
-
-#### emit(event, chunk)
+#### Call Signature
 
 > **emit**(`event`, `chunk`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1181
+
 ##### Parameters
 
-• **event**: `"data"`
+###### event
 
-• **chunk**: `any`
+`"data"`
+
+###### chunk
+
+`any`
 
 ##### Returns
 
@@ -1417,17 +1575,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1181
-
-#### emit(event)
+#### Call Signature
 
 > **emit**(`event`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1182
+
 ##### Parameters
 
-• **event**: `"drain"`
+###### event
+
+`"drain"`
 
 ##### Returns
 
@@ -1437,17 +1595,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1182
-
-#### emit(event)
+#### Call Signature
 
 > **emit**(`event`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1183
+
 ##### Parameters
 
-• **event**: `"end"`
+###### event
+
+`"end"`
 
 ##### Returns
 
@@ -1457,19 +1615,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1183
-
-#### emit(event, err)
+#### Call Signature
 
 > **emit**(`event`, `err`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1184
+
 ##### Parameters
 
-• **event**: `"error"`
+###### event
 
-• **err**: [`Error`](../../../interfaces/Error.md)
+`"error"`
+
+###### err
+
+`Error`
 
 ##### Returns
 
@@ -1479,17 +1639,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1184
-
-#### emit(event)
+#### Call Signature
 
 > **emit**(`event`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1185
+
 ##### Parameters
 
-• **event**: `"finish"`
+###### event
+
+`"finish"`
 
 ##### Returns
 
@@ -1499,17 +1659,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1185
-
-#### emit(event)
+#### Call Signature
 
 > **emit**(`event`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1186
+
 ##### Parameters
 
-• **event**: `"pause"`
+###### event
+
+`"pause"`
 
 ##### Returns
 
@@ -1519,19 +1679,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1186
-
-#### emit(event, src)
+#### Call Signature
 
 > **emit**(`event`, `src`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1187
+
 ##### Parameters
 
-• **event**: `"pipe"`
+###### event
 
-• **src**: [`Readable`](../../../classes/Readable.md)
+`"pipe"`
+
+###### src
+
+[`Readable`](../../../classes/Readable.md)
 
 ##### Returns
 
@@ -1541,17 +1703,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1187
-
-#### emit(event)
+#### Call Signature
 
 > **emit**(`event`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1188
+
 ##### Parameters
 
-• **event**: `"readable"`
+###### event
+
+`"readable"`
 
 ##### Returns
 
@@ -1561,17 +1723,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1188
-
-#### emit(event)
+#### Call Signature
 
 > **emit**(`event`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1189
+
 ##### Parameters
 
-• **event**: `"resume"`
+###### event
+
+`"resume"`
 
 ##### Returns
 
@@ -1581,19 +1743,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1189
-
-#### emit(event, src)
+#### Call Signature
 
 > **emit**(`event`, `src`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1190
+
 ##### Parameters
 
-• **event**: `"unpipe"`
+###### event
 
-• **src**: [`Readable`](../../../classes/Readable.md)
+`"unpipe"`
+
+###### src
+
+[`Readable`](../../../classes/Readable.md)
 
 ##### Returns
 
@@ -1603,19 +1767,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:118
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1190
-
-#### emit(event, args)
+#### Call Signature
 
 > **emit**(`event`, ...`args`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1191
+
 ##### Parameters
 
-• **event**: `string` \| `symbol`
+###### event
 
-• ...**args**: `any`[]
+`string` \| `symbol`
+
+###### args
+
+...`any`[]
 
 ##### Returns
 
@@ -1624,18 +1790,16 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:119
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`emit`](../../../classes/Duplex.md#emit)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1191
 
 ***
 
 ### end()
 
-#### end(cb)
+#### Call Signature
 
-> **end**(`cb`?): `this`
+> **end**(`cb?`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1124
 
 Calling the `writable.end()` method signals that no more data will be written
 to the `Writable`. The optional `chunk` and `encoding` arguments allow one
@@ -1655,7 +1819,9 @@ file.end('world!');
 
 ##### Parameters
 
-• **cb?**
+###### cb?
+
+() => `void`
 
 ##### Returns
 
@@ -1669,61 +1835,113 @@ v0.9.4
 
 [`Duplex`](../../../classes/Duplex.md).[`end`](../../../classes/Duplex.md#end)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1124
+> **end**(`chunk`, `cb?`): `this`
 
-#### end(chunk, cb)
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1125
 
-> **end**(`chunk`, `cb`?): `this`
+Calling the `writable.end()` method signals that no more data will be written
+to the `Writable`. The optional `chunk` and `encoding` arguments allow one
+final additional chunk of data to be written immediately before closing the
+stream.
+
+Calling the [write](../../../classes/WritableBase.md#write) method after calling [end](../../../classes/WritableBase.md#end) will raise an error.
+
+```js
+// Write 'hello, ' and then end with 'world!'.
+import fs from 'node:fs';
+const file = fs.createWriteStream('example.txt');
+file.write('hello, ');
+file.end('world!');
+// Writing more now is not allowed!
+```
 
 ##### Parameters
 
-• **chunk**: `any`
+###### chunk
 
-• **cb?**
+`any`
+
+Optional data to write. For streams not operating in object mode, `chunk` must be a {string}, {Buffer},
+{TypedArray} or {DataView}. For object mode streams, `chunk` may be any JavaScript value other than `null`.
+
+###### cb?
+
+() => `void`
 
 ##### Returns
 
 `this`
 
+##### Since
+
+v0.9.4
+
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`end`](../../../classes/Duplex.md#end)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1125
+> **end**(`chunk`, `encoding?`, `cb?`): `this`
 
-#### end(chunk, encoding, cb)
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1126
 
-> **end**(`chunk`, `encoding`?, `cb`?): `this`
+Calling the `writable.end()` method signals that no more data will be written
+to the `Writable`. The optional `chunk` and `encoding` arguments allow one
+final additional chunk of data to be written immediately before closing the
+stream.
+
+Calling the [write](../../../classes/WritableBase.md#write) method after calling [end](../../../classes/WritableBase.md#end) will raise an error.
+
+```js
+// Write 'hello, ' and then end with 'world!'.
+import fs from 'node:fs';
+const file = fs.createWriteStream('example.txt');
+file.write('hello, ');
+file.end('world!');
+// Writing more now is not allowed!
+```
 
 ##### Parameters
 
-• **chunk**: `any`
+###### chunk
 
-• **encoding?**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+`any`
 
-• **cb?**
+Optional data to write. For streams not operating in object mode, `chunk` must be a {string}, {Buffer},
+{TypedArray} or {DataView}. For object mode streams, `chunk` may be any JavaScript value other than `null`.
+
+###### encoding?
+
+[`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+
+The encoding if `chunk` is a string
+
+###### cb?
+
+() => `void`
 
 ##### Returns
 
 `this`
 
+##### Since
+
+v0.9.4
+
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`end`](../../../classes/Duplex.md#end)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1126
 
 ***
 
 ### eventNames()
 
 > **eventNames**(): (`string` \| `symbol`)[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1065
 
 Returns an array listing the events for which the emitter has registered
 listeners. The values in the array are strings or `Symbol`s.
@@ -1754,15 +1972,13 @@ v6.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`eventNames`](../../../classes/Duplex.md#eventnames)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:1065
-
 ***
 
 ### every()
 
-> **every**(`fn`, `options`?): `Promise`\<`boolean`\>
+> **every**(`fn`, `options?`): `Promise`\<`boolean`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:514
 
 This method is similar to `Array.prototype.every` and calls *fn* on each chunk in the stream
 to check if all awaited return values are truthy value for *fn*. Once an *fn* call on a chunk
@@ -1771,11 +1987,15 @@ If all of the *fn* calls on the chunks return a truthy value, the promise is ful
 
 #### Parameters
 
-• **fn**
+##### fn
+
+(`data`, `options?`) => `boolean` \| `Promise`\<`boolean`\>
 
 a function to call on each chunk of the stream. Async or not.
 
-• **options?**: [`ArrayOptions`](../../../interfaces/ArrayOptions.md)
+##### options?
+
+[`ArrayOptions`](../../../interfaces/ArrayOptions.md)
 
 #### Returns
 
@@ -1791,15 +2011,13 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`every`](../../../classes/Duplex.md#every)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:514
-
 ***
 
 ### filter()
 
-> **filter**(`fn`, `options`?): [`Readable`](../../../classes/Readable.md)
+> **filter**(`fn`, `options?`): [`Readable`](../../../classes/Readable.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:442
 
 This method allows filtering the stream. For each chunk in the stream the *fn* function will be called
 and if it returns a truthy value, the chunk will be passed to the result stream.
@@ -1807,11 +2025,15 @@ If the *fn* function returns a promise - that promise will be `await`ed.
 
 #### Parameters
 
-• **fn**
+##### fn
+
+(`data`, `options?`) => `boolean` \| `Promise`\<`boolean`\>
 
 a function to filter chunks from the stream. Async or not.
 
-• **options?**: [`ArrayOptions`](../../../interfaces/ArrayOptions.md)
+##### options?
+
+[`ArrayOptions`](../../../interfaces/ArrayOptions.md)
 
 #### Returns
 
@@ -1827,17 +2049,15 @@ v17.4.0, v16.14.0
 
 [`Duplex`](../../../classes/Duplex.md).[`filter`](../../../classes/Duplex.md#filter)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:442
-
 ***
 
 ### find()
 
-#### find(fn, options)
+#### Call Signature
 
-> **find**\<`T`\>(`fn`, `options`?): `Promise`\<`undefined` \| `T`\>
+> **find**\<`T`\>(`fn`, `options?`): `Promise`\<`T` \| `undefined`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:497
 
 This method is similar to `Array.prototype.find` and calls *fn* on each chunk in the stream
 to find a chunk with a truthy value for *fn*. Once an *fn* call's awaited return value is truthy,
@@ -1846,19 +2066,25 @@ If all of the *fn* calls on the chunks return a falsy value, the promise is fulf
 
 ##### Type Parameters
 
-• **T**
+###### T
+
+`T`
 
 ##### Parameters
 
-• **fn**
+###### fn
+
+(`data`, `options?`) => `data is T`
 
 a function to call on each chunk of the stream. Async or not.
 
-• **options?**: [`ArrayOptions`](../../../interfaces/ArrayOptions.md)
+###### options?
+
+[`ArrayOptions`](../../../interfaces/ArrayOptions.md)
 
 ##### Returns
 
-`Promise`\<`undefined` \| `T`\>
+`Promise`\<`T` \| `undefined`\>
 
 a promise evaluating to the first chunk for which *fn* evaluated with a truthy value,
 or `undefined` if no element was found.
@@ -1871,37 +2097,51 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`find`](../../../classes/Duplex.md#find)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:497
+> **find**(`fn`, `options?`): `Promise`\<`any`\>
 
-#### find(fn, options)
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:501
 
-> **find**(`fn`, `options`?): `Promise`\<`any`\>
+This method is similar to `Array.prototype.find` and calls *fn* on each chunk in the stream
+to find a chunk with a truthy value for *fn*. Once an *fn* call's awaited return value is truthy,
+the stream is destroyed and the promise is fulfilled with value for which *fn* returned a truthy value.
+If all of the *fn* calls on the chunks return a falsy value, the promise is fulfilled with `undefined`.
 
 ##### Parameters
 
-• **fn**
+###### fn
 
-• **options?**: [`ArrayOptions`](../../../interfaces/ArrayOptions.md)
+(`data`, `options?`) => `boolean` \| `Promise`\<`boolean`\>
+
+a function to call on each chunk of the stream. Async or not.
+
+###### options?
+
+[`ArrayOptions`](../../../interfaces/ArrayOptions.md)
 
 ##### Returns
 
 `Promise`\<`any`\>
 
+a promise evaluating to the first chunk for which *fn* evaluated with a truthy value,
+or `undefined` if no element was found.
+
+##### Since
+
+v17.5.0
+
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`find`](../../../classes/Duplex.md#find)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:501
 
 ***
 
 ### flatMap()
 
-> **flatMap**(`fn`, `options`?): [`Readable`](../../../classes/Readable.md)
+> **flatMap**(`fn`, `options?`): [`Readable`](../../../classes/Readable.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:528
 
 This method returns a new stream by applying the given callback to each chunk of the stream
 and then flattening the result.
@@ -1911,11 +2151,15 @@ will be merged (flattened) into the returned stream.
 
 #### Parameters
 
-• **fn**
+##### fn
+
+(`data`, `options?`) => `any`
 
 a function to map over every chunk in the stream. May be async. May be a stream or generator.
 
-• **options?**: [`ArrayOptions`](../../../interfaces/ArrayOptions.md)
+##### options?
+
+[`ArrayOptions`](../../../interfaces/ArrayOptions.md)
 
 #### Returns
 
@@ -1931,15 +2175,13 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`flatMap`](../../../classes/Duplex.md#flatmap)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:528
-
 ***
 
 ### forEach()
 
-> **forEach**(`fn`, `options`?): `Promise`\<`void`\>
+> **forEach**(`fn`, `options?`): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:461
 
 This method allows iterating a stream. For each chunk in the stream the *fn* function will be called.
 If the *fn* function returns a promise - that promise will be `await`ed.
@@ -1954,11 +2196,15 @@ in the underlying machinary and can limit the number of concurrent *fn* calls.
 
 #### Parameters
 
-• **fn**
+##### fn
+
+(`data`, `options?`) => `void` \| `Promise`\<`void`\>
 
 a function to call on each chunk of the stream. Async or not.
 
-• **options?**: [`ArrayOptions`](../../../interfaces/ArrayOptions.md)
+##### options?
+
+[`ArrayOptions`](../../../interfaces/ArrayOptions.md)
 
 #### Returns
 
@@ -1974,18 +2220,16 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`forEach`](../../../classes/Duplex.md#foreach)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:461
-
 ***
 
 ### getMaxListeners()
 
 > **getMaxListeners**(): `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
+
 Returns the current max listener value for the `EventEmitter` which is either
-set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](Transform.md#defaultmaxlisteners).
+set by `emitter.setMaxListeners(n)` or defaults to [defaultMaxListeners](#defaultmaxlisteners).
 
 #### Returns
 
@@ -1999,15 +2243,13 @@ v1.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`getMaxListeners`](../../../classes/Duplex.md#getmaxlisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:879
-
 ***
 
 ### isPaused()
 
 > **isPaused**(): `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:295
 
 The `readable.isPaused()` method returns the current operating state of the `Readable`.
 This is used primarily by the mechanism that underlies the `readable.pipe()` method.
@@ -2035,15 +2277,13 @@ v0.11.14
 
 [`Duplex`](../../../classes/Duplex.md).[`isPaused`](../../../classes/Duplex.md#ispaused)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:295
-
 ***
 
 ### iterator()
 
-> **iterator**(`options`?): `AsyncIterator`\<`any`, `any`, `any`\>
+> **iterator**(`options?`): `AsyncIterator`\<`any`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:425
 
 The iterator created by this method gives users the option to cancel the destruction
 of the stream if the `for await...of` loop is exited by `return`, `break`, or `throw`,
@@ -2051,9 +2291,11 @@ or if the iterator should destroy the stream if the stream emitted an error duri
 
 #### Parameters
 
-• **options?**
+##### options?
 
-• **options.destroyOnReturn?**: `boolean`
+###### destroyOnReturn?
+
+`boolean`
 
 When set to `false`, calling `return` on the async iterator,
 or exiting a `for await...of` iteration using a `break`, `return`, or `throw` will not destroy the stream.
@@ -2061,7 +2303,7 @@ or exiting a `for await...of` iteration using a `break`, `return`, or `throw` wi
 
 #### Returns
 
-`AsyncIterator`\<`any`, `any`, `any`\>
+`AsyncIterator`\<`any`\>
 
 #### Since
 
@@ -2071,17 +2313,15 @@ v16.3.0
 
 [`Duplex`](../../../classes/Duplex.md).[`iterator`](../../../classes/Duplex.md#iterator)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:425
-
 ***
 
 ### listenerCount()
 
-#### listenerCount(eventName, listener)
+#### Call Signature
 
-> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+> **listenerCount**\<`EventName`\>(`eventName`, `listener?`): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
 
 Returns the number of listeners listening for the event named `eventName`.
 If `listener` is provided, it will return how many times the listener is found
@@ -2089,15 +2329,21 @@ in the list of the listeners of the event.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The name of the event being listened for
 
-• **listener?**: [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>
+###### listener?
+
+[`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 The event handler function
 
@@ -2113,23 +2359,27 @@ v3.2.0
 
 [`Duplex`](../../../classes/Duplex.md).[`listenerCount`](../../../classes/Duplex.md#listenercount)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
+> **listenerCount**\<`EventName`\>(`eventName`, `listener?`): `number`
 
-#### listenerCount(eventName, listener)
-
-> **listenerCount**\<`EventName`\>(`eventName`, `listener`?): `number`
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:994
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener?**: [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener?
+
+[`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -2139,17 +2389,15 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:990
 
 [`Duplex`](../../../classes/Duplex.md).[`listenerCount`](../../../classes/Duplex.md#listenercount)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:994
-
 ***
 
 ### listeners()
 
-#### listeners(eventName)
+#### Call Signature
 
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:892
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -2163,15 +2411,19 @@ console.log(util.inspect(server.listeners('connection')));
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
 ##### Since
 
@@ -2181,50 +2433,54 @@ v0.1.26
 
 [`Duplex`](../../../classes/Duplex.md).[`listeners`](../../../classes/Duplex.md#listeners)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:892
+> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
-#### listeners(eventName)
-
-> **listeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:895
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`listeners`](../../../classes/Duplex.md#listeners)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:895
-
 ***
 
 ### map()
 
-> **map**(`fn`, `options`?): [`Readable`](../../../classes/Readable.md)
+> **map**(`fn`, `options?`): [`Readable`](../../../classes/Readable.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:433
 
 This method allows mapping over the stream. The *fn* function will be called for every chunk in the stream.
 If the *fn* function returns a promise - that promise will be `await`ed before being passed to the result stream.
 
 #### Parameters
 
-• **fn**
+##### fn
+
+(`data`, `options?`) => `any`
 
 a function to map over every chunk in the stream. Async or not.
 
-• **options?**: [`ArrayOptions`](../../../interfaces/ArrayOptions.md)
+##### options?
+
+[`ArrayOptions`](../../../interfaces/ArrayOptions.md)
 
 #### Returns
 
@@ -2240,29 +2496,33 @@ v17.4.0, v16.14.0
 
 [`Duplex`](../../../classes/Duplex.md).[`map`](../../../classes/Duplex.md#map)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:433
-
 ***
 
 ### off()
 
-#### off(eventName, listener)
+#### Call Signature
 
 > **off**\<`EventName`\>(`eventName`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
 
 Alias for `emitter.removeListener()`.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -2276,23 +2536,27 @@ v10.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`off`](../../../classes/Duplex.md#off)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
-
-#### off(eventName, listener)
+#### Call Signature
 
 > **off**\<`EventName`\>(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:846
+
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
 
-• **listener**: [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>
+`EventName`
+
+###### listener
+
+[`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>
 
 ##### Returns
 
@@ -2302,17 +2566,15 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:842
 
 [`Duplex`](../../../classes/Duplex.md).[`off`](../../../classes/Duplex.md#off)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:846
-
 ***
 
 ### on()
 
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1192
 
 Adds the `listener` function to the end of the listeners array for the event
 named `eventName`. No checks are made to see if the `listener` has already
@@ -2343,9 +2605,13 @@ myEE.emit('foo');
 
 ##### Parameters
 
-• **event**: `"close"`
+###### event
 
-• **listener**
+`"close"`
+
+###### listener
+
+() => `void`
 
 The callback function
 
@@ -2361,19 +2627,21 @@ v0.1.101
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1192
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1193
+
 ##### Parameters
 
-• **event**: `"data"`
+###### event
 
-• **listener**
+`"data"`
+
+###### listener
+
+(`chunk`) => `void`
 
 ##### Returns
 
@@ -2383,19 +2651,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:119
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1193
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1194
+
 ##### Parameters
 
-• **event**: `"drain"`
+###### event
 
-• **listener**
+`"drain"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2405,19 +2675,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:119
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1194
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1195
+
 ##### Parameters
 
-• **event**: `"end"`
+###### event
 
-• **listener**
+`"end"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2427,19 +2699,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:119
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1195
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1196
+
 ##### Parameters
 
-• **event**: `"error"`
+###### event
 
-• **listener**
+`"error"`
+
+###### listener
+
+(`err`) => `void`
 
 ##### Returns
 
@@ -2449,19 +2723,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:119
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1196
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1197
+
 ##### Parameters
 
-• **event**: `"finish"`
+###### event
 
-• **listener**
+`"finish"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2471,19 +2747,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:119
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1197
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1198
+
 ##### Parameters
 
-• **event**: `"pause"`
+###### event
 
-• **listener**
+`"pause"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2493,19 +2771,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:119
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1198
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1199
+
 ##### Parameters
 
-• **event**: `"pipe"`
+###### event
 
-• **listener**
+`"pipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -2515,19 +2795,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:119
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1199
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1200
+
 ##### Parameters
 
-• **event**: `"readable"`
+###### event
 
-• **listener**
+`"readable"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2537,19 +2819,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:119
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1200
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1201
+
 ##### Parameters
 
-• **event**: `"resume"`
+###### event
 
-• **listener**
+`"resume"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2559,19 +2843,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:120
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1201
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1202
+
 ##### Parameters
 
-• **event**: `"unpipe"`
+###### event
 
-• **listener**
+`"unpipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -2581,19 +2867,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:120
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1202
-
-#### on(event, listener)
+#### Call Signature
 
 > **on**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1203
+
 ##### Parameters
 
-• **event**: `string` \| `symbol`
+###### event
 
-• **listener**
+`string` \| `symbol`
+
+###### listener
+
+(...`args`) => `void`
 
 ##### Returns
 
@@ -2602,18 +2890,16 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:120
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1203
 
 ***
 
 ### once()
 
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1204
 
 Adds a **one-time** `listener` function for the event named `eventName`. The
 next time `eventName` is triggered, this listener is removed and then invoked.
@@ -2642,9 +2928,13 @@ myEE.emit('foo');
 
 ##### Parameters
 
-• **event**: `"close"`
+###### event
 
-• **listener**
+`"close"`
+
+###### listener
+
+() => `void`
 
 The callback function
 
@@ -2660,19 +2950,21 @@ v0.3.0
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1204
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1205
+
 ##### Parameters
 
-• **event**: `"data"`
+###### event
 
-• **listener**
+`"data"`
+
+###### listener
+
+(`chunk`) => `void`
 
 ##### Returns
 
@@ -2682,19 +2974,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:120
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1205
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1206
+
 ##### Parameters
 
-• **event**: `"drain"`
+###### event
 
-• **listener**
+`"drain"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2704,19 +2998,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:120
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1206
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1207
+
 ##### Parameters
 
-• **event**: `"end"`
+###### event
 
-• **listener**
+`"end"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2726,19 +3022,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:120
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1207
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1208
+
 ##### Parameters
 
-• **event**: `"error"`
+###### event
 
-• **listener**
+`"error"`
+
+###### listener
+
+(`err`) => `void`
 
 ##### Returns
 
@@ -2748,19 +3046,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:120
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1208
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1209
+
 ##### Parameters
 
-• **event**: `"finish"`
+###### event
 
-• **listener**
+`"finish"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2770,19 +3070,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:120
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1209
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1210
+
 ##### Parameters
 
-• **event**: `"pause"`
+###### event
 
-• **listener**
+`"pause"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2792,19 +3094,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:120
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1210
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1211
+
 ##### Parameters
 
-• **event**: `"pipe"`
+###### event
 
-• **listener**
+`"pipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -2814,19 +3118,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1211
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1212
+
 ##### Parameters
 
-• **event**: `"readable"`
+###### event
 
-• **listener**
+`"readable"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2836,19 +3142,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1212
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1213
+
 ##### Parameters
 
-• **event**: `"resume"`
+###### event
 
-• **listener**
+`"resume"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -2858,19 +3166,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1213
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1214
+
 ##### Parameters
 
-• **event**: `"unpipe"`
+###### event
 
-• **listener**
+`"unpipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -2880,19 +3190,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1214
-
-#### once(event, listener)
+#### Call Signature
 
 > **once**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1215
+
 ##### Parameters
 
-• **event**: `string` \| `symbol`
+###### event
 
-• **listener**
+`string` \| `symbol`
+
+###### listener
+
+(...`args`) => `void`
 
 ##### Returns
 
@@ -2901,16 +3213,14 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1215
 
 ***
 
 ### pause()
 
 > **pause**(): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:259
 
 The `readable.pause()` method will cause a stream in flowing mode to stop
 emitting `'data'` events, switching out of flowing mode. Any data that
@@ -2943,27 +3253,31 @@ v0.9.4
 
 [`Duplex`](../../../classes/Duplex.md).[`pause`](../../../classes/Duplex.md#pause)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:259
-
 ***
 
 ### pipe()
 
-> **pipe**\<`T`\>(`destination`, `options`?): `T`
+> **pipe**\<`T`\>(`destination`, `options?`): `T`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:30
 
 #### Type Parameters
 
-• **T** *extends* [`WritableStream`](../../../interfaces/WritableStream.md)
+##### T
+
+`T` *extends* [`WritableStream`](../../../interfaces/WritableStream-1.md)
 
 #### Parameters
 
-• **destination**: `T`
+##### destination
 
-• **options?**
+`T`
 
-• **options.end?**: `boolean`
+##### options?
+
+###### end?
+
+`boolean`
 
 #### Returns
 
@@ -2973,17 +3287,15 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:259
 
 [`Duplex`](../../../classes/Duplex.md).[`pipe`](../../../classes/Duplex.md#pipe)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:30
-
 ***
 
 ### prependListener()
 
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1216
 
 Adds the `listener` function to the _beginning_ of the listeners array for the
 event named `eventName`. No checks are made to see if the `listener` has
@@ -3000,9 +3312,13 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Parameters
 
-• **event**: `"close"`
+###### event
 
-• **listener**
+`"close"`
+
+###### listener
+
+() => `void`
 
 The callback function
 
@@ -3018,19 +3334,21 @@ v6.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1216
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1217
+
 ##### Parameters
 
-• **event**: `"data"`
+###### event
 
-• **listener**
+`"data"`
+
+###### listener
+
+(`chunk`) => `void`
 
 ##### Returns
 
@@ -3040,19 +3358,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1217
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1218
+
 ##### Parameters
 
-• **event**: `"drain"`
+###### event
 
-• **listener**
+`"drain"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3062,19 +3382,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1218
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1219
+
 ##### Parameters
 
-• **event**: `"end"`
+###### event
 
-• **listener**
+`"end"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3084,19 +3406,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1219
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1220
+
 ##### Parameters
 
-• **event**: `"error"`
+###### event
 
-• **listener**
+`"error"`
+
+###### listener
+
+(`err`) => `void`
 
 ##### Returns
 
@@ -3106,19 +3430,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:121
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1220
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1221
+
 ##### Parameters
 
-• **event**: `"finish"`
+###### event
 
-• **listener**
+`"finish"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3128,19 +3454,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:122
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1221
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1222
+
 ##### Parameters
 
-• **event**: `"pause"`
+###### event
 
-• **listener**
+`"pause"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3150,19 +3478,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:122
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1222
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1223
+
 ##### Parameters
 
-• **event**: `"pipe"`
+###### event
 
-• **listener**
+`"pipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -3172,19 +3502,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:122
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1223
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1224
+
 ##### Parameters
 
-• **event**: `"readable"`
+###### event
 
-• **listener**
+`"readable"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3194,19 +3526,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:122
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1224
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1225
+
 ##### Parameters
 
-• **event**: `"resume"`
+###### event
 
-• **listener**
+`"resume"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3216,19 +3550,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:122
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1225
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1226
+
 ##### Parameters
 
-• **event**: `"unpipe"`
+###### event
 
-• **listener**
+`"unpipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -3238,19 +3574,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:122
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1226
-
-#### prependListener(event, listener)
+#### Call Signature
 
 > **prependListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1227
+
 ##### Parameters
 
-• **event**: `string` \| `symbol`
+###### event
 
-• **listener**
+`string` \| `symbol`
+
+###### listener
+
+(...`args`) => `void`
 
 ##### Returns
 
@@ -3259,18 +3597,16 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:122
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`prependListener`](../../../classes/Duplex.md#prependlistener)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1227
 
 ***
 
 ### prependOnceListener()
 
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1228
 
 Adds a **one-time**`listener` function for the event named `eventName` to the _beginning_ of the listeners array. The next time `eventName` is triggered, this
 listener is removed, and then invoked.
@@ -3285,9 +3621,13 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Parameters
 
-• **event**: `"close"`
+###### event
 
-• **listener**
+`"close"`
+
+###### listener
+
+() => `void`
 
 The callback function
 
@@ -3303,19 +3643,21 @@ v6.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1228
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1229
+
 ##### Parameters
 
-• **event**: `"data"`
+###### event
 
-• **listener**
+`"data"`
+
+###### listener
+
+(`chunk`) => `void`
 
 ##### Returns
 
@@ -3325,19 +3667,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:122
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1229
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1230
+
 ##### Parameters
 
-• **event**: `"drain"`
+###### event
 
-• **listener**
+`"drain"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3347,19 +3691,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:122
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1230
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1231
+
 ##### Parameters
 
-• **event**: `"end"`
+###### event
 
-• **listener**
+`"end"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3369,19 +3715,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1231
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1232
+
 ##### Parameters
 
-• **event**: `"error"`
+###### event
 
-• **listener**
+`"error"`
+
+###### listener
+
+(`err`) => `void`
 
 ##### Returns
 
@@ -3391,19 +3739,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1232
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1233
+
 ##### Parameters
 
-• **event**: `"finish"`
+###### event
 
-• **listener**
+`"finish"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3413,19 +3763,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1233
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1234
+
 ##### Parameters
 
-• **event**: `"pause"`
+###### event
 
-• **listener**
+`"pause"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3435,19 +3787,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1234
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1235
+
 ##### Parameters
 
-• **event**: `"pipe"`
+###### event
 
-• **listener**
+`"pipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -3457,19 +3811,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1235
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1236
+
 ##### Parameters
 
-• **event**: `"readable"`
+###### event
 
-• **listener**
+`"readable"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3479,19 +3835,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1236
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1237
+
 ##### Parameters
 
-• **event**: `"resume"`
+###### event
 
-• **listener**
+`"resume"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -3501,19 +3859,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1237
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1238
+
 ##### Parameters
 
-• **event**: `"unpipe"`
+###### event
 
-• **listener**
+`"unpipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -3523,19 +3883,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1238
-
-#### prependOnceListener(event, listener)
+#### Call Signature
 
 > **prependOnceListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1239
+
 ##### Parameters
 
-• **event**: `string` \| `symbol`
+###### event
 
-• **listener**
+`string` \| `symbol`
+
+###### listener
+
+(...`args`) => `void`
 
 ##### Returns
 
@@ -3544,22 +3906,24 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`prependOnceListener`](../../../classes/Duplex.md#prependoncelistener)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1239
 
 ***
 
 ### push()
 
-> **push**(`chunk`, `encoding`?): `boolean`
+> **push**(`chunk`, `encoding?`): `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:415
 
 #### Parameters
 
-• **chunk**: `any`
+##### chunk
 
-• **encoding?**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+`any`
+
+##### encoding?
+
+[`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
 
 #### Returns
 
@@ -3569,17 +3933,15 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:123
 
 [`Duplex`](../../../classes/Duplex.md).[`push`](../../../classes/Duplex.md#push)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:415
-
 ***
 
 ### rawListeners()
 
-#### rawListeners(eventName)
+#### Call Signature
 
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:928
 
 Returns a copy of the array of listeners for the event named `eventName`,
 including any wrappers (such as those created by `.once()`).
@@ -3611,15 +3973,19 @@ emitter.emit('log');
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
 ##### Since
 
@@ -3629,39 +3995,39 @@ v9.4.0
 
 [`Duplex`](../../../classes/Duplex.md).[`rawListeners`](../../../classes/Duplex.md#rawlisteners)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:928
+> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
-#### rawListeners(eventName)
-
-> **rawListeners**\<`EventName`\>(`eventName`): [`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:931
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../../../type-aliases/Listener.md)\<`object`, `EventName`\>[]
+[`Listener`](../../../type-aliases/Listener-2.md)\<\{ \}, `EventName`\>[]
 
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`rawListeners`](../../../classes/Duplex.md#rawlisteners)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:931
-
 ***
 
 ### read()
 
-> **read**(`size`?): `any`
+> **read**(`size?`): `any`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:212
 
 The `readable.read()` method reads data out of the internal buffer and
 returns it. If no data is available to be read, `null` is returned. By default,
@@ -3739,7 +4105,9 @@ been emitted will return `null`. No runtime error will be raised.
 
 #### Parameters
 
-• **size?**: `number`
+##### size?
+
+`number`
 
 Optional argument to specify how much data to read.
 
@@ -3755,17 +4123,15 @@ v0.9.4
 
 [`Duplex`](../../../classes/Duplex.md).[`read`](../../../classes/Duplex.md#read)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:212
-
 ***
 
 ### reduce()
 
-#### reduce(fn, initial, options)
+#### Call Signature
 
-> **reduce**\<`T`\>(`fn`, `initial`?, `options`?): `Promise`\<`T`\>
+> **reduce**\<`T`\>(`fn`, `initial?`, `options?`): `Promise`\<`T`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:564
 
 This method calls *fn* on each chunk of the stream in order, passing it the result from the calculation
 on the previous element. It returns a promise for the final value of the reduction.
@@ -3778,19 +4144,27 @@ or parallelism. To perform a reduce concurrently, you can extract the async func
 
 ##### Type Parameters
 
-• **T** = `any`
+###### T
+
+`T` = `any`
 
 ##### Parameters
 
-• **fn**
+###### fn
+
+(`previous`, `data`, `options?`) => `T`
 
 a reducer function to call over every chunk in the stream. Async or not.
 
-• **initial?**: `undefined`
+###### initial?
+
+`undefined`
 
 the initial value to use in the reduction.
 
-• **options?**: [`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
+###### options?
+
+[`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
 
 ##### Returns
 
@@ -3806,45 +4180,68 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`reduce`](../../../classes/Duplex.md#reduce)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:564
+> **reduce**\<`T`\>(`fn`, `initial`, `options?`): `Promise`\<`T`\>
 
-#### reduce(fn, initial, options)
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:569
 
-> **reduce**\<`T`\>(`fn`, `initial`, `options`?): `Promise`\<`T`\>
+This method calls *fn* on each chunk of the stream in order, passing it the result from the calculation
+on the previous element. It returns a promise for the final value of the reduction.
+
+If no *initial* value is supplied the first chunk of the stream is used as the initial value.
+If the stream is empty, the promise is rejected with a `TypeError` with the `ERR_INVALID_ARGS` code property.
+
+The reducer function iterates the stream element-by-element which means that there is no *concurrency* parameter
+or parallelism. To perform a reduce concurrently, you can extract the async function to `readable.map` method.
 
 ##### Type Parameters
 
-• **T** = `any`
+###### T
+
+`T` = `any`
 
 ##### Parameters
 
-• **fn**
+###### fn
 
-• **initial**: `T`
+(`previous`, `data`, `options?`) => `T`
 
-• **options?**: [`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
+a reducer function to call over every chunk in the stream. Async or not.
+
+###### initial
+
+`T`
+
+the initial value to use in the reduction.
+
+###### options?
+
+[`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
 
 ##### Returns
 
 `Promise`\<`T`\>
 
+a promise for the final value of the reduction.
+
+##### Since
+
+v17.5.0
+
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`reduce`](../../../classes/Duplex.md#reduce)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:569
 
 ***
 
 ### removeAllListeners()
 
-#### removeAllListeners(eventName)
+#### Call Signature
 
 > **removeAllListeners**\<`EventName`\>(`eventName`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
 
 Removes all listeners, or those of the specified `eventName`.
 
@@ -3856,11 +4253,15 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 ##### Returns
 
@@ -3874,21 +4275,23 @@ v0.1.26
 
 [`Duplex`](../../../classes/Duplex.md).[`removeAllListeners`](../../../classes/Duplex.md#removealllisteners)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
+> **removeAllListeners**\<`EventName`\>(`eventName?`): `this`
 
-#### removeAllListeners(eventName)
-
-> **removeAllListeners**\<`EventName`\>(`eventName`?): `this`
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:862
 
 ##### Type Parameters
 
-• **EventName** *extends* `string` \| `symbol`
+###### EventName
+
+`EventName` *extends* `string` \| `symbol`
 
 ##### Parameters
 
-• **eventName?**: `EventName`
+###### eventName?
+
+`EventName`
 
 ##### Returns
 
@@ -3898,17 +4301,15 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:861
 
 [`Duplex`](../../../classes/Duplex.md).[`removeAllListeners`](../../../classes/Duplex.md#removealllisteners)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:862
-
 ***
 
 ### removeListener()
 
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1240
 
 Removes the specified `listener` from the listener array for the event named `eventName`.
 
@@ -3992,9 +4393,13 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 ##### Parameters
 
-• **event**: `"close"`
+###### event
 
-• **listener**
+`"close"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -4008,19 +4413,21 @@ v0.1.26
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1240
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1241
+
 ##### Parameters
 
-• **event**: `"data"`
+###### event
 
-• **listener**
+`"data"`
+
+###### listener
+
+(`chunk`) => `void`
 
 ##### Returns
 
@@ -4030,19 +4437,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1241
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1242
+
 ##### Parameters
 
-• **event**: `"drain"`
+###### event
 
-• **listener**
+`"drain"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -4052,19 +4461,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1242
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1243
+
 ##### Parameters
 
-• **event**: `"end"`
+###### event
 
-• **listener**
+`"end"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -4074,19 +4485,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1243
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1244
+
 ##### Parameters
 
-• **event**: `"error"`
+###### event
 
-• **listener**
+`"error"`
+
+###### listener
+
+(`err`) => `void`
 
 ##### Returns
 
@@ -4096,19 +4509,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1244
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1245
+
 ##### Parameters
 
-• **event**: `"finish"`
+###### event
 
-• **listener**
+`"finish"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -4118,19 +4533,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1245
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1246
+
 ##### Parameters
 
-• **event**: `"pause"`
+###### event
 
-• **listener**
+`"pause"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -4140,19 +4557,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1246
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1247
+
 ##### Parameters
 
-• **event**: `"pipe"`
+###### event
 
-• **listener**
+`"pipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -4162,19 +4581,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1247
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1248
+
 ##### Parameters
 
-• **event**: `"readable"`
+###### event
 
-• **listener**
+`"readable"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -4184,19 +4605,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1248
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1249
+
 ##### Parameters
 
-• **event**: `"resume"`
+###### event
 
-• **listener**
+`"resume"`
+
+###### listener
+
+() => `void`
 
 ##### Returns
 
@@ -4206,19 +4629,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1249
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1250
+
 ##### Parameters
 
-• **event**: `"unpipe"`
+###### event
 
-• **listener**
+`"unpipe"`
+
+###### listener
+
+(`src`) => `void`
 
 ##### Returns
 
@@ -4228,19 +4653,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:124
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1250
-
-#### removeListener(event, listener)
+#### Call Signature
 
 > **removeListener**(`event`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1251
+
 ##### Parameters
 
-• **event**: `string` \| `symbol`
+###### event
 
-• **listener**
+`string` \| `symbol`
+
+###### listener
+
+(...`args`) => `void`
 
 ##### Returns
 
@@ -4249,16 +4676,14 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:125
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`removeListener`](../../../classes/Duplex.md#removelistener)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1251
 
 ***
 
 ### resume()
 
 > **resume**(): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:278
 
 The `readable.resume()` method causes an explicitly paused `Readable` stream to
 resume emitting `'data'` events, switching the stream into flowing mode.
@@ -4288,21 +4713,21 @@ v0.9.4
 
 [`Duplex`](../../../classes/Duplex.md).[`resume`](../../../classes/Duplex.md#resume)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:278
-
 ***
 
 ### setDefaultEncoding()
 
 > **setDefaultEncoding**(`encoding`): `this`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1123
+
 The `writable.setDefaultEncoding()` method sets the default `encoding` for a `Writable` stream.
 
 #### Parameters
 
-• **encoding**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+##### encoding
+
+[`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
 
 The new default encoding
 
@@ -4318,15 +4743,13 @@ v0.11.15
 
 [`Duplex`](../../../classes/Duplex.md).[`setDefaultEncoding`](../../../classes/Duplex.md#setdefaultencoding)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1123
-
 ***
 
 ### setEncoding()
 
 > **setEncoding**(`encoding`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:237
 
 The `readable.setEncoding()` method sets the character encoding for
 data read from the `Readable` stream.
@@ -4351,7 +4774,9 @@ readable.on('data', (chunk) => {
 
 #### Parameters
 
-• **encoding**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+##### encoding
+
+[`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
 
 The encoding to use.
 
@@ -4367,15 +4792,13 @@ v0.9.4
 
 [`Duplex`](../../../classes/Duplex.md).[`setEncoding`](../../../classes/Duplex.md#setencoding)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:237
-
 ***
 
 ### setMaxListeners()
 
 > **setMaxListeners**(`n`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873
 
 By default `EventEmitter`s will print a warning if more than `10` listeners are
 added for a particular event. This is a useful default that helps finding
@@ -4386,7 +4809,9 @@ Returns a reference to the `EventEmitter`, so that calls can be chained.
 
 #### Parameters
 
-• **n**: `number`
+##### n
+
+`number`
 
 #### Returns
 
@@ -4400,15 +4825,13 @@ v0.3.5
 
 [`Duplex`](../../../classes/Duplex.md).[`setMaxListeners`](../../../classes/Duplex.md#setmaxlisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:873
-
 ***
 
 ### some()
 
-> **some**(`fn`, `options`?): `Promise`\<`boolean`\>
+> **some**(`fn`, `options?`): `Promise`\<`boolean`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:483
 
 This method is similar to `Array.prototype.some` and calls *fn* on each chunk in the stream
 until the awaited return value is `true` (or any truthy value). Once an *fn* call on a chunk
@@ -4417,11 +4840,15 @@ If none of the *fn* calls on the chunks return a truthy value, the promise is fu
 
 #### Parameters
 
-• **fn**
+##### fn
+
+(`data`, `options?`) => `boolean` \| `Promise`\<`boolean`\>
 
 a function to call on each chunk of the stream. Async or not.
 
-• **options?**: [`ArrayOptions`](../../../interfaces/ArrayOptions.md)
+##### options?
+
+[`ArrayOptions`](../../../interfaces/ArrayOptions.md)
 
 #### Returns
 
@@ -4437,25 +4864,27 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`some`](../../../classes/Duplex.md#some)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:483
-
 ***
 
 ### take()
 
-> **take**(`limit`, `options`?): [`Readable`](../../../classes/Readable.md)
+> **take**(`limit`, `options?`): [`Readable`](../../../classes/Readable.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:542
 
 This method returns a new stream with the first *limit* chunks.
 
 #### Parameters
 
-• **limit**: `number`
+##### limit
+
+`number`
 
 the number of chunks to take from the readable.
 
-• **options?**: [`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
+##### options?
+
+[`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
 
 #### Returns
 
@@ -4471,15 +4900,13 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`take`](../../../classes/Duplex.md#take)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:542
-
 ***
 
 ### toArray()
 
-> **toArray**(`options`?): `Promise`\<`any`[]\>
+> **toArray**(`options?`): `Promise`\<`any`[]\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:473
 
 This method allows easily obtaining the contents of a stream.
 
@@ -4488,7 +4915,9 @@ for interoperability and convenience, not as the primary way to consume streams.
 
 #### Parameters
 
-• **options?**: [`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
+##### options?
+
+[`Pick`](../../../type-aliases/Pick.md)\<[`ArrayOptions`](../../../interfaces/ArrayOptions.md), `"signal"`\>
 
 #### Returns
 
@@ -4504,15 +4933,13 @@ v17.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`toArray`](../../../classes/Duplex.md#toarray)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:473
-
 ***
 
 ### uncork()
 
 > **uncork**(): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1128
 
 The `writable.uncork()` method flushes all data buffered since [cork](../../../classes/WritableBase.md#cork) was called.
 
@@ -4557,15 +4984,13 @@ v0.11.2
 
 [`Duplex`](../../../classes/Duplex.md).[`uncork`](../../../classes/Duplex.md#uncork)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1128
-
 ***
 
 ### unpipe()
 
-> **unpipe**(`destination`?): `this`
+> **unpipe**(`destination?`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:322
 
 The `readable.unpipe()` method detaches a `Writable` stream previously attached
 using the [pipe](../../../classes/ReadableBase.md#pipe) method.
@@ -4592,7 +5017,9 @@ setTimeout(() => {
 
 #### Parameters
 
-• **destination?**: [`WritableStream`](../../../interfaces/WritableStream.md)
+##### destination?
+
+[`WritableStream`](../../../interfaces/WritableStream-1.md)
 
 Optional specific stream to unpipe
 
@@ -4608,15 +5035,13 @@ v0.9.4
 
 [`Duplex`](../../../classes/Duplex.md).[`unpipe`](../../../classes/Duplex.md#unpipe)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:322
-
 ***
 
 ### unshift()
 
-> **unshift**(`chunk`, `encoding`?): `void`
+> **unshift**(`chunk`, `encoding?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:388
 
 Passing `chunk` as `null` signals the end of the stream (EOF) and behaves the
 same as `readable.push(null)`, after which no more data can be written. The EOF
@@ -4673,19 +5098,23 @@ function parseHeader(stream, callback) {
 Unlike [push](../../../classes/ReadableBase.md#push), `stream.unshift(chunk)` will not
 end the reading process by resetting the internal reading state of the stream.
 This can cause unexpected results if `readable.unshift()` is called during a
-read (i.e. from within a [_read](../../../classes/ReadableBase.md#_read) implementation on a
+read (i.e. from within a [\_read](../../../classes/ReadableBase.md#_read) implementation on a
 custom stream). Following the call to `readable.unshift()` with an immediate [push](../../../classes/ReadableBase.md#push) will reset the reading state appropriately,
 however it is best to simply avoid calling `readable.unshift()` while in the
 process of performing a read.
 
 #### Parameters
 
-• **chunk**: `any`
+##### chunk
+
+`any`
 
 Chunk of data to unshift onto the read queue. For streams not operating in object mode, `chunk` must
 be a {string}, {Buffer}, {TypedArray}, {DataView} or `null`. For object mode streams, `chunk` may be any JavaScript value.
 
-• **encoding?**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+##### encoding?
+
+[`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
 
 Encoding of string chunks. Must be a valid `Buffer` encoding, such as `'utf8'` or `'ascii'`.
 
@@ -4701,15 +5130,13 @@ v0.9.11
 
 [`Duplex`](../../../classes/Duplex.md).[`unshift`](../../../classes/Duplex.md#unshift)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:388
-
 ***
 
 ### wrap()
 
 > **wrap**(`stream`): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:414
 
 Prior to Node.js 0.10, streams did not implement the entire `node:stream` module API as it is currently defined. (See `Compatibility` for more
 information.)
@@ -4735,7 +5162,9 @@ myReader.on('readable', () => {
 
 #### Parameters
 
-• **stream**: [`ReadableStream`](../../../interfaces/ReadableStream.md)
+##### stream
+
+[`ReadableStream`](../../../interfaces/ReadableStream-1.md)
 
 An "old style" readable stream
 
@@ -4751,17 +5180,15 @@ v0.9.4
 
 [`Duplex`](../../../classes/Duplex.md).[`wrap`](../../../classes/Duplex.md#wrap)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:414
-
 ***
 
 ### write()
 
-#### write(chunk, encoding, cb)
+#### Call Signature
 
-> **write**(`chunk`, `encoding`?, `cb`?): `boolean`
+> **write**(`chunk`, `encoding?`, `cb?`): `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1121
 
 The `writable.write()` method writes some data to the stream, and calls the
 supplied `callback` once the data has been fully handled. If an error
@@ -4814,16 +5241,22 @@ A `Writable` stream in object mode will always ignore the `encoding` argument.
 
 ##### Parameters
 
-• **chunk**: `any`
+###### chunk
+
+`any`
 
 Optional data to write. For streams not operating in object mode, `chunk` must be a {string}, {Buffer},
 {TypedArray} or {DataView}. For object mode streams, `chunk` may be any JavaScript value other than `null`.
 
-• **encoding?**: [`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
+###### encoding?
+
+[`BufferEncoding`](../../../type-aliases/BufferEncoding.md)
 
 The encoding, if `chunk` is a string.
 
-• **cb?**
+###### cb?
+
+(`error`) => `void`
 
 ##### Returns
 
@@ -4839,37 +5272,97 @@ v0.9.4
 
 [`Duplex`](../../../classes/Duplex.md).[`write`](../../../classes/Duplex.md#write)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1121
+> **write**(`chunk`, `cb?`): `boolean`
 
-#### write(chunk, cb)
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1122
 
-> **write**(`chunk`, `cb`?): `boolean`
+The `writable.write()` method writes some data to the stream, and calls the
+supplied `callback` once the data has been fully handled. If an error
+occurs, the `callback` will be called with the error as its
+first argument. The `callback` is called asynchronously and before `'error'` is
+emitted.
+
+The return value is `true` if the internal buffer is less than the `highWaterMark` configured when the stream was created after admitting `chunk`.
+If `false` is returned, further attempts to write data to the stream should
+stop until the `'drain'` event is emitted.
+
+While a stream is not draining, calls to `write()` will buffer `chunk`, and
+return false. Once all currently buffered chunks are drained (accepted for
+delivery by the operating system), the `'drain'` event will be emitted.
+Once `write()` returns false, do not write more chunks
+until the `'drain'` event is emitted. While calling `write()` on a stream that
+is not draining is allowed, Node.js will buffer all written chunks until
+maximum memory usage occurs, at which point it will abort unconditionally.
+Even before it aborts, high memory usage will cause poor garbage collector
+performance and high RSS (which is not typically released back to the system,
+even after the memory is no longer required). Since TCP sockets may never
+drain if the remote peer does not read the data, writing a socket that is
+not draining may lead to a remotely exploitable vulnerability.
+
+Writing data while the stream is not draining is particularly
+problematic for a `Transform`, because the `Transform` streams are paused
+by default until they are piped or a `'data'` or `'readable'` event handler
+is added.
+
+If the data to be written can be generated or fetched on demand, it is
+recommended to encapsulate the logic into a `Readable` and use [pipe](../../../classes/WritableBase.md#pipe). However, if calling `write()` is preferred, it is
+possible to respect backpressure and avoid memory issues using the `'drain'` event:
+
+```js
+function write(data, cb) {
+  if (!stream.write(data)) {
+    stream.once('drain', cb);
+  } else {
+    process.nextTick(cb);
+  }
+}
+
+// Wait for cb to be called before doing any other write.
+write('hello', () => {
+  console.log('Write completed, do more writes now.');
+});
+```
+
+A `Writable` stream in object mode will always ignore the `encoding` argument.
 
 ##### Parameters
 
-• **chunk**: `any`
+###### chunk
 
-• **cb?**
+`any`
+
+Optional data to write. For streams not operating in object mode, `chunk` must be a {string}, {Buffer},
+{TypedArray} or {DataView}. For object mode streams, `chunk` may be any JavaScript value other than `null`.
+
+###### cb?
+
+(`error`) => `void`
+
+The encoding, if `chunk` is a string.
 
 ##### Returns
 
 `boolean`
 
+`false` if the stream wishes for the calling code to wait for the `'drain'` event to be emitted before continuing to write additional data; otherwise `true`.
+
+##### Since
+
+v0.9.4
+
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`write`](../../../classes/Duplex.md#write)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1122
 
 ***
 
 ### addAbortListener()
 
 > `static` **addAbortListener**(`signal`, `resource`): `Disposable`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:490
 
 **`Experimental`**
 
@@ -4905,9 +5398,13 @@ function example(signal) {
 
 #### Parameters
 
-• **signal**: `AbortSignal`
+##### signal
 
-• **resource**
+`AbortSignal`
+
+##### resource
+
+(`event`) => `void`
 
 #### Returns
 
@@ -4923,15 +5420,13 @@ v20.5.0
 
 [`Duplex`](../../../classes/Duplex.md).[`addAbortListener`](../../../classes/Duplex.md#addabortlistener)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:490
-
 ***
 
 ### from()
 
 > `static` **from**(`src`): [`Duplex`](../../../classes/Duplex.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1099
 
 A utility method for creating duplex streams.
 
@@ -4953,7 +5448,9 @@ A utility method for creating duplex streams.
 
 #### Parameters
 
-• **src**: `string` \| [`Object`](../../../interfaces/Object.md) \| `Promise`\<`any`\> \| `ArrayBuffer` \| [`Stream`](../../../classes/Stream.md) \| [`Blob`](../../../classes/Blob.md) \| [`Iterable`](../../../interfaces/Iterable.md)\<`any`, `any`, `any`\> \| [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`any`, `any`, `any`\> \| [`AsyncGeneratorFunction`](../../../interfaces/AsyncGeneratorFunction.md)
+##### src
+
+`string` \| [`Object`](../../../interfaces/Object.md) \| `Promise`\<`any`\> \| `ArrayBuffer` \| [`Stream`](../../../classes/Stream.md) \| [`Blob`](../../../classes/Blob.md) \| [`Iterable`](../../../interfaces/Iterable.md)\<`any`, `any`, `any`\> \| [`AsyncIterable`](../../../interfaces/AsyncIterable.md)\<`any`, `any`, `any`\> \| [`AsyncGeneratorFunction`](../../../interfaces/AsyncGeneratorFunction.md)
 
 #### Returns
 
@@ -4967,15 +5464,13 @@ v16.8.0
 
 [`Duplex`](../../../classes/Duplex.md).[`from`](../../../classes/Duplex.md#from)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1099
-
 ***
 
 ### fromWeb()
 
-> `static` **fromWeb**(`duplexStream`, `options`?): [`Duplex`](../../../classes/Duplex.md)
+> `static` **fromWeb**(`duplexStream`, `options?`): [`Duplex`](../../../classes/Duplex.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1143
 
 **`Experimental`**
 
@@ -4983,13 +5478,19 @@ A utility method for creating a `Duplex` from a web `ReadableStream` and `Writab
 
 #### Parameters
 
-• **duplexStream**
+##### duplexStream
 
-• **duplexStream.readable**: [`ReadableStream`](../../../interfaces/ReadableStream.md)\<`any`\>
+###### readable
 
-• **duplexStream.writable?**: [`WritableStream`](../../../interfaces/WritableStream.md)\<`any`\>
+[`ReadableStream`](../../../interfaces/ReadableStream.md)
 
-• **options?**: [`Pick`](../../../type-aliases/Pick.md)\<[`DuplexOptions`](../../../interfaces/DuplexOptions.md), `"signal"` \| `"allowHalfOpen"` \| `"decodeStrings"` \| `"encoding"` \| `"highWaterMark"` \| `"objectMode"`\>
+###### writable
+
+[`WritableStream`](../../../interfaces/WritableStream.md)
+
+##### options?
+
+[`Pick`](../../../type-aliases/Pick.md)\<[`DuplexOptions`](../../../interfaces/DuplexOptions.md), `"signal"` \| `"allowHalfOpen"` \| `"decodeStrings"` \| `"encoding"` \| `"highWaterMark"` \| `"objectMode"`\>
 
 #### Returns
 
@@ -5003,17 +5504,15 @@ v17.0.0
 
 [`Duplex`](../../../classes/Duplex.md).[`fromWeb`](../../../classes/Duplex.md#fromweb)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1143
-
 ***
 
 ### getEventListeners()
 
-#### getEventListeners(emitter, name)
+#### Call Signature
 
-> `static` **getEventListeners**\<`Events`, `EventName`\>(`emitter`, `name`): [`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+> `static` **getEventListeners**\<`Events`, `EventName`\>(`emitter`, `name`): [`Listener`](../../../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:404
 
 Returns a copy of the array of listeners for the event named `eventName`.
 
@@ -5042,19 +5541,27 @@ import { getEventListeners, EventEmitter } from 'node:events';
 
 ##### Type Parameters
 
-• **Events** *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
+###### Events
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+`Events` *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
+
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](../../../classes/EventEmitter.md)\<`Events`\>
+###### emitter
 
-• **name**: `EventName`
+[`EventEmitter`](../../../classes/EventEmitter-1.md)\<`Events`\>
+
+###### name
+
+`EventName`
 
 ##### Returns
 
-[`Listener`](../../../type-aliases/Listener.md)\<`Events`, `EventName`\>[]
+[`Listener`](../../../type-aliases/Listener-2.md)\<`Events`, `EventName`\>[]
 
 ##### Since
 
@@ -5064,37 +5571,66 @@ v15.2.0, v14.17.0
 
 [`Duplex`](../../../classes/Duplex.md).[`getEventListeners`](../../../classes/Duplex.md#geteventlisteners)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:404
-
-#### getEventListeners(emitter, name)
+#### Call Signature
 
 > `static` **getEventListeners**(`emitter`, `name`): `Function`[]
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:408
+
+Returns a copy of the array of listeners for the event named `eventName`.
+
+For `EventEmitter`s this behaves exactly the same as calling `.listeners` on
+the emitter.
+
+For `EventTarget`s this is the only way to get the event listeners for the
+event target. This is useful for debugging and diagnostic purposes.
+
+```js
+import { getEventListeners, EventEmitter } from 'node:events';
+
+{
+  const ee = new EventEmitter();
+  const listener = () => console.log('Events are fun');
+  ee.on('foo', listener);
+  console.log(getEventListeners(ee, 'foo')); // [ [Function: listener] ]
+}
+{
+  const et = new EventTarget();
+  const listener = () => console.log('Events are fun');
+  et.addEventListener('foo', listener);
+  console.log(getEventListeners(et, 'foo')); // [ [Function: listener] ]
+}
+```
+
 ##### Parameters
 
-• **emitter**: `EventTarget` \| [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
+###### emitter
 
-• **name**: `string` \| `symbol`
+`EventTarget` \| [`EventEmitter`](../../../interfaces/EventEmitter.md)\<\{ \}\>
+
+###### name
+
+`string` \| `symbol`
 
 ##### Returns
 
 `Function`[]
 
+##### Since
+
+v15.2.0, v14.17.0
+
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`getEventListeners`](../../../classes/Duplex.md#geteventlisteners)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:408
 
 ***
 
 ### getMaxListeners()
 
 > `static` **getMaxListeners**(`emitter`): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:440
 
 Returns the currently set max amount of listeners.
 
@@ -5124,7 +5660,9 @@ import { getMaxListeners, setMaxListeners, EventEmitter } from 'node:events';
 
 #### Parameters
 
-• **emitter**: `EventTarget` \| [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
+##### emitter
+
+`EventTarget` \| [`EventEmitter`](../../../interfaces/EventEmitter.md)\<\{ \}\>
 
 #### Returns
 
@@ -5138,21 +5676,21 @@ v19.9.0
 
 [`Duplex`](../../../classes/Duplex.md).[`getMaxListeners`](../../../classes/Duplex.md#getmaxlisteners-1)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:440
-
 ***
 
 ### isDisturbed()
 
 > `static` **isDisturbed**(`stream`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:65
+
 Returns whether the stream has been read from or cancelled.
 
 #### Parameters
 
-• **stream**: [`ReadableStream`](../../../interfaces/ReadableStream.md) \| [`Readable`](../../../classes/Readable.md)
+##### stream
+
+[`ReadableStream`](../../../interfaces/ReadableStream-1.md) \| [`Readable`](../../../classes/Readable.md)
 
 #### Returns
 
@@ -5166,17 +5704,15 @@ v16.8.0
 
 [`Duplex`](../../../classes/Duplex.md).[`isDisturbed`](../../../classes/Duplex.md#isdisturbed)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:65
-
 ***
 
 ### ~~listenerCount()~~
 
-#### listenerCount(emitter, eventName)
+#### Call Signature
 
 > `static` **listenerCount**\<`Events`, `EventName`\>(`emitter`, `eventName`): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:355
 
 A class method that returns the number of listeners for the given `eventName` registered on the given `emitter`.
 
@@ -5192,17 +5728,25 @@ console.log(listenerCount(myEmitter, 'event'));
 
 ##### Type Parameters
 
-• **Events** *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
+###### Events
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+`Events` *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
+
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](../../../classes/EventEmitter.md)\<`Events`\>
+###### emitter
+
+[`EventEmitter`](../../../classes/EventEmitter-1.md)\<`Events`\>
 
 The emitter to query
 
-• **eventName**: `EventName`
+###### eventName
+
+`EventName`
 
 The event name
 
@@ -5222,13 +5766,11 @@ Since v3.2.0 - Use `listenerCount` instead.
 
 [`Duplex`](../../../classes/Duplex.md).[`listenerCount`](../../../classes/Duplex.md#listenercount-1)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:355
-
-#### listenerCount(emitter, eventName)
+#### Call Signature
 
 > `static` **listenerCount**(`emitter`, `eventName`): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:376
 
 A class method that returns the number of listeners for the given `eventName` registered on the given `emitter`.
 
@@ -5244,11 +5786,15 @@ console.log(listenerCount(myEmitter, 'event'));
 
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
+###### emitter
+
+[`EventEmitter`](../../../interfaces/EventEmitter.md)
 
 The emitter to query
 
-• **eventName**: `string` \| `symbol`
+###### eventName
+
+`string` \| `symbol`
 
 The event name
 
@@ -5268,17 +5814,15 @@ Since v3.2.0 - Use `listenerCount` instead.
 
 [`Duplex`](../../../classes/Duplex.md).[`listenerCount`](../../../classes/Duplex.md#listenercount-1)
 
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:376
-
 ***
 
 ### on()
 
-#### on(emitter, eventName, options)
+#### Call Signature
 
-> `static` **on**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options`?): `AsyncIterator`\<[`Args`](../../../type-aliases/Args.md)\<`Events`, `EventName`\>, `any`, `any`\>
+> `static` **on**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options?`): `AsyncIterator`\<[`Args`](../../../type-aliases/Args-6.md)\<`Events`, `EventName`\>\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:323
 
 ```js
 import { on, EventEmitter } from 'node:events';
@@ -5359,21 +5903,31 @@ console.log('done'); // prints 'done'
 
 ##### Type Parameters
 
-• **Events** *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
+###### Events
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+`Events` *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
+
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](../../../classes/EventEmitter.md)\<`Events`\>
+###### emitter
 
-• **eventName**: `EventName`
+[`EventEmitter`](../../../classes/EventEmitter-1.md)\<`Events`\>
 
-• **options?**: [`StaticEventEmitterIteratorOptions`](../../../interfaces/StaticEventEmitterIteratorOptions.md)
+###### eventName
+
+`EventName`
+
+###### options?
+
+[`StaticEventEmitterIteratorOptions`](../../../interfaces/StaticEventEmitterIteratorOptions.md)
 
 ##### Returns
 
-`AsyncIterator`\<[`Args`](../../../type-aliases/Args.md)\<`Events`, `EventName`\>, `any`, `any`\>
+`AsyncIterator`\<[`Args`](../../../type-aliases/Args-6.md)\<`Events`, `EventName`\>\>
 
 An `AsyncIterator` that iterates `eventName` events emitted by the `emitter`
 
@@ -5385,65 +5939,237 @@ v13.6.0, v12.16.0
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on-1)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:323
+> `static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterator`\<`any`[]\>
 
-#### on(emitter, eventName, options)
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:328
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[], `any`, `any`\>
+```js
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ee = new EventEmitter();
+
+// Emit later on
+process.nextTick(() => {
+  ee.emit('foo', 'bar');
+  ee.emit('foo', 42);
+});
+
+for await (const event of on(ee, 'foo')) {
+  // The execution of this inner block is synchronous and it
+  // processes one event at a time (even with await). Do not use
+  // if concurrent execution is required.
+  console.log(event); // prints ['bar'] [42]
+}
+// Unreachable here
+```
+
+Returns an `AsyncIterator` that iterates `eventName` events. It will throw
+if the `EventEmitter` emits `'error'`. It removes all listeners when
+exiting the loop. The `value` returned by each iteration is an array
+composed of the emitted event arguments.
+
+An `AbortSignal` can be used to cancel waiting on events:
+
+```js
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ac = new AbortController();
+
+(async () => {
+  const ee = new EventEmitter();
+
+  // Emit later on
+  process.nextTick(() => {
+    ee.emit('foo', 'bar');
+    ee.emit('foo', 42);
+  });
+
+  for await (const event of on(ee, 'foo', { signal: ac.signal })) {
+    // The execution of this inner block is synchronous and it
+    // processes one event at a time (even with await). Do not use
+    // if concurrent execution is required.
+    console.log(event); // prints ['bar'] [42]
+  }
+  // Unreachable here
+})();
+
+process.nextTick(() => ac.abort());
+```
+
+Use the `close` option to specify an array of event names that will end the iteration:
+
+```js
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ee = new EventEmitter();
+
+// Emit later on
+process.nextTick(() => {
+  ee.emit('foo', 'bar');
+  ee.emit('foo', 42);
+  ee.emit('close');
+});
+
+for await (const event of on(ee, 'foo', { close: ['close'] })) {
+  console.log(event); // prints ['bar'] [42]
+}
+// the loop will exit after 'close' is emitted
+console.log('done'); // prints 'done'
+```
 
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
+###### emitter
 
-• **eventName**: `string` \| `symbol`
+[`EventEmitter`](../../../interfaces/EventEmitter.md)
 
-• **options?**: [`StaticEventEmitterIteratorOptions`](../../../interfaces/StaticEventEmitterIteratorOptions.md)
+###### eventName
+
+`string` \| `symbol`
+
+###### options?
+
+[`StaticEventEmitterIteratorOptions`](../../../interfaces/StaticEventEmitterIteratorOptions.md)
 
 ##### Returns
 
-`AsyncIterator`\<`any`[], `any`, `any`\>
+`AsyncIterator`\<`any`[]\>
+
+An `AsyncIterator` that iterates `eventName` events emitted by the `emitter`
+
+##### Since
+
+v13.6.0, v12.16.0
 
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on-1)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:328
+> `static` **on**(`emitter`, `eventName`, `options?`): `AsyncIterator`\<`any`[]\>
 
-#### on(emitter, eventName, options)
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:333
 
-> `static` **on**(`emitter`, `eventName`, `options`?): `AsyncIterator`\<`any`[], `any`, `any`\>
+```js
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ee = new EventEmitter();
+
+// Emit later on
+process.nextTick(() => {
+  ee.emit('foo', 'bar');
+  ee.emit('foo', 42);
+});
+
+for await (const event of on(ee, 'foo')) {
+  // The execution of this inner block is synchronous and it
+  // processes one event at a time (even with await). Do not use
+  // if concurrent execution is required.
+  console.log(event); // prints ['bar'] [42]
+}
+// Unreachable here
+```
+
+Returns an `AsyncIterator` that iterates `eventName` events. It will throw
+if the `EventEmitter` emits `'error'`. It removes all listeners when
+exiting the loop. The `value` returned by each iteration is an array
+composed of the emitted event arguments.
+
+An `AbortSignal` can be used to cancel waiting on events:
+
+```js
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ac = new AbortController();
+
+(async () => {
+  const ee = new EventEmitter();
+
+  // Emit later on
+  process.nextTick(() => {
+    ee.emit('foo', 'bar');
+    ee.emit('foo', 42);
+  });
+
+  for await (const event of on(ee, 'foo', { signal: ac.signal })) {
+    // The execution of this inner block is synchronous and it
+    // processes one event at a time (even with await). Do not use
+    // if concurrent execution is required.
+    console.log(event); // prints ['bar'] [42]
+  }
+  // Unreachable here
+})();
+
+process.nextTick(() => ac.abort());
+```
+
+Use the `close` option to specify an array of event names that will end the iteration:
+
+```js
+import { on, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ee = new EventEmitter();
+
+// Emit later on
+process.nextTick(() => {
+  ee.emit('foo', 'bar');
+  ee.emit('foo', 42);
+  ee.emit('close');
+});
+
+for await (const event of on(ee, 'foo', { close: ['close'] })) {
+  console.log(event); // prints ['bar'] [42]
+}
+// the loop will exit after 'close' is emitted
+console.log('done'); // prints 'done'
+```
 
 ##### Parameters
 
-• **emitter**: `EventTarget`
+###### emitter
 
-• **eventName**: `string`
+`EventTarget`
 
-• **options?**: [`StaticEventEmitterIteratorOptions`](../../../interfaces/StaticEventEmitterIteratorOptions.md)
+###### eventName
+
+`string`
+
+###### options?
+
+[`StaticEventEmitterIteratorOptions`](../../../interfaces/StaticEventEmitterIteratorOptions.md)
 
 ##### Returns
 
-`AsyncIterator`\<`any`[], `any`, `any`\>
+`AsyncIterator`\<`any`[]\>
+
+An `AsyncIterator` that iterates `eventName` events emitted by the `emitter`
+
+##### Since
+
+v13.6.0, v12.16.0
 
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`on`](../../../classes/Duplex.md#on-1)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:333
 
 ***
 
 ### once()
 
-#### once(emitter, eventName, options)
+#### Call Signature
 
-> `static` **once**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options`?): `Promise`\<[`Args`](../../../type-aliases/Args.md)\<`Events`, `EventName`\>\>
+> `static` **once**\<`Events`, `EventName`\>(`emitter`, `eventName`, `options?`): `Promise`\<[`Args`](../../../type-aliases/Args-6.md)\<`Events`, `EventName`\>\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:232
 
 Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
 event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
@@ -5524,21 +6250,31 @@ ee.emit('foo'); // Prints: Waiting for the event was canceled!
 
 ##### Type Parameters
 
-• **Events** *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
+###### Events
 
-• **EventName** *extends* `string` \| `number` \| `symbol`
+`Events` *extends* [`EventMap`](../../../type-aliases/EventMap.md)\<`Events`\>
+
+###### EventName
+
+`EventName` *extends* `string` \| `number` \| `symbol`
 
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](../../../classes/EventEmitter.md)\<`Events`\>
+###### emitter
 
-• **eventName**: `EventName`
+[`EventEmitter`](../../../classes/EventEmitter-1.md)\<`Events`\>
 
-• **options?**: [`StaticEventEmitterOptions`](../../../interfaces/StaticEventEmitterOptions.md)
+###### eventName
+
+`EventName`
+
+###### options?
+
+[`StaticEventEmitterOptions`](../../../interfaces/StaticEventEmitterOptions.md)
 
 ##### Returns
 
-`Promise`\<[`Args`](../../../type-aliases/Args.md)\<`Events`, `EventName`\>\>
+`Promise`\<[`Args`](../../../type-aliases/Args-6.md)\<`Events`, `EventName`\>\>
 
 ##### Since
 
@@ -5548,63 +6284,231 @@ v11.13.0, v10.16.0
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once-1)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:232
+> `static` **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
 
-#### once(emitter, eventName, options)
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:237
 
-> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
+Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
+event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
+The `Promise` will resolve with an array of all the arguments emitted to the
+given event.
+
+This method is intentionally generic and works with the web platform [EventTarget](https://dom.spec.whatwg.org/#interface-eventtarget) interface, which has no special`'error'` event
+semantics and does not listen to the `'error'` event.
+
+```js
+import { once, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ee = new EventEmitter();
+
+process.nextTick(() => {
+  ee.emit('myevent', 42);
+});
+
+const [value] = await once(ee, 'myevent');
+console.log(value);
+
+const err = new Error('kaboom');
+process.nextTick(() => {
+  ee.emit('error', err);
+});
+
+try {
+  await once(ee, 'myevent');
+} catch (err) {
+  console.error('error happened', err);
+}
+```
+
+The special handling of the `'error'` event is only used when `events.once()` is used to wait for another event. If `events.once()` is used to wait for the
+'`error'` event itself, then it is treated as any other kind of event without
+special handling:
+
+```js
+import { EventEmitter, once } from 'node:events';
+
+const ee = new EventEmitter();
+
+once(ee, 'error')
+  .then(([err]) => console.log('ok', err.message))
+  .catch((err) => console.error('error', err.message));
+
+ee.emit('error', new Error('boom'));
+
+// Prints: ok boom
+```
+
+An `AbortSignal` can be used to cancel waiting for the event:
+
+```js
+import { EventEmitter, once } from 'node:events';
+
+const ee = new EventEmitter();
+const ac = new AbortController();
+
+async function foo(emitter, event, signal) {
+  try {
+    await once(emitter, event, { signal });
+    console.log('event emitted!');
+  } catch (error) {
+    if (error.name === 'AbortError') {
+      console.error('Waiting for the event was canceled!');
+    } else {
+      console.error('There was an error', error.message);
+    }
+  }
+}
+
+foo(ee, 'foo', ac.signal);
+ac.abort(); // Abort waiting for the event
+ee.emit('foo'); // Prints: Waiting for the event was canceled!
+```
 
 ##### Parameters
 
-• **emitter**: [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>
+###### emitter
 
-• **eventName**: `string` \| `symbol`
+[`EventEmitter`](../../../interfaces/EventEmitter.md)
 
-• **options?**: [`StaticEventEmitterOptions`](../../../interfaces/StaticEventEmitterOptions.md)
+###### eventName
+
+`string` \| `symbol`
+
+###### options?
+
+[`StaticEventEmitterOptions`](../../../interfaces/StaticEventEmitterOptions.md)
 
 ##### Returns
 
 `Promise`\<`any`[]\>
 
+##### Since
+
+v11.13.0, v10.16.0
+
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once-1)
 
-##### Defined in
+#### Call Signature
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:237
+> `static` **once**(`emitter`, `eventName`, `options?`): `Promise`\<`any`[]\>
 
-#### once(emitter, eventName, options)
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:242
 
-> `static` **once**(`emitter`, `eventName`, `options`?): `Promise`\<`any`[]\>
+Creates a `Promise` that is fulfilled when the `EventEmitter` emits the given
+event or that is rejected if the `EventEmitter` emits `'error'` while waiting.
+The `Promise` will resolve with an array of all the arguments emitted to the
+given event.
+
+This method is intentionally generic and works with the web platform [EventTarget](https://dom.spec.whatwg.org/#interface-eventtarget) interface, which has no special`'error'` event
+semantics and does not listen to the `'error'` event.
+
+```js
+import { once, EventEmitter } from 'node:events';
+import process from 'node:process';
+
+const ee = new EventEmitter();
+
+process.nextTick(() => {
+  ee.emit('myevent', 42);
+});
+
+const [value] = await once(ee, 'myevent');
+console.log(value);
+
+const err = new Error('kaboom');
+process.nextTick(() => {
+  ee.emit('error', err);
+});
+
+try {
+  await once(ee, 'myevent');
+} catch (err) {
+  console.error('error happened', err);
+}
+```
+
+The special handling of the `'error'` event is only used when `events.once()` is used to wait for another event. If `events.once()` is used to wait for the
+'`error'` event itself, then it is treated as any other kind of event without
+special handling:
+
+```js
+import { EventEmitter, once } from 'node:events';
+
+const ee = new EventEmitter();
+
+once(ee, 'error')
+  .then(([err]) => console.log('ok', err.message))
+  .catch((err) => console.error('error', err.message));
+
+ee.emit('error', new Error('boom'));
+
+// Prints: ok boom
+```
+
+An `AbortSignal` can be used to cancel waiting for the event:
+
+```js
+import { EventEmitter, once } from 'node:events';
+
+const ee = new EventEmitter();
+const ac = new AbortController();
+
+async function foo(emitter, event, signal) {
+  try {
+    await once(emitter, event, { signal });
+    console.log('event emitted!');
+  } catch (error) {
+    if (error.name === 'AbortError') {
+      console.error('Waiting for the event was canceled!');
+    } else {
+      console.error('There was an error', error.message);
+    }
+  }
+}
+
+foo(ee, 'foo', ac.signal);
+ac.abort(); // Abort waiting for the event
+ee.emit('foo'); // Prints: Waiting for the event was canceled!
+```
 
 ##### Parameters
 
-• **emitter**: `EventTarget`
+###### emitter
 
-• **eventName**: `string`
+`EventTarget`
 
-• **options?**: [`StaticEventEmitterOptions`](../../../interfaces/StaticEventEmitterOptions.md)
+###### eventName
+
+`string`
+
+###### options?
+
+[`StaticEventEmitterOptions`](../../../interfaces/StaticEventEmitterOptions.md)
 
 ##### Returns
 
 `Promise`\<`any`[]\>
 
+##### Since
+
+v11.13.0, v10.16.0
+
 ##### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`once`](../../../classes/Duplex.md#once-1)
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:242
 
 ***
 
 ### setMaxListeners()
 
-> `static` **setMaxListeners**(`n`?, ...`eventTargets`?): `void`
+> `static` **setMaxListeners**(`n?`, ...`eventTargets`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:455
 
 ```js
 import { setMaxListeners, EventEmitter } from 'node:events';
@@ -5617,11 +6521,15 @@ setMaxListeners(5, target, emitter);
 
 #### Parameters
 
-• **n?**: `number`
+##### n?
+
+`number`
 
 A non-negative number. The maximum number of listeners per `EventTarget` event.
 
-• ...**eventTargets?**: (`EventTarget` \| [`EventEmitter`](../../../interfaces/EventEmitter.md)\<`object`\>)[]
+##### eventTargets
+
+...(`EventTarget` \| [`EventEmitter`](../../../interfaces/EventEmitter.md)\<\{ \}\>)[]
 
 Zero or more {EventTarget} or {EventEmitter} instances. If none are specified, `n` is set as the default max for all newly created {EventTarget} and {EventEmitter}
 objects.
@@ -5638,15 +6546,13 @@ v15.4.0
 
 [`Duplex`](../../../classes/Duplex.md).[`setMaxListeners`](../../../classes/Duplex.md#setmaxlisteners-1)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:455
-
 ***
 
 ### toWeb()
 
 > `static` **toWeb**(`streamDuplex`): `object`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1134
 
 **`Experimental`**
 
@@ -5654,7 +6560,9 @@ A utility method for creating a web `ReadableStream` and `WritableStream` from a
 
 #### Parameters
 
-• **streamDuplex**: [`Duplex`](../../../classes/Duplex.md)
+##### streamDuplex
+
+[`Duplex`](../../../classes/Duplex.md)
 
 #### Returns
 
@@ -5662,15 +6570,11 @@ A utility method for creating a web `ReadableStream` and `WritableStream` from a
 
 ##### readable
 
-> **readable**: [`ReadableStream`](../../../interfaces/ReadableStream.md)\<`any`\>
-
-**`Experimental`**
+> **readable**: [`ReadableStream`](../../../interfaces/ReadableStream.md)
 
 ##### writable
 
-> **writable**: [`WritableStream`](../../../interfaces/WritableStream.md)\<`any`\>
-
-**`Experimental`**
+> **writable**: [`WritableStream`](../../../interfaces/WritableStream.md)
 
 #### Since
 
@@ -5679,7 +6583,3 @@ v17.0.0
 #### Inherited from
 
 [`Duplex`](../../../classes/Duplex.md).[`toWeb`](../../../classes/Duplex.md#toweb)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1134

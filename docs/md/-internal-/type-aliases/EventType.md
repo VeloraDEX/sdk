@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: EventType
 
-> **EventType**: `string` \| (`string` \| `string`[])[] \| [`EventFilter`](../interfaces/EventFilter.md) \| [`ForkEvent`](../classes/ForkEvent.md)
+> **EventType** = `string` \| (`string` \| `string`[])[] \| [`EventFilter`](../interfaces/EventFilter.md) \| [`ForkEvent`](../classes/ForkEvent.md)
 
-## Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:121
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:121

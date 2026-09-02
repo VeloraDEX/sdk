@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,35 +6,39 @@
 
 # Class: Indexed
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:30
+
 ## Extends
 
-- [`Description`](Description.md)\<[`Indexed`](Indexed.md)\>
+- [`Description`](Description.md)\<`Indexed`\>
 
 ## Constructors
 
-### new Indexed()
+### Constructor
 
-> **new Indexed**(`info`): [`Indexed`](Indexed.md)
+> **new Indexed**(`info`): `Indexed`
+
+Defined in: node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
 
 #### Parameters
 
-• **info**
+##### info
 
-• **info.\_isIndexed**: `boolean`
+###### _isIndexed
 
-• **info.hash**: `string`
+`boolean`
+
+###### hash
+
+`string`
 
 #### Returns
 
-[`Indexed`](Indexed.md)
+`Indexed`
 
 #### Inherited from
 
-[`Description`](Description.md).[`constructor`](Description.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
+[`Description`](Description.md).[`constructor`](Description.md#constructor)
 
 ## Properties
 
@@ -42,9 +46,7 @@ node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject
 
 > `readonly` **\_isIndexed**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:32
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:32
 
 ***
 
@@ -52,9 +54,7 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **hash**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:31
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:31
 
 ## Methods
 
@@ -62,14 +62,14 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `static` **isIndexed**(`value`): `value is Indexed`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:33
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `value is Indexed`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:33

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,25 +6,27 @@
 
 # Type Alias: MulticallParameters\<contracts, allowFailure, options\>
 
-> **MulticallParameters**\<`contracts`, `allowFailure`, `options`\>: [`Pick`](Pick.md)\<[`CallParameters`](CallParameters.md), `"authorizationList"` \| `"blockNumber"` \| `"blockOverrides"` \| `"blockTag"` \| `"stateOverride"`\> & `object`
+> **MulticallParameters**\<`contracts`, `allowFailure`, `options`\> = [`Pick`](Pick.md)\<[`CallParameters`](CallParameters.md), `"authorizationList"` \| `"blockHash"` \| `"blockNumber"` \| `"blockOverrides"` \| `"blockTag"` \| `"requireCanonical"` \| `"stateOverride"`\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/multicall.d.ts:15
+
+## Type Declaration
 
 ### account?
 
-> `optional` **account**: [`Address`](Address.md)
+> `optional` **account?**: [`Address`](Address-1.md)
 
 The account to use for the multicall.
 
 ### allowFailure?
 
-> `optional` **allowFailure**: `allowFailure` \| `boolean`
+> `optional` **allowFailure?**: `allowFailure` \| `boolean`
 
 Whether to allow failures.
 
 ### batchSize?
 
-> `optional` **batchSize**: `number`
+> `optional` **batchSize?**: `number`
 
 The size of each batch of calls.
 
@@ -36,24 +38,26 @@ The contracts to call.
 
 ### deployless?
 
-> `optional` **deployless**: `boolean`
+> `optional` **deployless?**: `boolean`
 
 Enable deployless multicall.
 
 ### multicallAddress?
 
-> `optional` **multicallAddress**: [`Address`](Address.md)
+> `optional` **multicallAddress?**: [`Address`](Address-1.md)
 
 The address of the multicall3 contract to use.
 
 ## Type Parameters
 
-• **contracts** *extends* readonly `unknown`[] = readonly [`ContractFunctionParameters`](ContractFunctionParameters.md)[]
+### contracts
 
-• **allowFailure** *extends* `boolean` = `true`
+`contracts` *extends* readonly `unknown`[] = readonly [`ContractFunctionParameters`](ContractFunctionParameters.md)[]
 
-• **options** *extends* `object` = `object`
+### allowFailure
 
-## Defined in
+`allowFailure` *extends* `boolean` = `true`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/multicall.d.ts:14
+### options
+
+`options` *extends* `object` = \{ \}

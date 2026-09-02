@@ -1,38 +1,55 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Filter
 
-# Type Alias: Filter\<T, P, Acc\>
+# Type Alias: Filter\<filterType, abi, eventName, args, strict, fromBlock, toBlock\>
 
-> **Filter**\<`T`, `P`, `Acc`\>: `T` *extends* readonly [infer F, `...(infer Rest extends readonly unknown[])`] ? [`F`] *extends* [`P`] ? [`Filter`](Filter.md)\<`Rest`, `P`, [`...Acc`, `F`]\> : [`Filter`](Filter.md)\<`Rest`, `P`, `Acc`\> : readonly [`...Acc`]
+> **Filter**\<`filterType`, `abi`, `eventName`, `args`, `strict`, `fromBlock`, `toBlock`\> = `object` & `filterType` *extends* `"event"` ? `object` & `abi` *extends* [`Abi`](Abi.md) ? `undefined` *extends* `eventName` ? `object` : `args` *extends* [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abi`, `eventName`\> ? `object` : `object` : `object` : `object`
 
-Filters out all members of [T](Filter.md) that are not [P](Filter.md)
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/filter.d.ts:11
+
+## Type Declaration
+
+### id
+
+> **id**: [`Hex`](Hex.md)
+
+### request
+
+> **request**: [`EIP1193RequestFn`](EIP1193RequestFn.md)\<[`FilterRpcSchema`](FilterRpcSchema.md)\>
+
+### type
+
+> **type**: `filterType`
 
 ## Type Parameters
 
-• **T** *extends* readonly `unknown`[]
+### filterType
 
-Items to filter
+`filterType` *extends* [`FilterType`](FilterType.md) = `"event"`
 
-• **P**
+### abi
 
-Type to filter out
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined` = `undefined`
 
-• **Acc** *extends* readonly `unknown`[] = []
+### eventName
 
-## Returns
+`eventName` *extends* `string` \| `undefined` = `undefined`
 
-Filtered items
+### args
 
-## Example
+`args` *extends* [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abi`, `eventName`\> \| `undefined` = [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abi`, `eventName`\>
 
-```ts
-type Result = Filter<['a', 'b', 'c'], 'b'>
-//   ^? type Result = ['a', 'c']
-```
+### strict
 
-## Defined in
+`strict` *extends* `boolean` \| `undefined` = `undefined`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:27
+### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`

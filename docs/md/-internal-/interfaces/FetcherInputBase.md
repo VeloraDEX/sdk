@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / FetcherInputBase
 
 # Interface: FetcherInputBase\<URL\>
+
+Defined in: [src/types.ts:46](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L46)
 
 ## Extended by
 
@@ -13,27 +15,25 @@
 
 ## Type Parameters
 
-• **URL** *extends* `string` = `string`
+### URL
+
+`URL` *extends* `string` = `string`
 
 ## Properties
 
 ### headers?
 
-> `optional` **headers**: [`Record`](../type-aliases/Record.md)\<`string`, `string`\>
+> `optional` **headers?**: [`Record`](../type-aliases/Record.md)\<`string`, `string`\>
 
-#### Defined in
-
-[src/types.ts:48](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L48)
+Defined in: [src/types.ts:48](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L48)
 
 ***
 
 ### requestParams?
 
-> `optional` **requestParams**: [`RequestParameters`](../type-aliases/RequestParameters.md)
+> `optional` **requestParams?**: [`RequestParameters`](../type-aliases/RequestParameters.md)
 
-#### Defined in
-
-[src/types.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L49)
+Defined in: [src/types.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L49)
 
 ***
 
@@ -41,6 +41,4 @@
 
 > **url**: `URL`
 
-#### Defined in
-
-[src/types.ts:47](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L47)
+Defined in: [src/types.ts:47](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L47)

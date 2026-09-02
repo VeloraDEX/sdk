@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: EventListener\<T, K\>
 
-> **EventListener**\<`T`, `K`\>: `T` *extends* `string` \| `symbol` ? (...`args`) => `void` : (...`args`) => `void`
+> **EventListener**\<`T`, `K`\> = `T` *extends* `string` \| `symbol` ? (...`args`) => `void` : (...`args`) => `void`
+
+Defined in: node\_modules/.pnpm/eventemitter3@5.0.4/node\_modules/eventemitter3/index.d.ts:117
 
 ## Type Parameters
 
-• **T** *extends* [`ValidEventTypes`](ValidEventTypes.md)
+### T
 
-• **K** *extends* [`EventNames`](EventNames.md)\<`T`\>
+`T` *extends* [`ValidEventTypes`](ValidEventTypes.md)
 
-## Defined in
+### K
 
-node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:117
+`K` *extends* [`EventNames`](EventNames.md)\<`T`\>

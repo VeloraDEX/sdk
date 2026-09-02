@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,6 @@
 
 # Type Alias: Networkish
 
-> **Networkish**: [`Network`](../classes/Network.md) \| `number` \| `bigint` \| `string` \| `object`
+> **Networkish** = [`Network`](Network.md) \| `string` \| `number`
 
-A Networkish can be used to allude to a Network, by specifing:
- - a [[Network]] object
- - a well-known (or registered) network name
- - a well-known (or registered) chain ID
- - an object with sufficient details to describe a network
-
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/network.d.ts:17
+Defined in: node\_modules/.pnpm/@ethersproject+networks@5.8.0/node\_modules/@ethersproject/networks/lib/types.d.ts:7

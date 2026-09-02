@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,26 @@
 
 # Type Alias: DataFormat
 
-> **DataFormat**: `object`
+> **DataFormat** = `object`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:27
 
 Used to specify how data should be formatted. Bytes can be formatted as hexadecimal strings or
 Uint8Arrays. Numbers can be formatted as BigInts, hexadecimal strings, primitive numbers, or
 strings.
 
-## Type declaration
+## Properties
 
 ### bytes
 
-> `readonly` **bytes**: [`FMT_BYTES`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_BYTES.md)
+> `readonly` **bytes**: [`FMT_BYTES`](../enumerations/FMT_BYTES.md)
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:29
+
+***
 
 ### number
 
-> `readonly` **number**: [`FMT_NUMBER`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/enumerations/FMT_NUMBER.md)
+> `readonly` **number**: [`FMT_NUMBER`](../enumerations/FMT_NUMBER.md)
 
-## Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:27
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/data\_format\_types.d.ts:28

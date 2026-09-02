@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: ContractMethodRes
 
-> **ContractMethodRes**: [`ReturnType`](ReturnType.md)\<[`Web3ContractSendMethod`](Web3ContractSendMethod.md)\>
+> **ContractMethodRes** = [`ReturnType`](ReturnType.md)\<[`Web3ContractSendMethod`](Web3ContractSendMethod.md)\>
 
-## Defined in
-
-[src/helpers/providers/web3.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/web3.ts#L15)
+Defined in: [src/helpers/providers/web3.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/web3.ts#L15)

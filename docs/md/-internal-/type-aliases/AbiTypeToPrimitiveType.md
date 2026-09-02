@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,7 +6,9 @@
 
 # Type Alias: AbiTypeToPrimitiveType\<abiType, abiParameterKind\>
 
-> **AbiTypeToPrimitiveType**\<`abiType`, `abiParameterKind`\>: `abiType` *extends* [`SolidityBytes`](SolidityBytes.md) ? [`PrimitiveTypeLookup`](../interfaces/PrimitiveTypeLookup.md)\[`abiType`\]\[`abiParameterKind`\] : [`PrimitiveTypeLookup`](../interfaces/PrimitiveTypeLookup.md)\[`abiType`\]
+> **AbiTypeToPrimitiveType**\<`abiType`, `abiParameterKind`\> = `abiType` *extends* [`SolidityBytes`](SolidityBytes.md) ? [`PrimitiveTypeLookup`](../interfaces/PrimitiveTypeLookup.md)\[`abiType`\]\[`abiParameterKind`\] : [`PrimitiveTypeLookup`](../interfaces/PrimitiveTypeLookup.md)\[`abiType`\]
+
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:14
 
 Converts [AbiType](AbiType.md) to corresponding TypeScript primitive type.
 
@@ -14,18 +16,18 @@ Does not include full array or tuple conversion. Use [AbiParameterToPrimitiveTyp
 
 ## Type Parameters
 
-• **abiType** *extends* [`AbiType`](AbiType.md)
+### abiType
+
+`abiType` *extends* [`AbiType`](AbiType.md)
 
 [AbiType](AbiType.md) to convert to TypeScript representation
 
-• **abiParameterKind** *extends* [`AbiParameterKind`](AbiParameterKind.md) = [`AbiParameterKind`](AbiParameterKind.md)
+### abiParameterKind
+
+`abiParameterKind` *extends* [`AbiParameterKind`](AbiParameterKind.md) = [`AbiParameterKind`](AbiParameterKind.md)
 
 Optional [AbiParameterKind](AbiParameterKind.md) to narrow by parameter type
 
 ## Returns
 
 TypeScript primitive type
-
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:13

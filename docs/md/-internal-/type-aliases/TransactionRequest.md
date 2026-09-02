@@ -1,19 +1,123 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TransactionRequest
 
-# Type Alias: TransactionRequest\<quantity, index\>
+# Type Alias: TransactionRequest
 
-> **TransactionRequest**\<`quantity`, `index`\>: [`OneOf`](OneOf.md)\<[`TransactionRequestLegacy`](TransactionRequestLegacy.md)\<`quantity`, `index`\> \| [`TransactionRequestEIP2930`](TransactionRequestEIP2930.md)\<`quantity`, `index`\> \| [`TransactionRequestEIP1559`](TransactionRequestEIP1559.md)\<`quantity`, `index`\> \| [`TransactionRequestEIP4844`](TransactionRequestEIP4844.md)\<`quantity`, `index`\> \| [`TransactionRequestEIP7702`](TransactionRequestEIP7702.md)\<`quantity`, `index`\>\>
+> **TransactionRequest** = `object`
 
-## Type Parameters
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:7
 
-• **quantity** = `bigint`
+## Properties
 
-• **index** = `number`
+### accessList?
 
-## Defined in
+> `optional` **accessList?**: [`AccessListish`](AccessListish.md)
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:169
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:17
+
+***
+
+### ccipReadEnabled?
+
+> `optional` **ccipReadEnabled?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:21
+
+***
+
+### chainId?
+
+> `optional` **chainId?**: `number`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:15
+
+***
+
+### customData?
+
+> `optional` **customData?**: [`Record`](Record.md)\<`string`, `any`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:20
+
+***
+
+### data?
+
+> `optional` **data?**: [`BytesLike`](BytesLike-1.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:13
+
+***
+
+### from?
+
+> `optional` **from?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:9
+
+***
+
+### gasLimit?
+
+> `optional` **gasLimit?**: [`BigNumberish`](BigNumberish.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:11
+
+***
+
+### gasPrice?
+
+> `optional` **gasPrice?**: [`BigNumberish`](BigNumberish.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:12
+
+***
+
+### maxFeePerGas?
+
+> `optional` **maxFeePerGas?**: [`BigNumberish`](BigNumberish.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:19
+
+***
+
+### maxPriorityFeePerGas?
+
+> `optional` **maxPriorityFeePerGas?**: [`BigNumberish`](BigNumberish.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:18
+
+***
+
+### nonce?
+
+> `optional` **nonce?**: [`BigNumberish`](BigNumberish.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:10
+
+***
+
+### to?
+
+> `optional` **to?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:8
+
+***
+
+### type?
+
+> `optional` **type?**: `number`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:16
+
+***
+
+### value?
+
+> `optional` **value?**: [`BigNumberish`](BigNumberish.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:14

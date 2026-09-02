@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,11 +6,15 @@
 
 # Interface: TransactionCache
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:7
+
 ## Properties
 
 ### dataFee?
 
-> `optional` **dataFee**: `object`
+> `optional` **dataFee?**: `object`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:9
 
 #### hardfork
 
@@ -20,16 +24,10 @@
 
 > **value**: `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:9
-
 ***
 
 ### hash
 
-> **hash**: `undefined` \| `Uint8Array`
+> **hash**: `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\> \| `undefined`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:8
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/baseTransaction.d.ts:8

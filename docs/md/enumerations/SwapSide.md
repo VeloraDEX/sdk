@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: SwapSide
 
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:1
+
 ## Enumeration Members
 
 ### BUY
 
 > **BUY**: `"BUY"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:2
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:2
 
 ***
 
@@ -22,6 +22,4 @@ node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/cons
 
 > **SELL**: `"SELL"`
 
-#### Defined in
-
-node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:3
+Defined in: node\_modules/.pnpm/@paraswap+core@2.4.3/node\_modules/@paraswap/core/build/constants.d.ts:3

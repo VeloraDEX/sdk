@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: SwapSideUnion
 
-> **SwapSideUnion**: [`EnumerateLiteral`](EnumerateLiteral.md)\<*typeof* [`SwapSide`](../../enumerations/SwapSide.md)\>
+> **SwapSideUnion** = [`EnumerateLiteral`](EnumerateLiteral.md)\<*typeof* [`SwapSide`](../../enumerations/SwapSide.md)\>
 
-## Defined in
-
-[src/methods/quote/getQuote.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L13)
+Defined in: [src/methods/delta/getDeltaPrice.ts:10](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaPrice.ts#L10)

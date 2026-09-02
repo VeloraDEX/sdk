@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TransactionResponse
 
 # Interface: TransactionResponse
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:23
 
 ## Extends
 
@@ -18,35 +20,29 @@
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](../type-aliases/AccessList.md)
+> `optional` **accessList?**: [`AccessList`](../type-aliases/AccessList.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:40
 
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`accessList`](Transaction.md#accesslist)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:40
-
 ***
 
 ### blockHash?
 
-> `optional` **blockHash**: `string`
+> `optional` **blockHash?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:26
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:26
 
 ***
 
 ### blockNumber?
 
-> `optional` **blockNumber**: `number`
+> `optional` **blockNumber?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:25
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:25
 
 ***
 
@@ -54,13 +50,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **chainId**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:35
+
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`chainId`](Transaction.md#chainid)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:35
 
 ***
 
@@ -68,9 +62,7 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **confirmations**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:28
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:28
 
 ***
 
@@ -78,13 +70,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **data**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:33
+
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`data`](Transaction.md#data)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:33
 
 ***
 
@@ -92,13 +82,11 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **from**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:29
+
 #### Overrides
 
 [`Transaction`](Transaction.md).[`from`](Transaction.md#from)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:29
 
 ***
 
@@ -106,27 +94,23 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **gasLimit**: [`BigNumber`](../classes/BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:31
+
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`gasLimit`](Transaction.md#gaslimit)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:31
 
 ***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: [`BigNumber`](../classes/BigNumber.md)
+> `optional` **gasPrice?**: [`BigNumber`](../classes/BigNumber.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:32
 
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`gasPrice`](Transaction.md#gasprice)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:32
 
 ***
 
@@ -134,41 +118,35 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **hash**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:24
+
 #### Overrides
 
 [`Transaction`](Transaction.md).[`hash`](Transaction.md#hash)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:24
 
 ***
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: [`BigNumber`](../classes/BigNumber.md)
+> `optional` **maxFeePerGas?**: [`BigNumber`](../classes/BigNumber.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:42
 
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`maxFeePerGas`](Transaction.md#maxfeepergas)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:42
-
 ***
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: [`BigNumber`](../classes/BigNumber.md)
+> `optional` **maxPriorityFeePerGas?**: [`BigNumber`](../classes/BigNumber.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:41
 
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`maxPriorityFeePerGas`](Transaction.md#maxpriorityfeepergas)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:41
 
 ***
 
@@ -176,103 +154,87 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **nonce**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:30
+
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`nonce`](Transaction.md#nonce)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:30
 
 ***
 
 ### r?
 
-> `optional` **r**: `string`
+> `optional` **r?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:36
 
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`r`](Transaction.md#r)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:36
-
 ***
 
 ### raw?
 
-> `optional` **raw**: `string`
+> `optional` **raw?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:30
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:30
 
 ***
 
 ### s?
 
-> `optional` **s**: `string`
+> `optional` **s?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:37
 
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`s`](Transaction.md#s)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:37
-
 ***
 
 ### timestamp?
 
-> `optional` **timestamp**: `number`
+> `optional` **timestamp?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:27
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:27
 
 ***
 
 ### to?
 
-> `optional` **to**: `string`
+> `optional` **to?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:28
 
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`to`](Transaction.md#to)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:28
-
 ***
 
 ### type?
 
-> `optional` **type**: `null` \| `number`
+> `optional` **type?**: `number` \| `null`
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:39
 
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`type`](Transaction.md#type)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:39
-
 ***
 
 ### v?
 
-> `optional` **v**: `number`
+> `optional` **v?**: `number`
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:38
 
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`v`](Transaction.md#v)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:38
 
 ***
 
@@ -280,28 +242,26 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **value**: [`BigNumber`](../classes/BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:34
+
 #### Inherited from
 
 [`Transaction`](Transaction.md).[`value`](Transaction.md#value)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:34
-
 ***
 
-### wait()
+### wait
 
-> **wait**: (`confirmations`?) => `Promise`\<[`TransactionReceipt`](TransactionReceipt.md)\>
+> **wait**: (`confirmations?`) => `Promise`\<[`TransactionReceipt`](TransactionReceipt.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:31
 
 #### Parameters
 
-• **confirmations?**: `number`
+##### confirmations?
+
+`number`
 
 #### Returns
 
 `Promise`\<[`TransactionReceipt`](TransactionReceipt.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:31

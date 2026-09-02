@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: QuoteWithMarketPrice
 
-> **QuoteWithMarketPrice**: `object`
+> **QuoteWithMarketPrice** = `object`
 
-## Type declaration
+Defined in: [src/methods/quote/getQuote.ts:51](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L51)
+
+## Properties
 
 ### market
 
 > **market**: [`OptimalRate`](OptimalRate.md)
 
-## Defined in
-
-[src/methods/quote/getQuote.ts:51](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L51)
+Defined in: [src/methods/quote/getQuote.ts:52](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L52)

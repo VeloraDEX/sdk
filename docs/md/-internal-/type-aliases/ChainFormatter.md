@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,32 +6,42 @@
 
 # Type Alias: ChainFormatter\<type\>
 
-> **ChainFormatter**\<`type`\>: `object`
+> **ChainFormatter**\<`type`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:145
 
 ## Type Parameters
 
-• **type** *extends* `string` = `string`
+### type
 
-## Type declaration
+`type` *extends* `string` = `string`
 
-### format()
+## Properties
 
-> **format**: (`args`, `action`?) => `any`
+### format
+
+> **format**: (`args`, `action?`) => `any`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:146
 
 #### Parameters
 
-• **args**: `any`
+##### args
 
-• **action?**: `string`
+`any`
+
+##### action?
+
+`string`
 
 #### Returns
 
 `any`
 
+***
+
 ### type
 
 > **type**: `type`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:118
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/chain.d.ts:147

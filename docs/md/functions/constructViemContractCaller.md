@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,18 +6,20 @@
 
 # Function: constructViemContractCaller()
 
-> **constructViemContractCaller**(`viemClient`, `account`?): [`ContractCallerFunctions`](../interfaces/ContractCallerFunctions.md)\<\`0x$\{string\}\`\>
+> **constructViemContractCaller**(`viemClient`, `account?`): [`ContractCallerFunctions`](../interfaces/ContractCallerFunctions.md)\<`` `0x${string}` ``\>
+
+Defined in: [src/helpers/providers/viem.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/viem.ts#L32)
 
 ## Parameters
 
-• **viemClient**: [`MinViemClient`](../type-aliases/MinViemClient.md)
+### viemClient
 
-• **account?**: `string`
+[`MinViemClient`](../type-aliases/MinViemClient.md)
+
+### account?
+
+`string`
 
 ## Returns
 
-[`ContractCallerFunctions`](../interfaces/ContractCallerFunctions.md)\<\`0x$\{string\}\`\>
-
-## Defined in
-
-[src/helpers/providers/viem.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/viem.ts#L32)
+[`ContractCallerFunctions`](../interfaces/ContractCallerFunctions.md)\<`` `0x${string}` ``\>

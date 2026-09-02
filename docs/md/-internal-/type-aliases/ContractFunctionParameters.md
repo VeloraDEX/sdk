@@ -1,22 +1,20 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ContractFunctionParameters
 
-# Type Alias: ContractFunctionParameters\<abi, mutability, functionName, args, deployless, allFunctionNames, allArgs\>
+# Type Alias: ContractFunctionParameters\<abi, mutability, functionName, args, deployless, allFunctionNames, allArgs, abiFunction\>
 
-> **ContractFunctionParameters**\<`abi`, `mutability`, `functionName`, `args`, `deployless`, `allFunctionNames`, `allArgs`\>: `object` & readonly [] *extends* `allArgs` ? `object` : `object` & `deployless` *extends* `true` ? `object` : `object`
+> **ContractFunctionParameters**\<`abi`, `mutability`, `functionName`, `args`, `deployless`, `allFunctionNames`, `allArgs`, `abiFunction`\> = `object` & readonly \[\] *extends* `allArgs` ? `object` : `object` & `deployless` *extends* `true` ? `object` : `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:31
+
+## Type Declaration
 
 ### abi
 
 > **abi**: `abi`
-
-### args?
-
-> `optional` **args**: `abi` *extends* [`Abi`](Abi.md) ? [`UnionWiden`](UnionWiden.md)\<`args`\> : `never` \| `allArgs`
 
 ### functionName
 
@@ -24,20 +22,34 @@
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### abi
 
-• **mutability** *extends* [`AbiStateMutability`](AbiStateMutability.md) = [`AbiStateMutability`](AbiStateMutability.md)
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\>
+### mutability
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\>
+`mutability` *extends* [`AbiStateMutability`](AbiStateMutability.md) = [`AbiStateMutability`](AbiStateMutability.md)
 
-• **deployless** *extends* `boolean` = `false`
+### functionName
 
-• **allFunctionNames** = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\>
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\>
 
-• **allArgs** = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\>
+### args
 
-## Defined in
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\>
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:31
+### deployless
+
+`deployless` *extends* `boolean` = `false`
+
+### allFunctionNames
+
+`allFunctionNames` = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\>
+
+### allArgs
+
+`allArgs` = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\>
+
+### abiFunction
+
+`abiFunction` = [`ExtractAbiFunction`](ExtractAbiFunction.md)\<`abi` *extends* [`Abi`](Abi.md) ? `abi` : [`Abi`](Abi.md), `functionName`, `mutability`\>

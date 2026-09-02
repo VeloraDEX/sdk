@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: WatchContractEventOnLogsParameter\<abi, eventName, strict\>
 
-> **WatchContractEventOnLogsParameter**\<`abi`, `eventName`, `strict`\>: `abi` *extends* [`Abi`](Abi.md) ? [`Abi`](Abi.md) *extends* `abi` ? [`Log`](Log.md)[] : [`Log`](Log.md)\<`bigint`, `number`, `false`, [`ExtractAbiEvent`](ExtractAbiEvent.md)\<`abi`, `eventName`\>, `strict`\>[] : [`Log`](Log.md)[]
+> **WatchContractEventOnLogsParameter**\<`abi`, `eventName`, `strict`\> = `abi` *extends* [`Abi`](Abi.md) ? [`Abi`](Abi.md) *extends* `abi` ? [`Log`](Log.md)[] : [`Log`](Log.md)\<`bigint`, `number`, `false`, [`ExtractAbiEvent`](ExtractAbiEvent.md)\<`abi`, `eventName`\>, `strict`\>[] : [`Log`](Log.md)[]
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchContractEvent.d.ts:12
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### abi
 
-• **eventName** *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> = [`ContractEventName`](ContractEventName.md)\<`abi`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+### eventName
 
-## Defined in
+`eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> = [`ContractEventName`](ContractEventName-1.md)\<`abi`\>
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/watchContractEvent.d.ts:12
+### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`

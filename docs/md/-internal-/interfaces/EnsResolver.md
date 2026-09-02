@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: EnsResolver
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:21
+
 ## Properties
 
 ### address
 
 > `readonly` **address**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:23
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:23
 
 ***
 
@@ -22,56 +22,52 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **name**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:22
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:22
 
 ## Methods
 
 ### getAddress()
 
-> **getAddress**(`coinType`?): `Promise`\<`null` \| `string`\>
+> **getAddress**(`coinType?`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:24
 
 #### Parameters
 
-• **coinType?**: `60`
+##### coinType?
+
+`60`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:24
+`Promise`\<`string` \| `null`\>
 
 ***
 
 ### getContentHash()
 
-> **getContentHash**(): `Promise`\<`null` \| `string`\>
+> **getContentHash**(): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:25
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:25
+`Promise`\<`string` \| `null`\>
 
 ***
 
 ### getText()
 
-> **getText**(`key`): `Promise`\<`null` \| `string`\>
+> **getText**(`key`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:26
 
 #### Parameters
 
-• **key**: `string`
+##### key
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:26
+`Promise`\<`string` \| `null`\>

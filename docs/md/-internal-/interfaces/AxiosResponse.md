@@ -1,28 +1,38 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AxiosResponse
 
-# Interface: AxiosResponse\<T, D, H\>
+# Interface: AxiosResponse\<T, D, H, P\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:515
 
 ## Type Parameters
 
-• **T** = `any`
+### T
 
-• **D** = `any`
+`T` = `any`
 
-• **H** = `object`
+### D
+
+`D` = `any`
+
+### H
+
+`H` = \{ \}
+
+### P
+
+`P` = `any`
 
 ## Properties
 
 ### config
 
-> **config**: [`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)\<`D`\>
+> **config**: [`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)\<`D`, `P`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:489
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:520
 
 ***
 
@@ -30,9 +40,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:489
 
 > **data**: `T`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:485
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:516
 
 ***
 
@@ -40,19 +48,15 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:485
 
 > **headers**: [`AxiosResponseHeaders`](../type-aliases/AxiosResponseHeaders.md) \| `H` & [`Partial`](../type-aliases/Partial.md)\<[`RawAxiosHeaders`](RawAxiosHeaders.md) & `object` & `object`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:488
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:519
 
 ***
 
 ### request?
 
-> `optional` **request**: `any`
+> `optional` **request?**: `any`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:490
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:521
 
 ***
 
@@ -60,9 +64,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:490
 
 > **status**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:486
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:517
 
 ***
 
@@ -70,6 +72,4 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:486
 
 > **statusText**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:487
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:518

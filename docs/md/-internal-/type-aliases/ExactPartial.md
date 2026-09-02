@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: ExactPartial\<type\>
 
-> **ExactPartial**\<`type`\>: `{ [key in keyof type]?: type[key] }`
+> **ExactPartial**\<`type`\> = `{ [key in keyof type]?: type[key] }`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:164
 
 ## Type Parameters
 
-• **type**
+### type
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:163
+`type`

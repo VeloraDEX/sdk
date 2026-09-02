@@ -1,23 +1,25 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / GetRateByRoute
 
-# Type Alias: GetRateByRoute()
+# Type Alias: GetRateByRoute
 
-> **GetRateByRoute**: (`options`, `requestParams`?) => `Promise`\<[`OptimalRate`](../../type-aliases/OptimalRate.md)\>
+> **GetRateByRoute** = (`options`, `requestParams?`) => `Promise`\<[`OptimalRate`](../../type-aliases/OptimalRate.md)\>
+
+Defined in: [src/methods/swap/rates.ts:199](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L199)
 
 ## Parameters
 
-• **options**: [`GetRateByRouteInput`](GetRateByRouteInput.md)
+### options
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+[`GetRateByRouteInput`](GetRateByRouteInput.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<[`OptimalRate`](../../type-aliases/OptimalRate.md)\>
-
-## Defined in
-
-[src/methods/swap/rates.ts:199](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/rates.ts#L199)

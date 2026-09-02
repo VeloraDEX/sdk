@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -8,13 +8,17 @@
 
 > **isReadable**(`stream`): `boolean`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1717
+
 **`Experimental`**
 
 Returns whether the stream is readable.
 
 ## Parameters
 
-• **stream**: [`ReadableStream`](../../../interfaces/ReadableStream.md) \| [`Readable`](../../../classes/Readable.md)
+### stream
+
+[`ReadableStream`](../../../interfaces/ReadableStream-1.md) \| [`Readable`](../../../classes/Readable.md)
 
 ## Returns
 
@@ -23,7 +27,3 @@ Returns whether the stream is readable.
 ## Since
 
 v17.4.0, v16.14.0
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1717

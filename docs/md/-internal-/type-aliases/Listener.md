@@ -1,19 +1,21 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Listener
 
-# Type Alias: Listener\<Events, EventName\>
+# Type Alias: Listener
 
-> **Listener**\<`Events`, `EventName`\>: `EventName` *extends* keyof `Events` ? (...`args`) => `void` \| `EventName` *extends* keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md) ? (...`args`) => `void` : `never` : `EventName` *extends* keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md) ? (...`args`) => `void` : (...`args`) => `void`
+> **Listener** = (...`args`) => `void`
 
-## Type Parameters
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:122
 
-• **Events** *extends* [`EventMap`](EventMap.md)\<`Events`\>
+## Parameters
 
-• **EventName**
+### args
 
-## Defined in
+...`any`[]
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:116
+## Returns
+
+`void`

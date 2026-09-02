@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,98 +6,142 @@
 
 # Type Alias: CustomSource
 
-> **CustomSource**: `object`
+> **CustomSource** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:14
+
+## Properties
 
 ### address
 
-> **address**: [`Address`](Address.md)
+> **address**: [`Address`](Address-1.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:15
+
+***
 
 ### nonceManager?
 
-> `optional` **nonceManager**: [`NonceManager`](NonceManager.md)
+> `optional` **nonceManager?**: [`NonceManager`](NonceManager.md)
 
-### sign()?
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:16
 
-> `optional` **sign**: (`parameters`) => `Promise`\<[`Hex`](Hex.md)\>
+***
+
+### sign?
+
+> `optional` **sign?**: (`parameters`) => `Promise`\<[`Hex`](Hex.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:17
 
 #### Parameters
 
-• **parameters**
+##### parameters
 
-• **parameters.hash**: [`Hash`](Hash.md)
+###### hash
+
+[`Hash`](Hash.md)
 
 #### Returns
 
 `Promise`\<[`Hex`](Hex.md)\>
 
-### signAuthorization()?
+***
 
-> `optional` **signAuthorization**: (`parameters`) => `Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType.md)\>
+### signAuthorization?
+
+> `optional` **signAuthorization?**: (`parameters`) => `Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType-1.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:20
 
 #### Parameters
 
-• **parameters**: [`AuthorizationRequest`](AuthorizationRequest.md)
+##### parameters
+
+[`AuthorizationRequest`](AuthorizationRequest.md)
 
 #### Returns
 
-`Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType.md)\>
+`Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType-1.md)\>
 
-### signMessage()
+***
+
+### signMessage
 
 > **signMessage**: (`{ message }`) => `Promise`\<[`Hex`](Hex.md)\>
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:21
+
 #### Parameters
 
-• **\{ message \}**
+##### \{ message \}
 
-• **\{ message \}.message**: [`SignableMessage`](SignableMessage.md)
+###### message
+
+[`SignableMessage`](SignableMessage.md)
 
 #### Returns
 
 `Promise`\<[`Hex`](Hex.md)\>
 
-### signTransaction()
+***
 
-> **signTransaction**: \<`serializer`, `transaction`\>(`transaction`, `options`?) => `Promise`\<[`Hex`](Hex.md)\>
+### signTransaction
+
+> **signTransaction**: \<`serializer`, `transaction`\>(`transaction`, `options?`) => `Promise`\<[`Hex`](Hex.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:24
 
 #### Type Parameters
 
-• **serializer** *extends* [`SerializeTransactionFn`](SerializeTransactionFn.md)\<[`TransactionSerializable`](TransactionSerializable.md)\> = [`SerializeTransactionFn`](SerializeTransactionFn.md)\<[`TransactionSerializable`](TransactionSerializable.md)\>
+##### serializer
 
-• **transaction** *extends* [`Parameters`](Parameters.md)\<`serializer`\>\[`0`\] = [`Parameters`](Parameters.md)\<`serializer`\>\[`0`\]
+`serializer` *extends* [`SerializeTransactionFn`](SerializeTransactionFn.md)\<[`TransactionSerializable`](TransactionSerializable.md)\> = [`SerializeTransactionFn`](SerializeTransactionFn.md)\<[`TransactionSerializable`](TransactionSerializable.md)\>
+
+##### transaction
+
+`transaction` *extends* [`Parameters`](Parameters-8.md)\<`serializer`\>\[`0`\] = [`Parameters`](Parameters-8.md)\<`serializer`\>\[`0`\]
 
 #### Parameters
 
-• **transaction**: `transaction`
+##### transaction
 
-• **options?**
+`transaction`
 
-• **options.serializer?**: `serializer`
+##### options?
+
+###### serializer?
+
+`serializer`
 
 #### Returns
 
 `Promise`\<[`Hex`](Hex.md)\>
 
-### signTypedData()
+***
+
+### signTypedData
 
 > **signTypedData**: \<`typedData`, `primaryType`\>(`parameters`) => `Promise`\<[`Hex`](Hex.md)\>
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:27
+
 #### Type Parameters
 
-• **typedData** *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\>
+##### typedData
 
-• **primaryType** *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`
+`typedData` *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\>
+
+##### primaryType
+
+`primaryType` *extends* keyof `typedData` \| `"EIP712Domain"` = keyof `typedData`
 
 #### Parameters
 
-• **parameters**: [`TypedDataDefinition`](TypedDataDefinition.md)\<`typedData`, `primaryType`\>
+##### parameters
+
+[`TypedDataDefinition`](TypedDataDefinition.md)\<`typedData`, `primaryType`\>
 
 #### Returns
 
 `Promise`\<[`Hex`](Hex.md)\>
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:14

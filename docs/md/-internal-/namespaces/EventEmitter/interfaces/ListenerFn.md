@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -6,20 +6,24 @@
 
 # Interface: ListenerFn()\<Args\>
 
+Defined in: node\_modules/.pnpm/eventemitter3@5.0.4/node\_modules/eventemitter3/index.d.ts:83
+
 ## Type Parameters
 
-• **Args** *extends* `any`[] = `any`[]
+### Args
+
+`Args` *extends* `any`[] = `any`[]
 
 > **ListenerFn**(...`args`): `void`
 
+Defined in: node\_modules/.pnpm/eventemitter3@5.0.4/node\_modules/eventemitter3/index.d.ts:84
+
 ## Parameters
 
-• ...**args**: `Args`
+### args
+
+...`Args`
 
 ## Returns
 
 `void`
-
-## Defined in
-
-node\_modules/.pnpm/eventemitter3@5.0.1/node\_modules/eventemitter3/index.d.ts:84

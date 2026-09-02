@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: ContractDeploySend\<Abi\>
 
-> **ContractDeploySend**\<`Abi`\>: [`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`Contract`](../classes/Contract.md)\<`Abi`\>, [`SendTransactionEvents`](SendTransactionEvents.md)\<[`DataFormat`](DataFormat.md)\>\>
+> **ContractDeploySend**\<`Abi`\> = [`Web3PromiEvent`](../classes/Web3PromiEvent.md)\<[`Contract`](../classes/Contract-2.md)\<`Abi`\>, [`SendTransactionEvents`](SendTransactionEvents.md)\<[`DataFormat`](DataFormat.md)\>\>
+
+Defined in: node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.9.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:6
 
 ## Type Parameters
 
-• **Abi** *extends* [`ContractAbi`](ContractAbi.md)
+### Abi
 
-## Defined in
-
-node\_modules/.pnpm/web3-eth-contract@4.7.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/web3-eth-contract/lib/commonjs/contract-deployer-method-class.d.ts:6
+`Abi` *extends* [`ContractAbi`](ContractAbi.md)

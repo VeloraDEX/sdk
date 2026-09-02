@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,29 +6,33 @@
 
 # Class: BigNumber
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:4
+
 ## Implements
 
 - [`Hexable`](../interfaces/Hexable.md)
 
 ## Constructors
 
-### new BigNumber()
+### Constructor
 
-> **new BigNumber**(`constructorGuard`, `hex`): [`BigNumber`](BigNumber.md)
+> **new BigNumber**(`constructorGuard`, `hex`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:7
 
 #### Parameters
 
-• **constructorGuard**: `any`
+##### constructorGuard
 
-• **hex**: `string`
+`any`
+
+##### hex
+
+`string`
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:7
+`BigNumber`
 
 ## Properties
 
@@ -36,9 +40,7 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **\_hex**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:5
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:5
 
 ***
 
@@ -46,77 +48,73 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **\_isBigNumber**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:6
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:6
 
 ## Methods
 
 ### abs()
 
-> **abs**(): [`BigNumber`](BigNumber.md)
+> **abs**(): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:10
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:10
+`BigNumber`
 
 ***
 
 ### add()
 
-> **add**(`other`): [`BigNumber`](BigNumber.md)
+> **add**(`other`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:11
 
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:11
+`BigNumber`
 
 ***
 
 ### and()
 
-> **and**(`other`): [`BigNumber`](BigNumber.md)
+> **and**(`other`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:17
 
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:17
+`BigNumber`
 
 ***
 
 ### div()
 
-> **div**(`other`): [`BigNumber`](BigNumber.md)
+> **div**(`other`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:13
 
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:13
+`BigNumber`
 
 ***
 
@@ -124,35 +122,35 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **eq**(`other`): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:23
+
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
 `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:23
-
 ***
 
 ### fromTwos()
 
-> **fromTwos**(`value`): [`BigNumber`](BigNumber.md)
+> **fromTwos**(`value`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:8
 
 #### Parameters
 
-• **value**: `number`
+##### value
+
+`number`
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:8
+`BigNumber`
 
 ***
 
@@ -160,17 +158,17 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **gt**(`other`): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:26
+
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:26
 
 ***
 
@@ -178,17 +176,17 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **gte**(`other`): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:27
+
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:27
 
 ***
 
@@ -196,13 +194,11 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **isNegative**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:28
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:28
 
 ***
 
@@ -210,13 +206,11 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **isZero**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:29
+
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:29
 
 ***
 
@@ -224,17 +218,17 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **lt**(`other`): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:24
+
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:24
 
 ***
 
@@ -242,161 +236,161 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **lte**(`other`): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:25
+
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
 `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:25
-
 ***
 
 ### mask()
 
-> **mask**(`value`): [`BigNumber`](BigNumber.md)
+> **mask**(`value`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:20
 
 #### Parameters
 
-• **value**: `number`
+##### value
+
+`number`
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:20
+`BigNumber`
 
 ***
 
 ### mod()
 
-> **mod**(`other`): [`BigNumber`](BigNumber.md)
+> **mod**(`other`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:15
 
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:15
+`BigNumber`
 
 ***
 
 ### mul()
 
-> **mul**(`other`): [`BigNumber`](BigNumber.md)
+> **mul**(`other`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:14
 
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:14
+`BigNumber`
 
 ***
 
 ### or()
 
-> **or**(`other`): [`BigNumber`](BigNumber.md)
+> **or**(`other`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:18
 
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:18
+`BigNumber`
 
 ***
 
 ### pow()
 
-> **pow**(`other`): [`BigNumber`](BigNumber.md)
+> **pow**(`other`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:16
 
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:16
+`BigNumber`
 
 ***
 
 ### shl()
 
-> **shl**(`value`): [`BigNumber`](BigNumber.md)
+> **shl**(`value`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:21
 
 #### Parameters
 
-• **value**: `number`
+##### value
+
+`number`
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:21
+`BigNumber`
 
 ***
 
 ### shr()
 
-> **shr**(`value`): [`BigNumber`](BigNumber.md)
+> **shr**(`value`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:22
 
 #### Parameters
 
-• **value**: `number`
+##### value
+
+`number`
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:22
+`BigNumber`
 
 ***
 
 ### sub()
 
-> **sub**(`other`): [`BigNumber`](BigNumber.md)
+> **sub**(`other`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:12
 
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:12
+`BigNumber`
 
 ***
 
@@ -404,19 +398,19 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **toBigInt**(): `bigint`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:31
+
 #### Returns
 
 `bigint`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:31
 
 ***
 
 ### toHexString()
 
 > **toHexString**(): `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:33
 
 #### Returns
 
@@ -426,27 +420,23 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 [`Hexable`](../interfaces/Hexable.md).[`toHexString`](../interfaces/Hexable.md#tohexstring)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:33
-
 ***
 
 ### toJSON()
 
-> **toJSON**(`key`?): `any`
+> **toJSON**(`key?`): `any`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:34
 
 #### Parameters
 
-• **key?**: `string`
+##### key?
+
+`string`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:34
 
 ***
 
@@ -454,13 +444,11 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **toNumber**(): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:30
+
 #### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:30
 
 ***
 
@@ -468,69 +456,67 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > **toString**(): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:32
+
 Returns a string representation of an object.
 
 #### Returns
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:32
-
 ***
 
 ### toTwos()
 
-> **toTwos**(`value`): [`BigNumber`](BigNumber.md)
+> **toTwos**(`value`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:9
 
 #### Parameters
 
-• **value**: `number`
+##### value
+
+`number`
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:9
+`BigNumber`
 
 ***
 
 ### xor()
 
-> **xor**(`other`): [`BigNumber`](BigNumber.md)
+> **xor**(`other`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:19
 
 #### Parameters
 
-• **other**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### other
+
+[`BigNumberish`](../type-aliases/BigNumberish.md)
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:19
+`BigNumber`
 
 ***
 
 ### from()
 
-> `static` **from**(`value`): [`BigNumber`](BigNumber.md)
+> `static` **from**(`value`): `BigNumber`
+
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:35
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
-[`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:35
+`BigNumber`
 
 ***
 
@@ -538,14 +524,14 @@ node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/
 
 > `static` **isBigNumber**(`value`): `value is BigNumber`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:36
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `value is BigNumber`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:36

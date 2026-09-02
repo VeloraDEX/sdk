@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,10 +6,6 @@
 
 # Type Alias: BigNumberish
 
-> **BigNumberish**: `string` \| [`Numeric`](Numeric.md)
+> **BigNumberish** = [`BigNumber`](../classes/BigNumber.md) \| [`Bytes`](Bytes.md) \| `bigint` \| `string` \| `number`
 
-Any type that can be used where a big number is needed.
-
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/maths.d.ts:9
+Defined in: node\_modules/.pnpm/@ethersproject+bignumber@5.8.0/node\_modules/@ethersproject/bignumber/lib/bignumber.d.ts:2

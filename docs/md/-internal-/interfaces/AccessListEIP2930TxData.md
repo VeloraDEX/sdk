@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AccessListEIP2930TxData
 
 # Interface: AccessListEIP2930TxData
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:126
 
 AccessListEIP2930Transaction data.
 
@@ -20,31 +22,29 @@ AccessListEIP2930Transaction data.
 
 ### accessList?
 
-> `optional` **accessList**: `null` \| [`AccessListUint8Array`](../type-aliases/AccessListUint8Array.md) \| [`AccessList`](../type-aliases/AccessList.md)
+> `optional` **accessList?**: [`AccessListUint8Array`](../type-aliases/AccessListUint8Array.md) \| [`AccessList`](../type-aliases/AccessList-4.md) \| `null`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:134
 
 The access list which contains the addresses/storage slots which the transaction wishes to access
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:134
 
 ***
 
 ### chainId?
 
-> `optional` **chainId**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **chainId?**: [`Numbers`](../type-aliases/Numbers.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:130
 
 The transaction's chain ID
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:130
 
 ***
 
 ### data?
 
-> `optional` **data**: [`Uint8ArrayLike`](../type-aliases/Uint8ArrayLike.md)
+> `optional` **data?**: [`Uint8ArrayLike`](../type-aliases/Uint8ArrayLike.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:105
 
 This will contain the data of the message or the init of a contract.
 
@@ -52,15 +52,13 @@ This will contain the data of the message or the init of a contract.
 
 `TxData.data`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:105
-
 ***
 
 ### gasLimit?
 
-> `optional` **gasLimit**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **gasLimit?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:93
 
 The transaction's gas limit.
 
@@ -68,15 +66,13 @@ The transaction's gas limit.
 
 `TxData.gasLimit`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:93
-
 ***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: `null` \| `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **gasPrice?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\> \| `null`
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:89
 
 The transaction's gas price.
 
@@ -84,15 +80,13 @@ The transaction's gas price.
 
 `TxData.gasPrice`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:89
-
 ***
 
 ### nonce?
 
-> `optional` **nonce**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **nonce?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:85
 
 The transaction's nonce.
 
@@ -100,15 +94,13 @@ The transaction's nonce.
 
 `TxData.nonce`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:85
-
 ***
 
 ### r?
 
-> `optional` **r**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **r?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:113
 
 EC signature parameter.
 
@@ -116,15 +108,13 @@ EC signature parameter.
 
 `TxData.r`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:113
-
 ***
 
 ### s?
 
-> `optional` **s**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **s?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:117
 
 EC signature parameter.
 
@@ -132,15 +122,13 @@ EC signature parameter.
 
 `TxData.s`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:117
-
 ***
 
 ### to?
 
-> `optional` **to**: `string` \| `Uint8Array` \| [`Address`](../classes/Address.md)
+> `optional` **to?**: `string` \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\> \| [`Address`](../classes/Address.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:97
 
 The transaction's the address is sent to.
 
@@ -148,15 +136,13 @@ The transaction's the address is sent to.
 
 `TxData.to`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:97
-
 ***
 
 ### type?
 
-> `optional` **type**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **type?**: [`Numbers`](../type-aliases/Numbers.md)
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:121
 
 The transaction type
 
@@ -164,15 +150,13 @@ The transaction type
 
 `TxData.type`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:121
-
 ***
 
 ### v?
 
-> `optional` **v**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **v?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:109
 
 EC recovery ID.
 
@@ -180,22 +164,16 @@ EC recovery ID.
 
 `TxData.v`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:109
-
 ***
 
 ### value?
 
-> `optional` **value**: `Uint8Array` \| [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **value?**: [`Numbers`](../type-aliases/Numbers.md) \| `Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>
+
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:101
 
 The amount of Ether sent.
 
 #### Inherited from
 
 `TxData.value`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/tx/types.d.ts:101

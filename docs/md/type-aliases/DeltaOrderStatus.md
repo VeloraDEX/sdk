@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: DeltaOrderStatus
 
-> **DeltaOrderStatus**: *typeof* [`DeltaOrderStatusMap`](../-internal-/variables/DeltaOrderStatusMap.md)\[keyof *typeof* [`DeltaOrderStatusMap`](../-internal-/variables/DeltaOrderStatusMap.md)\]
+> **DeltaOrderStatus** = *typeof* [`DeltaOrderStatusMap`](../variables/DeltaOrderStatusMap.md)\[keyof *typeof* [`DeltaOrderStatusMap`](../variables/DeltaOrderStatusMap.md)\]
 
-## Defined in
-
-[src/methods/delta/types.ts:145](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L145)
+Defined in: [src/methods/delta/types.ts:145](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L145)

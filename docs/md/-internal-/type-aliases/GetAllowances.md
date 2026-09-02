@@ -1,25 +1,29 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / GetAllowances
 
-# Type Alias: GetAllowances()
+# Type Alias: GetAllowances
 
-> **GetAllowances**: (`userAddress`, `tokenAddresses`, `requestParams`?) => `Promise`\<[`Allowance`](../../interfaces/Allowance.md)[]\>
+> **GetAllowances** = (`userAddress`, `tokenAddresses`, `requestParams?`) => `Promise`\<[`Allowance`](../../interfaces/Allowance.md)[]\>
+
+Defined in: [src/methods/swap/balance.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L30)
 
 ## Parameters
 
-• **userAddress**: [`Address`](../../type-aliases/Address.md)
+### userAddress
 
-• **tokenAddresses**: [`Address`](../../type-aliases/Address.md)[]
+[`Address`](../../type-aliases/Address.md)
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+### tokenAddresses
+
+[`Address`](../../type-aliases/Address.md)[]
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<[`Allowance`](../../interfaces/Allowance.md)[]\>
-
-## Defined in
-
-[src/methods/swap/balance.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L30)

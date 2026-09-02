@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Interface: Web3BaseWalletAccount
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:42
+
 ## Extended by
 
 - [`Web3Account`](Web3Account.md)
 
 ## Indexable
 
- \[`key`: `string`\]: `unknown`
+> \[`key`: `string`\]: `unknown`
 
 ## Properties
 
@@ -20,29 +22,29 @@
 
 > `readonly` **address**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:44
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:44
 
 ***
 
-### encrypt()
+### encrypt
 
-> `readonly` **encrypt**: (`password`, `options`?) => `Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
+> `readonly` **encrypt**: (`password`, `options?`) => `Promise`\<[`KeyStore`](../type-aliases/KeyStore.md)\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:62
 
 #### Parameters
 
-• **password**: `string`
+##### password
 
-• **options?**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+`string`
+
+##### options?
+
+[`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
 
 #### Returns
 
-`Promise`\<[`KeyStore`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/KeyStore.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:62
+`Promise`\<[`KeyStore`](../type-aliases/KeyStore.md)\>
 
 ***
 
@@ -50,19 +52,21 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `readonly` **privateKey**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:45
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:45
 
 ***
 
-### sign()
+### sign
 
 > `readonly` **sign**: (`data`) => `object`
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:54
+
 #### Parameters
 
-• **data**: `string` \| [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
+##### data
+
+`string` \| [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
 
 #### Returns
 
@@ -70,7 +74,7 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 ##### message?
 
-> `readonly` `optional` **message**: `string`
+> `readonly` `optional` **message?**: `string`
 
 ##### messageHash
 
@@ -92,48 +96,20 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > `readonly` **v**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:54
-
 ***
 
-### signTransaction()
+### signTransaction
 
-> `readonly` **signTransaction**: (`tx`) => `Promise`\<`object`\>
+> `readonly` **signTransaction**: (`tx`) => `Promise`\<\{ `messageHash`: `string`; `r`: `string`; `rawTransaction`: `string`; `s`: `string`; `transactionHash`: `string`; `v`: `string`; \}\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:46
 
 #### Parameters
 
-• **tx**: [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+##### tx
+
+[`Transaction`](Transaction-1.md)
 
 #### Returns
 
-`Promise`\<`object`\>
-
-##### messageHash
-
-> `readonly` **messageHash**: `string`
-
-##### r
-
-> `readonly` **r**: `string`
-
-##### rawTransaction
-
-> `readonly` **rawTransaction**: `string`
-
-##### s
-
-> `readonly` **s**: `string`
-
-##### transactionHash
-
-> `readonly` **transactionHash**: `string`
-
-##### v
-
-> `readonly` **v**: `string`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_wallet.d.ts:46
+`Promise`\<\{ `messageHash`: `string`; `r`: `string`; `rawTransaction`: `string`; `s`: `string`; `transactionHash`: `string`; `v`: `string`; \}\>

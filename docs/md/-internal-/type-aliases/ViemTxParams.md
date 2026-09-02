@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,21 +6,23 @@
 
 # Type Alias: ViemTxParams
 
-> **ViemTxParams**: `object` & `object` \| `object`
+> **ViemTxParams** = `object` & \{ `maxFeePerGas?`: `bigint`; `maxPriorityFeePerGas?`: `bigint`; \} \| \{ `gasPrice?`: `bigint`; \}
 
-## Type declaration
+Defined in: [src/helpers/providers/viem.ts:153](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/viem.ts#L153)
+
+## Type Declaration
 
 ### data?
 
-> `optional` **data**: [`Hex`](Hex.md)
+> `optional` **data?**: [`Hex`](Hex.md)
 
 ### gas?
 
-> `optional` **gas**: `bigint`
+> `optional` **gas?**: `bigint`
 
 ### nonce?
 
-> `optional` **nonce**: `number`
+> `optional` **nonce?**: `number`
 
 ### to
 
@@ -28,8 +30,4 @@
 
 ### value?
 
-> `optional` **value**: `bigint`
-
-## Defined in
-
-[src/helpers/providers/viem.ts:153](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/providers/viem.ts#L153)
+> `optional` **value?**: `bigint`

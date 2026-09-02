@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: Topics\<head, base\>
 
-> **Topics**\<`head`, `base`\>: `head` *extends* readonly [infer \_Head, `...(infer Tail extends AbiEvent["inputs"])`] ? `_Head` *extends* `object` ? [[`Hex`](Hex.md), `...Topics<Tail>`] : [`Topics`](Topics.md)\<`Tail`\> : `base`
+> **Topics**\<`head`, `base`\> = `head` *extends* readonly \[infer \_Head, `...(infer Tail extends AbiEvent["inputs"])`\] ? `_Head` *extends* `object` ? \[[`Hex`](Hex.md), `...Topics<Tail>`\] : `Topics`\<`Tail`\> : `base`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/log.d.ts:24
 
 ## Type Parameters
 
-• **head** *extends* [`AbiEvent`](AbiEvent.md)\[`"inputs"`\]
+### head
 
-• **base** = [[`Hex`](Hex.md)]
+`head` *extends* [`AbiEvent`](AbiEvent.md)\[`"inputs"`\]
 
-## Defined in
+### base
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/log.d.ts:22
+`base` = \[[`Hex`](Hex.md)\]

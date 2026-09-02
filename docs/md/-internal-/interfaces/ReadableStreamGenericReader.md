@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ReadableStreamGenericReader
 
 # Interface: ReadableStreamGenericReader
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:99
 
 ## Extended by
 
@@ -17,24 +19,22 @@
 
 > `readonly` **closed**: `Promise`\<`undefined`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:100
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:100
 
 ## Methods
 
 ### cancel()
 
-> **cancel**(`reason`?): `Promise`\<`void`\>
+> **cancel**(`reason?`): `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:101
 
 #### Parameters
 
-• **reason?**: `any`
+##### reason?
+
+`any`
 
 #### Returns
 
 `Promise`\<`void`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:101

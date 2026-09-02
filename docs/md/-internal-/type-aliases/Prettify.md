@@ -1,32 +1,17 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Prettify
 
-# Type Alias: Prettify\<T\>
+# Type Alias: Prettify\<Type\>
 
-> **Prettify**\<`T`\>: `{ [K in keyof T]: T[K] }` & `object`
+> **Prettify**\<`Type`\> = `Type` *extends* `Function` ? `Type` : `{ [Key in keyof Type]: Type[Key] }` & `object`
+
+Defined in: node\_modules/.pnpm/ts-essentials@10.0.3\_typescript@5.9.3/node\_modules/ts-essentials/dist/prettify/index.d.ts:1
 
 ## Type Parameters
 
-• **T**
+### Type
 
-## Description
-
-Combines members of an intersection into a readable type.
-
-## See
-
-[https://twitter.com/mattpocockuk/status/1622730173446557697?s=20&t=NdpAcmEFXY01xkqU3KO0Mg](https://twitter.com/mattpocockuk/status/1622730173446557697?s=20&t=NdpAcmEFXY01xkqU3KO0Mg)
-
-## Example
-
-```ts
-Prettify<{ a: string } & { b: string } & { c: number, d: bigint }>
-=> { a: string, b: string, c: number, d: bigint }
-```
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:125
+`Type`

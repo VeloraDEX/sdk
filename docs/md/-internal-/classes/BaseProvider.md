@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / BaseProvider
 
 # Class: BaseProvider
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:56
 
 ## Extends
 
@@ -16,9 +18,11 @@
 
 ## Constructors
 
-### new BaseProvider()
+### Constructor
 
-> **new BaseProvider**(`network`): [`BaseProvider`](BaseProvider.md)
+> **new BaseProvider**(`network`): `BaseProvider`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:89
 
 ready
 
@@ -29,19 +33,17 @@ ready
 
 #### Parameters
 
-• **network**: `Promise`\<[`Network`](../type-aliases/Network.md)\> \| [`Networkish`](../type-aliases/Networkish.md)
+##### network
+
+`Promise`\<[`Network`](../type-aliases/Network.md)\> \| [`Networkish`](../type-aliases/Networkish.md)
 
 #### Returns
 
-[`BaseProvider`](BaseProvider.md)
+`BaseProvider`
 
 #### Overrides
 
-[`Provider`](Provider.md).[`constructor`](Provider.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:89
+[`Provider`](Provider.md).[`constructor`](Provider.md#constructor)
 
 ## Properties
 
@@ -49,9 +51,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_bootstrapPoll**: [`Timer`](../interfaces/Timer.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:66
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:66
 
 ***
 
@@ -59,13 +59,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_emitted**: `object`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:61
+
 #### Index Signature
 
- \[`eventName`: `string`\]: `number` \| `"pending"`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:61
+\[`eventName`: `string`\]: `number` \| `"pending"`
 
 ***
 
@@ -73,9 +71,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_events**: [`Event`](Event.md)[]
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:59
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:59
 
 ***
 
@@ -83,9 +79,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_fastBlockNumber**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:69
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:69
 
 ***
 
@@ -93,9 +87,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_fastBlockNumberPromise**: `Promise`\<`number`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:70
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:70
 
 ***
 
@@ -103,33 +95,15 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_fastQueryDate**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:71
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:71
 
 ***
 
 ### \_internalBlockNumber
 
-> **\_internalBlockNumber**: `Promise`\<`object`\>
+> **\_internalBlockNumber**: `Promise`\<\{ `blockNumber`: `number`; `reqTime`: `number`; `respTime`: `number`; \}\>
 
-#### Type declaration
-
-##### blockNumber
-
-> **blockNumber**: `number`
-
-##### reqTime
-
-> **reqTime**: `number`
-
-##### respTime
-
-> **respTime**: `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:73
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:73
 
 ***
 
@@ -137,13 +111,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **\_isProvider**: `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:152
+
 #### Inherited from
 
 [`Provider`](Provider.md).[`_isProvider`](Provider.md#_isprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:152
 
 ***
 
@@ -151,9 +123,7 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **\_lastBlockNumber**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:67
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:67
 
 ***
 
@@ -161,9 +131,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_maxFilterBlockRange**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:68
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:68
 
 ***
 
@@ -171,9 +139,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_maxInternalBlockNumber**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:72
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:72
 
 ***
 
@@ -181,9 +147,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_network**: [`Network`](../type-aliases/Network.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:58
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:58
 
 ***
 
@@ -191,9 +155,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_networkPromise**: `Promise`\<[`Network`](../type-aliases/Network.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:57
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:57
 
 ***
 
@@ -201,9 +163,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_poller**: [`Timer`](../interfaces/Timer.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:65
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:65
 
 ***
 
@@ -211,9 +171,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_pollingInterval**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:64
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:64
 
 ***
 
@@ -221,9 +179,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `readonly` **anyNetwork**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:78
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:78
 
 ***
 
@@ -231,9 +187,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **disableCcipRead**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:79
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:79
 
 ***
 
@@ -241,9 +195,7 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **formatter**: [`Formatter`](Formatter.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:60
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:60
 
 ## Accessors
 
@@ -253,13 +205,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **get** **blockNumber**(): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:101
+
 ##### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:101
 
 ***
 
@@ -269,13 +219,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **get** **network**(): [`Network`](../type-aliases/Network.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:98
+
 ##### Returns
 
 [`Network`](../type-aliases/Network.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:98
 
 ***
 
@@ -285,6 +233,8 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **get** **polling**(): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:102
+
 ##### Returns
 
 `boolean`
@@ -293,17 +243,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **set** **polling**(`value`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:103
+
 ##### Parameters
 
-• **value**: `boolean`
+###### value
+
+`boolean`
 
 ##### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:102
 
 ***
 
@@ -313,6 +263,8 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **get** **pollingInterval**(): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:104
+
 ##### Returns
 
 `number`
@@ -321,17 +273,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **set** **pollingInterval**(`value`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:105
+
 ##### Parameters
 
-• **value**: `number`
+###### value
+
+`number`
 
 ##### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:104
 
 ***
 
@@ -341,13 +293,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **get** **ready**(): `Promise`\<[`Network`](../type-aliases/Network.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:91
+
 ##### Returns
 
 `Promise`\<[`Network`](../type-aliases/Network.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:91
 
 ## Methods
 
@@ -355,21 +305,25 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_addEventListener**(`eventName`, `listener`, `once`): `this`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:147
+
 #### Parameters
 
-• **eventName**: [`EventType`](../type-aliases/EventType.md)
+##### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`EventType`](../type-aliases/EventType.md)
 
-• **once**: `boolean`
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
+
+##### once
+
+`boolean`
 
 #### Returns
 
 `this`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:147
 
 ***
 
@@ -377,21 +331,25 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_call**(`transaction`, `blockTag`, `attempt`): `Promise`\<`string`\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:127
+
 #### Parameters
 
-• **transaction**: [`TransactionRequest`](../type-aliases/TransactionRequest.md)
+##### transaction
 
-• **blockTag**: [`BlockTag`](../type-aliases/BlockTag.md)
+[`TransactionRequest`](../type-aliases/TransactionRequest.md)
 
-• **attempt**: `number`
+##### blockTag
+
+[`BlockTag`](../type-aliases/BlockTag.md)
+
+##### attempt
+
+`number`
 
 #### Returns
 
 `Promise`\<`string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:127
 
 ***
 
@@ -399,37 +357,39 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_getAddress**(`addressOrName`): `Promise`\<`string`\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:130
+
 #### Parameters
 
-• **addressOrName**: `string` \| `Promise`\<`string`\>
+##### addressOrName
+
+`string` \| `Promise`\<`string`\>
 
 #### Returns
 
 `Promise`\<`string`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:130
-
 ***
 
 ### \_getBlock()
 
-> **\_getBlock**(`blockHashOrBlockTag`, `includeTransactions`?): `Promise`\<[`Block`](../interfaces/Block.md) \| [`BlockWithTransactions`](../interfaces/BlockWithTransactions.md)\>
+> **\_getBlock**(`blockHashOrBlockTag`, `includeTransactions?`): `Promise`\<[`Block`](../interfaces/Block-1.md) \| [`BlockWithTransactions`](../interfaces/BlockWithTransactions.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:131
 
 #### Parameters
 
-• **blockHashOrBlockTag**: [`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+##### blockHashOrBlockTag
 
-• **includeTransactions?**: `boolean`
+[`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+
+##### includeTransactions?
+
+`boolean`
 
 #### Returns
 
-`Promise`\<[`Block`](../interfaces/Block.md) \| [`BlockWithTransactions`](../interfaces/BlockWithTransactions.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:131
+`Promise`\<[`Block`](../interfaces/Block-1.md) \| [`BlockWithTransactions`](../interfaces/BlockWithTransactions.md)\>
 
 ***
 
@@ -437,17 +397,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_getBlockTag**(`blockTag`): `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:138
+
 #### Parameters
 
-• **blockTag**: [`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+##### blockTag
+
+[`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
 
 #### Returns
 
 `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:138
 
 ***
 
@@ -455,13 +415,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_getFastBlockNumber**(): `Promise`\<`number`\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:106
+
 #### Returns
 
 `Promise`\<`number`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:106
 
 ***
 
@@ -469,17 +427,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_getFilter**(`filter`): `Promise`\<[`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:126
+
 #### Parameters
 
-• **filter**: [`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md) \| `Promise`\<[`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md)\>
+##### filter
+
+[`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md) \| `Promise`\<[`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md)\>
 
 #### Returns
 
 `Promise`\<[`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:126
 
 ***
 
@@ -487,37 +445,39 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_getInternalBlockNumber**(`maxAge`): `Promise`\<`number`\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:95
+
 #### Parameters
 
-• **maxAge**: `number`
+##### maxAge
+
+`number`
 
 #### Returns
 
 `Promise`\<`number`\>
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:95
-
 ***
 
 ### \_getResolver()
 
-> **\_getResolver**(`name`, `operation`?): `Promise`\<`string`\>
+> **\_getResolver**(`name`, `operation?`): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:140
 
 #### Parameters
 
-• **name**: `string`
+##### name
 
-• **operation?**: `string`
+`string`
+
+##### operation?
+
+`string`
 
 #### Returns
 
 `Promise`\<`string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:140
 
 ***
 
@@ -525,17 +485,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_getTransactionRequest**(`transaction`): `Promise`\<[`Transaction`](../interfaces/Transaction.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:125
+
 #### Parameters
 
-• **transaction**: [`Deferrable`](../type-aliases/Deferrable.md)\<[`TransactionRequest`](../type-aliases/TransactionRequest.md)\>
+##### transaction
+
+[`Deferrable`](../type-aliases/Deferrable.md)\<[`TransactionRequest`](../type-aliases/TransactionRequest.md)\>
 
 #### Returns
 
 `Promise`\<[`Transaction`](../interfaces/Transaction.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:125
 
 ***
 
@@ -543,13 +503,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_ready**(): `Promise`\<[`Network`](../type-aliases/Network.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:90
+
 #### Returns
 
 `Promise`\<[`Network`](../type-aliases/Network.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:90
 
 ***
 
@@ -557,17 +515,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_setFastBlockNumber**(`blockNumber`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:107
+
 #### Parameters
 
-• **blockNumber**: `number`
+##### blockNumber
+
+`number`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:107
 
 ***
 
@@ -575,17 +533,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_startEvent**(`event`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:145
+
 #### Parameters
 
-• **event**: [`Event`](Event.md)
+##### event
+
+[`Event`](Event.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:145
 
 ***
 
@@ -593,17 +551,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_stopEvent**(`event`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:146
+
 #### Parameters
 
-• **event**: [`Event`](Event.md)
+##### event
+
+[`Event`](Event.md)
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:146
 
 ***
 
@@ -611,57 +569,77 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **\_waitForTransaction**(`transactionHash`, `confirmations`, `timeout`, `replaceable`): `Promise`\<[`TransactionReceipt`](../interfaces/TransactionReceipt.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:109
+
 #### Parameters
 
-• **transactionHash**: `string`
+##### transactionHash
 
-• **confirmations**: `number`
+`string`
 
-• **timeout**: `number`
+##### confirmations
 
-• **replaceable**
+`number`
 
-• **replaceable.data**: `string`
+##### timeout
 
-• **replaceable.from**: `string`
+`number`
 
-• **replaceable.nonce**: `number`
+##### replaceable
 
-• **replaceable.startBlock**: `number`
+###### data
 
-• **replaceable.to**: `string`
+`string`
 
-• **replaceable.value**: [`BigNumber`](BigNumber.md)
+###### from
+
+`string`
+
+###### nonce
+
+`number`
+
+###### startBlock
+
+`number`
+
+###### to
+
+`string`
+
+###### value
+
+[`BigNumber`](BigNumber.md)
 
 #### Returns
 
 `Promise`\<[`TransactionReceipt`](../interfaces/TransactionReceipt.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:109
-
 ***
 
 ### \_wrapTransaction()
 
-> **\_wrapTransaction**(`tx`, `hash`?, `startBlock`?): [`TransactionResponse`](../interfaces/TransactionResponse.md)
+> **\_wrapTransaction**(`tx`, `hash?`, `startBlock?`): [`TransactionResponse`](../interfaces/TransactionResponse.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:123
 
 #### Parameters
 
-• **tx**: [`Transaction`](../interfaces/Transaction.md)
+##### tx
 
-• **hash?**: `string`
+[`Transaction`](../interfaces/Transaction.md)
 
-• **startBlock?**: `number`
+##### hash?
+
+`string`
+
+##### startBlock?
+
+`number`
 
 #### Returns
 
 [`TransactionResponse`](../interfaces/TransactionResponse.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:123
 
 ***
 
@@ -669,11 +647,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **addListener**(`eventName`, `listener`): [`Provider`](Provider.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:149
+
 #### Parameters
 
-• **eventName**: [`EventType`](../type-aliases/EventType.md)
+##### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`EventType`](../type-aliases/EventType.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
@@ -683,21 +667,23 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`addListener`](Provider.md#addlistener)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:149
-
 ***
 
 ### call()
 
-> **call**(`transaction`, `blockTag`?): `Promise`\<`string`\>
+> **call**(`transaction`, `blockTag?`): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:128
 
 #### Parameters
 
-• **transaction**: [`Deferrable`](../type-aliases/Deferrable.md)\<[`TransactionRequest`](../type-aliases/TransactionRequest.md)\>
+##### transaction
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+[`Deferrable`](../type-aliases/Deferrable.md)\<[`TransactionRequest`](../type-aliases/TransactionRequest.md)\>
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
 
 #### Returns
 
@@ -707,31 +693,31 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 [`Provider`](Provider.md).[`call`](Provider.md#call)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:128
-
 ***
 
 ### ccipReadFetch()
 
-> **ccipReadFetch**(`tx`, `calldata`, `urls`): `Promise`\<`null` \| `string`\>
+> **ccipReadFetch**(`tx`, `calldata`, `urls`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:94
 
 #### Parameters
 
-• **tx**: [`Transaction`](../interfaces/Transaction.md)
+##### tx
 
-• **calldata**: `string`
+[`Transaction`](../interfaces/Transaction.md)
 
-• **urls**: `string`[]
+##### calldata
+
+`string`
+
+##### urls
+
+`string`[]
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:94
+`Promise`\<`string` \| `null`\>
 
 ***
 
@@ -739,13 +725,11 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **detectNetwork**(): `Promise`\<[`Network`](../type-aliases/Network.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:99
+
 #### Returns
 
 `Promise`\<[`Network`](../type-aliases/Network.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:99
 
 ***
 
@@ -753,11 +737,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **emit**(`eventName`, ...`args`): `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:150
+
 #### Parameters
 
-• **eventName**: [`EventType`](../type-aliases/EventType.md)
+##### eventName
 
-• ...**args**: `any`[]
+[`EventType`](../type-aliases/EventType.md)
+
+##### args
+
+...`any`[]
 
 #### Returns
 
@@ -767,19 +757,19 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`emit`](Provider.md#emit)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:150
-
 ***
 
 ### estimateGas()
 
 > **estimateGas**(`transaction`): `Promise`\<[`BigNumber`](BigNumber.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:129
+
 #### Parameters
 
-• **transaction**: [`Deferrable`](../type-aliases/Deferrable.md)\<[`TransactionRequest`](../type-aliases/TransactionRequest.md)\>
+##### transaction
+
+[`Deferrable`](../type-aliases/Deferrable.md)\<[`TransactionRequest`](../type-aliases/TransactionRequest.md)\>
 
 #### Returns
 
@@ -789,39 +779,41 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`estimateGas`](Provider.md#estimategas)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:129
-
 ***
 
 ### getAvatar()
 
-> **getAvatar**(`nameOrAddress`): `Promise`\<`null` \| `string`\>
+> **getAvatar**(`nameOrAddress`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:143
 
 #### Parameters
 
-• **nameOrAddress**: `string`
+##### nameOrAddress
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:143
+`Promise`\<`string` \| `null`\>
 
 ***
 
 ### getBalance()
 
-> **getBalance**(`addressOrName`, `blockTag`?): `Promise`\<[`BigNumber`](BigNumber.md)\>
+> **getBalance**(`addressOrName`, `blockTag?`): `Promise`\<[`BigNumber`](BigNumber.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:119
 
 #### Parameters
 
-• **addressOrName**: `string` \| `Promise`\<`string`\>
+##### addressOrName
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+`string` \| `Promise`\<`string`\>
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
 
 #### Returns
 
@@ -831,37 +823,35 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getBalance`](Provider.md#getbalance)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:119
-
 ***
 
 ### getBlock()
 
-> **getBlock**(`blockHashOrBlockTag`): `Promise`\<[`Block`](../interfaces/Block.md)\>
+> **getBlock**(`blockHashOrBlockTag`): `Promise`\<[`Block`](../interfaces/Block-1.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:132
 
 #### Parameters
 
-• **blockHashOrBlockTag**: [`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+##### blockHashOrBlockTag
+
+[`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
 
 #### Returns
 
-`Promise`\<[`Block`](../interfaces/Block.md)\>
+`Promise`\<[`Block`](../interfaces/Block-1.md)\>
 
 #### Overrides
 
 [`Provider`](Provider.md).[`getBlock`](Provider.md#getblock)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:132
 
 ***
 
 ### getBlockNumber()
 
 > **getBlockNumber**(): `Promise`\<`number`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:117
 
 #### Returns
 
@@ -871,19 +861,19 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getBlockNumber`](Provider.md#getblocknumber)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:117
-
 ***
 
 ### getBlockWithTransactions()
 
 > **getBlockWithTransactions**(`blockHashOrBlockTag`): `Promise`\<[`BlockWithTransactions`](../interfaces/BlockWithTransactions.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:133
+
 #### Parameters
 
-• **blockHashOrBlockTag**: [`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+##### blockHashOrBlockTag
+
+[`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
 
 #### Returns
 
@@ -893,21 +883,23 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getBlockWithTransactions`](Provider.md#getblockwithtransactions)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:133
-
 ***
 
 ### getCode()
 
-> **getCode**(`addressOrName`, `blockTag`?): `Promise`\<`string`\>
+> **getCode**(`addressOrName`, `blockTag?`): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:121
 
 #### Parameters
 
-• **addressOrName**: `string` \| `Promise`\<`string`\>
+##### addressOrName
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+`string` \| `Promise`\<`string`\>
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
 
 #### Returns
 
@@ -917,29 +909,25 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getCode`](Provider.md#getcode)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:121
-
 ***
 
 ### getEtherPrice()
 
 > **getEtherPrice**(): `Promise`\<`number`\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:137
+
 #### Returns
 
 `Promise`\<`number`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:137
 
 ***
 
 ### getFeeData()
 
 > **getFeeData**(): `Promise`\<[`FeeData`](../interfaces/FeeData.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:127
 
 #### Returns
 
@@ -949,15 +937,13 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getFeeData`](Provider.md#getfeedata)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:127
-
 ***
 
 ### getGasPrice()
 
 > **getGasPrice**(): `Promise`\<[`BigNumber`](BigNumber.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:118
 
 #### Returns
 
@@ -967,19 +953,19 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 [`Provider`](Provider.md).[`getGasPrice`](Provider.md#getgasprice)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:118
-
 ***
 
 ### getLogs()
 
 > **getLogs**(`filter`): `Promise`\<[`Log`](../interfaces/Log.md)[]\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:136
+
 #### Parameters
 
-• **filter**: [`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md) \| `Promise`\<[`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md)\>
+##### filter
+
+[`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md) \| `Promise`\<[`Filter`](../interfaces/Filter.md) \| [`FilterByBlockHash`](../interfaces/FilterByBlockHash.md)\>
 
 #### Returns
 
@@ -989,15 +975,13 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getLogs`](Provider.md#getlogs)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:136
-
 ***
 
 ### getNetwork()
 
 > **getNetwork**(): `Promise`\<[`Network`](../type-aliases/Network.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:100
 
 #### Returns
 
@@ -1007,45 +991,49 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getNetwork`](Provider.md#getnetwork)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:100
-
 ***
 
 ### getResolver()
 
-> **getResolver**(`name`): `Promise`\<`null` \| [`Resolver`](Resolver.md)\>
+> **getResolver**(`name`): `Promise`\<[`Resolver`](Resolver.md) \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:139
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| [`Resolver`](Resolver.md)\>
+`Promise`\<[`Resolver`](Resolver.md) \| `null`\>
 
 #### Implementation of
 
 [`EnsProvider`](../interfaces/EnsProvider.md).[`getResolver`](../interfaces/EnsProvider.md#getresolver)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:139
-
 ***
 
 ### getStorageAt()
 
-> **getStorageAt**(`addressOrName`, `position`, `blockTag`?): `Promise`\<`string`\>
+> **getStorageAt**(`addressOrName`, `position`, `blockTag?`): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:122
 
 #### Parameters
 
-• **addressOrName**: `string` \| `Promise`\<`string`\>
+##### addressOrName
 
-• **position**: [`BigNumberish`](../type-aliases/BigNumberish.md) \| `Promise`\<[`BigNumberish`](../type-aliases/BigNumberish.md)\>
+`string` \| `Promise`\<`string`\>
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+##### position
+
+[`BigNumberish`](../type-aliases/BigNumberish.md) \| `Promise`\<[`BigNumberish`](../type-aliases/BigNumberish.md)\>
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
 
 #### Returns
 
@@ -1055,19 +1043,19 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getStorageAt`](Provider.md#getstorageat)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:122
-
 ***
 
 ### getTransaction()
 
 > **getTransaction**(`transactionHash`): `Promise`\<[`TransactionResponse`](../interfaces/TransactionResponse.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:134
+
 #### Parameters
 
-• **transactionHash**: `string` \| `Promise`\<`string`\>
+##### transactionHash
+
+`string` \| `Promise`\<`string`\>
 
 #### Returns
 
@@ -1077,21 +1065,23 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getTransaction`](Provider.md#gettransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:134
-
 ***
 
 ### getTransactionCount()
 
-> **getTransactionCount**(`addressOrName`, `blockTag`?): `Promise`\<`number`\>
+> **getTransactionCount**(`addressOrName`, `blockTag?`): `Promise`\<`number`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:120
 
 #### Parameters
 
-• **addressOrName**: `string` \| `Promise`\<`string`\>
+##### addressOrName
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
+`string` \| `Promise`\<`string`\>
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag.md) \| `Promise`\<[`BlockTag`](../type-aliases/BlockTag.md)\>
 
 #### Returns
 
@@ -1101,19 +1091,19 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getTransactionCount`](Provider.md#gettransactioncount)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:120
-
 ***
 
 ### getTransactionReceipt()
 
 > **getTransactionReceipt**(`transactionHash`): `Promise`\<[`TransactionReceipt`](../interfaces/TransactionReceipt.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:135
+
 #### Parameters
 
-• **transactionHash**: `string` \| `Promise`\<`string`\>
+##### transactionHash
+
+`string` \| `Promise`\<`string`\>
 
 #### Returns
 
@@ -1123,19 +1113,19 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`getTransactionReceipt`](Provider.md#gettransactionreceipt)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:135
-
 ***
 
 ### listenerCount()
 
-> **listenerCount**(`eventName`?): `number`
+> **listenerCount**(`eventName?`): `number`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:151
 
 #### Parameters
 
-• **eventName?**: [`EventType`](../type-aliases/EventType.md)
+##### eventName?
+
+[`EventType`](../type-aliases/EventType.md)
 
 #### Returns
 
@@ -1145,19 +1135,19 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`listenerCount`](Provider.md#listenercount)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:151
-
 ***
 
 ### listeners()
 
-> **listeners**(`eventName`?): [`Listener`](../type-aliases/Listener.md)[]
+> **listeners**(`eventName?`): [`Listener`](../type-aliases/Listener.md)[]
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:152
 
 #### Parameters
 
-• **eventName?**: [`EventType`](../type-aliases/EventType.md)
+##### eventName?
+
+[`EventType`](../type-aliases/EventType.md)
 
 #### Returns
 
@@ -1167,23 +1157,23 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`listeners`](Provider.md#listeners)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:152
-
 ***
 
 ### lookupAddress()
 
-> **lookupAddress**(`address`): `Promise`\<`null` \| `string`\>
+> **lookupAddress**(`address`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:142
 
 #### Parameters
 
-• **address**: `string` \| `Promise`\<`string`\>
+##### address
+
+`string` \| `Promise`\<`string`\>
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
+`Promise`\<`string` \| `null`\>
 
 #### Implementation of
 
@@ -1193,21 +1183,23 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`lookupAddress`](Provider.md#lookupaddress)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:142
-
 ***
 
 ### off()
 
-> **off**(`eventName`, `listener`?): `this`
+> **off**(`eventName`, `listener?`): `this`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:153
 
 #### Parameters
 
-• **eventName**: [`EventType`](../type-aliases/EventType.md)
+##### eventName
 
-• **listener?**: [`Listener`](../type-aliases/Listener.md)
+[`EventType`](../type-aliases/EventType.md)
+
+##### listener?
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
@@ -1217,21 +1209,23 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`off`](Provider.md#off)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:153
-
 ***
 
 ### on()
 
 > **on**(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:148
+
 #### Parameters
 
-• **eventName**: [`EventType`](../type-aliases/EventType.md)
+##### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`EventType`](../type-aliases/EventType.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
@@ -1241,21 +1235,23 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`on`](Provider.md#on)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:148
-
 ***
 
 ### once()
 
 > **once**(`eventName`, `listener`): `this`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:149
+
 #### Parameters
 
-• **eventName**: [`EventType`](../type-aliases/EventType.md)
+##### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`EventType`](../type-aliases/EventType.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
@@ -1265,29 +1261,27 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`once`](Provider.md#once)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:149
-
 ***
 
 ### perform()
 
 > **perform**(`method`, `params`): `Promise`\<`any`\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:144
+
 #### Parameters
 
-• **method**: `string`
+##### method
 
-• **params**: `any`
+`string`
+
+##### params
+
+`any`
 
 #### Returns
 
 `Promise`\<`any`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:144
 
 ***
 
@@ -1295,23 +1289,25 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > **poll**(): `Promise`\<`void`\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:96
+
 #### Returns
 
 `Promise`\<`void`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:96
 
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(`eventName`?): `this`
+> **removeAllListeners**(`eventName?`): `this`
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:154
 
 #### Parameters
 
-• **eventName?**: [`EventType`](../type-aliases/EventType.md)
+##### eventName?
+
+[`EventType`](../type-aliases/EventType.md)
 
 #### Returns
 
@@ -1321,21 +1317,23 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`removeAllListeners`](Provider.md#removealllisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:154
-
 ***
 
 ### removeListener()
 
 > **removeListener**(`eventName`, `listener`): [`Provider`](Provider.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:150
+
 #### Parameters
 
-• **eventName**: [`EventType`](../type-aliases/EventType.md)
+##### eventName
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`EventType`](../type-aliases/EventType.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener.md)
 
 #### Returns
 
@@ -1345,41 +1343,41 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`removeListener`](Provider.md#removelistener)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:150
-
 ***
 
 ### resetEventsBlock()
 
 > **resetEventsBlock**(`blockNumber`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:97
+
 #### Parameters
 
-• **blockNumber**: `number`
+##### blockNumber
+
+`number`
 
 #### Returns
 
 `void`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:97
-
 ***
 
 ### resolveName()
 
-> **resolveName**(`name`): `Promise`\<`null` \| `string`\>
+> **resolveName**(`name`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:141
 
 #### Parameters
 
-• **name**: `string` \| `Promise`\<`string`\>
+##### name
+
+`string` \| `Promise`\<`string`\>
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
+`Promise`\<`string` \| `null`\>
 
 #### Implementation of
 
@@ -1389,19 +1387,19 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`resolveName`](Provider.md#resolvename)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:141
-
 ***
 
 ### sendTransaction()
 
 > **sendTransaction**(`signedTransaction`): `Promise`\<[`TransactionResponse`](../interfaces/TransactionResponse.md)\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:124
+
 #### Parameters
 
-• **signedTransaction**: `string` \| `Promise`\<`string`\>
+##### signedTransaction
+
+`string` \| `Promise`\<`string`\>
 
 #### Returns
 
@@ -1411,23 +1409,27 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`sendTransaction`](Provider.md#sendtransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:124
-
 ***
 
 ### waitForTransaction()
 
-> **waitForTransaction**(`transactionHash`, `confirmations`?, `timeout`?): `Promise`\<[`TransactionReceipt`](../interfaces/TransactionReceipt.md)\>
+> **waitForTransaction**(`transactionHash`, `confirmations?`, `timeout?`): `Promise`\<[`TransactionReceipt`](../interfaces/TransactionReceipt.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:108
 
 #### Parameters
 
-• **transactionHash**: `string`
+##### transactionHash
 
-• **confirmations?**: `number`
+`string`
 
-• **timeout?**: `number`
+##### confirmations?
+
+`number`
+
+##### timeout?
+
+`number`
 
 #### Returns
 
@@ -1437,23 +1439,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 [`Provider`](Provider.md).[`waitForTransaction`](Provider.md#waitfortransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:108
-
 ***
 
 ### getFormatter()
 
 > `static` **getFormatter**(): [`Formatter`](Formatter.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:92
+
 #### Returns
 
 [`Formatter`](Formatter.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:92
 
 ***
 
@@ -1461,17 +1457,17 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `static` **getNetwork**(`network`): [`Network`](../type-aliases/Network.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:93
+
 #### Parameters
 
-• **network**: [`Networkish`](../type-aliases/Networkish.md)
+##### network
+
+[`Networkish`](../type-aliases/Networkish.md)
 
 #### Returns
 
 [`Network`](../type-aliases/Network.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/providers/lib/base-provider.d.ts:93
 
 ***
 
@@ -1479,9 +1475,13 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 
 > `static` **isProvider**(`value`): `value is Provider`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:154
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
@@ -1490,7 +1490,3 @@ node\_modules/.pnpm/@ethersproject+providers@5.8.0/node\_modules/@ethersproject/
 #### Inherited from
 
 [`Provider`](Provider.md).[`isProvider`](Provider.md#isprovider)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:154

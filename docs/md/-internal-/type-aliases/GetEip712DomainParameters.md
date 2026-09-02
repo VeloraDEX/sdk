@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,12 @@
 
 # Type Alias: GetEip712DomainParameters
 
-> **GetEip712DomainParameters**: `object` & [`Pick`](Pick.md)\<[`ReadContractParameters`](ReadContractParameters.md), `"factory"` \| `"factoryData"`\>
+> **GetEip712DomainParameters** = `object` & [`Pick`](Pick.md)\<[`ReadContractParameters`](ReadContractParameters.md), `"factory"` \| `"factoryData"`\>
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getEip712Domain.d.ts:9
+
+## Type Declaration
 
 ### address
 
-> **address**: [`Address`](Address.md)
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/getEip712Domain.d.ts:9
+> **address**: [`Address`](Address-1.md)

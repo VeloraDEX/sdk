@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: OTCOrderState
 
-> **OTCOrderState**: `"DRAFT"` \| `"PENDING"` \| `"FULFILLED"` \| `"CANCELLED"` \| `"SUSPENDED"` \| `"EXPIRED"`
+> **OTCOrderState** = `"DRAFT"` \| `"PENDING"` \| `"FULFILLED"` \| `"CANCELLED"` \| `"SUSPENDED"` \| `"EXPIRED"`
 
-## Defined in
-
-[src/methods/otcOrders/helpers/types.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/types.ts#L29)
+Defined in: [src/methods/otcOrders/helpers/types.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/types.ts#L29)

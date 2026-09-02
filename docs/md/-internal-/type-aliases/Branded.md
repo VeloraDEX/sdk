@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,11 +6,13 @@
 
 # Type Alias: Branded\<T, U\>
 
-> **Branded**\<`T`, `U`\>: `T` & `object`
+> **Branded**\<`T`, `U`\> = `T` & `object`
 
-Creates a branded type of [T](Branded.md) with the brand [U](Branded.md).
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:13
 
-## Type declaration
+Creates a branded type of [T](#t) with the brand [U](#u).
+
+## Type Declaration
 
 ### \[symbol\]
 
@@ -18,11 +20,15 @@ Creates a branded type of [T](Branded.md) with the brand [U](Branded.md).
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 Type to brand
 
-• **U**
+### U
+
+`U`
 
 Label
 
@@ -36,7 +42,3 @@ Branded type
 type Result = Branded<string, 'foo'>
 //   ^? type Result = string & { [symbol]: 'foo' }
 ```
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:13

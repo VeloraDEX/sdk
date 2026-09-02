@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: MaybeExtractEventArgsFromAbi\<abi, eventName\>
 
-> **MaybeExtractEventArgsFromAbi**\<`abi`, `eventName`\>: `abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] ? `eventName` *extends* `string` ? [`GetEventArgs`](GetEventArgs.md)\<`abi`, `eventName`\> : `undefined` : `undefined`
+> **MaybeExtractEventArgsFromAbi**\<`abi`, `eventName`\> = `abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] ? `eventName` *extends* `string` ? [`GetEventArgs`](GetEventArgs.md)\<`abi`, `eventName`\> : `undefined` : `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:72
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined`
+### abi
 
-• **eventName** *extends* `string` \| `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined`
 
-## Defined in
+### eventName
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:71
+`eventName` *extends* `string` \| `undefined`

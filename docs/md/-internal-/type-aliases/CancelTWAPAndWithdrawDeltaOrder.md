@@ -1,29 +1,35 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / CancelTWAPAndWithdrawDeltaOrder
 
-# Type Alias: CancelTWAPAndWithdrawDeltaOrder()\<T\>
+# Type Alias: CancelTWAPAndWithdrawDeltaOrder\<T\>
 
-> **CancelTWAPAndWithdrawDeltaOrder**\<`T`\>: (`order`, `overrides`?, `requestParams`?) => `Promise`\<`T`\>
+> **CancelTWAPAndWithdrawDeltaOrder**\<`T`\> = (`order`, `overrides?`, `requestParams?`) => `Promise`\<`T`\>
+
+Defined in: [src/methods/delta/deltaTokenModule.ts:46](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L46)
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **order**: [`TWAPDeltaOrder`](../../type-aliases/TWAPDeltaOrder.md)
+### order
 
-• **overrides?**: [`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+[`TWAPDeltaOrder`](../../type-aliases/TWAPDeltaOrder.md)
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+### overrides?
+
+[`TxSendOverrides`](../../interfaces/TxSendOverrides.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<`T`\>
-
-## Defined in
-
-[src/methods/delta/deltaTokenModule.ts:46](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L46)

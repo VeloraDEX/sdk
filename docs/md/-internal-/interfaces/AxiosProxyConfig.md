@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: AxiosProxyConfig
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:173
+
 ## Properties
 
 ### auth?
 
-> `optional` **auth**: [`AxiosBasicCredentials`](AxiosBasicCredentials.md)
+> `optional` **auth?**: [`AxiosBasicCredentials`](AxiosBasicCredentials.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:166
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:176
 
 ***
 
@@ -22,9 +22,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:166
 
 > **host**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:164
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:174
 
 ***
 
@@ -32,16 +30,12 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:164
 
 > **port**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:165
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:175
 
 ***
 
 ### protocol?
 
-> `optional` **protocol**: `string`
+> `optional` **protocol?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:167
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:177

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: EventNames\<Events\>
 
-> **EventNames**\<`Events`\>: `object` *extends* `Events` ? `string` \| `symbol` : keyof `Events` \| keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md)
+> **EventNames**\<`Events`\> = `object` *extends* `Events` ? `string` \| `symbol` : keyof `Events` \| keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:114
 
 ## Type Parameters
 
-• **Events** *extends* [`EventMap`](EventMap.md)\<`Events`\>
+### Events
 
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:114
+`Events` *extends* [`EventMap`](EventMap.md)\<`Events`\>

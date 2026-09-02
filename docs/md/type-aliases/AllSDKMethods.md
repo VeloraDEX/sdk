@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: AllSDKMethods\<TxResponse\>
 
-> **AllSDKMethods**\<`TxResponse`\>: `object` & [`Required`](../-internal-/type-aliases/Required.md)\<[`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md)\>
+> **AllSDKMethods**\<`TxResponse`\> = `object` & [`Required`](../-internal-/type-aliases/Required.md)\<[`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md)\>
 
-## Type declaration
+Defined in: [src/sdk/full.ts:18](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/full.ts#L18)
+
+## Type Declaration
 
 ### delta
 
@@ -28,8 +30,6 @@
 
 ## Type Parameters
 
-• **TxResponse**
+### TxResponse
 
-## Defined in
-
-[src/sdk/full.ts:18](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/full.ts#L18)
+`TxResponse`

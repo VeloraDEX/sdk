@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,24 @@
 
 # Type Alias: Uncle\<quantity, includeTransactions, blockTag, transaction\>
 
-> **Uncle**\<`quantity`, `includeTransactions`, `blockTag`, `transaction`\>: [`Block`](Block.md)\<`quantity`, `includeTransactions`, `blockTag`, `transaction`\>
+> **Uncle**\<`quantity`, `includeTransactions`, `blockTag`, `transaction`\> = [`Block`](Block.md)\<`quantity`, `includeTransactions`, `blockTag`, `transaction`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/block.d.ts:90
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **includeTransactions** *extends* `boolean` = `boolean`
+`quantity` = `bigint`
 
-• **blockTag** *extends* [`BlockTag`](BlockTag.md) = [`BlockTag`](BlockTag.md)
+### includeTransactions
 
-• **transaction** = [`Transaction`](Transaction.md)\<`bigint`, `number`, `blockTag` *extends* `"pending"` ? `true` : `false`\>
+`includeTransactions` *extends* `boolean` = `boolean`
 
-## Defined in
+### blockTag
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/block.d.ts:91
+`blockTag` *extends* [`BlockTag`](BlockTag-2.md) = [`BlockTag`](BlockTag-2.md)
+
+### transaction
+
+`transaction` = [`Transaction`](Transaction.md)\<`bigint`, `number`, `blockTag` *extends* `"pending"` ? `true` : `false`\>

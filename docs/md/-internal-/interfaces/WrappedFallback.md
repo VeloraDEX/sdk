@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,29 +6,33 @@
 
 # Interface: WrappedFallback()
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:165
+
 A Fallback or Receive function on a Contract.
 
-> **WrappedFallback**(`overrides`?): `Promise`\<[`ContractTransactionResponse`](../classes/ContractTransactionResponse.md)\>
+> **WrappedFallback**(`overrides?`): `Promise`\<[`ContractTransactionResponse`](../classes/ContractTransactionResponse.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:166
 
 A Fallback or Receive function on a Contract.
 
 ## Parameters
 
-• **overrides?**: [`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
+### overrides?
+
+[`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
 
 ## Returns
 
 `Promise`\<[`ContractTransactionResponse`](../classes/ContractTransactionResponse.md)\>
 
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:166
-
 ## Methods
 
 ### estimateGas()
 
-> **estimateGas**(`overrides`?): `Promise`\<`bigint`\>
+> **estimateGas**(`overrides?`): `Promise`\<`bigint`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:191
 
 Estimate the gas to send a transaction to the contract fallback.
 
@@ -36,21 +40,21 @@ Estimate the gas to send a transaction to the contract fallback.
 
 #### Parameters
 
-• **overrides?**: [`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
+##### overrides?
+
+[`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
 
 #### Returns
 
 `Promise`\<`bigint`\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:191
-
 ***
 
 ### populateTransaction()
 
-> **populateTransaction**(`overrides`?): `Promise`\<[`ContractTransaction`](ContractTransaction.md)\>
+> **populateTransaction**(`overrides?`): `Promise`\<[`ContractTransaction`](ContractTransaction-1.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:173
 
 Returns a populated transaction that can be used to perform the
  fallback method.
@@ -59,21 +63,21 @@ Returns a populated transaction that can be used to perform the
 
 #### Parameters
 
-• **overrides?**: [`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
+##### overrides?
+
+[`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
 
 #### Returns
 
-`Promise`\<[`ContractTransaction`](ContractTransaction.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:173
+`Promise`\<[`ContractTransaction`](ContractTransaction-1.md)\>
 
 ***
 
 ### send()
 
-> **send**(`overrides`?): `Promise`\<[`ContractTransactionResponse`](../classes/ContractTransactionResponse.md)\>
+> **send**(`overrides?`): `Promise`\<[`ContractTransactionResponse`](../classes/ContractTransactionResponse.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:185
 
 Send a transaction to the contract fallback.
 
@@ -81,21 +85,21 @@ Send a transaction to the contract fallback.
 
 #### Parameters
 
-• **overrides?**: [`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
+##### overrides?
+
+[`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
 
 #### Returns
 
 `Promise`\<[`ContractTransactionResponse`](../classes/ContractTransactionResponse.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:185
-
 ***
 
 ### staticCall()
 
-> **staticCall**(`overrides`?): `Promise`\<`string`\>
+> **staticCall**(`overrides?`): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:179
 
 Call the contract fallback and return the result.
 
@@ -103,12 +107,10 @@ Call the contract fallback and return the result.
 
 #### Parameters
 
-• **overrides?**: [`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
+##### overrides?
+
+[`Omit`](../type-aliases/Omit.md)\<[`TransactionRequest`](TransactionRequest.md), `"to"`\>
 
 #### Returns
 
 `Promise`\<`string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:179

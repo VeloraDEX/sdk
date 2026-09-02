@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: TradeMode
 
-> **TradeMode**: `"delta"` \| `"market"` \| `"all"`
+> **TradeMode** = `"delta"` \| `"market"` \| `"all"`
 
-## Defined in
-
-[src/methods/quote/getQuote.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L11)
+Defined in: [src/methods/quote/getQuote.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L11)

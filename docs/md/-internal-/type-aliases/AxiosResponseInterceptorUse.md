@@ -1,27 +1,31 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AxiosResponseInterceptorUse
 
-# Type Alias: AxiosResponseInterceptorUse()\<T\>
+# Type Alias: AxiosResponseInterceptorUse\<T\>
 
-> **AxiosResponseInterceptorUse**\<`T`\>: (`onFulfilled`?, `onRejected`?) => `number`
+> **AxiosResponseInterceptorUse**\<`T`\> = (`onFulfilled?`, `onRejected?`) => `number`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:627
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **onFulfilled?**: [`AxiosInterceptorFulfilled`](AxiosInterceptorFulfilled.md)\<`T`\> \| `null`
+### onFulfilled?
 
-• **onRejected?**: [`AxiosInterceptorRejected`](AxiosInterceptorRejected.md) \| `null`
+[`AxiosInterceptorFulfilled`](AxiosInterceptorFulfilled.md)\<`T`\> \| `null`
+
+### onRejected?
+
+[`AxiosInterceptorRejected`](AxiosInterceptorRejected.md) \| `null`
 
 ## Returns
 
 `number`
-
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:583

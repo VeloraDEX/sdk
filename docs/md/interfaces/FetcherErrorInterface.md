@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
 [@velora-dex/sdk](../globals.md) / FetcherErrorInterface
 
 # Interface: FetcherErrorInterface
+
+Defined in: [src/helpers/misc.ts:47](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L47)
 
 ## Extends
 
@@ -14,15 +16,13 @@
 
 ### code?
 
-> `optional` **code**: `string`
+> `optional` **code?**: `string`
+
+Defined in: [src/helpers/misc.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L49)
 
 #### Overrides
 
 `FetcherErrorConstructorInput.code`
-
-#### Defined in
-
-[src/helpers/misc.ts:49](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L49)
 
 ***
 
@@ -30,13 +30,11 @@
 
 > **isAxiosError**: `boolean`
 
+Defined in: [src/helpers/misc.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L31)
+
 #### Inherited from
 
 `FetcherErrorConstructorInput.isAxiosError`
-
-#### Defined in
-
-[src/helpers/misc.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L31)
 
 ***
 
@@ -44,48 +42,40 @@
 
 > **message**: `string`
 
+Defined in: [src/helpers/misc.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L32)
+
 #### Inherited from
 
 `FetcherErrorConstructorInput.message`
-
-#### Defined in
-
-[src/helpers/misc.ts:32](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L32)
 
 ***
 
 ### request?
 
-> `optional` **request**: `any`
+> `optional` **request?**: `any`
+
+Defined in: [src/helpers/misc.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L30)
 
 #### Inherited from
 
 `FetcherErrorConstructorInput.request`
 
-#### Defined in
-
-[src/helpers/misc.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L30)
-
 ***
 
 ### response?
 
-> `optional` **response**: [`MinAxiosResponse`](../-internal-/type-aliases/MinAxiosResponse.md)
+> `optional` **response?**: [`MinAxiosResponse`](../-internal-/type-aliases/MinAxiosResponse.md)
+
+Defined in: [src/helpers/misc.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L44)
 
 #### Inherited from
 
 `FetcherErrorConstructorInput.response`
 
-#### Defined in
-
-[src/helpers/misc.ts:44](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L44)
-
 ***
 
 ### status?
 
-> `optional` **status**: `number`
+> `optional` **status?**: `number`
 
-#### Defined in
-
-[src/helpers/misc.ts:48](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L48)
+Defined in: [src/helpers/misc.ts:48](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L48)

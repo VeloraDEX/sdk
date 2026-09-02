@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,20 +6,26 @@
 
 # Interface: AxiosRequestTransformer()
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:151
+
 > **AxiosRequestTransformer**(`this`, `data`, `headers`): `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:152
 
 ## Parameters
 
-• **this**: [`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)\<`any`\>
+### this
 
-• **data**: `any`
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)
 
-• **headers**: [`AxiosRequestHeaders`](../type-aliases/AxiosRequestHeaders.md)
+### data
+
+`any`
+
+### headers
+
+[`AxiosRequestHeaders`](../type-aliases/AxiosRequestHeaders.md)
 
 ## Returns
 
 `any`
-
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:142

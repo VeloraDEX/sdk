@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,18 +6,20 @@
 
 # Function: constructFetchFetcher()
 
-> **constructFetchFetcher**(`fetch`, `extra`?): [`FetcherFunction`](../type-aliases/FetcherFunction.md)
+> **constructFetchFetcher**(`fetch`, `extra?`): [`FetcherFunction`](../type-aliases/FetcherFunction.md)
+
+Defined in: [src/helpers/fetchers/fetch.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/fetchers/fetch.ts#L8)
 
 ## Parameters
 
-• **fetch**
+### fetch
 
-• **extra?**: [`ExtraFetchParams`](../type-aliases/ExtraFetchParams.md) & `object`
+\{(`input`, `init?`): `Promise`\<`Response`\>; (`input`, `init?`): `Promise`\<`Response`\>; \}
+
+### extra?
+
+[`ExtraFetchParams`](../type-aliases/ExtraFetchParams.md) & `object`
 
 ## Returns
 
 [`FetcherFunction`](../type-aliases/FetcherFunction.md)
-
-## Defined in
-
-[src/helpers/fetchers/fetch.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/fetchers/fetch.ts#L8)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: SuccessResponse
 
-> **SuccessResponse**: `object`
+> **SuccessResponse** = `object`
 
-## Type declaration
+Defined in: [src/methods/delta/cancelDeltaOrder.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L13)
+
+## Properties
 
 ### success
 
 > **success**: `true`
 
-## Defined in
-
-[src/methods/delta/cancelDeltaOrder.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L13)
+Defined in: [src/methods/delta/cancelDeltaOrder.ts:13](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/cancelDeltaOrder.ts#L13)

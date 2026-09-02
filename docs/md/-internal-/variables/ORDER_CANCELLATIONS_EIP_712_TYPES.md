@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -8,12 +8,10 @@
 
 > `const` **ORDER\_CANCELLATIONS\_EIP\_712\_TYPES**: `object`
 
-## Type declaration
+Defined in: [src/methods/delta/helpers/buildCancelDeltaOrderData.ts:3](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildCancelDeltaOrderData.ts#L3)
+
+## Type Declaration
 
 ### OrderCancellations
 
 > **OrderCancellations**: `object`[]
-
-## Defined in
-
-[src/methods/delta/helpers/buildCancelDeltaOrderData.ts:3](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildCancelDeltaOrderData.ts#L3)

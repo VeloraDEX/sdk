@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,39 +6,45 @@
 
 # Class: Reader
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:37
+
 ## Constructors
 
-### new Reader()
+### Constructor
 
-> **new Reader**(`data`, `wordSize`?, `coerceFunc`?, `allowLoose`?): [`Reader`](Reader.md)
+> **new Reader**(`data`, `wordSize?`, `coerceFunc?`, `allowLoose?`): `Reader`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:43
 
 #### Parameters
 
-• **data**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### data
 
-• **wordSize?**: `number`
+[`BytesLike`](../type-aliases/BytesLike-1.md)
 
-• **coerceFunc?**: [`CoerceFunc`](../type-aliases/CoerceFunc.md)
+##### wordSize?
 
-• **allowLoose?**: `boolean`
+`number`
+
+##### coerceFunc?
+
+[`CoerceFunc`](../type-aliases/CoerceFunc-1.md)
+
+##### allowLoose?
+
+`boolean`
 
 #### Returns
 
-[`Reader`](Reader.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:43
+`Reader`
 
 ## Properties
 
 ### \_coerceFunc
 
-> `readonly` **\_coerceFunc**: [`CoerceFunc`](../type-aliases/CoerceFunc.md)
+> `readonly` **\_coerceFunc**: [`CoerceFunc`](../type-aliases/CoerceFunc-1.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:41
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:41
 
 ***
 
@@ -46,9 +52,7 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **\_data**: `Uint8Array`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:40
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:40
 
 ***
 
@@ -56,9 +60,7 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > **\_offset**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:42
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:42
 
 ***
 
@@ -66,9 +68,7 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **allowLoose**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:39
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:39
 
 ***
 
@@ -76,9 +76,7 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **wordSize**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:38
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:38
 
 ## Accessors
 
@@ -88,13 +86,11 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > **get** **consumed**(): `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:45
+
 ##### Returns
 
 `number`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:45
 
 ***
 
@@ -104,35 +100,37 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > **get** **data**(): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:44
+
 ##### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:44
 
 ## Methods
 
 ### \_peekBytes()
 
-> **\_peekBytes**(`offset`, `length`, `loose`?): `Uint8Array`
+> **\_peekBytes**(`offset`, `length`, `loose?`): `Uint8Array`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:48
 
 #### Parameters
 
-• **offset**: `number`
+##### offset
 
-• **length**: `number`
+`number`
 
-• **loose?**: `boolean`
+##### length
+
+`number`
+
+##### loose?
+
+`boolean`
 
 #### Returns
 
 `Uint8Array`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:48
 
 ***
 
@@ -140,39 +138,43 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > **coerce**(`name`, `value`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:47
+
 #### Parameters
 
-• **name**: `string`
+##### name
 
-• **value**: `any`
+`string`
+
+##### value
+
+`any`
 
 #### Returns
 
 `any`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:47
-
 ***
 
 ### readBytes()
 
-> **readBytes**(`length`, `loose`?): `Uint8Array`
+> **readBytes**(`length`, `loose?`): `Uint8Array`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:50
 
 #### Parameters
 
-• **length**: `number`
+##### length
 
-• **loose?**: `boolean`
+`number`
+
+##### loose?
+
+`boolean`
 
 #### Returns
 
 `Uint8Array`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:50
 
 ***
 
@@ -180,31 +182,29 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > **readValue**(): [`BigNumber`](BigNumber.md)
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:51
+
 #### Returns
 
 [`BigNumber`](BigNumber.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:51
 
 ***
 
 ### subReader()
 
-> **subReader**(`offset`): [`Reader`](Reader.md)
+> **subReader**(`offset`): `Reader`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:49
 
 #### Parameters
 
-• **offset**: `number`
+##### offset
+
+`number`
 
 #### Returns
 
-[`Reader`](Reader.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:49
+`Reader`
 
 ***
 
@@ -212,16 +212,18 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `static` **coerce**(`name`, `value`): `any`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:46
+
 #### Parameters
 
-• **name**: `string`
+##### name
 
-• **value**: `any`
+`string`
+
+##### value
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/coders/abstract-coder.d.ts:46

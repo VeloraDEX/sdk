@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / NameResolver
 
 # Interface: NameResolver
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/address/index.d.ts:36
 
 An interface for any object which can resolve an ENS name.
 
@@ -17,7 +19,9 @@ An interface for any object which can resolve an ENS name.
 
 ### resolveName()
 
-> **resolveName**(`name`): `Promise`\<`null` \| `string`\>
+> **resolveName**(`name`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/address/index.d.ts:44
 
 Resolve to the address for the ENS %%name%%.
 
@@ -27,12 +31,10 @@ Resolve to the address for the ENS %%name%%.
 
 #### Parameters
 
-• **name**: `string`
+##### name
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/address/index.d.ts:44
+`Promise`\<`string` \| `null`\>

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: TWAPOnChainOrderType
 
-> **TWAPOnChainOrderType**: `"TWAPOrder"` \| `"TWAPBuyOrder"`
+> **TWAPOnChainOrderType** = `"TWAPOrder"` \| `"TWAPBuyOrder"`
 
-## Defined in
-
-[src/methods/delta/helpers/types.ts:210](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L210)
+Defined in: [src/methods/delta/helpers/types.ts:210](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L210)

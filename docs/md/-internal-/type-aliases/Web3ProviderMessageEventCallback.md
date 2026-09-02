@@ -1,25 +1,27 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Web3ProviderMessageEventCallback
 
-# Type Alias: Web3ProviderMessageEventCallback()\<T\>
+# Type Alias: Web3ProviderMessageEventCallback\<T\>
 
-> **Web3ProviderMessageEventCallback**\<`T`\>: (`result`?) => `void`
+> **Web3ProviderMessageEventCallback**\<`T`\> = (`result?`) => `void`
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:16
 
 ## Type Parameters
 
-• **T** = [`JsonRpcResult`](JsonRpcResult.md)
+### T
+
+`T` = [`JsonRpcResult`](JsonRpcResult.md)
 
 ## Parameters
 
-• **result?**: [`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<`T`\>
+### result?
+
+[`JsonRpcSubscriptionResult`](../interfaces/JsonRpcSubscriptionResult.md) \| [`JsonRpcNotification`](../interfaces/JsonRpcNotification.md)\<`T`\>
 
 ## Returns
 
 `void`
-
-## Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:16

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: StringLiteralsOrString\<Literals\>
 
-> **StringLiteralsOrString**\<`Literals`\>: `Literals` \| `string` & `object`
+> **StringLiteralsOrString**\<`Literals`\> = `Literals` \| `string` & `object`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:2
 
 ## Type Parameters
 
-• **Literals** *extends* `string`
+### Literals
 
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:2
+`Literals` *extends* `string`

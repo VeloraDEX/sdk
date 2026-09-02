@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,7 +6,9 @@
 
 # Type Alias: PostfixOverrides\<A\>
 
-> **PostfixOverrides**\<`A`\>: `A` \| [`...A`, [`Overrides`](../interfaces/Overrides.md)]
+> **PostfixOverrides**\<`A`\> = `A` \| \[`...A`, [`Overrides`](../interfaces/Overrides.md)\]
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:71
 
 Arguments to a Contract method can always include an additional and
  optional overrides parameter.
@@ -15,8 +17,6 @@ Arguments to a Contract method can always include an additional and
 
 ## Type Parameters
 
-• **A** *extends* `any`[]
+### A
 
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:71
+`A` *extends* `any`[]

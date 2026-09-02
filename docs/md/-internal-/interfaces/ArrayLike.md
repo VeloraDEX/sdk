@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,17 @@
 
 # Interface: ArrayLike\<T\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1577
+
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Indexable
 
- \[`n`: `number`\]: `T`
+> \[`n`: `number`\]: `T`
 
 ## Properties
 
@@ -20,6 +24,4 @@
 
 > `readonly` **length**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1571
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1578

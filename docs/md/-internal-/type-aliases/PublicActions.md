@@ -1,26 +1,40 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / PublicActions
 
-# Type Alias: PublicActions\<transport, chain, account\>
+# Type Alias: PublicActions\<transport, chain, account, tokens\>
 
-> **PublicActions**\<`transport`, `chain`, `account`\>: `object`
+> **PublicActions**\<`transport`, `chain`, `account`, `tokens`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:74
 
 ## Type Parameters
 
-• **transport** *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)
+### transport
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`transport` *extends* [`Transport`](Transport.md) = [`Transport`](Transport.md)
 
-• **account** *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+### chain
 
-## Type declaration
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-### call()
+### account
+
+`account` *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+
+### tokens
+
+`tokens` *extends* [`Tokens`](Tokens.md) \| `undefined` = [`Tokens`](Tokens.md) \| `undefined`
+
+## Properties
+
+### call
 
 > **call**: (`parameters`) => `Promise`\<[`CallReturnType`](CallReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:98
 
 Executes a new message call immediately without submitting a transaction to the network.
 
@@ -29,7 +43,9 @@ Executes a new message call immediately without submitting a transaction to the 
 
 #### Parameters
 
-• **parameters**: [`CallParameters`](CallParameters.md)\<`chain`\>
+##### parameters
+
+[`CallParameters`](CallParameters.md)\<`chain`\>
 
 #### Returns
 
@@ -54,9 +70,13 @@ const data = await client.call({
 })
 ```
 
-### createAccessList()
+***
+
+### createAccessList
 
 > **createAccessList**: (`parameters`) => `Promise`\<[`CreateAccessListReturnType`](CreateAccessListReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:122
 
 Creates an EIP-2930 access list that you can include in a transaction.
 
@@ -65,7 +85,9 @@ Creates an EIP-2930 access list that you can include in a transaction.
 
 #### Parameters
 
-• **parameters**: [`CreateAccessListParameters`](CreateAccessListParameters.md)\<`chain`\>
+##### parameters
+
+[`CreateAccessListParameters`](CreateAccessListParameters.md)\<`chain`\>
 
 #### Returns
 
@@ -90,9 +112,13 @@ const data = await client.createAccessList({
 })
 ```
 
-### createBlockFilter()
+***
+
+### createBlockFilter
 
 > **createBlockFilter**: () => `Promise`\<[`CreateBlockFilterReturnType`](CreateBlockFilterReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:142
 
 Creates a Filter to listen for new block hashes that can be used with [`getFilterChanges`](https://viem.sh/docs/actions/public/getFilterChanges).
 
@@ -119,9 +145,13 @@ const filter = await createBlockFilter(client)
 // { id: "0x345a6572337856574a76364e457a4366", type: 'block' }
 ```
 
-### createContractEventFilter()
+***
+
+### createContractEventFilter
 
 > **createContractEventFilter**: \<`abi`, `eventName`, `args`, `strict`, `fromBlock`, `toBlock`\>(`args`) => `Promise`\<[`CreateContractEventFilterReturnType`](CreateContractEventFilterReturnType.md)\<`abi`, `eventName`, `args`, `strict`, `fromBlock`, `toBlock`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:163
 
 Creates a Filter to retrieve event logs that can be used with [`getFilterChanges`](https://viem.sh/docs/actions/public/getFilterChanges) or [`getFilterLogs`](https://viem.sh/docs/actions/public/getFilterLogs).
 
@@ -129,21 +159,35 @@ Creates a Filter to retrieve event logs that can be used with [`getFilterChanges
 
 #### Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+##### abi
 
-• **eventName** *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> \| `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
 
-• **args** *extends* [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abi`, `eventName`\> \| `undefined`
+##### eventName
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+`eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> \| `undefined`
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+##### args
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`args` *extends* [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abi`, `eventName`\> \| `undefined`
+
+##### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+##### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+##### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`CreateContractEventFilterParameters`](CreateContractEventFilterParameters.md)\<`abi`, `eventName`, `args`, `strict`, `fromBlock`, `toBlock`\>
+##### args
+
+[`CreateContractEventFilterParameters`](CreateContractEventFilterParameters.md)\<`abi`, `eventName`, `args`, `strict`, `fromBlock`, `toBlock`\>
 
 [CreateContractEventFilterParameters](CreateContractEventFilterParameters.md)
 
@@ -168,9 +212,13 @@ const filter = await client.createContractEventFilter({
 })
 ```
 
-### createEventFilter()
+***
 
-> **createEventFilter**: \<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`, `_EventName`, `_Args`\>(`args`?) => `Promise`\<[`CreateEventFilterReturnType`](CreateEventFilterReturnType.md)\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`, `_EventName`, `_Args`\>\>
+### createEventFilter
+
+> **createEventFilter**: \<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`, `_EventName`, `_Args`\>(`args?`) => `Promise`\<[`CreateEventFilterReturnType`](CreateEventFilterReturnType.md)\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`, `_EventName`, `_Args`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:185
 
 Creates a [`Filter`](https://viem.sh/docs/glossary/types#filter) to listen for new events that can be used with [`getFilterChanges`](https://viem.sh/docs/actions/public/getFilterChanges).
 
@@ -179,23 +227,39 @@ Creates a [`Filter`](https://viem.sh/docs/glossary/types#filter) to listen for n
 
 #### Type Parameters
 
-• **abiEvent** *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
+##### abiEvent
 
-• **abiEvents** *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? [`abiEvent`] : `undefined`
+`abiEvent` *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+##### abiEvents
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`abiEvents` *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? \[`abiEvent`\] : `undefined`
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+##### strict
 
-• **_EventName** *extends* `string` \| `undefined` = [`MaybeAbiEventName`](MaybeAbiEventName.md)\<`abiEvent`\>
+`strict` *extends* `boolean` \| `undefined` = `undefined`
 
-• **_Args** *extends* [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abiEvents`, `_EventName`\> \| `undefined` = `undefined`
+##### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+##### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+##### _EventName
+
+`_EventName` *extends* `string` \| `undefined` = [`MaybeAbiEventName`](MaybeAbiEventName.md)\<`abiEvent`\>
+
+##### _Args
+
+`_Args` *extends* [`MaybeExtractEventArgsFromAbi`](MaybeExtractEventArgsFromAbi.md)\<`abiEvents`, `_EventName`\> \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args?**: [`CreateEventFilterParameters`](CreateEventFilterParameters.md)\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`, `_EventName`, `_Args`\>
+##### args?
+
+[`CreateEventFilterParameters`](CreateEventFilterParameters.md)\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`, `_EventName`, `_Args`\>
 
 [CreateEventFilterParameters](CreateEventFilterParameters.md)
 
@@ -220,9 +284,13 @@ const filter = await client.createEventFilter({
 })
 ```
 
-### createPendingTransactionFilter()
+***
+
+### createPendingTransactionFilter
 
 > **createPendingTransactionFilter**: () => `Promise`\<[`CreatePendingTransactionFilterReturnType`](CreatePendingTransactionFilterReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:205
 
 Creates a Filter to listen for new pending transaction hashes that can be used with [`getFilterChanges`](https://viem.sh/docs/actions/public/getFilterChanges).
 
@@ -249,9 +317,13 @@ const filter = await client.createPendingTransactionFilter()
 // { id: "0x345a6572337856574a76364e457a4366", type: 'transaction' }
 ```
 
-### estimateContractGas()
+***
+
+### estimateContractGas
 
 > **estimateContractGas**: \<`chain`, `abi`, `functionName`, `args`\>(`args`) => `Promise`\<[`EstimateContractGasReturnType`](EstimateContractGasReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:232
 
 Estimates the gas required to successfully execute a contract write function call.
 
@@ -259,17 +331,27 @@ Estimates the gas required to successfully execute a contract write function cal
 
 #### Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined`
+##### chain
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+`chain` *extends* [`Chain`](Chain.md) \| `undefined`
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
+##### abi
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+
+##### functionName
+
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
+
+##### args
+
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
 
 #### Parameters
 
-• **args**: [`EstimateContractGasParameters`](EstimateContractGasParameters.md)\<`abi`, `functionName`, `args`, `chain`\>
+##### args
+
+[`EstimateContractGasParameters`](EstimateContractGasParameters.md)\<`abi`, `functionName`, `args`, `chain`\>
 
 [EstimateContractGasParameters](EstimateContractGasParameters.md)
 
@@ -301,9 +383,13 @@ const gas = await client.estimateContractGas({
 })
 ```
 
-### estimateFeesPerGas()
+***
 
-> **estimateFeesPerGas**: \<`chainOverride`, `type`\>(`args`?) => `Promise`\<[`EstimateFeesPerGasReturnType`](EstimateFeesPerGasReturnType.md)\<`type`\>\>
+### estimateFeesPerGas
+
+> **estimateFeesPerGas**: \<`chainOverride`, `type`\>(`args?`) => `Promise`\<[`EstimateFeesPerGasReturnType`](EstimateFeesPerGasReturnType.md)\<`type`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:737
 
 Returns an estimate for the fees per gas for a transaction to be included
 in the next block.
@@ -312,13 +398,19 @@ in the next block.
 
 #### Type Parameters
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+##### chainOverride
 
-• **type** *extends* [`FeeValuesType`](FeeValuesType.md) = `"eip1559"`
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+
+##### type
+
+`type` *extends* [`FeeValuesType`](FeeValuesType.md) = `"eip1559"`
 
 #### Parameters
 
-• **args?**: [`EstimateFeesPerGasParameters`](EstimateFeesPerGasParameters.md)\<`chain`, `chainOverride`, `type`\>
+##### args?
+
+[`EstimateFeesPerGasParameters`](EstimateFeesPerGasParameters.md)\<`chain`, `chainOverride`, `type`\>
 
 #### Returns
 
@@ -340,9 +432,13 @@ const maxPriorityFeePerGas = await client.estimateFeesPerGas()
 // { maxFeePerGas: ..., maxPriorityFeePerGas: ... }
 ```
 
-### estimateGas()
+***
+
+### estimateGas
 
 > **estimateGas**: (`args`) => `Promise`\<[`EstimateGasReturnType`](EstimateGasReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:256
 
 Estimates the gas necessary to complete a transaction without submitting it to the network.
 
@@ -351,7 +447,9 @@ Estimates the gas necessary to complete a transaction without submitting it to t
 
 #### Parameters
 
-• **args**: [`EstimateGasParameters`](EstimateGasParameters.md)\<`chain`\>
+##### args
+
+[`EstimateGasParameters`](EstimateGasParameters.md)\<`chain`\>
 
 [EstimateGasParameters](EstimateGasParameters.md)
 
@@ -378,9 +476,13 @@ const gasEstimate = await client.estimateGas({
 })
 ```
 
-### estimateMaxPriorityFeePerGas()
+***
 
-> **estimateMaxPriorityFeePerGas**: \<`chainOverride`\>(`args`?) => `Promise`\<[`EstimateMaxPriorityFeePerGasReturnType`](EstimateMaxPriorityFeePerGasReturnType.md)\>
+### estimateMaxPriorityFeePerGas
+
+> **estimateMaxPriorityFeePerGas**: \<`chainOverride`\>(`args?`) => `Promise`\<[`EstimateMaxPriorityFeePerGasReturnType`](EstimateMaxPriorityFeePerGasReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:929
 
 Returns an estimate for the max priority fee per gas (in wei) for a transaction
 to be included in the next block.
@@ -389,11 +491,15 @@ to be included in the next block.
 
 #### Type Parameters
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args?**: [`EstimateMaxPriorityFeePerGasParameters`](EstimateMaxPriorityFeePerGasParameters.md)\<`chain`, `chainOverride`\>
+##### args?
+
+[`EstimateMaxPriorityFeePerGasParameters`](EstimateMaxPriorityFeePerGasParameters.md)\<`chain`, `chainOverride`\>
 
 #### Returns
 
@@ -415,9 +521,64 @@ const maxPriorityFeePerGas = await client.estimateMaxPriorityFeePerGas()
 // 10000000n
 ```
 
-### getBalance()
+***
+
+### fillTransaction
+
+> **fillTransaction**: \<`chainOverride`, `accountOverride`\>(`args`) => `Promise`\<[`FillTransactionReturnType`](FillTransactionReturnType.md)\<`chain`, `chainOverride`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:280
+
+Fills a transaction request with the necessary fields to be signed over.
+
+- Docs: https://viem.sh/docs/actions/public/fillTransaction
+
+#### Type Parameters
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+
+##### accountOverride
+
+`accountOverride` *extends* [`Account`](Account.md) \| [`Address`](Address-1.md) \| `undefined` = `undefined`
+
+#### Parameters
+
+##### args
+
+[`FillTransactionParameters`](FillTransactionParameters.md)\<`chain`, `account`, `chainOverride`, `accountOverride`\>
+
+#### Returns
+
+`Promise`\<[`FillTransactionReturnType`](FillTransactionReturnType.md)\<`chain`, `chainOverride`\>\>
+
+The filled transaction. [FillTransactionReturnType](FillTransactionReturnType.md)
+
+#### Example
+
+```ts
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({
+  chain: mainnet,
+  transport: http(),
+})
+const result = await client.fillTransaction({
+  account: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+  value: parseEther('1'),
+})
+```
+
+***
+
+### getBalance
 
 > **getBalance**: (`args`) => `Promise`\<[`GetBalanceReturnType`](GetBalanceReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:315
 
 Returns the balance of an address in wei.
 
@@ -426,7 +587,9 @@ Returns the balance of an address in wei.
 
 #### Parameters
 
-• **args**: [`GetBalanceParameters`](GetBalanceParameters.md)
+##### args
+
+[`GetBalanceParameters`](GetBalanceParameters.md)
 
 [GetBalanceParameters](GetBalanceParameters.md)
 
@@ -465,9 +628,13 @@ const balance = await client.getBalance({
 // 10000000000000000000000n (wei)
 ```
 
-### getBlobBaseFee()
+***
+
+### getBlobBaseFee
 
 > **getBlobBaseFee**: () => `Promise`\<[`GetBlobBaseFeeReturnType`](GetBlobBaseFeeReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:336
 
 Returns the base fee per blob gas in wei.
 
@@ -494,9 +661,13 @@ const client = createPublicClient({
 const blobBaseFee = await client.getBlobBaseFee()
 ```
 
-### getBlock()
+***
 
-> **getBlock**: \<`includeTransactions`, `blockTag`\>(`args`?) => `Promise`\<[`GetBlockReturnType`](GetBlockReturnType.md)\<`chain`, `includeTransactions`, `blockTag`\>\>
+### getBlock
+
+> **getBlock**: \<`includeTransactions`, `blockTag`\>(`args?`) => `Promise`\<[`GetBlockReturnType`](GetBlockReturnType.md)\<`chain`, `includeTransactions`, `blockTag`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:359
 
 Returns information about a block at a block number, hash, or tag.
 
@@ -508,13 +679,19 @@ Returns information about a block at a block number, hash, or tag.
 
 #### Type Parameters
 
-• **includeTransactions** *extends* `boolean` = `false`
+##### includeTransactions
 
-• **blockTag** *extends* [`BlockTag`](BlockTag.md) = `"latest"`
+`includeTransactions` *extends* `boolean` = `false`
+
+##### blockTag
+
+`blockTag` *extends* [`BlockTag`](BlockTag-2.md) = `"latest"`
 
 #### Parameters
 
-• **args?**: [`GetBlockParameters`](GetBlockParameters.md)\<`includeTransactions`, `blockTag`\>
+##### args?
+
+[`GetBlockParameters`](GetBlockParameters.md)\<`includeTransactions`, `blockTag`\>
 
 [GetBlockParameters](GetBlockParameters.md)
 
@@ -537,9 +714,13 @@ const client = createPublicClient({
 const block = await client.getBlock()
 ```
 
-### getBlockNumber()
+***
 
-> **getBlockNumber**: (`args`?) => `Promise`\<[`GetBlockNumberReturnType`](GetBlockNumberReturnType.md)\>
+### getBlockNumber
+
+> **getBlockNumber**: (`args?`) => `Promise`\<[`GetBlockNumberReturnType`](GetBlockNumberReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:403
 
 Returns the number of the most recent block seen.
 
@@ -549,7 +730,9 @@ Returns the number of the most recent block seen.
 
 #### Parameters
 
-• **args?**: [`GetBlockNumberParameters`](GetBlockNumberParameters.md)
+##### args?
+
+[`GetBlockNumberParameters`](GetBlockNumberParameters.md)
 
 [GetBlockNumberParameters](GetBlockNumberParameters.md)
 
@@ -573,9 +756,55 @@ const blockNumber = await client.getBlockNumber()
 // 69420n
 ```
 
-### getBlockTransactionCount()
+***
 
-> **getBlockTransactionCount**: (`args`?) => `Promise`\<[`GetBlockTransactionCountReturnType`](GetBlockTransactionCountReturnType.md)\>
+### getBlockReceipts
+
+> **getBlockReceipts**: (`args?`) => `Promise`\<[`GetBlockReceiptsReturnType`](GetBlockReceiptsReturnType.md)\<`chain`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:381
+
+Returns the transaction receipts of a block at a block number, hash, or tag.
+
+- Docs: https://viem.sh/docs/actions/public/getBlockReceipts
+- JSON-RPC Methods: [`eth_getBlockReceipts`](https://ethereum.github.io/execution-apis/api/methods/eth_getBlockReceipts/)
+
+#### Parameters
+
+##### args?
+
+[`GetBlockReceiptsParameters`](GetBlockReceiptsParameters.md)
+
+[GetBlockReceiptsParameters](GetBlockReceiptsParameters.md)
+
+#### Returns
+
+`Promise`\<[`GetBlockReceiptsReturnType`](GetBlockReceiptsReturnType.md)\<`chain`\>\>
+
+The transaction receipts. [GetBlockReceiptsReturnType](GetBlockReceiptsReturnType.md)
+
+#### Example
+
+```ts
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({
+  chain: mainnet,
+  transport: http(),
+})
+const receipts = await client.getBlockReceipts({
+  blockNumber: 69420n,
+})
+```
+
+***
+
+### getBlockTransactionCount
+
+> **getBlockTransactionCount**: (`args?`) => `Promise`\<[`GetBlockTransactionCountReturnType`](GetBlockTransactionCountReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:425
 
 Returns the number of Transactions at a block number, hash, or tag.
 
@@ -586,7 +815,9 @@ Returns the number of Transactions at a block number, hash, or tag.
 
 #### Parameters
 
-• **args?**: [`GetBlockTransactionCountParameters`](GetBlockTransactionCountParameters.md)
+##### args?
+
+[`GetBlockTransactionCountParameters`](GetBlockTransactionCountParameters.md)
 
 [GetBlockTransactionCountParameters](GetBlockTransactionCountParameters.md)
 
@@ -609,13 +840,19 @@ const client = createPublicClient({
 const count = await client.getBlockTransactionCount()
 ```
 
-### ~~getBytecode()~~
+***
+
+### ~~getBytecode~~
 
 > **getBytecode**: (`args`) => `Promise`\<[`GetCodeReturnType`](GetCodeReturnType.md)\>
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:427
+
 #### Parameters
 
-• **args**: [`GetCodeParameters`](GetCodeParameters.md)
+##### args
+
+[`GetCodeParameters`](GetCodeParameters.md)
 
 #### Returns
 
@@ -625,9 +862,13 @@ const count = await client.getBlockTransactionCount()
 
 Use `getCode` instead.
 
-### getChainId()
+***
+
+### getChainId
 
 > **getChainId**: () => `Promise`\<[`GetChainIdReturnType`](GetChainIdReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:447
 
 Returns the chain ID associated with the current network.
 
@@ -654,9 +895,13 @@ const chainId = await client.getChainId()
 // 1
 ```
 
-### getCode()
+***
+
+### getCode
 
 > **getCode**: (`args`) => `Promise`\<[`GetCodeReturnType`](GetCodeReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:469
 
 Retrieves the bytecode at an address.
 
@@ -665,7 +910,9 @@ Retrieves the bytecode at an address.
 
 #### Parameters
 
-• **args**: [`GetCodeParameters`](GetCodeParameters.md)
+##### args
+
+[`GetCodeParameters`](GetCodeParameters.md)
 
 GetBytecodeParameters
 
@@ -690,9 +937,13 @@ const code = await client.getCode({
 })
 ```
 
-### getContractEvents()
+***
+
+### getContractEvents
 
 > **getContractEvents**: \<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>(`args`) => `Promise`\<[`GetContractEventsReturnType`](GetContractEventsReturnType.md)\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:495
 
 Returns a list of event logs emitted by a contract.
 
@@ -701,19 +952,31 @@ Returns a list of event logs emitted by a contract.
 
 #### Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+##### abi
 
-• **eventName** *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\> \| `undefined` = `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+##### eventName
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\> \| `undefined` = `undefined`
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+##### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+##### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+##### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`GetContractEventsParameters`](GetContractEventsParameters.md)\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>
+##### args
+
+[`GetContractEventsParameters`](GetContractEventsParameters.md)\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>
 
 #### Returns
 
@@ -739,15 +1002,62 @@ const logs = await client.getContractEvents(client, {
 })
 ```
 
-### getEip712Domain()
+***
+
+### getDelegation
+
+> **getDelegation**: (`args`) => `Promise`\<[`GetDelegationReturnType`](GetDelegationReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:516
+
+Returns the address that an account has delegated to via EIP-7702.
+
+- Docs: https://viem.sh/docs/actions/public/getDelegation
+
+#### Parameters
+
+##### args
+
+[`GetDelegationParameters`](GetDelegationParameters.md)
+
+[GetDelegationParameters](GetDelegationParameters.md)
+
+#### Returns
+
+`Promise`\<[`GetDelegationReturnType`](GetDelegationReturnType.md)\>
+
+The delegated address, or undefined if not delegated. [GetDelegationReturnType](GetDelegationReturnType.md)
+
+#### Example
+
+```ts
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({
+  chain: mainnet,
+  transport: http(),
+})
+const delegation = await client.getDelegation({
+  address: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+})
+```
+
+***
+
+### getEip712Domain
 
 > **getEip712Domain**: (`args`) => `Promise`\<[`GetEip712DomainReturnType`](GetEip712DomainReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:549
 
 Reads the EIP-712 domain from a contract, based on the ERC-5267 specification.
 
 #### Parameters
 
-• **args**: [`GetEip712DomainParameters`](GetEip712DomainParameters.md)
+##### args
+
+[`GetEip712DomainParameters`](GetEip712DomainParameters.md)
 
 #### Returns
 
@@ -781,9 +1091,13 @@ const domain = await client.getEip712Domain({
 // }
 ```
 
-### getEnsAddress()
+***
+
+### getEnsAddress
 
 > **getEnsAddress**: (`args`) => `Promise`\<[`GetEnsAddressReturnType`](GetEnsAddressReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:578
 
 Gets address for ENS name.
 
@@ -792,7 +1106,9 @@ Gets address for ENS name.
 
 #### Parameters
 
-• **args**: [`GetEnsAddressParameters`](GetEnsAddressParameters.md)
+##### args
+
+[`GetEnsAddressParameters`](GetEnsAddressParameters.md)
 
 [GetEnsAddressParameters](GetEnsAddressParameters.md)
 
@@ -825,9 +1141,13 @@ const ensAddress = await client.getEnsAddress({
 // '0xd2135CfB216b74109775236E36d4b433F1DF507B'
 ```
 
-### getEnsAvatar()
+***
+
+### getEnsAvatar
 
 > **getEnsAvatar**: (`args`) => `Promise`\<[`GetEnsAvatarReturnType`](GetEnsAvatarReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:607
 
 Gets the avatar of an ENS name.
 
@@ -836,7 +1156,9 @@ Gets the avatar of an ENS name.
 
 #### Parameters
 
-• **args**: [`GetEnsAvatarParameters`](GetEnsAvatarParameters.md)
+##### args
+
+[`GetEnsAvatarParameters`](GetEnsAvatarParameters.md)
 
 [GetEnsAvatarParameters](GetEnsAvatarParameters.md)
 
@@ -869,9 +1191,13 @@ const ensAvatar = await client.getEnsAvatar({
 // 'https://ipfs.io/ipfs/Qma8mnp6xV3J2cRNf3mTth5C8nV11CAnceVinc3y8jSbio'
 ```
 
-### getEnsName()
+***
+
+### getEnsName
 
 > **getEnsName**: (`args`) => `Promise`\<[`GetEnsNameReturnType`](GetEnsNameReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:633
 
 Gets primary name for specified address.
 
@@ -880,7 +1206,9 @@ Gets primary name for specified address.
 
 #### Parameters
 
-• **args**: [`GetEnsNameParameters`](GetEnsNameParameters.md)
+##### args
+
+[`GetEnsNameParameters`](GetEnsNameParameters.md)
 
 [GetEnsNameParameters](GetEnsNameParameters.md)
 
@@ -910,9 +1238,13 @@ const ensName = await client.getEnsName({
 // 'wevm.eth'
 ```
 
-### getEnsResolver()
+***
+
+### getEnsResolver
 
 > **getEnsResolver**: (`args`) => `Promise`\<[`GetEnsResolverReturnType`](GetEnsResolverReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:662
 
 Gets resolver for ENS name.
 
@@ -921,7 +1253,9 @@ Gets resolver for ENS name.
 
 #### Parameters
 
-• **args**: [`GetEnsResolverParameters`](GetEnsResolverParameters.md)
+##### args
+
+[`GetEnsResolverParameters`](GetEnsResolverParameters.md)
 
 [GetEnsResolverParameters](GetEnsResolverParameters.md)
 
@@ -954,9 +1288,13 @@ const resolverAddress = await client.getEnsResolver({
 // '0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41'
 ```
 
-### getEnsText()
+***
+
+### getEnsText
 
 > **getEnsText**: (`args`) => `Promise`\<[`GetEnsTextReturnType`](GetEnsTextReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:692
 
 Gets a text record for specified ENS name.
 
@@ -965,7 +1303,9 @@ Gets a text record for specified ENS name.
 
 #### Parameters
 
-• **args**: [`GetEnsTextParameters`](GetEnsTextParameters.md)
+##### args
+
+[`GetEnsTextParameters`](GetEnsTextParameters.md)
 
 [GetEnsTextParameters](GetEnsTextParameters.md)
 
@@ -999,9 +1339,13 @@ const twitterRecord = await client.getEnsText({
 // 'wevm_dev'
 ```
 
-### getFeeHistory()
+***
+
+### getFeeHistory
 
 > **getFeeHistory**: (`args`) => `Promise`\<[`GetFeeHistoryReturnType`](GetFeeHistoryReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:715
 
 Returns a collection of historical gas information.
 
@@ -1010,7 +1354,9 @@ Returns a collection of historical gas information.
 
 #### Parameters
 
-• **args**: [`GetFeeHistoryParameters`](GetFeeHistoryParameters.md)
+##### args
+
+[`GetFeeHistoryParameters`](GetFeeHistoryParameters.md)
 
 [GetFeeHistoryParameters](GetFeeHistoryParameters.md)
 
@@ -1036,9 +1382,13 @@ const feeHistory = await client.getFeeHistory({
 })
 ```
 
-### getFilterChanges()
+***
+
+### getFilterChanges
 
 > **getFilterChanges**: \<`filterType`, `abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>(`args`) => `Promise`\<[`GetFilterChangesReturnType`](GetFilterChangesReturnType.md)\<`filterType`, `abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:816
 
 Returns a list of logs or hashes based on a [Filter](/docs/glossary/terms#filter) since the last time it was called.
 
@@ -1047,21 +1397,35 @@ Returns a list of logs or hashes based on a [Filter](/docs/glossary/terms#filter
 
 #### Type Parameters
 
-• **filterType** *extends* [`FilterType`](FilterType.md)
+##### filterType
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined`
+`filterType` *extends* [`FilterType`](FilterType.md)
 
-• **eventName** *extends* `string` \| `undefined`
+##### abi
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined`
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+##### eventName
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`eventName` *extends* `string` \| `undefined`
+
+##### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+##### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+##### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`GetFilterChangesParameters`](GetFilterChangesParameters.md)\<`filterType`, `abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>
+##### args
+
+[`GetFilterChangesParameters`](GetFilterChangesParameters.md)\<`filterType`, `abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>
 
 [GetFilterChangesParameters](GetFilterChangesParameters.md)
 
@@ -1147,9 +1511,13 @@ const filter = await client.createPendingTransactionFilter()
 const hashes = await client.getFilterChanges({ filter })
 ```
 
-### getFilterLogs()
+***
+
+### getFilterLogs
 
 > **getFilterLogs**: \<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>(`args`) => `Promise`\<[`GetFilterLogsReturnType`](GetFilterLogsReturnType.md)\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:843
 
 Returns a list of event logs since the filter was created.
 
@@ -1158,19 +1526,31 @@ Returns a list of event logs since the filter was created.
 
 #### Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined`
+##### abi
 
-• **eventName** *extends* `string` \| `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] \| `undefined`
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+##### eventName
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`eventName` *extends* `string` \| `undefined`
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+##### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+##### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+##### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`GetFilterLogsParameters`](GetFilterLogsParameters.md)\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>
+##### args
+
+[`GetFilterLogsParameters`](GetFilterLogsParameters.md)\<`abi`, `eventName`, `strict`, `fromBlock`, `toBlock`\>
 
 [GetFilterLogsParameters](GetFilterLogsParameters.md)
 
@@ -1201,9 +1581,13 @@ const filter = await client.createEventFilter({
 const logs = await client.getFilterLogs({ filter })
 ```
 
-### getGasPrice()
+***
+
+### getGasPrice
 
 > **getGasPrice**: () => `Promise`\<[`GetGasPriceReturnType`](GetGasPriceReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:862
 
 Returns the current price of gas (in wei).
 
@@ -1229,9 +1613,13 @@ const client = createPublicClient({
 const gasPrice = await client.getGasPrice()
 ```
 
-### getLogs()
+***
 
-> **getLogs**: \<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`\>(`args`?) => `Promise`\<[`GetLogsReturnType`](GetLogsReturnType.md)\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`\>\>
+### getLogs
+
+> **getLogs**: \<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`\>(`args?`) => `Promise`\<[`GetLogsReturnType`](GetLogsReturnType.md)\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:883
 
 Returns a list of event logs matching the provided parameters.
 
@@ -1241,19 +1629,31 @@ Returns a list of event logs matching the provided parameters.
 
 #### Type Parameters
 
-• **abiEvent** *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
+##### abiEvent
 
-• **abiEvents** *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? [`abiEvent`] : `undefined`
+`abiEvent` *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+##### abiEvents
 
-• **fromBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+`abiEvents` *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? \[`abiEvent`\] : `undefined`
 
-• **toBlock** *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag.md) \| `undefined` = `undefined`
+##### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
+
+##### fromBlock
+
+`fromBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
+
+##### toBlock
+
+`toBlock` *extends* [`BlockNumber`](BlockNumber.md) \| [`BlockTag`](BlockTag-2.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args?**: [`GetLogsParameters`](GetLogsParameters.md)\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`\>
+##### args?
+
+[`GetLogsParameters`](GetLogsParameters.md)\<`abiEvent`, `abiEvents`, `strict`, `fromBlock`, `toBlock`\>
 
 [GetLogsParameters](GetLogsParameters.md)
 
@@ -1276,9 +1676,13 @@ const client = createPublicClient({
 const logs = await client.getLogs()
 ```
 
-### getProof()
+***
+
+### getProof
 
 > **getProof**: (`args`) => `Promise`\<[`GetProofReturnType`](GetProofReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:908
 
 Returns the account and storage values of the specified account including the Merkle-proof.
 
@@ -1288,7 +1692,9 @@ Returns the account and storage values of the specified account including the Me
 
 #### Parameters
 
-• **args**: [`GetProofParameters`](GetProofParameters.md)
+##### args
+
+[`GetProofParameters`](GetProofParameters.md)
 
 #### Returns
 
@@ -1312,9 +1718,55 @@ const block = await client.getProof({
 })
 ```
 
-### getStorageAt()
+***
+
+### getRawTransaction
+
+> **getRawTransaction**: (`args`) => `Promise`\<[`GetRawTransactionReturnType`](GetRawTransactionReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:951
+
+Returns the raw, serialized [Transaction](https://viem.sh/docs/glossary/terms#transaction) given a hash.
+
+- Docs: https://viem.sh/docs/actions/public/getRawTransaction
+- JSON-RPC Methods: `eth_getRawTransactionByHash`
+
+#### Parameters
+
+##### args
+
+[`GetRawTransactionParameters`](GetRawTransactionParameters.md)
+
+[GetRawTransactionParameters](GetRawTransactionParameters.md)
+
+#### Returns
+
+`Promise`\<[`GetRawTransactionReturnType`](GetRawTransactionReturnType.md)\>
+
+The raw, serialized transaction. [GetRawTransactionReturnType](GetRawTransactionReturnType.md)
+
+#### Example
+
+```ts
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({
+  chain: mainnet,
+  transport: http(),
+})
+const rawTransaction = await client.getRawTransaction({
+  hash: '0x4ca7ee652d57678f26e887c149ab0735f41de37bcad58c9f6d3ed5824f15b74d',
+})
+```
+
+***
+
+### getStorageAt
 
 > **getStorageAt**: (`args`) => `Promise`\<[`GetStorageAtReturnType`](GetStorageAtReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:975
 
 Returns the value from a storage slot at a given address.
 
@@ -1323,7 +1775,9 @@ Returns the value from a storage slot at a given address.
 
 #### Parameters
 
-• **args**: [`GetStorageAtParameters`](GetStorageAtParameters.md)
+##### args
+
+[`GetStorageAtParameters`](GetStorageAtParameters.md)
 
 [GetStorageAtParameters](GetStorageAtParameters.md)
 
@@ -1350,9 +1804,13 @@ const code = await client.getStorageAt({
 })
 ```
 
-### getTransaction()
+***
+
+### getTransaction
 
 > **getTransaction**: \<`blockTag`\>(`args`) => `Promise`\<[`GetTransactionReturnType`](GetTransactionReturnType.md)\<`chain`, `blockTag`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:998
 
 Returns information about a [Transaction](https://viem.sh/docs/glossary/terms#transaction) given a hash or block identifier.
 
@@ -1362,11 +1820,15 @@ Returns information about a [Transaction](https://viem.sh/docs/glossary/terms#tr
 
 #### Type Parameters
 
-• **blockTag** *extends* [`BlockTag`](BlockTag.md) = `"latest"`
+##### blockTag
+
+`blockTag` *extends* [`BlockTag`](BlockTag-2.md) = `"latest"`
 
 #### Parameters
 
-• **args**: [`GetTransactionParameters`](GetTransactionParameters.md)\<`blockTag`\>
+##### args
+
+[`GetTransactionParameters`](GetTransactionParameters.md)\<`blockTag`\>
 
 [GetTransactionParameters](GetTransactionParameters.md)
 
@@ -1391,9 +1853,13 @@ const transaction = await client.getTransaction({
 })
 ```
 
-### getTransactionConfirmations()
+***
+
+### getTransactionConfirmations
 
 > **getTransactionConfirmations**: (`args`) => `Promise`\<[`GetTransactionConfirmationsReturnType`](GetTransactionConfirmationsReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1021
 
 Returns the number of blocks passed (confirmations) since the transaction was processed on a block.
 
@@ -1403,7 +1869,9 @@ Returns the number of blocks passed (confirmations) since the transaction was pr
 
 #### Parameters
 
-• **args**: [`GetTransactionConfirmationsParameters`](GetTransactionConfirmationsParameters.md)\<`chain`\>
+##### args
+
+[`GetTransactionConfirmationsParameters`](GetTransactionConfirmationsParameters.md)\<`chain`\>
 
 [GetTransactionConfirmationsParameters](GetTransactionConfirmationsParameters.md)
 
@@ -1428,9 +1896,13 @@ const confirmations = await client.getTransactionConfirmations({
 })
 ```
 
-### getTransactionCount()
+***
+
+### getTransactionCount
 
 > **getTransactionCount**: (`args`) => `Promise`\<[`GetTransactionCountReturnType`](GetTransactionCountReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1043
 
 Returns the number of [Transactions](https://viem.sh/docs/glossary/terms#transaction) an Account has broadcast / sent.
 
@@ -1439,7 +1911,9 @@ Returns the number of [Transactions](https://viem.sh/docs/glossary/terms#transac
 
 #### Parameters
 
-• **args**: [`GetTransactionCountParameters`](GetTransactionCountParameters.md)
+##### args
+
+[`GetTransactionCountParameters`](GetTransactionCountParameters.md)
 
 [GetTransactionCountParameters](GetTransactionCountParameters.md)
 
@@ -1464,9 +1938,13 @@ const transactionCount = await client.getTransactionCount({
 })
 ```
 
-### getTransactionReceipt()
+***
+
+### getTransactionReceipt
 
 > **getTransactionReceipt**: (`args`) => `Promise`\<[`GetTransactionReceiptReturnType`](GetTransactionReceiptReturnType.md)\<`chain`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1066
 
 Returns the [Transaction Receipt](https://viem.sh/docs/glossary/terms#transaction-receipt) given a [Transaction](https://viem.sh/docs/glossary/terms#transaction) hash.
 
@@ -1476,7 +1954,9 @@ Returns the [Transaction Receipt](https://viem.sh/docs/glossary/terms#transactio
 
 #### Parameters
 
-• **args**: [`GetTransactionReceiptParameters`](GetTransactionReceiptParameters.md)
+##### args
+
+[`GetTransactionReceiptParameters`](GetTransactionReceiptParameters.md)
 
 [GetTransactionReceiptParameters](GetTransactionReceiptParameters.md)
 
@@ -1501,9 +1981,13 @@ const transactionReceipt = await client.getTransactionReceipt({
 })
 ```
 
-### multicall()
+***
+
+### multicall
 
 > **multicall**: \<`contracts`, `allowFailure`\>(`args`) => `Promise`\<[`MulticallReturnType`](MulticallReturnType.md)\<`contracts`, `allowFailure`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1104
 
 Similar to [`readContract`](https://viem.sh/docs/contract/readContract), but batches up multiple functions on a contract in a single RPC call via the [`multicall3` contract](https://github.com/mds1/multicall).
 
@@ -1511,13 +1995,19 @@ Similar to [`readContract`](https://viem.sh/docs/contract/readContract), but bat
 
 #### Type Parameters
 
-• **contracts** *extends* readonly `unknown`[]
+##### contracts
 
-• **allowFailure** *extends* `boolean` = `true`
+`contracts` *extends* readonly `unknown`[]
+
+##### allowFailure
+
+`allowFailure` *extends* `boolean` = `true`
 
 #### Parameters
 
-• **args**: [`MulticallParameters`](MulticallParameters.md)\<`contracts`, `allowFailure`\>
+##### args
+
+[`MulticallParameters`](MulticallParameters.md)\<`contracts`, `allowFailure`\>
 
 [MulticallParameters](MulticallParameters.md)
 
@@ -1559,9 +2049,13 @@ const result = await client.multicall({
 // [{ result: 424122n, status: 'success' }, { result: 1000000n, status: 'success' }]
 ```
 
-### prepareTransactionRequest()
+***
+
+### prepareTransactionRequest
 
 > **prepareTransactionRequest**: \<`request`, `chainOverride`, `accountOverride`\>(`args`) => `Promise`\<[`PrepareTransactionRequestReturnType`](PrepareTransactionRequestReturnType.md)\<`chain`, `account`, `chainOverride`, `accountOverride`, `request`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1143
 
 Prepares a transaction request for signing.
 
@@ -1569,15 +2063,23 @@ Prepares a transaction request for signing.
 
 #### Type Parameters
 
-• **request** *extends* [`PrepareTransactionRequestRequest`](PrepareTransactionRequestRequest.md)\<`chain`, `chainOverride`\>
+##### request
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+`request` *extends* [`PrepareTransactionRequestRequest`](PrepareTransactionRequestRequest.md)\<`chain`, `chainOverride`\>
 
-• **accountOverride** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined` = `undefined`
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+
+##### accountOverride
+
+`accountOverride` *extends* [`Account`](Account.md) \| [`Address`](Address-1.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`PrepareTransactionRequestParameters`](PrepareTransactionRequestParameters.md)\<`chain`, `account`, `chainOverride`, `accountOverride`, `request`\>
+##### args
+
+[`PrepareTransactionRequestParameters`](PrepareTransactionRequestParameters.md)\<`chain`, `account`, `chainOverride`, `accountOverride`, `request`\>
 
 [PrepareTransactionRequestParameters](PrepareTransactionRequestParameters.md)
 
@@ -1621,9 +2123,13 @@ const request = await client.prepareTransactionRequest({
 })
 ```
 
-### readContract()
+***
+
+### readContract
 
 > **readContract**: \<`abi`, `functionName`, `args`\>(`args`) => `Promise`\<[`ReadContractReturnType`](ReadContractReturnType.md)\<`abi`, `functionName`, `args`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1175
 
 Calls a read-only function on a contract, and returns the response.
 
@@ -1632,15 +2138,23 @@ Calls a read-only function on a contract, and returns the response.
 
 #### Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+##### abi
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"pure"` \| `"view"`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"pure"` \| `"view"`, `functionName`\>
+##### functionName
+
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"pure"` \| `"view"`\>
+
+##### args
+
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"pure"` \| `"view"`, `functionName`\>
 
 #### Parameters
 
-• **args**: [`ReadContractParameters`](ReadContractParameters.md)\<`abi`, `functionName`, `args`\>
+##### args
+
+[`ReadContractParameters`](ReadContractParameters.md)\<`abi`, `functionName`, `args`\>
 
 [ReadContractParameters](ReadContractParameters.md)
 
@@ -1676,9 +2190,13 @@ const result = await client.readContract({
 // 424122n
 ```
 
-### sendRawTransaction()
+***
+
+### sendRawTransaction
 
 > **sendRawTransaction**: (`args`) => `Promise`\<[`SendRawTransactionReturnType`](SendRawTransactionReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1200
 
 Sends a **signed** transaction to the network
 
@@ -1687,7 +2205,9 @@ Sends a **signed** transaction to the network
 
 #### Parameters
 
-• **args**: [`SendRawTransactionParameters`](SendRawTransactionParameters.md)
+##### args
+
+[`SendRawTransactionParameters`](SendRawTransactionParameters.md)
 
 #### Returns
 
@@ -1712,9 +2232,13 @@ const hash = await client.sendRawTransaction({
 })
 ```
 
-### sendRawTransactionSync()
+***
+
+### sendRawTransactionSync
 
 > **sendRawTransactionSync**: (`args`) => `Promise`\<[`SendRawTransactionSyncReturnType`](SendRawTransactionSyncReturnType.md)\<`chain`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1225
 
 Sends a **signed** transaction to the network
 
@@ -1723,7 +2247,9 @@ Sends a **signed** transaction to the network
 
 #### Parameters
 
-• **args**: [`SendRawTransactionSyncParameters`](SendRawTransactionSyncParameters.md)
+##### args
+
+[`SendRawTransactionSyncParameters`](SendRawTransactionSyncParameters.md)
 
 #### Returns
 
@@ -1748,17 +2274,25 @@ const receipt = await client.sendRawTransactionSync({
 })
 ```
 
-### ~~simulate()~~
+***
+
+### ~~simulate~~
 
 > **simulate**: \<`calls`\>(`args`) => `Promise`\<[`SimulateBlocksReturnType`](SimulateBlocksReturnType.md)\<`calls`\>\>
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1229
+
 #### Type Parameters
 
-• **calls** *extends* readonly `unknown`[]
+##### calls
+
+`calls` *extends* readonly `unknown`[]
 
 #### Parameters
 
-• **args**: [`SimulateBlocksParameters`](SimulateBlocksParameters.md)\<`calls`\>
+##### args
+
+[`SimulateBlocksParameters`](SimulateBlocksParameters.md)\<`calls`\>
 
 #### Returns
 
@@ -1768,19 +2302,27 @@ const receipt = await client.sendRawTransactionSync({
 
 Use `simulateBlocks` instead.
 
-### simulateBlocks()
+***
+
+### simulateBlocks
 
 > **simulateBlocks**: \<`calls`\>(`args`) => `Promise`\<[`SimulateBlocksReturnType`](SimulateBlocksReturnType.md)\<`calls`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1272
 
 Simulates a set of calls on block(s) with optional block and state overrides.
 
 #### Type Parameters
 
-• **calls** *extends* readonly `unknown`[]
+##### calls
+
+`calls` *extends* readonly `unknown`[]
 
 #### Parameters
 
-• **args**: [`SimulateBlocksParameters`](SimulateBlocksParameters.md)\<`calls`\>
+##### args
+
+[`SimulateBlocksParameters`](SimulateBlocksParameters.md)\<`calls`\>
 
 #### Returns
 
@@ -1824,19 +2366,27 @@ const result = await client.simulateBlocks({
 })
 ```
 
-### simulateCalls()
+***
+
+### simulateCalls
 
 > **simulateCalls**: \<`calls`\>(`args`) => `Promise`\<[`SimulateCallsReturnType`](SimulateCallsReturnType.md)\<`calls`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1305
 
 Simulates a set of calls.
 
 #### Type Parameters
 
-• **calls** *extends* readonly `unknown`[]
+##### calls
+
+`calls` *extends* readonly `unknown`[]
 
 #### Parameters
 
-• **args**: [`SimulateCallsParameters`](SimulateCallsParameters.md)\<`calls`\>
+##### args
+
+[`SimulateCallsParameters`](SimulateCallsParameters.md)\<`calls`\>
 
 #### Returns
 
@@ -1870,9 +2420,13 @@ const result = await client.simulateCalls({
 })
 ```
 
-### simulateContract()
+***
+
+### simulateContract
 
 > **simulateContract**: \<`abi`, `functionName`, `args`, `chainOverride`, `accountOverride`\>(`args`) => `Promise`\<[`SimulateContractReturnType`](SimulateContractReturnType.md)\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`, `accountOverride`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1336
 
 Simulates/validates a contract interaction. This is useful for retrieving **return data** and **revert reasons** of contract write functions.
 
@@ -1881,19 +2435,31 @@ Simulates/validates a contract interaction. This is useful for retrieving **retu
 
 #### Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+##### abi
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
+##### functionName
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined`
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
 
-• **accountOverride** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined` = `undefined`
+##### args
+
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined`
+
+##### accountOverride
+
+`accountOverride` *extends* [`Account`](Account.md) \| [`Address`](Address-1.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`SimulateContractParameters`](SimulateContractParameters.md)\<`abi`, `functionName`, `args`, `chain`, `chainOverride`, `accountOverride`\>
+##### args
+
+[`SimulateContractParameters`](SimulateContractParameters.md)\<`abi`, `functionName`, `args`, `chain`, `chainOverride`, `accountOverride`\>
 
 [SimulateContractParameters](SimulateContractParameters.md)
 
@@ -1928,9 +2494,233 @@ const result = await client.simulateContract({
 })
 ```
 
-### uninstallFilter()
+***
+
+### token
+
+> **token**: `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1610
+
+Read-only ERC-20 Actions, exposed under the `token` namespace.
+
+Every action selects its token by `token`, which is either a token symbol
+(resolved from the Client's `tokens` array) or a contract `address`.
+
+- Docs: https://viem.sh/docs/token
+
+#### getAllowance
+
+> **getAllowance**: (`parameters`) => `Promise`\<[`ReturnValue`](ReturnValue.md)\> & `object`
+
+Gets the amount of tokens a `spender` is allowed to spend on behalf of an
+`account`.
+
+- Docs: https://viem.sh/docs/token/getAllowance
+
+##### Type Declaration
+
+###### call
+
+> **call**: (`args`) => [`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call.md)\>
+
+Defines an `allowance` contract call, ready to pass to `multicall`,
+`simulateContract`, or any other action that accepts a contract call.
+
+- Docs: https://viem.sh/docs/token/getAllowance#composing-calls
+
+###### Parameters
+
+###### args
+
+[`Args`](Args.md)\<`chain`, `tokens`\>
+
+[getAllowance.Args](Args.md)
+
+###### Returns
+
+[`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call.md)\>
+
+The contract call.
+
+##### Param
+
+**parameters**
+
+[getAllowance.Parameters](Parameters.md)
+
+##### Returns
+
+The remaining allowance, in base units and human-readable form. [getAllowance.ReturnValue](ReturnValue.md)
+
+##### Example
+
+```ts
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({ chain: mainnet, transport: http() })
+
+const allowance = await client.token.getAllowance({
+  account: '0x…',
+  spender: '0x…',
+  token: 'usdc',
+})
+```
+
+#### getBalance
+
+> **getBalance**: (`parameters`) => `Promise`\<[`ReturnValue`](ReturnValue-1.md)\> & `object`
+
+Gets the token balance of an `account`.
+
+- Docs: https://viem.sh/docs/token/getBalance
+
+##### Type Declaration
+
+###### call
+
+> **call**: (`args`) => [`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call-1.md)\>
+
+Defines a `balanceOf` contract call, ready to pass to `multicall`,
+`simulateContract`, or any other action that accepts a contract call.
+
+- Docs: https://viem.sh/docs/token/getBalance#composing-calls
+
+###### Parameters
+
+###### args
+
+[`Args`](Args-1.md)\<`chain`, `account`, `tokens`\>
+
+[getTokenBalance.Args](Args-1.md)
+
+###### Returns
+
+[`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call-1.md)\>
+
+The contract call.
+
+##### Param
+
+**parameters**
+
+[getTokenBalance.Parameters](Parameters-1.md)
+
+##### Returns
+
+The token balance, in base units and human-readable form. [getTokenBalance.ReturnValue](ReturnValue-1.md)
+
+##### Example
+
+```ts
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({ chain: mainnet, transport: http() })
+
+const balance = await client.token.getBalance({
+  account: '0x…',
+  token: 'usdc',
+})
+```
+
+#### getMetadata
+
+> **getMetadata**: (`parameters`) => `Promise`\<[`ReturnValue`](ReturnValue-2.md)\>
+
+Gets the metadata (`decimals`, `name`, `symbol`) of the token. Fields
+declared on the Client's `tokens` array are used as-is; any missing field
+is fetched from the token contract.
+
+- Docs: https://viem.sh/docs/token/getMetadata
+
+##### Parameters
+
+###### parameters
+
+[`Parameters`](Parameters-2.md)\<`chain`, `tokens`\>
+
+[getMetadata.Parameters](Parameters-2.md)
+
+##### Returns
+
+`Promise`\<[`ReturnValue`](ReturnValue-2.md)\>
+
+The token metadata (`decimals`, `name`, `symbol`). [getMetadata.ReturnValue](ReturnValue-2.md)
+
+##### Example
+
+```ts
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({ chain: mainnet, transport: http() })
+
+const metadata = await client.token.getMetadata({ token: 'usdc' })
+```
+
+#### getTotalSupply
+
+> **getTotalSupply**: (`parameters`) => `Promise`\<[`ReturnValue`](ReturnValue-3.md)\> & `object`
+
+Gets the total supply of the token.
+
+- Docs: https://viem.sh/docs/token/getTotalSupply
+
+##### Type Declaration
+
+###### call
+
+> **call**: (`args`) => [`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call-2.md)\>
+
+Defines a `totalSupply` contract call, ready to pass to `multicall`,
+`simulateContract`, or any other action that accepts a contract call.
+
+- Docs: https://viem.sh/docs/token/getTotalSupply#composing-calls
+
+###### Parameters
+
+###### args
+
+[`Args`](Args-2.md)\<`chain`, `tokens`\>
+
+[getTotalSupply.Args](Args-2.md)
+
+###### Returns
+
+[`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call-2.md)\>
+
+The contract call.
+
+##### Param
+
+**parameters**
+
+[getTotalSupply.Parameters](Parameters-3.md)
+
+##### Returns
+
+The token total supply, in base units and human-readable form. [getTotalSupply.ReturnValue](ReturnValue-3.md)
+
+##### Example
+
+```ts
+import { createPublicClient, http } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({ chain: mainnet, transport: http() })
+
+const totalSupply = await client.token.getTotalSupply({ token: 'usdc' })
+```
+
+***
+
+### uninstallFilter
 
 > **uninstallFilter**: (`args`) => `Promise`\<[`UninstallFilterReturnType`](UninstallFilterReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1399
 
 Destroys a Filter that was created from one of the following Actions:
 
@@ -1943,7 +2733,9 @@ Destroys a Filter that was created from one of the following Actions:
 
 #### Parameters
 
-• **args**: [`UninstallFilterParameters`](UninstallFilterParameters.md)
+##### args
+
+[`UninstallFilterParameters`](UninstallFilterParameters.md)
 
 [UninstallFilterParameters](UninstallFilterParameters.md)
 
@@ -1965,9 +2757,13 @@ const uninstalled = await client.uninstallFilter({ filter })
 // true
 ```
 
-### verifyHash()
+***
+
+### verifyHash
 
 > **verifyHash**: (`args`) => `Promise`\<[`VerifyHashReturnType`](VerifyHashReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1345
 
 Verify that a hash was signed by the provided address.
 
@@ -1975,7 +2771,9 @@ Verify that a hash was signed by the provided address.
 
 #### Parameters
 
-• **args**: [`VerifyHashParameters`](VerifyHashParameters.md)
+##### args
+
+[`VerifyHashParameters`](VerifyHashParameters.md)
 
 #### Returns
 
@@ -1983,9 +2781,13 @@ Verify that a hash was signed by the provided address.
 
 Whether or not the signature is valid. [VerifyHashReturnType](VerifyHashReturnType.md)
 
-### verifyMessage()
+***
+
+### verifyMessage
 
 > **verifyMessage**: (`args`) => `Promise`\<[`VerifyMessageReturnType`](VerifyMessageReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1356
 
 Verify that a message was signed by the provided address.
 
@@ -1995,7 +2797,9 @@ Compatible with Smart Contract Accounts & Externally Owned Accounts via [ERC-649
 
 #### Parameters
 
-• **args**: [`VerifyMessageParameters`](VerifyMessageParameters.md)
+##### args
+
+[`VerifyMessageParameters`](VerifyMessageParameters.md)
 
 #### Returns
 
@@ -2003,9 +2807,13 @@ Compatible with Smart Contract Accounts & Externally Owned Accounts via [ERC-649
 
 Whether or not the signature is valid. [VerifyMessageReturnType](VerifyMessageReturnType.md)
 
-### verifySiweMessage()
+***
+
+### verifySiweMessage
 
 > **verifySiweMessage**: (`args`) => `Promise`\<[`VerifySiweMessageReturnType`](VerifySiweMessageReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1367
 
 Verifies [EIP-4361](https://eips.ethereum.org/EIPS/eip-4361) formatted message was signed.
 
@@ -2015,7 +2823,9 @@ Compatible with Smart Contract Accounts & Externally Owned Accounts via [ERC-649
 
 #### Parameters
 
-• **args**: [`VerifySiweMessageParameters`](VerifySiweMessageParameters.md)
+##### args
+
+[`VerifySiweMessageParameters`](VerifySiweMessageParameters.md)
 
 #### Returns
 
@@ -2023,9 +2833,13 @@ Compatible with Smart Contract Accounts & Externally Owned Accounts via [ERC-649
 
 Whether or not the signature is valid. [VerifySiweMessageReturnType](VerifySiweMessageReturnType.md)
 
-### verifyTypedData()
+***
+
+### verifyTypedData
 
 > **verifyTypedData**: (`args`) => `Promise`\<[`VerifyTypedDataReturnType`](VerifyTypedDataReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1376
 
 Verify that typed data was signed by the provided address.
 
@@ -2033,7 +2847,9 @@ Verify that typed data was signed by the provided address.
 
 #### Parameters
 
-• **args**: [`VerifyTypedDataParameters`](VerifyTypedDataParameters.md)
+##### args
+
+[`VerifyTypedDataParameters`](VerifyTypedDataParameters.md)
 
 #### Returns
 
@@ -2041,9 +2857,13 @@ Verify that typed data was signed by the provided address.
 
 Whether or not the signature is valid. [VerifyTypedDataReturnType](VerifyTypedDataReturnType.md)
 
-### waitForTransactionReceipt()
+***
+
+### waitForTransactionReceipt
 
 > **waitForTransactionReceipt**: (`args`) => `Promise`\<[`WaitForTransactionReceiptReturnType`](WaitForTransactionReceiptReturnType.md)\<`chain`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1438
 
 Waits for the [Transaction](https://viem.sh/docs/glossary/terms#transaction) to be included on a [Block](https://viem.sh/docs/glossary/terms#block) (one confirmation), and then returns the [Transaction Receipt](https://viem.sh/docs/glossary/terms#transaction-receipt). If the Transaction reverts, then the action will throw an error.
 
@@ -2058,7 +2878,9 @@ Waits for the [Transaction](https://viem.sh/docs/glossary/terms#transaction) to 
 
 #### Parameters
 
-• **args**: [`WaitForTransactionReceiptParameters`](WaitForTransactionReceiptParameters.md)\<`chain`\>
+##### args
+
+[`WaitForTransactionReceiptParameters`](WaitForTransactionReceiptParameters.md)\<`chain`\>
 
 [WaitForTransactionReceiptParameters](WaitForTransactionReceiptParameters.md)
 
@@ -2095,9 +2917,55 @@ const transactionReceipt = await client.waitForTransactionReceipt({
 })
 ```
 
-### watchBlockNumber()
+***
+
+### watchBlockHeaders
+
+> **watchBlockHeaders**: (`args`) => [`WatchBlockHeadersReturnType`](WatchBlockHeadersReturnType.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1485
+
+Watches and returns incoming block headers without fetching full blocks.
+
+- Docs: https://viem.sh/docs/actions/public/watchBlockHeaders
+- JSON-RPC Methods: Uses a WebSocket or IPC subscription via [`eth_subscribe`](https://ethereum.org/en/developers/docs/apis/json-rpc/#eth_subscribe) and the `"newHeads"` event.
+
+#### Parameters
+
+##### args
+
+[`HasTransportType`](HasTransportType.md)\<`transport`, `"webSocket"` \| `"ipc"`\> *extends* `true` ? [`WatchBlockHeadersParameters`](WatchBlockHeadersParameters.md)\<`chain`\> : `never`
+
+[WatchBlockHeadersParameters](WatchBlockHeadersParameters.md)
+
+#### Returns
+
+[`WatchBlockHeadersReturnType`](WatchBlockHeadersReturnType.md)
+
+A function that can be invoked to stop watching for new block headers. [WatchBlockHeadersReturnType](WatchBlockHeadersReturnType.md)
+
+#### Example
+
+```ts
+import { createPublicClient, webSocket } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createPublicClient({
+  chain: mainnet,
+  transport: webSocket(),
+})
+const unwatch = client.watchBlockHeaders({
+  onBlockHeader: (blockHeader) => console.log(blockHeader),
+})
+```
+
+***
+
+### watchBlockNumber
 
 > **watchBlockNumber**: (`args`) => [`WatchBlockNumberReturnType`](WatchBlockNumberReturnType.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1463
 
 Watches and returns incoming block numbers.
 
@@ -2109,7 +2977,9 @@ Watches and returns incoming block numbers.
 
 #### Parameters
 
-• **args**: [`WatchBlockNumberParameters`](WatchBlockNumberParameters.md)
+##### args
+
+[`WatchBlockNumberParameters`](WatchBlockNumberParameters.md)
 
 [WatchBlockNumberParameters](WatchBlockNumberParameters.md)
 
@@ -2134,9 +3004,13 @@ const unwatch = await client.watchBlockNumber({
 })
 ```
 
-### watchBlocks()
+***
+
+### watchBlocks
 
 > **watchBlocks**: \<`includeTransactions`, `blockTag`\>(`args`) => [`WatchBlocksReturnType`](WatchBlocksReturnType.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1510
 
 Watches and returns information for incoming blocks.
 
@@ -2148,13 +3022,19 @@ Watches and returns information for incoming blocks.
 
 #### Type Parameters
 
-• **includeTransactions** *extends* `boolean` = `false`
+##### includeTransactions
 
-• **blockTag** *extends* [`BlockTag`](BlockTag.md) = `"latest"`
+`includeTransactions` *extends* `boolean` = `false`
+
+##### blockTag
+
+`blockTag` *extends* [`BlockTag`](BlockTag-2.md) = `"latest"`
 
 #### Parameters
 
-• **args**: [`WatchBlocksParameters`](WatchBlocksParameters.md)\<`transport`, `chain`, `includeTransactions`, `blockTag`\>
+##### args
+
+[`WatchBlocksParameters`](WatchBlocksParameters.md)\<`transport`, `chain`, `includeTransactions`, `blockTag`\>
 
 [WatchBlocksParameters](WatchBlocksParameters.md)
 
@@ -2179,9 +3059,13 @@ const unwatch = await client.watchBlocks({
 })
 ```
 
-### watchContractEvent()
+***
+
+### watchContractEvent
 
 > **watchContractEvent**: \<`abi`, `eventName`, `strict`\>(`args`) => [`WatchContractEventReturnType`](WatchContractEventReturnType.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1540
 
 Watches and returns emitted contract event logs.
 
@@ -2189,15 +3073,23 @@ Watches and returns emitted contract event logs.
 
 #### Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+##### abi
 
-• **eventName** *extends* [`ContractEventName`](ContractEventName.md)\<`abi`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+##### eventName
+
+`eventName` *extends* [`ContractEventName`](ContractEventName-1.md)\<`abi`\>
+
+##### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`WatchContractEventParameters`](WatchContractEventParameters.md)\<`abi`, `eventName`, `strict`, `transport`\>
+##### args
+
+[`WatchContractEventParameters`](WatchContractEventParameters.md)\<`abi`, `eventName`, `strict`, `transport`\>
 
 [WatchContractEventParameters](WatchContractEventParameters.md)
 
@@ -2232,9 +3124,13 @@ const unwatch = client.watchContractEvent({
 })
 ```
 
-### watchEvent()
+***
+
+### watchEvent
 
 > **watchEvent**: \<`abiEvent`, `abiEvents`, `strict`\>(`args`) => [`WatchEventReturnType`](WatchEventReturnType.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1572
 
 Watches and returns emitted [Event Logs](https://viem.sh/docs/glossary/terms#event-log).
 
@@ -2248,15 +3144,23 @@ Watches and returns emitted [Event Logs](https://viem.sh/docs/glossary/terms#eve
 
 #### Type Parameters
 
-• **abiEvent** *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
+##### abiEvent
 
-• **abiEvents** *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? [`abiEvent`] : `undefined`
+`abiEvent` *extends* [`AbiEvent`](AbiEvent.md) \| `undefined` = `undefined`
 
-• **strict** *extends* `boolean` \| `undefined` = `undefined`
+##### abiEvents
+
+`abiEvents` *extends* readonly [`AbiEvent`](AbiEvent.md)[] \| readonly `unknown`[] \| `undefined` = `abiEvent` *extends* [`AbiEvent`](AbiEvent.md) ? \[`abiEvent`\] : `undefined`
+
+##### strict
+
+`strict` *extends* `boolean` \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`WatchEventParameters`](WatchEventParameters.md)\<`abiEvent`, `abiEvents`, `strict`, `transport`\>
+##### args
+
+[`WatchEventParameters`](WatchEventParameters.md)\<`abiEvent`, `abiEvents`, `strict`, `transport`\>
 
 [WatchEventParameters](WatchEventParameters.md)
 
@@ -2287,9 +3191,13 @@ const unwatch = client.watchEvent({
 })
 ```
 
-### watchPendingTransactions()
+***
+
+### watchPendingTransactions
 
 > **watchPendingTransactions**: (`args`) => [`WatchPendingTransactionsReturnType`](WatchPendingTransactionsReturnType.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:1601
 
 Watches and returns pending transaction hashes.
 
@@ -2302,7 +3210,9 @@ Watches and returns pending transaction hashes.
 
 #### Parameters
 
-• **args**: [`WatchPendingTransactionsParameters`](WatchPendingTransactionsParameters.md)\<`transport`\>
+##### args
+
+[`WatchPendingTransactionsParameters`](WatchPendingTransactionsParameters.md)\<`transport`\>
 
 [WatchPendingTransactionsParameters](WatchPendingTransactionsParameters.md)
 
@@ -2330,7 +3240,3 @@ const unwatch = await client.watchPendingTransactions({
   onTransactions: (hashes) => console.log(hashes),
 })
 ```
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/public.d.ts:64

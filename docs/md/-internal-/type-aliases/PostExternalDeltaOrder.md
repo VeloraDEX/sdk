@@ -1,23 +1,25 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / PostExternalDeltaOrder
 
-# Type Alias: PostExternalDeltaOrder()
+# Type Alias: PostExternalDeltaOrder
 
-> **PostExternalDeltaOrder**: (`postData`, `requestParams`?) => `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\<`"ExternalOrder"`\>\>
+> **PostExternalDeltaOrder** = (`postData`, `requestParams?`) => `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\<`"ExternalOrder"`\>\>
+
+Defined in: [src/methods/delta/postExternalDeltaOrder.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postExternalDeltaOrder.ts#L11)
 
 ## Parameters
 
-• **postData**: [`PostExternalDeltaOrderParams`](../../type-aliases/PostExternalDeltaOrderParams.md)
+### postData
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+[`PostExternalDeltaOrderParams`](../../type-aliases/PostExternalDeltaOrderParams.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\<`"ExternalOrder"`\>\>
-
-## Defined in
-
-[src/methods/delta/postExternalDeltaOrder.ts:11](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postExternalDeltaOrder.ts#L11)

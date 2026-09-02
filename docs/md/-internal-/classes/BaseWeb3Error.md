@@ -1,16 +1,18 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / BaseWeb3Error
 
-# Class: `abstract` BaseWeb3Error
+# Abstract Class: BaseWeb3Error
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:5
 
 Base class for Web3 errors.
 
 ## Extends
 
-- [`Error`](../interfaces/Error.md)
+- `Error`
 
 ## Extended by
 
@@ -23,41 +25,49 @@ Base class for Web3 errors.
 
 ## Implements
 
-- [`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md)
+- [`Web3Error`](../interfaces/Web3Error.md)
 
 ## Constructors
 
-### new BaseWeb3Error()
+### Constructor
 
-> **new BaseWeb3Error**(`msg`?, `cause`?): [`BaseWeb3Error`](BaseWeb3Error.md)
+> **new BaseWeb3Error**(`msg?`, `cause?`): `BaseWeb3Error`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:18
 
 #### Parameters
 
-• **msg?**: `string`
+##### msg?
 
-• **cause?**: [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+`string`
+
+##### cause?
+
+`Error` \| `Error`[]
 
 #### Returns
 
-[`BaseWeb3Error`](BaseWeb3Error.md)
+`BaseWeb3Error`
 
 #### Overrides
 
 `Error.constructor`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:18
-
 ## Properties
 
 ### cause
 
-> **cause**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **cause**: `Error` \| `undefined`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:9
 
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:9
+#### Implementation of
+
+[`Web3Error`](../interfaces/Web3Error.md).[`cause`](../interfaces/Web3Error.md#cause)
+
+#### Overrides
+
+`Error.cause`
 
 ***
 
@@ -65,13 +75,11 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > `abstract` `readonly` **code**: `number`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:7
+
 #### Implementation of
 
-[`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`code`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#code)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:7
+[`Web3Error`](../interfaces/Web3Error.md).[`code`](../interfaces/Web3Error.md#code)
 
 ***
 
@@ -79,17 +87,15 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **message**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Implementation of
 
-[`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`message`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#message)
+[`Web3Error`](../interfaces/Web3Error.md).[`message`](../interfaces/Web3Error.md#message)
 
 #### Inherited from
 
-[`Error`](../interfaces/Error.md).[`message`](../interfaces/Error.md#message)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+`Error.message`
 
 ***
 
@@ -97,49 +103,51 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > `readonly` **name**: `string`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
+
 #### Implementation of
 
-[`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`name`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#name)
+[`Web3Error`](../interfaces/Web3Error.md).[`name`](../interfaces/Web3Error.md#name)
 
 #### Overrides
 
-[`Error`](../interfaces/Error.md).[`name`](../interfaces/Error.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:6
+`Error.name`
 
 ***
 
 ### stack
 
-> **stack**: `undefined` \| `string`
+> **stack**: `string` \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
 
 #### Implementation of
 
-[`Web3Error`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md).[`stack`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Web3Error.md#stack)
+[`Web3Error`](../interfaces/Web3Error.md).[`stack`](../interfaces/Web3Error.md#stack)
 
 #### Overrides
 
-[`Error`](../interfaces/Error.md).[`stack`](../interfaces/Error.md#stack)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:8
+`Error.stack`
 
 ***
 
-### prepareStackTrace()?
+### prepareStackTrace?
 
-> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
+> `static` `optional` **prepareStackTrace?**: (`err`, `stackTraces`) => `any`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
 
 Optional override for formatting stack traces
 
 #### Parameters
 
-• **err**: [`Error`](../interfaces/Error.md)
+##### err
 
-• **stackTraces**: [`CallSite`](../interfaces/CallSite.md)[]
+`Error`
+
+##### stackTraces
+
+[`CallSite`](../interfaces/CallSite.md)[]
 
 #### Returns
 
@@ -153,23 +161,17 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 `Error.prepareStackTrace`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
-
 ***
 
 ### stackTraceLimit
 
 > `static` **stackTraceLimit**: `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
+
 #### Inherited from
 
 `Error.stackTraceLimit`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
 
 ## Accessors
 
@@ -177,7 +179,9 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:14
 
 #### Get Signature
 
-> **get** **innerError**(): `undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+> **get** **innerError**(): `Error` \| `Error`[] \| `undefined`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
 
 ##### Deprecated
 
@@ -185,11 +189,13 @@ Use the `cause` property instead.
 
 ##### Returns
 
-`undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+`Error` \| `Error`[] \| `undefined`
 
 #### Set Signature
 
 > **set** **innerError**(`cause`): `void`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:17
 
 ##### Deprecated
 
@@ -197,15 +203,13 @@ Use the `cause` property instead.
 
 ##### Parameters
 
-• **cause**: `undefined` \| [`Error`](../interfaces/Error.md) \| [`Error`](../interfaces/Error.md)[]
+###### cause
+
+`Error` \| `Error`[] \| `undefined`
 
 ##### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:13
 
 ## Methods
 
@@ -213,13 +217,15 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **toJSON**(): `object`
 
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:20
+
 #### Returns
 
 `object`
 
 ##### cause
 
-> **cause**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **cause**: `Error` \| `undefined`
 
 ##### code
 
@@ -227,7 +233,7 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 ##### innerError
 
-> **innerError**: `undefined` \| [`Error`](../interfaces/Error.md)
+> **innerError**: `Error` \| `undefined`
 
 ##### message
 
@@ -237,23 +243,25 @@ node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web
 
 > **name**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:20
-
 ***
 
 ### captureStackTrace()
 
-> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
 
 Create .stack property on a target object
 
 #### Parameters
 
-• **targetObject**: `object`
+##### targetObject
 
-• **constructorOpt?**: `Function`
+`object`
+
+##### constructorOpt?
+
+`Function`
 
 #### Returns
 
@@ -263,26 +271,24 @@ Create .stack property on a target object
 
 `Error.captureStackTrace`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
-
 ***
 
 ### convertToString()
 
-> `static` **convertToString**(`value`, `unquotValue`?): `string`
+> `static` **convertToString**(`value`, `unquotValue?`): `string`
+
+Defined in: node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19
 
 #### Parameters
 
-• **value**: `unknown`
+##### value
 
-• **unquotValue?**: `boolean`
+`unknown`
+
+##### unquotValue?
+
+`boolean`
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-errors@1.3.0/node\_modules/web3-errors/lib/commonjs/web3\_error\_base.d.ts:19

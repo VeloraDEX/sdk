@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,20 +6,12 @@
 
 # Type Alias: GetTransactionRequestKzgParameter\<request\>
 
-> **GetTransactionRequestKzgParameter**\<`request`\>: [`MaybeRequired`](MaybeRequired.md)\<`object`, `request` *extends* `object` ? `true` : `false`\>
+> **GetTransactionRequestKzgParameter**\<`request`\> = [`MaybeRequired`](MaybeRequired.md)\<\{ `kzg?`: [`Kzg`](Kzg.md); \}, `request` *extends* `object` ? `true` : `false`\>
 
-## Type declaration
-
-### kzg?
-
-> `optional` **kzg**: [`Kzg`](Kzg.md)
-
-KZG implementation
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/kzg.d.ts:17
 
 ## Type Parameters
 
-• **request** *extends* `unknown` \| `undefined` = `undefined`
+### request
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/kzg.d.ts:17
+`request` *extends* `unknown` \| `undefined` = `undefined`

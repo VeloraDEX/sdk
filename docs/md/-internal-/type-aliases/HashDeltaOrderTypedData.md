@@ -1,21 +1,21 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / HashDeltaOrderTypedData
 
-# Type Alias: HashDeltaOrderTypedData()
+# Type Alias: HashDeltaOrderTypedData
 
-> **HashDeltaOrderTypedData**: (`signableOrderData`) => `string`
+> **HashDeltaOrderTypedData** = (`signableOrderData`) => `string`
+
+Defined in: [src/methods/delta/preSignDeltaOrder.ts:18](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignDeltaOrder.ts#L18)
 
 ## Parameters
 
-• **signableOrderData**: [`SignableDeltaOrderData`](../../type-aliases/SignableDeltaOrderData.md)
+### signableOrderData
+
+[`SignableDeltaOrderData`](../../type-aliases/SignableDeltaOrderData.md)
 
 ## Returns
 
 `string`
-
-## Defined in
-
-[src/methods/delta/preSignDeltaOrder.ts:18](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/preSignDeltaOrder.ts#L18)

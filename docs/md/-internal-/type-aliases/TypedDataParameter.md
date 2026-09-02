@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,22 @@
 
 # Type Alias: TypedDataParameter
 
-> **TypedDataParameter**: `object`
+> **TypedDataParameter** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:129
+
+## Properties
 
 ### name
 
 > **name**: `string`
 
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:130
+
+***
+
 ### type
 
 > **type**: [`TypedDataType`](TypedDataType.md) \| keyof [`TypedData`](TypedData.md) \| \`$\{keyof TypedData\}\[$\{string \| ""\}\]\`
 
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:129
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:131

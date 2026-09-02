@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Event
 
 # Interface: Event
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:46
 
 ## Extends
 
@@ -16,23 +18,19 @@
 
 > **address**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:59
+
 #### Inherited from
 
 [`Log`](Log.md).[`address`](Log.md#address)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:59
 
 ***
 
 ### args?
 
-> `optional` **args**: [`Result`](Result.md)
+> `optional` **args?**: [`Result`](Result.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:49
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:49
 
 ***
 
@@ -40,13 +38,11 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **blockHash**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:56
+
 #### Inherited from
 
 [`Log`](Log.md).[`blockHash`](Log.md#blockhash)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:56
 
 ***
 
@@ -54,13 +50,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **blockNumber**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:55
+
 #### Inherited from
 
 [`Log`](Log.md).[`blockNumber`](Log.md#blocknumber)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:55
 
 ***
 
@@ -68,105 +62,93 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **data**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:60
+
 #### Inherited from
 
 [`Log`](Log.md).[`data`](Log.md#data)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:60
-
 ***
 
-### decode()?
+### decode?
 
-> `optional` **decode**: (`data`, `topics`?) => `any`
+> `optional` **decode?**: (`data`, `topics?`) => `any`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:51
 
 #### Parameters
 
-• **data**: `string`
+##### data
 
-• **topics?**: `string`[]
+`string`
+
+##### topics?
+
+`string`[]
 
 #### Returns
 
 `any`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:51
-
 ***
 
 ### decodeError?
 
-> `optional` **decodeError**: [`Error`](Error.md)
+> `optional` **decodeError?**: `Error`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:50
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:50
 
 ***
 
 ### event?
 
-> `optional` **event**: `string`
+> `optional` **event?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:47
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:47
 
 ***
 
 ### eventSignature?
 
-> `optional` **eventSignature**: `string`
+> `optional` **eventSignature?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:48
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:48
 
 ***
 
-### getBlock()
+### getBlock
 
-> **getBlock**: () => `Promise`\<[`Block`](Block.md)\>
+> **getBlock**: () => `Promise`\<[`Block`](Block-1.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:53
 
 #### Returns
 
-`Promise`\<[`Block`](Block.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:53
+`Promise`\<[`Block`](Block-1.md)\>
 
 ***
 
-### getTransaction()
+### getTransaction
 
 > **getTransaction**: () => `Promise`\<[`TransactionResponse`](TransactionResponse.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:54
 
 #### Returns
 
 `Promise`\<[`TransactionResponse`](TransactionResponse.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:54
-
 ***
 
-### getTransactionReceipt()
+### getTransactionReceipt
 
 > **getTransactionReceipt**: () => `Promise`\<[`TransactionReceipt`](TransactionReceipt.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:55
 
 #### Returns
 
 `Promise`\<[`TransactionReceipt`](TransactionReceipt.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:55
 
 ***
 
@@ -174,13 +156,11 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **logIndex**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:63
+
 #### Inherited from
 
 [`Log`](Log.md).[`logIndex`](Log.md#logindex)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:63
 
 ***
 
@@ -188,27 +168,23 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **removed**: `boolean`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:58
+
 #### Inherited from
 
 [`Log`](Log.md).[`removed`](Log.md#removed)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:58
-
 ***
 
-### removeListener()
+### removeListener
 
 > **removeListener**: () => `void`
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:52
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:52
 
 ***
 
@@ -216,13 +192,11 @@ node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/
 
 > **topics**: `string`[]
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:61
+
 #### Inherited from
 
 [`Log`](Log.md).[`topics`](Log.md#topics)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:61
 
 ***
 
@@ -230,13 +204,11 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **transactionHash**: `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:62
+
 #### Inherited from
 
 [`Log`](Log.md).[`transactionHash`](Log.md#transactionhash)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:62
 
 ***
 
@@ -244,10 +216,8 @@ node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethers
 
 > **transactionIndex**: `number`
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:57
+
 #### Inherited from
 
 [`Log`](Log.md).[`transactionIndex`](Log.md#transactionindex)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:57

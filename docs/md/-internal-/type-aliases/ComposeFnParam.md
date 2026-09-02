@@ -1,21 +1,21 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / ComposeFnParam
 
-# Type Alias: ComposeFnParam()
+# Type Alias: ComposeFnParam
 
-> **ComposeFnParam**: (`source`) => `void`
+> **ComposeFnParam** = (`source`) => `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:27
 
 ## Parameters
 
-• **source**: `any`
+### source
+
+`any`
 
 ## Returns
 
 `void`
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:27

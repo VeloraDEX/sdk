@@ -1,0 +1,201 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="../"><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>TransactionReceipt | @velora-dex/sdk</title><meta name="description" content="Documentation for @velora-dex/sdk"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="../assets/style.css"/><link rel="stylesheet" href="../assets/highlight.css"/><script defer src="../assets/main.js"></script><script async src="../assets/icons.js" id="tsd-icons-script"></script><script async src="../assets/search.js" id="tsd-search-script"></script><script async src="../assets/navigation.js" id="tsd-nav-script"></script><script async src="../assets/hierarchy.js" id="tsd-hierarchy-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => window.app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container"><a href="../index.html" class="title">@velora-dex/sdk</a>
+<div id="tsd-toolbar-links"></div><button id="tsd-search-trigger" class="tsd-widget" aria-label="Search"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-search"></use></svg></button><dialog id="tsd-search" aria-label="Search"><input role="combobox" id="tsd-search-input" aria-controls="tsd-search-results" aria-autocomplete="list" aria-expanded="true" autocapitalize="off" autocomplete="off" placeholder="Search the docs" maxLength="100"/>
+<ul role="listbox" id="tsd-search-results"></ul>
+<div id="tsd-search-status" aria-live="polite" aria-atomic="true">
+<div>Preparing search index...</div></div></dialog><a href="#" class="tsd-widget menu" id="tsd-toolbar-menu-trigger" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-menu"></use></svg></a></div></header>
+<div class="container container-main">
+<div class="col-content">
+<div class="tsd-page-title">
+<ul class="tsd-breadcrumb" aria-label="Breadcrumb">
+<li><a href="../modules/_internal_.html">&lt;internal&gt;</a></li>
+<li><a href="" aria-current="page">TransactionReceipt</a></li></ul>
+<h1>Type Alias TransactionReceipt&lt;quantity, index, status, type&gt;</h1></div>
+<div class="tsd-signature"><span class="tsd-signature-keyword">type</span> <span class="tsd-kind-type-alias">TransactionReceipt</span><span class="tsd-signature-symbol">&lt;</span><br/>    <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a> <span class="tsd-signature-symbol">=</span> <span class="tsd-signature-type">bigint</span><span class="tsd-signature-symbol">,</span><br/>    <a class="tsd-signature-type tsd-kind-type-parameter" href="#index">index</a> <span class="tsd-signature-symbol">=</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">,</span><br/>    <a class="tsd-signature-type tsd-kind-type-parameter" href="#status">status</a> <span class="tsd-signature-symbol">=</span> <span class="tsd-signature-type">&quot;success&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;reverted&quot;</span><span class="tsd-signature-symbol">,</span><br/>    <a class="tsd-signature-type tsd-kind-type-parameter" href="#type">type</a> <span class="tsd-signature-symbol">=</span> <a href="_internal_.TransactionType.html" class="tsd-signature-type tsd-kind-type-alias">TransactionType</a><span class="tsd-signature-symbol">,</span><br/><span class="tsd-signature-symbol">&gt;</span> <span class="tsd-signature-symbol">=</span> <span class="tsd-signature-symbol">{</span><br/>    <a class="tsd-kind-property" href="#blobgasprice">blobGasPrice</a><span class="tsd-signature-symbol">?:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#blobgasused">blobGasUsed</a><span class="tsd-signature-symbol">?:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#blockhash">blockHash</a><span class="tsd-signature-symbol">:</span> <a href="_internal_.Hash.html" class="tsd-signature-type tsd-kind-type-alias">Hash</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#blocknumber">blockNumber</a><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#blocktimestamp">blockTimestamp</a><span class="tsd-signature-symbol">?:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#contractaddress">contractAddress</a><span class="tsd-signature-symbol">:</span> <a href="_internal_.Address-1.html" class="tsd-signature-type tsd-kind-type-alias">Address</a> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#cumulativegasused">cumulativeGasUsed</a><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#effectivegasprice">effectiveGasPrice</a><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#from">from</a><span class="tsd-signature-symbol">:</span> <a href="_internal_.Address-1.html" class="tsd-signature-type tsd-kind-type-alias">Address</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#gasused">gasUsed</a><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#logs">logs</a><span class="tsd-signature-symbol">:</span> <a href="_internal_.Log.html" class="tsd-signature-type tsd-kind-type-alias">Log</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a><span class="tsd-signature-symbol">,</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#index">index</a><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#logsbloom">logsBloom</a><span class="tsd-signature-symbol">:</span> <a href="_internal_.Hex.html" class="tsd-signature-type tsd-kind-type-alias">Hex</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#root">root</a><span class="tsd-signature-symbol">?:</span> <a href="_internal_.Hash.html" class="tsd-signature-type tsd-kind-type-alias">Hash</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#status-1">status</a><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#status">status</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#to">to</a><span class="tsd-signature-symbol">:</span> <a href="_internal_.Address-1.html" class="tsd-signature-type tsd-kind-type-alias">Address</a> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#transactionhash">transactionHash</a><span class="tsd-signature-symbol">:</span> <a href="_internal_.Hash.html" class="tsd-signature-type tsd-kind-type-alias">Hash</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#transactionindex">transactionIndex</a><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#index">index</a><span class="tsd-signature-symbol">;</span><br/>    <a class="tsd-kind-property" href="#type-1">type</a><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#type">type</a><span class="tsd-signature-symbol">;</span><br/><span class="tsd-signature-symbol">}</span></div>
+<section class="tsd-panel">
+<h4>Type Parameters</h4>
+<ul class="tsd-type-parameter-list">
+<li><span id="quantity"><span class="tsd-kind-type-parameter">quantity</span> = <span class="tsd-signature-type">bigint</span></span></li>
+<li><span id="index"><span class="tsd-kind-type-parameter">index</span> = <span class="tsd-signature-type">number</span></span></li>
+<li><span id="status"><span class="tsd-kind-type-parameter">status</span> = <span class="tsd-signature-type">&quot;success&quot;</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">&quot;reverted&quot;</span></span></li>
+<li><span id="type"><span class="tsd-kind-type-parameter">type</span> = <a href="_internal_.TransactionType.html" class="tsd-signature-type tsd-kind-type-alias">TransactionType</a></span></li></ul></section><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:14</li></ul></aside>
+<section class="tsd-panel-group tsd-index-group">
+<section class="tsd-panel tsd-index-panel">
+<details class="tsd-index-content tsd-accordion" open><summary class="tsd-accordion-summary tsd-index-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h5 class="tsd-index-heading uppercase">Index</h5></summary>
+<div class="tsd-accordion-details">
+<section class="tsd-index-section">
+<h3 class="tsd-index-heading tsd-anchor-link" id="properties">Properties<a href="#properties" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-index-list"><a href="#blobgasprice" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>blob<wbr/>Gas<wbr/>Price?</span></a>
+<a href="#blobgasused" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>blob<wbr/>Gas<wbr/>Used?</span></a>
+<a href="#blockhash" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>block<wbr/>Hash</span></a>
+<a href="#blocknumber" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>block<wbr/>Number</span></a>
+<a href="#blocktimestamp" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>block<wbr/>Timestamp?</span></a>
+<a href="#contractaddress" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>contract<wbr/>Address</span></a>
+<a href="#cumulativegasused" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cumulative<wbr/>Gas<wbr/>Used</span></a>
+<a href="#effectivegasprice" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>effective<wbr/>Gas<wbr/>Price</span></a>
+<a href="#from" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>from</span></a>
+<a href="#gasused" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>gas<wbr/>Used</span></a>
+<a href="#logs" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>logs</span></a>
+<a href="#logsbloom" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>logs<wbr/>Bloom</span></a>
+<a href="#root" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>root?</span></a>
+<a href="#status-1" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>status</span></a>
+<a href="#to" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>to</span></a>
+<a href="#transactionhash" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>transaction<wbr/>Hash</span></a>
+<a href="#transactionindex" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>transaction<wbr/>Index</span></a>
+<a href="#type-1" class="tsd-index-link tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a>
+</div></section></div></details></section></section>
+<details class="tsd-panel-group tsd-member-group tsd-accordion" open><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h2 class="tsd-anchor-link" id="properties-1">Properties<a href="#properties-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h2></summary>
+<section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="blobgasprice"><code class="tsd-tag">Optional</code><span>blob<wbr/>Gas<wbr/>Price</span><a href="#blobgasprice" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">blobGasPrice</span><span class="tsd-signature-symbol">?:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a></div>
+<div class="tsd-comment tsd-typography"><p>The actual value per gas deducted from the sender's account for blob gas. Only specified for blob transactions as defined by EIP-4844.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:16</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="blobgasused"><code class="tsd-tag">Optional</code><span>blob<wbr/>Gas<wbr/>Used</span><a href="#blobgasused" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">blobGasUsed</span><span class="tsd-signature-symbol">?:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a></div>
+<div class="tsd-comment tsd-typography"><p>The amount of blob gas used. Only specified for blob transactions as defined by EIP-4844.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:18</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="blockhash"><span>block<wbr/>Hash</span><a href="#blockhash" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">blockHash</span><span class="tsd-signature-symbol">:</span> <a href="_internal_.Hash.html" class="tsd-signature-type tsd-kind-type-alias">Hash</a></div>
+<div class="tsd-comment tsd-typography"><p>Hash of block containing this transaction</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:20</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="blocknumber"><span>block<wbr/>Number</span><a href="#blocknumber" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">blockNumber</span><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a></div>
+<div class="tsd-comment tsd-typography"><p>Number of block containing this transaction</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:22</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="blocktimestamp"><code class="tsd-tag">Optional</code><span>block<wbr/>Timestamp</span><a href="#blocktimestamp" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">blockTimestamp</span><span class="tsd-signature-symbol">?:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a></div>
+<div class="tsd-comment tsd-typography"><p>Unix timestamp of when this block was included</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:24</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="contractaddress"><span>contract<wbr/>Address</span><a href="#contractaddress" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">contractAddress</span><span class="tsd-signature-symbol">:</span> <a href="_internal_.Address-1.html" class="tsd-signature-type tsd-kind-type-alias">Address</a> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">undefined</span></div>
+<div class="tsd-comment tsd-typography"><p>Address of new contract or <code>null</code> if no contract was created</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:26</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="cumulativegasused"><span>cumulative<wbr/>Gas<wbr/>Used</span><a href="#cumulativegasused" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">cumulativeGasUsed</span><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a></div>
+<div class="tsd-comment tsd-typography"><p>Gas used by this and all preceding transactions in this block</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:28</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="effectivegasprice"><span>effective<wbr/>Gas<wbr/>Price</span><a href="#effectivegasprice" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">effectiveGasPrice</span><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a></div>
+<div class="tsd-comment tsd-typography"><p>Pre-London, it is equal to the transaction's gasPrice. Post-London, it is equal to the actual gas price paid for inclusion.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:30</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="from"><span>from</span><a href="#from" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">from</span><span class="tsd-signature-symbol">:</span> <a href="_internal_.Address-1.html" class="tsd-signature-type tsd-kind-type-alias">Address</a></div>
+<div class="tsd-comment tsd-typography"><p>Transaction sender</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:32</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="gasused"><span>gas<wbr/>Used</span><a href="#gasused" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">gasUsed</span><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a></div>
+<div class="tsd-comment tsd-typography"><p>Gas used by this transaction</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:34</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="logs"><span>logs</span><a href="#logs" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">logs</span><span class="tsd-signature-symbol">:</span> <a href="_internal_.Log.html" class="tsd-signature-type tsd-kind-type-alias">Log</a><span class="tsd-signature-symbol">&lt;</span><a class="tsd-signature-type tsd-kind-type-parameter" href="#quantity">quantity</a><span class="tsd-signature-symbol">,</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#index">index</a><span class="tsd-signature-symbol">,</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></div>
+<div class="tsd-comment tsd-typography"><p>List of log objects generated by this transaction</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:36</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="logsbloom"><span>logs<wbr/>Bloom</span><a href="#logsbloom" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">logsBloom</span><span class="tsd-signature-symbol">:</span> <a href="_internal_.Hex.html" class="tsd-signature-type tsd-kind-type-alias">Hex</a></div>
+<div class="tsd-comment tsd-typography"><p>Logs bloom filter</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:38</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="root"><code class="tsd-tag">Optional</code><span>root</span><a href="#root" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">root</span><span class="tsd-signature-symbol">?:</span> <a href="_internal_.Hash.html" class="tsd-signature-type tsd-kind-type-alias">Hash</a></div>
+<div class="tsd-comment tsd-typography"><p>The post-transaction state root. Only specified for transactions included before the Byzantium upgrade.</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:40</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="status-1"><span>status</span><a href="#status-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">status</span><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#status">status</a></div>
+<div class="tsd-comment tsd-typography"><p><code>success</code> if this transaction was successful or <code>reverted</code> if it failed</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:42</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="to"><span>to</span><a href="#to" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">to</span><span class="tsd-signature-symbol">:</span> <a href="_internal_.Address-1.html" class="tsd-signature-type tsd-kind-type-alias">Address</a> <span class="tsd-signature-symbol">|</span> <span class="tsd-signature-type">null</span></div>
+<div class="tsd-comment tsd-typography"><p>Transaction recipient or <code>null</code> if deploying a contract</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:44</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="transactionhash"><span>transaction<wbr/>Hash</span><a href="#transactionhash" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">transactionHash</span><span class="tsd-signature-symbol">:</span> <a href="_internal_.Hash.html" class="tsd-signature-type tsd-kind-type-alias">Hash</a></div>
+<div class="tsd-comment tsd-typography"><p>Hash of this transaction</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:46</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="transactionindex"><span>transaction<wbr/>Index</span><a href="#transactionindex" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">transactionIndex</span><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#index">index</a></div>
+<div class="tsd-comment tsd-typography"><p>Index of this transaction in the block</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:48</li></ul></aside></section>
+<section class="tsd-panel tsd-member tsd-is-external">
+<h3 class="tsd-anchor-link" id="type-1"><span>type</span><a href="#type-1" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="../assets/icons.svg#icon-anchor"></use></svg></a></h3>
+<div class="tsd-signature"><span class="tsd-kind-property">type</span><span class="tsd-signature-symbol">:</span> <a class="tsd-signature-type tsd-kind-type-parameter" href="#type">type</a></div>
+<div class="tsd-comment tsd-typography"><p>Transaction type</p>
+</div><aside class="tsd-sources">
+<ul>
+<li>Defined in node_modules/.pnpm/viem@2.56.1_typescript@5.9.3_zod@3.25.76/node_modules/viem/_types/types/transaction.d.ts:50</li></ul></aside></section></section></details></div>
+<div class="col-sidebar">
+<div class="page-menu">
+<div class="tsd-navigation settings">
+<details class="tsd-accordion"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div>
+<div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>
+<h3>On This Page</h3></summary>
+<div class="tsd-accordion-details">
+<details open class="tsd-accordion tsd-page-navigation-section"><summary class="tsd-accordion-summary" data-key="section-Properties"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="../assets/icons.svg#icon-chevronDown"></use></svg>Properties</summary>
+<div><a href="#blobgasprice" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>blob<wbr/>Gas<wbr/>Price</span></a><a href="#blobgasused" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>blob<wbr/>Gas<wbr/>Used</span></a><a href="#blockhash" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>block<wbr/>Hash</span></a><a href="#blocknumber" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>block<wbr/>Number</span></a><a href="#blocktimestamp" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>block<wbr/>Timestamp</span></a><a href="#contractaddress" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>contract<wbr/>Address</span></a><a href="#cumulativegasused" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>cumulative<wbr/>Gas<wbr/>Used</span></a><a href="#effectivegasprice" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>effective<wbr/>Gas<wbr/>Price</span></a><a href="#from" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>from</span></a><a href="#gasused" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>gas<wbr/>Used</span></a><a href="#logs" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>logs</span></a><a href="#logsbloom" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>logs<wbr/>Bloom</span></a><a href="#root" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>root</span></a><a href="#status-1" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>status</span></a><a href="#to" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>to</span></a><a href="#transactionhash" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>transaction<wbr/>Hash</span></a><a href="#transactionindex" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>transaction<wbr/>Index</span></a><a href="#type-1" class="tsd-is-external"><svg class="tsd-kind-icon" viewBox="0 0 24 24" aria-label="Property"><use href="../assets/icons.svg#icon-1024"></use></svg><span>type</span></a></div></details></div></details></div>
+<div class="site-menu">
+<nav class="tsd-navigation"><a href="../modules.html">@velora-dex/sdk</a>
+<ul class="tsd-small-nested-navigation" id="tsd-nav-container">
+<li>Loading...</li></ul></nav></div></div></div><footer>
+<p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer>
+<div class="overlay"></div></body></html>

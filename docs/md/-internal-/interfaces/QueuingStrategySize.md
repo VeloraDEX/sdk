@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,20 +6,24 @@
 
 # Interface: QueuingStrategySize()\<T\>
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:334
+
 ## Type Parameters
 
-• **T** = `any`
+### T
 
-> **QueuingStrategySize**(`chunk`?): `number`
+`T` = `any`
+
+> **QueuingStrategySize**(`chunk?`): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:335
 
 ## Parameters
 
-• **chunk?**: `T`
+### chunk?
+
+`T`
 
 ## Returns
 
 `number`
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:335

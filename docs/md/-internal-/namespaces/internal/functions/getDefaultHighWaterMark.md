@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -8,12 +8,16 @@
 
 > **getDefaultHighWaterMark**(`objectMode`): `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1401
+
 Returns the default highWaterMark used by streams.
 Defaults to `65536` (64 KiB), or `16` for `objectMode`.
 
 ## Parameters
 
-• **objectMode**: `boolean`
+### objectMode
+
+`boolean`
 
 ## Returns
 
@@ -22,7 +26,3 @@ Defaults to `65536` (64 KiB), or `16` for `objectMode`.
 ## Since
 
 v19.9.0
-
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1401

@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Blob
 
 # Class: Blob
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:152
 
 A [`Blob`](https://developer.mozilla.org/en-US/docs/Web/API/Blob) encapsulates immutable, raw data that can be safely shared across
 multiple worker threads.
@@ -15,9 +17,11 @@ v15.7.0, v14.18.0
 
 ## Constructors
 
-### new Blob()
+### Constructor
 
-> **new Blob**(`sources`, `options`?): [`Blob`](Blob.md)
+> **new Blob**(`sources`, `options?`): `Blob`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:171
 
 Creates a new `Blob` object containing a concatenation of the given sources.
 
@@ -28,17 +32,17 @@ String sources are also copied into the `Blob`.
 
 #### Parameters
 
-• **sources**: (`ArrayBuffer` \| [`Blob`](Blob.md) \| [`BinaryLike`](../type-aliases/BinaryLike.md))[]
+##### sources
 
-• **options?**: [`BlobOptions`](../interfaces/BlobOptions.md)
+(`ArrayBuffer` \| `Blob` \| [`BinaryLike`](../type-aliases/BinaryLike.md))[]
+
+##### options?
+
+[`BlobOptions`](../interfaces/BlobOptions.md)
 
 #### Returns
 
-[`Blob`](Blob.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:171
+`Blob`
 
 ## Properties
 
@@ -46,15 +50,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:171
 
 > `readonly` **size**: `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:157
+
 The total size of the `Blob` in bytes.
 
 #### Since
 
 v15.7.0, v14.18.0
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:157
 
 ***
 
@@ -62,21 +64,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:157
 
 > `readonly` **type**: `string`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:162
+
 The content-type of the `Blob`.
 
 #### Since
 
 v15.7.0, v14.18.0
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:162
-
 ## Methods
 
 ### arrayBuffer()
 
 > **arrayBuffer**(): `Promise`\<`ArrayBuffer`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:177
 
 Returns a promise that fulfills with an [ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) containing a copy of
 the `Blob` data.
@@ -89,15 +91,13 @@ the `Blob` data.
 
 v15.7.0, v14.18.0
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:177
-
 ***
 
 ### bytes()
 
-> **bytes**(): `Promise`\<`Uint8Array`\>
+> **bytes**(): `Promise`\<`Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:188
 
 The `blob.bytes()` method returns the byte of the `Blob` object as a `Promise<Uint8Array>`.
 
@@ -110,72 +110,72 @@ blob.bytes().then((bytes) => {
 
 #### Returns
 
-`Promise`\<`Uint8Array`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:188
+`Promise`\<`Uint8Array`\<[`ArrayBufferLike`](../type-aliases/ArrayBufferLike.md)\>\>
 
 ***
 
 ### slice()
 
-> **slice**(`start`?, `end`?, `type`?): [`Blob`](Blob.md)
+> **slice**(`start?`, `end?`, `type?`): `Blob`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:197
 
 Creates and returns a new `Blob` containing a subset of this `Blob` objects
 data. The original `Blob` is not altered.
 
 #### Parameters
 
-• **start?**: `number`
+##### start?
+
+`number`
 
 The starting index.
 
-• **end?**: `number`
+##### end?
+
+`number`
 
 The ending index.
 
-• **type?**: `string`
+##### type?
+
+`string`
 
 The content-type for the new `Blob`
 
 #### Returns
 
-[`Blob`](Blob.md)
+`Blob`
 
 #### Since
 
 v15.7.0, v14.18.0
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:197
-
 ***
 
 ### stream()
 
-> **stream**(): [`ReadableStream`](../interfaces/ReadableStream.md)\<`any`\>
+> **stream**(): [`ReadableStream`](../interfaces/ReadableStream.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:208
 
 Returns a new `ReadableStream` that allows the content of the `Blob` to be read.
 
 #### Returns
 
-[`ReadableStream`](../interfaces/ReadableStream.md)\<`any`\>
+[`ReadableStream`](../interfaces/ReadableStream.md)
 
 #### Since
 
 v16.7.0
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:208
 
 ***
 
 ### text()
 
 > **text**(): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:203
 
 Returns a promise that fulfills with the contents of the `Blob` decoded as a
 UTF-8 string.
@@ -187,7 +187,3 @@ UTF-8 string.
 #### Since
 
 v15.7.0, v14.18.0
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/buffer.d.ts:203

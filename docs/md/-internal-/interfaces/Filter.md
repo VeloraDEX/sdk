@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,62 +6,48 @@
 
 # Interface: Filter
 
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:94
+
+## Extends
+
+- [`EventFilter`](EventFilter.md)
+
 ## Properties
 
 ### address?
 
-> `readonly` `optional` **address**: `string` \| `string`[]
+> `optional` **address?**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:91
 
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:225
+#### Inherited from
 
-***
-
-### blockHash?
-
-> `readonly` `optional` **blockHash**: `string`
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:226
-
-***
-
-### filter?
-
-> `readonly` `optional` **filter**: [`FilterOption`](../type-aliases/FilterOption.md)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:228
+[`EventFilter`](EventFilter.md).[`address`](EventFilter.md#address)
 
 ***
 
 ### fromBlock?
 
-> `readonly` `optional` **fromBlock**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+> `optional` **fromBlock?**: [`BlockTag`](../type-aliases/BlockTag.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:223
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:95
 
 ***
 
 ### toBlock?
 
-> `readonly` `optional` **toBlock**: [`BlockNumberOrTag`](../type-aliases/BlockNumberOrTag.md)
+> `optional` **toBlock?**: [`BlockTag`](../type-aliases/BlockTag.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:224
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:96
 
 ***
 
 ### topics?
 
-> `readonly` `optional` **topics**: (`null` \| `string` \| `string`[])[]
+> `optional` **topics?**: (`string` \| `string`[] \| `null`)[]
 
-#### Defined in
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:92
 
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:227
+#### Inherited from
+
+[`EventFilter`](EventFilter.md).[`topics`](EventFilter.md#topics)

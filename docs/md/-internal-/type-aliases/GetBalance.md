@@ -1,25 +1,29 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / GetBalance
 
-# Type Alias: GetBalance()
+# Type Alias: GetBalance
 
-> **GetBalance**: (`userAddress`, `tokenAddressOrSymbol`, `requestParams`?) => `Promise`\<[`Token`](../../type-aliases/Token.md) \| *typeof* [`NOT_FOUND_RESPONSE`](../variables/NOT_FOUND_RESPONSE.md)\>
+> **GetBalance** = (`userAddress`, `tokenAddressOrSymbol`, `requestParams?`) => `Promise`\<[`Token`](../../type-aliases/Token.md) \| *typeof* [`NOT_FOUND_RESPONSE`](../variables/NOT_FOUND_RESPONSE.md)\>
+
+Defined in: [src/methods/swap/balance.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L19)
 
 ## Parameters
 
-• **userAddress**: [`Address`](../../type-aliases/Address.md)
+### userAddress
 
-• **tokenAddressOrSymbol**: [`AddressOrSymbol`](../../type-aliases/AddressOrSymbol.md)
+[`Address`](../../type-aliases/Address.md)
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+### tokenAddressOrSymbol
+
+[`AddressOrSymbol`](../../type-aliases/AddressOrSymbol.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<[`Token`](../../type-aliases/Token.md) \| *typeof* [`NOT_FOUND_RESPONSE`](../variables/NOT_FOUND_RESPONSE.md)\>
-
-## Defined in
-
-[src/methods/swap/balance.ts:19](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L19)

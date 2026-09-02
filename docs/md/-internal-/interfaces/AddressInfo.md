@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: AddressInfo
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:24
+
 ## Properties
 
 ### address
 
 > **address**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:25
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:25
 
 ***
 
@@ -22,9 +22,7 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:25
 
 > **family**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:26
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:26
 
 ***
 
@@ -32,6 +30,4 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:26
 
 > **port**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:27
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:27

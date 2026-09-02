@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,26 +6,26 @@
 
 # Type Alias: EstimateGasParameters\<chain\>
 
-> **EstimateGasParameters**\<`chain`\>: [`UnionOmit`](UnionOmit.md)\<[`FormattedEstimateGas`](FormattedEstimateGas.md)\<`chain`\>, `"from"`\> & `object` & `object` \| `object`
+> **EstimateGasParameters**\<`chain`\> = [`UnionOmit`](UnionOmit.md)\<[`FormattedEstimateGas`](FormattedEstimateGas.md)\<`chain`\>, `"from"`\> & `object` & \{ `blockNumber?`: `bigint`; `blockTag?`: `undefined`; \} \| \{ `blockNumber?`: `undefined`; `blockTag?`: [`BlockTag`](BlockTag-2.md); \}
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/estimateGas.d.ts:17
+
+## Type Declaration
 
 ### account?
 
-> `optional` **account**: [`Account`](Account.md) \| [`Address`](Address.md)
+> `optional` **account?**: [`Account`](Account.md) \| [`Address`](Address-1.md)
 
 ### prepare?
 
-> `optional` **prepare**: `boolean` \| readonly [`PrepareTransactionRequestParameterType`](PrepareTransactionRequestParameterType.md)[]
+> `optional` **prepare?**: `boolean` \| readonly [`PrepareTransactionRequestParameterType`](PrepareTransactionRequestParameterType.md)[]
 
 ### stateOverride?
 
-> `optional` **stateOverride**: [`StateOverride`](StateOverride.md)
+> `optional` **stateOverride?**: [`StateOverride`](StateOverride.md)
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+### chain
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/estimateGas.d.ts:17
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`

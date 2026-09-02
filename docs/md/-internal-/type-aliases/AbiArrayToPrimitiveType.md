@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,24 @@
 
 # Type Alias: AbiArrayToPrimitiveType\<abiParameter, abiParameterKind, head, size\>
 
-> **AbiArrayToPrimitiveType**\<`abiParameter`, `abiParameterKind`, `head`, `size`\>: `size` *extends* keyof [`SolidityFixedArraySizeLookup`](SolidityFixedArraySizeLookup.md) ? [`Tuple`](Tuple.md)\<[`AbiParameterToPrimitiveType`](AbiParameterToPrimitiveType.md)\<[`Merge`](Merge.md)\<`abiParameter`, `object`\>, `abiParameterKind`\>, [`SolidityFixedArraySizeLookup`](SolidityFixedArraySizeLookup.md)\[`size`\]\> : readonly [`AbiParameterToPrimitiveType`](AbiParameterToPrimitiveType.md)\<[`Merge`](Merge.md)\<`abiParameter`, `object`\>, `abiParameterKind`\>[]
+> **AbiArrayToPrimitiveType**\<`abiParameter`, `abiParameterKind`, `head`, `size`\> = `size` *extends* keyof [`SolidityFixedArraySizeLookup`](SolidityFixedArraySizeLookup.md) ? [`Tuple`](Tuple.md)\<[`AbiParameterToPrimitiveType`](AbiParameterToPrimitiveType.md)\<[`Merge`](Merge-1.md)\<`abiParameter`, \{ `type`: `head`; \}\>, `abiParameterKind`\>, [`SolidityFixedArraySizeLookup`](SolidityFixedArraySizeLookup.md)\[`size`\]\> : readonly [`AbiParameterToPrimitiveType`](AbiParameterToPrimitiveType.md)\<[`Merge`](Merge-1.md)\<`abiParameter`, \{ `type`: `head`; \}\>, `abiParameterKind`\>[]
+
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:72
 
 ## Type Parameters
 
-• **abiParameter** *extends* [`AbiParameter`](AbiParameter.md) \| `object`
+### abiParameter
 
-• **abiParameterKind** *extends* [`AbiParameterKind`](AbiParameterKind.md)
+`abiParameter` *extends* [`AbiParameter`](AbiParameter-1.md) \| \{ `name`: `string`; `type`: `unknown`; \}
 
-• **head** *extends* `string`
+### abiParameterKind
 
-• **size**
+`abiParameterKind` *extends* [`AbiParameterKind`](AbiParameterKind.md)
 
-## Defined in
+### head
 
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:71
+`head` *extends* `string`
+
+### size
+
+`size`

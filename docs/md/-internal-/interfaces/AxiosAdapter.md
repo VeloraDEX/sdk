@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,18 @@
 
 # Interface: AxiosAdapter()
 
-> **AxiosAdapter**(`config`): [`AxiosPromise`](../type-aliases/AxiosPromise.md)\<`any`\>
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:164
+
+> **AxiosAdapter**(`config`): [`AxiosPromise`](../type-aliases/AxiosPromise.md)
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:165
 
 ## Parameters
 
-• **config**: [`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)\<`any`\>
+### config
+
+[`InternalAxiosRequestConfig`](InternalAxiosRequestConfig.md)
 
 ## Returns
 
-[`AxiosPromise`](../type-aliases/AxiosPromise.md)\<`any`\>
-
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:155
+[`AxiosPromise`](../type-aliases/AxiosPromise.md)

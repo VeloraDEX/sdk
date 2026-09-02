@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,10 @@
 
 # Type Alias: WalletGetAssetsReturnType
 
-> **WalletGetAssetsReturnType**: `object`
+> **WalletGetAssetsReturnType** = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:127
 
 ## Index Signature
 
- \[`chainId`: [`Hex`](Hex.md)\]: readonly `object`[]
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:127
+\[`chainId`: `` `0x${string}` ``\]: readonly `object`[]

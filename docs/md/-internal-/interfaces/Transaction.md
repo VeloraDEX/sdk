@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Transaction
 
 # Interface: Transaction
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:26
 
 ## Extended by
 
@@ -14,11 +16,9 @@
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](../type-aliases/AccessList.md)
+> `optional` **accessList?**: [`AccessList`](../type-aliases/AccessList.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:40
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:40
 
 ***
 
@@ -26,9 +26,7 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **chainId**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:35
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:35
 
 ***
 
@@ -36,19 +34,15 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **data**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:33
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:33
 
 ***
 
 ### from?
 
-> `optional` **from**: `string`
+> `optional` **from?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:29
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:29
 
 ***
 
@@ -56,49 +50,39 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **gasLimit**: [`BigNumber`](../classes/BigNumber.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:31
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:31
 
 ***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: [`BigNumber`](../classes/BigNumber.md)
+> `optional` **gasPrice?**: [`BigNumber`](../classes/BigNumber.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:32
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:32
 
 ***
 
 ### hash?
 
-> `optional` **hash**: `string`
+> `optional` **hash?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:27
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:27
 
 ***
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: [`BigNumber`](../classes/BigNumber.md)
+> `optional` **maxFeePerGas?**: [`BigNumber`](../classes/BigNumber.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:42
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:42
 
 ***
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: [`BigNumber`](../classes/BigNumber.md)
+> `optional` **maxPriorityFeePerGas?**: [`BigNumber`](../classes/BigNumber.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:41
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:41
 
 ***
 
@@ -106,59 +90,47 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **nonce**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:30
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:30
 
 ***
 
 ### r?
 
-> `optional` **r**: `string`
+> `optional` **r?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:36
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:36
 
 ***
 
 ### s?
 
-> `optional` **s**: `string`
+> `optional` **s?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:37
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:37
 
 ***
 
 ### to?
 
-> `optional` **to**: `string`
+> `optional` **to?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:28
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:28
 
 ***
 
 ### type?
 
-> `optional` **type**: `null` \| `number`
+> `optional` **type?**: `number` \| `null`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:39
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:39
 
 ***
 
 ### v?
 
-> `optional` **v**: `number`
+> `optional` **v?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:38
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:38
 
 ***
 
@@ -166,6 +138,4 @@ node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproje
 
 > **value**: [`BigNumber`](../classes/BigNumber.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:34
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:34

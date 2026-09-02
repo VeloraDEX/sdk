@@ -1,14 +1,16 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AssetType
 
-# Variable: ~~AssetType~~
+# ~~Variable: AssetType~~
 
 > `const` **AssetType**: `object`
 
-## Type declaration
+Defined in: [src/methods/nftOrders/helpers/misc.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/misc.ts#L22)
+
+## Type Declaration
 
 ### ~~ERC1155~~
 
@@ -25,7 +27,3 @@
 ## Deprecated
 
 NFT Orders are deprecated and will be removed in a future version.
-
-## Defined in
-
-[src/methods/nftOrders/helpers/misc.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/nftOrders/helpers/misc.ts#L22)

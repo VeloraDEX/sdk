@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,58 +6,56 @@
 
 # Interface: GenericAbortSignal
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:309
+
 ## Properties
 
 ### aborted
 
 > `readonly` **aborted**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:287
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:310
 
 ***
 
-### addEventListener()?
+### addEventListener?
 
-> `optional` **addEventListener**: (...`args`) => `any`
+> `optional` **addEventListener?**: (...`args`) => `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:312
 
 #### Parameters
 
-• ...**args**: `any`
+##### args
+
+...`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:289
 
 ***
 
 ### onabort?
 
-> `optional` **onabort**: `null` \| (...`args`) => `any`
+> `optional` **onabort?**: ((...`args`) => `any`) \| `null`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:288
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:311
 
 ***
 
-### removeEventListener()?
+### removeEventListener?
 
-> `optional` **removeEventListener**: (...`args`) => `any`
+> `optional` **removeEventListener?**: (...`args`) => `any`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:313
 
 #### Parameters
 
-• ...**args**: `any`
+##### args
+
+...`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:290

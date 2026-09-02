@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,14 +8,14 @@
 
 > **constructGetSpender**(`__namedParameters`): [`GetSpenderFunctions`](../type-aliases/GetSpenderFunctions.md)
 
+Defined in: [src/methods/swap/spender.ts:34](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L34)
+
 ## Parameters
 
-• **\_\_namedParameters**: [`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
+### \_\_namedParameters
+
+[`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
 
 ## Returns
 
 [`GetSpenderFunctions`](../type-aliases/GetSpenderFunctions.md)
-
-## Defined in
-
-[src/methods/swap/spender.ts:34](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L34)

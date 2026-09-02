@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,42 +6,62 @@
 
 # Type Alias: WalletGrantPermissionsReturnType
 
-> **WalletGrantPermissionsReturnType**: `object`
+> **WalletGrantPermissionsReturnType** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:97
+
+## Properties
 
 ### expiry
 
 > **expiry**: `number`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:98
+
+***
+
 ### factory?
 
-> `optional` **factory**: \`0x$\{string\}\`
+> `optional` **factory?**: `` `0x${string}` ``
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:99
+
+***
 
 ### factoryData?
 
-> `optional` **factoryData**: `string`
+> `optional` **factoryData?**: `string`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:100
+
+***
 
 ### grantedPermissions
 
 > **grantedPermissions**: readonly `object`[]
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:101
+
+***
+
 ### permissionsContext
 
 > **permissionsContext**: `string`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:110
+
+***
+
 ### signerData?
 
-> `optional` **signerData**: `object`
+> `optional` **signerData?**: `object`
 
-### signerData.submitToAddress?
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:111
 
-> `optional` **submitToAddress**: \`0x$\{string\}\`
+#### submitToAddress?
 
-### signerData.userOpBuilder?
+> `optional` **submitToAddress?**: `` `0x${string}` ``
 
-> `optional` **userOpBuilder**: \`0x$\{string\}\`
+#### userOpBuilder?
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:97
+> `optional` **userOpBuilder?**: `` `0x${string}` ``

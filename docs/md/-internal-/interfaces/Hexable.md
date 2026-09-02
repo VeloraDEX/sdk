@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,16 @@
 
 # Interface: Hexable
 
+Defined in: node\_modules/.pnpm/@ethersproject+bytes@5.8.0/node\_modules/@ethersproject/bytes/lib/index.d.ts:7
+
 ## Methods
 
 ### toHexString()
 
 > **toHexString**(): `string`
 
+Defined in: node\_modules/.pnpm/@ethersproject+bytes@5.8.0/node\_modules/@ethersproject/bytes/lib/index.d.ts:8
+
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+bytes@5.8.0/node\_modules/@ethersproject/bytes/lib/index.d.ts:8

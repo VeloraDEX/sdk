@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: CancelDeltaOrderData
 
-> **CancelDeltaOrderData**: `object`
+> **CancelDeltaOrderData** = `object`
 
-## Type declaration
+Defined in: [src/methods/delta/helpers/buildCancelDeltaOrderData.ts:7](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildCancelDeltaOrderData.ts#L7)
+
+## Properties
 
 ### orderIds
 
 > **orderIds**: `string`[]
 
-## Defined in
-
-[src/methods/delta/helpers/buildCancelDeltaOrderData.ts:7](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildCancelDeltaOrderData.ts#L7)
+Defined in: [src/methods/delta/helpers/buildCancelDeltaOrderData.ts:8](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildCancelDeltaOrderData.ts#L8)

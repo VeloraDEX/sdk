@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: responseEncoding
 
-> **responseEncoding**: [`UppercaseResponseEncoding`](UppercaseResponseEncoding.md) \| [`Lowercase`](Lowercase.md)\<[`UppercaseResponseEncoding`](UppercaseResponseEncoding.md)\> & `object`
+> **responseEncoding** = [`UppercaseResponseEncoding`](UppercaseResponseEncoding.md) \| [`Lowercase`](Lowercase.md)\<[`UppercaseResponseEncoding`](UppercaseResponseEncoding.md)\> & `object`
 
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:274
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:295

@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AsyncResource
 
 # Class: AsyncResource
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:263
 
 The class `AsyncResource` is designed to be extended by the embedder's async
 resources. Using this, users can easily trigger the lifetime events of their
@@ -48,9 +50,11 @@ asyncResource.triggerAsyncId();
 
 ## Constructors
 
-### new AsyncResource()
+### Constructor
 
-> **new AsyncResource**(`type`, `triggerAsyncId`?): [`AsyncResource`](AsyncResource.md)
+> **new AsyncResource**(`type`, `triggerAsyncId?`): `AsyncResource`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:273
 
 AsyncResource() is meant to be extended. Instantiating a
 new AsyncResource() also triggers init. If triggerAsyncId is omitted then
@@ -58,11 +62,15 @@ async_hook.executionAsyncId() is used.
 
 #### Parameters
 
-• **type**: `string`
+##### type
+
+`string`
 
 The type of async event.
 
-• **triggerAsyncId?**: `number` \| [`AsyncResourceOptions`](../interfaces/AsyncResourceOptions.md)
+##### triggerAsyncId?
+
+`number` \| [`AsyncResourceOptions`](../interfaces/AsyncResourceOptions.md)
 
 The ID of the execution context that created
   this async event (default: `executionAsyncId()`), or an
@@ -70,11 +78,7 @@ The ID of the execution context that created
 
 #### Returns
 
-[`AsyncResource`](AsyncResource.md)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:273
+`AsyncResource`
 
 ## Methods
 
@@ -82,15 +86,13 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.
 
 > **asyncId**(): `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:317
+
 #### Returns
 
 `number`
 
 The unique `asyncId` assigned to the resource.
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:317
 
 ***
 
@@ -98,15 +100,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.
 
 > **bind**\<`Func`\>(`fn`): `Func`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:290
+
 Binds the given function to execute to this `AsyncResource`'s scope.
 
 #### Type Parameters
 
-• **Func** *extends* (...`args`) => `any`
+##### Func
+
+`Func` *extends* (...`args`) => `any`
 
 #### Parameters
 
-• **fn**: `Func`
+##### fn
+
+`Func`
 
 The function to bind to the current `AsyncResource`.
 
@@ -118,15 +126,13 @@ The function to bind to the current `AsyncResource`.
 
 v14.8.0, v12.19.0
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:290
-
 ***
 
 ### emitDestroy()
 
 > **emitDestroy**(): `this`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:313
 
 Call all `destroy` hooks. This should only ever be called once. An error will
 be thrown if it is called more than once. This **must** be manually called. If
@@ -139,15 +145,13 @@ never be called.
 
 A reference to `asyncResource`.
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:313
-
 ***
 
 ### runInAsyncScope()
 
-> **runInAsyncScope**\<`This`, `Result`\>(`fn`, `thisArg`?, ...`args`?): `Result`
+> **runInAsyncScope**\<`This`, `Result`\>(`fn`, `thisArg?`, ...`args`): `Result`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:301
 
 Call the provided function with the provided arguments in the execution context
 of the async resource. This will establish the context, trigger the AsyncHooks
@@ -156,21 +160,31 @@ then restore the original execution context.
 
 #### Type Parameters
 
-• **This**
+##### This
 
-• **Result**
+`This`
+
+##### Result
+
+`Result`
 
 #### Parameters
 
-• **fn**
+##### fn
+
+(`this`, ...`args`) => `Result`
 
 The function to call in the execution context of this async resource.
 
-• **thisArg?**: `This`
+##### thisArg?
+
+`This`
 
 The receiver to be used for the function call.
 
-• ...**args?**: `any`[]
+##### args
+
+...`any`[]
 
 Optional arguments to pass to the function.
 
@@ -182,15 +196,13 @@ Optional arguments to pass to the function.
 
 v9.6.0
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:301
-
 ***
 
 ### triggerAsyncId()
 
 > **triggerAsyncId**(): `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:321
 
 #### Returns
 
@@ -198,35 +210,43 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.
 
 The same `triggerAsyncId` that is passed to the `AsyncResource` constructor.
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:321
-
 ***
 
 ### bind()
 
-> `static` **bind**\<`Func`, `ThisArg`\>(`fn`, `type`?, `thisArg`?): `Func`
+> `static` **bind**\<`Func`, `ThisArg`\>(`fn`, `type?`, `thisArg?`): `Func`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:280
 
 Binds the given function to the current execution context.
 
 #### Type Parameters
 
-• **Func** *extends* (`this`, ...`args`) => `any`
+##### Func
 
-• **ThisArg**
+`Func` *extends* (`this`, ...`args`) => `any`
+
+##### ThisArg
+
+`ThisArg`
 
 #### Parameters
 
-• **fn**: `Func`
+##### fn
+
+`Func`
 
 The function to bind to the current execution context.
 
-• **type?**: `string`
+##### type?
+
+`string`
 
 An optional name to associate with the underlying `AsyncResource`.
 
-• **thisArg?**: `ThisArg`
+##### thisArg?
+
+`ThisArg`
 
 #### Returns
 
@@ -235,7 +255,3 @@ An optional name to associate with the underlying `AsyncResource`.
 #### Since
 
 v14.8.0, v12.19.0
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/async\_hooks.d.ts:280

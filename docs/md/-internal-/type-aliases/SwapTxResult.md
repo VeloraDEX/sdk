@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: SwapTxResult
 
-> **SwapTxResult**: [`SwapApiResponse`](SwapApiResponse.md)
+> **SwapTxResult** = [`SwapApiResponse`](SwapApiResponse.md)
 
-## Defined in
-
-[src/methods/swap/swapTx.ts:214](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L214)
+Defined in: [src/methods/swap/swapTx.ts:214](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L214)

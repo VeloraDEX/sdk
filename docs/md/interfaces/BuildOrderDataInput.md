@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: BuildOrderDataInput
 
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:21](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L21)
+
 ## Properties
 
 ### AppVersion
 
 > **AppVersion**: [`APIVersion`](../type-aliases/APIVersion.md)
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:38](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L38)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:38](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L38)
 
 ***
 
@@ -22,9 +22,7 @@
 
 > **AugustusAddress**: `string`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L37)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L37)
 
 ***
 
@@ -32,23 +30,19 @@
 
 > **chainId**: `number`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L22)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:22](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L22)
 
 ***
 
 ### contractTaker?
 
-> `optional` **contractTaker**: `string`
+> `optional` **contractTaker?**: `string`
+
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:35](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L35)
 
 #### Description
 
 contract executor (Augustus or similar) that is allowed to execute the order, goes in Order.taker
-
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:35](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L35)
 
 ***
 
@@ -56,9 +50,7 @@ contract executor (Augustus or similar) that is allowed to execute the order, go
 
 > **expiry**: `number`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L25)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L25)
 
 ***
 
@@ -66,9 +58,7 @@ contract executor (Augustus or similar) that is allowed to execute the order, go
 
 > **maker**: `string`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L30)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:30](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L30)
 
 ***
 
@@ -76,9 +66,7 @@ contract executor (Augustus or similar) that is allowed to execute the order, go
 
 > **makerAmount**: `string`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:28](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L28)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:28](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L28)
 
 ***
 
@@ -86,19 +74,15 @@ contract executor (Augustus or similar) that is allowed to execute the order, go
 
 > **makerAsset**: `string`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L26)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L26)
 
 ***
 
 ### nonce?
 
-> `optional` **nonce**: `number`
+> `optional` **nonce?**: `number`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:24](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L24)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:24](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L24)
 
 ***
 
@@ -106,13 +90,11 @@ contract executor (Augustus or similar) that is allowed to execute the order, go
 
 > **taker**: `string`
 
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:33](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L33)
+
 #### Description
 
 actual user taker which will go into nonceAndMeta
-
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:33](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L33)
 
 ***
 
@@ -120,9 +102,7 @@ actual user taker which will go into nonceAndMeta
 
 > **takerAmount**: `string`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L29)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L29)
 
 ***
 
@@ -130,9 +110,7 @@ actual user taker which will go into nonceAndMeta
 
 > **takerAsset**: `string`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L27)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L27)
 
 ***
 
@@ -140,6 +118,4 @@ actual user taker which will go into nonceAndMeta
 
 > **verifyingContract**: `string`
 
-#### Defined in
-
-[src/methods/otcOrders/helpers/buildOrderData.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L23)
+Defined in: [src/methods/otcOrders/helpers/buildOrderData.ts:23](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/helpers/buildOrderData.ts#L23)

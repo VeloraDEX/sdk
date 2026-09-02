@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,19 +6,19 @@
 
 # Enumeration: CustomChain
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:36
+
 ## Enumeration Members
 
 ### ArbitrumOne
 
 > **ArbitrumOne**: `"arbitrum-one"`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:60
+
 Arbitrum One - mainnet for Arbitrum roll-up
 
 - [Documentation](https://developer.offchainlabs.com/public-chains)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:60
 
 ***
 
@@ -26,13 +26,11 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **ArbitrumRinkebyTestnet**: `"arbitrum-rinkeby-testnet"`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:54
+
 Arbitrum Rinkeby Testnet
 
 - [Documentation](https://developer.offchainlabs.com/docs/public_testnet)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:54
 
 ***
 
@@ -40,13 +38,11 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **OptimisticEthereum**: `"optimistic-ethereum"`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:78
+
 Optimistic Ethereum - mainnet for Optimism roll-up
 
 - [Documentation](https://community.optimism.io/docs/developers/tutorials.html)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:78
 
 ***
 
@@ -54,13 +50,11 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **OptimisticKovan**: `"optimistic-kovan"`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:72
+
 Optimistic Kovan - testnet for Optimism roll-up
 
 - [Documentation](https://community.optimism.io/docs/developers/tutorials.html)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:72
 
 ***
 
@@ -68,13 +62,11 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **PolygonMainnet**: `"polygon-mainnet"`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:42
+
 Polygon (Matic) Mainnet
 
 - [Documentation](https://docs.matic.network/docs/develop/network-details/network)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:42
 
 ***
 
@@ -82,13 +74,11 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **PolygonMumbai**: `"polygon-mumbai"`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:48
+
 Polygon (Matic) Mumbai Testnet
 
 - [Documentation](https://docs.matic.network/docs/develop/network-details/network)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:48
 
 ***
 
@@ -96,10 +86,8 @@ node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/
 
 > **xDaiChain**: `"x-dai-chain"`
 
+Defined in: node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:66
+
 xDai EVM sidechain with a native stable token
 
 - [Documentation](https://www.xdaichain.com/)
-
-#### Defined in
-
-node\_modules/.pnpm/web3-eth-accounts@4.2.1/node\_modules/web3-eth-accounts/lib/commonjs/common/enums.d.ts:66

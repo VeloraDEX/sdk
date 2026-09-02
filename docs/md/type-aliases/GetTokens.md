@@ -1,36 +1,48 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
 [@velora-dex/sdk](../globals.md) / GetTokens
 
-# Type Alias: GetTokens()
+# Type Alias: GetTokens
 
-> **GetTokens**: (`options`?, `requestParams`?) => `Promise`\<`object`[]\>(`requestParams`?) => `Promise`\<`object`[]\>
+> **GetTokens** = \{(`options?`, `requestParams?`): `Promise`\<`object`[]\>; (`requestParams?`): `Promise`\<`object`[]\>; \}
 
-## Parameters
+Defined in: [src/methods/swap/token.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/token.ts#L15)
 
-• **options?**: [`GetTokensParams`](GetTokensParams.md)
+## Call Signature
 
-• **requestParams?**: [`RequestParameters`](../-internal-/type-aliases/RequestParameters.md)
+> (`options?`, `requestParams?`): `Promise`\<`object`[]\>
 
-## Returns
+### Parameters
+
+#### options?
+
+[`GetTokensParams`](GetTokensParams.md)
+
+#### requestParams?
+
+[`RequestParameters`](../-internal-/type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<`object`[]\>
 
-## Parameters
+## Call Signature
 
-• **requestParams?**: [`RequestParameters`](../-internal-/type-aliases/RequestParameters.md)
+> (`requestParams?`): `Promise`\<`object`[]\>
 
-## Returns
+### Parameters
+
+#### requestParams?
+
+[`RequestParameters`](../-internal-/type-aliases/RequestParameters.md)
+
+### Returns
 
 `Promise`\<`object`[]\>
 
-## Deprecated
+### Deprecated
 
 Passing RequestParameters as the first argument is deprecated.
 Pass it as the second argument instead: `getTokens({}, requestParams)`
-
-## Defined in
-
-[src/methods/swap/token.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/token.ts#L15)

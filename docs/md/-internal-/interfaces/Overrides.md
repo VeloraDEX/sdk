@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Overrides
 
 # Interface: Overrides
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:63
 
 The overrides for a contract transaction.
 
@@ -16,7 +18,9 @@ The overrides for a contract transaction.
 
 ### accessList?
 
-> `optional` **accessList**: `null` \| [`AccessListish`](../type-aliases/AccessListish.md)
+> `optional` **accessList?**: [`AccessListish`](../type-aliases/AccessListish-1.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:125
 
 The [[link-eip-2930]] access list. Storage slots included in the access
  list are //warmed// by pre-loading them, so their initial cost to
@@ -24,49 +28,43 @@ The [[link-eip-2930]] access list. Storage slots included in the access
 
 #### Inherited from
 
-`Omit.accessList`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:125
+[`TransactionRequest`](TransactionRequest.md).[`accessList`](TransactionRequest.md#accesslist)
 
 ***
 
 ### blobs?
 
-> `optional` **blobs**: `null` \| [`BlobLike`](../type-aliases/BlobLike.md)[]
+> `optional` **blobs?**: [`BlobLike`](../type-aliases/BlobLike.md)[] \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:158
 
 Any blobs to include in the transaction (see [[link-eip-4844]]).
 
 #### Inherited from
 
-`Omit.blobs`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:158
+[`TransactionRequest`](TransactionRequest.md).[`blobs`](TransactionRequest.md#blobs)
 
 ***
 
 ### blobVersionedHashes?
 
-> `optional` **blobVersionedHashes**: `null` \| `string`[]
+> `optional` **blobVersionedHashes?**: `string`[] \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:150
 
 The blob versioned hashes (see [[link-eip-4844]]).
 
 #### Inherited from
 
-`Omit.blobVersionedHashes`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:150
+[`TransactionRequest`](TransactionRequest.md).[`blobVersionedHashes`](TransactionRequest.md#blobversionedhashes)
 
 ***
 
 ### blockTag?
 
-> `optional` **blockTag**: [`BlockTag`](../type-aliases/BlockTag.md)
+> `optional` **blockTag?**: [`BlockTag`](../type-aliases/BlockTag-1.md)
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:136
 
 When using ``call`` or ``estimateGas``, this allows a specific
  block to be queried. Many backends do not support this and when
@@ -74,50 +72,44 @@ When using ``call`` or ``estimateGas``, this allows a specific
 
 #### Inherited from
 
-`Omit.blockTag`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:136
+[`TransactionRequest`](TransactionRequest.md).[`blockTag`](TransactionRequest.md#blocktag)
 
 ***
 
 ### chainId?
 
-> `optional` **chainId**: `null` \| [`BigNumberish`](../type-aliases/BigNumberish.md)
+> `optional` **chainId?**: [`BigNumberish`](../type-aliases/BigNumberish-1.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:119
 
 The chain ID for the network this transaction is valid on.
 
 #### Inherited from
 
-`Omit.chainId`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:119
+[`TransactionRequest`](TransactionRequest.md).[`chainId`](TransactionRequest.md#chainid)
 
 ***
 
 ### customData?
 
-> `optional` **customData**: `any`
+> `optional` **customData?**: `any`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:130
 
 A custom object, which can be passed along for network-specific
  values.
 
 #### Inherited from
 
-`Omit.customData`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:130
+[`TransactionRequest`](TransactionRequest.md).[`customData`](TransactionRequest.md#customdata)
 
 ***
 
 ### enableCcipRead?
 
-> `optional` **enableCcipRead**: `boolean`
+> `optional` **enableCcipRead?**: `boolean`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:146
 
 When using ``call``, this enables CCIP-read, which permits the
  provider to be redirected to web-based content during execution,
@@ -129,49 +121,43 @@ When using ``call``, this enables CCIP-read, which permits the
 
 #### Inherited from
 
-`Omit.enableCcipRead`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:146
+[`TransactionRequest`](TransactionRequest.md).[`enableCcipRead`](TransactionRequest.md#enableccipread)
 
 ***
 
 ### from?
 
-> `optional` **from**: `null` \| [`AddressLike`](../type-aliases/AddressLike.md)
+> `optional` **from?**: [`AddressLike`](../type-aliases/AddressLike.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:83
 
 The sender of the transaction.
 
 #### Inherited from
 
-`Omit.from`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:83
+[`TransactionRequest`](TransactionRequest.md).[`from`](TransactionRequest.md#from)
 
 ***
 
 ### gasLimit?
 
-> `optional` **gasLimit**: `null` \| [`BigNumberish`](../type-aliases/BigNumberish.md)
+> `optional` **gasLimit?**: [`BigNumberish`](../type-aliases/BigNumberish-1.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:91
 
 The maximum amount of gas to allow this transaction to consume.
 
 #### Inherited from
 
-`Omit.gasLimit`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:91
+[`TransactionRequest`](TransactionRequest.md).[`gasLimit`](TransactionRequest.md#gaslimit)
 
 ***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: `null` \| [`BigNumberish`](../type-aliases/BigNumberish.md)
+> `optional` **gasPrice?**: [`BigNumberish`](../type-aliases/BigNumberish-1.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:98
 
 The gas price to use for legacy transactions or transactions on
  legacy networks.
@@ -180,17 +166,15 @@ The gas price to use for legacy transactions or transactions on
 
 #### Inherited from
 
-`Omit.gasPrice`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:98
+[`TransactionRequest`](TransactionRequest.md).[`gasPrice`](TransactionRequest.md#gasprice)
 
 ***
 
 ### kzg?
 
-> `optional` **kzg**: `null` \| [`KzgLibrary`](KzgLibrary.md)
+> `optional` **kzg?**: [`KzgLibrary`](KzgLibrary.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:166
 
 An external library for computing the KZG commitments and
  proofs necessary for EIP-4844 transactions (see [[link-eip-4844]]).
@@ -200,105 +184,89 @@ An external library for computing the KZG commitments and
 
 #### Inherited from
 
-`Omit.kzg`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:166
+[`TransactionRequest`](TransactionRequest.md).[`kzg`](TransactionRequest.md#kzg)
 
 ***
 
 ### maxFeePerBlobGas?
 
-> `optional` **maxFeePerBlobGas**: `null` \| [`BigNumberish`](../type-aliases/BigNumberish.md)
+> `optional` **maxFeePerBlobGas?**: [`BigNumberish`](../type-aliases/BigNumberish-1.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:154
 
 The maximum fee per blob gas (see [[link-eip-4844]]).
 
 #### Inherited from
 
-`Omit.maxFeePerBlobGas`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:154
+[`TransactionRequest`](TransactionRequest.md).[`maxFeePerBlobGas`](TransactionRequest.md#maxfeeperblobgas)
 
 ***
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: `null` \| [`BigNumberish`](../type-aliases/BigNumberish.md)
+> `optional` **maxFeePerGas?**: [`BigNumberish`](../type-aliases/BigNumberish-1.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:107
 
 The [[link-eip-1559]] maximum total fee to pay per gas. The actual
  value used is protocol enforced to be the block's base fee.
 
 #### Inherited from
 
-`Omit.maxFeePerGas`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:107
+[`TransactionRequest`](TransactionRequest.md).[`maxFeePerGas`](TransactionRequest.md#maxfeepergas)
 
 ***
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: `null` \| [`BigNumberish`](../type-aliases/BigNumberish.md)
+> `optional` **maxPriorityFeePerGas?**: [`BigNumberish`](../type-aliases/BigNumberish-1.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:102
 
 The [[link-eip-1559]] maximum priority fee to pay per gas.
 
 #### Inherited from
 
-`Omit.maxPriorityFeePerGas`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:102
+[`TransactionRequest`](TransactionRequest.md).[`maxPriorityFeePerGas`](TransactionRequest.md#maxpriorityfeepergas)
 
 ***
 
 ### nonce?
 
-> `optional` **nonce**: `null` \| `number`
+> `optional` **nonce?**: `number` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:87
 
 The nonce of the transaction, used to prevent replay attacks.
 
 #### Inherited from
 
-`Omit.nonce`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:87
+[`TransactionRequest`](TransactionRequest.md).[`nonce`](TransactionRequest.md#nonce)
 
 ***
 
 ### type?
 
-> `optional` **type**: `null` \| `number`
+> `optional` **type?**: `number` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:75
 
 The transaction type.
 
 #### Inherited from
 
-`Omit.type`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:75
+[`TransactionRequest`](TransactionRequest.md).[`type`](TransactionRequest.md#type)
 
 ***
 
 ### value?
 
-> `optional` **value**: `null` \| [`BigNumberish`](../type-aliases/BigNumberish.md)
+> `optional` **value?**: [`BigNumberish`](../type-aliases/BigNumberish-1.md) \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:115
 
 The transaction value (in wei).
 
 #### Inherited from
 
-`Omit.value`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:115
+[`TransactionRequest`](TransactionRequest.md).[`value`](TransactionRequest.md#value)

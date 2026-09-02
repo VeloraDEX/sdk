@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,32 +6,36 @@
 
 # Class: Description\<T\>
 
+Defined in: node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:12
+
 ## Extended by
 
 - [`Indexed`](Indexed.md)
 - [`ForkEvent`](ForkEvent.md)
-- [`TransactionDescription`](TransactionDescription.md)
-- [`LogDescription`](LogDescription.md)
-- [`ErrorDescription`](ErrorDescription.md)
+- [`TransactionDescription`](TransactionDescription-1.md)
+- [`LogDescription`](LogDescription-1.md)
+- [`ErrorDescription`](ErrorDescription-1.md)
 
 ## Type Parameters
 
-• **T** = `any`
+### T
+
+`T` = `any`
 
 ## Constructors
 
-### new Description()
+### Constructor
 
-> **new Description**\<`T`\>(`info`): [`Description`](Description.md)\<`T`\>
+> **new Description**\<`T`\>(`info`): `Description`\<`T`\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
 
 #### Parameters
 
-• **info**: \{ \[K in string \| number \| symbol\]: T\[K\] \}
+##### info
+
+\{ \[K in string \| number \| symbol\]: T\[K\] \}
 
 #### Returns
 
-[`Description`](Description.md)\<`T`\>
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
+`Description`\<`T`\>

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: TakerPermitObject
 
-> **TakerPermitObject**: [`TakerPermitEncodedInputParams`](TakerPermitEncodedInputParams.md) \| [`TakerPermit1Data`](TakerPermit1Data.md) \| [`TakerDaiPermitData`](TakerDaiPermitData.md)
+> **TakerPermitObject** = [`TakerPermitEncodedInputParams`](TakerPermitEncodedInputParams.md) \| [`TakerPermit1Data`](TakerPermit1Data.md) \| [`TakerDaiPermitData`](TakerDaiPermitData.md)
 
-## Defined in
-
-[src/methods/otcOrders/fillOrderDirectly.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/fillOrderDirectly.ts#L37)
+Defined in: [src/methods/otcOrders/fillOrderDirectly.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/otcOrders/fillOrderDirectly.ts#L37)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,12 @@
 
 # Type Alias: RawCommonResponseHeaders
 
-> **RawCommonResponseHeaders**: `{ [Key in CommonResponseHeaderKey]: AxiosHeaderValue }` & `object`
+> **RawCommonResponseHeaders** = `{ [Key in CommonResponseHeaderKey]: AxiosHeaderValue }` & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:141
+
+## Type Declaration
 
 ### set-cookie
 
 > **set-cookie**: `string`[]
-
-## Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:131

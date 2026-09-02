@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Enumeration: Web3RequestManagerEvent
 
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:4
+
 ## Enumeration Members
 
 ### BEFORE\_PROVIDER\_CHANGE
 
 > **BEFORE\_PROVIDER\_CHANGE**: `"BEFORE_PROVIDER_CHANGE"`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:6
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:6
 
 ***
 
@@ -22,6 +22,4 @@ node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_r
 
 > **PROVIDER\_CHANGED**: `"PROVIDER_CHANGED"`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:5
+Defined in: node\_modules/.pnpm/web3-core@4.7.0/node\_modules/web3-core/lib/commonjs/web3\_request\_manager.d.ts:5

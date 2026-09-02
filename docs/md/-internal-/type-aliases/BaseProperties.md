@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,46 +6,78 @@
 
 # Type Alias: BaseProperties
 
-> **BaseProperties**: `object`
+> **BaseProperties** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:9
+
+## Properties
 
 ### accessList?
 
-> `optional` **accessList**: `undefined`
+> `optional` **accessList?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:10
+
+***
 
 ### authorizationList?
 
-> `optional` **authorizationList**: `undefined`
+> `optional` **authorizationList?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:11
+
+***
 
 ### blobs?
 
-> `optional` **blobs**: `undefined`
+> `optional` **blobs?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:12
+
+***
 
 ### blobVersionedHashes?
 
-> `optional` **blobVersionedHashes**: `undefined`
+> `optional` **blobVersionedHashes?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:13
+
+***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: `undefined`
+> `optional` **gasPrice?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:14
+
+***
 
 ### maxFeePerBlobGas?
 
-> `optional` **maxFeePerBlobGas**: `undefined`
+> `optional` **maxFeePerBlobGas?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:15
+
+***
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: `undefined`
+> `optional` **maxFeePerGas?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:16
+
+***
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: `undefined`
+> `optional` **maxPriorityFeePerGas?**: `undefined`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:17
+
+***
 
 ### sidecars?
 
-> `optional` **sidecars**: `undefined`
+> `optional` **sidecars?**: `undefined`
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:9
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/getTransactionType.d.ts:18

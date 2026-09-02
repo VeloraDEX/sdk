@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,206 +6,168 @@
 
 # Interface: TransactionBase
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:327
+
 ## Extended by
 
-- [`Transaction`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/interfaces/Transaction.md)
+- [`Transaction`](Transaction-1.md)
 
 ## Properties
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/AccessList.md)
+> `optional` **accessList?**: [`AccessList`](../type-aliases/AccessList-3.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:329
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:329
 
 ***
 
 ### chain?
 
-> `optional` **chain**: [`ValidChains`](../type-aliases/ValidChains.md)
+> `optional` **chain?**: [`ValidChains`](../type-aliases/ValidChains.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:339
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:339
 
 ***
 
 ### chainId?
 
-> `optional` **chainId**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **chainId?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:341
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:341
 
 ***
 
 ### common?
 
-> `optional` **common**: [`Common`](Common.md)
+> `optional` **common?**: [`Common`](Common.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:330
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:330
 
 ***
 
 ### data?
 
-> `optional` **data**: [`Bytes`](../type-aliases/Bytes.md)
+> `optional` **data?**: [`Bytes`](../type-aliases/Bytes-1.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:336
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:336
 
 ***
 
 ### gas?
 
-> `optional` **gas**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **gas?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:331
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:331
 
 ***
 
 ### gasLimit?
 
-> `optional` **gasLimit**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **gasLimit?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:343
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:343
 
 ***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **gasPrice?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:332
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:332
 
 ***
 
 ### hardfork?
 
-> `optional` **hardfork**: `"chainstart"` \| `"frontier"` \| `"homestead"` \| `"dao"` \| `"tangerineWhistle"` \| `"spuriousDragon"` \| `"byzantium"` \| `"constantinople"` \| `"petersburg"` \| `"istanbul"` \| `"muirGlacier"` \| `"berlin"` \| `"london"` \| `"altair"` \| `"arrowGlacier"` \| `"grayGlacier"` \| `"bellatrix"` \| `"merge"` \| `"capella"` \| `"shanghai"`
+> `optional` **hardfork?**: `"chainstart"` \| `"frontier"` \| `"homestead"` \| `"dao"` \| `"tangerineWhistle"` \| `"spuriousDragon"` \| `"byzantium"` \| `"constantinople"` \| `"petersburg"` \| `"istanbul"` \| `"muirGlacier"` \| `"berlin"` \| `"london"` \| `"altair"` \| `"arrowGlacier"` \| `"grayGlacier"` \| `"bellatrix"` \| `"merge"` \| `"capella"` \| `"shanghai"`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:340
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:340
 
 ***
 
 ### input?
 
-> `optional` **input**: [`Bytes`](../type-aliases/Bytes.md)
+> `optional` **input?**: [`Bytes`](../type-aliases/Bytes-1.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:337
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:337
 
 ***
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **maxFeePerGas?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:334
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:334
 
 ***
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **maxPriorityFeePerGas?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:335
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:335
 
 ***
 
 ### networkId?
 
-> `optional` **networkId**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **networkId?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:342
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:342
 
 ***
 
 ### nonce?
 
-> `optional` **nonce**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **nonce?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:338
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:338
 
 ***
 
 ### r?
 
-> `optional` **r**: [`Bytes`](../type-aliases/Bytes.md)
+> `optional` **r?**: [`Bytes`](../type-aliases/Bytes-1.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:346
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:346
 
 ***
 
 ### s?
 
-> `optional` **s**: [`Bytes`](../type-aliases/Bytes.md)
+> `optional` **s?**: [`Bytes`](../type-aliases/Bytes-1.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:347
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:347
 
 ***
 
 ### type?
 
-> `optional` **type**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **type?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:333
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:333
 
 ***
 
 ### v?
 
-> `optional` **v**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **v?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:345
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:345
 
 ***
 
 ### value?
 
-> `optional` **value**: [`Numbers`](../type-aliases/Numbers.md)
+> `optional` **value?**: [`Numbers`](../type-aliases/Numbers.md)
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:328
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:328
 
 ***
 
 ### yParity?
 
-> `optional` **yParity**: `string`
+> `optional` **yParity?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:344
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_types.d.ts:344

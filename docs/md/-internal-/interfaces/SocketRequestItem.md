@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,21 @@
 
 # Interface: SocketRequestItem\<API, Method, ResponseType\>
 
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:10
+
 ## Type Parameters
 
-• **API** *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md)
+### API
 
-• **Method** *extends* [`Web3APIMethod`](../namespaces/home_velenir-gnx570_Projects_Paraswap_paraswap-sdk_node_modules_.pnpm_web3-types@1.8.1_node_modules_web3-types_lib_commonjs_index/type-aliases/Web3APIMethod.md)\<`API`\>
+`API` *extends* [`Web3APISpec`](../type-aliases/Web3APISpec.md)
 
-• **ResponseType**
+### Method
+
+`Method` *extends* [`Web3APIMethod`](../type-aliases/Web3APIMethod.md)\<`API`\>
+
+### ResponseType
+
+`ResponseType`
 
 ## Properties
 
@@ -20,9 +28,7 @@
 
 > **deferredPromise**: [`Web3DeferredPromiseInterface`](Web3DeferredPromiseInterface.md)\<`ResponseType`\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:12
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:12
 
 ***
 
@@ -30,6 +36,4 @@ node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\
 
 > **payload**: [`Web3APIPayload`](Web3APIPayload.md)\<`API`, `Method`\>
 
-#### Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:11
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/web3\_base\_provider.d.ts:11

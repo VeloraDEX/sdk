@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: SocketReadyState
 
-> **SocketReadyState**: `"opening"` \| `"open"` \| `"readOnly"` \| `"writeOnly"` \| `"closed"`
+> **SocketReadyState** = `"opening"` \| `"open"` \| `"readOnly"` \| `"writeOnly"` \| `"closed"`
 
-## Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:73
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/net.d.ts:73

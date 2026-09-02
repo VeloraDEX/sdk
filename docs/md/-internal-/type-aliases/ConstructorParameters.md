@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: ConstructorParameters\<T\>
 
-> **ConstructorParameters**\<`T`\>: `T` *extends* (...`args`) => `any` ? `P` : `never`
+> **ConstructorParameters**\<`T`\> = `T` *extends* (...`args`) => `any` ? `P` : `never`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1645
 
 Obtain the parameters of a constructor function type in a tuple
 
 ## Type Parameters
 
-• **T** *extends* (...`args`) => `any`
+### T
 
-## Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1638
+`T` *extends* (...`args`) => `any`

@@ -1,21 +1,23 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Omit
 
-# Type Alias: Omit\<type, keys\>
+# Type Alias: Omit\<T, K\>
 
-> **Omit**\<`type`, `keys`\>: [`Pick`](Pick.md)\<`type`, [`Exclude`](Exclude.md)\<keyof `type`, `keys`\>\>
+> **Omit**\<`T`, `K`\> = [`Pick`](Pick.md)\<`T`, [`Exclude`](Exclude.md)\<keyof `T`, `K`\>\>
 
-Strict version of built-in Omit type
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1630
+
+Construct a type with the properties of T except for those in type K.
 
 ## Type Parameters
 
-• **type**
+### T
 
-• **keys** *extends* keyof `type`
+`T`
 
-## Defined in
+### K
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:108
+`K` *extends* keyof `any`

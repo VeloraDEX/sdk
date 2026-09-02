@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: GetQuoteFunctions
 
-> **GetQuoteFunctions**: `object`
+> **GetQuoteFunctions** = `object`
 
-## Type declaration
+Defined in: [src/methods/quote/getQuote.ts:117](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L117)
+
+## Properties
 
 ### getQuote
 
 > **getQuote**: [`GetQuoteFunc`](../-internal-/interfaces/GetQuoteFunc.md)
 
-## Defined in
-
-[src/methods/quote/getQuote.ts:117](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L117)
+Defined in: [src/methods/quote/getQuote.ts:118](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L118)

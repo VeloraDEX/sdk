@@ -1,14 +1,8 @@
-[**@velora-dex/sdk**](README.md) • **Docs**
+[**@velora-dex/sdk**](README.md)
 
 ***
 
 # @velora-dex/sdk
-
-## References
-
-### constructEthersV5ContractCaller
-
-Renames and re-exports [constructEthersContractCaller](functions/constructEthersContractCaller.md)
 
 ## Modules
 
@@ -103,6 +97,8 @@ Renames and re-exports [constructEthersContractCaller](functions/constructEthers
 - [DeltaTokenAmount](type-aliases/DeltaTokenAmount.md)
 - [DeltaTokenModuleFunctions](type-aliases/DeltaTokenModuleFunctions.md)
 - [DeltaTokenSide](type-aliases/DeltaTokenSide.md)
+- [DeltaTokenSideInput](type-aliases/DeltaTokenSideInput.md)
+- [DeltaTokenSideOutput](type-aliases/DeltaTokenSideOutput.md)
 - [DeltaTransaction](type-aliases/DeltaTransaction.md)
 - [DepositNativeAndPreSignDeltaOrderParams](type-aliases/DepositNativeAndPreSignDeltaOrderParams.md)
 - [DepositNativeAndPreSignParams](type-aliases/DepositNativeAndPreSignParams.md)
@@ -114,7 +110,7 @@ Renames and re-exports [constructEthersContractCaller](functions/constructEthers
 - [GetAdaptersFunctions](type-aliases/GetAdaptersFunctions.md)
 - [GetAgentsListFunctions](type-aliases/GetAgentsListFunctions.md)
 - [GetAllTokens](type-aliases/GetAllTokens.md)
-- [GetBalancesFunctions](type-aliases/GetBalancesFunctions.md)
+- [~~GetBalancesFunctions~~](type-aliases/GetBalancesFunctions.md)
 - [GetBridgeRoutesFunctions](type-aliases/GetBridgeRoutesFunctions.md)
 - [GetDeltaContractFunctions](type-aliases/GetDeltaContractFunctions.md)
 - [GetDeltaOrdersFunctions](type-aliases/GetDeltaOrdersFunctions.md)
@@ -199,6 +195,7 @@ Renames and re-exports [constructEthersContractCaller](functions/constructEthers
 - [API\_URL](variables/API_URL.md)
 - [ContractMethod](variables/ContractMethod.md)
 - [DEFAULT\_VERSION](variables/DEFAULT_VERSION.md)
+- [DeltaOrderStatusMap](variables/DeltaOrderStatusMap.md)
 - [OrderHelpers](variables/OrderHelpers.md)
 
 ## Functions
@@ -225,7 +222,7 @@ Renames and re-exports [constructEthersContractCaller](functions/constructEthers
 - [constructFullSDK](functions/constructFullSDK.md)
 - [constructGetAdapters](functions/constructGetAdapters.md)
 - [constructGetAgentsList](functions/constructGetAgentsList.md)
-- [constructGetBalances](functions/constructGetBalances.md)
+- [~~constructGetBalances~~](functions/constructGetBalances.md)
 - [constructGetBridgeRoutes](functions/constructGetBridgeRoutes.md)
 - [constructGetDeltaContract](functions/constructGetDeltaContract.md)
 - [constructGetDeltaOrders](functions/constructGetDeltaOrders.md)
@@ -261,3 +258,9 @@ Renames and re-exports [constructEthersContractCaller](functions/constructEthers
 - [isAllowance](functions/isAllowance.md)
 - [isFetcherError](functions/isFetcherError.md)
 - [txParamsToViemTxParams](functions/txParamsToViemTxParams.md)
+
+## References
+
+### constructEthersV5ContractCaller
+
+Renames and re-exports [constructEthersContractCaller](functions/constructEthersContractCaller.md)

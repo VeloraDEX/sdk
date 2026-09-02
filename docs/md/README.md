@@ -1,4 +1,4 @@
-**@velora-dex/sdk** • [**Docs**](globals.md)
+**@velora-dex/sdk**
 
 ***
 
@@ -58,7 +58,7 @@ pnpm add @velora-dex/sdk
 
 There are multiple ways to use Velora SDK, ranging from a simple construct-and-use approach to a fully composable _bring what you need_ approach which allows for advanced tree-shaking and minimizes bundle size.
 
-You can see some examples in [/src/examples](src/examples) directory.
+You can see some examples in [/src/examples](_media/examples) directory.
 
 ### Simple SDK
 
@@ -316,7 +316,7 @@ if ('delta' in quote) {
 **Velora Delta** is an intent-based protocol that enables a Velora user to make gasless swaps where multiple agents compete to execute the trade at the best price possible.
 This way the user doesn't need to make a transaction themselve but only to sign a Delta Order.
 
-(For **Crosschain Delta Orders** refer to a separate documentation page [DELTA.md](./docs/DELTA.md#crosschain-delta-orders) )
+(For **Crosschain Delta Orders** refer to a separate documentation page [DELTA.md](_media/DELTA.md#crosschain-delta-orders) )
 
 In v2 the Order is **built by the server** from the quoted route — you sign the returned typed data and post it. After getting **deltaPrice**, there are a few steps to sign the Order and wait for its execution.
 

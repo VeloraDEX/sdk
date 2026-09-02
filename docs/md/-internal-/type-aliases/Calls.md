@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: Calls\<calls, extraProperties, result\>
 
-> **Calls**\<`calls`, `extraProperties`, `result`\>: `calls` *extends* readonly [] ? readonly [] : `calls` *extends* readonly [infer call] ? readonly [`...result`, [`Prettify`](Prettify.md)\<[`Call`](Call.md)\<`call`, `extraProperties`\>\>] : `calls` *extends* readonly [infer call, `...(infer rest)`] ? [`Calls`](Calls.md)\<[`...rest`], `extraProperties`, [`...result`, [`Prettify`](Prettify.md)\<[`Call`](Call.md)\<`call`, `extraProperties`\>\>]\> : readonly `unknown`[] *extends* `calls` ? `calls` : `calls` *extends* readonly infer call[] ? readonly [`Prettify`](Prettify.md)\<`call`\>[] : readonly [`OneOf`](OneOf.md)\<[`Call`](Call.md)\>[]
+> **Calls**\<`calls`, `extraProperties`, `result`\> = `calls` *extends* readonly \[\] ? readonly \[\] : `calls` *extends* readonly \[infer call\] ? readonly \[`...result`, [`Prettify`](Prettify-1.md)\<[`Call`](Call.md)\<`call`, `extraProperties`\>\>\] : `calls` *extends* readonly \[infer call, `...(infer rest)`\] ? `Calls`\<\[`...rest`\], `extraProperties`, \[`...result`, [`Prettify`](Prettify-1.md)\<[`Call`](Call.md)\<`call`, `extraProperties`\>\>\]\> : readonly `unknown`[] *extends* `calls` ? `calls` : `calls` *extends* readonly infer call[] ? readonly [`Prettify`](Prettify-1.md)\<`call`\>[] : readonly [`OneOf`](OneOf.md)\<[`Call`](Call.md)\>[]
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/calls.d.ts:16
 
 ## Type Parameters
 
-• **calls** *extends* readonly `unknown`[]
+### calls
 
-• **extraProperties** *extends* [`Record`](Record.md)\<`string`, `unknown`\> = `object`
+`calls` *extends* readonly `unknown`[]
 
-• **result** *extends* readonly `any`[] = []
+### extraProperties
 
-## Defined in
+`extraProperties` *extends* [`Record`](Record.md)\<`string`, `unknown`\> = \{ \}
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/calls.d.ts:16
+### result
+
+`result` *extends* readonly `any`[] = \[\]

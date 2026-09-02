@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: PostTWAPDeltaOrderFunctions
 
-> **PostTWAPDeltaOrderFunctions**: `object`
+> **PostTWAPDeltaOrderFunctions** = `object`
 
-## Type declaration
+Defined in: [src/methods/delta/postTWAPDeltaOrder.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postTWAPDeltaOrder.ts#L25)
+
+## Properties
 
 ### postTWAPDeltaOrder
 
 > **postTWAPDeltaOrder**: [`PostTWAPDeltaOrder`](../-internal-/type-aliases/PostTWAPDeltaOrder.md)
 
-## Defined in
-
-[src/methods/delta/postTWAPDeltaOrder.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postTWAPDeltaOrder.ts#L25)
+Defined in: [src/methods/delta/postTWAPDeltaOrder.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/postTWAPDeltaOrder.ts#L26)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,44 +6,72 @@
 
 # Type Alias: Proof\<quantity, index\>
 
-> **Proof**\<`quantity`, `index`\>: `object`
+> **Proof**\<`quantity`, `index`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/proof.d.ts:9
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-## Type declaration
+### index
+
+`index` = `number`
+
+## Properties
 
 ### accountProof
 
 > **accountProof**: [`AccountProof`](AccountProof.md)[]
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/proof.d.ts:15
+
+***
+
 ### address
 
-> **address**: [`Address`](Address.md)
+> **address**: [`Address`](Address-1.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/proof.d.ts:10
+
+***
 
 ### balance
 
 > **balance**: `quantity`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/proof.d.ts:11
+
+***
+
 ### codeHash
 
 > **codeHash**: [`Hash`](Hash.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/proof.d.ts:12
+
+***
 
 ### nonce
 
 > **nonce**: `index`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/proof.d.ts:13
+
+***
+
 ### storageHash
 
 > **storageHash**: [`Hash`](Hash.md)
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/proof.d.ts:14
+
+***
 
 ### storageProof
 
 > **storageProof**: [`StorageProof`](StorageProof.md)\<`quantity`\>[]
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/proof.d.ts:9
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/proof.d.ts:16

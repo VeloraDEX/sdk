@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: PipelineDestination\<S, P\>
 
-> **PipelineDestination**\<`S`, `P`\>: `S` *extends* [`PipelineTransformSource`](PipelineTransformSource.md)\<infer ST\> ? [`WritableStream`](../../../interfaces/WritableStream.md) \| [`PipelineDestinationIterableFunction`](PipelineDestinationIterableFunction.md)\<`ST`\> \| [`PipelineDestinationPromiseFunction`](PipelineDestinationPromiseFunction.md)\<`ST`, `P`\> : `never`
+> **PipelineDestination**\<`S`, `P`\> = `S` *extends* [`PipelineTransformSource`](PipelineTransformSource.md)\<infer ST\> ? [`WritableStream`](../../../interfaces/WritableStream-1.md) \| [`PipelineDestinationIterableFunction`](PipelineDestinationIterableFunction.md)\<`ST`\> \| [`PipelineDestinationPromiseFunction`](PipelineDestinationPromiseFunction.md)\<`ST`, `P`\> : `never`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1484
 
 ## Type Parameters
 
-• **S** *extends* [`PipelineTransformSource`](PipelineTransformSource.md)\<`any`\>
+### S
 
-• **P**
+`S` *extends* [`PipelineTransformSource`](PipelineTransformSource.md)\<`any`\>
 
-## Defined in
+### P
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1484
+`P`

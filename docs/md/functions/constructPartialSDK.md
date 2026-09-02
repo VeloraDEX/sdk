@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,17 +8,27 @@
 
 > **constructPartialSDK**\<`Config`, `Funcs`\>(`config`, ...`funcs`): [`InferWithTxResponse`](../-internal-/type-aliases/InferWithTxResponse.md)\<`Config`, `Funcs`\> & [`Required`](../-internal-/type-aliases/Required.md)\<[`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md)\>
 
+Defined in: [src/sdk/partial.ts:88](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L88)
+
 ## Type Parameters
 
-• **Config** *extends* [`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md)
+### Config
 
-• **Funcs** *extends* [[`SDKFunction`](../-internal-/type-aliases/SDKFunction.md)\<`Config`\>, `...SDKFunction<Config>[]`]
+`Config` *extends* [`ConstructBaseInput`](../-internal-/interfaces/ConstructBaseInput.md)
+
+### Funcs
+
+`Funcs` *extends* \[[`SDKFunction`](../-internal-/type-aliases/SDKFunction.md)\<`Config`\>, `...SDKFunction<Config>[]`\]
 
 ## Parameters
 
-• **config**: `Config`
+### config
 
-• ...**funcs**: `Funcs`
+`Config`
+
+### funcs
+
+...`Funcs`
 
 ## Returns
 
@@ -27,7 +37,3 @@
 ## Description
 
 construct composable SDK with methods you choose yourself
-
-## Defined in
-
-[src/sdk/partial.ts:88](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L88)

@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,14 +8,14 @@
 
 > **constructGetDeltaContract**(`options`): [`GetDeltaContractFunctions`](../type-aliases/GetDeltaContractFunctions.md)
 
+Defined in: [src/methods/delta/getDeltaContract.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaContract.ts#L16)
+
 ## Parameters
 
-• **options**: [`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
+### options
+
+[`ConstructFetchInput`](../interfaces/ConstructFetchInput.md)
 
 ## Returns
 
 [`GetDeltaContractFunctions`](../type-aliases/GetDeltaContractFunctions.md)
-
-## Defined in
-
-[src/methods/delta/getDeltaContract.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaContract.ts#L16)

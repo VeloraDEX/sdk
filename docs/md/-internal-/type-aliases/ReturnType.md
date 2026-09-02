@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: ReturnType\<T\>
 
-> **ReturnType**\<`T`\>: `T` *extends* (...`args`) => infer R ? `R` : `any`
+> **ReturnType**\<`T`\> = `T` *extends* (...`args`) => infer R ? `R` : `any`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1650
 
 Obtain the return type of a function type
 
 ## Type Parameters
 
-• **T** *extends* (...`args`) => `any`
+### T
 
-## Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1643
+`T` *extends* (...`args`) => `any`

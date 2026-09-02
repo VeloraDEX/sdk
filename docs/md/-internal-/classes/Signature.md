@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Signature
 
 # Class: Signature
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:32
 
 A Signature
 
@@ -20,15 +22,13 @@ A Signature
 
 > **get** **compactSerialized**(): `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:83
+
 The [[link-eip-2098]] compact representation.
 
 ##### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:83
 
 ***
 
@@ -36,18 +36,16 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signa
 
 #### Get Signature
 
-> **get** **legacyChainId**(): `null` \| `bigint`
+> **get** **legacyChainId**(): `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:68
 
 The chain ID for EIP-155 legacy transactions. For non-legacy
  transactions, this value is ``null``.
 
 ##### Returns
 
-`null` \| `bigint`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:68
+`bigint` \| `null`
 
 ***
 
@@ -55,18 +53,16 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signa
 
 #### Get Signature
 
-> **get** **networkV**(): `null` \| `bigint`
+> **get** **networkV**(): `bigint` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:63
 
 The EIP-155 ``v`` for legacy transactions. For non-legacy
  transactions, this value is ``null``.
 
 ##### Returns
 
-`null` \| `bigint`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:63
+`bigint` \| `null`
 
 ***
 
@@ -75,6 +71,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signa
 #### Get Signature
 
 > **get** **r**(): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:40
 
 The ``r`` value for a signautre.
 
@@ -89,17 +87,17 @@ The ``r`` value for a signautre.
 
 > **set** **r**(`value`): `void`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:41
+
 ##### Parameters
 
-• **value**: [`BytesLike`](../type-aliases/BytesLike.md)
+###### value
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 ##### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:40
 
 ***
 
@@ -108,6 +106,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signa
 #### Get Signature
 
 > **get** **s**(): `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:45
 
 The ``s`` value for a signature.
 
@@ -119,17 +119,17 @@ The ``s`` value for a signature.
 
 > **set** **s**(`_value`): `void`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:46
+
 ##### Parameters
 
-• **\_value**: [`BytesLike`](../type-aliases/BytesLike.md)
+###### \_value
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 ##### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:45
 
 ***
 
@@ -139,15 +139,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signa
 
 > **get** **serialized**(): `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:87
+
 The serialized representation.
 
 ##### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:87
 
 ***
 
@@ -156,6 +154,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signa
 #### Get Signature
 
 > **get** **v**(): `27` \| `28`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:57
 
 The ``v`` value for a signature.
 
@@ -174,17 +174,17 @@ The ``v`` value for a signature.
 
 > **set** **v**(`value`): `void`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:58
+
 ##### Parameters
 
-• **value**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+###### value
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 ##### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:57
 
 ***
 
@@ -194,6 +194,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signa
 
 > **get** **yParity**(): `0` \| `1`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:74
+
 The ``yParity`` for the signature.
 
  See ``v`` for more details on how this value is used.
@@ -201,10 +203,6 @@ The ``yParity`` for the signature.
 ##### Returns
 
 `0` \| `1`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:74
 
 ***
 
@@ -214,6 +212,8 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signa
 
 > **get** **yParityAndS**(): `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:79
+
 The [[link-eip-2098]] compact representation of the ``yParity``
  and ``s`` compacted into a single ``bytes32``.
 
@@ -221,25 +221,19 @@ The [[link-eip-2098]] compact representation of the ``yParity``
 
 `string`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:79
-
 ## Methods
 
 ### clone()
 
-> **clone**(): [`Signature`](Signature.md)
+> **clone**(): `Signature`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:95
 
 Returns a new identical [[Signature]].
 
 #### Returns
 
-[`Signature`](Signature.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:95
+`Signature`
 
 ***
 
@@ -247,21 +241,21 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signa
 
 > **toJSON**(): `any`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:99
+
 Returns a representation that is compatible with ``JSON.stringify``.
 
 #### Returns
 
 `any`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:99
-
 ***
 
 ### from()
 
-> `static` **from**(`sig`?): [`Signature`](Signature.md)
+> `static` **from**(`sig?`): `Signature`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:156
 
 Creates a new [[Signature]].
 
@@ -272,21 +266,21 @@ Creates a new [[Signature]].
 
 #### Parameters
 
-• **sig?**: [`SignatureLike`](../type-aliases/SignatureLike.md)
+##### sig?
+
+[`SignatureLike`](../type-aliases/SignatureLike.md)
 
 #### Returns
 
-[`Signature`](Signature.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:156
+`Signature`
 
 ***
 
 ### getChainId()
 
 > `static` **getChainId**(`v`): `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:110
 
 Compute the chain ID from the ``v`` in a legacy EIP-155 transactions.
 
@@ -299,21 +293,21 @@ Compute the chain ID from the ``v`` in a legacy EIP-155 transactions.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
 `bigint`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:110
 
 ***
 
 ### getChainIdV()
 
 > `static` **getChainIdV**(`chainId`, `v`): `bigint`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:125
 
 Compute the ``v`` for a chain ID for a legacy EIP-155 transactions.
 
@@ -329,23 +323,25 @@ Compute the ``v`` for a chain ID for a legacy EIP-155 transactions.
 
 #### Parameters
 
-• **chainId**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### chainId
 
-• **v**: `27` \| `28`
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
+
+##### v
+
+`27` \| `28`
 
 #### Returns
 
 `bigint`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:125
 
 ***
 
 ### getNormalizedV()
 
 > `static` **getNormalizedV**(`v`): `27` \| `28`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:147
 
 Compute the normalized legacy transaction ``v`` from a ``yParirty``,
  a legacy transaction ``v`` or a legacy [[link-eip-155]] transaction.
@@ -369,12 +365,10 @@ Compute the normalized legacy transaction ``v`` from a ``yParirty``,
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
 `27` \| `28`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/crypto/signature.d.ts:147

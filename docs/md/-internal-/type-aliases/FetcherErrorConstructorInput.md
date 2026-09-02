@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,12 @@
 
 # Type Alias: FetcherErrorConstructorInput
 
-> **FetcherErrorConstructorInput**: [`MinAxiosError`](MinAxiosError.md) & `object`
+> **FetcherErrorConstructorInput** = [`MinAxiosError`](MinAxiosError.md) & `object`
 
-## Type declaration
+Defined in: [src/helpers/misc.ts:43](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L43)
+
+## Type Declaration
 
 ### response?
 
-> `optional` **response**: [`MinAxiosResponse`](MinAxiosResponse.md)
-
-## Defined in
-
-[src/helpers/misc.ts:43](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L43)
+> `optional` **response?**: [`MinAxiosResponse`](MinAxiosResponse.md)

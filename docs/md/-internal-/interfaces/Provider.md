@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Provider
 
 # Interface: Provider
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1075
 
 A **Provider** is the primary method to interact with the read-only
  content on Ethereum.
@@ -33,7 +35,9 @@ A **Provider** is the primary method to interact with the read-only
 
 ### provider
 
-> **provider**: [`Provider`](Provider.md)
+> **provider**: `Provider`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1083
 
 The provider iteself.
 
@@ -45,21 +49,21 @@ The provider iteself.
 
 [`ContractRunner`](ContractRunner.md).[`provider`](ContractRunner.md#provider)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1083
-
 ***
 
-### sendTransaction()?
+### sendTransaction?
 
-> `optional` **sendTransaction**: (`tx`) => `Promise`\<[`TransactionResponse`](../classes/TransactionResponse.md)\>
+> `optional` **sendTransaction?**: (`tx`) => `Promise`\<[`TransactionResponse`](../classes/TransactionResponse.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:34
 
 Required for state mutating calls
 
 #### Parameters
 
-• **tx**: [`TransactionRequest`](TransactionRequest.md)
+##### tx
+
+[`TransactionRequest`](TransactionRequest.md)
 
 #### Returns
 
@@ -69,35 +73,33 @@ Required for state mutating calls
 
 [`ContractRunner`](ContractRunner.md).[`sendTransaction`](ContractRunner.md#sendtransaction)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/contracts.d.ts:34
-
 ## Methods
 
 ### addListener()
 
-> **addListener**(`event`, `listener`): `Promise`\<[`Provider`](Provider.md)\>
+> **addListener**(`event`, `listener`): `Promise`\<`Provider`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:46
 
 Alias for [[on]].
 
 #### Parameters
 
-• **event**: [`ProviderEvent`](../type-aliases/ProviderEvent.md)
+##### event
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`ProviderEvent`](../type-aliases/ProviderEvent.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener-1.md)
 
 #### Returns
 
-`Promise`\<[`Provider`](Provider.md)\>
+`Promise`\<`Provider`\>
 
 #### Inherited from
 
 [`EventEmitterable`](EventEmitterable.md).[`addListener`](EventEmitterable.md#addlistener)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:46
 
 ***
 
@@ -105,21 +107,21 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events
 
 > **broadcastTransaction**(`signedTx`): `Promise`\<[`TransactionResponse`](../classes/TransactionResponse.md)\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1149
+
 Broadcasts the %%signedTx%% to the network, adding it to the
  memory pool of any node for which the transaction meets the
  rebroadcast requirements.
 
 #### Parameters
 
-• **signedTx**: `string`
+##### signedTx
+
+`string`
 
 #### Returns
 
 `Promise`\<[`TransactionResponse`](../classes/TransactionResponse.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1149
 
 ***
 
@@ -127,11 +129,16 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > **call**(`tx`): `Promise`\<`string`\>
 
-Required for pure, view or static calls to contracts.
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1143
+
+Simulate the execution of %%tx%%. If the call reverts, it will
+ throw a [[CallExceptionError]] which includes the revert data.
 
 #### Parameters
 
-• **tx**: [`TransactionRequest`](TransactionRequest.md)
+##### tx
+
+[`TransactionRequest`](TransactionRequest.md)
 
 #### Returns
 
@@ -141,15 +148,13 @@ Required for pure, view or static calls to contracts.
 
 `ContractRunner.call`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1143
-
 ***
 
 ### destroy()
 
 > **destroy**(): `void`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1088
 
 Shutdown any resources this provider is using. No additional
  calls should be made to this provider after calling this.
@@ -158,23 +163,25 @@ Shutdown any resources this provider is using. No additional
 
 `void`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1088
-
 ***
 
 ### emit()
 
 > **emit**(`event`, ...`args`): `Promise`\<`boolean`\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:25
+
 Triggers each listener for %%event%% with the %%args%%.
 
 #### Parameters
 
-• **event**: [`ProviderEvent`](../type-aliases/ProviderEvent.md)
+##### event
 
-• ...**args**: `any`[]
+[`ProviderEvent`](../type-aliases/ProviderEvent.md)
+
+##### args
+
+...`any`[]
 
 #### Returns
 
@@ -184,21 +191,21 @@ Triggers each listener for %%event%% with the %%args%%.
 
 [`EventEmitterable`](EventEmitterable.md).[`emit`](EventEmitterable.md#emit)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:25
-
 ***
 
 ### estimateGas()
 
 > **estimateGas**(`tx`): `Promise`\<`bigint`\>
 
-Required to estimate gas.
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1138
+
+Estimates the amount of gas required to execute %%tx%%.
 
 #### Parameters
 
-• **tx**: [`TransactionRequest`](TransactionRequest.md)
+##### tx
+
+[`TransactionRequest`](TransactionRequest.md)
 
 #### Returns
 
@@ -208,15 +215,13 @@ Required to estimate gas.
 
 `ContractRunner.estimateGas`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1138
-
 ***
 
 ### getBalance()
 
-> **getBalance**(`address`, `blockTag`?): `Promise`\<`bigint`\>
+> **getBalance**(`address`, `blockTag?`): `Promise`\<`bigint`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1109
 
 Get the account balance (in wei) of %%address%%. If %%blockTag%%
  is specified and the node supports archive access for that
@@ -224,9 +229,13 @@ Get the account balance (in wei) of %%address%%. If %%blockTag%%
 
 #### Parameters
 
-• **address**: [`AddressLike`](../type-aliases/AddressLike.md)
+##### address
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md)
+[`AddressLike`](../type-aliases/AddressLike.md)
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag-1.md)
 
 #### Returns
 
@@ -237,15 +246,13 @@ Get the account balance (in wei) of %%address%%. If %%blockTag%%
 On nodes without archive access enabled, the %%blockTag%% may be
        **silently ignored** by the node, which may cause issues if relied on.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1109
-
 ***
 
 ### getBlock()
 
-> **getBlock**(`blockHashOrBlockTag`, `prefetchTxs`?): `Promise`\<`null` \| [`Block`](../classes/Block.md)\>
+> **getBlock**(`blockHashOrBlockTag`, `prefetchTxs?`): `Promise`\<[`Block`](../classes/Block.md) \| `null`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1158
 
 Resolves to the block for %%blockHashOrBlockTag%%.
 
@@ -256,17 +263,17 @@ Resolves to the block for %%blockHashOrBlockTag%%.
 
 #### Parameters
 
-• **blockHashOrBlockTag**: [`BlockTag`](../type-aliases/BlockTag.md)
+##### blockHashOrBlockTag
 
-• **prefetchTxs?**: `boolean`
+[`BlockTag`](../type-aliases/BlockTag-1.md)
+
+##### prefetchTxs?
+
+`boolean`
 
 #### Returns
 
-`Promise`\<`null` \| [`Block`](../classes/Block.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1158
+`Promise`\<[`Block`](../classes/Block.md) \| `null`\>
 
 ***
 
@@ -274,29 +281,33 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > **getBlockNumber**(): `Promise`\<`number`\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1092
+
 Get the current block number.
 
 #### Returns
 
 `Promise`\<`number`\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1092
-
 ***
 
 ### getCode()
 
-> **getCode**(`address`, `blockTag`?): `Promise`\<`string`\>
+> **getCode**(`address`, `blockTag?`): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1127
 
 Get the bytecode for %%address%%.
 
 #### Parameters
 
-• **address**: [`AddressLike`](../type-aliases/AddressLike.md)
+##### address
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md)
+[`AddressLike`](../type-aliases/AddressLike.md)
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag-1.md)
 
 #### Returns
 
@@ -306,10 +317,6 @@ Get the bytecode for %%address%%.
 
 On nodes without archive access enabled, the %%blockTag%% may be
        **silently ignored** by the node, which may cause issues if relied on.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1127
 
 ***
 
@@ -317,15 +324,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > **getFeeData**(): `Promise`\<[`FeeData`](../classes/FeeData.md)\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1100
+
 Get the best guess at the recommended [[FeeData]].
 
 #### Returns
 
 `Promise`\<[`FeeData`](../classes/FeeData.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1100
 
 ***
 
@@ -333,19 +338,19 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > **getLogs**(`filter`): `Promise`\<[`Log`](../classes/Log.md)[]\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1184
+
 Resolves to the list of Logs that match %%filter%%
 
 #### Parameters
 
-• **filter**: [`Filter`](Filter.md) \| [`FilterByBlockHash`](FilterByBlockHash.md)
+##### filter
+
+[`Filter`](Filter-1.md) \| [`FilterByBlockHash`](FilterByBlockHash-1.md)
 
 #### Returns
 
 `Promise`\<[`Log`](../classes/Log.md)[]\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1184
 
 ***
 
@@ -353,31 +358,37 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > **getNetwork**(): `Promise`\<[`Network`](../classes/Network.md)\>
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1096
+
 Get the connected [[Network]].
 
 #### Returns
 
 `Promise`\<[`Network`](../classes/Network.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1096
-
 ***
 
 ### getStorage()
 
-> **getStorage**(`address`, `position`, `blockTag`?): `Promise`\<`string`\>
+> **getStorage**(`address`, `position`, `blockTag?`): `Promise`\<`string`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1134
 
 Get the storage slot value for %%address%% at slot %%position%%.
 
 #### Parameters
 
-• **address**: [`AddressLike`](../type-aliases/AddressLike.md)
+##### address
 
-• **position**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+[`AddressLike`](../type-aliases/AddressLike.md)
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md)
+##### position
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag-1.md)
 
 #### Returns
 
@@ -388,15 +399,13 @@ Get the storage slot value for %%address%% at slot %%position%%.
 On nodes without archive access enabled, the %%blockTag%% may be
        **silently ignored** by the node, which may cause issues if relied on.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1134
-
 ***
 
 ### getTransaction()
 
-> **getTransaction**(`hash`): `Promise`\<`null` \| [`TransactionResponse`](../classes/TransactionResponse.md)\>
+> **getTransaction**(`hash`): `Promise`\<[`TransactionResponse`](../classes/TransactionResponse.md) \| `null`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1165
 
 Resolves to the transaction for %%hash%%.
 
@@ -405,21 +414,21 @@ Resolves to the transaction for %%hash%%.
 
 #### Parameters
 
-• **hash**: `string`
+##### hash
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| [`TransactionResponse`](../classes/TransactionResponse.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1165
+`Promise`\<[`TransactionResponse`](../classes/TransactionResponse.md) \| `null`\>
 
 ***
 
 ### getTransactionCount()
 
-> **getTransactionCount**(`address`, `blockTag`?): `Promise`\<`number`\>
+> **getTransactionCount**(`address`, `blockTag?`): `Promise`\<`number`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1120
 
 Get the number of transactions ever sent for %%address%%, which
  is used as the ``nonce`` when sending a transaction. If
@@ -429,9 +438,13 @@ Get the number of transactions ever sent for %%address%%, which
 
 #### Parameters
 
-• **address**: [`AddressLike`](../type-aliases/AddressLike.md)
+##### address
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md)
+[`AddressLike`](../type-aliases/AddressLike.md)
+
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag-1.md)
 
 #### Returns
 
@@ -442,15 +455,13 @@ Get the number of transactions ever sent for %%address%%, which
 On nodes without archive access enabled, the %%blockTag%% may be
        **silently ignored** by the node, which may cause issues if relied on.
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1120
-
 ***
 
 ### getTransactionReceipt()
 
-> **getTransactionReceipt**(`hash`): `Promise`\<`null` \| [`TransactionReceipt`](../classes/TransactionReceipt.md)\>
+> **getTransactionReceipt**(`hash`): `Promise`\<[`TransactionReceipt`](../classes/TransactionReceipt.md) \| `null`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1173
 
 Resolves to the transaction receipt for %%hash%%, if mined.
 
@@ -460,21 +471,21 @@ Resolves to the transaction receipt for %%hash%%, if mined.
 
 #### Parameters
 
-• **hash**: `string`
+##### hash
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| [`TransactionReceipt`](../classes/TransactionReceipt.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1173
+`Promise`\<[`TransactionReceipt`](../classes/TransactionReceipt.md) \| `null`\>
 
 ***
 
 ### getTransactionResult()
 
-> **getTransactionResult**(`hash`): `Promise`\<`null` \| `string`\>
+> **getTransactionResult**(`hash`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1180
 
 Resolves to the result returned by the executions of %%hash%%.
 
@@ -483,27 +494,29 @@ Resolves to the result returned by the executions of %%hash%%.
 
 #### Parameters
 
-• **hash**: `string`
+##### hash
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1180
+`Promise`\<`string` \| `null`\>
 
 ***
 
 ### listenerCount()
 
-> **listenerCount**(`event`?): `Promise`\<`number`\>
+> **listenerCount**(`event?`): `Promise`\<`number`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:29
 
 Resolves to the number of listeners for %%event%%.
 
 #### Parameters
 
-• **event?**: [`ProviderEvent`](../type-aliases/ProviderEvent.md)
+##### event?
+
+[`ProviderEvent`](../type-aliases/ProviderEvent.md)
 
 #### Returns
 
@@ -513,39 +526,37 @@ Resolves to the number of listeners for %%event%%.
 
 [`EventEmitterable`](EventEmitterable.md).[`listenerCount`](EventEmitterable.md#listenercount)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:29
-
 ***
 
 ### listeners()
 
-> **listeners**(`event`?): `Promise`\<[`Listener`](../type-aliases/Listener.md)[]\>
+> **listeners**(`event?`): `Promise`\<[`Listener`](../type-aliases/Listener-1.md)[]\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:33
 
 Resolves to the listeners for %%event%%.
 
 #### Parameters
 
-• **event?**: [`ProviderEvent`](../type-aliases/ProviderEvent.md)
+##### event?
+
+[`ProviderEvent`](../type-aliases/ProviderEvent.md)
 
 #### Returns
 
-`Promise`\<[`Listener`](../type-aliases/Listener.md)[]\>
+`Promise`\<[`Listener`](../type-aliases/Listener-1.md)[]\>
 
 #### Inherited from
 
 [`EventEmitterable`](EventEmitterable.md).[`listeners`](EventEmitterable.md#listeners)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:33
-
 ***
 
 ### lookupAddress()
 
-> **lookupAddress**(`address`): `Promise`\<`null` \| `string`\>
+> **lookupAddress**(`address`): `Promise`\<`string` \| `null`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1197
 
 Resolves to the ENS name associated for the %%address%% or
  ``null`` if the //primary name// is not configured.
@@ -555,176 +566,185 @@ Resolves to the ENS name associated for the %%address%% or
 
 #### Parameters
 
-• **address**: `string`
+##### address
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1197
+`Promise`\<`string` \| `null`\>
 
 ***
 
 ### off()
 
-> **off**(`event`, `listener`?): `Promise`\<[`Provider`](Provider.md)\>
+> **off**(`event`, `listener?`): `Promise`\<`Provider`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:38
 
 Unregister the %%listener%% for %%event%%. If %%listener%%
  is unspecified, all listeners are unregistered.
 
 #### Parameters
 
-• **event**: [`ProviderEvent`](../type-aliases/ProviderEvent.md)
+##### event
 
-• **listener?**: [`Listener`](../type-aliases/Listener.md)
+[`ProviderEvent`](../type-aliases/ProviderEvent.md)
+
+##### listener?
+
+[`Listener`](../type-aliases/Listener-1.md)
 
 #### Returns
 
-`Promise`\<[`Provider`](Provider.md)\>
+`Promise`\<`Provider`\>
 
 #### Inherited from
 
 [`EventEmitterable`](EventEmitterable.md).[`off`](EventEmitterable.md#off)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:38
-
 ***
 
 ### on()
 
-> **on**(`event`, `listener`): `Promise`\<[`Provider`](Provider.md)\>
+> **on**(`event`, `listener`): `Promise`\<`Provider`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:16
 
 Registers a %%listener%% that is called whenever the
  %%event%% occurs until unregistered.
 
 #### Parameters
 
-• **event**: [`ProviderEvent`](../type-aliases/ProviderEvent.md)
+##### event
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`ProviderEvent`](../type-aliases/ProviderEvent.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener-1.md)
 
 #### Returns
 
-`Promise`\<[`Provider`](Provider.md)\>
+`Promise`\<`Provider`\>
 
 #### Inherited from
 
 [`EventEmitterable`](EventEmitterable.md).[`on`](EventEmitterable.md#on)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:16
-
 ***
 
 ### once()
 
-> **once**(`event`, `listener`): `Promise`\<[`Provider`](Provider.md)\>
+> **once**(`event`, `listener`): `Promise`\<`Provider`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:21
 
 Registers a %%listener%% that is called the next time
  %%event%% occurs.
 
 #### Parameters
 
-• **event**: [`ProviderEvent`](../type-aliases/ProviderEvent.md)
+##### event
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`ProviderEvent`](../type-aliases/ProviderEvent.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener-1.md)
 
 #### Returns
 
-`Promise`\<[`Provider`](Provider.md)\>
+`Promise`\<`Provider`\>
 
 #### Inherited from
 
 [`EventEmitterable`](EventEmitterable.md).[`once`](EventEmitterable.md#once)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:21
-
 ***
 
 ### removeAllListeners()
 
-> **removeAllListeners**(`event`?): `Promise`\<[`Provider`](Provider.md)\>
+> **removeAllListeners**(`event?`): `Promise`\<`Provider`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:42
 
 Unregister all listeners for %%event%%.
 
 #### Parameters
 
-• **event?**: [`ProviderEvent`](../type-aliases/ProviderEvent.md)
+##### event?
+
+[`ProviderEvent`](../type-aliases/ProviderEvent.md)
 
 #### Returns
 
-`Promise`\<[`Provider`](Provider.md)\>
+`Promise`\<`Provider`\>
 
 #### Inherited from
 
 [`EventEmitterable`](EventEmitterable.md).[`removeAllListeners`](EventEmitterable.md#removealllisteners)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:42
-
 ***
 
 ### removeListener()
 
-> **removeListener**(`event`, `listener`): `Promise`\<[`Provider`](Provider.md)\>
+> **removeListener**(`event`, `listener`): `Promise`\<`Provider`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:50
 
 Alias for [[off]].
 
 #### Parameters
 
-• **event**: [`ProviderEvent`](../type-aliases/ProviderEvent.md)
+##### event
 
-• **listener**: [`Listener`](../type-aliases/Listener.md)
+[`ProviderEvent`](../type-aliases/ProviderEvent.md)
+
+##### listener
+
+[`Listener`](../type-aliases/Listener-1.md)
 
 #### Returns
 
-`Promise`\<[`Provider`](Provider.md)\>
+`Promise`\<`Provider`\>
 
 #### Inherited from
 
 [`EventEmitterable`](EventEmitterable.md).[`removeListener`](EventEmitterable.md#removelistener)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/events.d.ts:50
-
 ***
 
 ### resolveName()
 
-> **resolveName**(`ensName`): `Promise`\<`null` \| `string`\>
+> **resolveName**(`ensName`): `Promise`\<`string` \| `null`\>
 
-Required to support ENS names
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1189
+
+Resolves to the address configured for the %%ensName%% or
+ ``null`` if unconfigured.
 
 #### Parameters
 
-• **ensName**: `string`
+##### ensName
+
+`string`
 
 #### Returns
 
-`Promise`\<`null` \| `string`\>
+`Promise`\<`string` \| `null`\>
 
 #### Overrides
 
 [`NameResolver`](NameResolver.md).[`resolveName`](NameResolver.md#resolvename)
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1189
-
 ***
 
 ### waitForBlock()
 
-> **waitForBlock**(`blockTag`?): `Promise`\<[`Block`](../classes/Block.md)\>
+> **waitForBlock**(`blockTag?`): `Promise`\<[`Block`](../classes/Block.md)\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1209
 
 Resolves to the block at %%blockTag%% once it has been mined.
 
@@ -733,37 +753,39 @@ Resolves to the block at %%blockTag%% once it has been mined.
 
 #### Parameters
 
-• **blockTag?**: [`BlockTag`](../type-aliases/BlockTag.md)
+##### blockTag?
+
+[`BlockTag`](../type-aliases/BlockTag-1.md)
 
 #### Returns
 
 `Promise`\<[`Block`](../classes/Block.md)\>
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1209
-
 ***
 
 ### waitForTransaction()
 
-> **waitForTransaction**(`hash`, `confirms`?, `timeout`?): `Promise`\<`null` \| [`TransactionReceipt`](../classes/TransactionReceipt.md)\>
+> **waitForTransaction**(`hash`, `confirms?`, `timeout?`): `Promise`\<[`TransactionReceipt`](../classes/TransactionReceipt.md) \| `null`\>
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1202
 
 Waits until the transaction %%hash%% is mined and has %%confirms%%
  confirmations.
 
 #### Parameters
 
-• **hash**: `string`
+##### hash
 
-• **confirms?**: `number`
+`string`
 
-• **timeout?**: `number`
+##### confirms?
+
+`number`
+
+##### timeout?
+
+`number`
 
 #### Returns
 
-`Promise`\<`null` \| [`TransactionReceipt`](../classes/TransactionReceipt.md)\>
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:1202
+`Promise`\<[`TransactionReceipt`](../classes/TransactionReceipt.md) \| `null`\>

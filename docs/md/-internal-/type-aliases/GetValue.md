@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,20 +6,28 @@
 
 # Type Alias: GetValue\<abi, functionName, valueType, abiFunction, _Narrowable\>
 
-> **GetValue**\<`abi`, `functionName`, `valueType`, `abiFunction`, `_Narrowable`\>: `_Narrowable` *extends* `true` ? `abiFunction`\[`"stateMutability"`\] *extends* `"payable"` ? `object` : `abiFunction`\[`"payable"`\] *extends* `true` ? `object` : `object` : `object`
+> **GetValue**\<`abi`, `functionName`, `valueType`, `abiFunction`, `_Narrowable`\> = `_Narrowable` *extends* `true` ? `abiFunction`\[`"stateMutability"`\] *extends* `"payable"` ? `object` : `abiFunction`\[`"payable"`\] *extends* `true` ? `object` : `object` : `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:62
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+### abi
 
-• **functionName** *extends* `string`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
 
-• **valueType** = [`TransactionRequest`](TransactionRequest.md)\[`"value"`\]
+### functionName
 
-• **abiFunction** *extends* [`AbiFunction`](AbiFunction.md) = `abi` *extends* [`Abi`](Abi.md) ? [`ExtractAbiFunction`](ExtractAbiFunction.md)\<`abi`, `functionName`\> : [`AbiFunction`](AbiFunction.md)
+`functionName` *extends* `string`
 
-• **_Narrowable** *extends* `boolean` = [`IsNarrowable`](IsNarrowable.md)\<`abi`, [`Abi`](Abi.md)\>
+### valueType
 
-## Defined in
+`valueType` = [`TransactionRequest`](TransactionRequest-1.md)\[`"value"`\]
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/contract.d.ts:61
+### abiFunction
+
+`abiFunction` *extends* [`AbiFunction`](AbiFunction.md) = `abi` *extends* [`Abi`](Abi.md) ? [`ExtractAbiFunction`](ExtractAbiFunction.md)\<`abi`, `functionName`\> : [`AbiFunction`](AbiFunction.md)
+
+### _Narrowable
+
+`_Narrowable` *extends* `boolean` = [`IsNarrowable`](IsNarrowable.md)\<`abi`, [`Abi`](Abi.md)\>

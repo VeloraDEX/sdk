@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: VerifySiweMessageParameters
 
-> **VerifySiweMessageParameters**: [`Prettify`](Prettify.md)\<[`Pick`](Pick.md)\<[`VerifyHashParameters`](VerifyHashParameters.md), `"blockNumber"` \| `"blockTag"`\> & [`Pick`](Pick.md)\<[`ValidateSiweMessageParameters`](ValidateSiweMessageParameters.md), `"address"` \| `"domain"` \| `"nonce"` \| `"scheme"` \| `"time"`\> & `object`\>
+> **VerifySiweMessageParameters** = [`Prettify`](Prettify-1.md)\<[`Pick`](Pick.md)\<[`ValidateSiweMessageParameters`](ValidateSiweMessageParameters.md), `"address"` \| `"domain"` \| `"nonce"` \| `"scheme"` \| `"time"`\> & `object`\> & [`BlockParameters`](BlockParameters.md)
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/siwe/verifySiweMessage.d.ts:10
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/siwe/verifySiweMessage.d.ts:10

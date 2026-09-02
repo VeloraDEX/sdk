@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../../README.md)
 
 ***
 
@@ -6,21 +6,19 @@
 
 # EventEmitter
 
-## Index
+## Interfaces
 
-### Classes
+- [EventEmitterStatic](interfaces/EventEmitterStatic.md)
+- [ListenerFn](interfaces/ListenerFn.md)
 
-- [EventEmitterAsyncResource](classes/EventEmitterAsyncResource.md)
+## Type Aliases
 
-### Interfaces
+- [ArgumentMap](type-aliases/ArgumentMap.md)
+- [EventArgs](type-aliases/EventArgs.md)
+- [EventListener](type-aliases/EventListener.md)
+- [EventNames](type-aliases/EventNames.md)
+- [ValidEventTypes](type-aliases/ValidEventTypes.md)
 
-- [Abortable](interfaces/Abortable.md)
-- [EventEmitterAsyncResourceOptions](interfaces/EventEmitterAsyncResourceOptions.md)
-- [EventEmitterBuiltInEventMap](interfaces/EventEmitterBuiltInEventMap.md)
-- [EventEmitterReferencingAsyncResource](interfaces/EventEmitterReferencingAsyncResource.md)
+## Variables
 
-## References
-
-### EventEmitter
-
-Re-exports [EventEmitter](../../classes/EventEmitter.md)
+- [EventEmitter](variables/EventEmitter.md)

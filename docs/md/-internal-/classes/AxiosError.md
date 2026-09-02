@@ -1,14 +1,16 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / AxiosError
 
-# Class: AxiosError\<T, D\>
+# Class: AxiosError\<T, D, P\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:524
 
 ## Extends
 
-- [`Error`](../interfaces/Error.md)
+- `Error`
 
 ## Extended by
 
@@ -16,79 +18,91 @@
 
 ## Type Parameters
 
-• **T** = `unknown`
+### T
 
-• **D** = `any`
+`T` = `unknown`
+
+### D
+
+`D` = `any`
+
+### P
+
+`P` = `any`
 
 ## Constructors
 
-### new AxiosError()
+### Constructor
 
-> **new AxiosError**\<`T`, `D`\>(`message`?, `code`?, `config`?, `request`?, `response`?): [`AxiosError`](AxiosError.md)\<`T`, `D`\>
+> **new AxiosError**\<`T`, `D`, `P`\>(`message?`, `code?`, `config?`, `request?`, `response?`): `AxiosError`\<`T`, `D`, `P`\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:525
 
 #### Parameters
 
-• **message?**: `string`
+##### message?
 
-• **code?**: `string`
+`string`
 
-• **config?**: [`InternalAxiosRequestConfig`](../interfaces/InternalAxiosRequestConfig.md)\<`D`\>
+##### code?
 
-• **request?**: `any`
+`string`
 
-• **response?**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`, `object`\>
+##### config?
+
+[`InternalAxiosRequestConfig`](../interfaces/InternalAxiosRequestConfig.md)\<`D`, `P`\>
+
+##### request?
+
+`any`
+
+##### response?
+
+[`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`, \{ \}, `P`\>
 
 #### Returns
 
-[`AxiosError`](AxiosError.md)\<`T`, `D`\>
+`AxiosError`\<`T`, `D`, `P`\>
 
 #### Overrides
 
 `Error.constructor`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:494
-
 ## Properties
 
 ### cause?
 
-> `optional` **cause**: [`Error`](../interfaces/Error.md)
+> `optional` **cause?**: `Error`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:540
 
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:509
+#### Overrides
+
+`Error.cause`
 
 ***
 
 ### code?
 
-> `optional` **code**: `string`
+> `optional` **code?**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:503
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:534
 
 ***
 
 ### config?
 
-> `optional` **config**: [`InternalAxiosRequestConfig`](../interfaces/InternalAxiosRequestConfig.md)\<`D`\>
+> `optional` **config?**: [`InternalAxiosRequestConfig`](../interfaces/InternalAxiosRequestConfig.md)\<`D`, `P`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:502
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:533
 
 ***
 
 ### event?
 
-> `optional` **event**: `any`
+> `optional` **event?**: `any`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:510
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:541
 
 ***
 
@@ -96,9 +110,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:510
 
 > **isAxiosError**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:506
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:537
 
 ***
 
@@ -106,13 +118,11 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:506
 
 > **message**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+
 #### Inherited from
 
-[`Error`](../interfaces/Error.md).[`message`](../interfaces/Error.md#message)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1077
+`Error.message`
 
 ***
 
@@ -120,71 +130,59 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1
 
 > **name**: `string`
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
+
 #### Inherited from
 
-[`Error`](../interfaces/Error.md).[`name`](../interfaces/Error.md#name)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1076
+`Error.name`
 
 ***
 
 ### request?
 
-> `optional` **request**: `any`
+> `optional` **request?**: `any`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:504
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:535
 
 ***
 
 ### response?
 
-> `optional` **response**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`, `object`\>
+> `optional` **response?**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`, \{ \}, `P`\>
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:505
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:536
 
 ***
 
 ### stack?
 
-> `optional` **stack**: `string`
+> `optional` **stack?**: `string`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
 
 #### Inherited from
 
-[`Error`](../interfaces/Error.md).[`stack`](../interfaces/Error.md#stack)
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es5.d.ts:1078
+`Error.stack`
 
 ***
 
 ### status?
 
-> `optional` **status**: `number`
+> `optional` **status?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:507
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:538
 
 ***
 
-### toJSON()
+### toJSON
 
 > **toJSON**: () => `object`
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:539
 
 #### Returns
 
 `object`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:508
 
 ***
 
@@ -192,9 +190,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:508
 
 > `readonly` `static` **ECONNABORTED**: `"ECONNABORTED"` = `'ECONNABORTED'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:530
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:561
 
 ***
 
@@ -202,9 +198,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:530
 
 > `readonly` `static` **ECONNREFUSED**: `"ECONNREFUSED"` = `'ECONNREFUSED'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:531
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:562
 
 ***
 
@@ -212,9 +206,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:531
 
 > `readonly` `static` **ERR\_BAD\_OPTION**: `"ERR_BAD_OPTION"` = `'ERR_BAD_OPTION'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:521
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:552
 
 ***
 
@@ -222,9 +214,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:521
 
 > `readonly` `static` **ERR\_BAD\_OPTION\_VALUE**: `"ERR_BAD_OPTION_VALUE"` = `'ERR_BAD_OPTION_VALUE'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:520
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:551
 
 ***
 
@@ -232,9 +222,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:520
 
 > `readonly` `static` **ERR\_BAD\_REQUEST**: `"ERR_BAD_REQUEST"` = `'ERR_BAD_REQUEST'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:525
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:556
 
 ***
 
@@ -242,9 +230,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:525
 
 > `readonly` `static` **ERR\_BAD\_RESPONSE**: `"ERR_BAD_RESPONSE"` = `'ERR_BAD_RESPONSE'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:524
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:555
 
 ***
 
@@ -252,9 +238,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:524
 
 > `readonly` `static` **ERR\_CANCELED**: `"ERR_CANCELED"` = `'ERR_CANCELED'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:528
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:559
 
 ***
 
@@ -262,9 +246,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:528
 
 > `readonly` `static` **ERR\_DEPRECATED**: `"ERR_DEPRECATED"` = `'ERR_DEPRECATED'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:523
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:554
 
 ***
 
@@ -272,9 +254,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:523
 
 > `readonly` `static` **ERR\_FORM\_DATA\_DEPTH\_EXCEEDED**: `"ERR_FORM_DATA_DEPTH_EXCEEDED"` = `'ERR_FORM_DATA_DEPTH_EXCEEDED'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:529
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:560
 
 ***
 
@@ -282,9 +262,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:529
 
 > `readonly` `static` **ERR\_FR\_TOO\_MANY\_REDIRECTS**: `"ERR_FR_TOO_MANY_REDIRECTS"` = `'ERR_FR_TOO_MANY_REDIRECTS'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:519
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:550
 
 ***
 
@@ -292,9 +270,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:519
 
 > `readonly` `static` **ERR\_INVALID\_URL**: `"ERR_INVALID_URL"` = `'ERR_INVALID_URL'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:527
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:558
 
 ***
 
@@ -302,9 +278,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:527
 
 > `readonly` `static` **ERR\_NETWORK**: `"ERR_NETWORK"` = `'ERR_NETWORK'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:522
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:553
 
 ***
 
@@ -312,9 +286,7 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:522
 
 > `readonly` `static` **ERR\_NOT\_SUPPORT**: `"ERR_NOT_SUPPORT"` = `'ERR_NOT_SUPPORT'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:526
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:557
 
 ***
 
@@ -322,23 +294,27 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:526
 
 > `readonly` `static` **ETIMEDOUT**: `"ETIMEDOUT"` = `'ETIMEDOUT'`
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:532
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:563
 
 ***
 
-### prepareStackTrace()?
+### prepareStackTrace?
 
-> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
+> `static` `optional` **prepareStackTrace?**: (`err`, `stackTraces`) => `any`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
 
 Optional override for formatting stack traces
 
 #### Parameters
 
-• **err**: [`Error`](../interfaces/Error.md)
+##### err
 
-• **stackTraces**: [`CallSite`](../interfaces/CallSite.md)[]
+`Error`
+
+##### stackTraces
+
+[`CallSite`](../interfaces/CallSite.md)[]
 
 #### Returns
 
@@ -352,37 +328,37 @@ https://v8.dev/docs/stack-trace-api#customizing-stack-traces
 
 `Error.prepareStackTrace`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:143
-
 ***
 
 ### stackTraceLimit
 
 > `static` **stackTraceLimit**: `number`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
+
 #### Inherited from
 
 `Error.stackTraceLimit`
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:145
 
 ## Methods
 
 ### captureStackTrace()
 
-> `static` **captureStackTrace**(`targetObject`, `constructorOpt`?): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
 
 Create .stack property on a target object
 
 #### Parameters
 
-• **targetObject**: `object`
+##### targetObject
 
-• **constructorOpt?**: `Function`
+`object`
+
+##### constructorOpt?
+
+`Function`
 
 #### Returns
 
@@ -392,40 +368,54 @@ Create .stack property on a target object
 
 `Error.captureStackTrace`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/globals.d.ts:136
-
 ***
 
 ### from()
 
-> `static` **from**\<`T`, `D`\>(`error`, `code`?, `config`?, `request`?, `response`?, `customProps`?): [`AxiosError`](AxiosError.md)\<`T`, `D`\>
+> `static` **from**\<`T`, `D`, `P`\>(`error`, `code?`, `config?`, `request?`, `response?`, `customProps?`): `AxiosError`\<`T`, `D`, `P`\>
+
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:542
 
 #### Type Parameters
 
-• **T** = `unknown`
+##### T
 
-• **D** = `any`
+`T` = `unknown`
+
+##### D
+
+`D` = `any`
+
+##### P
+
+`P` = `any`
 
 #### Parameters
 
-• **error**: `unknown`
+##### error
 
-• **code?**: `string`
+`unknown`
 
-• **config?**: [`InternalAxiosRequestConfig`](../interfaces/InternalAxiosRequestConfig.md)\<`D`\>
+##### code?
 
-• **request?**: `any`
+`string`
 
-• **response?**: [`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`, `object`\>
+##### config?
 
-• **customProps?**: `object`
+[`InternalAxiosRequestConfig`](../interfaces/InternalAxiosRequestConfig.md)\<`D`, `P`\>
+
+##### request?
+
+`any`
+
+##### response?
+
+[`AxiosResponse`](../interfaces/AxiosResponse.md)\<`T`, `D`, \{ \}, `P`\>
+
+##### customProps?
+
+`object`
 
 #### Returns
 
-[`AxiosError`](AxiosError.md)\<`T`, `D`\>
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:511
+`AxiosError`\<`T`, `D`, `P`\>

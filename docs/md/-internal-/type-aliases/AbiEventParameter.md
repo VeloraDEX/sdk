@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,12 @@
 
 # Type Alias: AbiEventParameter
 
-> **AbiEventParameter**: [`AbiParameter`](AbiParameter.md) & `object`
+> **AbiEventParameter** = [`AbiParameter`](AbiParameter-1.md) & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:42
+
+## Type Declaration
 
 ### indexed?
 
-> `optional` **indexed**: `boolean`
-
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:42
+> `optional` **indexed?**: `boolean`

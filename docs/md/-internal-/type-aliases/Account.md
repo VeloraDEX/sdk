@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: Account\<address\>
 
-> **Account**\<`address`\>: [`OneOf`](OneOf.md)\<[`JsonRpcAccount`](JsonRpcAccount.md)\<`address`\> \| [`LocalAccount`](LocalAccount.md)\<`string`, `address`\> \| [`SmartAccount`](SmartAccount.md)\>
+> **Account**\<`address`\> = [`OneOf`](OneOf.md)\<[`JsonRpcAccount`](JsonRpcAccount.md)\<`address`\> \| [`LocalAccount`](LocalAccount.md)\<`string`, `address`\> \| [`SmartAccount`](SmartAccount.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:12
 
 ## Type Parameters
 
-• **address** *extends* [`Address`](Address.md) = [`Address`](Address.md)
+### address
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/accounts/types.d.ts:12
+`address` *extends* [`Address`](Address-1.md) = [`Address`](Address-1.md)

@@ -1,28 +1,26 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / MessageDefinition
 
-# Type Alias: MessageDefinition\<typedData, primaryType, primaryTypes, schema, message\>
+# Type Alias: MessageDefinition\<typedData, primaryType, messageKey, primaryTypes, schema, message\>
 
-> **MessageDefinition**\<`typedData`, `primaryType`, `primaryTypes`, `schema`, `message`\>: `object` & `object`
+> **MessageDefinition**\<`typedData`, `primaryType`, `messageKey`, `primaryTypes`, `schema`, `message`\> = `object` & `object` & `{ [k in messageKey]: { [_: string]: any } extends message ? Record<string, unknown> : message }`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/typedData.d.ts:4
+
+## Type Declaration
 
 ### types
 
 > **types**: `typedData`
 
-## Type declaration
+## Type Declaration
 
 ### domain?
 
-> `optional` **domain**: `schema` *extends* `object` ? `domain` : [`Prettify`](Prettify.md)\<[`TypedDataDomain`](TypedDataDomain.md)\>
-
-### message
-
-> **message**: `object` *extends* `message` ? [`Record`](Record.md)\<`string`, `unknown`\> : `message`
+> `optional` **domain?**: `schema` *extends* `object` ? `domain` : [`Prettify`](Prettify-1.md)\<[`TypedDataDomain`](TypedDataDomain-1.md)\>
 
 ### primaryType
 
@@ -30,16 +28,26 @@
 
 ## Type Parameters
 
-• **typedData** *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
+### typedData
 
-• **primaryType** *extends* keyof `typedData` = keyof `typedData`
+`typedData` *extends* [`TypedData`](TypedData.md) \| [`Record`](Record.md)\<`string`, `unknown`\> = [`TypedData`](TypedData.md)
 
-• **primaryTypes** = `typedData` *extends* [`TypedData`](TypedData.md) ? keyof `typedData` : `string`
+### primaryType
 
-• **schema** *extends* [`Record`](Record.md)\<`string`, `unknown`\> = `typedData` *extends* [`TypedData`](TypedData.md) ? [`TypedDataToPrimitiveTypes`](TypedDataToPrimitiveTypes.md)\<`typedData`\> : [`Record`](Record.md)\<`string`, `unknown`\>
+`primaryType` *extends* keyof `typedData` = keyof `typedData`
 
-• **message** = `schema`\[`primaryType` *extends* keyof `schema` ? `primaryType` : keyof `schema`\]
+### messageKey
 
-## Defined in
+`messageKey` *extends* `string` = `"message"`
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/typedData.d.ts:4
+### primaryTypes
+
+`primaryTypes` = `typedData` *extends* [`TypedData`](TypedData.md) ? keyof `typedData` : `string`
+
+### schema
+
+`schema` *extends* [`Record`](Record.md)\<`string`, `unknown`\> = `typedData` *extends* [`TypedData`](TypedData.md) ? [`TypedDataToPrimitiveTypes`](TypedDataToPrimitiveTypes.md)\<`typedData`\> : [`Record`](Record.md)\<`string`, `unknown`\>
+
+### message
+
+`message` = `schema`\[`primaryType` *extends* keyof `schema` ? `primaryType` : keyof `schema`\]

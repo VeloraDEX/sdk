@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: AuthorizationRequest\<uint32\>
 
-> **AuthorizationRequest**\<`uint32`\>: [`OneOf`](OneOf.md)\<`object` \| `object`\> & `object`
+> **AuthorizationRequest**\<`uint32`\> = [`OneOf`](OneOf.md)\<\{ `address`: [`Address`](Address-1.md); \} \| \{ `contractAddress`: [`Address`](Address-1.md); \}\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/authorization.d.ts:13
+
+## Type Declaration
 
 ### chainId
 
@@ -24,8 +26,6 @@ Nonce of the EOA to delegate to.
 
 ## Type Parameters
 
-• **uint32** = `number`
+### uint32
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/authorization.d.ts:13
+`uint32` = `number`

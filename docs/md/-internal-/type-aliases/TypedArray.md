@@ -1,13 +1,21 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
-[@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TypedArray
+[@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / \_TypedArray
 
-# Type Alias: TypedArray
+# Type Alias: \_TypedArray\<Type, Size\>
 
-> **TypedArray**: `Uint8Array` \| `Uint8ClampedArray` \| `Uint16Array` \| `Uint32Array` \| `Int8Array` \| `Int16Array` \| `Int32Array` \| `BigUint64Array` \| `BigInt64Array` \| `Float32Array` \| `Float64Array`
+> **\_TypedArray**\<`Type`, `Size`\> = `Size` *extends* `""` ? `Type`[] : [`FixedSizeArray`](FixedSizeArray.md)\<`Type`, [`ConvertToNumber`](ConvertToNumber.md)\<`Size`\>\>
 
-## Defined in
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:104
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/ts5.6/globals.typedarray.d.ts:5
+## Type Parameters
+
+### Type
+
+`Type`
+
+### Size
+
+`Size` *extends* `string`

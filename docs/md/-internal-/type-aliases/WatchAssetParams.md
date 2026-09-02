@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,44 +6,48 @@
 
 # Type Alias: WatchAssetParams
 
-> **WatchAssetParams**: `object`
+> **WatchAssetParams** = `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:175
+
+## Properties
 
 ### options
 
 > **options**: `object`
 
-### options.address
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:178
+
+#### address
 
 > **address**: `string`
 
 The address of the token contract
 
-### options.decimals
+#### decimals
 
 > **decimals**: `number`
 
 The number of token decimals
 
-### options.image?
+#### image?
 
-> `optional` **image**: `string`
+> `optional` **image?**: `string`
 
 A string url of the token logo
 
-### options.symbol
+#### symbol
 
 > **symbol**: `string`
 
 A ticker symbol or shorthand, up to 11 characters
 
+***
+
 ### type
 
 > **type**: `"ERC20"`
 
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:177
+
 Token type.
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/eip1193.d.ts:175

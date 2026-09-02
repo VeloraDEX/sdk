@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: PriceString
 
-> **PriceString**: `string`
+> **PriceString** = `string`
 
-## Defined in
-
-[src/helpers/token.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L16)
+Defined in: [src/helpers/token.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/token.ts#L16)

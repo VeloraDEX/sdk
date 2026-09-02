@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,15 +6,15 @@
 
 # Interface: AdaptersContractsResult
 
+Defined in: [src/methods/swap/spender.ts:24](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L24)
+
 ## Properties
 
 ### AugustusRFQ
 
 > **AugustusRFQ**: `string`
 
-#### Defined in
-
-[src/methods/swap/spender.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L27)
+Defined in: [src/methods/swap/spender.ts:27](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L27)
 
 ***
 
@@ -22,9 +22,7 @@
 
 > **AugustusSwapper**: `string`
 
-#### Defined in
-
-[src/methods/swap/spender.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L25)
+Defined in: [src/methods/swap/spender.ts:25](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L25)
 
 ***
 
@@ -32,23 +30,19 @@
 
 > **Executors**: `object`
 
+Defined in: [src/methods/swap/spender.ts:28](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L28)
+
 #### Index Signature
 
- \[`key`: \`Executor$\{number\}\`\]: `string`
-
-#### Defined in
-
-[src/methods/swap/spender.ts:28](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L28)
+\[`key`: `` `Executor${number}` ``\]: `string`
 
 ***
 
 ### ParaswapDelta?
 
-> `optional` **ParaswapDelta**: `string`
+> `optional` **ParaswapDelta?**: `string`
 
-#### Defined in
-
-[src/methods/swap/spender.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L31)
+Defined in: [src/methods/swap/spender.ts:31](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L31)
 
 ***
 
@@ -56,6 +50,4 @@
 
 > **TokenTransferProxy**: `string`
 
-#### Defined in
-
-[src/methods/swap/spender.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L26)
+Defined in: [src/methods/swap/spender.ts:26](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/spender.ts#L26)

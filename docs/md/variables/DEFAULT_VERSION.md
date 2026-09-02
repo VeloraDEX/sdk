@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,6 +8,4 @@
 
 > `const` **DEFAULT\_VERSION**: `"6.2"`
 
-## Defined in
-
-[src/constants.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/constants.ts#L16)
+Defined in: [src/constants.ts:16](https://github.com/paraswap/paraswap-sdk/blob/master/src/constants.ts#L16)

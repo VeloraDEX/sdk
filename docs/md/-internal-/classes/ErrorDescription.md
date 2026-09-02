@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,61 +6,58 @@
 
 # Class: ErrorDescription
 
-## Extends
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:88
 
-- [`Description`](Description.md)\<[`ErrorDescription`](ErrorDescription.md)\>
+When using the [[Interface-parseError]] to automatically match an
+ error for a call result for parsing, an **ErrorDescription** is returned.
 
 ## Constructors
 
-### new ErrorDescription()
+### Constructor
 
-> **new ErrorDescription**(`info`): [`ErrorDescription`](ErrorDescription.md)
+> **new ErrorDescription**(`fragment`, `selector`, `args`): `ErrorDescription`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:112
+
+@_ignore:
 
 #### Parameters
 
-• **info**
+##### fragment
 
-• **info.args**: [`Result`](../interfaces/Result.md)
+[`ErrorFragment`](ErrorFragment.md)
 
-• **info.errorFragment**: [`ErrorFragment`](ErrorFragment.md)
+##### selector
 
-• **info.name**: `string`
+`string`
 
-• **info.sighash**: `string`
+##### args
 
-• **info.signature**: `string`
+[`Result`](Result.md)
 
 #### Returns
 
-[`ErrorDescription`](ErrorDescription.md)
-
-#### Inherited from
-
-[`Description`](Description.md).[`constructor`](Description.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
+`ErrorDescription`
 
 ## Properties
 
 ### args
 
-> `readonly` **args**: [`Result`](../interfaces/Result.md)
+> `readonly` **args**: [`Result`](Result.md)
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:100
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:26
+The arguments passed to the Error with ``revert``.
 
 ***
 
-### errorFragment
+### fragment
 
-> `readonly` **errorFragment**: [`ErrorFragment`](ErrorFragment.md)
+> `readonly` **fragment**: [`ErrorFragment`](ErrorFragment.md)
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:92
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:24
+The matching fragment.
 
 ***
 
@@ -68,19 +65,19 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **name**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:96
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:25
+The name of the Error.
 
 ***
 
-### sighash
+### selector
 
-> `readonly` **sighash**: `string`
+> `readonly` **selector**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:108
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:28
+The selector for the Error.
 
 ***
 
@@ -88,6 +85,6 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **signature**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:104
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:27
+The full Error signature.

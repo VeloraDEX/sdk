@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / DuplexOptions
 
 # Interface: DuplexOptions
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1025
 
 ## Extends
 
@@ -18,175 +20,147 @@
 
 ### allowHalfOpen?
 
-> `optional` **allowHalfOpen**: `boolean`
+> `optional` **allowHalfOpen?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1026
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1026
 
 ***
 
 ### autoDestroy?
 
-> `optional` **autoDestroy**: `boolean`
+> `optional` **autoDestroy?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:960
 
 #### Inherited from
 
-[`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`autoDestroy`](../namespaces/internal/interfaces/WritableOptions.md#autodestroy)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:960
+[`StreamOptions`](../namespaces/internal/interfaces/StreamOptions.md).[`autoDestroy`](../namespaces/internal/interfaces/StreamOptions.md#autodestroy)
 
 ***
 
 ### decodeStrings?
 
-> `optional` **decodeStrings**: `boolean`
+> `optional` **decodeStrings?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:987
 
 #### Inherited from
 
-[`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`decodeStrings`](../namespaces/internal/interfaces/WritableOptions.md#decodestrings)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:987
+[`TransformOptions`](../namespaces/internal/interfaces/TransformOptions.md).[`decodeStrings`](../namespaces/internal/interfaces/TransformOptions.md#decodestrings)
 
 ***
 
 ### defaultEncoding?
 
-> `optional` **defaultEncoding**: [`BufferEncoding`](../type-aliases/BufferEncoding.md)
+> `optional` **defaultEncoding?**: [`BufferEncoding`](../type-aliases/BufferEncoding.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:988
 
 #### Inherited from
 
-[`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`defaultEncoding`](../namespaces/internal/interfaces/WritableOptions.md#defaultencoding)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:988
+[`TransformOptions`](../namespaces/internal/interfaces/TransformOptions.md).[`defaultEncoding`](../namespaces/internal/interfaces/TransformOptions.md#defaultencoding)
 
 ***
 
 ### emitClose?
 
-> `optional` **emitClose**: `boolean`
+> `optional` **emitClose?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:955
 
 #### Inherited from
 
-[`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`emitClose`](../namespaces/internal/interfaces/WritableOptions.md#emitclose)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:955
+[`StreamOptions`](../namespaces/internal/interfaces/StreamOptions.md).[`emitClose`](../namespaces/internal/interfaces/StreamOptions.md#emitclose)
 
 ***
 
 ### encoding?
 
-> `optional` **encoding**: [`BufferEncoding`](../type-aliases/BufferEncoding.md)
+> `optional` **encoding?**: [`BufferEncoding`](../type-aliases/BufferEncoding.md)
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:963
 
 #### Inherited from
 
-[`ReadableOptions`](../namespaces/internal/interfaces/ReadableOptions.md).[`encoding`](../namespaces/internal/interfaces/ReadableOptions.md#encoding)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:963
+[`TransformOptions`](../namespaces/internal/interfaces/TransformOptions.md).[`encoding`](../namespaces/internal/interfaces/TransformOptions.md#encoding)
 
 ***
 
 ### highWaterMark?
 
-> `optional` **highWaterMark**: `number`
+> `optional` **highWaterMark?**: `number`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:956
 
 #### Inherited from
 
-[`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`highWaterMark`](../namespaces/internal/interfaces/WritableOptions.md#highwatermark)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:956
+[`StreamOptions`](../namespaces/internal/interfaces/StreamOptions.md).[`highWaterMark`](../namespaces/internal/interfaces/StreamOptions.md#highwatermark)
 
 ***
 
 ### objectMode?
 
-> `optional` **objectMode**: `boolean`
+> `optional` **objectMode?**: `boolean`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:957
 
 #### Inherited from
 
-[`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`objectMode`](../namespaces/internal/interfaces/WritableOptions.md#objectmode)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:957
+[`StreamOptions`](../namespaces/internal/interfaces/StreamOptions.md).[`objectMode`](../namespaces/internal/interfaces/StreamOptions.md#objectmode)
 
 ***
 
 ### readableHighWaterMark?
 
-> `optional` **readableHighWaterMark**: `number`
+> `optional` **readableHighWaterMark?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1029
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1029
 
 ***
 
 ### readableObjectMode?
 
-> `optional` **readableObjectMode**: `boolean`
+> `optional` **readableObjectMode?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1027
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1027
 
 ***
 
 ### signal?
 
-> `optional` **signal**: `AbortSignal`
+> `optional` **signal?**: `AbortSignal`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561
 
 When provided the corresponding `AbortController` can be used to cancel an asynchronous action.
 
 #### Inherited from
 
-[`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`signal`](../namespaces/internal/interfaces/WritableOptions.md#signal)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:561
+[`ReadableOptions`](../namespaces/internal/interfaces/ReadableOptions.md).[`signal`](../namespaces/internal/interfaces/ReadableOptions.md#signal)
 
 ***
 
 ### writableCorked?
 
-> `optional` **writableCorked**: `number`
+> `optional` **writableCorked?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1031
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1031
 
 ***
 
 ### writableHighWaterMark?
 
-> `optional` **writableHighWaterMark**: `number`
+> `optional` **writableHighWaterMark?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1030
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1030
 
 ***
 
 ### writableObjectMode?
 
-> `optional` **writableObjectMode**: `boolean`
+> `optional` **writableObjectMode?**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1028
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1028
 
 ## Methods
 
@@ -194,11 +168,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:102
 
 > `optional` **construct**(`this`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1032
+
 #### Parameters
 
-• **this**: [`Duplex`](../classes/Duplex.md)
+##### this
 
-• **callback**
+[`Duplex`](../classes/Duplex.md)
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -206,11 +186,7 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:102
 
 #### Overrides
 
-[`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`construct`](../namespaces/internal/interfaces/WritableOptions.md#construct)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1032
+[`ReadableOptions`](../namespaces/internal/interfaces/ReadableOptions.md).[`construct`](../namespaces/internal/interfaces/ReadableOptions.md#construct)
 
 ***
 
@@ -218,13 +194,21 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:103
 
 > `optional` **destroy**(`this`, `error`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1044
+
 #### Parameters
 
-• **this**: [`Duplex`](../classes/Duplex.md)
+##### this
 
-• **error**: `null` \| [`Error`](Error.md)
+[`Duplex`](../classes/Duplex.md)
 
-• **callback**
+##### error
+
+`Error` \| `null`
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -232,11 +216,7 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:103
 
 #### Overrides
 
-[`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`destroy`](../namespaces/internal/interfaces/WritableOptions.md#destroy)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1044
+[`ReadableOptions`](../namespaces/internal/interfaces/ReadableOptions.md).[`destroy`](../namespaces/internal/interfaces/ReadableOptions.md#destroy)
 
 ***
 
@@ -244,11 +224,17 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:104
 
 > `optional` **final**(`this`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1043
+
 #### Parameters
 
-• **this**: [`Duplex`](../classes/Duplex.md)
+##### this
 
-• **callback**
+[`Duplex`](../classes/Duplex.md)
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -258,21 +244,23 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:104
 
 [`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`final`](../namespaces/internal/interfaces/WritableOptions.md#final)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1043
-
 ***
 
 ### read()?
 
 > `optional` **read**(`this`, `size`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1033
+
 #### Parameters
 
-• **this**: [`Duplex`](../classes/Duplex.md)
+##### this
 
-• **size**: `number`
+[`Duplex`](../classes/Duplex.md)
+
+##### size
+
+`number`
 
 #### Returns
 
@@ -282,25 +270,31 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:104
 
 [`ReadableOptions`](../namespaces/internal/interfaces/ReadableOptions.md).[`read`](../namespaces/internal/interfaces/ReadableOptions.md#read)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1033
-
 ***
 
 ### write()?
 
 > `optional` **write**(`this`, `chunk`, `encoding`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1034
+
 #### Parameters
 
-• **this**: [`Duplex`](../classes/Duplex.md)
+##### this
 
-• **chunk**: `any`
+[`Duplex`](../classes/Duplex.md)
 
-• **encoding**: [`BufferEncoding`](../type-aliases/BufferEncoding.md)
+##### chunk
 
-• **callback**
+`any`
+
+##### encoding
+
+[`BufferEncoding`](../type-aliases/BufferEncoding.md)
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -310,23 +304,27 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:103
 
 [`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`write`](../namespaces/internal/interfaces/WritableOptions.md#write)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1034
-
 ***
 
 ### writev()?
 
 > `optional` **writev**(`this`, `chunks`, `callback`): `void`
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1035
+
 #### Parameters
 
-• **this**: [`Duplex`](../classes/Duplex.md)
+##### this
 
-• **chunks**: `object`[]
+[`Duplex`](../classes/Duplex.md)
 
-• **callback**
+##### chunks
+
+`object`[]
+
+##### callback
+
+(`error?`) => `void`
 
 #### Returns
 
@@ -335,7 +333,3 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:103
 #### Overrides
 
 [`WritableOptions`](../namespaces/internal/interfaces/WritableOptions.md).[`writev`](../namespaces/internal/interfaces/WritableOptions.md#writev)
-
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream.d.ts:1035

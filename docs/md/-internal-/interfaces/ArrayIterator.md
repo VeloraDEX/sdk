@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,21 +6,27 @@
 
 # Interface: ArrayIterator\<T\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:72
+
 ## Extends
 
 - `IteratorObject`\<`T`, [`BuiltinIteratorReturn`](../type-aliases/BuiltinIteratorReturn.md), `unknown`\>
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Methods
 
 ### \[dispose\]()
 
-#### \[dispose\]()
+#### Call Signature
 
 > **\[dispose\]**(): `void`
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.esnext.disposable.d.ts:36
 
 ##### Returns
 
@@ -30,13 +36,11 @@
 
 `IteratorObject.[dispose]`
 
-##### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.disposable.d.ts:36
-
-#### \[dispose\]()
+#### Call Signature
 
 > **\[dispose\]**(): `void`
+
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:11
 
 ##### Returns
 
@@ -45,28 +49,22 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.esnext.dis
 ##### Inherited from
 
 `IteratorObject.[dispose]`
-
-##### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/compatibility/disposable.d.ts:11
 
 ***
 
 ### \[iterator\]()
 
-> **\[iterator\]**(): [`ArrayIterator`](ArrayIterator.md)\<`T`\>
+> **\[iterator\]**(): `ArrayIterator`\<`T`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:73
 
 #### Returns
 
-[`ArrayIterator`](ArrayIterator.md)\<`T`\>
+`ArrayIterator`\<`T`\>
 
 #### Overrides
 
 `IteratorObject.[iterator]`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:73
 
 ***
 
@@ -74,9 +72,13 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 
 > **next**(...`__namedParameters`): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>
 
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
+
 #### Parameters
 
-• ...**\_\_namedParameters**: [] \| [`unknown`]
+##### \_\_namedParameters
+
+\[\] \| \[`unknown`\]
 
 #### Returns
 
@@ -86,19 +88,19 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 
 `IteratorObject.next`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:43
-
 ***
 
 ### return()?
 
-> `optional` **return**(`value`?): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>
+> `optional` **return**(`value?`): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
 
 #### Parameters
 
-• **value?**: `undefined`
+##### value?
+
+`undefined`
 
 #### Returns
 
@@ -108,19 +110,19 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 
 `IteratorObject.return`
 
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:44
-
 ***
 
 ### throw()?
 
-> `optional` **throw**(`e`?): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>
+> `optional` **throw**(`e?`): [`IteratorResult`](../type-aliases/IteratorResult.md)\<`T`, `undefined`\>
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:45
 
 #### Parameters
 
-• **e?**: `any`
+##### e?
+
+`any`
 
 #### Returns
 
@@ -129,7 +131,3 @@ node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.ite
 #### Inherited from
 
 `IteratorObject.throw`
-
-#### Defined in
-
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2015.iterable.d.ts:45

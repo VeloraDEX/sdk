@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,22 +6,26 @@
 
 # Interface: OnceBlockable
 
+Defined in: node\_modules/.pnpm/@ethersproject+web@5.8.0/node\_modules/@ethersproject/web/lib/index.d.ts:18
+
 ## Methods
 
 ### once()
 
 > **once**(`eventName`, `handler`): `void`
 
+Defined in: node\_modules/.pnpm/@ethersproject+web@5.8.0/node\_modules/@ethersproject/web/lib/index.d.ts:19
+
 #### Parameters
 
-• **eventName**: `"block"`
+##### eventName
 
-• **handler**
+`"block"`
+
+##### handler
+
+() => `void`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+web@5.8.0/node\_modules/@ethersproject/web/lib/index.d.ts:19

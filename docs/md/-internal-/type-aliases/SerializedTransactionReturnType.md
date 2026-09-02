@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: SerializedTransactionReturnType\<transaction, _transactionType\>
 
-> **SerializedTransactionReturnType**\<`transaction`, `_transactionType`\>: [`TransactionSerialized`](TransactionSerialized.md)\<`_transactionType`\>
+> **SerializedTransactionReturnType**\<`transaction`, `_transactionType`\> = [`TransactionSerialized`](TransactionSerialized.md)\<`_transactionType`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/serializeTransaction.d.ts:17
 
 ## Type Parameters
 
-• **transaction** *extends* [`TransactionSerializable`](TransactionSerializable.md) = [`TransactionSerializable`](TransactionSerializable.md)
+### transaction
 
-• **_transactionType** *extends* [`TransactionType`](TransactionType.md) = [`GetTransactionType`](GetTransactionType.md)\<`transaction`\>
+`transaction` *extends* [`TransactionSerializable`](TransactionSerializable.md) = [`TransactionSerializable`](TransactionSerializable.md)
 
-## Defined in
+### _transactionType
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/utils/transaction/serializeTransaction.d.ts:17
+`_transactionType` *extends* [`TransactionType`](TransactionType.md) = [`GetTransactionType`](GetTransactionType.md)\<`transaction`\>

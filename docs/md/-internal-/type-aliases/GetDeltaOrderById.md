@@ -1,23 +1,25 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / GetDeltaOrderById
 
-# Type Alias: GetDeltaOrderById()
+# Type Alias: GetDeltaOrderById
 
-> **GetDeltaOrderById**: (`orderId`, `requestParams`?) => `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\>
+> **GetDeltaOrderById** = (`orderId`, `requestParams?`) => `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\>
+
+Defined in: [src/methods/delta/getDeltaOrders.ts:12](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L12)
 
 ## Parameters
 
-• **orderId**: `string`
+### orderId
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+`string`
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<[`DeltaAuction`](../../type-aliases/DeltaAuction.md)\>
-
-## Defined in
-
-[src/methods/delta/getDeltaOrders.ts:12](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/getDeltaOrders.ts#L12)

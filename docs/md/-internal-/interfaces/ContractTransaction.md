@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,80 +6,71 @@
 
 # Interface: ContractTransaction
 
-When populating a transaction this type is returned.
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:60
 
 ## Extends
 
-- [`PreparedTransactionRequest`](PreparedTransactionRequest.md)
+- [`TransactionResponse`](TransactionResponse.md)
 
 ## Properties
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](../type-aliases/AccessList.md)
+> `optional` **accessList?**: [`AccessList`](../type-aliases/AccessList.md)
 
-The [[link-eip-2930]] access list. Storage slots included in the access
- list are //warmed// by pre-loading them, so their initial cost to
- fetch is guaranteed, but then each additional access is cheaper.
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:40
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`accessList`](PreparedTransactionRequest.md#accesslist)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:226
+[`TransactionResponse`](TransactionResponse.md).[`accessList`](TransactionResponse.md#accesslist)
 
 ***
 
-### blockTag?
+### blockHash?
 
-> `optional` **blockTag**: [`BlockTag`](../type-aliases/BlockTag.md)
+> `optional` **blockHash?**: `string`
 
-When using ``call`` or ``estimateGas``, this allows a specific
- block to be queried. Many backends do not support this and when
- unsupported errors are silently squelched and ``"latest"`` is used.
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:26
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`blockTag`](PreparedTransactionRequest.md#blocktag)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:237
+[`TransactionResponse`](TransactionResponse.md).[`blockHash`](TransactionResponse.md#blockhash)
 
 ***
 
-### chainId?
+### blockNumber?
 
-> `optional` **chainId**: `bigint`
+> `optional` **blockNumber?**: `number`
 
-The chain ID for the network this transaction is valid on.
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:25
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`chainId`](PreparedTransactionRequest.md#chainid)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:220
+[`TransactionResponse`](TransactionResponse.md).[`blockNumber`](TransactionResponse.md#blocknumber)
 
 ***
 
-### customData?
+### chainId
 
-> `optional` **customData**: `any`
+> **chainId**: `number`
 
-A custom object, which can be passed along for network-specific
- values.
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:35
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`customData`](PreparedTransactionRequest.md#customdata)
+[`TransactionResponse`](TransactionResponse.md).[`chainId`](TransactionResponse.md#chainid)
 
-#### Defined in
+***
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:231
+### confirmations
+
+> **confirmations**: `number`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:28
+
+#### Inherited from
+
+[`TransactionResponse`](TransactionResponse.md).[`confirmations`](TransactionResponse.md#confirmations)
 
 ***
 
@@ -87,182 +78,210 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/pr
 
 > **data**: `string`
 
-The transaction data.
-
-#### Overrides
-
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`data`](PreparedTransactionRequest.md#data)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:49
-
-***
-
-### enableCcipRead?
-
-> `optional` **enableCcipRead**: `boolean`
-
-When using ``call``, this enables CCIP-read, which permits the
- provider to be redirected to web-based content during execution,
- which is then further validated by the contract.
-
- There are potential security implications allowing CCIP-read, as
- it could be used to expose the IP address or user activity during
- the fetch to unexpected parties.
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:33
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`enableCcipRead`](PreparedTransactionRequest.md#enableccipread)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:247
+[`TransactionResponse`](TransactionResponse.md).[`data`](TransactionResponse.md#data)
 
 ***
 
-### from?
+### from
 
-> `optional` **from**: `string`
+> **from**: `string`
 
-The from address, if any.
-
-#### Overrides
-
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`from`](PreparedTransactionRequest.md#from)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:53
-
-***
-
-### gasLimit?
-
-> `optional` **gasLimit**: `bigint`
-
-The maximum amount of gas to allow this transaction to consime.
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:29
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`gasLimit`](PreparedTransactionRequest.md#gaslimit)
+[`TransactionResponse`](TransactionResponse.md).[`from`](TransactionResponse.md#from)
 
-#### Defined in
+***
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:192
+### gasLimit
+
+> **gasLimit**: [`BigNumber`](../classes/BigNumber.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:31
+
+#### Inherited from
+
+[`TransactionResponse`](TransactionResponse.md).[`gasLimit`](TransactionResponse.md#gaslimit)
 
 ***
 
 ### gasPrice?
 
-> `optional` **gasPrice**: `bigint`
+> `optional` **gasPrice?**: [`BigNumber`](../classes/BigNumber.md)
 
-The gas price to use for legacy transactions or transactions on
- legacy networks.
-
- Most of the time the ``max*FeePerGas`` is preferred.
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:32
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`gasPrice`](PreparedTransactionRequest.md#gasprice)
+[`TransactionResponse`](TransactionResponse.md).[`gasPrice`](TransactionResponse.md#gasprice)
 
-#### Defined in
+***
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:199
+### hash
+
+> **hash**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:24
+
+#### Inherited from
+
+[`TransactionResponse`](TransactionResponse.md).[`hash`](TransactionResponse.md#hash)
 
 ***
 
 ### maxFeePerGas?
 
-> `optional` **maxFeePerGas**: `bigint`
+> `optional` **maxFeePerGas?**: [`BigNumber`](../classes/BigNumber.md)
 
-The [[link-eip-1559]] maximum total fee to pay per gas. The actual
- value used is protocol enforced to be the block's base fee.
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:42
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`maxFeePerGas`](PreparedTransactionRequest.md#maxfeepergas)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:208
+[`TransactionResponse`](TransactionResponse.md).[`maxFeePerGas`](TransactionResponse.md#maxfeepergas)
 
 ***
 
 ### maxPriorityFeePerGas?
 
-> `optional` **maxPriorityFeePerGas**: `bigint`
+> `optional` **maxPriorityFeePerGas?**: [`BigNumber`](../classes/BigNumber.md)
 
-The [[link-eip-1559]] maximum priority fee to pay per gas.
-
-#### Inherited from
-
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`maxPriorityFeePerGas`](PreparedTransactionRequest.md#maxpriorityfeepergas)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:203
-
-***
-
-### nonce?
-
-> `optional` **nonce**: `number`
-
-The nonce of the transaction, used to prevent replay attacks.
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:41
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`nonce`](PreparedTransactionRequest.md#nonce)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:188
+[`TransactionResponse`](TransactionResponse.md).[`maxPriorityFeePerGas`](TransactionResponse.md#maxpriorityfeepergas)
 
 ***
 
-### to
+### nonce
 
-> **to**: `string`
+> **nonce**: `number`
 
-The target address.
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:30
 
-#### Overrides
+#### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`to`](PreparedTransactionRequest.md#to)
+[`TransactionResponse`](TransactionResponse.md).[`nonce`](TransactionResponse.md#nonce)
 
-#### Defined in
+***
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/contract/types.d.ts:45
+### r?
+
+> `optional` **r?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:36
+
+#### Inherited from
+
+[`TransactionResponse`](TransactionResponse.md).[`r`](TransactionResponse.md#r)
+
+***
+
+### raw?
+
+> `optional` **raw?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:30
+
+#### Inherited from
+
+[`TransactionResponse`](TransactionResponse.md).[`raw`](TransactionResponse.md#raw)
+
+***
+
+### s?
+
+> `optional` **s?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:37
+
+#### Inherited from
+
+[`TransactionResponse`](TransactionResponse.md).[`s`](TransactionResponse.md#s)
+
+***
+
+### timestamp?
+
+> `optional` **timestamp?**: `number`
+
+Defined in: node\_modules/.pnpm/@ethersproject+abstract-provider@5.8.0/node\_modules/@ethersproject/abstract-provider/lib/index.d.ts:27
+
+#### Inherited from
+
+[`TransactionResponse`](TransactionResponse.md).[`timestamp`](TransactionResponse.md#timestamp)
+
+***
+
+### to?
+
+> `optional` **to?**: `string`
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:28
+
+#### Inherited from
+
+[`TransactionResponse`](TransactionResponse.md).[`to`](TransactionResponse.md#to)
 
 ***
 
 ### type?
 
-> `optional` **type**: `number`
+> `optional` **type?**: `number` \| `null`
 
-The transaction type.
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:39
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`type`](PreparedTransactionRequest.md#type)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:176
+[`TransactionResponse`](TransactionResponse.md).[`type`](TransactionResponse.md#type)
 
 ***
 
-### value?
+### v?
 
-> `optional` **value**: `bigint`
+> `optional` **v?**: `number`
 
-The transaction value (in wei).
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:38
 
 #### Inherited from
 
-[`PreparedTransactionRequest`](PreparedTransactionRequest.md).[`value`](PreparedTransactionRequest.md#value)
+[`TransactionResponse`](TransactionResponse.md).[`v`](TransactionResponse.md#v)
 
-#### Defined in
+***
 
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/providers/provider.d.ts:216
+### value
+
+> **value**: [`BigNumber`](../classes/BigNumber.md)
+
+Defined in: node\_modules/.pnpm/@ethersproject+transactions@5.8.0/node\_modules/@ethersproject/transactions/lib/index.d.ts:34
+
+#### Inherited from
+
+[`TransactionResponse`](TransactionResponse.md).[`value`](TransactionResponse.md#value)
+
+## Methods
+
+### wait()
+
+> **wait**(`confirmations?`): `Promise`\<[`ContractReceipt`](ContractReceipt.md)\>
+
+Defined in: node\_modules/.pnpm/@ethersproject+contracts@5.8.0/node\_modules/@ethersproject/contracts/lib/index.d.ts:61
+
+#### Parameters
+
+##### confirmations?
+
+`number`
+
+#### Returns
+
+`Promise`\<[`ContractReceipt`](ContractReceipt.md)\>
+
+#### Overrides
+
+`TransactionResponse.wait`

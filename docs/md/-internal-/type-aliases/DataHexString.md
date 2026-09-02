@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,11 +6,9 @@
 
 # Type Alias: DataHexString
 
-> **DataHexString**: `string`
+> **DataHexString** = `string`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/data.d.ts:5
 
 A [[HexString]] whose length is even, which ensures it is a valid
  representation of binary data.
-
-## Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/data.d.ts:5

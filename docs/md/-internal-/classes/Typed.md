@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Typed
 
 # Class: Typed
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:77
 
 The **Typed** class to wrap values providing explicit type information.
 
@@ -16,29 +18,35 @@ The **Typed** class to wrap values providing explicit type information.
 
 ## Constructors
 
-### new Typed()
+### Constructor
 
-> **new Typed**(`gaurd`, `type`, `value`, `options`?): [`Typed`](Typed.md)
+> **new Typed**(`gaurd`, `type`, `value`, `options?`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:94
 
 @_ignore:
 
 #### Parameters
 
-• **gaurd**: `any`
+##### gaurd
 
-• **type**: `string`
+`any`
 
-• **value**: `any`
+##### type
 
-• **options?**: `any`
+`string`
+
+##### value
+
+`any`
+
+##### options?
+
+`any`
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:94
+`Typed`
 
 ## Properties
 
@@ -46,11 +54,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > `readonly` **\_typedSymbol**: `Symbol`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:90
+
 @_ignore:
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:90
 
 ***
 
@@ -58,11 +64,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > `readonly` **type**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:82
+
 The type, as a Solidity-compatible type.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:82
 
 ***
 
@@ -70,11 +74,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > `readonly` **value**: `any`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:86
+
 The actual value.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:86
 
 ## Accessors
 
@@ -82,7 +84,9 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 #### Get Signature
 
-> **get** **arrayLength**(): `null` \| `number`
+> **get** **arrayLength**(): `number` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:132
 
 Returns the length of the array type or ``-1`` if it is dynamic.
 
@@ -90,11 +94,7 @@ Returns the length of the array type or ``-1`` if it is dynamic.
 
 ##### Returns
 
-`null` \| `number`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:132
+`number` \| `null`
 
 ***
 
@@ -102,17 +102,15 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 #### Get Signature
 
-> **get** **tupleName**(): `null` \| `string`
+> **get** **tupleName**(): `string` \| `null`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:126
 
 Returns the tuple name, if this is a tuple. Throws otherwise.
 
 ##### Returns
 
-`null` \| `string`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:126
+`string` \| `null`
 
 ## Methods
 
@@ -120,15 +118,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > **defaultValue**(): `string` \| `number` \| `bigint` \| [`Result`](Result.md)
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:102
+
 The default value returned by this type.
 
 #### Returns
 
 `string` \| `number` \| `bigint` \| [`Result`](Result.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:102
 
 ***
 
@@ -136,15 +132,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > **format**(): `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:98
+
 Format the type as a Human-Readable type.
 
 #### Returns
 
 `string`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:98
 
 ***
 
@@ -152,15 +146,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > **isBigInt**(): `this is TypedBigInt`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:114
+
 Returns ``true`` and provides a type guard is this is a [[TypedBigInt]].
 
 #### Returns
 
 `this is TypedBigInt`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:114
 
 ***
 
@@ -168,15 +160,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > **isData**(): `this is TypedData`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:118
+
 Returns ``true`` and provides a type guard is this is a [[TypedData]].
 
 #### Returns
 
 `this is TypedData`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:118
 
 ***
 
@@ -184,15 +174,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > **isString**(): `this is TypedString`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:122
+
 Returns ``true`` and provides a type guard is this is a [[TypedString]].
 
 #### Returns
 
 `this is TypedString`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:122
 
 ***
 
@@ -200,15 +188,13 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > **maxValue**(): `string` \| `number` \| `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:110
+
 The maximum value for numeric types.
 
 #### Returns
 
 `string` \| `number` \| `bigint`
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:110
 
 ***
 
@@ -216,743 +202,745 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > **minValue**(): `string` \| `number` \| `bigint`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:106
+
 The minimum value for numeric types.
 
 #### Returns
 
 `string` \| `number` \| `bigint`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:106
-
 ***
 
 ### address()
 
-> `static` **address**(`v`): [`Typed`](Typed.md)
+> `static` **address**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:532
 
 Return a new ``address`` type for %%v%%.
 
 #### Parameters
 
-• **v**: `string` \| [`Addressable`](../interfaces/Addressable.md)
+##### v
+
+`string` \| [`Addressable`](../interfaces/Addressable.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:532
+`Typed`
 
 ***
 
 ### array()
 
-> `static` **array**(`v`, `dynamic`?): [`Typed`](Typed.md)
+> `static` **array**(`v`, `dynamic?`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:548
 
 Return a new ``array`` type for %%v%%, allowing %%dynamic%% length.
 
 #### Parameters
 
-• **v**: `any`[]
+##### v
 
-• **dynamic?**: `null` \| `boolean`
+`any`[]
+
+##### dynamic?
+
+`boolean` \| `null`
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:548
+`Typed`
 
 ***
 
 ### bool()
 
-> `static` **bool**(`v`): [`Typed`](Typed.md)
+> `static` **bool**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:536
 
 Return a new ``bool`` type for %%v%%.
 
 #### Parameters
 
-• **v**: `any`
+##### v
+
+`any`
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:536
+`Typed`
 
 ***
 
 ### bytes()
 
-> `static` **bytes**(`v`): [`Typed`](Typed.md)
+> `static` **bytes**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:540
 
 Return a new ``bytes`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:540
+`Typed`
 
 ***
 
 ### bytes1()
 
-> `static` **bytes1**(`v`): [`Typed`](Typed.md)
+> `static` **bytes1**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:404
 
 Return a new ``bytes1`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:404
+`Typed`
 
 ***
 
 ### bytes10()
 
-> `static` **bytes10**(`v`): [`Typed`](Typed.md)
+> `static` **bytes10**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:440
 
 Return a new ``bytes10`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:440
+`Typed`
 
 ***
 
 ### bytes11()
 
-> `static` **bytes11**(`v`): [`Typed`](Typed.md)
+> `static` **bytes11**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:444
 
 Return a new ``bytes11`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:444
+`Typed`
 
 ***
 
 ### bytes12()
 
-> `static` **bytes12**(`v`): [`Typed`](Typed.md)
+> `static` **bytes12**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:448
 
 Return a new ``bytes12`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:448
+`Typed`
 
 ***
 
 ### bytes13()
 
-> `static` **bytes13**(`v`): [`Typed`](Typed.md)
+> `static` **bytes13**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:452
 
 Return a new ``bytes13`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:452
+`Typed`
 
 ***
 
 ### bytes14()
 
-> `static` **bytes14**(`v`): [`Typed`](Typed.md)
+> `static` **bytes14**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:456
 
 Return a new ``bytes14`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:456
+`Typed`
 
 ***
 
 ### bytes15()
 
-> `static` **bytes15**(`v`): [`Typed`](Typed.md)
+> `static` **bytes15**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:460
 
 Return a new ``bytes15`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:460
+`Typed`
 
 ***
 
 ### bytes16()
 
-> `static` **bytes16**(`v`): [`Typed`](Typed.md)
+> `static` **bytes16**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:464
 
 Return a new ``bytes16`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:464
+`Typed`
 
 ***
 
 ### bytes17()
 
-> `static` **bytes17**(`v`): [`Typed`](Typed.md)
+> `static` **bytes17**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:468
 
 Return a new ``bytes17`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:468
+`Typed`
 
 ***
 
 ### bytes18()
 
-> `static` **bytes18**(`v`): [`Typed`](Typed.md)
+> `static` **bytes18**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:472
 
 Return a new ``bytes18`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:472
+`Typed`
 
 ***
 
 ### bytes19()
 
-> `static` **bytes19**(`v`): [`Typed`](Typed.md)
+> `static` **bytes19**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:476
 
 Return a new ``bytes19`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:476
+`Typed`
 
 ***
 
 ### bytes2()
 
-> `static` **bytes2**(`v`): [`Typed`](Typed.md)
+> `static` **bytes2**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:408
 
 Return a new ``bytes2`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:408
+`Typed`
 
 ***
 
 ### bytes20()
 
-> `static` **bytes20**(`v`): [`Typed`](Typed.md)
+> `static` **bytes20**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:480
 
 Return a new ``bytes20`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:480
+`Typed`
 
 ***
 
 ### bytes21()
 
-> `static` **bytes21**(`v`): [`Typed`](Typed.md)
+> `static` **bytes21**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:484
 
 Return a new ``bytes21`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:484
+`Typed`
 
 ***
 
 ### bytes22()
 
-> `static` **bytes22**(`v`): [`Typed`](Typed.md)
+> `static` **bytes22**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:488
 
 Return a new ``bytes22`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:488
+`Typed`
 
 ***
 
 ### bytes23()
 
-> `static` **bytes23**(`v`): [`Typed`](Typed.md)
+> `static` **bytes23**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:492
 
 Return a new ``bytes23`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:492
+`Typed`
 
 ***
 
 ### bytes24()
 
-> `static` **bytes24**(`v`): [`Typed`](Typed.md)
+> `static` **bytes24**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:496
 
 Return a new ``bytes24`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:496
+`Typed`
 
 ***
 
 ### bytes25()
 
-> `static` **bytes25**(`v`): [`Typed`](Typed.md)
+> `static` **bytes25**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:500
 
 Return a new ``bytes25`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:500
+`Typed`
 
 ***
 
 ### bytes26()
 
-> `static` **bytes26**(`v`): [`Typed`](Typed.md)
+> `static` **bytes26**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:504
 
 Return a new ``bytes26`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:504
+`Typed`
 
 ***
 
 ### bytes27()
 
-> `static` **bytes27**(`v`): [`Typed`](Typed.md)
+> `static` **bytes27**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:508
 
 Return a new ``bytes27`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:508
+`Typed`
 
 ***
 
 ### bytes28()
 
-> `static` **bytes28**(`v`): [`Typed`](Typed.md)
+> `static` **bytes28**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:512
 
 Return a new ``bytes28`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:512
+`Typed`
 
 ***
 
 ### bytes29()
 
-> `static` **bytes29**(`v`): [`Typed`](Typed.md)
+> `static` **bytes29**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:516
 
 Return a new ``bytes29`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:516
+`Typed`
 
 ***
 
 ### bytes3()
 
-> `static` **bytes3**(`v`): [`Typed`](Typed.md)
+> `static` **bytes3**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:412
 
 Return a new ``bytes3`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:412
+`Typed`
 
 ***
 
 ### bytes30()
 
-> `static` **bytes30**(`v`): [`Typed`](Typed.md)
+> `static` **bytes30**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:520
 
 Return a new ``bytes30`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:520
+`Typed`
 
 ***
 
 ### bytes31()
 
-> `static` **bytes31**(`v`): [`Typed`](Typed.md)
+> `static` **bytes31**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:524
 
 Return a new ``bytes31`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:524
+`Typed`
 
 ***
 
 ### bytes32()
 
-> `static` **bytes32**(`v`): [`Typed`](Typed.md)
+> `static` **bytes32**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:528
 
 Return a new ``bytes32`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:528
+`Typed`
 
 ***
 
 ### bytes4()
 
-> `static` **bytes4**(`v`): [`Typed`](Typed.md)
+> `static` **bytes4**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:416
 
 Return a new ``bytes4`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:416
+`Typed`
 
 ***
 
 ### bytes5()
 
-> `static` **bytes5**(`v`): [`Typed`](Typed.md)
+> `static` **bytes5**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:420
 
 Return a new ``bytes5`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:420
+`Typed`
 
 ***
 
 ### bytes6()
 
-> `static` **bytes6**(`v`): [`Typed`](Typed.md)
+> `static` **bytes6**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:424
 
 Return a new ``bytes6`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:424
+`Typed`
 
 ***
 
 ### bytes7()
 
-> `static` **bytes7**(`v`): [`Typed`](Typed.md)
+> `static` **bytes7**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:428
 
 Return a new ``bytes7`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:428
+`Typed`
 
 ***
 
 ### bytes8()
 
-> `static` **bytes8**(`v`): [`Typed`](Typed.md)
+> `static` **bytes8**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:432
 
 Return a new ``bytes8`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:432
+`Typed`
 
 ***
 
 ### bytes9()
 
-> `static` **bytes9**(`v`): [`Typed`](Typed.md)
+> `static` **bytes9**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:436
 
 Return a new ``bytes9`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BytesLike`](../type-aliases/BytesLike.md)
+##### v
+
+[`BytesLike`](../type-aliases/BytesLike.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:436
+`Typed`
 
 ***
 
 ### dereference()
 
 > `static` **dereference**\<`T`\>(`value`, `type`): `T`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:568
 
 If the value is a [[Typed]] instance, validates the underlying value
  and returns it, otherwise returns value directly.
@@ -962,703 +950,707 @@ If the value is a [[Typed]] instance, validates the underlying value
 
 #### Type Parameters
 
-• **T**
+##### T
+
+`T`
 
 #### Parameters
 
-• **value**: [`Typed`](Typed.md) \| `T`
+##### value
 
-• **type**: `string`
+`Typed` \| `T`
+
+##### type
+
+`string`
 
 #### Returns
 
 `T`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:568
-
 ***
 
 ### from()
 
-> `static` **from**(`type`, `value`): [`Typed`](Typed.md)
+> `static` **from**(`type`, `value`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:136
 
 Returns a new **Typed** of %%type%% with the %%value%%.
 
 #### Parameters
 
-• **type**: `string`
+##### type
 
-• **value**: `any`
+`string`
+
+##### value
+
+`any`
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:136
+`Typed`
 
 ***
 
 ### int()
 
-> `static` **int**(`v`): [`Typed`](Typed.md)
+> `static` **int**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:400
 
 Return a new ``int256`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:400
+`Typed`
 
 ***
 
 ### int104()
 
-> `static` **int104**(`v`): [`Typed`](Typed.md)
+> `static` **int104**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:320
 
 Return a new ``int104`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:320
+`Typed`
 
 ***
 
 ### int112()
 
-> `static` **int112**(`v`): [`Typed`](Typed.md)
+> `static` **int112**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:324
 
 Return a new ``int112`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:324
+`Typed`
 
 ***
 
 ### int120()
 
-> `static` **int120**(`v`): [`Typed`](Typed.md)
+> `static` **int120**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:328
 
 Return a new ``int120`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:328
+`Typed`
 
 ***
 
 ### int128()
 
-> `static` **int128**(`v`): [`Typed`](Typed.md)
+> `static` **int128**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:332
 
 Return a new ``int128`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:332
+`Typed`
 
 ***
 
 ### int136()
 
-> `static` **int136**(`v`): [`Typed`](Typed.md)
+> `static` **int136**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:336
 
 Return a new ``int136`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:336
+`Typed`
 
 ***
 
 ### int144()
 
-> `static` **int144**(`v`): [`Typed`](Typed.md)
+> `static` **int144**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:340
 
 Return a new ``int144`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:340
+`Typed`
 
 ***
 
 ### int152()
 
-> `static` **int152**(`v`): [`Typed`](Typed.md)
+> `static` **int152**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:344
 
 Return a new ``int52`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:344
+`Typed`
 
 ***
 
 ### int16()
 
-> `static` **int16**(`v`): [`Typed`](Typed.md)
+> `static` **int16**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:276
 
 Return a new ``int16`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:276
+`Typed`
 
 ***
 
 ### int160()
 
-> `static` **int160**(`v`): [`Typed`](Typed.md)
+> `static` **int160**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:348
 
 Return a new ``int160`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:348
+`Typed`
 
 ***
 
 ### int168()
 
-> `static` **int168**(`v`): [`Typed`](Typed.md)
+> `static` **int168**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:352
 
 Return a new ``int168`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:352
+`Typed`
 
 ***
 
 ### int176()
 
-> `static` **int176**(`v`): [`Typed`](Typed.md)
+> `static` **int176**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:356
 
 Return a new ``int176`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:356
+`Typed`
 
 ***
 
 ### int184()
 
-> `static` **int184**(`v`): [`Typed`](Typed.md)
+> `static` **int184**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:360
 
 Return a new ``int184`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:360
+`Typed`
 
 ***
 
 ### int192()
 
-> `static` **int192**(`v`): [`Typed`](Typed.md)
+> `static` **int192**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:364
 
 Return a new ``int92`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:364
+`Typed`
 
 ***
 
 ### int200()
 
-> `static` **int200**(`v`): [`Typed`](Typed.md)
+> `static` **int200**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:368
 
 Return a new ``int200`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:368
+`Typed`
 
 ***
 
 ### int208()
 
-> `static` **int208**(`v`): [`Typed`](Typed.md)
+> `static` **int208**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:372
 
 Return a new ``int208`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:372
+`Typed`
 
 ***
 
 ### int216()
 
-> `static` **int216**(`v`): [`Typed`](Typed.md)
+> `static` **int216**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:376
 
 Return a new ``int216`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:376
+`Typed`
 
 ***
 
 ### int224()
 
-> `static` **int224**(`v`): [`Typed`](Typed.md)
+> `static` **int224**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:380
 
 Return a new ``int224`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:380
+`Typed`
 
 ***
 
 ### int232()
 
-> `static` **int232**(`v`): [`Typed`](Typed.md)
+> `static` **int232**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:384
 
 Return a new ``int232`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:384
+`Typed`
 
 ***
 
 ### int24()
 
-> `static` **int24**(`v`): [`Typed`](Typed.md)
+> `static` **int24**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:280
 
 Return a new ``int24`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:280
+`Typed`
 
 ***
 
 ### int240()
 
-> `static` **int240**(`v`): [`Typed`](Typed.md)
+> `static` **int240**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:388
 
 Return a new ``int240`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:388
+`Typed`
 
 ***
 
 ### int248()
 
-> `static` **int248**(`v`): [`Typed`](Typed.md)
+> `static` **int248**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:392
 
 Return a new ``int248`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:392
+`Typed`
 
 ***
 
 ### int256()
 
-> `static` **int256**(`v`): [`Typed`](Typed.md)
+> `static` **int256**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:396
 
 Return a new ``int256`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:396
+`Typed`
 
 ***
 
 ### int32()
 
-> `static` **int32**(`v`): [`Typed`](Typed.md)
+> `static` **int32**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:284
 
 Return a new ``int32`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:284
+`Typed`
 
 ***
 
 ### int40()
 
-> `static` **int40**(`v`): [`Typed`](Typed.md)
+> `static` **int40**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:288
 
 Return a new ``int40`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:288
+`Typed`
 
 ***
 
 ### int48()
 
-> `static` **int48**(`v`): [`Typed`](Typed.md)
+> `static` **int48**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:292
 
 Return a new ``int48`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:292
+`Typed`
 
 ***
 
 ### int56()
 
-> `static` **int56**(`v`): [`Typed`](Typed.md)
+> `static` **int56**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:296
 
 Return a new ``int56`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:296
+`Typed`
 
 ***
 
 ### int64()
 
-> `static` **int64**(`v`): [`Typed`](Typed.md)
+> `static` **int64**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:300
 
 Return a new ``int64`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:300
+`Typed`
 
 ***
 
 ### int72()
 
-> `static` **int72**(`v`): [`Typed`](Typed.md)
+> `static` **int72**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:304
 
 Return a new ``int72`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:304
+`Typed`
 
 ***
 
 ### int8()
 
-> `static` **int8**(`v`): [`Typed`](Typed.md)
+> `static` **int8**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:272
 
 Return a new ``int8`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:272
+`Typed`
 
 ***
 
 ### int80()
 
-> `static` **int80**(`v`): [`Typed`](Typed.md)
+> `static` **int80**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:308
 
 Return a new ``int80`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:308
+`Typed`
 
 ***
 
 ### int88()
 
-> `static` **int88**(`v`): [`Typed`](Typed.md)
+> `static` **int88**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:312
 
 Return a new ``int88`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:312
+`Typed`
 
 ***
 
 ### int96()
 
-> `static` **int96**(`v`): [`Typed`](Typed.md)
+> `static` **int96**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:316
 
 Return a new ``int96`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:316
+`Typed`
 
 ***
 
@@ -1666,738 +1658,740 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.
 
 > `static` **isTyped**(`value`): `value is Typed`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:560
+
 Returns true only if %%value%% is a [[Typed]] instance.
 
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `value is Typed`
 
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:560
-
 ***
 
 ### overrides()
 
-> `static` **overrides**(`v`): [`Typed`](Typed.md)
+> `static` **overrides**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:556
 
 Return a new ``uint8`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+##### v
+
+[`Record`](../type-aliases/Record.md)\<`string`, `any`\>
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:556
+`Typed`
 
 ***
 
 ### string()
 
-> `static` **string**(`v`): [`Typed`](Typed.md)
+> `static` **string**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:544
 
 Return a new ``string`` type for %%v%%.
 
 #### Parameters
 
-• **v**: `string`
+##### v
+
+`string`
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:544
+`Typed`
 
 ***
 
 ### tuple()
 
-> `static` **tuple**(`v`, `name`?): [`Typed`](Typed.md)
+> `static` **tuple**(`v`, `name?`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:552
 
 Return a new ``tuple`` type for %%v%%, with the optional %%name%%.
 
 #### Parameters
 
-• **v**: `any`[] \| [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+##### v
 
-• **name?**: `string`
+`any`[] \| [`Record`](../type-aliases/Record.md)\<`string`, `any`\>
+
+##### name?
+
+`string`
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:552
+`Typed`
 
 ***
 
 ### uint()
 
-> `static` **uint**(`v`): [`Typed`](Typed.md)
+> `static` **uint**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:268
 
 Return a new ``uint256`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:268
+`Typed`
 
 ***
 
 ### uint104()
 
-> `static` **uint104**(`v`): [`Typed`](Typed.md)
+> `static` **uint104**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:188
 
 Return a new ``uint104`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:188
+`Typed`
 
 ***
 
 ### uint112()
 
-> `static` **uint112**(`v`): [`Typed`](Typed.md)
+> `static` **uint112**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:192
 
 Return a new ``uint112`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:192
+`Typed`
 
 ***
 
 ### uint120()
 
-> `static` **uint120**(`v`): [`Typed`](Typed.md)
+> `static` **uint120**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:196
 
 Return a new ``uint120`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:196
+`Typed`
 
 ***
 
 ### uint128()
 
-> `static` **uint128**(`v`): [`Typed`](Typed.md)
+> `static` **uint128**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:200
 
 Return a new ``uint128`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:200
+`Typed`
 
 ***
 
 ### uint136()
 
-> `static` **uint136**(`v`): [`Typed`](Typed.md)
+> `static` **uint136**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:204
 
 Return a new ``uint136`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:204
+`Typed`
 
 ***
 
 ### uint144()
 
-> `static` **uint144**(`v`): [`Typed`](Typed.md)
+> `static` **uint144**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:208
 
 Return a new ``uint144`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:208
+`Typed`
 
 ***
 
 ### uint152()
 
-> `static` **uint152**(`v`): [`Typed`](Typed.md)
+> `static` **uint152**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:212
 
 Return a new ``uint152`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:212
+`Typed`
 
 ***
 
 ### uint16()
 
-> `static` **uint16**(`v`): [`Typed`](Typed.md)
+> `static` **uint16**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:144
 
 Return a new ``uint16`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:144
+`Typed`
 
 ***
 
 ### uint160()
 
-> `static` **uint160**(`v`): [`Typed`](Typed.md)
+> `static` **uint160**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:216
 
 Return a new ``uint160`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:216
+`Typed`
 
 ***
 
 ### uint168()
 
-> `static` **uint168**(`v`): [`Typed`](Typed.md)
+> `static` **uint168**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:220
 
 Return a new ``uint168`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:220
+`Typed`
 
 ***
 
 ### uint176()
 
-> `static` **uint176**(`v`): [`Typed`](Typed.md)
+> `static` **uint176**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:224
 
 Return a new ``uint176`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:224
+`Typed`
 
 ***
 
 ### uint184()
 
-> `static` **uint184**(`v`): [`Typed`](Typed.md)
+> `static` **uint184**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:228
 
 Return a new ``uint184`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:228
+`Typed`
 
 ***
 
 ### uint192()
 
-> `static` **uint192**(`v`): [`Typed`](Typed.md)
+> `static` **uint192**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:232
 
 Return a new ``uint192`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:232
+`Typed`
 
 ***
 
 ### uint200()
 
-> `static` **uint200**(`v`): [`Typed`](Typed.md)
+> `static` **uint200**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:236
 
 Return a new ``uint200`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:236
+`Typed`
 
 ***
 
 ### uint208()
 
-> `static` **uint208**(`v`): [`Typed`](Typed.md)
+> `static` **uint208**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:240
 
 Return a new ``uint208`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:240
+`Typed`
 
 ***
 
 ### uint216()
 
-> `static` **uint216**(`v`): [`Typed`](Typed.md)
+> `static` **uint216**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:244
 
 Return a new ``uint216`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:244
+`Typed`
 
 ***
 
 ### uint224()
 
-> `static` **uint224**(`v`): [`Typed`](Typed.md)
+> `static` **uint224**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:248
 
 Return a new ``uint224`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:248
+`Typed`
 
 ***
 
 ### uint232()
 
-> `static` **uint232**(`v`): [`Typed`](Typed.md)
+> `static` **uint232**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:252
 
 Return a new ``uint232`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:252
+`Typed`
 
 ***
 
 ### uint24()
 
-> `static` **uint24**(`v`): [`Typed`](Typed.md)
+> `static` **uint24**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:148
 
 Return a new ``uint24`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:148
+`Typed`
 
 ***
 
 ### uint240()
 
-> `static` **uint240**(`v`): [`Typed`](Typed.md)
+> `static` **uint240**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:256
 
 Return a new ``uint240`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:256
+`Typed`
 
 ***
 
 ### uint248()
 
-> `static` **uint248**(`v`): [`Typed`](Typed.md)
+> `static` **uint248**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:260
 
 Return a new ``uint248`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:260
+`Typed`
 
 ***
 
 ### uint256()
 
-> `static` **uint256**(`v`): [`Typed`](Typed.md)
+> `static` **uint256**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:264
 
 Return a new ``uint256`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:264
+`Typed`
 
 ***
 
 ### uint32()
 
-> `static` **uint32**(`v`): [`Typed`](Typed.md)
+> `static` **uint32**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:152
 
 Return a new ``uint32`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:152
+`Typed`
 
 ***
 
 ### uint40()
 
-> `static` **uint40**(`v`): [`Typed`](Typed.md)
+> `static` **uint40**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:156
 
 Return a new ``uint40`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:156
+`Typed`
 
 ***
 
 ### uint48()
 
-> `static` **uint48**(`v`): [`Typed`](Typed.md)
+> `static` **uint48**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:160
 
 Return a new ``uint48`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:160
+`Typed`
 
 ***
 
 ### uint56()
 
-> `static` **uint56**(`v`): [`Typed`](Typed.md)
+> `static` **uint56**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:164
 
 Return a new ``uint56`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:164
+`Typed`
 
 ***
 
 ### uint64()
 
-> `static` **uint64**(`v`): [`Typed`](Typed.md)
+> `static` **uint64**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:168
 
 Return a new ``uint64`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:168
+`Typed`
 
 ***
 
 ### uint72()
 
-> `static` **uint72**(`v`): [`Typed`](Typed.md)
+> `static` **uint72**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:172
 
 Return a new ``uint72`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:172
+`Typed`
 
 ***
 
 ### uint8()
 
-> `static` **uint8**(`v`): [`Typed`](Typed.md)
+> `static` **uint8**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:140
 
 Return a new ``uint8`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:140
+`Typed`
 
 ***
 
 ### uint80()
 
-> `static` **uint80**(`v`): [`Typed`](Typed.md)
+> `static` **uint80**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:176
 
 Return a new ``uint80`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:176
+`Typed`
 
 ***
 
 ### uint88()
 
-> `static` **uint88**(`v`): [`Typed`](Typed.md)
+> `static` **uint88**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:180
 
 Return a new ``uint88`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:180
+`Typed`
 
 ***
 
 ### uint96()
 
-> `static` **uint96**(`v`): [`Typed`](Typed.md)
+> `static` **uint96**(`v`): `Typed`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:184
 
 Return a new ``uint96`` type for %%v%%.
 
 #### Parameters
 
-• **v**: [`BigNumberish`](../type-aliases/BigNumberish.md)
+##### v
+
+[`BigNumberish`](../type-aliases/BigNumberish-1.md)
 
 #### Returns
 
-[`Typed`](Typed.md)
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/typed.d.ts:184
+`Typed`

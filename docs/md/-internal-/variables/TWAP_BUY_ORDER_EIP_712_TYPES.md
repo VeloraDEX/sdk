@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -8,7 +8,9 @@
 
 > `const` **TWAP\_BUY\_ORDER\_EIP\_712\_TYPES**: `object`
 
-## Type declaration
+Defined in: [src/methods/delta/helpers/buildTWAPOrderData.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildTWAPOrderData.ts#L37)
+
+## Type Declaration
 
 ### Bridge
 
@@ -17,7 +19,3 @@
 ### TWAPBuyOrder
 
 > **TWAPBuyOrder**: `object`[]
-
-## Defined in
-
-[src/methods/delta/helpers/buildTWAPOrderData.ts:37](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/buildTWAPOrderData.ts#L37)

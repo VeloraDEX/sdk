@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: BuildOptionsWithGasPrice
 
-> **BuildOptionsWithGasPrice**: [`BuildOptionsBase`](BuildOptionsBase.md) & [`Partial`](../-internal-/type-aliases/Partial.md)\<[`WithGasPrice`](../-internal-/type-aliases/WithGasPrice.md)\>
+> **BuildOptionsWithGasPrice** = [`BuildOptionsBase`](BuildOptionsBase.md) & [`Partial`](../-internal-/type-aliases/Partial.md)\<[`WithGasPrice`](../-internal-/type-aliases/WithGasPrice.md)\>
 
-## Defined in
-
-[src/methods/swap/transaction.ts:167](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L167)
+Defined in: [src/methods/swap/transaction.ts:167](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L167)

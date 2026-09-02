@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: TransactionSerializableBase\<quantity, index\>
 
-> **TransactionSerializableBase**\<`quantity`, `index`\>: [`Omit`](Omit.md)\<[`TransactionRequestBase`](TransactionRequestBase.md)\<`quantity`, `index`\>, `"from"`\> & [`ExactPartial`](ExactPartial.md)\<[`Signature`](Signature.md)\>
+> **TransactionSerializableBase**\<`quantity`, `index`\> = [`Omit`](Omit-1.md)\<[`TransactionRequestBase`](TransactionRequestBase.md)\<`quantity`, `index`\>, `"from"`\> & [`ExactPartial`](ExactPartial.md)\<[`Signature`](Signature.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:191
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-## Defined in
+### index
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:187
+`index` = `number`

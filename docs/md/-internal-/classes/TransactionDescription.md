@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,63 +6,63 @@
 
 # Class: TransactionDescription
 
-## Extends
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:54
 
-- [`Description`](Description.md)\<[`TransactionDescription`](TransactionDescription.md)\>
+When using the [[Interface-parseTransaction]] to automatically match
+ a transaction data to its function for parsing,
+ a **TransactionDescription** is returned.
 
 ## Constructors
 
-### new TransactionDescription()
+### Constructor
 
-> **new TransactionDescription**(`info`): [`TransactionDescription`](TransactionDescription.md)
+> **new TransactionDescription**(`fragment`, `selector`, `args`, `value`): `TransactionDescription`
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:82
+
+@_ignore:
 
 #### Parameters
 
-• **info**
+##### fragment
 
-• **info.args**: [`Result`](../interfaces/Result.md)
+[`FunctionFragment`](FunctionFragment.md)
 
-• **info.functionFragment**: [`FunctionFragment`](FunctionFragment.md)
+##### selector
 
-• **info.name**: `string`
+`string`
 
-• **info.sighash**: `string`
+##### args
 
-• **info.signature**: `string`
+[`Result`](Result.md)
 
-• **info.value**: [`BigNumber`](BigNumber.md)
+##### value
+
+`bigint`
 
 #### Returns
 
-[`TransactionDescription`](TransactionDescription.md)
-
-#### Inherited from
-
-[`Description`](Description.md).[`constructor`](Description.md#constructors)
-
-#### Defined in
-
-node\_modules/.pnpm/@ethersproject+properties@5.8.0/node\_modules/@ethersproject/properties/lib/index.d.ts:13
+`TransactionDescription`
 
 ## Properties
 
 ### args
 
-> `readonly` **args**: [`Result`](../interfaces/Result.md)
+> `readonly` **args**: [`Result`](Result.md)
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:66
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:18
+The arguments passed to the Function from the transaction ``data``.
 
 ***
 
-### functionFragment
+### fragment
 
-> `readonly` **functionFragment**: [`FunctionFragment`](FunctionFragment.md)
+> `readonly` **fragment**: [`FunctionFragment`](FunctionFragment.md)
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:58
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:16
+The matching fragment from the transaction ``data``.
 
 ***
 
@@ -70,19 +70,19 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **name**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:62
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:17
+The name of the Function from the transaction ``data``.
 
 ***
 
-### sighash
+### selector
 
-> `readonly` **sighash**: `string`
+> `readonly` **selector**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:74
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:20
+The selector for the Function from the transaction ``data``.
 
 ***
 
@@ -90,16 +90,16 @@ node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/li
 
 > `readonly` **signature**: `string`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:70
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:19
+The full Function signature from the transaction ``data``.
 
 ***
 
 ### value
 
-> `readonly` **value**: [`BigNumber`](BigNumber.md)
+> `readonly` **value**: `bigint`
 
-#### Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/abi/interface.d.ts:78
 
-node\_modules/.pnpm/@ethersproject+abi@5.8.0/node\_modules/@ethersproject/abi/lib/interface.d.ts:21
+The ``value`` (in wei) from the transaction.

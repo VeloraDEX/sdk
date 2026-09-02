@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,26 +6,40 @@
 
 # Type Alias: WriteContractParameters\<abi, functionName, args, chain, account, chainOverride, allFunctionNames, derivedChain\>
 
-> **WriteContractParameters**\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`, `allFunctionNames`, `derivedChain`\>: [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`, `args`, `false`, `allFunctionNames`\> & [`GetChainParameter`](GetChainParameter.md)\<`chain`, `chainOverride`\> & [`Prettify`](Prettify.md)\<[`GetAccountParameter`](GetAccountParameter.md)\<`account`, [`Account`](Account.md) \| [`Address`](Address.md), `true`, `true`\> & [`GetMutabilityAwareValue`](GetMutabilityAwareValue.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`, [`FormattedTransactionRequest`](FormattedTransactionRequest.md)\<`derivedChain`\>\[`"value"`\], `args`\> & `object`\> & [`UnionEvaluate`](UnionEvaluate.md)\<[`UnionOmit`](UnionOmit.md)\<[`FormattedTransactionRequest`](FormattedTransactionRequest.md)\<`derivedChain`\>, `"data"` \| `"from"` \| `"to"` \| `"value"`\>\>
+> **WriteContractParameters**\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`, `allFunctionNames`, `derivedChain`\> = [`ContractFunctionParameters`](ContractFunctionParameters.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`, `args`, `false`, `allFunctionNames`\> & [`GetChainParameter`](GetChainParameter.md)\<`chain`, `chainOverride`\> & [`Prettify`](Prettify-1.md)\<[`GetAccountParameter`](GetAccountParameter.md)\<`account`, [`Account`](Account.md) \| [`Address`](Address-1.md), `true`, `true`\> & [`GetMutabilityAwareValue`](GetMutabilityAwareValue.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`, [`FormattedTransactionRequest`](FormattedTransactionRequest.md)\<`derivedChain`\>\[`"value"`\], `args`\> & `object`\> & [`UnionEvaluate`](UnionEvaluate.md)\<[`UnionOmit`](UnionOmit.md)\<[`FormattedTransactionRequest`](FormattedTransactionRequest.md)\<`derivedChain`\>, `"data"` \| `"from"` \| `"to"` \| `"value"`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/writeContract.d.ts:19
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
+### abi
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[] = [`Abi`](Abi.md)
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
+### functionName
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
 
-• **account** *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+### args
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"nonpayable"` \| `"payable"`, `functionName`\>
 
-• **allFunctionNames** = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
+### chain
 
-• **derivedChain** *extends* [`Chain`](Chain.md) \| `undefined` = [`DeriveChain`](DeriveChain.md)\<`chain`, `chainOverride`\>
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-## Defined in
+### account
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/wallet/writeContract.d.ts:19
+`account` *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+
+### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+
+### allFunctionNames
+
+`allFunctionNames` = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"nonpayable"` \| `"payable"`\>
+
+### derivedChain
+
+`derivedChain` *extends* [`Chain`](Chain.md) \| `undefined` = [`DeriveChain`](DeriveChain.md)\<`chain`, `chainOverride`\>

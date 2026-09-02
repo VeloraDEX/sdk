@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,14 +8,14 @@
 
 > **isFetcherError**(`error`): `error is FetcherError`
 
+Defined in: [src/helpers/misc.ts:52](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L52)
+
 ## Parameters
 
-• **error**: `unknown`
+### error
+
+`unknown`
 
 ## Returns
 
 `error is FetcherError`
-
-## Defined in
-
-[src/helpers/misc.ts:52](https://github.com/paraswap/paraswap-sdk/blob/master/src/helpers/misc.ts#L52)

@@ -1,10 +1,12 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / TypedDataField
 
 # Interface: TypedDataField
+
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:31
 
 A specific field of a structured [[link-eip-712]] type.
 
@@ -14,11 +16,9 @@ A specific field of a structured [[link-eip-712]] type.
 
 > **name**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:35
+
 The field name.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:35
 
 ***
 
@@ -26,8 +26,6 @@ node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-d
 
 > **type**: `string`
 
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:39
+
 The type of the field.
-
-#### Defined in
-
-node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/hash/typed-data.d.ts:39

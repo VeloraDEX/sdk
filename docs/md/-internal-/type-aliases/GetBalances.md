@@ -1,23 +1,25 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / GetBalances
 
-# Type Alias: GetBalances()
+# Type Alias: GetBalances
 
-> **GetBalances**: (`userAddress`, `requestParams`?) => `Promise`\<[`Token`](../../type-aliases/Token.md)[]\>
+> **GetBalances** = (`userAddress`, `requestParams?`) => `Promise`\<[`Token`](../../type-aliases/Token.md)[]\>
+
+Defined in: [src/methods/swap/balance.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L15)
 
 ## Parameters
 
-• **userAddress**: [`Address`](../../type-aliases/Address.md)
+### userAddress
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+[`Address`](../../type-aliases/Address.md)
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<[`Token`](../../type-aliases/Token.md)[]\>
-
-## Defined in
-
-[src/methods/swap/balance.ts:15](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/balance.ts#L15)

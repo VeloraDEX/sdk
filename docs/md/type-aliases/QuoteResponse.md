@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: QuoteResponse
 
-> **QuoteResponse**: [`QuoteWithDeltaPrice`](QuoteWithDeltaPrice.md) \| [`QuoteWithMarketPrice`](QuoteWithMarketPrice.md) \| [`QuoteWithBridgePrice`](../-internal-/type-aliases/QuoteWithBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](QuoteWithMarketPriceAsFallback.md) \| [`QuoteWithDeltaPriceAndBridgePrice`](../-internal-/type-aliases/QuoteWithDeltaPriceAndBridgePrice.md)
+> **QuoteResponse** = [`QuoteWithDeltaPrice`](QuoteWithDeltaPrice.md) \| [`QuoteWithMarketPrice`](QuoteWithMarketPrice.md) \| [`QuoteWithBridgePrice`](../-internal-/type-aliases/QuoteWithBridgePrice.md) \| [`QuoteWithMarketPriceAsFallback`](QuoteWithMarketPriceAsFallback.md) \| [`QuoteWithDeltaPriceAndBridgePrice`](../-internal-/type-aliases/QuoteWithDeltaPriceAndBridgePrice.md)
 
-## Defined in
-
-[src/methods/quote/getQuote.ts:74](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L74)
+Defined in: [src/methods/quote/getQuote.ts:74](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/quote/getQuote.ts#L74)

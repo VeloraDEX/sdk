@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,16 +6,20 @@
 
 # Type Alias: \_TupleOf\<length, size, acc\>
 
-> **\_TupleOf**\<`length`, `size`, `acc`\>: `acc`\[`"length"`\] *extends* `size` ? `acc` : [`_TupleOf`](TupleOf.md)\<`length`, `size`, readonly [`length`, `...acc`]\>
+> **\_TupleOf**\<`length`, `size`, `acc`\> = `acc`\[`"length"`\] *extends* `size` ? `acc` : `_TupleOf`\<`length`, `size`, readonly \[`length`, `...acc`\]\>
+
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/types.d.ts:149
 
 ## Type Parameters
 
-• **length**
+### length
 
-• **size** *extends* `number`
+`length`
 
-• **acc** *extends* readonly `unknown`[]
+### size
 
-## Defined in
+`size` *extends* `number`
 
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/types.d.ts:149
+### acc
+
+`acc` *extends* readonly `unknown`[]

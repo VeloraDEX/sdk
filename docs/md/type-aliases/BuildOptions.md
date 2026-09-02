@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: BuildOptions
 
-> **BuildOptions**: [`BuildOptionsWithGasPrice`](BuildOptionsWithGasPrice.md) \| [`BuildOptionsWitWithMaxFee`](BuildOptionsWitWithMaxFee.md)
+> **BuildOptions** = [`BuildOptionsWithGasPrice`](BuildOptionsWithGasPrice.md) \| [`BuildOptionsWitWithMaxFee`](BuildOptionsWitWithMaxFee.md)
 
-## Defined in
-
-[src/methods/swap/transaction.ts:170](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L170)
+Defined in: [src/methods/swap/transaction.ts:170](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/transaction.ts#L170)

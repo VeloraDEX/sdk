@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,9 +6,11 @@
 
 # Type Alias: TWAPDeltaOrder
 
-> **TWAPDeltaOrder**: [`TWAPDeltaOrderBase`](../-internal-/type-aliases/TWAPDeltaOrderBase.md) & `object`
+> **TWAPDeltaOrder** = [`TWAPDeltaOrderBase`](../-internal-/type-aliases/TWAPDeltaOrderBase.md) & `object`
 
-## Type declaration
+Defined in: [src/methods/delta/helpers/types.ts:182](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L182)
+
+## Type Declaration
 
 ### destAmountPerSlice
 
@@ -25,7 +27,3 @@ The amount of dest token to receive per slice
 #### Description
 
 The total amount of src token to swap
-
-## Defined in
-
-[src/methods/delta/helpers/types.ts:182](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/helpers/types.ts#L182)

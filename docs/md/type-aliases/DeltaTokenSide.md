@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,12 +6,10 @@
 
 # Type Alias: DeltaTokenSide
 
-> **DeltaTokenSide**: `object` \| `object`
+> **DeltaTokenSide** = [`DeltaTokenSideInput`](DeltaTokenSideInput.md) \| [`DeltaTokenSideOutput`](DeltaTokenSideOutput.md)
+
+Defined in: [src/methods/delta/types.ts:181](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L181)
 
 ## Description
 
-Token side on an order. SELL provides an explicit `amount`; BUY provides expected/executed amounts.
-
-## Defined in
-
-[src/methods/delta/types.ts:149](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/types.ts#L149)
+Token side on an order. SELL provides an explicit `amount` on input; BUY on output; the opposite side carries expected/executed amounts and its signed bound.

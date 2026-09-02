@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,45 +6,39 @@
 
 # Interface: UnderlyingByteSource
 
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:146
+
 ## Properties
 
 ### autoAllocateChunkSize?
 
-> `optional` **autoAllocateChunkSize**: `number`
+> `optional` **autoAllocateChunkSize?**: `number`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:147
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:147
 
 ***
 
 ### cancel?
 
-> `optional` **cancel**: [`ReadableStreamErrorCallback`](ReadableStreamErrorCallback.md)
+> `optional` **cancel?**: [`ReadableStreamErrorCallback`](ReadableStreamErrorCallback.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:148
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:148
 
 ***
 
 ### pull?
 
-> `optional` **pull**: [`ReadableByteStreamControllerCallback`](ReadableByteStreamControllerCallback.md)
+> `optional` **pull?**: [`ReadableByteStreamControllerCallback`](ReadableByteStreamControllerCallback.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:149
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:149
 
 ***
 
 ### start?
 
-> `optional` **start**: [`ReadableByteStreamControllerCallback`](ReadableByteStreamControllerCallback.md)
+> `optional` **start?**: [`ReadableByteStreamControllerCallback`](ReadableByteStreamControllerCallback.md)
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:150
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:150
 
 ***
 
@@ -52,6 +46,4 @@ node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts
 
 > **type**: `"bytes"`
 
-#### Defined in
-
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:151
+Defined in: node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/stream/web.d.ts:151

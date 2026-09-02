@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: ArrToObjectWithFunctions\<T\>
 
-> **ArrToObjectWithFunctions**\<`T`\>: `unknown`[] & [`ObjectToArray`](ObjectToArray.md)\<`T`\>
+> **ArrToObjectWithFunctions**\<`T`\> = `unknown`[] & [`ObjectToArray`](ObjectToArray.md)\<`T`\>
+
+Defined in: node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:116
 
 ## Type Parameters
 
-• **T** *extends* `unknown`[]
+### T
 
-## Defined in
-
-node\_modules/.pnpm/web3-types@1.8.1/node\_modules/web3-types/lib/commonjs/eth\_abi\_types.d.ts:116
+`T` *extends* `unknown`[]

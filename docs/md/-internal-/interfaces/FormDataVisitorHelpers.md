@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,23 +6,25 @@
 
 # Interface: FormDataVisitorHelpers
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:316
+
 ## Properties
 
-### convertValue()
+### convertValue
 
 > **convertValue**: (`value`) => `any`
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:318
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `any`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:295
 
 ***
 
@@ -30,24 +32,22 @@ node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:295
 
 > **defaultVisitor**: [`SerializerVisitor`](SerializerVisitor.md)
 
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:294
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:317
 
 ***
 
-### isVisitable()
+### isVisitable
 
 > **isVisitable**: (`value`) => `boolean`
 
+Defined in: node\_modules/.pnpm/axios@1.20.0/node\_modules/axios/index.d.ts:319
+
 #### Parameters
 
-• **value**: `any`
+##### value
+
+`any`
 
 #### Returns
 
 `boolean`
-
-#### Defined in
-
-node\_modules/.pnpm/axios@1.16.0/node\_modules/axios/index.d.ts:296

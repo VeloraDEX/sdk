@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,24 +6,36 @@
 
 # Type Alias: GetMutabilityAwareValue\<abi, mutability, functionName, valueType, args, abiFunction, _Narrowable\>
 
-> **GetMutabilityAwareValue**\<`abi`, `mutability`, `functionName`, `valueType`, `args`, `abiFunction`, `_Narrowable`\>: `_Narrowable` *extends* `true` ? `abiFunction`\[`"stateMutability"`\] *extends* `"payable"` ? `object` : `abiFunction`\[`"payable"`\] *extends* `true` ? `object` : `object` : `object`
+> **GetMutabilityAwareValue**\<`abi`, `mutability`, `functionName`, `valueType`, `args`, `abiFunction`, `_Narrowable`\> = `_Narrowable` *extends* `true` ? `abiFunction`\[`"stateMutability"`\] *extends* `"payable"` ? `object` : `abiFunction`\[`"payable"`\] *extends* `true` ? `object` : `object` : `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/simulateContract.d.ts:17
 
 ## Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+### abi
 
-• **mutability** *extends* [`AbiStateMutability`](AbiStateMutability.md) = [`AbiStateMutability`](AbiStateMutability.md)
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\>
+### mutability
 
-• **valueType** = [`TransactionRequest`](TransactionRequest.md)\[`"value"`\]
+`mutability` *extends* [`AbiStateMutability`](AbiStateMutability.md) = [`AbiStateMutability`](AbiStateMutability.md)
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\>
+### functionName
 
-• **abiFunction** *extends* [`AbiFunction`](AbiFunction.md) = `abi` *extends* [`Abi`](Abi.md) ? [`ExtractAbiFunctionForArgs`](ExtractAbiFunctionForArgs.md)\<`abi`, `mutability`, `functionName`, `args`\> : [`AbiFunction`](AbiFunction.md)
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\> = [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `mutability`\>
 
-• **_Narrowable** *extends* `boolean` = [`IsNarrowable`](IsNarrowable.md)\<`abi`, [`Abi`](Abi.md)\>
+### valueType
 
-## Defined in
+`valueType` = [`TransactionRequest`](TransactionRequest-1.md)\[`"value"`\]
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/simulateContract.d.ts:17
+### args
+
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\> = [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `mutability`, `functionName`\>
+
+### abiFunction
+
+`abiFunction` *extends* [`AbiFunction`](AbiFunction.md) = `abi` *extends* [`Abi`](Abi.md) ? [`ExtractAbiFunctionForArgs`](ExtractAbiFunctionForArgs.md)\<`abi`, `mutability`, `functionName`, `args`\> : [`AbiFunction`](AbiFunction.md)
+
+### _Narrowable
+
+`_Narrowable` *extends* `boolean` = [`IsNarrowable`](IsNarrowable.md)\<`abi`, [`Abi`](Abi.md)\>

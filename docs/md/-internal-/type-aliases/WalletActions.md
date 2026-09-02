@@ -1,24 +1,36 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / WalletActions
 
-# Type Alias: WalletActions\<chain, account\>
+# Type Alias: WalletActions\<chain, account, tokens\>
 
-> **WalletActions**\<`chain`, `account`\>: `object`
+> **WalletActions**\<`chain`, `account`, `tokens`\> = `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:37
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+### chain
 
-• **account** *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-## Type declaration
+### account
 
-### addChain()
+`account` *extends* [`Account`](Account.md) \| `undefined` = [`Account`](Account.md) \| `undefined`
+
+### tokens
+
+`tokens` *extends* [`Tokens`](Tokens.md) \| `undefined` = [`Tokens`](Tokens.md) \| `undefined`
+
+## Properties
+
+### addChain
 
 > **addChain**: (`args`) => `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:55
 
 Adds an EVM chain to the wallet.
 
@@ -27,7 +39,9 @@ Adds an EVM chain to the wallet.
 
 #### Parameters
 
-• **args**: [`AddChainParameters`](AddChainParameters.md)
+##### args
+
+[`AddChainParameters`](AddChainParameters.md)
 
 [AddChainParameters](AddChainParameters.md)
 
@@ -47,9 +61,13 @@ const client = createWalletClient({
 await client.addChain({ chain: optimism })
 ```
 
-### deployContract()
+***
+
+### deployContract
 
 > **deployContract**: \<`abi`, `chainOverride`\>(`args`) => `Promise`\<[`DeployContractReturnType`](DeployContractReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:81
 
 Deploys a contract to the network, given bytecode and constructor arguments.
 
@@ -58,13 +76,19 @@ Deploys a contract to the network, given bytecode and constructor arguments.
 
 #### Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+##### abi
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined`
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined`
 
 #### Parameters
 
-• **args**: [`DeployContractParameters`](DeployContractParameters.md)\<`abi`, `chain`, `account`, `chainOverride`\>
+##### args
+
+[`DeployContractParameters`](DeployContractParameters.md)\<`abi`, `chain`, `account`, `chainOverride`\>
 
 [DeployContractParameters](DeployContractParameters.md)
 
@@ -93,9 +117,64 @@ const hash = await client.deployContract({
 })
 ```
 
-### getAddresses()
+***
+
+### fillTransaction
+
+> **fillTransaction**: \<`chainOverride`, `accountOverride`\>(`args`) => `Promise`\<[`FillTransactionReturnType`](FillTransactionReturnType.md)\<`chain`, `chainOverride`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:105
+
+Fills a transaction request with the necessary fields to be signed over.
+
+- Docs: https://viem.sh/docs/actions/public/fillTransaction
+
+#### Type Parameters
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+
+##### accountOverride
+
+`accountOverride` *extends* [`Account`](Account.md) \| [`Address`](Address-1.md) \| `undefined` = `undefined`
+
+#### Parameters
+
+##### args
+
+[`FillTransactionParameters`](FillTransactionParameters.md)\<`chain`, `account`, `chainOverride`, `accountOverride`\>
+
+#### Returns
+
+`Promise`\<[`FillTransactionReturnType`](FillTransactionReturnType.md)\<`chain`, `chainOverride`\>\>
+
+The filled transaction. [FillTransactionReturnType](FillTransactionReturnType.md)
+
+#### Example
+
+```ts
+import { createWalletClient, custom } from 'viem'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  chain: mainnet,
+  transport: custom(window.ethereum),
+})
+const result = await client.fillTransaction({
+  account: '0xA0Cf798816D4b9b9866b5330EEa46a18382f251e',
+  to: '0x70997970c51812dc3a010c7d01b50e0d17dc79c8',
+  value: parseEther('1'),
+})
+```
+
+***
+
+### getAddresses
 
 > **getAddresses**: () => `Promise`\<[`GetAddressesReturnType`](GetAddressesReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:124
 
 Returns a list of account addresses owned by the wallet or client.
 
@@ -121,9 +200,13 @@ const client = createWalletClient({
 const accounts = await client.getAddresses()
 ```
 
-### getCallsStatus()
+***
+
+### getCallsStatus
 
 > **getCallsStatus**: (`parameters`) => `Promise`\<[`GetCallsStatusReturnType`](GetCallsStatusReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:145
 
 Returns the status of a call batch that was sent via `sendCalls`.
 
@@ -132,7 +215,9 @@ Returns the status of a call batch that was sent via `sendCalls`.
 
 #### Parameters
 
-• **parameters**: [`GetCallsStatusParameters`](GetCallsStatusParameters.md)
+##### parameters
+
+[`GetCallsStatusParameters`](GetCallsStatusParameters.md)
 
 #### Returns
 
@@ -154,9 +239,13 @@ const client = createWalletClient({
 const { receipts, status } = await client.getCallsStatus({ id: '0xdeadbeef' })
 ```
 
-### getCapabilities()
+***
 
-> **getCapabilities**: \<`chainId`\>(`parameters`?) => `Promise`\<[`GetCapabilitiesReturnType`](GetCapabilitiesReturnType.md)\<`chainId`\>\>
+### getCapabilities
+
+> **getCapabilities**: \<`chainId`\>(`parameters?`) => `Promise`\<[`GetCapabilitiesReturnType`](GetCapabilitiesReturnType.md)\<`chainId`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:168
 
 Extract capabilities that a connected wallet supports (e.g. paymasters, session keys, etc).
 
@@ -165,11 +254,15 @@ Extract capabilities that a connected wallet supports (e.g. paymasters, session 
 
 #### Type Parameters
 
-• **chainId** *extends* `number` \| `undefined`
+##### chainId
+
+`chainId` *extends* `number` \| `undefined`
 
 #### Parameters
 
-• **parameters?**: [`GetCapabilitiesParameters`](GetCapabilitiesParameters.md)\<`chainId`\>
+##### parameters?
+
+[`GetCapabilitiesParameters`](GetCapabilitiesParameters.md)\<`chainId`\>
 
 #### Returns
 
@@ -193,9 +286,13 @@ const capabilities = await client.getCapabilities({
 })
 ```
 
-### getChainId()
+***
+
+### getChainId
 
 > **getChainId**: () => `Promise`\<[`GetChainIdReturnType`](GetChainIdReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:188
 
 Returns the chain ID associated with the current network.
 
@@ -222,9 +319,13 @@ const chainId = await client.getChainId()
 // 1
 ```
 
-### getPermissions()
+***
+
+### getPermissions
 
 > **getPermissions**: () => `Promise`\<[`GetPermissionsReturnType`](GetPermissionsReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:207
 
 Gets the wallets current permissions.
 
@@ -250,9 +351,13 @@ const client = createWalletClient({
 const permissions = await client.getPermissions()
 ```
 
-### prepareAuthorization()
+***
+
+### prepareAuthorization
 
 > **prepareAuthorization**: (`parameters`) => `Promise`\<[`PrepareAuthorizationReturnType`](PrepareAuthorizationReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:249
 
 Prepares an [EIP-7702 Authorization](https://eips.ethereum.org/EIPS/eip-7702) object for signing.
 This Action will fill the required fields of the Authorization object if they are not provided (e.g. `nonce` and `chainId`).
@@ -261,7 +366,9 @@ With the prepared Authorization object, you can use [`signAuthorization`](https:
 
 #### Parameters
 
-• **parameters**: [`PrepareAuthorizationParameters`](PrepareAuthorizationParameters.md)\<`account`\>
+##### parameters
+
+[`PrepareAuthorizationParameters`](PrepareAuthorizationParameters.md)\<`account`\>
 
 [PrepareAuthorizationParameters](PrepareAuthorizationParameters.md)
 
@@ -306,9 +413,13 @@ const authorization = await client.prepareAuthorization({
 })
 ```
 
-### prepareTransactionRequest()
+***
+
+### prepareTransactionRequest
 
 > **prepareTransactionRequest**: \<`request`, `chainOverride`, `accountOverride`\>(`args`) => `Promise`\<[`PrepareTransactionRequestReturnType`](PrepareTransactionRequestReturnType.md)\<`chain`, `account`, `chainOverride`, `accountOverride`, `request`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:288
 
 Prepares a transaction request for signing.
 
@@ -316,15 +427,23 @@ Prepares a transaction request for signing.
 
 #### Type Parameters
 
-• **request** *extends* [`PrepareTransactionRequestRequest`](PrepareTransactionRequestRequest.md)\<`chain`, `chainOverride`\>
+##### request
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+`request` *extends* [`PrepareTransactionRequestRequest`](PrepareTransactionRequestRequest.md)\<`chain`, `chainOverride`\>
 
-• **accountOverride** *extends* [`Account`](Account.md) \| [`Address`](Address.md) \| `undefined` = `undefined`
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+
+##### accountOverride
+
+`accountOverride` *extends* [`Account`](Account.md) \| [`Address`](Address-1.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`PrepareTransactionRequestParameters`](PrepareTransactionRequestParameters.md)\<`chain`, `account`, `chainOverride`, `accountOverride`, `request`\>
+##### args
+
+[`PrepareTransactionRequestParameters`](PrepareTransactionRequestParameters.md)\<`chain`, `account`, `chainOverride`, `accountOverride`, `request`\>
 
 [PrepareTransactionRequestParameters](PrepareTransactionRequestParameters.md)
 
@@ -368,9 +487,13 @@ const request = await client.prepareTransactionRequest({
 })
 ```
 
-### requestAddresses()
+***
+
+### requestAddresses
 
 > **requestAddresses**: () => `Promise`\<[`RequestAddressesReturnType`](RequestAddressesReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:311
 
 Requests a list of accounts managed by a wallet.
 
@@ -400,9 +523,13 @@ const client = createWalletClient({
 const accounts = await client.requestAddresses()
 ```
 
-### requestPermissions()
+***
+
+### requestPermissions
 
 > **requestPermissions**: (`args`) => `Promise`\<[`RequestPermissionsReturnType`](RequestPermissionsReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:333
 
 Requests permissions for a wallet.
 
@@ -411,7 +538,9 @@ Requests permissions for a wallet.
 
 #### Parameters
 
-• **args**: [`RequestPermissionsParameters`](RequestPermissionsParameters.md)
+##### args
+
+[`RequestPermissionsParameters`](RequestPermissionsParameters.md)
 
 [RequestPermissionsParameters](RequestPermissionsParameters.md)
 
@@ -436,9 +565,13 @@ const permissions = await client.requestPermissions({
 })
 ```
 
-### sendCalls()
+***
+
+### sendCalls
 
 > **sendCalls**: \<`calls`, `chainOverride`\>(`parameters`) => `Promise`\<[`SendCallsReturnType`](SendCallsReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:366
 
 Requests the connected wallet to send a batch of calls.
 
@@ -447,13 +580,19 @@ Requests the connected wallet to send a batch of calls.
 
 #### Type Parameters
 
-• **calls** *extends* readonly `unknown`[]
+##### calls
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+`calls` *extends* readonly `unknown`[]
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **parameters**: [`SendCallsParameters`](SendCallsParameters.md)\<`chain`, `account`, `chainOverride`, `calls`\>
+##### parameters
+
+[`SendCallsParameters`](SendCallsParameters.md)\<`chain`, `account`, `chainOverride`, `calls`\>
 
 #### Returns
 
@@ -487,9 +626,13 @@ const id = await client.sendCalls({
 })
 ```
 
-### sendCallsSync()
+***
+
+### sendCallsSync
 
 > **sendCallsSync**: \<`calls`, `chainOverride`\>(`parameters`) => `Promise`\<[`SendCallsSyncReturnType`](SendCallsSyncReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:399
 
 Requests the connected wallet to send a batch of calls, and waits for the calls to be included in a block.
 
@@ -498,13 +641,19 @@ Requests the connected wallet to send a batch of calls, and waits for the calls 
 
 #### Type Parameters
 
-• **calls** *extends* readonly `unknown`[]
+##### calls
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+`calls` *extends* readonly `unknown`[]
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **parameters**: [`SendCallsSyncParameters`](SendCallsSyncParameters.md)\<`chain`, `account`, `chainOverride`, `calls`\>
+##### parameters
+
+[`SendCallsSyncParameters`](SendCallsSyncParameters.md)\<`chain`, `account`, `chainOverride`, `calls`\>
 
 #### Returns
 
@@ -538,9 +687,13 @@ const status = await client.sendCallsSync({
 })
 ```
 
-### sendRawTransaction()
+***
+
+### sendRawTransaction
 
 > **sendRawTransaction**: (`args`) => `Promise`\<[`SendRawTransactionReturnType`](SendRawTransactionReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:424
 
 Sends a **signed** transaction to the network
 
@@ -549,7 +702,9 @@ Sends a **signed** transaction to the network
 
 #### Parameters
 
-• **args**: [`SendRawTransactionParameters`](SendRawTransactionParameters.md)
+##### args
+
+[`SendRawTransactionParameters`](SendRawTransactionParameters.md)
 
 #### Returns
 
@@ -574,9 +729,13 @@ const hash = await client.sendRawTransaction({
 })
 ```
 
-### sendRawTransactionSync()
+***
+
+### sendRawTransactionSync
 
 > **sendRawTransactionSync**: (`args`) => `Promise`\<[`SendRawTransactionSyncReturnType`](SendRawTransactionSyncReturnType.md)\<`chain`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:450
 
 Sends a **signed** transaction to the network synchronously,
 and waits for the transaction to be included in a block.
@@ -586,7 +745,9 @@ and waits for the transaction to be included in a block.
 
 #### Parameters
 
-• **args**: [`SendRawTransactionSyncParameters`](SendRawTransactionSyncParameters.md)
+##### args
+
+[`SendRawTransactionSyncParameters`](SendRawTransactionSyncParameters.md)
 
 #### Returns
 
@@ -611,9 +772,13 @@ const receipt = await client.sendRawTransactionSync({
 })
 ```
 
-### sendTransaction()
+***
+
+### sendTransaction
 
 > **sendTransaction**: \<`request`, `chainOverride`\>(`args`) => `Promise`\<[`SendTransactionReturnType`](SendTransactionReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:493
 
 Creates, signs, and sends a new transaction to the network.
 
@@ -625,13 +790,19 @@ Creates, signs, and sends a new transaction to the network.
 
 #### Type Parameters
 
-• **request** *extends* [`SendTransactionRequest`](SendTransactionRequest.md)\<`chain`, `chainOverride`\>
+##### request
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+`request` *extends* [`SendTransactionRequest`](SendTransactionRequest.md)\<`chain`, `chainOverride`\>
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`SendTransactionParameters`](SendTransactionParameters.md)\<`chain`, `account`, `chainOverride`, `request`\>
+##### args
+
+[`SendTransactionParameters`](SendTransactionParameters.md)\<`chain`, `account`, `chainOverride`, `request`\>
 
 [SendTransactionParameters](SendTransactionParameters.md)
 
@@ -675,9 +846,13 @@ const hash = await client.sendTransaction({
 })
 ```
 
-### sendTransactionSync()
+***
 
-> **sendTransactionSync**: \<`request`, `chainOverride`\>(`args`) => `Promise`\<[`SendTransactionSyncReturnType`](SendTransactionSyncReturnType.md)\>
+### sendTransactionSync
+
+> **sendTransactionSync**: \<`request`, `chainOverride`\>(`args`) => `Promise`\<[`SendTransactionSyncReturnType`](SendTransactionSyncReturnType.md)\<`chain`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:537
 
 Creates, signs, and sends a new transaction to the network synchronously.
 Returns the transaction receipt.
@@ -690,19 +865,25 @@ Returns the transaction receipt.
 
 #### Type Parameters
 
-• **request** *extends* [`SendTransactionSyncRequest`](SendTransactionSyncRequest.md)\<`chain`, `chainOverride`\>
+##### request
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+`request` *extends* [`SendTransactionSyncRequest`](SendTransactionSyncRequest.md)\<`chain`, `chainOverride`\>
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`SendTransactionSyncParameters`](SendTransactionSyncParameters.md)\<`chain`, `account`, `chainOverride`, `request`\>
+##### args
+
+[`SendTransactionSyncParameters`](SendTransactionSyncParameters.md)\<`chain`, `account`, `chainOverride`, `request`\>
 
 [SendTransactionParameters](SendTransactionParameters.md)
 
 #### Returns
 
-`Promise`\<[`SendTransactionSyncReturnType`](SendTransactionSyncReturnType.md)\>
+`Promise`\<[`SendTransactionSyncReturnType`](SendTransactionSyncReturnType.md)\<`chain`\>\>
 
 The transaction receipt. [SendTransactionReturnType](SendTransactionReturnType.md)
 
@@ -740,9 +921,13 @@ const receipt = await client.sendTransactionSync({
 })
 ```
 
-### showCallsStatus()
+***
+
+### showCallsStatus
 
 > **showCallsStatus**: (`parameters`) => `Promise`\<[`ShowCallsStatusReturnType`](ShowCallsStatusReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:559
 
 Requests for the wallet to show information about a call batch
 that was sent via `sendCalls`.
@@ -752,7 +937,9 @@ that was sent via `sendCalls`.
 
 #### Parameters
 
-• **parameters**: [`ShowCallsStatusParameters`](ShowCallsStatusParameters.md)
+##### parameters
+
+[`ShowCallsStatusParameters`](ShowCallsStatusParameters.md)
 
 #### Returns
 
@@ -774,9 +961,13 @@ const client = createWalletClient({
 await client.showCallsStatus({ id: '0xdeadbeef' })
 ```
 
-### signAuthorization()
+***
+
+### signAuthorization
 
 > **signAuthorization**: (`parameters`) => `Promise`\<[`SignAuthorizationReturnType`](SignAuthorizationReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:602
 
 Signs an [EIP-7702 Authorization](https://eips.ethereum.org/EIPS/eip-7702) object.
 
@@ -786,7 +977,9 @@ With the calculated signature, you can:
 
 #### Parameters
 
-• **parameters**: [`SignAuthorizationParameters`](SignAuthorizationParameters.md)\<`account`\>
+##### parameters
+
+[`SignAuthorizationParameters`](SignAuthorizationParameters.md)\<`account`\>
 
 [SignAuthorizationParameters](SignAuthorizationParameters.md)
 
@@ -831,9 +1024,13 @@ const signature = await client.signAuthorization({
 })
 ```
 
-### signMessage()
+***
+
+### signMessage
 
 > **signMessage**: (`args`) => `Promise`\<[`SignMessageReturnType`](SignMessageReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:646
 
 Calculates an Ethereum-specific signature in [EIP-191 format](https://eips.ethereum.org/EIPS/eip-191): `keccak256("\x19Ethereum Signed Message:\n" + len(message) + message))`.
 
@@ -848,7 +1045,9 @@ With the calculated signature, you can:
 
 #### Parameters
 
-• **args**: [`SignMessageParameters`](SignMessageParameters.md)\<`account`\>
+##### args
+
+[`SignMessageParameters`](SignMessageParameters.md)\<`account`\>
 
 [SignMessageParameters](SignMessageParameters.md)
 
@@ -890,9 +1089,13 @@ const signature = await client.signMessage({
 })
 ```
 
-### signTransaction()
+***
+
+### signTransaction
 
 > **signTransaction**: \<`chainOverride`, `request`\>(`args`) => `Promise`\<[`SignTransactionReturnType`](SignTransactionReturnType.md)\<`request`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:690
 
 Signs a transaction.
 
@@ -903,13 +1106,19 @@ Signs a transaction.
 
 #### Type Parameters
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined`
+##### chainOverride
 
-• **request** *extends* [`SignTransactionRequest`](SignTransactionRequest.md)\<`chain`, `chainOverride`\> = [`SignTransactionRequest`](SignTransactionRequest.md)\<`chain`, `chainOverride`\>
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined`
+
+##### request
+
+`request` *extends* [`SignTransactionRequest`](SignTransactionRequest.md)\<`chain`, `chainOverride`\> = [`SignTransactionRequest`](SignTransactionRequest.md)\<`chain`, `chainOverride`\>
 
 #### Parameters
 
-• **args**: [`SignTransactionParameters`](SignTransactionParameters.md)\<`chain`, `account`, `chainOverride`, `request`\>
+##### args
+
+[`SignTransactionParameters`](SignTransactionParameters.md)\<`chain`, `account`, `chainOverride`, `request`\>
 
 [SignTransactionParameters](SignTransactionParameters.md)
 
@@ -955,9 +1164,13 @@ const request = await client.prepareTransactionRequest({
 const signature = await client.signTransaction(request)
 ```
 
-### signTypedData()
+***
+
+### signTypedData
 
 > **signTypedData**: \<`typedData`, `primaryType`\>(`args`) => `Promise`\<[`SignTypedDataReturnType`](SignTypedDataReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:787
 
 Signs typed data and calculates an Ethereum-specific signature in [EIP-191 format](https://eips.ethereum.org/EIPS/eip-191): `keccak256("\x19Ethereum Signed Message:\n" + len(message) + message))`.
 
@@ -968,13 +1181,19 @@ Signs typed data and calculates an Ethereum-specific signature in [EIP-191 forma
 
 #### Type Parameters
 
-• **typedData** *extends* [`TypedData`](TypedData.md) \| `object`
+##### typedData
 
-• **primaryType** *extends* `string`
+`typedData` *extends* [`TypedData`](TypedData.md) \| \{\[`key`: `string`\]: `unknown`; \}
+
+##### primaryType
+
+`primaryType` *extends* `string`
 
 #### Parameters
 
-• **args**: [`SignTypedDataParameters`](SignTypedDataParameters.md)\<`typedData`, `primaryType`, `account`\>
+##### args
+
+[`SignTypedDataParameters`](SignTypedDataParameters.md)\<`typedData`, `primaryType`, `account`\>
 
 [SignTypedDataParameters](SignTypedDataParameters.md)
 
@@ -1072,9 +1291,13 @@ const signature = await client.signTypedData({
 })
 ```
 
-### switchChain()
+***
+
+### switchChain
 
 > **switchChain**: (`args`) => `Promise`\<`void`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:808
 
 Switch the target chain in a wallet.
 
@@ -1083,7 +1306,9 @@ Switch the target chain in a wallet.
 
 #### Parameters
 
-• **args**: [`SwitchChainParameters`](SwitchChainParameters.md)
+##### args
+
+[`SwitchChainParameters`](SwitchChainParameters.md)
 
 [SwitchChainParameters](SwitchChainParameters.md)
 
@@ -1104,9 +1329,375 @@ const client = createWalletClient({
 await client.switchChain({ id: optimism.id })
 ```
 
-### waitForCallsStatus()
+***
+
+### token
+
+> **token**: `object`
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:948
+
+Write ERC-20 Actions, exposed under the `token` namespace.
+
+Every action selects its token by `token`, which is either a token symbol
+(resolved from the Client's `tokens` array) or a contract `address`. `amount`
+inputs are base-unit `bigint` values, or
+`{ decimals?: number, formatted: string }` to parse a human-readable decimal
+string.
+
+- Docs: https://viem.sh/docs/token
+
+#### approve
+
+> **approve**: (`parameters`) => `Promise`\<[`ReturnValue`](ReturnValue-5.md)\> & `object`
+
+Approves a `spender` to transfer up to `amount` tokens on behalf of the
+caller, and returns the transaction hash.
+
+- Docs: https://viem.sh/docs/token/approve#asynchronous-usage
+
+##### Type Declaration
+
+###### call
+
+> **call**: (`args`) => [`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call-3.md)\>
+
+Defines an `approve` contract call, ready to pass to `sendCalls`,
+`sendTransaction` (`calls`), or `multicall`.
+
+- Docs: https://viem.sh/docs/token/approve#composing-calls
+
+###### Parameters
+
+###### args
+
+[`Args`](Args-3.md)\<`chain`, `tokens`\>
+
+[approve.Args](Args-3.md)
+
+###### Returns
+
+[`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call-3.md)\>
+
+The contract call.
+
+###### estimateGas
+
+> **estimateGas**: (`parameters`) => `Promise`\<`bigint`\>
+
+Estimates the gas required to approve a `spender` to transfer up to
+`amount` tokens on behalf of the caller.
+
+- Docs: https://viem.sh/docs/token/approve#estimate-gas--simulate
+
+###### Parameters
+
+###### parameters
+
+[`Parameters`](Parameters-5.md)\<`chain`, `account`, `tokens`\>
+
+[approve.Parameters](Parameters-5.md)
+
+###### Returns
+
+`Promise`\<`bigint`\>
+
+The gas estimate.
+
+###### extractEvent
+
+> **extractEvent**: *typeof* [`extractEvent`](../functions/extractEvent.md)
+
+Extracts the `Approval` event from transaction logs.
+
+- Docs: https://viem.sh/docs/token/approve
+
+###### Param
+
+**logs**
+
+The logs.
+
+###### Returns
+
+The decoded `Approval` event.
+
+###### simulate
+
+> **simulate**: (`parameters`) => [`ReturnType`](ReturnType.md)\<*typeof* [`simulate`](../functions/simulate.md)\>
+
+Simulates approving a `spender` to transfer up to `amount` tokens on
+behalf of the caller, returning the result and write request.
+
+- Docs: https://viem.sh/docs/token/approve#estimate-gas--simulate
+
+###### Parameters
+
+###### parameters
+
+[`Parameters`](Parameters-5.md)\<`chain`, `account`, `tokens`\>
+
+[approve.Parameters](Parameters-5.md)
+
+###### Returns
+
+[`ReturnType`](ReturnType.md)\<*typeof* [`simulate`](../functions/simulate.md)\>
+
+The simulation result and write request.
+
+##### Param
+
+**parameters**
+
+[approve.Parameters](Parameters-5.md)
+
+##### Returns
+
+The transaction hash. [approve.ReturnValue](ReturnValue-5.md)
+
+##### Example
+
+```ts
+import { createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  account: privateKeyToAccount('0x…'),
+  chain: mainnet,
+  transport: http(),
+})
+
+const hash = await client.token.approve({
+  amount: { decimals: 6, formatted: '10.5' },
+  spender: '0x…',
+  token: 'usdc',
+})
+```
+
+#### approveSync
+
+> **approveSync**: (`parameters`) => `Promise`\<[`ReturnValue`](ReturnValue-4.md)\>
+
+Approves a `spender` to transfer up to `amount` tokens on behalf of the
+caller, and waits for the transaction to be confirmed.
+
+- Docs: https://viem.sh/docs/token/approve
+
+##### Parameters
+
+###### parameters
+
+[`Parameters`](Parameters-4.md)\<`chain`, `account`, `tokens`\>
+
+[approveSync.Parameters](Parameters-4.md)
+
+##### Returns
+
+`Promise`\<[`ReturnValue`](ReturnValue-4.md)\>
+
+The decoded `Approval` event and the transaction receipt. [approveSync.ReturnValue](ReturnValue-4.md)
+
+##### Example
+
+```ts
+import { createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  account: privateKeyToAccount('0x…'),
+  chain: mainnet,
+  transport: http(),
+})
+
+const { receipt, value } = await client.token.approveSync({
+  amount: { decimals: 6, formatted: '10.5' },
+  spender: '0x…',
+  token: 'usdc',
+})
+```
+
+#### transfer
+
+> **transfer**: (`parameters`) => `Promise`\<[`ReturnValue`](ReturnValue-7.md)\> & `object`
+
+Transfers `amount` tokens to a recipient, and returns the transaction hash.
+Pass `from` to transfer on behalf of another address using an allowance
+(calls `transferFrom`).
+
+- Docs: https://viem.sh/docs/token/transfer#asynchronous-usage
+
+##### Type Declaration
+
+###### call
+
+> **call**: (`args`) => [`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call-4.md)\>
+
+Defines a `transfer` (or `transferFrom`, when `from` is given) contract
+call, ready to pass to `sendCalls`, `sendTransaction` (`calls`), or
+`multicall`.
+
+- Docs: https://viem.sh/docs/token/transfer#composing-calls
+
+###### Parameters
+
+###### args
+
+[`Args`](Args-4.md)\<`chain`, `tokens`\>
+
+[transfer.Args](Args-4.md)
+
+###### Returns
+
+[`ReturnType`](ReturnType.md)\<*typeof* [`call`](../functions/call-4.md)\>
+
+The contract call.
+
+###### estimateGas
+
+> **estimateGas**: (`parameters`) => `Promise`\<`bigint`\>
+
+Estimates the gas required to transfer `amount` tokens to a recipient.
+
+- Docs: https://viem.sh/docs/token/transfer#estimate-gas--simulate
+
+###### Parameters
+
+###### parameters
+
+[`Parameters`](Parameters-7.md)\<`chain`, `account`, `tokens`\>
+
+[transfer.Parameters](Parameters-7.md)
+
+###### Returns
+
+`Promise`\<`bigint`\>
+
+The gas estimate.
+
+###### extractEvent
+
+> **extractEvent**: *typeof* [`extractEvent`](../functions/extractEvent-1.md)
+
+Extracts the `Transfer` event from transaction logs.
+
+- Docs: https://viem.sh/docs/token/transfer
+
+###### Param
+
+**logs**
+
+The logs.
+
+###### Returns
+
+The decoded `Transfer` event.
+
+###### simulate
+
+> **simulate**: (`parameters`) => [`ReturnType`](ReturnType.md)\<*typeof* [`simulate`](../functions/simulate-1.md)\>
+
+Simulates a transfer of `amount` tokens to a recipient, returning the
+result and write request.
+
+- Docs: https://viem.sh/docs/token/transfer#estimate-gas--simulate
+
+###### Parameters
+
+###### parameters
+
+[`Parameters`](Parameters-7.md)\<`chain`, `account`, `tokens`\>
+
+[transfer.Parameters](Parameters-7.md)
+
+###### Returns
+
+[`ReturnType`](ReturnType.md)\<*typeof* [`simulate`](../functions/simulate-1.md)\>
+
+The simulation result and write request.
+
+##### Param
+
+**parameters**
+
+[transfer.Parameters](Parameters-7.md)
+
+##### Returns
+
+The transaction hash. [transfer.ReturnValue](ReturnValue-7.md)
+
+##### Example
+
+```ts
+import { createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  account: privateKeyToAccount('0x…'),
+  chain: mainnet,
+  transport: http(),
+})
+
+const hash = await client.token.transfer({
+  amount: { decimals: 6, formatted: '10.5' },
+  to: '0x…',
+  token: 'usdc',
+})
+```
+
+#### transferSync
+
+> **transferSync**: (`parameters`) => `Promise`\<[`ReturnValue`](ReturnValue-6.md)\>
+
+Transfers `amount` tokens to a recipient, and waits for the transaction to
+be confirmed. Pass `from` to transfer on behalf of another address using an
+allowance (calls `transferFrom`).
+
+- Docs: https://viem.sh/docs/token/transfer
+
+##### Parameters
+
+###### parameters
+
+[`Parameters`](Parameters-6.md)\<`chain`, `account`, `tokens`\>
+
+[transferSync.Parameters](Parameters-6.md)
+
+##### Returns
+
+`Promise`\<[`ReturnValue`](ReturnValue-6.md)\>
+
+The decoded `Transfer` event and the transaction receipt. [transferSync.ReturnValue](ReturnValue-6.md)
+
+##### Example
+
+```ts
+import { createWalletClient, http } from 'viem'
+import { privateKeyToAccount } from 'viem/accounts'
+import { mainnet } from 'viem/chains'
+
+const client = createWalletClient({
+  account: privateKeyToAccount('0x…'),
+  chain: mainnet,
+  transport: http(),
+})
+
+const { receipt, value } = await client.token.transferSync({
+  amount: { decimals: 6, formatted: '10.5' },
+  to: '0x…',
+  token: 'usdc',
+})
+```
+
+***
+
+### waitForCallsStatus
 
 > **waitForCallsStatus**: (`parameters`) => `Promise`\<[`WaitForCallsStatusReturnType`](WaitForCallsStatusReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:830
 
 Waits for the status & receipts of a call bundle that was sent via `sendCalls`.
 
@@ -1115,7 +1706,9 @@ Waits for the status & receipts of a call bundle that was sent via `sendCalls`.
 
 #### Parameters
 
-• **parameters**: [`WaitForCallsStatusParameters`](WaitForCallsStatusParameters.md)
+##### parameters
+
+[`WaitForCallsStatusParameters`](WaitForCallsStatusParameters.md)
 
 [WaitForCallsStatusParameters](WaitForCallsStatusParameters.md)
 
@@ -1139,9 +1732,13 @@ const client = createWalletClient({
 const { receipts, status } = await waitForCallsStatus(client, { id: '0xdeadbeef' })
 ```
 
-### watchAsset()
+***
+
+### watchAsset
 
 > **watchAsset**: (`args`) => `Promise`\<[`WatchAssetReturnType`](WatchAssetReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:857
 
 Adds an EVM chain to the wallet.
 
@@ -1150,7 +1747,9 @@ Adds an EVM chain to the wallet.
 
 #### Parameters
 
-• **args**: [`WatchAssetParameters`](WatchAssetParameters.md)
+##### args
+
+[`WatchAssetParameters`](WatchAssetParameters.md)
 
 [WatchAssetParameters](WatchAssetParameters.md)
 
@@ -1180,9 +1779,13 @@ const success = await client.watchAsset({
 })
 ```
 
-### writeContract()
+***
+
+### writeContract
 
 > **writeContract**: \<`abi`, `functionName`, `args`, `chainOverride`\>(`args`) => `Promise`\<[`WriteContractReturnType`](WriteContractReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:905
 
 Executes a write function on a contract.
 
@@ -1197,17 +1800,27 @@ __Warning: The `write` internally sends a transaction – it does not validate i
 
 #### Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+##### abi
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"payable"` \| `"nonpayable"`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"payable"` \| `"nonpayable"`, `functionName`\>
+##### functionName
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"payable"` \| `"nonpayable"`\>
+
+##### args
+
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"payable"` \| `"nonpayable"`, `functionName`\>
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`WriteContractParameters`](WriteContractParameters.md)\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`\>
+##### args
+
+[`WriteContractParameters`](WriteContractParameters.md)\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`\>
 
 [WriteContractParameters](WriteContractParameters.md)
 
@@ -1253,9 +1866,13 @@ const { request } = await client.simulateContract({
 const hash = await client.writeContract(request)
 ```
 
-### writeContractSync()
+***
+
+### writeContractSync
 
 > **writeContractSync**: \<`abi`, `functionName`, `args`, `chainOverride`\>(`args`) => `Promise`\<[`WriteContractSyncReturnType`](WriteContractSyncReturnType.md)\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:936
 
 Executes a write function on a contract synchronously.
 Returns the transaction receipt.
@@ -1270,17 +1887,27 @@ __Warning: The `write` internally sends a transaction – it does not validate i
 
 #### Type Parameters
 
-• **abi** *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
+##### abi
 
-• **functionName** *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"payable"` \| `"nonpayable"`\>
+`abi` *extends* [`Abi`](Abi.md) \| readonly `unknown`[]
 
-• **args** *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"payable"` \| `"nonpayable"`, `functionName`\>
+##### functionName
 
-• **chainOverride** *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
+`functionName` *extends* [`ContractFunctionName`](ContractFunctionName.md)\<`abi`, `"payable"` \| `"nonpayable"`\>
+
+##### args
+
+`args` *extends* [`ContractFunctionArgs`](ContractFunctionArgs.md)\<`abi`, `"payable"` \| `"nonpayable"`, `functionName`\>
+
+##### chainOverride
+
+`chainOverride` *extends* [`Chain`](Chain.md) \| `undefined` = `undefined`
 
 #### Parameters
 
-• **args**: [`WriteContractSyncParameters`](WriteContractSyncParameters.md)\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`\>
+##### args
+
+[`WriteContractSyncParameters`](WriteContractSyncParameters.md)\<`abi`, `functionName`, `args`, `chain`, `account`, `chainOverride`\>
 
 [WriteContractSyncParameters](WriteContractSyncParameters.md)
 
@@ -1307,7 +1934,3 @@ const receipt = await client.writeContractSync({
   args: [69420],
 })
 ```
-
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/clients/decorators/wallet.d.ts:34

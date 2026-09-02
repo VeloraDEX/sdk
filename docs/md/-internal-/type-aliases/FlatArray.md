@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,14 +6,16 @@
 
 # Type Alias: FlatArray\<Arr, Depth\>
 
-> **FlatArray**\<`Arr`, `Depth`\>: `object`\[`Depth` *extends* `-1` ? `"done"` : `"recur"`\]
+> **FlatArray**\<`Arr`, `Depth`\> = `object`\[`Depth` *extends* `-1` ? `"done"` : `"recur"`\]
+
+Defined in: node\_modules/.pnpm/typescript@5.9.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:19
 
 ## Type Parameters
 
-• **Arr**
+### Arr
 
-• **Depth** *extends* `number`
+`Arr`
 
-## Defined in
+### Depth
 
-node\_modules/.pnpm/typescript@5.6.3/node\_modules/typescript/lib/lib.es2019.array.d.ts:19
+`Depth` *extends* `number`

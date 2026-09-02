@@ -1,19 +1,35 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / Args
 
-# Type Alias: Args\<Events, EventName\>
+# Type Alias: Args\<chain, tokens\>
 
-> **Args**\<`Events`, `EventName`\>: `EventName` *extends* keyof `Events` ? `Events`\[`EventName`\] \| `EventName` *extends* keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md) ? [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md)\[`EventName`\] : `never` : `EventName` *extends* keyof [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md) ? [`EventEmitterBuiltInEventMap`](../namespaces/EventEmitter/interfaces/EventEmitterBuiltInEventMap.md)\[`EventName`\] : `any`[]
+> **Args**\<`chain`, `tokens`\> = `object` & [`TokenParameters`](TokenParameters.md)\<`chain`, `tokens`\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/token/getAllowance.d.ts:32
+
+## Type Declaration
+
+### account
+
+> **account**: [`Address`](Address-1.md)
+
+Account that owns the tokens.
+
+### spender
+
+> **spender**: [`Address`](Address-1.md)
+
+Spender of the tokens.
 
 ## Type Parameters
 
-• **Events** *extends* [`EventMap`](EventMap.md)\<`Events`\>
+### chain
 
-• **EventName**
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
 
-## Defined in
+### tokens
 
-node\_modules/.pnpm/@types+node@22.8.5/node\_modules/@types/node/events.d.ts:105
+`tokens` *extends* [`Tokens`](Tokens.md) \| `undefined` = [`Tokens`](Tokens.md) \| `undefined`

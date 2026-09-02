@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -8,13 +8,19 @@
 
 > **constructSwapSDK**\<`TxResponse`\>(`config`): [`SwapSDKMethods`](../type-aliases/SwapSDKMethods.md)\<`TxResponse`\>
 
+Defined in: [src/methods/swap/index.ts:21](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/index.ts#L21)
+
 ## Type Parameters
 
-• **TxResponse**
+### TxResponse
+
+`TxResponse`
 
 ## Parameters
 
-• **config**: [`SDKConfig`](../type-aliases/SDKConfig.md)\<`TxResponse`\>
+### config
+
+[`SDKConfig`](../type-aliases/SDKConfig.md)\<`TxResponse`\>
 
 ## Returns
 
@@ -23,7 +29,3 @@
 ## Description
 
 construct SDK with every Swap-related method, fetching from API and token approval
-
-## Defined in
-
-[src/methods/swap/index.ts:21](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/index.ts#L21)

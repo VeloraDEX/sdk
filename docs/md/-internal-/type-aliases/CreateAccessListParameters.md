@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,20 +6,20 @@
 
 # Type Alias: CreateAccessListParameters\<chain\>
 
-> **CreateAccessListParameters**\<`chain`\>: [`UnionOmit`](UnionOmit.md)\<[`FormattedTransactionRequest`](FormattedTransactionRequest.md)\<`chain`\>, `"from"` \| `"nonce"` \| `"accessList"`\> & `object` & `object` \| `object`
+> **CreateAccessListParameters**\<`chain`\> = [`UnionOmit`](UnionOmit.md)\<[`FormattedTransactionRequest`](FormattedTransactionRequest.md)\<`chain`\>, `"from"` \| `"nonce"` \| `"accessList"`\> & `object` & \{ `blockNumber?`: `bigint`; `blockTag?`: `undefined`; \} \| \{ `blockNumber?`: `undefined`; `blockTag?`: [`BlockTag`](BlockTag-2.md); \}
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/createAccessList.d.ts:16
+
+## Type Declaration
 
 ### account?
 
-> `optional` **account**: [`Account`](Account.md) \| [`Address`](Address.md)
+> `optional` **account?**: [`Account`](Account.md) \| [`Address`](Address-1.md)
 
 Account attached to the call (msg.sender).
 
 ## Type Parameters
 
-• **chain** *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`
+### chain
 
-## Defined in
-
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/actions/public/createAccessList.d.ts:15
+`chain` *extends* [`Chain`](Chain.md) \| `undefined` = [`Chain`](Chain.md) \| `undefined`

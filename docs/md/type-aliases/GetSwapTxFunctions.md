@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 # Type Alias: GetSwapTxFunctions
 
-> **GetSwapTxFunctions**: `object`
+> **GetSwapTxFunctions** = `object`
 
-## Type declaration
+Defined in: [src/methods/swap/swapTx.ts:221](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L221)
+
+## Properties
 
 ### getSwapTxData
 
 > **getSwapTxData**: [`GetSwapTxData`](../-internal-/type-aliases/GetSwapTxData.md)
 
-## Defined in
-
-[src/methods/swap/swapTx.ts:221](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L221)
+Defined in: [src/methods/swap/swapTx.ts:222](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/swapTx.ts#L222)

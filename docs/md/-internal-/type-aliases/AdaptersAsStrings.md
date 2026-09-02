@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: AdaptersAsStrings
 
-> **AdaptersAsStrings**: `string`[]
+> **AdaptersAsStrings** = `string`[]
 
-## Defined in
-
-[src/methods/swap/adapters.ts:9](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/adapters.ts#L9)
+Defined in: [src/methods/swap/adapters.ts:9](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/swap/adapters.ts#L9)

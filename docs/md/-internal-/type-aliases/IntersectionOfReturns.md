@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 # Type Alias: IntersectionOfReturns\<Funcs\>
 
-> **IntersectionOfReturns**\<`Funcs`\>: [`UnionToIntersection`](UnionToIntersection.md)\<[`ReturnType`](ReturnType.md)\<`Funcs`\[`number`\]\>\>
+> **IntersectionOfReturns**\<`Funcs`\> = [`UnionToIntersection`](UnionToIntersection.md)\<[`ReturnType`](ReturnType.md)\<`Funcs`\[`number`\]\>\>
+
+Defined in: [src/sdk/partial.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L29)
 
 ## Type Parameters
 
-• **Funcs** *extends* [`AnyFunction`](AnyFunction.md)[]
+### Funcs
 
-## Defined in
-
-[src/sdk/partial.ts:29](https://github.com/paraswap/paraswap-sdk/blob/master/src/sdk/partial.ts#L29)
+`Funcs` *extends* [`AnyFunction`](AnyFunction.md)[]

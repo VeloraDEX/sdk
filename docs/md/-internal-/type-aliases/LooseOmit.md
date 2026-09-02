@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,18 +6,20 @@
 
 # Type Alias: LooseOmit\<type, keys\>
 
-> **LooseOmit**\<`type`, `keys`\>: [`Pick`](Pick.md)\<`type`, [`Exclude`](Exclude.md)\<keyof `type`, `keys`\>\>
+> **LooseOmit**\<`type`, `keys`\> = [`Pick`](Pick.md)\<`type`, [`Exclude`](Exclude.md)\<keyof `type`, `keys`\>\>
+
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:178
 
 **`Internal`**
 
-Loose version of [Omit](Omit.md)
+Loose version of [Omit](Omit-1.md)
 
 ## Type Parameters
 
-• **type**
+### type
 
-• **keys** *extends* `string`
+`type`
 
-## Defined in
+### keys
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/utils.d.ts:177
+`keys` *extends* `string`

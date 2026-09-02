@@ -1,0 +1,127 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import axios from 'axios';
+import { ethers, Wallet } from 'ethersV5';
+import {
+  constructPartialSDK,
+  constructEthersContractCaller,
+  constructAxiosFetcher,
+  constructAllDeltaOrdersHandlers,
+  constructGetQuote,
+  constructSwapSDK,
+  OptimalRate,
+  DeltaPrice,
+} from '..';
+import { startStatusCheck } from './helpers/delta';
+
+const fetcher = constructAxiosFetcher(axios);
+
+const provider = ethers.getDefaultProvider(1);
+const signer = Wallet.createRandom().connect(provider);
+const account = signer.address;
+const contractCaller = constructEthersContractCaller({
+  ethersProviderOrSigner: provider,
+  EthersContract: ethers.Contract,
+});
+
+// type AdaptersFunctions & ApproveTokenFunctions<ethers.ContractTransaction>
+const quoteSDK = constructPartialSDK(
+  {
+    chainId: 1,
+    fetcher,
+    contractCaller,
+  },
+  constructAllDeltaOrdersHandlers,
+  constructSwapSDK,
+  constructGetQuote
+);
+
+const DAI_TOKEN = '0x6b175474e89094c44da98b954eedeac495271d0f';
+const USDC_TOKEN = '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48';
+
+/**
+ * mode='all' returns Delta pricing when possible, with Market price as a fallback.
+ * (mode='delta' and mode='market' request a single pricing source.)
+ */
+async function quoteExample() {
+  const amount = '1000000000000'; // wei
+
+  const quote = await quoteSDK.getQuote({
+    srcToken: DAI_TOKEN,
+    destToken: USDC_TOKEN,
+    amount,
+    userAddress: account,
+    srcDecimals: 18,
+    destDecimals: 6,
+    mode: 'all',
+    side: 'SELL',
+    // partner: "..." // if available
+  });
+
+  if ('delta' in quote) {
+    // Delta path — quote.delta is the v2 DeltaPrice (route-based)
+    await handleDeltaQuote({ amount, deltaPrice: quote.delta });
+  } else {
+    console.log(
+      `Delta Quote failed: ${quote.fallbackReason.errorType} - ${quote.fallbackReason.details}`
+    );
+    // settle against the current market price instead
+    await handleMarketQuote({ amount, priceRoute: quote.market });
+  }
+}
+
+async function handleDeltaQuote({
+  amount,
+  deltaPrice,
+}: {
+  amount: string;
+  deltaPrice: DeltaPrice;
+}) {
+  /**
+   * refer to examples/delta for more details
+   */
+  const DeltaContract = await quoteSDK.getDeltaContract();
+
+  // or sign a Permit1 or Permit2 TransferFrom for DeltaContract
+  await quoteSDK.approveTokenForDelta(amount, DAI_TOKEN);
+
+  // v2 order building is server-side: pass the quoted route/side, no deltaPrice
+  const deltaAuction = await quoteSDK.submitDeltaOrder({
+    route: deltaPrice.route, // or pick from deltaPrice.alternatives
+    side: deltaPrice.side,
+    owner: account,
+    // beneficiary: anotherAccount, // if need to send destToken to another account
+    // permit: "0x1234...", // if signed a Permit1 or Permit2 TransferFrom for DeltaContract
+    slippage: 50, // 50 bps = 0.5% slippage
+  });
+
+  // poll if necessary
+  startStatusCheck(() => quoteSDK.getDeltaOrderById(deltaAuction.id));
+
+  return deltaAuction;
+}
+
+async function handleMarketQuote({
+  amount,
+  priceRoute,
+}: {
+  amount: string;
+  priceRoute: OptimalRate;
+}) {
+  const TokenTransferProxy = await quoteSDK.getSpender();
+
+  // or sign a Permit1 or Permit2 TransferFrom for TokenTransferProxy
+  const approveTxHash = quoteSDK.approveToken(amount, DAI_TOKEN);
+
+  const txParams = await quoteSDK.buildTx({
+    srcToken: DAI_TOKEN,
+    destToken: USDC_TOKEN,
+    srcAmount: amount,
+    slippage: 250, // 2.5%
+    priceRoute,
+    userAddress: account,
+    // partner: '...' // if available
+  });
+
+  const swapTx = await signer.sendTransaction(txParams);
+  return swapTx;
+}

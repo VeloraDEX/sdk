@@ -1,29 +1,35 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
 [@velora-dex/sdk](../../globals.md) / [\<internal\>](../README.md) / DepositNativeAndPreSign
 
-# Type Alias: DepositNativeAndPreSign()\<T\>
+# Type Alias: DepositNativeAndPreSign\<T\>
 
-> **DepositNativeAndPreSign**\<`T`\>: (`params`, `overrides`?, `requestParams`?) => `Promise`\<`T`\>
+> **DepositNativeAndPreSign**\<`T`\> = (`params`, `overrides?`, `requestParams?`) => `Promise`\<`T`\>
+
+Defined in: [src/methods/delta/deltaTokenModule.ts:40](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L40)
 
 ## Type Parameters
 
-• **T**
+### T
+
+`T`
 
 ## Parameters
 
-• **params**: [`DepositNativeAndPreSignParams`](../../type-aliases/DepositNativeAndPreSignParams.md)
+### params
 
-• **overrides?**: [`Omit`](Omit.md)\<[`TxSendOverrides`](../../interfaces/TxSendOverrides.md), `"value"`\>
+[`DepositNativeAndPreSignParams`](../../type-aliases/DepositNativeAndPreSignParams.md)
 
-• **requestParams?**: [`RequestParameters`](RequestParameters.md)
+### overrides?
+
+[`Omit`](Omit.md)\<[`TxSendOverrides`](../../interfaces/TxSendOverrides.md), `"value"`\>
+
+### requestParams?
+
+[`RequestParameters`](RequestParameters.md)
 
 ## Returns
 
 `Promise`\<`T`\>
-
-## Defined in
-
-[src/methods/delta/deltaTokenModule.ts:40](https://github.com/paraswap/paraswap-sdk/blob/master/src/methods/delta/deltaTokenModule.ts#L40)

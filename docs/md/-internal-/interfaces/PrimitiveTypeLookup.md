@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,19 +6,229 @@
 
 # Interface: PrimitiveTypeLookup
 
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:15
+
 ## Extends
 
 - [`SolidityIntMap`](../type-aliases/SolidityIntMap.md).[`SolidityByteMap`](../type-aliases/SolidityByteMap.md).[`SolidityArrayMap`](../type-aliases/SolidityArrayMap.md)
+
+## Indexable
+
+> \[`key`: `` `address[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bool[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `tuple[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `string[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `function[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint256[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint128[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes32[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes2[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes1[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes22[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes3[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes4[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes5[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes6[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes7[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes8[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes9[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes10[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes11[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes12[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes13[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes14[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes15[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes16[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes17[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes18[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes19[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes20[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes27[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes28[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes21[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes23[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes24[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes25[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes26[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes29[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes30[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `bytes31[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int8[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int16[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int160[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int64[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int32[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int128[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int24[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int40[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int48[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int56[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int72[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int80[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int88[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int96[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int104[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int112[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int120[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int136[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int144[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int152[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int168[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int176[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int184[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int192[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int200[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int208[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int216[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int224[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int232[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int240[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int248[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `int256[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint8[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint16[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint160[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint64[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint32[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint24[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint40[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint48[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint56[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint72[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint80[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint88[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint96[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint104[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint112[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint120[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint136[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint144[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint152[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint168[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint176[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint184[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint192[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint200[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint208[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint216[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint224[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint232[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint240[${string}]` ``\]: readonly `unknown`[]
+
+> \[`key`: `` `uint248[${string}]` ``\]: readonly `unknown`[]
 
 ## Properties
 
 ### address
 
-> **address**: \`0x$\{string\}\`
+> **address**: `` `0x${string}` ``
 
-#### Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:15
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:16
 
 ***
 
@@ -26,9 +236,7 @@ node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/a
 
 > **bool**: `boolean`
 
-#### Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:16
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:17
 
 ***
 
@@ -38,13 +246,13 @@ node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/a
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -60,13 +268,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -82,13 +290,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -104,13 +312,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -126,13 +334,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -148,13 +356,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -170,13 +378,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -192,13 +400,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -214,13 +422,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -236,13 +444,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -258,13 +466,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -280,13 +488,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -302,13 +510,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -324,13 +532,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -346,13 +554,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -368,13 +576,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -390,13 +598,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -412,13 +620,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -434,13 +642,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -456,13 +664,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -478,13 +686,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -500,13 +708,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -522,13 +730,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -544,13 +752,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -566,13 +774,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -588,13 +796,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -610,13 +818,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -632,13 +840,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -654,13 +862,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -676,13 +884,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -698,13 +906,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -720,13 +928,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -742,13 +950,13 @@ TypeScript type to use for `bytes` output values
 
 #### inputs
 
-> **inputs**: \`0x$\{string\}\`
+> **inputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` input values
 
 #### outputs
 
-> **outputs**: \`0x$\{string\}\`
+> **outputs**: `` `0x${string}` ``
 
 TypeScript type to use for `bytes` output values
 
@@ -760,11 +968,9 @@ TypeScript type to use for `bytes` output values
 
 ### function
 
-> **function**: \`0x$\{string\}$\{string\}\`
+> **function**: `` `0x${string}${string}` ``
 
-#### Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:17
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:18
 
 ***
 
@@ -1102,9 +1308,7 @@ node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/a
 
 > **string**: `string`
 
-#### Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:18
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:19
 
 ***
 
@@ -1112,9 +1316,7 @@ node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/a
 
 > **tuple**: [`Record`](../type-aliases/Record.md)\<`string`, `unknown`\>
 
-#### Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:19
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/utils.d.ts:20
 
 ***
 

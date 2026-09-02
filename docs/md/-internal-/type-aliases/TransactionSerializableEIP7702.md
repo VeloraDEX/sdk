@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,13 +6,15 @@
 
 # Type Alias: TransactionSerializableEIP7702\<quantity, index\>
 
-> **TransactionSerializableEIP7702**\<`quantity`, `index`\>: [`TransactionSerializableBase`](TransactionSerializableBase.md)\<`quantity`, `index`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesEIP1559`](FeeValuesEIP1559.md)\<`quantity`\>\> & `object`
+> **TransactionSerializableEIP7702**\<`quantity`, `index`\> = [`TransactionSerializableBase`](TransactionSerializableBase.md)\<`quantity`, `index`\> & [`ExactPartial`](ExactPartial.md)\<[`FeeValuesEIP1559`](FeeValuesEIP1559.md)\<`quantity`\>\> & `object`
 
-## Type declaration
+Defined in: node\_modules/.pnpm/viem@2.56.1\_typescript@5.9.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:222
+
+## Type Declaration
 
 ### accessList?
 
-> `optional` **accessList**: [`AccessList`](AccessList.md)
+> `optional` **accessList?**: [`AccessList`](AccessList-2.md)
 
 ### authorizationList
 
@@ -24,18 +26,18 @@
 
 ### type?
 
-> `optional` **type**: `"eip7702"`
+> `optional` **type?**: `"eip7702"`
 
 ### yParity?
 
-> `optional` **yParity**: `number`
+> `optional` **yParity?**: `number`
 
 ## Type Parameters
 
-• **quantity** = `bigint`
+### quantity
 
-• **index** = `number`
+`quantity` = `bigint`
 
-## Defined in
+### index
 
-node\_modules/.pnpm/viem@2.39.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/viem/\_types/types/transaction.d.ts:218
+`index` = `number`

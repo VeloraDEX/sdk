@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,6 @@
 
 # Type Alias: SolidityArray
 
-> **SolidityArray**: [`SolidityArrayWithoutTuple`](SolidityArrayWithoutTuple.md) \| [`SolidityArrayWithTuple`](SolidityArrayWithTuple.md)
+> **SolidityArray** = [`SolidityArrayWithoutTuple`](SolidityArrayWithoutTuple.md) \| [`SolidityArrayWithTuple`](SolidityArrayWithTuple.md)
 
-## Defined in
-
-node\_modules/.pnpm/abitype@1.1.0\_typescript@5.6.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:27
+Defined in: node\_modules/.pnpm/abitype@1.2.3\_typescript@5.9.3\_zod@3.25.76/node\_modules/abitype/dist/types/abi.d.ts:27

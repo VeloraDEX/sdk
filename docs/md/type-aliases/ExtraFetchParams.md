@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../README.md) • **Docs**
+[**@velora-dex/sdk**](../README.md)
 
 ***
 
@@ -6,18 +6,22 @@
 
 # Type Alias: ExtraFetchParams
 
-> **ExtraFetchParams**: `object`
+> **ExtraFetchParams** = `object`
 
-## Type declaration
+Defined in: [src/types.ts:66](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L66)
+
+## Properties
 
 ### apiKey?
 
-> `optional` **apiKey**: `string`
+> `optional` **apiKey?**: `string`
+
+Defined in: [src/types.ts:67](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L67)
+
+***
 
 ### headers?
 
-> `optional` **headers**: [`Record`](../-internal-/type-aliases/Record.md)\<`string`, `string`\>
+> `optional` **headers?**: [`Record`](../-internal-/type-aliases/Record.md)\<`string`, `string`\>
 
-## Defined in
-
-[src/types.ts:66](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L66)
+Defined in: [src/types.ts:68](https://github.com/paraswap/paraswap-sdk/blob/master/src/types.ts#L68)

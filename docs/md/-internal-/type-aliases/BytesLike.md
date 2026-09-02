@@ -1,4 +1,4 @@
-[**@velora-dex/sdk**](../../README.md) • **Docs**
+[**@velora-dex/sdk**](../../README.md)
 
 ***
 
@@ -6,8 +6,8 @@
 
 # Type Alias: BytesLike
 
-> **BytesLike**: [`Bytes`](Bytes.md) \| `string`
+> **BytesLike** = [`DataHexString`](DataHexString.md) \| `Uint8Array`
 
-## Defined in
+Defined in: node\_modules/.pnpm/ethers@6.13.4/node\_modules/ethers/lib.commonjs/utils/data.d.ts:16
 
-node\_modules/.pnpm/@ethersproject+bytes@5.8.0/node\_modules/@ethersproject/bytes/lib/index.d.ts:2
+An object that can be used to represent binary data.
