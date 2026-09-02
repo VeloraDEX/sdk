@@ -40,10 +40,13 @@ export type BuildDeltaOrderParams = {
   /**
    * @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount.
    *
-   * In destination-token wei — the same units as `route.destination.output.amount`. On a SELL
-   * over a bridge route the on-chain Order carries destAmount scaled by
-   * `route.bridge.contractParams.scalingFactor`, and the SDK applies that scaling for you
-   * (rounding up, so the minimum you receive never lands below what you asked for).
+   * Units depend on `side`:
+   * - **SELL** — destination-token wei, the same units as `route.destination.output.amount`.
+   *   Over a bridge route the on-chain Order carries destAmount scaled by
+   *   `route.bridge.contractParams.scalingFactor`, and the SDK applies that scaling for you
+   *   (rounding up, so the minimum you receive never lands below what you asked for).
+   * - **BUY** — origin src-token wei, the same units as `route.origin.input.amount`. It caps
+   *   what you spend, is always an origin-chain amount, and is never bridge-scaled.
    */
   limitAmount?: string;
 };
