@@ -454,14 +454,46 @@ function getAuctionTokenAddresses(
 }
 
 /**
+ * @description Picks the received amount denominated in the auction's `output`
+ * token. On a crosschain order that token lives on the destination chain, so the
+ * destination leg is read; otherwise the origin leg is. Falls back to the legacy
+ * `receivedAmount`, which reports whichever leg matches the order and so is
+ * denominated in the same token either way.
+ */
+function getReceivedAmountOnOutputSide(
+  tx: DeltaTransaction,
+  crosschain: boolean
+): string | null {
+  const onOutputLeg = crosschain
+    ? tx.destinationReceivedAmount
+    : tx.originReceivedAmount;
+
+  return onOutputLeg ?? tx.receivedAmount;
+}
+
+/**
  * @description Aggregates transaction amounts into total spent (src) and
  * received (dest) values.
+ *
+ * `destAmount` is denominated in the auction's `output` token, so pass
+ * `crosschain` to read the leg that token sits on — mirroring how the server
+ * derives `output.executedAmount`. Omit it and the legacy `receivedAmount` is
+ * summed, whose leg depends on the order.
  */
-function getTransactionAmounts(transactions: DeltaTransaction[]) {
+function getTransactionAmounts(
+  transactions: DeltaTransaction[],
+  options?: { crosschain: boolean }
+) {
   const { srcAmount, destAmount } = transactions.reduce(
-    (acc, { spentAmount, receivedAmount }) => ({
-      srcAmount: acc.srcAmount + BigInt(spentAmount ?? 0),
-      destAmount: acc.destAmount + BigInt(receivedAmount ?? 0),
+    (acc, tx) => ({
+      srcAmount: acc.srcAmount + BigInt(tx.spentAmount ?? 0),
+      destAmount:
+        acc.destAmount +
+        BigInt(
+          (options
+            ? getReceivedAmountOnOutputSide(tx, options.crosschain)
+            : tx.receivedAmount) ?? 0
+        ),
     }),
     { srcAmount: 0n, destAmount: 0n }
   );
@@ -549,7 +581,9 @@ function getAuctionAmounts(
     return { expected, minimal };
   }
 
-  const txAmounts = getTransactionAmounts(auction.transactions);
+  const txAmounts = getTransactionAmounts(auction.transactions, {
+    crosschain: isOrderCrosschain(order),
+  });
 
   const executed = {
     srcAmount: getExecutedAmount(auction.input, txAmounts.srcAmount),
