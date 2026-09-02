@@ -3,6 +3,9 @@
   "include": ["src", "types"],
   "compilerOptions": {
     "target": "es2020",
+    // viem's `ox` dep ships .ts sources that need es2022 lib features
+    // (String.replaceAll, Error `cause`); skipLibCheck only covers .d.ts.
+    "lib": ["es2022", "dom", "dom.iterable"],
     "module": "esnext",
     "resolveJsonModule": true,
     "moduleResolution": "node",
