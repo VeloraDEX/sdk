@@ -37,8 +37,9 @@ type BuildTWAPDeltaOrderBase = {
   metadata?: string;
   /** @description Designates the Order as partially fillable. Default false. */
   partiallyFillable?: boolean;
-  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount for each slice */
-  limitAmount?: string;
+  // No `limitAmount` here: the build endpoint declares it only on the `Order`
+  // variant of its (strict) request schema, so sending it is rejected. TWAP
+  // amounts are set by `totalSrcAmount` / `totalDestAmount` + `maxSrcAmount`.
 };
 
 export type BuildTWAPSellDeltaOrderParams = BuildTWAPDeltaOrderBase & {
@@ -87,7 +88,6 @@ export const constructBuildTWAPDeltaOrder = (
       nonce: params.nonce,
       permit: params.permit,
       slippage: params.slippage,
-      limitAmount: params.limitAmount,
       metadata: params.metadata,
       partiallyFillable: params.partiallyFillable,
       partner: params.partner,

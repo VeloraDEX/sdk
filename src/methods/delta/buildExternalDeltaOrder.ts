@@ -40,8 +40,8 @@ export type BuildExternalDeltaOrderParams = {
   side: 'SELL' | 'BUY';
   /** @description Slippage in basis points (bps). Default 0. */
   slippage?: number;
-  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount */
-  limitAmount?: string;
+  // No `limitAmount` here: the build endpoint declares it only on the `Order`
+  // variant of its (strict) request schema, so sending it is rejected.
 };
 
 type BuildExternalDeltaOrder = (
@@ -78,7 +78,6 @@ export const constructBuildExternalDeltaOrder = (
         nonce: params.nonce,
         permit: params.permit,
         slippage: params.slippage,
-        limitAmount: params.limitAmount,
         metadata: params.metadata,
         partiallyFillable: params.partiallyFillable,
         partner: params.partner,

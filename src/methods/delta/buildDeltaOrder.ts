@@ -2,6 +2,7 @@ import { API_URL } from '../../constants';
 import type { ConstructFetchInput, RequestParameters } from '../../types';
 import type { DeltaAuctionOrder } from './helpers/types';
 import type { BuiltDeltaOrder, DeltaRoute } from './types';
+import { toOrderLimitAmount } from './helpers/limitAmount';
 export type { BuiltDeltaOrder } from './types';
 
 export type BuildDeltaOrderParams = {
@@ -36,7 +37,17 @@ export type BuildDeltaOrderParams = {
   side: 'SELL' | 'BUY';
   /** @description Slippage in basis points (bps). 10000 = 100%, 50 = 0.5%. Default 0. */
   slippage?: number;
-  /** @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount */
+  /**
+   * @description If passed, the server will use this as SELL destAmount (as BUY srcAmount) and expectedAmount.
+   *
+   * Units depend on `side`:
+   * - **SELL** — destination-token wei, the same units as `route.destination.output.amount`.
+   *   Over a bridge route the on-chain Order carries destAmount scaled by
+   *   `route.bridge.contractParams.scalingFactor`, and the SDK applies that scaling for you
+   *   (rounding up, so the minimum you receive never lands below what you asked for).
+   * - **BUY** — origin src-token wei, the same units as `route.origin.input.amount`. It caps
+   *   what you spend, is always an origin-chain amount, and is never bridge-scaled.
+   */
   limitAmount?: string;
 };
 
@@ -69,7 +80,7 @@ export const constructBuildDeltaOrder = (
         nonce: params.nonce,
         permit: params.permit,
         slippage: params.slippage,
-        limitAmount: params.limitAmount,
+        limitAmount: toOrderLimitAmount(params),
         metadata: params.metadata,
         partiallyFillable: params.partiallyFillable,
         partner: params.partner,

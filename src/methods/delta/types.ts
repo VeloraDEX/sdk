@@ -186,9 +186,33 @@ export type DeltaTransaction = {
   destinationTx: string | null;
   /** @description Filled percent of the slice (0–100). */
   filledPercent: number;
+  /**
+   * @description `order.srcToken` taken from the owner on the origin chain by
+   * `originTx` — the same leg, chain and token decimals as `originReceivedAmount`.
+   */
   spentAmount: string | null;
+  /**
+   * @description Which leg this reports depends on the order: the destination leg
+   * for bridge fills, the origin leg otherwise. Unlike `destinationReceivedAmount`
+   * it is not gated on the bridge having filled, so on a bridge order it can carry
+   * a destination amount the provider recorded while the leg was still in flight.
+   * Kept as-is for existing integrators — prefer the explicit
+   * `originReceivedAmount` / `destinationReceivedAmount` pair.
+   */
   receivedAmount: string | null;
-  /** @description ISO datetime string. */
+  /**
+   * @description `order.destToken` delivered on the origin chain by `originTx` —
+   * the same leg, chain and token decimals as `spentAmount`.
+   */
+  originReceivedAmount: string | null;
+  /**
+   * @description `bridge.outputToken` delivered on `bridge.destinationChainId`,
+   * already scaled by `bridge.scalingFactor`. `null` on same-chain fills, which
+   * have no destination leg, and on bridge fills whose destination leg is still
+   * in flight.
+   */
+  destinationReceivedAmount: string | null;
+  /** @description ISO datetime string of origin Tx. */
   timestamp: string | null;
 };
 
