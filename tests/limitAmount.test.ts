@@ -1,4 +1,8 @@
-import { constructBuildDeltaOrder } from '../src';
+import {
+  constructBuildDeltaOrder,
+  constructBuildExternalDeltaOrder,
+  constructBuildTWAPDeltaOrder,
+} from '../src';
 import type { FetcherFunction, FetcherPostInput } from '../src/types';
 import { toOrderLimitAmount } from '../src/methods/delta/helpers/limitAmount';
 import type { DeltaRoute } from '../src/methods/delta/types';
@@ -334,5 +338,86 @@ describe('buildDeltaOrder limitAmount', () => {
     });
 
     expect(sentBody().limitAmount).toBeUndefined();
+  });
+});
+
+// The build endpoint declares `limitAmount` only on the `Order` variant of its
+// strict request schema, so the sibling builders must never put the key in the
+// body — a re-added `limitAmount: params.limitAmount` would 400 at runtime.
+describe('sibling builders send no limitAmount', () => {
+  function spy() {
+    const sent: FetcherPostInput[] = [];
+
+    const fetcher: FetcherFunction = async (params) => {
+      sent.push(params as FetcherPostInput);
+      return {} as never;
+    };
+
+    const sentBody = () => {
+      const [request] = sent;
+      if (!request) throw new Error('no request was sent');
+      return request.data as Record<string, unknown>;
+    };
+
+    return { fetcher, sentBody };
+  }
+
+  const owner = '0xac39b311dceb2a4b2f5d8461c1cdaf756f4f7ae9';
+
+  test('buildExternalDeltaOrder omits the key entirely', async () => {
+    const { fetcher, sentBody } = spy();
+    const { buildExternalDeltaOrder } = constructBuildExternalDeltaOrder({
+      chainId: 1,
+      fetcher,
+    });
+
+    await buildExternalDeltaOrder({
+      owner,
+      route: makeRoute(12),
+      side: 'SELL',
+      handler: '0x0000000000000000000000000000000000000001',
+      data: '0x',
+    });
+
+    expect(Object.keys(sentBody())).not.toContain('limitAmount');
+  });
+
+  test('buildTWAPDeltaOrder omits the key entirely on a sell', async () => {
+    const { fetcher, sentBody } = spy();
+    const { buildTWAPDeltaOrder } = constructBuildTWAPDeltaOrder({
+      chainId: 1,
+      fetcher,
+    });
+
+    await buildTWAPDeltaOrder({
+      owner,
+      route: makeRoute(12),
+      onChainOrderType: 'TWAPOrder',
+      interval: 60,
+      numSlices: 2,
+      totalSrcAmount: '2000000',
+    });
+
+    expect(Object.keys(sentBody())).not.toContain('limitAmount');
+  });
+
+  test('buildTWAPDeltaOrder omits the key entirely on a buy', async () => {
+    const { fetcher, sentBody } = spy();
+    const { buildTWAPDeltaOrder } = constructBuildTWAPDeltaOrder({
+      chainId: 1,
+      fetcher,
+    });
+
+    await buildTWAPDeltaOrder({
+      owner,
+      route: makeRoute(12),
+      onChainOrderType: 'TWAPBuyOrder',
+      interval: 60,
+      numSlices: 2,
+      totalDestAmount: '2000000',
+      maxSrcAmount: '2100000',
+    });
+
+    expect(Object.keys(sentBody())).not.toContain('limitAmount');
   });
 });
