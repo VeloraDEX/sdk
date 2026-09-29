@@ -13,6 +13,7 @@ import type {
 import type { SignableTypedData } from './methods/common/orders/buildOrderData';
 import { TransactionParams } from './methods/swap/transaction';
 import type { MarkRequired, Prettify } from 'ts-essentials';
+import type { Hex } from 'viem';
 
 export type {
   Address,
@@ -48,12 +49,14 @@ interface FetcherInputBase<URL extends string = string> {
   headers?: Record<string, string>;
   requestParams?: RequestParameters;
 }
-export interface FetcherGetInput<URL extends string = string>
-  extends FetcherInputBase<URL> {
+export interface FetcherGetInput<
+  URL extends string = string,
+> extends FetcherInputBase<URL> {
   method: 'GET';
 }
-export interface FetcherPostInput<URL extends string = string>
-  extends FetcherInputBase<URL> {
+export interface FetcherPostInput<
+  URL extends string = string,
+> extends FetcherInputBase<URL> {
   method: 'POST';
   data: Record<string, any>;
 }
@@ -97,14 +100,18 @@ interface ContractCallInput<T extends string> {
   args: any[];
 }
 
-export interface ContractCallStaticInput<T extends string>
-  extends ContractCallInput<T> {
+export interface ContractCallStaticInput<
+  T extends string,
+> extends ContractCallInput<T> {
   overrides: StaticCallOverrides;
 }
 
-interface ContractCallTransactionInput<T extends string>
-  extends ContractCallInput<T> {
+interface ContractCallTransactionInput<
+  T extends string,
+> extends ContractCallInput<T> {
   overrides: TxSendOverrides;
+  /** Hex-encoded suffix to append before sending; custom callers must honor it. */
+  dataSuffix?: Hex;
 }
 
 // may have to type result T differently if we ever use staticCalls in SDK
@@ -126,7 +133,7 @@ export interface ContractCallerFunctions<T> {
 
 export interface ConstructProviderFetchInput<
   T,
-  D extends keyof ContractCallerFunctions<T> = keyof ContractCallerFunctions<T>
+  D extends keyof ContractCallerFunctions<T> = keyof ContractCallerFunctions<T>,
 > extends ConstructFetchInput {
   contractCaller: Pick<ContractCallerFunctions<T>, D>;
 }
@@ -173,12 +180,8 @@ export type ApiToken = Prettify<
 >;
 
 // if no extra keys in Checking, return Checking, otherwise never
-export type NoExtraKeysCheck<Checking, CheckAgainst> = Exclude<
-  keyof Checking,
-  keyof CheckAgainst
-> extends never
-  ? Checking
-  : never;
+export type NoExtraKeysCheck<Checking, CheckAgainst> =
+  Exclude<keyof Checking, keyof CheckAgainst> extends never ? Checking : never;
 
 export type PriceRouteApiResponse = {
   priceRoute: OptimalRate;
