@@ -35,7 +35,7 @@ export const constructContractCaller = (
 ): ContractCallerFunctions<Hex> => {
   const staticCall: StaticContractCallerFn = async <
     T,
-    M extends string = string,
+    M extends string = string
   >(
     params: ContractCallStaticInput<M>
   ): Promise<T> => {
@@ -88,8 +88,8 @@ export const constructContractCaller = (
             maxPriorityFeePerGas: viemTxParams.maxPriorityFeePerGas,
           }
         : 'gasPrice' in viemTxParams
-          ? { gasPrice: viemTxParams.gasPrice }
-          : {};
+        ? { gasPrice: viemTxParams.gasPrice }
+        : {};
 
     const txHash = await viemClient.writeContract({
       // either `viemClient` has account assigned to it,
