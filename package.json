@@ -59,6 +59,7 @@
     "@ethersproject/bignumber": "^5.8.0",
     "@ethersproject/contracts": "^5.8.0",
     "@ethersproject/providers": "^5.8.0",
+    "@rollup/plugin-replace": "^5.0.7",
     "@size-limit/preset-small-lib": "^12.1.0",
     "@tsconfig/recommended": "^1.0.8",
     "@types/jest": "^30.0.0",
