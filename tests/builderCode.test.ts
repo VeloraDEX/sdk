@@ -22,8 +22,10 @@ jest.mock('../src/helpers/buildConfig', () => ({
   __esModule: true,
   BASE_BUILDER_CODE_SUFFIX: '',
 }));
+// Stand-in for a real builder cod
+const builderCode = 'bc_testcode';
 const suffix: Hex =
-  '0x62635f686d363471346a6d0b0080218021802180218021802180218021';
+  '0x62635f74657374636f64650b0080218021802180218021802180218021';
 const address = '0x0000000000000000000000000000000000000001';
 const hash = `0x${'ab'.repeat(32)}`;
 const order = {
@@ -250,7 +252,7 @@ describe('build-time configuration', () => {
       }
     );
 
-  it.each(['bc_hm64q4jm', ''])('embeds configured code %s', (code) => {
+  it.each([builderCode, ''])('embeds configured code %s', (code) => {
     const result = buildConfig(code);
     expect(result.status).toBe(0);
     expect(result.stdout).toBe(
