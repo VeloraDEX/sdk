@@ -80,6 +80,16 @@ export const constructContractCaller = (
 
     const preparedCall = contract.methods[contractMethod](...args);
 
+    if (params.dataSuffix) {
+      const data = `${preparedCall.encodeABI()}${params.dataSuffix.slice(2)}`;
+      contract.setTransactionMiddleware({
+        processTransaction: async (tx) => ({
+          ...tx,
+          data,
+          ...(tx.input !== undefined ? { input: data } : {}),
+        }),
+      });
+    }
     const promiEvent = preparedCall.send(normalizedOverrides);
 
     // can't just return promiEvent, because async function returns a Promise<PromiEvent>

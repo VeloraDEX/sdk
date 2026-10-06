@@ -100,6 +100,7 @@ export const constructContractCaller = (
       abi,
       functionName: contractMethod,
       args: argsToViemArgs(args),
+      dataSuffix: params.dataSuffix,
       value: viemTxParams.value,
       gas: viemTxParams.gas,
       // ...viemTxParams,

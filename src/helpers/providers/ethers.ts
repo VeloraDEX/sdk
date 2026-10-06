@@ -1,3 +1,4 @@
+import { withEthersV5DataSuffix } from './dataSuffix';
 import type {
   Address,
   ContractCallerFunctions,
@@ -82,7 +83,11 @@ export const constructEthersV5ContractCaller = (
         ? providerOrSigner.getSigner(account)
         : providerOrSigner;
 
-    const contract = new Contract(address, abi, signer);
+    const contract = new Contract(
+      address,
+      abi,
+      withEthersV5DataSuffix({ signer, suffix: params.dataSuffix })
+    );
 
     assertEthersContractHasMethodsV5(contract, contractMethod);
     // drop keys not in PayableOverrides

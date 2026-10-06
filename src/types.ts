@@ -13,6 +13,7 @@ import type {
 import type { SignableTypedData } from './methods/common/orders/buildOrderData';
 import { TransactionParams } from './methods/swap/transaction';
 import type { MarkRequired, Prettify } from 'ts-essentials';
+import type { Hex } from 'viem';
 
 export type {
   Address,
@@ -105,6 +106,8 @@ export interface ContractCallStaticInput<T extends string>
 interface ContractCallTransactionInput<T extends string>
   extends ContractCallInput<T> {
   overrides: TxSendOverrides;
+  /** Hex-encoded suffix to append before sending; custom callers must honor it. */
+  dataSuffix?: Hex;
 }
 
 // may have to type result T differently if we ever use staticCalls in SDK

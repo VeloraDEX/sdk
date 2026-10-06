@@ -1,3 +1,4 @@
+import { BASE_BUILDER_CODE_SUFFIX } from '../../helpers/buildConfig';
 import type { ExtractAbiMethodNames } from '../../helpers/misc';
 import type {
   ConstructProviderFetchInput,
@@ -210,6 +211,10 @@ export function constructFillOTCOrder<T>(
   // getAugustusRFQ is cached internally for the same instance of SDK
   // so should persist across same apiUrl & network
   const { getAugustusRFQ } = constructGetSpender(options);
+  const dataSuffix =
+    options.chainId === 8453 && BASE_BUILDER_CODE_SUFFIX
+      ? BASE_BUILDER_CODE_SUFFIX
+      : undefined;
 
   const fillOTCOrder: FillOTCOrcer<T> = async (
     { order, signature, takerPermit },
@@ -227,6 +232,7 @@ export function constructFillOTCOrder<T>(
         contractMethod: 'fillOrder',
         args: [sanitizedOrder, signature],
         overrides,
+        dataSuffix,
       });
 
       return res;
@@ -268,6 +274,7 @@ export function constructFillOTCOrder<T>(
         '0x', // permitMakerAsset, unused because hard to account for changing nonce for long running Orders
       ],
       overrides,
+      dataSuffix,
     });
 
     return res;

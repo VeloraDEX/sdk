@@ -1,3 +1,4 @@
+import { withEthersV6DataSuffix } from './dataSuffix';
 import type {
   Address,
   ContractCallerFunctions,
@@ -64,7 +65,11 @@ export const constructContractCaller = (
         ? await providerOrSigner.getSigner(account)
         : providerOrSigner;
 
-    const contract = new Contract(address, abi, signer);
+    const contract = new Contract(
+      address,
+      abi,
+      withEthersV6DataSuffix({ signer, suffix: params.dataSuffix })
+    );
 
     // drop keys not in PayableOverrides
     const { gas, from, ...restOverrides } = overrides;
