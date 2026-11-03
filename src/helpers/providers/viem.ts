@@ -198,6 +198,10 @@ function argsToViemArgs(args: any[]): any[] {
       if (arg.startsWith('0x')) {
         return arg;
       }
+      // Preserve decimal integer precision before considering other numeric formats.
+      if (/^[+-]?\d+$/.test(arg.trim())) {
+        return BigInt(arg);
+      }
       const asNumber = Number(arg);
       if (Number.isNaN(asNumber)) {
         return arg;
