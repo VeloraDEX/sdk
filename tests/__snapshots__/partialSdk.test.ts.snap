@@ -25,7 +25,7 @@ exports[`Partial SDK: fetching methods: axiosFetcher Get_SwapTxData: Get_SwapTxD
             {
               "data": "dynamic_object",
               "destAmount": "dynamic_number",
-              "exchange": "UniswapV2",
+              "exchange": "uniswapv2",
               "percent": "dynamic_number",
               "poolAddresses": "dynamic_array",
               "poolIdentifiers": "dynamic_array",
@@ -97,7 +97,7 @@ exports[`Partial SDK: fetching methods: fetchFetcher Get_SwapTxData: Get_SwapTxD
             {
               "data": "dynamic_object",
               "destAmount": "dynamic_number",
-              "exchange": "UniswapV2",
+              "exchange": "uniswapv2",
               "percent": "dynamic_number",
               "poolAddresses": "dynamic_array",
               "poolIdentifiers": "dynamic_array",

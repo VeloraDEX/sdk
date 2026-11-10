@@ -15,7 +15,7 @@ exports[`Simple SDK: fetcher made with: axios Get_SwapTxData: Get_SwapTxData::pr
             {
               "data": "dynamic_object",
               "destAmount": "dynamic_number",
-              "exchange": "UniswapV2",
+              "exchange": "uniswapv2",
               "percent": "dynamic_number",
               "poolAddresses": "dynamic_array",
               "poolIdentifiers": "dynamic_array",
@@ -77,7 +77,7 @@ exports[`Simple SDK: fetcher made with: fetch Get_SwapTxData: Get_SwapTxData::pr
             {
               "data": "dynamic_object",
               "destAmount": "dynamic_number",
-              "exchange": "UniswapV2",
+              "exchange": "uniswapv2",
               "percent": "dynamic_number",
               "poolAddresses": "dynamic_array",
               "poolIdentifiers": "dynamic_array",
